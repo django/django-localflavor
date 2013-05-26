@@ -10,17 +10,6 @@ from django.test import SimpleTestCase
 
 
 class IDLocalFlavorTests(SimpleTestCase):
-    def setUp(self):
-        self.save_warnings_state()
-        warnings.filterwarnings(
-            "ignore",
-            category=RuntimeWarning,
-            module='django.contrib.localflavor.id.id_choices'
-        )
-
-    def tearDown(self):
-        self.restore_warnings_state()
-
     def test_IDProvinceSelect(self):
         f = IDProvinceSelect()
         out = '''<select name="provinces">

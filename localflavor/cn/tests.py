@@ -1,4 +1,3 @@
-# Tests for contrib/localflavor/ CN Form Fields
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
