@@ -3,7 +3,10 @@ from django.utils.unittest import TestCase
 
 from .forms import (TRPostalCodeField, TRPhoneNumberField,
                     TRIdentificationNumberField)
-from ..tests.utils import assertRaisesRegex
+# FIXME: this raises a ValueError in django-discover-runner when using
+# a relative import, should be fixed once django-discover-runner uses
+# the runner from Django 1.6.x
+from localflavor.tests.utils import assertRaisesRegex
 
 
 class TRLocalFlavorTests(TestCase):
