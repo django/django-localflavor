@@ -111,7 +111,7 @@ setup(
     version=find_version("localflavor", "__init__.py"),
     url='http://django-locaflavor.readthedocs.org/en/latest/',
     license='BSD',
-    description="Country-specific Django helpers for various countries",
+    description="Country-specific Django helpers",
     # long_description=read('README.rst'),
     author='Django Software Foundation',
     author_email='foundation@djangoproject.com',
