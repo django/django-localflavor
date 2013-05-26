@@ -32,8 +32,8 @@ usernames = {
     'lt': 'simukis',
 }
 
-here = abspath(dirname(__file__))
-repos_path = join(here, 'repos')
+parent_path = abspath(join(dirname(__file__), '..'))
+repos_path = join(parent_path, 'repos')
 
 if not exists(repos_path):
     os.makedirs(repos_path)
@@ -62,12 +62,12 @@ def copy(dry_run=False):
     for country in countries:
         root_name = 'django-localflavor-%s' % country
         package_name = 'django_localflavor_%s' % country
-        src = join(here, 'repos', root_name, package_name)
-        dst = join(here, 'localflavor', country)
+        src = join(repos_path, root_name, package_name)
+        dst = join(parent_path, 'localflavor', country)
         print 'copying', src, '-->', dst
         if not dry_run:
             shutil.copytree(src, dst)
-        test_src = join(here, 'repos', root_name, 'tests')
+        test_src = join(repos_path, root_name, 'tests')
         if exists(test_src):
             test_dst = join(dst, 'tests')
             print 'found test dir', test_src, '| copying to', test_dst
@@ -98,14 +98,14 @@ def merge(src, dst):
 
 
 def merge_po(dry_run=False):
-    locale_dir = join(here, 'localflavor', 'locale')
+    locale_dir = join(parent_path, 'localflavor', 'locale')
     # create new locale dir
     if not exists(locale_dir):
         os.makedirs(locale_dir)
 
     for country in countries:
         # source directory
-        country_locale_dir = join(here, 'localflavor', country, 'locale')
+        country_locale_dir = join(parent_path, 'localflavor', country, 'locale')
 
         # iterate over all languages in directory
         for country_locale_subdir in glob.glob('%s/*' % country_locale_dir):
@@ -148,7 +148,7 @@ def merge_po(dry_run=False):
 
 
 def move_tests():
-    locale_dir = join(here, 'localflavor')
+    locale_dir = join(parent_path, 'localflavor')
 
     for country in countries:
         country_path = join(locale_dir, country)
