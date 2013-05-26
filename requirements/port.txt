@@ -1,0 +1,6 @@
+Django
+requests
+git+https://github.com/kennethreitz/envoy
+github3.py
+docopt
+polib

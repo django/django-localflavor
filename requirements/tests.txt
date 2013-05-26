@@ -1,0 +1,3 @@
+Django
+coverage==3.6
+flake8==1.7
