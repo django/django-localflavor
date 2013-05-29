@@ -86,7 +86,7 @@ def copy_locales(dry_run=False):
         if country in ['in', 'is', 'id']:
             country = '%s_' % country
         dst = join(parent_path, 'localflavor', country, 'locale')
-        if not exists(dst):
+        if exists(dst):
             continue
         print
         print 'copying', src
@@ -107,16 +107,23 @@ def mkdir_p(path):
 
 def merge(src, dst):
     # Store entries in dict/set for faster access
-    src_entries = dict((entry.msgid, entry) for entry in src)
+    dst_entries = dict((entry.msgid, entry) for entry in dst)
     # Merge entries that are in the dst
-    for entry in dst:
-        if entry.msgid == 'Baden-Wuerttemberg':
-            print "Baden-Wuerttemberg!!", entry.msgstr
-        e = src_entries.get(entry.msgid)
-        if e is None or unicode(e) == u'':
-            e = polib.POEntry()
-            src.append(e)
-        e.merge(entry)
+    dst_entries = {}
+    for i, entry in enumerate(dst):
+        entry.index = i
+        dst_entries[entry.msgid] = entry
+
+    for src_entry in src:
+        dst_entry = dst_entries.get(src_entry.msgid)
+        if dst_entry is None:
+            dst.append(src_entry)
+        else:
+            if dst_entry.msgstr.strip() == '':
+                dst.pop(dst_entry.index)
+                dst.insert(dst_entry.index, src_entry)
+            else:
+                print "already exists:", dst_entry.msgid
 
 
 def merge_po(dry_run=False):
@@ -134,8 +141,6 @@ def merge_po(dry_run=False):
         # iterate over all languages in directory
         for country_locale_subdir in glob.glob('%s/*' % country_locale_dir):
 
-            print 'merging', country_locale_subdir
-
             locale_locale_po_file = join(country_locale_subdir,
                                          'LC_MESSAGES', 'django.po')
             # get locale to update from dir name
@@ -143,25 +148,27 @@ def merge_po(dry_run=False):
 
             # build path to new destination locale po file, create dirs
             locale_subdir = join(locale_dir, subdir_locale, 'LC_MESSAGES')
-            locale_po_file = join(locale_subdir, 'django.po')
+            dest_po_path = join(locale_subdir, 'django.po')
             mkdir_p(locale_subdir)
 
+            print 'merging', locale_locale_po_file, 'into', dest_po_path
+
             # either load existing file and add the entries of the current source file
-            if exists(locale_po_file):
-                po = polib.pofile(locale_po_file)
-                po2 = polib.pofile(locale_locale_po_file)
-                merge(po, po2)
+            if exists(dest_po_path):
+                dest_po = polib.pofile(dest_po_path, encoding='utf-8', check_for_duplicates=True)
+                src_po = polib.pofile(locale_locale_po_file, encoding='utf-8')
+                merge(src_po, dest_po)
             # or just load the source file directly
             else:
-                po = polib.pofile(locale_locale_po_file)
+                dest_po = polib.pofile(locale_locale_po_file, encoding='utf-8')
 
             # update the project-id-version to be consistent
-            po.metadata['Project-Id-Version'] = 'django-localflavor'
+            dest_po.metadata['Project-Id-Version'] = 'django-localflavor'
             # save new po file
-            po.save(locale_po_file)
+            dest_po.save(dest_po_path)
             # and compile it
-            po.save_as_mofile(join(locale_subdir, 'django.mo'))
-            print 'percent translated for', locale_po_file, po.percent_translated()
+            dest_po.save_as_mofile(join(locale_subdir, 'django.mo'))
+            # print 'percent translated for', dest_po_path, po.percent_translated()
 
         # throw away the old locale subdir
         if exists(country_locale_dir):
