@@ -83,6 +83,8 @@ def copy_locales(dry_run=False):
         src = join(repos_path, root_name, package_name, 'locale')
         if not exists(src):
             continue
+        if country in ['in', 'is', 'id']:
+            country = '%s_' % country
         dst = join(parent_path, 'localflavor', country, 'locale')
         if not exists(dst):
             continue
@@ -125,6 +127,8 @@ def merge_po(dry_run=False):
 
     for country in countries:
         # source directory
+        if country in ['in', 'is', 'id']:
+            country = '%s_' % country
         country_locale_dir = join(parent_path, 'localflavor', country, 'locale')
 
         # iterate over all languages in directory
