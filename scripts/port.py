@@ -4,6 +4,7 @@
 Usage:
   port.py clone [--dry-run]
   port.py copy [--dry-run]
+  port.py copy_locales [--dry-run]
   port.py merge_po [--dry-run]
   port.py move_tests
   port.py (-h | --help)
@@ -75,6 +76,23 @@ def copy(dry_run=False):
                 shutil.copytree(test_src, test_dst)
 
 
+def copy_locales(dry_run=False):
+    for country in countries:
+        root_name = 'django-localflavor-%s' % country
+        package_name = 'django_localflavor_%s' % country
+        src = join(repos_path, root_name, package_name, 'locale')
+        if not exists(src):
+            continue
+        dst = join(parent_path, 'localflavor', country, 'locale')
+        if not exists(dst):
+            continue
+        print
+        print 'copying', src
+        print '-->', dst
+        if not dry_run:
+            shutil.copytree(src, dst)
+
+
 def mkdir_p(path):
     try:
         os.makedirs(path)
@@ -90,8 +108,10 @@ def merge(src, dst):
     src_entries = dict((entry.msgid, entry) for entry in src)
     # Merge entries that are in the dst
     for entry in dst:
+        if entry.msgid == 'Baden-Wuerttemberg':
+            print "Baden-Wuerttemberg!!", entry.msgstr
         e = src_entries.get(entry.msgid)
-        if e is None:
+        if e is None or unicode(e) == u'':
             e = polib.POEntry()
             src.append(e)
         e.merge(entry)
@@ -184,3 +204,5 @@ if __name__ == '__main__':
         merge_po(args['--dry-run'])
     elif args.get('move_tests'):
         move_tests()
+    elif args.get('copy_locales'):
+        copy_locales(args['--dry-run'])
