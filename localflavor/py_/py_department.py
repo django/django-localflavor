@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-
-# http://www.statoids.com/upy.html
 from __future__ import unicode_literals
 
+#: http://www.statoids.com/upy.html
 DEPARTMENT_CHOICES = (
     ('AG', 'Alto Paraguay'),
     ('AA', 'Alto Paraná'),
@@ -24,6 +23,7 @@ DEPARTMENT_CHOICES = (
     ('SP', 'San Pedro'),
 )
 
+#: list of departments sorted by its roman number
 DEPARTMENT_ROMAN_CHOICES = (
     ('CN', 'I Concepción'),
     ('SP', 'II San Pedro'),
