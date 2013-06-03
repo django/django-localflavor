@@ -1,0 +1,29 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %}
+    {{ super() }}
+    <style type="text/css" media="screen">
+      .toctree-wrapper {margin:1em 0; padding-left:1em;}
+      .toctree-wrapper li {display:inline-block; *display:inline; *zoom:1; width:100%; text-indent:-2em;}
+      .toctree-wrapper li:before {content:'\2022'; margin-right:0.75em; font-weight:bold; font-size:1.3em;}
+      .toctree-wrapper ul {margin:0;}
+      .toctree-wrapper li li {display:block;}
+      .toctree-wrapper li li:before {content:'\B7';}
+
+      @media only screen and (min-width:48em) {
+        .toctree-wrapper {
+          -moz-column-count:2; -moz-column-gap:2.5em;
+          -webkit-column-count:2; -webkit-column-gap:2.5em;
+          column-count:2; column-gap:2.5em;
+        }
+      }
+
+      @media only screen and (min-width:60em) {
+        .toctree-wrapper {
+          -moz-column-count:3; -moz-column-gap:2.5em;
+          -webkit-column-count:3; -webkit-column-gap:2.5em;
+          column-count:3; column-gap:2.5em;
+        }
+      }
+    </style>
+{%- endblock %}

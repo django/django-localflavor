@@ -60,6 +60,8 @@ Or download the source distribution from PyPI_ at
 https://pypi.python.org/pypi/django-localflavor, decompress the file and
 run ``python setup.py install`` in the unpacked directory.
 
+Then add ``'localflavor'`` to your :setting:`INSTALLED_APPS` setting.
+
 .. _PyPI: https://pypi.python.org/
 
 Internationalization
@@ -86,10 +88,8 @@ in the file. See any of the existing flavors for examples.
 Backwards compatibility
 =======================
 
-As documented in our :ref:`API stability
-<django:misc-api-stability-localflavor>` policy, Django will always
-attempt to make :mod:`localflavor` reflect the officially gazetted
-policies of the appropriate local government authority. For example,
+We will always attempt to make :mod:`localflavor` reflect the officially
+gazetted policies of the appropriate local government authority. For example,
 if a government body makes a change to add, alter, or remove a province
 (or state, or county), that change will be reflected in localflavor in the
 next release.
