@@ -34,15 +34,3 @@ class PhoneNumberField(CharField):
         defaults = {'form_class': USPhoneNumberField}
         defaults.update(kwargs)
         return super(PhoneNumberField, self).formfield(**defaults)
-
-
-# Add South introspection rules
-try:
-    from south.modelsinspector import add_introspection_rules
-except:
-    pass
-else:
-    add_introspection_rules([], ["^localflavor\.us\.models\.USStateField"])
-    add_introspection_rules([], ["^localflavor\.us\.models\.USPostalCodeField"])
-    add_introspection_rules([], ["^localflavor\.us\.models\.PhoneNumberField"])
-    add_introspection_rules([], ["^localflavor\.us\.models\.USZipCodeField"])
