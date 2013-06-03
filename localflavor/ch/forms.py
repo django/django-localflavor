@@ -21,6 +21,10 @@ phone_digits_re = re.compile(r'^0([1-9]{1})\d{8}$')
 
 
 class CHZipCodeField(RegexField):
+    """
+    A form field that validates input as a Swiss zip code. Valid codes
+    consist of four digits.
+    """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXX.'),
     }

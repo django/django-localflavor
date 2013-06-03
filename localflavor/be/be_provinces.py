@@ -1,6 +1,6 @@
 from django.utils.translation import ugettext_lazy as _
 
-# ISO codes
+#: ISO codes
 PROVINCE_CHOICES = (
     ('VAN', _('Antwerp')),
     ('BRU', _('Brussels')),

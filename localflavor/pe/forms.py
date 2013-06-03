@@ -23,7 +23,7 @@ class PERegionSelect(Select):
 
 class PEDNIField(CharField):
     """
-    A field that validates `Documento Nacional de IdentidadŽ (DNI) numbers.
+    A field that validates Documento Nacional de Identidad (DNI) numbers.
     """
     default_error_messages = {
         'invalid': _("This field requires only numbers."),

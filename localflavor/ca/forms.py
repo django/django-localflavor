@@ -19,7 +19,7 @@ sin_re = re.compile(r"^(\d{3})-(\d{3})-(\d{3})$")
 
 class CAPostalCodeField(CharField):
     """
-    Canadian postal code field.
+    Canadian postal code form field.
 
     Validates against known invalid characters: D, F, I, O, Q, U
     Additionally the first character cannot be Z or W.
@@ -45,14 +45,12 @@ class CAPostalCodeField(CharField):
 
 
 class CAPhoneNumberField(Field):
-    """Canadian phone number field."""
+    """Canadian phone number form field."""
     default_error_messages = {
         'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),
     }
 
     def clean(self, value):
-        """Validate a phone number.
-        """
         super(CAPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
@@ -108,9 +106,11 @@ class CASocialInsuranceNumberField(Field):
 
     Checks the following rules to determine whether the number is valid:
 
-        * Conforms to the XXX-XXX-XXX format.
-        * Passes the check digit process "Luhn Algorithm"
-             See: http://en.wikipedia.org/wiki/Social_Insurance_Number
+    * Conforms to the XXX-XXX-XXX format.
+
+    * Passes the check digit process "Luhn Algorithm"
+         See: http://en.wikipedia.org/wiki/Social_Insurance_Number
+
     """
     default_error_messages = {
         'invalid': _(

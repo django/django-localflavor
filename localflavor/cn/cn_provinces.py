@@ -1,16 +1,13 @@
 # -*- coding: utf-8 -*-
-
-"""
-An alphabetical list of provinces for use as `choices` in a formfield.
-
-Reference:
-http://en.wikipedia.org/wiki/ISO_3166-2:CN
-http://en.wikipedia.org/wiki/Province_%28China%29
-http://en.wikipedia.org/wiki/Direct-controlled_municipality
-http://en.wikipedia.org/wiki/Autonomous_regions_of_China
-"""
 from __future__ import unicode_literals
 
+#: An alphabetical list of provinces for use as `choices` in a formfield.
+#: 
+#: Reference:
+#: http://en.wikipedia.org/wiki/ISO_3166-2:CN
+#: http://en.wikipedia.org/wiki/Province_%28China%29
+#: http://en.wikipedia.org/wiki/Direct-controlled_municipality
+#: http://en.wikipedia.org/wiki/Autonomous_regions_of_China
 CN_PROVINCE_CHOICES = (
     ("anhui", "安徽"),
     ("beijing", "北京"),

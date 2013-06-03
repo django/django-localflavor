@@ -16,7 +16,8 @@ from .si_postalcodes import SI_POSTALCODES_CHOICES
 
 
 class SIEMSOField(CharField):
-    """A form for validating Slovenian personal identification number.
+    """
+    A form for validating Slovenian personal identification number.
 
     Additionally stores gender, nationality and birthday to self.info dictionary.
     """
@@ -78,7 +79,8 @@ class SIEMSOField(CharField):
 
 
 class SITaxNumberField(CharField):
-    """Slovenian tax number field.
+    """
+    Slovenian tax number field.
 
     Valid input is SIXXXXXXXX or XXXXXXXX where X is a number.
     """
@@ -116,16 +118,17 @@ class SITaxNumberField(CharField):
 
 
 class SIPostalCodeField(ChoiceField):
-    """Slovenian post codes field.
     """
-
+    Slovenian post codes field.
+    """
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('choices', SI_POSTALCODES_CHOICES)
         super(SIPostalCodeField, self).__init__(*args, **kwargs)
 
 
 class SIPostalCodeSelect(Select):
-    """A Select widget that uses Slovenian postal codes as its choices.
+    """
+    A Select widget that uses Slovenian postal codes as its choices.
     """
     def __init__(self, attrs=None):
         super(SIPostalCodeSelect, self).__init__(attrs,
@@ -133,7 +136,8 @@ class SIPostalCodeSelect(Select):
 
 
 class SIPhoneNumberField(CharField):
-    """Slovenian phone number field.
+    """
+    Slovenian phone number field.
 
     Phone number must contain at least local area code.
     Country code can be present.

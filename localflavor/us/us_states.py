@@ -8,7 +8,7 @@ This exists in this standalone file so that it's only imported into memory
 when explicitly needed.
 """
 
-# The 48 contiguous states, plus the District of Columbia.
+#: The 48 contiguous states, plus the District of Columbia.
 CONTIGUOUS_STATES = (
     ('AL', 'Alabama'),
     ('AZ', 'Arizona'),
@@ -61,7 +61,7 @@ CONTIGUOUS_STATES = (
     ('WY', 'Wyoming'),
 )
 
-# All 50 states, plus the District of Columbia.
+#: All 50 states, plus the District of Columbia.
 US_STATES = (
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
@@ -116,7 +116,7 @@ US_STATES = (
     ('WY', 'Wyoming'),
 )
 
-# Non-state territories.
+#: Non-state territories.
 US_TERRITORIES = (
     ('AS', 'American Samoa'),
     ('GU', 'Guam'),
@@ -125,24 +125,24 @@ US_TERRITORIES = (
     ('VI', 'Virgin Islands'),
 )
 
-# Military postal "states". Note that 'AE' actually encompasses
-# Europe, Canada, Africa and the Middle East.
+#: Military postal "states". Note that 'AE' actually encompasses
+#: Europe, Canada, Africa and the Middle East.
 ARMED_FORCES_STATES = (
     ('AA', 'Armed Forces Americas'),
     ('AE', 'Armed Forces Europe'),
     ('AP', 'Armed Forces Pacific'),
 )
 
-# Non-US locations serviced by USPS (under Compact of Free
-# Association).
+#: Non-US locations serviced by USPS (under Compact of Free
+#: Association).
 COFA_STATES = (
     ('FM', 'Federated States of Micronesia'),
     ('MH', 'Marshall Islands'),
     ('PW', 'Palau'),
 )
 
-# Obsolete abbreviations (no longer US territories/USPS service, or
-# code changed).
+#: Obsolete abbreviations (no longer US territories/USPS service, or
+#: code changed).
 OBSOLETE_STATES = (
     ('CM', 'Commonwealth of the Northern Mariana Islands'),  # Is now 'MP'
     ('CZ', 'Panama Canal Zone'),                             # Reverted to Panama 1979
@@ -151,12 +151,13 @@ OBSOLETE_STATES = (
 )
 
 
-# All US states and territories plus DC and military mail.
+#: All US states and territories plus DC and military mail.
 STATE_CHOICES = tuple(sorted(US_STATES + US_TERRITORIES + ARMED_FORCES_STATES, key=lambda obj: obj[1]))
 
-# All US Postal Service locations.
+#: All US Postal Service locations.
 USPS_CHOICES = tuple(sorted(US_STATES + US_TERRITORIES + ARMED_FORCES_STATES + COFA_STATES, key=lambda obj: obj[1]))
 
+#: Normalized versions of state names
 STATES_NORMALIZED = {
     'ak': 'AK',
     'al': 'AL',

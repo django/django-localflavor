@@ -99,9 +99,12 @@ class ROCountyField(Field):
 
     WARNING: This field will only accept names written with diacritics; consider
     using ROCountySelect if this behavior is unnaceptable for you
+
     Example:
+
         Argeş => valid
         Arges => invalid
+
     """
     default_error_messages = {
         'invalid': 'Enter a Romanian county code or name.',

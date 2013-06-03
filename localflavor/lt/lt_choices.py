@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-Alphabetically sorted lists of Lithuanian administrative units.
-"""
-
 from __future__ import unicode_literals
 from django.utils.translation import ugettext_lazy as _
 
+#: Alphabetically sorted lists of Lithuanian counties.
 COUNTY_CHOICES = (
     ('alytus', _('Alytus')),
     ('kaunas', _('Kaunas')),
@@ -19,6 +16,7 @@ COUNTY_CHOICES = (
     ('vilnius', _('Vilnius')),
 )
 
+#: Alphabetically sorted lists of Lithuanian municipalities.
 MUNICIPALITY_CHOICES = (
     ('akmene', _('Akmenė district')),
     ('alytus_c', _('Alytus city')),

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*
 from __future__ import unicode_literals
 
+#: An alphabetical list of regions
 REGION_CHOICES = (
     ('ABR', 'Abruzzo'),
     ('BAS', 'Basilicata'),

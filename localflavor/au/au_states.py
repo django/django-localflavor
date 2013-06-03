@@ -1,10 +1,4 @@
-"""
-An alphabetical list of states for use as `choices` in a formfield.
-
-This exists in this standalone file so that it's only imported into memory
-when explicitly needed.
-"""
-
+#: An alphabetical list of states for use as `choices` in a formfield.
 STATE_CHOICES = (
     ('ACT', 'Australian Capital Territory'),
     ('NSW', 'New South Wales'),

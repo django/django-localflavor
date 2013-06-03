@@ -1,5 +1,6 @@
 from django.utils.translation import ugettext_lazy as _
 
+#: A list of prefectures
 JP_PREFECTURES = (
     ('hokkaido', _('Hokkaido'),),
     ('aomori', _('Aomori'),),

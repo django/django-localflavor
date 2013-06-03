@@ -33,7 +33,11 @@ class AUPostCodeField(RegexField):
 
 
 class AUPhoneNumberField(CharField):
-    """Australian phone number field."""
+    """
+    A form field that validates input as an Australian phone number.
+
+    Valid numbers have ten digits.
+    """
     default_error_messages = {
         'invalid': 'Phone numbers must contain 10 digits.',
     }

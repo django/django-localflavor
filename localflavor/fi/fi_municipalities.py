@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-An alphabetical list of Finnish municipalities for use as `choices` in a
-formfield.
-
-This exists in this standalone file so that it's only imported into memory
-when explicitly needed.
-"""
-
 from __future__ import unicode_literals
 
+#: An alphabetical list of Finnish municipalities for use as `choices` in a formfield.
 MUNICIPALITY_CHOICES = (
     ('akaa', "Akaa"),
     ('alajarvi', "Alajärvi"),

@@ -5,6 +5,10 @@ from .us_states import STATE_CHOICES, USPS_CHOICES
 
 
 class USStateField(CharField):
+    """
+    A model field that forms represent as a ``forms.USStateField`` field and
+    stores the two-letter U.S. state abbreviation in the database.
+    """
     description = _("U.S. state (two uppercase letters)")
 
     def __init__(self, *args, **kwargs):
@@ -14,6 +18,11 @@ class USStateField(CharField):
 
 
 class USPostalCodeField(CharField):
+    """"
+    A model field that forms represent as a ``forms.USPSSelect`` field
+    and stores the two-letter U.S Postal Service abbreviation in the
+    database.
+    """
     description = _("U.S. postal code (two uppercase letters)")
 
     def __init__(self, *args, **kwargs):
@@ -23,6 +32,10 @@ class USPostalCodeField(CharField):
 
 
 class PhoneNumberField(CharField):
+    """
+    A :class:`~django.db.models.CharField` that checks that the value
+    is a valid U.S.A.-style phone number (in the format ``XXX-XXX-XXXX``).
+    """
     description = _("Phone number")
 
     def __init__(self, *args, **kwargs):

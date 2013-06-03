@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-A list of Romanian counties as `choices` in a formfield.
-
-This exists as a standalone file so that it's only imported into memory when
-explicitly needed.
-"""
 from __future__ import unicode_literals
 
+#: A list of Romanian counties as `choices` in a formfield.
 COUNTIES_CHOICES = (
     ('AB', 'Alba'),
     ('AR', 'Arad'),

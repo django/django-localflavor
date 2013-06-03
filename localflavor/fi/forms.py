@@ -15,6 +15,10 @@ from .fi_municipalities import MUNICIPALITY_CHOICES
 
 
 class FIZipCodeField(RegexField):
+    """
+    A form field that validates input as a Finnish zip code. Valid codes
+    consist of five digits.
+    """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX.'),
     }
@@ -33,6 +37,7 @@ class FIMunicipalitySelect(Select):
 
 
 class FISocialSecurityNumber(Field):
+    """A form field that validates input as a Finnish social security number."""
     default_error_messages = {
         'invalid': _('Enter a valid Finnish social security number.'),
     }

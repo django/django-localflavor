@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-A list of Ecuador departaments as `choices` in a
-formfield.
-
-This exists in this standalone file so that it's only
-imported into memory when explicitly needed.
-"""
 from __future__ import unicode_literals
 
+#: A list of Ecuador departaments as `choices` in a formfield.
 PROVINCE_CHOICES = (
     ('A', 'Azuay'),
     ('B', 'Bolívar'),

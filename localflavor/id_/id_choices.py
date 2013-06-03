@@ -1,10 +1,8 @@
 from django.utils.translation import ugettext_lazy as _
 
-# Reference: http://id.wikipedia.org/wiki/Daftar_provinsi_Indonesia
-
-# Indonesia does not have an official Province code standard.
-# I decided to use unambiguous and consistent (some are common) 3-letter codes.
-
+#: Indonesia does not have an official Province code standard.
+#: I decided to use unambiguous and consistent (some are common) 3-letter codes.
+#: http://id.wikipedia.org/wiki/Daftar_provinsi_Indonesia
 PROVINCE_CHOICES = (
     ('ACE', _('Aceh')),
     ('BLI', _('Bali')),
@@ -41,6 +39,7 @@ PROVINCE_CHOICES = (
     ('SMU', _('Sumatera Utara')),
 )
 
+#: License plate prefixes
 LICENSE_PLATE_PREFIX_CHOICES = (
     ('A', _('Banten')),
     ('AA', _('Magelang')),

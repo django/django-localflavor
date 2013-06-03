@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.utils.translation import ugettext_lazy as _
 
+#: An alphabetical list of provinces
 PROVINCE_CHOICES = (
     ('01', _('Araba')),
     ('02', _('Albacete')),

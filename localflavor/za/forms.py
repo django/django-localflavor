@@ -16,7 +16,8 @@ id_re = re.compile(r'^(?P<yy>\d\d)(?P<mm>\d\d)(?P<dd>\d\d)(?P<mid>\d{4})(?P<end>
 
 
 class ZAIDField(CharField):
-    """A form field for South African ID numbers -- the checksum is validated
+    """
+    A form field for South African ID numbers -- the checksum is validated
     using the Luhn checksum, and uses a simlistic (read: not entirely accurate)
     check for the birthdate
     """
@@ -55,6 +56,10 @@ class ZAIDField(CharField):
 
 
 class ZAPostCodeField(RegexField):
+    """
+    A form field that validates input as a South African postcode. Valid
+    postcodes must have four digits.
+    """
     default_error_messages = {
         'invalid': _('Enter a valid South African postal code'),
     }

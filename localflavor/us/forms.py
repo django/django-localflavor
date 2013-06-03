@@ -18,6 +18,10 @@ ssn_re = re.compile(r"^(?P<area>\d{3})[-\ ]?(?P<group>\d{2})[-\ ]?(?P<serial>\d{
 
 
 class USZipCodeField(RegexField):
+    """"
+    A form field that validates input as a U.S. ZIP code. Valid formats are
+    XXXXX or XXXXX-XXXX.
+    """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX or XXXXX-XXXX.'),
     }
@@ -28,6 +32,9 @@ class USZipCodeField(RegexField):
 
 
 class USPhoneNumberField(CharField):
+    """
+    A form field that validates input as a U.S. phone number.
+    """
     default_error_messages = {
         'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),
     }

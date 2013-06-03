@@ -18,6 +18,10 @@ from .util import ssn_check_digit, vat_number_check_digit
 
 
 class ITZipCodeField(RegexField):
+    """
+    A form field that validates input as an Italian zip code. Valid codes
+    must have five digits.
+    """
     default_error_messages = {
         'invalid': _('Enter a valid zip code.'),
     }

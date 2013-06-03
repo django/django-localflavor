@@ -1,16 +1,7 @@
-"""
-An alphabetical list of provinces and territories for use as `choices`
-in a formfield., and a mapping of province misspellings/abbreviations to
-normalized abbreviations
-
-Source: http://www.canada.gc.ca/othergov/prov_e.html
-
-This exists in this standalone file so that it's only imported into memory
-when explicitly needed.
-"""
-
 from django.utils.translation import ugettext_lazy as _
 
+#: An alphabetical list of provinces and territories for use as `choices`
+#: in a formfield. Source: http://www.canada.gc.ca/othergov/prov_e.html
 PROVINCE_CHOICES = (
     ('AB', _('Alberta')),
     ('BC', _('British Columbia')),
@@ -27,6 +18,7 @@ PROVINCE_CHOICES = (
     ('YT', _('Yukon'))
 )
 
+#: a mapping of province misspellings/abbreviations to normalized abbreviations
 PROVINCES_NORMALIZED = {
     'ab': 'AB',
     'alberta': 'AB',

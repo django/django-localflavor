@@ -1,9 +1,6 @@
-"""
-Czech regions, translations get from http://www.crwflags.com/fotw/Flags/cz-re.html
-"""
-
 from django.utils.translation import ugettext_lazy as _
 
+#: Czech regions, translations get from http://www.crwflags.com/fotw/Flags/cz-re.html
 REGION_CHOICES = (
     ('PR', _('Prague')),
     ('CE', _('Central Bohemian Region')),

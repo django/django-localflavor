@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*
 from django.utils.translation import ugettext_lazy as _
 
+#: An alphabetical list of states
 STATE_CHOICES = (
     ('BW', _('Baden-Wuerttemberg')),
     ('BY', _('Bavaria')),

@@ -1,9 +1,6 @@
-"""
-Polish voivodeship as in http://en.wikipedia.org/wiki/Poland#Administrative_division
-"""
-
 from django.utils.translation import ugettext_lazy as _
 
+#: Polish voivodeship as in http://en.wikipedia.org/wiki/Poland#Administrative_division
 VOIVODESHIP_CHOICES = (
     ('lower_silesia', _('Lower Silesian')),
     ('kuyavia-pomerania', _('Kuyavian-Pomeranian')),

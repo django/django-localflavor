@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-An alphabetical list of Norwegian municipalities (fylker) fro use as `choices`
-in a formfield.
-
-This exists in this standalone file so that it's on ly imported into memory
-when explicitly needed.
-"""
 from __future__ import unicode_literals
 
+#: An alphabetical list of Norwegian municipalities (fylker) for
+#: use as `choices` in a formfield.
 MUNICIPALITY_CHOICES = (
     ('akershus', 'Akershus'),
     ('austagder', 'Aust-Agder'),

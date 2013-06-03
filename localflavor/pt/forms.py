@@ -29,7 +29,6 @@ class PTCitizenCardNumberField(Field):
     """
     A field which validates Portuguese Citizen Card numbers (locally CC - 'Cartão do Cidadão').
 
-    NOTE
     - Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X is a digit and Y is an alphanumeric character).
     - Citizen Card numbers validate as per http://bit.ly/RP0BzW.
     - The input string may or may not have an hyphen separating the identity number from the document's check-digits.
@@ -72,7 +71,6 @@ class PTPhoneNumberField(Field):
     """
     A field which validates Portuguese phone numbers.
 
-    NOTE
     - Phone numbers have at least 3 and at most 9 digits and may optionally be prefixed with '00351' or '+351'.
     - The input string is allowed to contain spaces (though they will be stripped).
     """
@@ -99,7 +97,6 @@ class PTRegionSelect(Select):
     """
     A select widget which uses a list of Portuguese regions as its choices.
 
-    NOTE
     - Regions correspond to the Portuguese 'distritos' and 'regiões autónomas' as per ISO3166:2-PT.
     """
     def __init__(self, attrs=None):
@@ -110,7 +107,6 @@ class PTSocialSecurityNumberField(Field):
     """
     A field which validates Portuguese Social Security numbers (locally NISS - 'Número de Identificação na Segurança Social').
 
-    NOTE
     - Social Security numbers must be in the format XYYYYYYYYYY (where X is either 1 or 2 and Y is any other digit).
     """
     default_error_messages = {

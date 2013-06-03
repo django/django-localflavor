@@ -1,7 +1,3 @@
-"""
-TR-specific Form helpers
-"""
-
 from __future__ import absolute_import, unicode_literals
 
 import re
@@ -19,6 +15,10 @@ phone_digits_re = re.compile(r'^(\+90|0)? ?(([1-9]\d{2})|\([1-9]\d{2}\)) ?([2-9]
 
 
 class TRPostalCodeField(RegexField):
+    """
+    A form field that validates input as a Turkish zip code. Valid codes
+    consist of five digits.
+    """
     default_error_messages = {
         'invalid': _('Enter a postal code in the format XXXXX.'),
     }
@@ -40,6 +40,11 @@ class TRPostalCodeField(RegexField):
 
 
 class TRPhoneNumberField(CharField):
+    """
+    A form field that validates input as a Turkish phone number. The correct
+    format is 0xxx xxx xxxx. +90xxx xxx xxxx and inputs without spaces also
+    validates. The result is normalized to xxx xxx xxxx format.
+    """
     default_error_messages = {
         'invalid': _('Phone numbers must be in 0XXX XXX XXXX format.'),
     }

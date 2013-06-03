@@ -49,7 +49,7 @@ class CZPostalCodeField(RegexField):
 
 class CZBirthNumberField(Field):
     """
-    Czech birth number field.
+    Czech birth number form field.
     """
     default_error_messages = {
         'invalid_format': _('Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX.'),
@@ -100,7 +100,7 @@ class CZBirthNumberField(Field):
 
 class CZICNumberField(Field):
     """
-    Czech IC number field.
+    Czech IC number form field.
     """
     default_error_messages = {
         'invalid': _('Enter a valid IC number.'),

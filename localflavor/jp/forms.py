@@ -28,8 +28,8 @@ class JPPostalCodeField(RegexField):
         Validates the input and returns a string that contains only numbers.
         Returns an empty string for empty values.
         """
-        v = super(JPPostalCodeField, self).clean(value)
-        return v.replace('-', '')
+        value = super(JPPostalCodeField, self).clean(value)
+        return value.replace('-', '')
 
 
 class JPPrefectureSelect(Select):

@@ -1,15 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
-Sources:
-    Croatian Counties: http://en.wikipedia.org/wiki/ISO_3166-2:HR
-
-    Croatia doesn't have official abbreviations for counties.
-    The ones provided are in common use.
-"""
 from __future__ import unicode_literals
 
 from django.utils.translation import ugettext_lazy as _
 
+#: Croatian Counties: http://en.wikipedia.org/wiki/ISO_3166-2:HR
+#: Croatia doesn't have official abbreviations for counties. The ones provided are in common use.
 HR_COUNTY_CHOICES = (
     ('GZG', _('Grad Zagreb')),
     ('BBŽ', _('Bjelovarsko-bilogorska županija')),
@@ -34,13 +29,8 @@ HR_COUNTY_CHOICES = (
     ('ZGŽ', _('Zagrebačka županija')),
 )
 
-"""
-Sources:
-http://hr.wikipedia.org/wiki/Dodatak:Popis_registracijskih_oznaka_za_cestovna_vozila_u_Hrvatskoj
-
-Only common license plate prefixes are provided. Special cases and obsolete prefixes are omitted.
-"""
-
+#: Only common license plate prefixes are provided. Special cases and obsolete prefixes are omitted.
+#: http://hr.wikipedia.org/wiki/Dodatak:Popis_registracijskih_oznaka_za_cestovna_vozila_u_Hrvatskoj
 HR_LICENSE_PLATE_PREFIX_CHOICES = (
     ('BJ', 'BJ'),
     ('BM', 'BM'),
@@ -78,10 +68,7 @@ HR_LICENSE_PLATE_PREFIX_CHOICES = (
     ('ŽU', 'ŽU'),
 )
 
-"""
-The list includes county and cellular network phone number prefixes.
-"""
-
+#: The list includes county and cellular network phone number prefixes.
 HR_PHONE_NUMBER_PREFIX_CHOICES = (
     ('1', '01'),
     ('20', '020'),

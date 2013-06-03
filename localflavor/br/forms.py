@@ -23,6 +23,10 @@ phone_digits_re = re.compile(r'^(\d{2})[-\.]?(\d{4,5})[-\.]?(\d{4})$')
 
 
 class BRZipCodeField(RegexField):
+    """
+    A form field that validates input as a Brazilian zip code, with the format
+    XXXXX-XXX.
+    """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX-XXX.'),
     }
@@ -33,6 +37,10 @@ class BRZipCodeField(RegexField):
 
 
 class BRPhoneNumberField(Field):
+    """
+    A form field that validates input as a Brazilian phone number, with the format
+    XX-XXXX-XXXX.
+    """
     default_error_messages = {
         'invalid': _(('Phone numbers must be in either of the following '
                       'formats: XX-XXXX-XXXX or XX-XXXXX-XXXX.')),
@@ -95,7 +103,7 @@ def DV_maker(v):
 
 class BRCPFField(CharField):
     """
-    This field validate a CPF number or a CPF string. A CPF number is
+    A form field that validates a CPF number or a CPF string. A CPF number is
     compounded by XXX.XXX.XXX-VD. The two last digits are check digits.
 
     More information:
@@ -144,6 +152,15 @@ class BRCPFField(CharField):
 
 
 class BRCNPJField(Field):
+    """
+    A form field that validates input as `Brazilian CNPJ`_.
+
+    Input can either be of the format XX.XXX.XXX/XXXX-XX or be a group of 14
+    digits.
+
+    .. _Brazilian CNPJ: http://en.wikipedia.org/wiki/National_identification_number#Brazil
+
+    """
     default_error_messages = {
         'invalid': _("Invalid CNPJ number."),
         'digits_only': _("This field requires only numbers."),

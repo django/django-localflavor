@@ -10,12 +10,14 @@ from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
 
 
 class LTCountySelect(Select):
+    """A select field with the Lithuanian counties as choices"""
 
     def __init__(self, attrs=None):
         super(LTCountySelect, self).__init__(attrs, choices=COUNTY_CHOICES)
 
 
 class LTMunicipalitySelect(Select):
+    """A select field with the Lithuanian municipalities as choices"""
 
     def __init__(self, attrs=None):
         super(LTMunicipalitySelect, self).__init__(attrs,

@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-This exists in this standalone file so that it's only imported into memory
-when explicitly needed.
-"""
 from __future__ import unicode_literals
 
+#: A list of Turkish provinces
 PROVINCE_CHOICES = (
     ('01', ('Adana')),
     ('02', ('Adıyaman')),

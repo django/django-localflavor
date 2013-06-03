@@ -1,17 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
-An alphabetical list of Swedish counties, sorted by codes.
-
-http://en.wikipedia.org/wiki/Counties_of_Sweden
-
-This exists in this standalone file so that it's only imported into memory
-when explicitly needed.
-
-"""
 from __future__ import unicode_literals
 
 from django.utils.translation import ugettext_lazy as _
 
+#: An alphabetical list of Swedish counties, sorted by codes.
+#: http://en.wikipedia.org/wiki/Counties_of_Sweden
 COUNTY_CHOICES = (
     ('AB', _('Stockholm')),
     ('AC', _('Västerbotten')),

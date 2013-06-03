@@ -1,9 +1,6 @@
-"""
-Sources:
-    Irish Counties: http://en.wikipedia.org/wiki/Counties_of_Ireland
-"""
 from django.utils.translation import ugettext_lazy as _
 
+#: Irish Counties: http://en.wikipedia.org/wiki/Counties_of_Ireland
 IE_COUNTY_CHOICES = (
     ('carlow', _('Carlow')),
     ('cavan', _('Cavan')),

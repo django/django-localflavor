@@ -15,12 +15,10 @@ from .mx_states import STATE_CHOICES
 
 DATE_RE = r'\d{2}((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))'
 
-"""
-This is the list of inconvenient words according to the `Anexo IV` of the
-document described in the next link:
-    http://www.sisi.org.mx/jspsi/documentos/2005/seguimiento/06101/0610100162005_065.doc
-"""
 
+#: This is the list of inconvenient words according to the `Anexo IV` of the
+#: document described in the next link:
+#: http://www.sisi.org.mx/jspsi/documentos/2005/seguimiento/06101/0610100162005_065.doc
 RFC_INCONVENIENT_WORDS = [
     'BUEI', 'BUEY', 'CACA', 'CACO', 'CAGA', 'CAGO', 'CAKA', 'CAKO',
     'COGE', 'COJA', 'COJE', 'COJI', 'COJO', 'CULO', 'FETO', 'GUEY',
@@ -30,11 +28,9 @@ RFC_INCONVENIENT_WORDS = [
     'RUIN',
 ]
 
-"""
-This is the list of inconvenient words according to the `Anexo 2` of the
-document described in the next link:
-    http://portal.veracruz.gob.mx/pls/portal/url/ITEM/444112558A57C6E0E040A8C02E00695C
-"""
+#: This is the list of inconvenient words according to the `Anexo 2` of the
+#: document described in the next link:
+#: http://portal.veracruz.gob.mx/pls/portal/url/ITEM/444112558A57C6E0E040A8C02E00695C
 CURP_INCONVENIENT_WORDS = [
     'BACA', 'BAKA', 'BUEI', 'BUEY', 'CACA', 'CACO', 'CAGA', 'CAGO',
     'CAKA', 'CAKO', 'COGE', 'COGI', 'COJA', 'COJE', 'COJI', 'COJO',
@@ -237,17 +233,19 @@ class MXSocialSecurityNumberField(RegexField):
     The Social Security Number is integrated by a juxtaposition of digits
     following the next pattern:
 
-    =====  =======================================
+    =====  ==================================================================
     Index  Required numbers
-    =====  =======================================
+    =====  ==================================================================
     1-2    The number of the branch office where the Social Security Number
            was designated.
     3-4    The year of inscription to the Social Security.
     5-6    The year of birth of the Social Security Number owner.
     7-10   The progressive number of procedure for the IMSS.
            (This digit is provided exclusively by the Institute as it regards
-            the Folio number of such procedure).
+           the Folio number of such procedure).
     11     The verification digit.
+    =====  ==================================================================
+
     """
     default_error_messages = {
         'invalid': _('Enter a valid Social Security Number.'),

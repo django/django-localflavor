@@ -32,7 +32,7 @@ class ATZipCodeField(RegexField):
 
 class ATStateSelect(Select):
     """
-    A Select widget that uses a list of AT states as its choices.
+    A ``Select`` widget that uses a list of AT states as its choices.
     """
     def __init__(self, attrs=None):
         super(ATStateSelect, self).__init__(attrs, choices=STATE_CHOICES)

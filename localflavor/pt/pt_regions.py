@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-Contains a tuple representing PT regions (as per ISO3166:2-PT).
-"""
 from __future__ import unicode_literals
 from django.utils.translation import ugettext_lazy as _
 
-
+#: A tuple representing Portuguese regions (as per ISO3166:2-PT).
 REGION_CHOICES = (
     ('01', _('Aveiro')),
     ('02', _('Beja')),

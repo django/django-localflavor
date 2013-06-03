@@ -1,12 +1,6 @@
-"""
-Sources:
-    English regions: http://en.wikipedia.org/wiki/List_of_ceremonial_counties_of_England
-    Northern Ireland regions: http://en.wikipedia.org/wiki/List_of_Irish_counties_by_area
-    Welsh regions: http://en.wikipedia.org/wiki/Preserved_counties_of_Wales
-    Scottish regions: http://en.wikipedia.org/wiki/Regions_and_districts_of_Scotland
-"""
 from django.utils.translation import ugettext_lazy as _
 
+#: English regions http://en.wikipedia.org/wiki/List_of_ceremonial_counties_of_England
 ENGLAND_REGION_CHOICES = (
     ("Bedfordshire", _("Bedfordshire")),
     ("Berkshire", _("Berkshire")),
@@ -58,6 +52,7 @@ ENGLAND_REGION_CHOICES = (
     ("Worcestershire", _("Worcestershire"))
 )
 
+#: Northern Ireland regions: http://en.wikipedia.org/wiki/List_of_Irish_counties_by_area
 NORTHERN_IRELAND_REGION_CHOICES = (
     ("County Antrim", _("County Antrim")),
     ("County Armagh", _("County Armagh")),
@@ -67,6 +62,7 @@ NORTHERN_IRELAND_REGION_CHOICES = (
     ("County Tyrone", _("County Tyrone")),
 )
 
+#: Welsh regions: http://en.wikipedia.org/wiki/Preserved_counties_of_Wales
 WALES_REGION_CHOICES = (
     ("Clwyd", _("Clwyd")),
     ("Dyfed", _("Dyfed")),
@@ -78,6 +74,7 @@ WALES_REGION_CHOICES = (
     ("West Glamorgan", _("West Glamorgan")),
 )
 
+#: Scottish regions: http://en.wikipedia.org/wiki/Regions_and_districts_of_Scotland
 SCOTTISH_REGION_CHOICES = (
     ("Borders", _("Borders")),
     ("Central Scotland", _("Central Scotland")),
@@ -93,6 +90,7 @@ SCOTTISH_REGION_CHOICES = (
     ("Western Isles", _("Western Isles")),
 )
 
+#: Great Britain nations
 GB_NATIONS_CHOICES = (
     ("England", _("England")),
     ("Northern Ireland", _("Northern Ireland")),
@@ -100,6 +98,7 @@ GB_NATIONS_CHOICES = (
     ("Wales", _("Wales")),
 )
 
+#: All regions of Great Britain
 GB_REGION_CHOICES = (ENGLAND_REGION_CHOICES +
                      NORTHERN_IRELAND_REGION_CHOICES +
                      WALES_REGION_CHOICES +

@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.utils.translation import ugettext_lazy as _
 
+#: An alphabetical list of provinces
 PROVINCE_CHOICES = (
     ('DR', _('Drenthe')),
     ('FL', _('Flevoland')),

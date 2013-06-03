@@ -18,6 +18,10 @@ id_re = re.compile(r"^(?P<residence>\d{10})(?P<origin>\w{1,3})[-\ ]?(?P<birthday
 
 
 class DEZipCodeField(RegexField):
+    """
+    A form field that validates input as a German zip code. Valid codes
+    consist of five digits.
+    """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX.'),
     }

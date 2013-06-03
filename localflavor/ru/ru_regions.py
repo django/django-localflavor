@@ -1,11 +1,7 @@
 # -*- encoding: utf-8 -*-
-"""
-Sources:
-    http://ru.wikipedia.org/wiki/Коды_субъектов_Российской_Федерации
-    http://ru.wikipedia.org/wiki/Федеральные_округа_Российской_Федерации
-"""
 from django.utils.translation import ugettext_lazy as _
 
+#: http://ru.wikipedia.org/wiki/Коды_субъектов_Российской_Федерации
 RU_COUNTY_CHOICES = (
     ("Central Federal County", _("Central Federal County")),
     ("South Federal County", _("South Federal County")),
@@ -17,6 +13,7 @@ RU_COUNTY_CHOICES = (
     ("North-Caucasian Federal County", _("North-Caucasian Federal County"))
 )
 
+#: http://ru.wikipedia.org/wiki/Федеральные_округа_Российской_Федерации
 RU_REGIONS_CHOICES = (
     ("77", _("Moskva")),
     ("78", _("Saint-Peterburg")),

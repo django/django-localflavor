@@ -180,10 +180,11 @@ class CNIDCardField(CharField):
 class CNPhoneNumberField(RegexField):
     """
     A form field that validates as Chinese phone number
-    A valid phone number could be like:
-        010-55555555
-    Considering there might be extension phone numbers, so this could also be:
-        010-55555555-35
+
+    A valid phone number could be like: 010-55555555
+
+    Considering there might be extension phone numbers,
+    so this could also be: 010-55555555-35
     """
     default_error_messages = {
         'invalid': _('Enter a valid phone number.'),
@@ -196,8 +197,9 @@ class CNPhoneNumberField(RegexField):
 class CNCellNumberField(RegexField):
     """
     A form field that validates as Chinese cell number
-    A valid cell number could be like:
-        13012345678
+
+    A valid cell number could be like: 13012345678
+
     We used a rough rule here, the first digit should be 1, the second could be
     3, 5 and 8, the rest could be what so ever.
     The length of the cell number should be 11.

@@ -16,6 +16,10 @@ from .no_municipalities import MUNICIPALITY_CHOICES
 
 
 class NOZipCodeField(RegexField):
+    """
+    A form field that validates input as a Norwegian zip code. Valid codes
+    have four digits.
+    """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXX.'),
     }

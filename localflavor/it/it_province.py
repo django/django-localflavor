@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*
 from __future__ import unicode_literals
 
+#: An alphabetical list of provinces
 PROVINCE_CHOICES = (
     ('AG', 'Agrigento'),
     ('AL', 'Alessandria'),

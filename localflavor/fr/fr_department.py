@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-
-# See the "Code officiel géographique" on the INSEE website <www.insee.fr>.
 from __future__ import unicode_literals
 
+#: See the "Code officiel géographique" on the INSEE website <www.insee.fr>.
 DEPARTMENT_CHOICES_PER_REGION = (
     # Metropolitan departments
     ('01', 'Ain', '82'),
@@ -117,6 +116,7 @@ DEPARTMENT_CHOICES_PER_REGION = (
     ('989', 'Île de Clipperton', None),
 )
 
+#: A list of departments
 DEPARTMENT_CHOICES = tuple([
     (dep[0], '%s - %s' % (dep[0], dep[1]),)
     for dep in DEPARTMENT_CHOICES_PER_REGION

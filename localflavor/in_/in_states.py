@@ -1,11 +1,4 @@
-"""
-A mapping of state misspellings/abbreviations to normalized abbreviations, and
-an alphabetical list of states for use as `choices` in a formfield.
-
-This exists in this standalone file so that it's only imported into memory
-when explicitly needed.
-"""
-
+#: A list of states
 STATE_CHOICES = (
     ('KA', 'Karnataka'),
     ('AP', 'Andhra Pradesh'),
@@ -46,6 +39,7 @@ STATE_CHOICES = (
     ('PY', 'Pondicherry'),
 )
 
+#: Normalized state names
 STATES_NORMALIZED = {
     'an': 'AN',
     'andaman and nicobar': 'AN',

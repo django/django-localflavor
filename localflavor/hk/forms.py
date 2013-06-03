@@ -21,7 +21,8 @@ hk_formats = ['XXXX-XXXX', '852-XXXX-XXXX', '(+852) XXXX-XXXX',
 
 class HKPhoneNumberField(CharField):
     """
-    Validate Hong Kong phone number.
+    A form field that validates Hong Kong phone numbers.
+
     The input format can be either one of the followings:
     'XXXX-XXXX', '852-XXXX-XXXX', '(+852) XXXX-XXXX',
     'XXXX XXXX', or 'XXXXXXXX'.
@@ -30,7 +31,7 @@ class HKPhoneNumberField(CharField):
     Note: The phone number shall not start with 999, 992, or 112.
           And, it should start with either 2, 3, 5, 6, 8, or 9.
 
-    Ref - http://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong
+    http://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong
     """
     default_error_messages = {
         'disguise': _('Phone number should not start with '

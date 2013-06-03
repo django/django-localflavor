@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-A list of Chilean regions as `choices` in a formfield.
-
-This exists in this standalone file so that it's only imported into memory
-when explicitly needed.
-"""
 from __future__ import unicode_literals
 
+#: A list of Chilean regions as `choices` in a formfield.
 REGION_CHOICES = (
     ('RM', 'Región Metropolitana de Santiago'),
     ('I', 'Región de Tarapacá'),

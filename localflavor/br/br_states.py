@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-An alphabetical list of Brazilian states for use as `choices` in a formfield.
-
-This exists in this standalone file so that it's only imported into memory
-when explicitly needed.
-"""
 from __future__ import unicode_literals
 
+#: An alphabetical list of Brazilian states for use as `choices` in a formfield
 STATE_CHOICES = (
     ('AC', 'Acre'),
     ('AL', 'Alagoas'),
