@@ -83,7 +83,7 @@ any code you'd like to contribute. One thing we ask is that you please use
 Unicode objects (``u'mystring'``) for strings, rather than setting the encoding
 in the file. See any of the existing flavors for examples.
 
-.. _create a ticket: https://code.djangoproject.com/newticket
+.. _create a ticket: https://github.com/django/django-localflavor/issues
 
 Backwards compatibility
 =======================
