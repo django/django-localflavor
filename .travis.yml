@@ -7,8 +7,9 @@ python:
 install:
   - make install
   - pip install $DJANGO
+  - pip install -e .
 script:
-  - "make travis"
+  - make travis
 env:
   - DJANGO="Django==1.5.1"
   - DJANGO=https://github.com/django/django/tarball/master
