@@ -11,5 +11,5 @@ install:
 script:
   - make travis
 env:
-  - DJANGO="Django==1.5.1"
+  - DJANGO="Django==1.5.1" EXTERNAL_DISCOVER_RUNNER=true
   - DJANGO=https://github.com/django/django/tarball/master
