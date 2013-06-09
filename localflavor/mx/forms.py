@@ -253,10 +253,12 @@ class MXSocialSecurityNumberField(RegexField):
     }
 
     def __init__(self, min_length=11, max_length=11, *args, **kwargs):
-        ssn_re = ur'^\d{11}$'
+        ssn_re = r'^\d{11}$'
         ssn_re = re.compile(ssn_re)
         super(MXSocialSecurityNumberField, self).__init__(ssn_re,
-                                                          min_length=min_length, max_length=max_length, *args, **kwargs)
+                                                          min_length=min_length,
+                                                          max_length=max_length,
+                                                          *args, **kwargs)
 
     def clean(self, value):
         value = super(MXSocialSecurityNumberField, self).clean(value)
@@ -267,7 +269,7 @@ class MXSocialSecurityNumberField(RegexField):
         return value
 
     def __checksum(self, value):
-        multipliers = [1 if i % 2 == 0 else 2 for i in xrange(10)]
+        multipliers = [1 if i % 2 == 0 else 2 for i in range(10)]
 
         s = [int(v) * m for v, m in zip(value, multipliers)]
         s = sum(map(int, ''.join(map(str, s))))

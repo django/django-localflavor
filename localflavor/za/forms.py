@@ -74,5 +74,5 @@ class ZAProvinceSelect(Select):
     A Select widget that uses a list of South African Provinces as its choices.
     """
     def __init__(self, attrs=None):
-        from za_provinces import PROVINCE_CHOICES
+        from .za_provinces import PROVINCE_CHOICES
         super(ZAProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)

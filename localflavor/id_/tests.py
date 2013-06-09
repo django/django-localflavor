@@ -1,7 +1,5 @@
 from __future__ import unicode_literals
 
-import warnings
-
 from .forms import (IDPhoneNumberField, IDPostCodeField,
                     IDNationalIdentityNumberField, IDLicensePlateField,
                     IDProvinceSelect, IDLicensePlatePrefixSelect)

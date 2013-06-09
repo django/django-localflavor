@@ -8,7 +8,12 @@ from django.utils.translation import ugettext_lazy as _
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.utils.encoding import smart_unicode
+
+try:
+    from django.utils.encoding import smart_text
+except ImportError:
+    from django.utils.encoding import smart_unicode as smart_text
+
 
 NUMERIC_RE = re.compile('^\d+$')
 
@@ -44,14 +49,14 @@ class GRTaxNumberCodeField(Field):
     def clean(self, value):
         super(GRTaxNumberCodeField, self).clean(value)
         if value in EMPTY_VALUES:
-            return u''
+            return ''
 
-        val = re.sub('[\-\s\(\)]', '', smart_unicode(value))
+        val = re.sub('[\-\s\(\)]', '', smart_text(value))
         if(len(val) < 9):
             raise ValidationError(self.error_messages['invalid'])
         if not self.allow_test_value and val == '000000000':
             raise ValidationError(self.error_messages['invalid'])
-        digits = map(int, val)
+        digits = list(map(int, val))
         digits1 = digits[:-1]
         digits1.reverse()
         check = digits[-1]
@@ -75,9 +80,9 @@ class GRPhoneNumberField(Field):
     def clean(self, value):
         super(GRPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
-            return u''
+            return ''
 
-        phone_nr = re.sub('[\-\s\(\)]', '', smart_unicode(value))
+        phone_nr = re.sub('[\-\s\(\)]', '', smart_text(value))
 
         if len(phone_nr) == 10 and NUMERIC_RE.search(phone_nr):
             return value
@@ -100,9 +105,9 @@ class GRMobilePhoneNumberField(Field):
     def clean(self, value):
         super(GRMobilePhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
-            return u''
+            return ''
 
-        phone_nr = re.sub('[\-\s\(\)]', '', smart_unicode(value))
+        phone_nr = re.sub('[\-\s\(\)]', '', smart_text(value))
 
         if len(phone_nr) == 10 and NUMERIC_RE.search(phone_nr) and phone_nr.startswith('69'):
             return value

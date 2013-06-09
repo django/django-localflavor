@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import os
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -7,7 +9,6 @@ DATABASES = {
 }
 
 INSTALLED_APPS = [
-    'discover_runner',
     'localflavor',
     'localflavor.au.tests',
     'localflavor.mk.tests',
@@ -15,6 +16,8 @@ INSTALLED_APPS = [
     'localflavor.us.tests',
 ]
 
-SECRET_KEY = 'spam-spam-spam-spam'
+if 'EXTERNAL_DISCOVER_RUNNER' in os.environ:
+    TEST_RUNNER = 'discover_runner.DiscoverRunner'
+    INSTALLED_APPS += ['discover_runner']
 
-TEST_RUNNER = 'discover_runner.DiscoverRunner'
+SECRET_KEY = 'spam-spam-spam-spam'
