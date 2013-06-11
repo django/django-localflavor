@@ -9,6 +9,7 @@ python:
 install:
   - make install
   - pip install $DJANGO
+  - pip install coveralls
   - pip install -e .
 
 script:
@@ -17,3 +18,5 @@ script:
 env:
   - DJANGO="Django==1.5.1" EXTERNAL_DISCOVER_RUNNER=true
   - DJANGO=https://github.com/django/django/tarball/master
+
+after_success: coveralls
