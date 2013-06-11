@@ -131,5 +131,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Topic :: Internet :: WWW/HTTP',
     ],
+    install_requires=['Django >= 1.5.0'],
+    test_suite='runtests.runtests',
     zip_safe=False,
 )
