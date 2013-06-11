@@ -5,8 +5,8 @@ import datetime
 
 from django.test import SimpleTestCase
 
-from .forms import (SECountySelect, SEOrganisationNumberField,
-                    SEPersonalIdentityNumberField, SEPostalCodeField)
+from ..forms import (SECountySelect, SEOrganisationNumberField,
+                     SEPersonalIdentityNumberField, SEPostalCodeField)
 
 
 class SELocalFlavorTests(SimpleTestCase):

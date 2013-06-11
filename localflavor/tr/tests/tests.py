@@ -1,8 +1,8 @@
 from django.core.exceptions import ValidationError
 from django.utils.unittest import TestCase
 
-from .forms import (TRPostalCodeField, TRPhoneNumberField,
-                    TRIdentificationNumberField)
+from ..forms import (TRPostalCodeField, TRPhoneNumberField,
+                     TRIdentificationNumberField)
 # FIXME: this raises a ValueError in django-discover-runner when using
 # a relative import, should be fixed once django-discover-runner uses
 # the runner from Django 1.6.x

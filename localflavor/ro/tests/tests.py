@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from .forms import (ROCIFField, ROCNPField, ROCountyField, ROCountySelect,
-                    ROIBANField, ROPhoneNumberField, ROPostalCodeField)
+from ..forms import (ROCIFField, ROCNPField, ROCountyField, ROCountySelect,
+                     ROIBANField, ROPhoneNumberField, ROPostalCodeField)
 
 
 class ROLocalFlavorTests(SimpleTestCase):

@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from .forms import LTIDCodeField, LTMunicipalitySelect, LTCountySelect
+from ..forms import LTIDCodeField, LTMunicipalitySelect, LTCountySelect
 
 
 class LTLocalFlavorTests(SimpleTestCase):

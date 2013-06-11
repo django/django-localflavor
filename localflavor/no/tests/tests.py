@@ -2,8 +2,8 @@
 from django.test import SimpleTestCase
 from django.utils.translation import ugettext_lazy as _, override
 
-from .forms import (NOPhoneNumberField, NOSocialSecurityNumber,
-                    NOZipCodeField, NOMunicipalitySelect)
+from ..forms import (NOPhoneNumberField, NOSocialSecurityNumber,
+                     NOZipCodeField, NOMunicipalitySelect)
 
 
 class NOLocalFlavorTests(SimpleTestCase):

@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from .forms import GBPostcodeField
+from ..forms import GBPostcodeField
 
 
 class GBLocalFlavorTests(SimpleTestCase):

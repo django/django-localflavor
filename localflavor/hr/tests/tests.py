@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from .forms import (HRCountySelect, HRPhoneNumberPrefixSelect,
-                    HRLicensePlatePrefixSelect, HRPhoneNumberField,
-                    HRLicensePlateField, HRPostalCodeField, HROIBField,
-                    HRJMBGField, HRJMBAGField)
+from ..forms import (HRCountySelect, HRPhoneNumberPrefixSelect,
+                     HRLicensePlatePrefixSelect, HRPhoneNumberField,
+                     HRLicensePlateField, HRPostalCodeField, HROIBField,
+                     HRJMBGField, HRJMBAGField)
 
 from django.test import SimpleTestCase
 

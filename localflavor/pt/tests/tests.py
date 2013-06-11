@@ -6,9 +6,9 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from .forms import (PTCitizenCardNumberField, PTPhoneNumberField,
-                    PTRegionSelect, PTSocialSecurityNumberField,
-                    PTZipCodeField)
+from ..forms import (PTCitizenCardNumberField, PTPhoneNumberField,
+                     PTRegionSelect, PTSocialSecurityNumberField,
+                     PTZipCodeField)
 
 
 class PTLocalFlavorTests(SimpleTestCase):

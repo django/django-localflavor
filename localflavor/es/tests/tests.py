@@ -2,9 +2,9 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from .forms import (ESPostalCodeField, ESPhoneNumberField,
-                    ESIdentityCardNumberField, ESCCCField,
-                    ESRegionSelect, ESProvinceSelect)
+from ..forms import (ESPostalCodeField, ESPhoneNumberField,
+                     ESIdentityCardNumberField, ESCCCField,
+                     ESRegionSelect, ESProvinceSelect)
 
 
 class ESLocalFlavorTests(SimpleTestCase):

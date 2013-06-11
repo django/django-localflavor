@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from .forms import DEZipCodeField, DEStateSelect, DEIdentityCardNumberField
+from ..forms import DEZipCodeField, DEStateSelect, DEIdentityCardNumberField
 
 
 class DELocalFlavorTests(SimpleTestCase):

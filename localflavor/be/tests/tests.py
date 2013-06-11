@@ -2,8 +2,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from .forms import (BEPostalCodeField, BEPhoneNumberField,
-                    BERegionSelect, BEProvinceSelect)
+from ..forms import (BEPostalCodeField, BEPhoneNumberField,
+                     BERegionSelect, BEProvinceSelect)
 
 
 class BELocalFlavorTests(SimpleTestCase):

@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
-from .forms import FIZipCodeField, FISocialSecurityNumber, FIMunicipalitySelect
+from ..forms import (FIZipCodeField, FISocialSecurityNumber,
+                     FIMunicipalitySelect)
 
 from django.test import SimpleTestCase
 

@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 
-from .forms import (JPPostalCodeField,
-                    JPPrefectureSelect)
+from ..forms import JPPostalCodeField, JPPrefectureSelect
 
 from django.test import SimpleTestCase
 

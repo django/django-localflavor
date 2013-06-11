@@ -2,7 +2,7 @@ from __future__ import absolute_import
 
 from django.test import SimpleTestCase
 
-from .forms import HKPhoneNumberField
+from ..forms import HKPhoneNumberField
 
 
 class HKLocalFlavorTests(SimpleTestCase):

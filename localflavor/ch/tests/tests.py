@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 from django.utils.translation import override, ugettext as _
 
-from .forms import (CHZipCodeField, CHPhoneNumberField,
-                    CHIdentityCardNumberField, CHStateSelect)
+from ..forms import (CHZipCodeField, CHPhoneNumberField,
+                     CHIdentityCardNumberField, CHStateSelect)
 
 
 class CHLocalFlavorTests(SimpleTestCase):

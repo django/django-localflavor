@@ -5,8 +5,8 @@ from datetime import date
 
 from django.test import SimpleTestCase
 
-from .forms import (SIEMSOField, SITaxNumberField, SIPhoneNumberField,
-                    SIPostalCodeField, SIPostalCodeSelect)
+from ..forms import (SIEMSOField, SITaxNumberField, SIPhoneNumberField,
+                     SIPostalCodeField, SIPostalCodeSelect)
 
 
 class SILocalFlavorTests(SimpleTestCase):

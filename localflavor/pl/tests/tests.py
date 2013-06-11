@@ -1,8 +1,8 @@
 from __future__ import unicode_literals
 
-from .forms import (PLProvinceSelect, PLCountySelect, PLPostalCodeField,
-                    PLNIPField, PLPESELField, PLNationalIDCardNumberField,
-                    PLREGONField)
+from ..forms import (PLProvinceSelect, PLCountySelect, PLPostalCodeField,
+                     PLNIPField, PLPESELField, PLNationalIDCardNumberField,
+                     PLREGONField)
 
 from django.test import SimpleTestCase
 

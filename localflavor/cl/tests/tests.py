@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from .forms import CLRutField, CLRegionSelect
+from ..forms import CLRutField, CLRegionSelect
 
 
 class CLLocalFlavorTests(SimpleTestCase):

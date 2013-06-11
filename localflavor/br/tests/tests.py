@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 from __future__ import unicode_literals
 
-from .forms import (BRZipCodeField, BRCNPJField, BRCPFField,
-                    BRPhoneNumberField, BRStateSelect, BRStateChoiceField)
+from ..forms import (BRZipCodeField, BRCNPJField, BRCPFField,
+                     BRPhoneNumberField, BRStateSelect, BRStateChoiceField)
 
 from django.test import SimpleTestCase
 

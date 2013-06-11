@@ -2,8 +2,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from .forms import UYDepartmentSelect, UYCIField
-from .util import get_validation_digit
+from ..forms import UYDepartmentSelect, UYCIField
+from ..util import get_validation_digit
 
 
 class UYLocalFlavorTests(SimpleTestCase):
