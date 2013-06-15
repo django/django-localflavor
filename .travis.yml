@@ -8,9 +8,7 @@ python:
 
 install:
   - make install
-  - pip install https://github.com/django/django/archive/${DJANGO}.zip#egg=django
-  - pip install coveralls
-  - pip install -e .
+  - pip install . coveralls https://github.com/django/django/archive/${DJANGO}.zip#egg=django
 
 script:
   - make travis
