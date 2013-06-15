@@ -117,7 +117,7 @@ setup(
     # long_description=read('README.rst'),
     author='Django Software Foundation',
     author_email='foundation@djangoproject.com',
-    packages=find_packages(),
+    packages=find_packages(exclude=['tests', 'tests.*']),
     package_data=find_package_data(),
     classifiers=[
         'Development Status :: 5 - Production/Stable',

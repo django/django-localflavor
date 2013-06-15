@@ -7,3 +7,4 @@ include .coveragerc
 recursive-include localflavor/locale *.po *.mo
 recursive-include requirements *.txt
 recursive-include docs *
+recursive-include tests *
