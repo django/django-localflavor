@@ -8,7 +8,7 @@ python:
 
 install:
   - make install
-  - pip install $DJANGO
+  - pip install https://github.com/django/django/archive/${DJANGO}.zip#egg=django
   - pip install coveralls
   - pip install -e .
 
@@ -16,7 +16,7 @@ script:
   - make travis
 
 env:
-  - DJANGO="Django==1.5.1" EXTERNAL_DISCOVER_RUNNER=true
-  - DJANGO=https://github.com/django/django/tarball/master
+  - DJANGO=1.5.1
+  - DJANGO=master
 
 after_success: coveralls

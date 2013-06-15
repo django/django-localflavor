@@ -1,6 +1,7 @@
 from django.db import models
 
-from ..models import MKIdentityCardNumberField, MKMunicipalityField, UMCNField
+from localflavor.mk.models import (MKIdentityCardNumberField,
+                                   MKMunicipalityField, UMCNField)
 
 
 class MKPerson(models.Model):

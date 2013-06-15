@@ -1,5 +1,7 @@
 from django.db import models
-from ..models import AUStateField, AUPostCodeField, AUPhoneNumberField
+
+from localflavor.au.models import (AUStateField, AUPostCodeField,
+                                   AUPhoneNumberField)
 
 
 class AustralianPlace(models.Model):

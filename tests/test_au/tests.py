@@ -4,7 +4,8 @@ import re
 
 from django.test import TestCase
 
-from ..forms import AUPostCodeField, AUPhoneNumberField, AUStateSelect
+from localflavor.au.forms import (AUPostCodeField, AUPhoneNumberField,
+                                  AUStateSelect)
 from .forms import AustralianPlaceForm
 
 

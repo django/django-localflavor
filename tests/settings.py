@@ -10,14 +10,15 @@ DATABASES = {
 
 INSTALLED_APPS = [
     'localflavor',
-    'localflavor.au.tests',
-    'localflavor.mk.tests',
-    'localflavor.mx.tests',
-    'localflavor.us.tests',
+    'tests.test_au',
+    'tests.test_mk',
+    'tests.test_mx',
+    'tests.test_us',
 ]
 
-if 'EXTERNAL_DISCOVER_RUNNER' in os.environ:
+import django
+
+if django.VERSION[:2] < (1, 6):
     TEST_RUNNER = 'discover_runner.DiscoverRunner'
-    INSTALLED_APPS += ['discover_runner']
 
 SECRET_KEY = 'spam-spam-spam-spam'
