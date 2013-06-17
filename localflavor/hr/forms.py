@@ -215,7 +215,7 @@ class HRPhoneNumberField(Field):
     default_error_messages = {
         'invalid': _('Enter a valid phone number'),
         'area': _('Enter a valid area or mobile network code'),
-        'number': _('The phone nubmer is too long'),
+        'number': _('The phone number is too long'),
     }
 
     def clean(self, value):
