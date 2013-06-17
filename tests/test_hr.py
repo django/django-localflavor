@@ -113,7 +113,7 @@ class HRLocalFlavorTests(SimpleTestCase):
     def test_HRPhoneNumberField(self):
         error_invalid = ['Enter a valid phone number']
         error_area = ['Enter a valid area or mobile network code']
-        error_number = ['The phone nubmer is too long']
+        error_number = ['The phone number is too long']
         valid = {
             '+38511234567': '+38511234567',
             '0038511234567': '+38511234567',
