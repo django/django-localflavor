@@ -1386,7 +1386,7 @@ msgid "Enter a valid area or mobile network code"
 msgstr "Zadejte platnou oblast nebo kód mobilní sítě."
 
 #: hr/forms.py:221
-msgid "The phone nubmer is too long"
+msgid "The phone number is too long"
 msgstr "Telefonní číslo je příliš dlouhé."
 
 #: hr/forms.py:259

@@ -1388,7 +1388,7 @@ msgid "Enter a valid area or mobile network code"
 msgstr "Masukkan kode area atau jaringan ponsel yang valid"
 
 #: hr/forms.py:221
-msgid "The phone nubmer is too long"
+msgid "The phone number is too long"
 msgstr "Nomor telepon terlalu panjang"
 
 #: hr/forms.py:259

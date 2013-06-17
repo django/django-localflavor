@@ -1386,7 +1386,7 @@ msgid "Enter a valid area or mobile network code"
 msgstr "Ange en giltigt riktnummer eller mobiltelefonnummer."
 
 #: hr/forms.py:221
-msgid "The phone nubmer is too long"
+msgid "The phone number is too long"
 msgstr "Telefonnumret är för långt."
 
 #: hr/forms.py:259

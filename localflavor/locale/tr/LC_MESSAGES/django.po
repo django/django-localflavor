@@ -1393,7 +1393,7 @@ msgid "Enter a valid area or mobile network code"
 msgstr "Geçerli bir alan veya mobil ağ kodu girin"
 
 #: hr/forms.py:221
-msgid "The phone nubmer is too long"
+msgid "The phone number is too long"
 msgstr "Telefon numarası çok uzun."
 
 #: hr/forms.py:259

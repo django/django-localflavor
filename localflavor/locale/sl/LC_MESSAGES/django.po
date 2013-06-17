@@ -1388,7 +1388,7 @@ msgid "Enter a valid area or mobile network code"
 msgstr "Vnesite veljavno področno ali omrežno številko"
 
 #: hr/forms.py:221
-msgid "The phone nubmer is too long"
+msgid "The phone number is too long"
 msgstr "Telefonska številka je predolga"
 
 #: hr/forms.py:259

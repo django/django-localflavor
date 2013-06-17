@@ -1383,7 +1383,7 @@ msgid "Enter a valid area or mobile network code"
 msgstr "Indtast en gyldig område- eller mobilnetværkskode"
 
 #: hr/forms.py:221
-msgid "The phone nubmer is too long"
+msgid "The phone number is too long"
 msgstr "Telefonnummeret er for langt"
 
 #: hr/forms.py:259
