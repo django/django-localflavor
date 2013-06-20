@@ -20,4 +20,6 @@ REGION_CHOICES = (
     ('MU', _('Region of Murcia')),
     ('NA', _('Foral Community of Navarre')),
     ('VC', _('Valencian Community')),
+    ('CE', _('Autonomous city of Ceuta')),
+    ('ML', _('Autonomous city of Mellila')),
 )
