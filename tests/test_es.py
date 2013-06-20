@@ -28,6 +28,8 @@ class ESLocalFlavorTests(SimpleTestCase):
 <option value="MU">Region of Murcia</option>
 <option value="NA">Foral Community of Navarre</option>
 <option value="VC">Valencian Community</option>
+<option value="CE">Ceuta</option>
+<option value="ML">Mellila</option>
 </select>'''
         self.assertHTMLEqual(f.render('regions', 'CT'), out)
 
