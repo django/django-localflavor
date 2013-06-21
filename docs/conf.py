@@ -14,7 +14,7 @@
 import sys
 import os
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'localflavor.tests.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tests.settings')
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
