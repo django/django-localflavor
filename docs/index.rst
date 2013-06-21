@@ -20,6 +20,55 @@ U.S. state abbreviations, and a
 :class:`~localflavor.fi.forms.FISocialSecurityNumber` that knows how to
 validate Finnish social security numbers.
 
+.. hlist::
+   :columns: 4
+
+   * :doc:`localflavor/ar`
+   * :doc:`localflavor/at`
+   * :doc:`localflavor/au`
+   * :doc:`localflavor/be`
+   * :doc:`localflavor/br`
+   * :doc:`localflavor/ca`
+   * :doc:`localflavor/ch`
+   * :doc:`localflavor/cl`
+   * :doc:`localflavor/cn`
+   * :doc:`localflavor/co`
+   * :doc:`localflavor/cz`
+   * :doc:`localflavor/de`
+   * :doc:`localflavor/ec`
+   * :doc:`localflavor/es`
+   * :doc:`localflavor/fi`
+   * :doc:`localflavor/fr`
+   * :doc:`localflavor/gb`
+   * :doc:`localflavor/hk`
+   * :doc:`localflavor/hr`
+   * :doc:`localflavor/id_`
+   * :doc:`localflavor/ie_`
+   * :doc:`localflavor/il`
+   * :doc:`localflavor/in_`
+   * :doc:`localflavor/is_`
+   * :doc:`localflavor/it`
+   * :doc:`localflavor/jp`
+   * :doc:`localflavor/kw`
+   * :doc:`localflavor/lt`
+   * :doc:`localflavor/mk`
+   * :doc:`localflavor/mx`
+   * :doc:`localflavor/nl`
+   * :doc:`localflavor/no`
+   * :doc:`localflavor/pe`
+   * :doc:`localflavor/pl`
+   * :doc:`localflavor/pt`
+   * :doc:`localflavor/py_`
+   * :doc:`localflavor/ro`
+   * :doc:`localflavor/ru`
+   * :doc:`localflavor/se`
+   * :doc:`localflavor/si`
+   * :doc:`localflavor/sk`
+   * :doc:`localflavor/tr`
+   * :doc:`localflavor/us`
+   * :doc:`localflavor/uy`
+   * :doc:`localflavor/za`
+
 To use one of these localized components, just import the relevant subpackage.
 For example, here's how you can create a form with a field representing a
 French telephone number::
@@ -29,13 +78,6 @@ French telephone number::
 
     class MyForm(forms.Form):
         my_french_phone_no = FRPhoneNumberField()
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   localflavor/*
-   generic
 
 The ``localflavor`` package also includes a :doc:`generic </generic>` subpackage,
 containing useful code that is not specific to one particular country or culture.
@@ -119,3 +161,10 @@ Indices and tables
 * :ref:`search`
 
 .. _ISO 3166 country codes: http://www.iso.org/iso/country_codes.htm
+
+.. toctree::
+   :glob:
+   :hidden:
+
+   localflavor/*
+   generic
