@@ -3,9 +3,11 @@ from django.utils.functional import Promise
 
 from sphinx.util.inspect import safe_repr
 
+list_or_tuple = lambda x: isinstance(x, (tuple, list))
+
 
 def lazy_repr(obj):
-    if isinstance(obj, (tuple, list)):
+    if list_or_tuple(obj):
         values = []
         for item in obj:
             values.append(lazy_repr(item))
@@ -22,6 +24,37 @@ def setup(app):
     from sphinx.ext import autodoc
 
     def lazy_safe_repr(obj):
-        return safe_repr(lazy_repr(obj))
+        items = lazy_repr(obj)
+        repr_list = []
+
+        if list_or_tuple(items):
+            repr_list.append('(')
+            items_length = len(items)
+            for i, item in enumerate(items, 1):
+
+                if list_or_tuple(item):
+                    item_repr_list = ['(']
+                    item_length = len(item)
+                    for j, x in enumerate(item, 1):
+                        if j == item_length:
+                            item_repr_list.append("'%s'" % x)
+                        else:
+                            item_repr_list.append("'%s', " % x)
+
+                    if i == items_length:
+                        item_repr_list.append(')')
+                    else:
+                        item_repr_list.append('), ')
+
+                else:
+                    item_repr_list = ["'%s'" % item]
+
+                repr_list.append(''.join(item_repr_list))
+
+            repr_list.append(')')
+
+            return ''.join(repr_list)
+
+        return safe_repr(obj)
 
     autodoc.safe_repr = lazy_safe_repr  # noqa
