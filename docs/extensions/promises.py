@@ -36,10 +36,14 @@ def setup(app):
                     item_repr_list = ['(']
                     item_length = len(item)
                     for j, x in enumerate(item, 1):
-                        if j == item_length:
-                            item_repr_list.append("'%s'" % x)
+                        if isinstance(x, int):
+                            x_repr = '%s' % x
                         else:
-                            item_repr_list.append("'%s', " % x)
+                            x_repr = "'%s'" % x
+                        if j == item_length:
+                            item_repr_list.append("%s" % x_repr)
+                        else:
+                            item_repr_list.append("%s, " % x_repr)
 
                     if i == items_length:
                         item_repr_list.append(')')
@@ -47,7 +51,11 @@ def setup(app):
                         item_repr_list.append('), ')
 
                 else:
-                    item_repr_list = ["'%s'" % item]
+                    if isinstance(item, int):
+                        item_repr = '%s' % item
+                    else:
+                        item_repr = "'%s'" % item
+                    item_repr_list = ["'%s'" % item_repr]
 
                 repr_list.append(''.join(item_repr_list))
 
