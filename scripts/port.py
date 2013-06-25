@@ -7,6 +7,7 @@ Usage:
   port.py copy_locales [--dry-run]
   port.py merge_po [--dry-run]
   port.py move_tests
+  port.py collect_authors
   port.py (-h | --help)
   port.py --version
 
@@ -204,6 +205,22 @@ def move_tests():
                 shutil.rmtree(test_path)
 
 
+def collect_authors():
+    authors = set()
+    for country in countries:
+        root_name = 'django-localflavor-%s' % country
+        src = join(repos_path, root_name)
+        command = "git log --pretty=format:'%aN <%aE>' | sort -u"
+        response = envoy.run(command, cwd=src)
+        output = response.std_out.strip()
+        authors.update(output.splitlines())
+    authors_list = sorted(list(authors))
+
+    with open(join(parent_path, 'AUTHORS.rst'), 'w') as authors_file:
+        for line in authors_list:
+            authors_file.write(line)
+            authors_file.write('\n')
+
 if __name__ == '__main__':
     args = docopt(__doc__, version='port.py 1.0')
 
@@ -217,3 +234,5 @@ if __name__ == '__main__':
         move_tests()
     elif args.get('copy_locales'):
         copy_locales(args['--dry-run'])
+    elif args.get('collect_authors'):
+        collect_authors()
