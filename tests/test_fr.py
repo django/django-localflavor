@@ -5,10 +5,9 @@ from django.test import SimpleTestCase
 
 from localflavor.fr.forms import (
     FRZipCodeField, FRPhoneNumberField,
+    FRDepartmentField, FRRegionField,
     FRRegionSelect, FRDepartmentSelect
 )
-
-from .forms import FRPlaceForm
 
 
 class FRLocalFlavorTests(SimpleTestCase):
@@ -43,7 +42,7 @@ class FRLocalFlavorTests(SimpleTestCase):
 
     def test_FRDepartmentfield(self):
         out = '''
-            <select id="id_department" name="department">
+            <select name="department">
                 <option value="01">01 - Ain</option>
                 <option value="02">02 - Aisne</option>
                 <option value="03">03 - Allier</option>
@@ -157,8 +156,11 @@ class FRLocalFlavorTests(SimpleTestCase):
                 <option value="989">989 - Île de Clipperton</option>
             </select>
         '''
-        form = FRPlaceForm()
-        self.assertHTMLEqual(str(form['department']), out)
+        self.assertFieldOutput(
+            FRDepartmentField,
+            {out: out},
+            {}
+        )
 
     def test_FRRegionfield(self):
         out = '''
@@ -192,8 +194,11 @@ class FRLocalFlavorTests(SimpleTestCase):
                 <option value="94">94 - Corse</option>
             </select>
         '''
-        form = FRPlaceForm()
-        self.assertHTMLEqual(str(form['region']), out)
+        self.assertFieldOutput(
+            FRRegionField,
+            {out: out},
+            {}
+        )
 
     def test_FRDepartmentSelect(self):
         f = FRDepartmentSelect()

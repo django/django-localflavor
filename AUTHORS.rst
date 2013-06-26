@@ -15,7 +15,6 @@ Authors
 * Claude Paroz
 * Douglas Miranda
 * Erik Romijn
-* Ferry Jérémie
 * Gary Wilson Jr
 * Gerardo Orozco
 * Honza Král
@@ -23,6 +22,7 @@ Authors
 * Jacob Kaplan-Moss
 * James Bennett
 * Jannis Leidel
+* Jérémie Ferry
 * Jonas Ghyllebert
 * Joseph Kocherhans
 * Julien Phalip
