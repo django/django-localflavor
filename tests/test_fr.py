@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
-
 from localflavor.fr.forms import (
     FRZipCodeField, FRPhoneNumberField,
     FRDepartmentField, FRRegionField,
@@ -42,7 +41,7 @@ class FRLocalFlavorTests(SimpleTestCase):
 
     def test_FRDepartmentfield(self):
         out = '''
-            <select name="department">
+            <select name="dep">
                 <option value="01">01 - Ain</option>
                 <option value="02">02 - Aisne</option>
                 <option value="03">03 - Allier</option>
@@ -147,24 +146,22 @@ class FRLocalFlavorTests(SimpleTestCase):
                 <option value="976">976 - Mayotte</option>
                 <option value="977">977 - Saint-Barthélemy</option>
                 <option value="978">978 - Saint-Martin</option>
-                <option value="984">
-                    984 - Terres australes et antarctiques françaises
-                </option>
+                <option value="984">%s</option>
                 <option value="986">986 - Wallis et Futuna</option>
                 <option value="987">987 - Polynésie française</option>
                 <option value="988">988 - Nouvelle-Calédonie</option>
                 <option value="989">989 - Île de Clipperton</option>
             </select>
-        '''
+        ''' % '984 - Terres australes et antarctiques françaises'
         self.assertFieldOutput(
             FRDepartmentField,
-            {out: out},
+            {'any string': out.strip().replace('    ', '')},
             {}
         )
 
     def test_FRRegionfield(self):
         out = '''
-            <select id="id_region" name="region">
+            <select name="reg">
                 <option value="01">01 - Guadeloupe</option>
                 <option value="02">02 - Martinique</option>
                 <option value="03">03 - Guyane</option>
@@ -196,7 +193,7 @@ class FRLocalFlavorTests(SimpleTestCase):
         '''
         self.assertFieldOutput(
             FRRegionField,
-            {out: out},
+            {'any string': out.strip().replace('    ', '')},
             {}
         )
 
