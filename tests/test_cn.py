@@ -107,10 +107,10 @@ class CNLocalFlavorTests(SimpleTestCase):
     def test_CNCellNumberField(self):
         error_format = ['Enter a valid cell number.']
         valid = {
-            '13012345678': '13012345678',
+            '13012345678': '13012345678', '14700010002'
         }
         invalid = {
             '130123456789': error_format,
-            '14012345678': error_format
+            '16012345678': error_format
         }
         self.assertFieldOutput(CNCellNumberField, valid, invalid)
