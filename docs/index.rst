@@ -125,7 +125,69 @@ any code you'd like to contribute. One thing we ask is that you please use
 Unicode objects (``u'mystring'``) for strings, rather than setting the encoding
 in the file. See any of the existing flavors for examples.
 
+If you consider adding a new localflavor for country here are some examples
+that you might consider implementing:
+
+- form fields and form widgets
+
+  - ID verification
+  - tax or social security number validator
+  - car registration
+  - zip code validation
+  - phone number validation
+  - country area selects, e.g. cities, counties, states, provinces
+
+- model fields, e.g. for storing any of the above form fields' values
+
+- local translations of English area names
+
 .. _create a ticket: https://github.com/django/django-localflavor/issues
+
+Releases
+========
+
+Due to django-localflavor' history as a former contrib app, the app is
+required to be working with the actively maintained Django versions. See
+the documenation about `Django's release process`_ for more information.
+
+django-localflavor releases are not tied to the release cycle of Django.
+Version numbers follow the appropriate Python standards, e.g. PEPs 386_ and 440_.
+
+.. _386: http://www.python.org/dev/peps/pep-0386/
+.. _440: http://www.python.org/dev/peps/pep-0440/
+.. _`Django's release process`: https://docs.djangoproject.com/en/dev/internals/release-process/
+
+How to migrate
+==============
+
+If you've used the old ``django.contrib.localflavor`` package or one of the
+temporary ``django-localflavor-*`` releases, follow these two easy steps to
+update your code:
+
+1. Install the third-party ``django-localflavor`` package.
+
+2. Change your app's import statements to reference the new packages.
+
+   For example, change this::
+
+       from django.contrib.localflavor.fr.forms import FRPhoneNumberField
+
+   ...to this::
+
+       from localflavor.fr.forms import FRPhoneNumberField
+
+   Or if you used one of the shortlived ``django-localflavor-*`` packages
+   change::
+
+       from django_localflavor_fr.forms import FRPhoneNumberField
+
+   ...to this::
+
+       from localflavor.fr.forms import FRPhoneNumberField
+
+The code in the new package is the same (it was copied directly from Django),
+so you don't have to worry about backwards compatibility in terms of
+functionality. Only the imports have changed.
 
 Backwards compatibility
 =======================

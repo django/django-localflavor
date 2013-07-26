@@ -1,3 +1,5 @@
+.PHONY: test clean install travis release docs
+
 clean:
 	git clean -Xfd
 
@@ -10,3 +12,9 @@ test:
 	coverage report
 
 travis: test
+
+release:
+	python setup.py sdist bdist_wheel register upload -s
+
+docs:
+	cd docs; make html; cd ..
