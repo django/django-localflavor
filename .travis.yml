@@ -7,13 +7,13 @@ python:
   - "3.3"
 
 install:
-  - make install
+  - pip install invoke
   - pip install https://github.com/django/django/archive/${DJANGO}.zip#egg=django
   - pip install coveralls
   - pip install -e .
 
 script:
-  - make travis
+  - invoke travis
 
 env:
   - DJANGO=1.5.1

@@ -2,7 +2,7 @@ include LICENSE
 include AUTHORS.rst
 include README.rst
 include CONTRIBUTING.rst
-include Makefile
+include tasks.py
 include tox.ini
 include .coveragerc
 recursive-include localflavor/locale *.po *.mo
