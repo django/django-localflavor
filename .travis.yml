@@ -17,6 +17,6 @@ script:
 
 env:
   - DJANGO=1.5.1
-  - DJANGO=master
+  - DJANGO=stable/1.6.x
 
 after_success: coveralls
