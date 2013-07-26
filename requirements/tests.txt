@@ -2,3 +2,4 @@ invoke
 coverage==3.6
 flake8==1.7
 django-discover-runner==1.0
+six
