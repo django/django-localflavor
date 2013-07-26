@@ -18,14 +18,14 @@ def test(lang='all'):
     flake_cmd = 'flake8 --ignore=W801,E128,E501,W402'
 
     if lang == 'all':
-        run('{} localflavor'.format(flake_cmd))
-        run('{} tests'.format(test_cmd))
+        run('{0} localflavor'.format(flake_cmd))
+        run('{0} tests'.format(test_cmd))
         run('coverage report')
     elif lang not in os.listdir('localflavor'):
-        print('This language {!r} is not supported yet.'.format(lang))
+        print('This language {0!r} is not supported yet.'.format(lang))
     else:
-        run('{} localflavor/{}'.format(flake_cmd, lang))
-        run('{} tests.test_{}'.format(test_cmd, lang))
-        run('coverage report -m --include=localflavor/{}/*'.format(lang))
+        run('{0} localflavor/{1}'.format(flake_cmd, lang))
+        run('{0} tests.test_{1}'.format(test_cmd, lang))
+        run('coverage report -m --include=localflavor/{0}/*'.format(lang))
 
 travis = test
