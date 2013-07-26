@@ -1,4 +1,6 @@
-invoke
+# invoke
+# temporary fix for invoke
+https://github.com/jezdez/invoke/archive/python-3.2.zip
 coverage==3.6
 flake8==1.7
 django-discover-runner==1.0
