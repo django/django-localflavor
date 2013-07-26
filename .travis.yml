@@ -7,7 +7,7 @@ python:
   - "3.3"
 
 install:
-- pip install -r requirements/tests.txt
+  - pip install -r requirements/tests.txt
   - pip install https://github.com/django/django/archive/${DJANGO}.zip#egg=django
   - pip install coveralls
   - pip install -e .
