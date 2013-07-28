@@ -1,9 +1,11 @@
 from __future__ import unicode_literals
 from datetime import date
+import re
+from six import text_type
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Select, RegexField
+from django.forms.fields import Select, RegexField, Field
 from django.utils.translation import ugettext_lazy as _
 
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
@@ -98,3 +100,120 @@ class LTPostalCodeField(RegexField):
     def __init__(self, *args, **kwargs):
         super(LTPostalCodeField, self).__init__(r'(?i)^(LT\s?-\s?)?\d{5}$',
                                                 *args, **kwargs)
+
+
+class LTPhoneField(Field):
+    """
+    Form field that validates as Lithuanian phone number
+
+    You can accept any permutation of following phone numbers:
+
+        * Emergency (01, 02, 03, 04, 112)
+        * Mobile (370 600 00 000)
+        * Landline
+        * Service numbers
+
+    If you accept landline numbers, you can opt in to accepting local landline
+    numbers too. Local landline numbers are numbers without area code.
+
+    This field does not accept multiple numbers (as separated by /).
+
+    All inputs are sanitised to a number which you call to internationally
+    except the case when local landline number is inserted.
+    """
+
+    # Order dependent (shorter codes cannot go before longer ones)
+    _area_codes = list(map(text_type,
+        [425, 315, 381, 319, 450, 313, 528, 386, 349, 426, 447, 346, 427, 347,
+         445, 459, 318, 343, 443, 383, 469, 421, 460, 451, 448, 319, 422, 428,
+         458, 440, 345, 380, 449, 441, 382, 387, 446, 444, 528, 340, 389, 310,
+         342, 386, 385, 45, 46, 41, 37, 5]))
+    _stripable = re.compile(r'[\+()~ ]')
+    default_error_messages = {
+        'non-digit': _('Phone number can only contain digits'),
+        'no-parse': _('Could not validate the phone number'),
+    }
+
+    def __init__(self, mobile=True, landline=True, emergency=False,
+                 landline_local=False, service=False, **kwargs):
+        self._checks = []
+        if mobile:
+            self._checks.append(self._clean_mobile)
+        if landline:
+            self._checks.append(self._clean_landline)
+        if service:
+            self._checks.append(self._clean_service)
+        if emergency:
+            self._checks.append(self._clean_emergency)
+
+        print('here', landline_local, landline)
+        if landline_local and not landline:
+            raise ValueError("Cannot accept local landline numbers if " +
+                             "regular landline numbers are not accepted")
+        elif landline_local:
+            self._checks.append(self._clean_landline_local)
+
+        super(LTPhoneField, self).__init__(**kwargs)
+
+    def clean(self, value):
+        value = super(LTPhoneField, self).clean(value)
+
+        if value in EMPTY_VALUES:
+            return ''
+
+        value = self._stripable.sub('', value.strip())
+        if not value.isdigit():
+            raise ValidationError(self.error_messages['non-digit'],
+                                  code='invalid')
+
+        results = list(filter(lambda x: x is not None,
+                              map(lambda fn: fn(value), self._checks)))
+        if results:
+            # TODO: More than one result means code error, check for it.
+            return results[0]
+        raise ValidationError(self.error_messages['no-parse'], code='invalid')
+
+    def _clean_emergency(self, value):
+        if value in ["112", "01", "02", "03", "04"]:
+            return value
+
+    def _clean_mobile(self, value):
+        if len(value) == 9 and value[:2] == "86":
+            return "370" + value[1:]
+        elif len(value) == 11 and value[:4] == "3706":
+            return value
+
+    def _clean_service(self, value):
+        if len(value) == 9 and value[:4] == "8800":
+            return "370" + value[1:]
+        elif len(value) == 11 and value[:6] == "370800":
+            return value
+
+    # Now these two are most complex ones.
+    def _clean_landline_local(self, value):
+        # The landline phone number must always be 8 digits in length when the
+        # number contains an area code. Now area codes can range from 1 to 3
+        # digits (ex. 5 for Vilnius district or 389 for Utena). For local
+        # (in district) calling you don't have to include the area code,
+        # therefore local numbers can range from 5 to 7 digits in length.
+        #
+        # We cannot prepend area code or country code to those numbers because
+        # there's more than one possibility in almost all cases with a
+        # single exception being Vilnius district. As Vilnius is the only
+        # district that has a single digit code, we can safely assume the
+        # number is for Vilnius.
+
+        if 5 <= len(value) <= 6:
+            return value
+        elif len(value) == 7:
+            return "3705" + value
+
+    def _clean_landline(self, value):
+        if len(value) == 9 and value[0] == "8":
+            number = value[1:]
+        elif len(value) == 11 and value[:3] == "370":
+            number = value[3:]
+        else:
+            return None
+        if any(number.startswith(prefix) for prefix in self._area_codes):
+            return "370" + number
