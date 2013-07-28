@@ -108,12 +108,6 @@ class FRDepartmentField(CharField):
         kwargs['label'] = _('Select Department')
         super(FRDepartmentField, self).__init__(*args, **kwargs)
 
-    def clean(self, value):
-        value = super(FRDepartmentField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        return self.widget.render('dep', '')
-
 
 class FRRegionField(CharField):
     """
@@ -124,9 +118,3 @@ class FRRegionField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['label'] = _('Select Region')
         super(FRRegionField, self).__init__(*args, **kwargs)
-
-    def clean(self, value):
-        value = super(FRRegionField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        return self.widget.render('reg', '')
