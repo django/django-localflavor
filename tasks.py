@@ -9,7 +9,7 @@ def clean():
 
 @task
 def install():
-    run('pip install --requirement=requirements/tests.txt')
+    run('pip install --requirement=tests/requirements.txt')
 
 
 @task
