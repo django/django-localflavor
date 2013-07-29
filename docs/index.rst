@@ -102,7 +102,12 @@ Or download the source distribution from PyPI_ at
 https://pypi.python.org/pypi/django-localflavor, decompress the file and
 run ``python setup.py install`` in the unpacked directory.
 
-Then add ``'localflavor'`` to your :setting:`INSTALLED_APPS` setting.
+Then add ``'localflavor'`` to your :setting:`INSTALLED_APPS` setting::
+
+    INSTALLED_APPS = (
+        # ...
+        'localflavor',
+    )
 
 .. _PyPI: https://pypi.python.org/
 
