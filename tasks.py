@@ -27,3 +27,10 @@ def test(lang='all'):
         run('{0} localflavor/{1}'.format(flake_cmd, lang))
         run('{0} tests.test_{1}'.format(test_cmd, lang))
         run('coverage report -m --include=localflavor/{0}/*'.format(lang))
+
+
+@task
+def translations(pull=False):
+    if pull:
+        run('tx pull -a')
+    run('cd localflavor; django-admin.py makemessages -a; django-admin.py compilemessages; cd ..')
