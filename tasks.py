@@ -27,5 +27,3 @@ def test(lang='all'):
         run('{0} localflavor/{1}'.format(flake_cmd, lang))
         run('{0} tests.test_{1}'.format(test_cmd, lang))
         run('coverage report -m --include=localflavor/{0}/*'.format(lang))
-
-travis = test

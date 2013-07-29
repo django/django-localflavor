@@ -13,7 +13,7 @@ install:
   - pip install -e .
 
 script:
-  - invoke travis
+  - invoke test
 
 env:
   - DJANGO=1.5.1
