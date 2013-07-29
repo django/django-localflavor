@@ -58,6 +58,17 @@ class ITLocalFlavorTests(SimpleTestCase):
         }
         self.assertFieldOutput(ITSocialSecurityNumberField, valid, invalid)
 
+    def test_ITSocialSecurityNumberField_for_entities(self):
+        error_invalid = ['Enter a valid Social Security number.']
+        valid = {
+            '07973780013': '07973780013',
+        }
+        invalid = {
+            '07973780014': error_invalid,
+            'A7973780013': error_invalid,
+        }
+        self.assertFieldOutput(ITSocialSecurityNumberField, valid, invalid)
+
     def test_ITVatNumberField(self):
         error_invalid = ['Enter a valid VAT number.']
         valid = {
