@@ -34,3 +34,8 @@ def translations(pull=False):
     if pull:
         run('tx pull -a')
     run('cd localflavor; django-admin.py makemessages -a; django-admin.py compilemessages; cd ..')
+
+
+@task
+def docs():
+    run('cd docs; make html; cd ..')

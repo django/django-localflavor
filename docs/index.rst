@@ -144,7 +144,8 @@ that you might consider implementing:
 
 - model fields, e.g. for storing any of the above form fields' values
 
-- local translations of English area names
+- local translations of English area names. Join your language team at
+  Transifex: https://www.transifex.com/projects/p/django-localflavor/
 
 .. _create a ticket: https://github.com/django/django-localflavor/issues
 
