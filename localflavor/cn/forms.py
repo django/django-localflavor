@@ -25,7 +25,7 @@ __all__ = (
 ID_CARD_RE = r'^\d{15}(\d{2}[0-9xX])?$'
 POST_CODE_RE = r'^\d{6}$'
 PHONE_RE = r'^\d{3,4}-\d{7,8}(-\d+)?$'
-CELL_RE = r'^1[358]\d{9}$'
+CELL_RE = r'^1[3458]\d{9}$'
 
 # Valid location code used in id card checking algorithm
 CN_LOCATION_CODES = (
