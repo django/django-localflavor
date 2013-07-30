@@ -111,7 +111,7 @@ def find_package_data(where='.', package='',
 setup(
     name="django-localflavor",
     version=find_version("localflavor", "__init__.py"),
-    url='http://django-locaflavor.readthedocs.org/en/latest/',
+    url='http://django-localflavor.readthedocs.org/en/latest/',
     license='BSD',
     description="Country-specific Django helpers",
     # long_description=read('README.rst'),
