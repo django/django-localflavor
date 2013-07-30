@@ -1,4 +1,5 @@
 from django.utils.encoding import smart_text
+from django.utils.translation import ugettext_lazy as _
 
 
 def ssn_check_digit(value):
@@ -32,6 +33,25 @@ def ssn_check_digit(value):
             msg = "Character '%(char)s' is not allowed." % {'char': ssn[i]}
             raise ValueError(msg)
     return ssn_check_digits[total % 26]
+
+
+def ssn_validation(ssn_value):
+    """Validate Italian SSN.
+    Any exception is left uncatched to let fields raise the ValidationError"""
+    check_digit = ssn_check_digit(ssn_value)
+    if not ssn_value[15] == check_digit:
+        raise ValueError(_('Check digit does not match.'))
+    return ssn_value
+
+
+def vat_number_validation(vat_number):
+    """Validate Italian VAT number. Used also for entities SSN validation
+    Any exception is left uncatched to let fields raise the ValidationError"""
+    vat_number = str(int(vat_number)).zfill(11)
+    check_digit = vat_number_check_digit(vat_number[0:10])
+    if not vat_number[10] == check_digit:
+        raise ValueError(_('Check digit does not match.'))
+    return smart_text(vat_number)
 
 
 def vat_number_check_digit(vat_number):

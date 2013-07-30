@@ -62,6 +62,8 @@ class ITLocalFlavorTests(SimpleTestCase):
         error_invalid = ['Enter a valid Social Security number.']
         valid = {
             '07973780013': '07973780013',
+            '7973780013': '07973780013',
+            7973780013: '07973780013',
         }
         invalid = {
             '07973780014': error_invalid,

@@ -10,11 +10,10 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
-from django.utils.encoding import smart_text
 
 from .it_province import PROVINCE_CHOICES
 from .it_region import REGION_CHOICES
-from .util import ssn_check_digit, vat_number_check_digit
+from .util import (vat_number_validation, ssn_validation)
 
 
 class ITZipCodeField(RegexField):
@@ -58,7 +57,7 @@ class ITSocialSecurityNumberField(RegexField):
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ITSocialSecurityNumberField, self).__init__(r'^\w{3}\s*\w{3}\s*\w{5}\s*\w{5}$',
+        super(ITSocialSecurityNumberField, self).__init__(r'^\w{3}\s*\w{3}\s*\w{5}\s*\w{5}$|[0-9]{10}',
                                                           max_length, min_length,
                                                           *args, **kwargs)
 
@@ -67,13 +66,20 @@ class ITSocialSecurityNumberField(RegexField):
         if value in EMPTY_VALUES:
             return ''
         value = re.sub('\s', '', value).upper()
-        try:
-            check_digit = ssn_check_digit(value)
-        except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
-        if not value[15] == check_digit:
-            raise ValidationError(self.error_messages['invalid'])
-        return value
+        # Entities SSN are numeric-only
+        if value.isdigit():
+            try:
+                return vat_number_validation(value)
+            except ValueError:
+                raise ValidationError(self.error_messages['invalid'])
+        # Person SSN
+        else:
+            try:
+                return ssn_validation(value)
+            except ValueError:
+                raise ValidationError(self.error_messages['invalid'])
+            except IndexError:
+                raise ValidationError(self.error_messages['invalid'])
 
 
 class ITVatNumberField(Field):
@@ -89,11 +95,6 @@ class ITVatNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
         try:
-            vat_number = int(value)
+            return vat_number_validation(value)
         except ValueError:
             raise ValidationError(self.error_messages['invalid'])
-        vat_number = str(vat_number).zfill(11)
-        check_digit = vat_number_check_digit(vat_number[0:10])
-        if not vat_number[10] == check_digit:
-            raise ValidationError(self.error_messages['invalid'])
-        return smart_text(vat_number)
