@@ -13,7 +13,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from .it_province import PROVINCE_CHOICES
 from .it_region import REGION_CHOICES
-from .util import (vat_number_validation, ssn_validation)
+from .util import vat_number_validation, ssn_validation
 
 
 class ITZipCodeField(RegexField):
@@ -57,7 +57,7 @@ class ITSocialSecurityNumberField(RegexField):
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ITSocialSecurityNumberField, self).__init__(r'^\w{3}\s*\w{3}\s*\w{5}\s*\w{5}$|[0-9]{10}',
+        super(ITSocialSecurityNumberField, self).__init__(r'^\w{3}\s*\w{3}\s*\w{5}\s*\w{5}$|\d{10}',
                                                           max_length, min_length,
                                                           *args, **kwargs)
 
@@ -76,9 +76,7 @@ class ITSocialSecurityNumberField(RegexField):
         else:
             try:
                 return ssn_validation(value)
-            except ValueError:
-                raise ValidationError(self.error_messages['invalid'])
-            except IndexError:
+            except (ValueError, IndexError):
                 raise ValidationError(self.error_messages['invalid'])
 
 
