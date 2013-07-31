@@ -39,7 +39,7 @@ def ssn_validation(ssn_value):
     """
     Validate Italian SSN for persons
 
-    ValueError is raised if validation fails.
+    ``ValueError`` is raised if validation fails.
     """
     check_digit = ssn_check_digit(ssn_value)
     if ssn_value[15] != check_digit:
@@ -51,7 +51,7 @@ def vat_number_validation(vat_number):
     """
     Validate Italian VAT number. Used also for entities SSN validation.
 
-    ValueError is raised if validation fails.
+    ``ValueError`` is raised if validation fails.
     """
     vat_number = str(int(vat_number)).zfill(11)
     check_digit = vat_number_check_digit(vat_number[0:10])
