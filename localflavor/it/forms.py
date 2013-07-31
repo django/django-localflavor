@@ -48,9 +48,18 @@ class ITProvinceSelect(Select):
 
 class ITSocialSecurityNumberField(RegexField):
     """
-    A form field that validates Italian Social Security numbers (codice fiscale).
-    For reference see http://www.agenziaentrate.it/ and search for
-    'Informazioni sulla codificazione delle persone fisiche'.
+    A form field that validates Italian Social Security numbers (codice fiscale) for
+    both persons and entities.
+
+    For reference see http://www.agenziaentrate.it/ and search for:
+
+    * 'Informazioni sulla codificazione delle persone fisiche' for persons' SSN
+    * 'Codice fiscale Modello AA5/6' for entities' SSN
+
+    .. versionchanged:: 1.1
+
+    The ``ITSocialSecurityNumberField`` now also accepts SSN values for
+    entities (numeric-only form).
     """
     default_error_messages = {
         'invalid': _('Enter a valid Social Security number.'),
