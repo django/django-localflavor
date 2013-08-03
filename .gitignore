@@ -5,3 +5,4 @@ build
 .tox
 repos
 docs/_build/
+*.py[cod]
