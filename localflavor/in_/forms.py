@@ -36,6 +36,8 @@ phone_digits_re = re.compile(r"""
     )
 )$""", re.VERBOSE)
 
+aadhaar_re = re.compile(r"^(?P<part1>\d{4})[-\ ]?(?P<part2>\d{4})[-\ ]?(?P<part3>\d{4})$")
+
 
 class INZipCodeField(RegexField):
     """
@@ -84,7 +86,48 @@ class INStateField(Field):
                 pass
         raise ValidationError(self.error_messages['invalid'])
 
+class INAadhaarNumberField(Field):
+    """
+    A form field for Aadhaar number issued by 
+    Unique Identification Authority of India (UIDAI).
 
+    Checks the following rules to determine whether the number is valid:
+
+        * Conforms to the XXXX XXXX XXXX format.
+        * No group consists entirely of zeroes.
+    
+    Important information:
+        
+        * Aadhaar number is a proof of identity but not of citizenship.
+        * Aadhaar number is issued to every resident of India including
+          foreign citizens.
+        * Aadhaar number is not mandatory.
+    
+    More information can be found at 
+    http://uidai.gov.in/what-is-aadhaar-number.html
+    """
+    default_error_messages = {
+        'invalid': _('Enter a valid Aadhaar number in XXXX XXXX XXXX or '
+                                                    'XXXX-XXXX-XXXX format.'),
+    }
+    
+    def clean(self, value):
+        super(INAadhaarNumberField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+        
+        match = re.match(aadhaar_re, value)
+        if not match:
+            raise ValidationError(self.error_messages['invalid'])
+        part1, part2, part3 = match.groupdict()['part1'], match.groupdict()['part2'], match.groupdict()['part3']
+        
+        # all the parts can't be zero
+        if part1 == '0000' and part2 == '0000' and part3 == '0000':
+            raise ValidationError(self.error_messages['invalid'])
+        
+        return '%s %s %s' % (part1,part2,part3)
+    
+    
 class INStateSelect(Select):
     """
     A Select widget that uses a list of Indian states/territories as its
