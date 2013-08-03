@@ -3,17 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Eduardo Carvalho <eduardocereto@gmail.com>, 2011
+# Thiago Carvalho D Avila <thiagocavila@gmail.com>, 2013
 # Gladson Simplício Brito <gladsonbrito@gmail.com>, 2013
 # Guilherme Gondim <semente+transifex@taurinus.org>, 2011-2012
+# Eduardo Carvalho <eduardocereto@gmail.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 11:44+0200\n"
-"PO-Revision-Date: 2013-07-02 14:40+0000\n"
-"Last-Translator: Gladson Simplício Brito <gladsonbrito@gmail.com>\n"
+"POT-Creation-Date: 2013-08-03 11:44+0200\n"
+"PO-Revision-Date: 2013-08-03 14:40+0000\n"
+"Last-Translator: Thiago Carvalho D Avila <thiagocavila@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <django-l10n-portuguese@googlegroups."
 "com>\n"
 "Language: pt_BR\n"
@@ -277,6 +278,14 @@ msgstr ""
 #: br/forms.py:31
 msgid "Enter a zip code in the format XXXXX-XXX."
 msgstr "CEP devem estar no formato XXXXX-XXX."
+
+#: br/forms.py:45
+msgid ""
+"Phone numbers must be in either of the following "
+"formats: XX-XXXX-XXXX or XX-XXXXX-XXXX."
+msgstr ""
+"Números de telefone devem estar em um dos seguintes "
+"formatos: XX-XXXX-XXXX ou XX-XXXXX-XXXX."
 
 #: br/forms.py:76
 msgid ""
