@@ -38,8 +38,8 @@ class BRZipCodeField(RegexField):
 
 class BRPhoneNumberField(Field):
     """
-    A form field that validates input as a Brazilian phone number, that must be in 
-    either of the following formats: XX-XXXX-XXXX or XX-XXXXX-XXXX.
+    A form field that validates input as a Brazilian phone number, that must
+    be in either of the following formats: XX-XXXX-XXXX or XX-XXXXX-XXXX.
     """
     default_error_messages = {
         'invalid': _(('Phone numbers must be in either of the following '
