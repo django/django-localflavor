@@ -88,7 +88,7 @@ class ARCUITField(RegexField):
     default_error_messages = {
         'invalid': _('Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format.'),
         'checksum': _("Invalid CUIT."),
-        'legal_type': _('Invalid legal type. Type must be 27, 20, 23 or 30.'),
+        'legal_type': _('Invalid legal type. Type must be 27, 20, 23, 24, 30 or 33.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
@@ -104,7 +104,7 @@ class ARCUITField(RegexField):
         if value in EMPTY_VALUES:
             return ''
         value, cd = self._canon(value)
-        if not value[:2] in ['27', '20', '23', '30']:
+        if not value[:2] in ['27', '20', '23', '24', '30', '33']:
             raise ValidationError(self.error_messages['legal_type'])
         if self._calc_cd(value) != cd:
             raise ValidationError(self.error_messages['checksum'])
