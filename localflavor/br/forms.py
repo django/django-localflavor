@@ -128,9 +128,9 @@ class BRCPFField(CharField):
             return ''
         orig_value = value[:]
         if not value.isdigit():
-            value = re.sub("[-\.]", "", value)
+            value = re.sub("[-\. ]", "", value)
         try:
-            value = str(int(value))
+            int(value)
         except ValueError:
             raise ValidationError(self.error_messages['digits_only'])
         if len(value) != 11:
