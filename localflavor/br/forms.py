@@ -128,7 +128,7 @@ class BRCPFField(CharField):
             return ''
         orig_value = value[:]
         if not value.isdigit():
-            value = re.sub("[-\.]", "", value)
+            value = re.sub("[-\. ]", "", value)
         try:
             int(value)
         except ValueError:
