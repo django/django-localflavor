@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 from django.utils.translation import ugettext_lazy as _
 
-#: Alphabetically sorted lists of Lithuanian counties.
+#: Alphabetically sorted list of Lithuanian counties.
 COUNTY_CHOICES = (
     ('alytus', _('Alytus')),
     ('kaunas', _('Kaunas')),
