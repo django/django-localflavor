@@ -1,4 +1,9 @@
-from django.utils.encoding import force_unicode
+try:
+    from django.utils.encoding import force_unicode
+except ImportError:
+    # We are on Python 3, force_text is force_unicode.
+    from django.utils.encoding import force_text as force_unicode
+
 from django.utils.functional import Promise
 
 from sphinx.util.inspect import safe_repr
