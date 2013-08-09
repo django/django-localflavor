@@ -146,7 +146,6 @@ class LTPhoneField(Field):
         if emergency:
             self._checks.append(self._clean_emergency)
 
-        print('here', landline_local, landline)
         if landline_local and not landline:
             raise ValueError("Cannot accept local landline numbers if " +
                              "regular landline numbers are not accepted")

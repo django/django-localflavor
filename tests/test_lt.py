@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 
 from localflavor.lt.forms import (LTIDCodeField, LTMunicipalitySelect,
-                                  LTCountySelect, LTPhoneField)
+                                  LTCountySelect, LTPhoneField,
+                                  LTPostalCodeField)
 
 
 class LTLocalFlavorTests(SimpleTestCase):
@@ -35,6 +36,18 @@ class LTLocalFlavorTests(SimpleTestCase):
         }
 
         self.assertFieldOutput(LTIDCodeField, valid, invalid)
+
+    def test_LTPostalCodeField(self):
+        errors = LTPostalCodeField().error_messages
+
+        valid = {'00000': '00000',
+                 'LT-00000': 'LT-00000'}
+        invalid = {'000000': [errors['invalid']],
+                   '0000': [errors['invalid']],
+                   'LT-00': [errors['invalid']],
+                   'LT-0000': [errors['invalid']],
+                   'LT-000000': [errors['invalid']]}
+        self.assertFieldOutput(LTPostalCodeField, valid, invalid)
 
     def test_LTCountySelect(self):
         f = LTCountySelect()
@@ -219,10 +232,12 @@ class LTLocalFlavorTests(SimpleTestCase):
 
         valid = {'850000000': '37050000000',
                  '37050000000': '37050000000',
-                 '+37050000000': '37050000000'}
+                 '+37050000000': '37050000000',
+                 '837123456': '37037123456'}
         invalid = {'3705000000': [errors['no-parse']],
                    '370500000000': [errors['no-parse']],
-                   '50000000': [errors['no-parse']]}
+                   '50000000': [errors['no-parse']],
+                   '800023456': [errors['no-parse']]}
 
         self.assertFieldOutput(LTPhoneField, valid, invalid,
                                field_kwargs={'mobile': False})
