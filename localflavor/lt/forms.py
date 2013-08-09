@@ -1,12 +1,12 @@
 from __future__ import unicode_literals
 from datetime import date
 import re
-from six import text_type
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Select, RegexField, Field
 from django.utils.translation import ugettext_lazy as _
+from django.utils.six import text_type
 
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
 
