@@ -118,8 +118,9 @@ class LTPhoneField(Field):
 
     This field does not accept multiple numbers (as separated by /).
 
-    All inputs are sanitised to a number which you call to internationally
-    except the case when local landline number is inserted.
+    The field tries its best to convert the number into one you can call to
+    internationally. Currently emergency and most of landline_local numbers are
+    not converted.
     """
 
     # Order dependent (shorter codes cannot go before longer ones)
@@ -178,15 +179,15 @@ class LTPhoneField(Field):
 
     def _clean_mobile(self, value):
         if len(value) == 9 and value[:2] == "86":
-            return "370" + value[1:]
+            return "+370" + value[1:]
         elif len(value) == 11 and value[:4] == "3706":
-            return value
+            return "+" + value
 
     def _clean_service(self, value):
         if len(value) == 9 and value[:4] == "8800":
-            return "370" + value[1:]
+            return "+370" + value[1:]
         elif len(value) == 11 and value[:6] == "370800":
-            return value
+            return "+" + value
 
     # Now these two are most complex ones.
     def _clean_landline_local(self, value):
@@ -205,7 +206,7 @@ class LTPhoneField(Field):
         if 5 <= len(value) <= 6:
             return value
         elif len(value) == 7:
-            return "3705" + value
+            return "+3705" + value
 
     def _clean_landline(self, value):
         if len(value) == 9 and value[0] == "8":
@@ -215,4 +216,4 @@ class LTPhoneField(Field):
         else:
             return None
         if any(number.startswith(prefix) for prefix in self._area_codes):
-            return "370" + number
+            return "+370" + number

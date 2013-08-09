@@ -160,9 +160,9 @@ class LTLocalFlavorTests(SimpleTestCase):
 
     def test_LTPhoneField_mobile(self):
         errors = LTPhoneField().error_messages
-        valid = {'8 600 00 000': '37060000000',
-                 '370 600 00 000': '37060000000',
-                 '+370 612 34 567': '37061234567'}
+        valid = {'8 600 00 000': '+37060000000',
+                 '370 600 00 000': '+37060000000',
+                 '+370 612 34 567': '+37061234567'}
         invalid = {'8 600 00 00': [errors['no-parse']],
                    '370 600 00 00': [errors['no-parse']],
                    '370 600 00 0': [errors['no-parse']],
@@ -180,9 +180,9 @@ class LTLocalFlavorTests(SimpleTestCase):
 
     def test_LTPhoneField_service(self):
         errors = LTPhoneField().error_messages
-        valid = {'8 800 00 000': '37080000000',
-                 '370 800 00 000': '37080000000',
-                 '+370 800 34 567': '37080034567'}
+        valid = {'8 800 00 000': '+37080000000',
+                 '370 800 00 000': '+37080000000',
+                 '+370 800 34 567': '+37080034567'}
         invalid = {'8 800 00 00': [errors['no-parse']],
                    '370 800 00 00': [errors['no-parse']],
                    '370 800 00 0': [errors['no-parse']],
@@ -206,7 +206,7 @@ class LTLocalFlavorTests(SimpleTestCase):
     def test_LTPhoneField_landline_local(self):
         errors = LTPhoneField().error_messages
 
-        valid = {"2123456": "37052123456",
+        valid = {"2123456": "+37052123456",
                  "123456": "123456",
                  "12345": "12345"}
         invalid = {"1234": [errors['no-parse']]}
@@ -230,10 +230,9 @@ class LTLocalFlavorTests(SimpleTestCase):
     def test_LTPhoneField_landline(self):
         errors = LTPhoneField().error_messages
 
-        valid = {'850000000': '37050000000',
-                 '37050000000': '37050000000',
-                 '+37050000000': '37050000000',
-                 '837123456': '37037123456'}
+        valid = {'850000000': '+37050000000',
+                 '37050000000': '+37050000000',
+                 '+37050000000': '+37050000000'}
         invalid = {'3705000000': [errors['no-parse']],
                    '370500000000': [errors['no-parse']],
                    '50000000': [errors['no-parse']],
