@@ -124,7 +124,7 @@ class LTPhoneField(Field):
     """
 
     # Order dependent (shorter codes cannot go before longer ones)
-    _area_codes = list(map(text_type,
+    _area_codes = tuple(map(text_type,
         [425, 315, 381, 319, 450, 313, 528, 386, 349, 426, 447, 346, 427, 347,
          445, 459, 318, 343, 443, 383, 469, 421, 460, 451, 448, 319, 422, 428,
          458, 440, 345, 380, 449, 441, 382, 387, 446, 444, 528, 340, 389, 310,
@@ -215,5 +215,5 @@ class LTPhoneField(Field):
             number = value[3:]
         else:
             return None
-        if any(number.startswith(prefix) for prefix in self._area_codes):
+        if number.startswith(self._area_codes):
             return "+370" + number
