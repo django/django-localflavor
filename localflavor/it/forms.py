@@ -10,11 +10,10 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
-from django.utils.encoding import smart_text
 
 from .it_province import PROVINCE_CHOICES
 from .it_region import REGION_CHOICES
-from .util import ssn_check_digit, vat_number_check_digit
+from .util import vat_number_validation, ssn_validation
 
 
 class ITZipCodeField(RegexField):
@@ -49,16 +48,25 @@ class ITProvinceSelect(Select):
 
 class ITSocialSecurityNumberField(RegexField):
     """
-    A form field that validates Italian Social Security numbers (codice fiscale).
-    For reference see http://www.agenziaentrate.it/ and search for
-    'Informazioni sulla codificazione delle persone fisiche'.
+    A form field that validates Italian Social Security numbers (codice fiscale) for
+    both persons and entities.
+
+    For reference see http://www.agenziaentrate.it/ and search for:
+
+    * 'Informazioni sulla codificazione delle persone fisiche' for persons' SSN
+    * 'Codice fiscale Modello AA5/6' for entities' SSN
+
+    .. versionchanged:: 1.1
+
+    The ``ITSocialSecurityNumberField`` now also accepts SSN values for
+    entities (numeric-only form).
     """
     default_error_messages = {
         'invalid': _('Enter a valid Social Security number.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ITSocialSecurityNumberField, self).__init__(r'^\w{3}\s*\w{3}\s*\w{5}\s*\w{5}$',
+        super(ITSocialSecurityNumberField, self).__init__(r'^\w{3}\s*\w{3}\s*\w{5}\s*\w{5}$|\d{10}',
                                                           max_length, min_length,
                                                           *args, **kwargs)
 
@@ -67,13 +75,18 @@ class ITSocialSecurityNumberField(RegexField):
         if value in EMPTY_VALUES:
             return ''
         value = re.sub('\s', '', value).upper()
-        try:
-            check_digit = ssn_check_digit(value)
-        except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
-        if not value[15] == check_digit:
-            raise ValidationError(self.error_messages['invalid'])
-        return value
+        # Entities SSN are numeric-only
+        if value.isdigit():
+            try:
+                return vat_number_validation(value)
+            except ValueError:
+                raise ValidationError(self.error_messages['invalid'])
+        # Person SSN
+        else:
+            try:
+                return ssn_validation(value)
+            except (ValueError, IndexError):
+                raise ValidationError(self.error_messages['invalid'])
 
 
 class ITVatNumberField(Field):
@@ -89,11 +102,6 @@ class ITVatNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
         try:
-            vat_number = int(value)
+            return vat_number_validation(value)
         except ValueError:
             raise ValidationError(self.error_messages['invalid'])
-        vat_number = str(vat_number).zfill(11)
-        check_digit = vat_number_check_digit(vat_number[0:10])
-        if not vat_number[10] == check_digit:
-            raise ValidationError(self.error_messages['invalid'])
-        return smart_text(vat_number)
