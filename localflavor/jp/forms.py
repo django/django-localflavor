@@ -4,7 +4,7 @@ JP-specific Form helpers
 
 from __future__ import absolute_import
 
-from .jp_prefectures import JP_PREFECTURES
+from .jp_prefectures import JP_PREFECTURES, JP_PREFECTURE_CODES
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
@@ -38,3 +38,12 @@ class JPPrefectureSelect(Select):
     """
     def __init__(self, attrs=None):
         super(JPPrefectureSelect, self).__init__(attrs, choices=JP_PREFECTURES)
+
+
+class JPPrefectureCodeSelect(Select):
+    """
+    A Select widget that uses a list of Japanese prefectures as its choices
+    and the prefectures code as the post value.
+    """
+    def __init__(self, attrs=None):
+        super(JPPrefectureCodeSelect, self).__init__(attrs, choices=JP_PREFECTURE_CODES)
