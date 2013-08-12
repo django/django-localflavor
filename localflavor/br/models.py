@@ -1,6 +1,6 @@
 from django.utils.translation import ugettext_lazy as _
 from django.db.models.fields import CharField
-
+from localflavor.br.forms import BRZipCodeField
 from .br_states import STATE_CHOICES
 
 
@@ -16,7 +16,7 @@ class BRStateField(CharField):
         super(BRStateField, self).__init__(*args, **kwargs)
 
 
-class ZipCodeField(CharField):
+class BRZipCodeStyleField(CharField):
     """
     A :class:`~django.db.models.CharField` that checks that the value
     is a valid BR-style Zip Code (in the format ``xxxxx-xxx``).
@@ -25,10 +25,9 @@ class ZipCodeField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 9
-        super(ZipCodeField, self).__init__(*args, **kwargs)
+        super(BRZipCodeStyleField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
-        from localflavor.br.forms import BRZipCodeField
         defaults = {'form_class': BRZipCodeField}
         defaults.update(kwargs)
-        return super(ZipCodeField, self).formfield(**defaults)
+        return super(BRZipCodeStyleField, self).formfield(**defaults)
