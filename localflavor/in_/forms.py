@@ -53,7 +53,7 @@ class INZipCodeField(RegexField):
                                              max_length, min_length, *args, **kwargs)
 
     def clean(self, value):
-        super(INZipCodeField, self).clean(value)
+        value = super(INZipCodeField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
         # Convert to "NNNNNN" if "NNN NNN" given
@@ -72,7 +72,7 @@ class INStateField(Field):
     }
 
     def clean(self, value):
-        super(INStateField, self).clean(value)
+        value = super(INStateField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
         try:
@@ -113,7 +113,7 @@ class INAadhaarNumberField(Field):
     }
 
     def clean(self, value):
-        super(INAadhaarNumberField, self).clean(value)
+        value = super(INAadhaarNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -153,7 +153,7 @@ class INPhoneNumberField(CharField):
     }
 
     def clean(self, value):
-        super(INPhoneNumberField, self).clean(value)
+        value = super(INPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
         value = smart_text(value)
