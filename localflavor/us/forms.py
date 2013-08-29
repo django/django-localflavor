@@ -83,9 +83,8 @@ class USSocialSecurityNumberField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
         # Second pass: promotional and otherwise permanently invalid numbers.
-        if (area == '666' or (area == '987' and
-                              group == '65' and
-                              4320 <= int(serial) <= 4329) or
+        if (area == '666' or
+                area.startswith('9') or
                 value == '078-05-1120' or
                 value == '219-09-9999'):
             raise ValidationError(self.error_messages['invalid'])

@@ -278,10 +278,12 @@ class USLocalFlavorTests(SimpleTestCase):
         error_invalid = ['Enter a valid U.S. Social Security number in XXX-XX-XXXX format.']
 
         valid = {
-            '987-65-4330': '987-65-4330',
-            '987654330': '987-65-4330',
+            '123-45-6789': '123-45-6789',
+            '123456789': '123-45-6789',
         }
         invalid = {
             '078-05-1120': error_invalid,
+            '900-12-3456': error_invalid,
+            '999-98-7652': error_invalid,
         }
         self.assertFieldOutput(USSocialSecurityNumberField, valid, invalid)
