@@ -283,5 +283,7 @@ class USLocalFlavorTests(SimpleTestCase):
         }
         invalid = {
             '078-05-1120': error_invalid,
+            '900-12-3456': error_invalid,
+            '999-98-7652': error_invalid,
         }
         self.assertFieldOutput(USSocialSecurityNumberField, valid, invalid)
