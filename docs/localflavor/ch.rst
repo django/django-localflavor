@@ -7,6 +7,14 @@ Forms
 .. automodule:: localflavor.ch.forms
     :members:
 
+GIS widget
+----------
+
+Needs Django >= 1.6.
+
+.. automodule:: localflavor.ch.gis.widgets
+    :members:
+
 Data
 ----
 
