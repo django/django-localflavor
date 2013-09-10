@@ -87,7 +87,7 @@ class PKLocalflavorTests(TestCase):
         }
         invalid = {
             'abcd': error_format,
-            '123456': ['Ensure this value has at most 5 characters (it has 6).'] + error_format,
+            '123456': error_format,
         }
         self.assertFieldOutput(PKPostCodeField, valid, invalid)
 
