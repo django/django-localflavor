@@ -58,7 +58,7 @@ class PKLocalflavorTests(TestCase):
         """ Ensure selected states match the initial values provided. """
         self.assertTrue(re.search(SELECTED_OPTION_PATTERN % 'PK-IS',
                                   str(self.form['state'])))
-        self.assertTrue(re.search(SELECTED_OPTION_PATTERN % 'Pk-PB',
+        self.assertTrue(re.search(SELECTED_OPTION_PATTERN % 'PK-PB',
                                   str(self.form['state_required'])))
         self.assertTrue(re.search(INPUT_VALUE_PATTERN % '44000',
                                   str(self.form['postcode'])))
@@ -68,7 +68,7 @@ class PKLocalflavorTests(TestCase):
     def test_PKStateSelect(self):
         f = PKStateSelect()
         out = '''<select name="state">
-<option value="PK-JK">Azad Jammu & Kashmir</option>
+<option value="PK-JK">Azad Jammu &amp; Kashmir</option>
 <option value="PK-BA" selected="selected">Balochistan</option>
 <option value="PK-TA">Federally Administered Tribal Areas</option>
 <option value="PK-GB">Gilgit-Baltistan</option>
@@ -92,7 +92,7 @@ class PKLocalflavorTests(TestCase):
         self.assertFieldOutput(PKPostCodeField, valid, invalid)
 
     def test_PKPhoneNumberField(self):
-        error_format = ['Phone numbers must contain 9 to 11 digits.']
+        error_format = ['Phone numbers must contain 9, 10 or 11 digits.']
         valid = {
             '123456789': '123456789',
             '1234567890': '1234567890',

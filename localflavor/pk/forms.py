@@ -38,7 +38,7 @@ class PKPhoneNumberField(CharField):
     Valid numbers have nine to eleven digits.
     """
     default_error_messages = {
-        'invalid': 'Phone numbers must contain 9, 10 or 11 digits.',
+        'invalid': _('Phone numbers must contain 9, 10 or 11 digits.'),
     }
 
     def clean(self, value):
