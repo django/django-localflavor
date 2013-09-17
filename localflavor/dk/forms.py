@@ -9,6 +9,7 @@ from django.forms.widgets import Select
 from django.forms.fields import RegexField
 
 from .dk_postalcodes import DK_POSTALCODES
+from .dk_municipalities import DK_MUNICIPALITIES
 
 
 class DKPostalCodeSelect(Select):
@@ -16,7 +17,22 @@ class DKPostalCodeSelect(Select):
     A Select widget that uses a list of Danish postal codes as its choices.
     """
     def __init__(self, attrs=None):
-        super(DKPostalCodeSelect, self).__init__(attrs, choices=DK_POSTALCODES)
+        super(DKPostalCodeSelect, self).__init__(
+            attrs,
+            choices=DK_POSTALCODES
+        )
+
+
+class DKMunicipalitySelect(Select):
+    """
+    A Select widget that uses a list of Norwegian municipalities (fylker)
+    as its choices.
+    """
+    def __init__(self, attrs=None):
+        super(DKMunicipalitySelect, self).__init__(
+            attrs,
+            choices=DK_MUNICIPALITIES
+        )
 
 
 class DKPhoneNumberField(RegexField):
@@ -25,7 +41,9 @@ class DKPhoneNumberField(RegexField):
     8 digits and optional country code
     """
     default_error_messages = {
-        'invalid': _('A phone number must be 8 digits and may have country code'),
+        'invalid': _(
+            'A phone number must be 8 digits and may have country code'
+        ),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
