@@ -7,6 +7,13 @@ Forms
 .. automodule:: localflavor.nl.forms
     :members:
 
+Models
+------
+
+.. automodule:: localflavor.nl.models
+    :members:
+    :undoc-members:
+
 Data
 ----
 
