@@ -121,6 +121,8 @@ class LTPhoneField(Field):
     The field tries its best to convert the number into one you can call to
     internationally. Currently emergency and most of landline_local numbers are
     not converted.
+
+    .. versionadded:: 1.1
     """
 
     # Order dependent (shorter codes cannot go before longer ones)
