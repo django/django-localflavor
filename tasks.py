@@ -8,11 +8,6 @@ def clean():
 
 
 @task
-def install():
-    run('pip install --requirement=tests/requirements.txt')
-
-
-@task
 def test(lang='all'):
     test_cmd = 'coverage run `which django-admin.py` test --settings=tests.settings'
     flake_cmd = 'flake8 --ignore=W801,E128,E501,W402'
