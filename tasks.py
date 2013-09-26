@@ -9,7 +9,7 @@ def clean():
 
 @task
 def install():
-    run('pip install --requirement=tests/requirements.txt')
+    run('pip install --requirement=tests/requirements.txt Django')
 
 
 @task
