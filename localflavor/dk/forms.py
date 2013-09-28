@@ -16,22 +16,26 @@ class DKPostalCodeSelect(Select):
     """
     A Select widget that uses a list of Danish postal codes as its choices.
     """
-    def __init__(self, attrs=None):
+    def __init__(self, attrs=None, *args, **kwargs):
         super(DKPostalCodeSelect, self).__init__(
             attrs,
-            choices=DK_POSTALCODES
+            choices=DK_POSTALCODES,
+            *args,
+            **kwargs
         )
 
 
 class DKMunicipalitySelect(Select):
     """
-    A Select widget that uses a list of Norwegian municipalities (fylker)
+    A Select widget that uses a list of Danish municipalities (kommuner)
     as its choices.
     """
-    def __init__(self, attrs=None):
+    def __init__(self, attrs=None, *args, **kwargs):
         super(DKMunicipalitySelect, self).__init__(
             attrs,
-            choices=DK_MUNICIPALITIES
+            choices=DK_MUNICIPALITIES,
+            *args,
+            **kwargs
         )
 
 
@@ -48,7 +52,7 @@ class DKPhoneNumberField(RegexField):
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
         super(DKPhoneNumberField, self).__init__(
-            r'^(?:\+47)? ?(\d{3}\s?\d{2}\s?\d{3}|\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$',
+            r'^(?:\+45)? ?(\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$',
             max_length,
             min_length,
             *args,
