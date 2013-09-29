@@ -18,7 +18,7 @@ from .fr_region import REGION_CHOICES
 class FRZipCodeField(RegexField):
     """
     Validate local French zip code.
-    The correct format is 'XXXX'.
+    The correct format is 'XXXXX'.
     """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX.'),
