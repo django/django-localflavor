@@ -1,38 +1,39 @@
+# coding: utf-8
 from __future__ import unicode_literals
 
-REGION_HOVEDSTADEN = [
+REGION_HOVEDSTADEN = (
     ('albertslund', 'Albertslund'),
-    ('allerød', 'Allerød'),
+    ('alleroed', 'Allerød'),
     ('ballerup', 'Ballerup'),
     ('bornholm', 'Bornholm'),
-    ('brøndby', 'Brøndby'),
-    ('dragør', 'Dragør'),
+    ('broendby', 'Brøndby'),
+    ('dragoer', 'Dragør'),
     ('egedal', 'Egedal'),
     ('fredensborg', 'Fredensborg'),
     ('frederiksberg', 'Frederiksberg'),
     ('frederikssund', 'Frederikssund'),
-    ('furesø', 'Furesø'),
+    ('furesoe', 'Furesø'),
     ('gentofte', 'Gentofte'),
     ('gladsaxe', 'Gladsaxe'),
     ('glostrup', 'Glostrup'),
     ('gribskov', 'Gribskov'),
-    ('halsnæs', 'Halsnæs'),
-    ('helsingør', 'Helsingør'),
+    ('halsnaes', 'Halsnæs'),
+    ('helsingoer', 'Helsingør'),
     ('herlev', 'Herlev'),
-    ('hillerød', 'Hillerød'),
+    ('hilleroed', 'Hillerød'),
     ('hvidovre', 'Hvidovre'),
-    ('høje-Taastrup', 'Høje-Taastrup'),
-    ('hørsholm', 'Hørsholm'),
-    ('ishøj', 'Ishøj'),
-    ('københavn', 'København'),
-    ('lyngby-Taarbæk', 'Lyngby-Taarbæk'),
+    ('hoeje-taastrup', 'Høje-Taastrup'),
+    ('hoersholm', 'Hørsholm'),
+    ('ishoej', 'Ishøj'),
+    ('koaebenhavn', 'København'),
+    ('lyngby-taarbaek', 'Lyngby-Taarbæk'),
     ('rudersdal', 'Rudersdal'),
-    ('rødovre', 'Rødovre'),
-    ('tårnby', 'Tårnby'),
-    ('vallensbæk', 'Vallensbæk'),
-]
+    ('roedovre', 'Rødovre'),
+    ('taarnby', 'Tårnby'),
+    ('vallensbaek', 'Vallensbæk'),
+)
 
-REGION_MIDTJYLLAND = [
+REGION_MIDTJYLLAND = (
     ('favrskov', 'Favrskov'),
     ('hedensted', 'Hedensted'),
     ('herning', 'Herning'),
@@ -43,8 +44,8 @@ REGION_MIDTJYLLAND = [
     ('norddjurs', 'Norddjurs'),
     ('odder', 'Odder'),
     ('randers', 'Randers'),
-    ('ringkøbing-Skjern', 'Ringkøbing-Skjern'),
-    ('samsø', 'Samsø'),
+    ('ringkoebing-skjern', 'Ringkøbing-Skjern'),
+    ('samsoe', 'Samsø'),
     ('silkeborg', 'Silkeborg'),
     ('skanderborg', 'Skanderborg'),
     ('skive', 'Skive'),
@@ -52,47 +53,47 @@ REGION_MIDTJYLLAND = [
     ('syddjurs', 'Syddjurs'),
     ('viborg', 'Viborg'),
     ('aarhus', 'Aarhus'),
-]
+)
 
-REGION_NORDJYLLAND = [
-    ('brønderslev', 'Brønderslev'),
+REGION_NORDJYLLAND = (
+    ('broenderslev', 'Brønderslev'),
     ('frederikshavn', 'Frederikshavn'),
-    ('hjørring', 'Hjørring'),
+    ('hjoerring', 'Hjørring'),
     ('jammerbugt', 'Jammerbugt'),
-    ('læsø', 'Læsø'),
+    ('laesoe', 'Læsø'),
     ('mariagerfjord', 'Mariagerfjord'),
-    ('morsø', 'Morsø'),
+    ('morsoe', 'Morsø'),
     ('rebild', 'Rebild'),
     ('thisted', 'Thisted'),
     ('vesthimmerland', 'Vesthimmerland'),
     ('aalborg', 'Aalborg'),
-]
+)
 
-REGION_SJAELLAND = [
+REGION_SJAELLAND = (
     ('faxe', 'Faxe'),
     ('greve', 'Greve'),
     ('guldborgsund', 'Guldborgsund'),
-    ('holbæk', 'Holbæk'),
+    ('holbaek', 'Holbæk'),
     ('kalundborg', 'Kalundborg'),
-    ('køge', 'Køge'),
+    ('koege', 'Køge'),
     ('lejre', 'Lejre'),
     ('lolland', 'Lolland'),
-    ('næstved', 'Næstved'),
+    ('naestved', 'Næstved'),
     ('odsherred', 'Odsherred'),
     ('ringsted', 'Ringsted'),
     ('roskilde', 'Roskilde'),
     ('slagelse', 'Slagelse'),
-    ('solrød', 'Solrød'),
-    ('sorø', 'Sorø'),
+    ('solroed', 'Solrød'),
+    ('soroe', 'Sorø'),
     ('stevns', 'Stevns'),
     ('vordingborg', 'Vordingborg'),
-]
+)
 
-REGION_SYDDANMARK = [
+REGION_SYDDANMARK = (
     ('assens', 'Assens'),
     ('billund', 'Billund'),
     ('esbjerg', 'Esbjerg'),
-    ('fanø', 'Fanø'),
+    ('fanoe', 'Fanø'),
     ('fredericia', 'Fredericia'),
     ('faaborg-Midtfyn', 'Faaborg-Midtfyn'),
     ('haderslev', 'Haderslev'),
@@ -104,19 +105,19 @@ REGION_SYDDANMARK = [
     ('nyborg', 'Nyborg'),
     ('odense', 'Odense'),
     ('svendborg', 'Svendborg'),
-    ('sønderborg', 'Sønderborg'),
-    ('tønder', 'Tønder'),
+    ('soenderborg', 'Sønderborg'),
+    ('toender', 'Tønder'),
     ('varde', 'Varde'),
     ('vejen', 'Vejen'),
     ('vejle', 'Vejle'),
-    ('ærø', 'Ærø'),
+    ('aeroe', 'Ærø'),
     ('aabenraa', 'Aabenraa'),
-]
+)
 
-DK_MUNICIPALITIES = [
-    REGION_HOVEDSTADEN,
-    REGION_MIDTJYLLAND,
-    REGION_NORDJYLLAND,
-    REGION_SJAELLAND,
-    REGION_SYDDANMARK,
-]
+DK_MUNICIPALITIES = (
+    REGION_HOVEDSTADEN +
+    REGION_MIDTJYLLAND +
+    REGION_NORDJYLLAND +
+    REGION_SJAELLAND +
+    REGION_SYDDANMARK
+)
