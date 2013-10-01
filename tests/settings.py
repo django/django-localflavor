@@ -14,6 +14,7 @@ INSTALLED_APPS = [
     'tests.test_mk',
     'tests.test_mx',
     'tests.test_us',
+    'tests.test_pk',
 ]
 
 import django
