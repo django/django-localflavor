@@ -110,6 +110,12 @@ Then add ``'localflavor'`` to your :setting:`INSTALLED_APPS` setting::
         'localflavor',
     )
 
+.. note::
+
+  Adding ``localflavor`` to your ``INSTALLED_APPS`` is required for
+  South and translations to work. Using django-localflavor without
+  adding it to your ``INSTALLED_APPS`` is not recommended.
+
 .. _PyPI: https://pypi.python.org/
 
 Internationalization
