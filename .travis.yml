@@ -8,7 +8,7 @@ python:
 
 install:
   - pip install -r tests/requirements.txt
-  - pip install https://github.com/django/django/archive/${DJANGO}.zip#egg=django
+  - pip install $DJANGO
   - pip install coveralls
   - pip install -e .
 
@@ -16,7 +16,7 @@ script:
   - invoke test
 
 env:
-  - DJANGO=1.5.1
-  - DJANGO=stable/1.6.x
+  - DJANGO="Django>=1.5,<1.6"
+  - DJANGO="Django>=1.6,<1.7"
 
 after_success: coveralls
