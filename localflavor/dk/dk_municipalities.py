@@ -25,7 +25,7 @@ REGION_HOVEDSTADEN = (
     ('hoeje-taastrup', 'Høje-Taastrup'),
     ('hoersholm', 'Hørsholm'),
     ('ishoej', 'Ishøj'),
-    ('koaebenhavn', 'København'),
+    ('koebenhavn', 'København'),
     ('lyngby-taarbaek', 'Lyngby-Taarbæk'),
     ('rudersdal', 'Rudersdal'),
     ('roedovre', 'Rødovre'),
@@ -115,9 +115,9 @@ REGION_SYDDANMARK = (
 )
 
 DK_MUNICIPALITIES = (
-    REGION_HOVEDSTADEN +
-    REGION_MIDTJYLLAND +
-    REGION_NORDJYLLAND +
-    REGION_SJAELLAND +
-    REGION_SYDDANMARK
+    ('Region Hovedstaden', REGION_HOVEDSTADEN),
+    ('Region Midtjylland', REGION_MIDTJYLLAND),
+    ('Region Nordjylland', REGION_NORDJYLLAND),
+    ('Region Sjælland', REGION_SJAELLAND),
+    ('Region Syddanmark', REGION_SYDDANMARK),
 )

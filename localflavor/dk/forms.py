@@ -3,29 +3,28 @@ Denmark specific form helpers.
 """
 
 from __future__ import absolute_import, unicode_literals
-
+from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
-from django.forms.widgets import Select
-from django.forms.fields import RegexField
+from django.forms import widgets
+from django.forms import fields
 
 from .dk_postalcodes import DK_POSTALCODES
 from .dk_municipalities import DK_MUNICIPALITIES
 
 
-class DKPostalCodeSelect(Select):
+def postal_code_validator(value):
+    if value not in DK_POSTALCODES.iterkeys():
+        raise ValidationError(_('Enter a postal code in the format XXXX.'))
+
+
+class DKPostalCodeSelect(fields.CharField):
     """
     A Select widget that uses a list of Danish postal codes as its choices.
     """
-    def __init__(self, attrs=None, *args, **kwargs):
-        super(DKPostalCodeSelect, self).__init__(
-            attrs,
-            choices=DK_POSTALCODES,
-            *args,
-            **kwargs
-        )
+    default_validators = [postal_code_validator, ]
 
 
-class DKMunicipalitySelect(Select):
+class DKMunicipalitySelect(widgets.Select):
     """
     A Select widget that uses a list of Danish municipalities (kommuner)
     as its choices.
@@ -39,7 +38,7 @@ class DKMunicipalitySelect(Select):
         )
 
 
-class DKPhoneNumberField(RegexField):
+class DKPhoneNumberField(fields.RegexField):
     """
     Field with phone number validation. Requires a phone number with
     8 digits and optional country code
