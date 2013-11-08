@@ -122,9 +122,9 @@ class MXRFCField(RegexField):
         value = value.upper()
         if self._has_homoclave(value):
             if not value[-1] == self._checksum(value[:-1]):
-                raise ValidationError(self.default_error_messages['invalid_checksum'])
+                raise ValidationError(self.error_messages['invalid_checksum'])
         if self._has_inconvenient_word(value):
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
         return value
 
     def _has_homoclave(self, rfc):
@@ -206,9 +206,9 @@ class MXCURPField(RegexField):
             return ''
         value = value.upper()
         if value[-1] != self._checksum(value[:-1]):
-            raise ValidationError(self.default_error_messages['invalid_checksum'])
+            raise ValidationError(self.error_messages['invalid_checksum'])
         if self._has_inconvenient_word(value):
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
         return value
 
     def _checksum(self, value):
@@ -265,7 +265,7 @@ class MXSocialSecurityNumberField(RegexField):
         if value in EMPTY_VALUES:
             return ''
         if value[-1] != self.__checksum(value[:-1]):
-            raise ValidationError(self.default_error_messages['invalid_checksum'])
+            raise ValidationError(self.error_messages['invalid_checksum'])
         return value
 
     def __checksum(self, value):

@@ -40,7 +40,7 @@ class CAPostalCodeField(CharField):
         postcode = value.upper().strip()
         m = self.postcode_regex.match(postcode)
         if not m:
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
         return "%s %s" % (m.group(1), m.group(2))
 
 
