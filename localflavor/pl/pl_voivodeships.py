@@ -1,21 +1,22 @@
+# -*- coding: utf-8 -*-
 from django.utils.translation import ugettext_lazy as _
 
-#: Polish voivodeship as in http://en.wikipedia.org/wiki/Poland#Administrative_division
+#: Polish voivodeship as in http://pl.wikipedia.org/wiki/Wojew%C3%B3dztwo
 VOIVODESHIP_CHOICES = (
-    ('lower_silesia', _('Lower Silesian')),
-    ('kuyavia-pomerania', _('Kuyavian-Pomeranian')),
-    ('lublin', _('Lublin')),
-    ('lubusz', _('Lubusz')),
-    ('lodz', _('Lodz')),
-    ('lesser_poland', _('Lesser Poland')),
-    ('masovia', _('Masovian')),
-    ('opole', _('Opole')),
-    ('subcarpatia', _('Subcarpathian')),
-    ('podlasie', _('Podlasie')),
-    ('pomerania', _('Pomeranian')),
-    ('silesia', _('Silesian')),
-    ('swietokrzyskie', _('Swietokrzyskie')),
-    ('warmia-masuria', _('Warmian-Masurian')),
-    ('greater_poland', _('Greater Poland')),
-    ('west_pomerania', _('West Pomeranian')),
+    ('dolnoslaskie', _(u'Dolnośląskie')),
+    ('kujawsko-pomorskie', _('Kujawsko-pomorskie')),
+    ('lubelskie', _('Lubelskie')),
+    ('lubuskie', _('Lubuskie')),
+    ('lodzkie', _(u'Łódzkie')),
+    ('malopolskie', _(u'Małopolskie')),
+    ('mazowieckie', _('Mazowieckie')),
+    ('opolskie', _('Opolskie')),
+    ('podkarpackie  ', _('Podkarpackie')),
+    ('podlaskie', _('Podlaskie')),
+    ('pomorskie', _('Pomorskie')),
+    ('slaskie', _(u'Śląskie')),
+    ('swietokrzyskie', _(u'Świętokrzyskie')),
+    ('warminsko-mazurskie', _(u'Warmińsko-Mazurskie')),
+    ('wielkopolskie', _('Wielkopolskie')),
+    ('zachodniopomorskie', _('Zachodniopomorskie')),
 )
