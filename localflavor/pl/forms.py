@@ -205,7 +205,13 @@ class PLREGONField(RegexField):
 
         for table in weights:
             checksum = sum([int(n) * w for n, w in zip(number, table)])
-            if checksum % 11 % 10:
+
+            mod_result = checksum % 11
+
+            if mod_result == 10 and number[-1] != '0':
+                return False
+
+            if mod_result % 10:
                 return False
 
         return bool(weights)
