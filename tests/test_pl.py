@@ -471,11 +471,20 @@ class PLLocalFlavorTests(SimpleTestCase):
         valid = {
             '12345678512347': '12345678512347',
             '590096454': '590096454',
+
+            # A special case where the checksum == 10 and the control
+            # digit == '0'
+            '391023200': '391023200',
         }
         invalid = {
             '123456784': error_checksum,
             '12345678412342': error_checksum,
             '590096453': error_checksum,
+
+            # A special case where the checksum == 10,
+            # but the control digit != '0'
+            '111111111': error_checksum,
+
             '590096': error_format,
         }
         self.assertFieldOutput(PLREGONField, valid, invalid)
