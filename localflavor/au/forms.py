@@ -13,6 +13,8 @@ from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .au_states import STATE_CHOICES
+from .validators import AUBusinessNumberFieldValidator
+
 
 PHONE_DIGITS_RE = re.compile(r'^(\d{10})$')
 
@@ -63,3 +65,23 @@ class AUStateSelect(Select):
     """
     def __init__(self, attrs=None):
         super(AUStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+
+
+class AUBusinessNumberField(CharField):
+    """
+    A form field that validates input as an Australian Business Number (ABN)
+
+    .. versionadded:: 1.3
+    """
+
+    default_validators = [AUBusinessNumberFieldValidator()]
+
+    def prepare_value(self, value):
+        """
+        Format the value for display.
+        """
+        if value is None:
+            return value
+
+        spaceless = ''.join(value.split())
+        return '{} {} {} {}'.format(spaceless[:2], spaceless[2:5], spaceless[5:8], spaceless[8:])

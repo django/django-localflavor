@@ -3,6 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from . import forms
 from .au_states import STATE_CHOICES
+from .validators import AUBusinessNumberFieldValidator
 
 
 class AUStateField(CharField):
@@ -68,3 +69,41 @@ class AUPhoneNumberField(CharField):
         defaults = {'form_class': forms.AUPhoneNumberField}
         defaults.update(kwargs)
         return super(AUPhoneNumberField, self).formfield(**defaults)
+
+
+class AUBusinessNumberField(CharField):
+    """
+    A model field that checks that the value is a valid Australian Business
+    Number (ABN).
+
+    .. versionadded:: 1.3
+    """
+
+    description = _("Australian Business Number")
+
+    validators = [AUBusinessNumberFieldValidator()]
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 11
+        super(AUBusinessNumberField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(AUBusinessNumberField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': forms.AUBusinessNumberField}
+        defaults.update(kwargs)
+        return super(AUBusinessNumberField, self).formfield(**defaults)
+
+    def to_python(self, value):
+        """
+        Ensure the ABN is stored without spaces.
+        """
+        value = super(AUBusinessNumberField, self).to_python(value)
+
+        if value is not None:
+            return ''.join(value.split())
+
+        return value

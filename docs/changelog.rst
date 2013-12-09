@@ -19,6 +19,8 @@ New fields for existing flavors:
   (`gh-151 <https://github.com/django/django-localflavor/pull/151>`_).
 - Added NLZipCodeField, NLProvinceField, NLSoFiNumberField, NLPhoneNumberField model fields.
   (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
+- Added AUBusinessNumberField model and form fields.
+  (`gh-63 <https://github.com/django/django-localflavor/pull/63>`_)
 
 Modifications to existing flavors:
 

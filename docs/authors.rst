@@ -21,6 +21,7 @@ Authors
 * Daniel Ampuero
 * Daniel Roschka
 * Daniela Ponader
+* Danielle Madeley
 * Douglas Miranda
 * Erik Romijn
 * Flavio Curella
@@ -42,6 +43,7 @@ Authors
 * Johnny Lee Othon
 * Jonas Ghyllebert
 * Joseph Kocherhans
+* Josh Crompton
 * Julien Phalip
 * Justin Bronn
 * Karen Tracey
