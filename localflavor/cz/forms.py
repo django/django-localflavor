@@ -56,7 +56,7 @@ class CZBirthNumberField(Field):
         'invalid': _('Enter a valid birth number.'),
     }
 
-    def clean(self, value, gender=None):
+    def clean(self, value):
         super(CZBirthNumberField, self).clean(value)
 
         if value in EMPTY_VALUES:
