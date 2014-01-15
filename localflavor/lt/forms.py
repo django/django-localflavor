@@ -11,6 +11,9 @@ from django.utils.six import text_type
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
 
 
+postalcode = re.compile(r'^(LT\s?-\s?)?(?P<code>\d{5})$', re.IGNORECASE)
+
+
 class LTCountySelect(Select):
     """A select field with the Lithuanian counties as choices"""
 
@@ -85,9 +88,9 @@ class LTIDCodeField(RegexField):
             return False
 
 
-class LTPostalCodeField(RegexField):
+class LTPostalCodeField(Field):
     """
-    A form field that validates as Lithuanian postal code
+    A form field that validates and normalizes Lithanuan postal codes.
 
     Lithuanian postal codes in following forms accepted:
         * XXXXX
@@ -97,9 +100,16 @@ class LTPostalCodeField(RegexField):
         'invalid': _('Enter a postal code in the format XXXXX or LT-XXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super(LTPostalCodeField, self).__init__(r'(?i)^(LT\s?-\s?)?\d{5}$',
-                                                *args, **kwargs)
+    def clean(self, value):
+        value = super(LTPostalCodeField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+
+        match = re.match(postalcode, value)
+        if not match:
+            raise ValidationError(self.error_messages['invalid'])
+
+        return 'LT-' + match.group('code')
 
 
 class LTPhoneField(Field):
