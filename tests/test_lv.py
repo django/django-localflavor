@@ -3,10 +3,27 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.lv.forms import (LVMunicipalitySelect)
+from localflavor.lv.forms import (LVPostalCodeField, LVMunicipalitySelect)
 
 
 class LVLocalFlavorTests(SimpleTestCase):
+    def test_LVPostalCodeField(self):
+        invalid = [LVPostalCodeField().error_messages['invalid']]
+
+        valid = {
+            'LV-1023': 'LV-1023',
+            'lv - 5750': 'LV-5750',
+            '3036': 'LV-3036',
+        }
+        invalid = {
+            '123': invalid,
+            '12345': invalid,
+            'LV-12345': invalid,
+            '0123': invalid,  # out of range
+            'LV-9999': invalid,  # out of range
+        }
+        self.assertFieldOutput(LVPostalCodeField, valid, invalid)
+
     def test_LVMunicipalitySelect(self):
         f = LVMunicipalitySelect()
         expected = '''
