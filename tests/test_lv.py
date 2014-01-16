@@ -3,10 +3,32 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.lv.forms import (LVPostalCodeField, LVMunicipalitySelect)
+from localflavor.lv.forms import (LVPersonalCodeField, LVPostalCodeField,
+                                  LVMunicipalitySelect)
 
 
 class LVLocalFlavorTests(SimpleTestCase):
+    def test_LVPersonalCodeField(self):
+        invalid_format = ['Enter a Latvian personal code in format XXXXXX-XXXXX.']
+        invalid = ['Enter a valid Latvian personal code.']
+
+        valid = {
+            '261155-10410': '261155-10410',
+            '010100-10005': '010100-10005',  # smallest valid code
+            '311299-29999': '311299-29999',  # greatest valid code
+            '290212-21232': '290212-21232',  # leap year
+        }
+        invalid = {
+            '26115510410': invalid_format,  # missing dash
+            '261155-90414': invalid_format,  # invalid century
+            '123456-12345': invalid,  # invalid checksum
+            '310200-10006': invalid,  # invalid date
+            '000000-10007': invalid,  # invalid day/month
+            '290214-21234': invalid,  # not leap year
+        }
+
+        self.assertFieldOutput(LVPersonalCodeField, valid, invalid)
+
     def test_LVPostalCodeField(self):
         invalid = [LVPostalCodeField().error_messages['invalid']]
 
