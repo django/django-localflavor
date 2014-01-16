@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Marti Raudsepp <marti@juffo.org>, 2014
 # Jannis Leidel <jannis@leidel.info>, 2011
 # madisvain <madisvain@gmail.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-29 11:43+0200\n"
+"POT-Creation-Date: 2014-01-16 22:50+0200\n"
 "PO-Revision-Date: 2013-06-18 08:25+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"Last-Translator: Marti Raudsepp <marti@juffo.org>\n"
 "Language-Team: Estonian (http://www.transifex.com/projects/p/django/language/"
 "et/)\n"
 "Language: et\n"
@@ -183,7 +184,7 @@ msgstr "Sisesta postiindeks kujul XXXX."
 
 #: at/forms.py:54
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
-msgstr "Sisesta kehtiv Austria sotsiaalkindlustusnumber formaadis XXX-XX-XXXX."
+msgstr "Sisesta kehtiv Austria sotsiaalkindlustusnumber kujul XXX-XX-XXXX."
 
 #: au/forms.py:27
 msgid "Enter a 4 digit postcode."
@@ -259,7 +260,7 @@ msgstr ""
 
 #: be/forms.py:26
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
-msgstr "Sisestage kehtiv postiindeks vahemikus ja formaadis 1XXX - 9XXX."
+msgstr "Sisestage kehtiv postiindeks vahemikus ja kujul 1XXX - 9XXX."
 
 #: be/forms.py:50
 msgid ""
@@ -296,6 +297,10 @@ msgstr "Mittekorrektne CNPJ number."
 #: br/forms.py:167
 msgid "This field requires at least 14 digits"
 msgstr "See väli peab olema vähemalt 14-kohaline arv."
+
+#: br/models.py:11
+msgid "State of Brazil (two uppercase letters)"
+msgstr "Brasiilia osariik (kaks suurt tähte)"
 
 #: ca/ca_provinces.py:6
 msgid "Alberta"
@@ -655,7 +660,7 @@ msgstr ""
 msgid "Thuringia"
 msgstr "Tüüringi"
 
-#: de/forms.py:26 fi/forms.py:23 fr/forms.py:24
+#: de/forms.py:26 ee/forms.py:24 fi/forms.py:23 fr/forms.py:24
 msgid "Enter a zip code in the format XXXXX."
 msgstr "Sisesta postiindeks kujul XXXXX."
 
@@ -665,6 +670,14 @@ msgid ""
 "format."
 msgstr ""
 "Sisesta kehtiv Saksamaa ID-kaardi number kujul XXXXXXXXXXX-XXXXXXX-XXXXXXX-X."
+
+#: ee/forms.py:61
+msgid "Enter an 11-digit Estonian personal identification code."
+msgstr "Sisesta 11-kohaline Eesti isikukood."
+
+#: ee/forms.py:62
+msgid "Enter a valid Estonian personal identification code."
+msgstr "Sisesta kehtiv Eesti isikukood."
 
 #: es/es_provinces.py:6
 msgid "Araba"
@@ -1866,17 +1879,26 @@ msgstr ""
 msgid "Enter a valid Mobile Number."
 msgstr ""
 
-#: in_/forms.py:46
+#: in_/forms.py:48
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr ""
 
-#: in_/forms.py:69
+#: in_/forms.py:71
 msgid "Enter an Indian state or territory."
 msgstr ""
 
-#: in_/forms.py:108
+#: in_/forms.py:111
+msgid ""
+"Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
+msgstr ""
+
+#: in_/forms.py:152
 msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
 msgstr ""
+
+#: in_/models.py:12
+msgid "Indian state (two uppercase letters)"
+msgstr "India osariik (kaks suurt tähte)"
 
 #: is_/forms.py:29
 msgid ""
@@ -1887,207 +1909,211 @@ msgstr "Sisesta kehtiv Islandi isikukood formaadis XXXXXX-XXXX."
 msgid "The Icelandic identification number is not valid."
 msgstr "Islandi isikukood ei ole korrektne."
 
-#: it/forms.py:26
+#: it/forms.py:25
 msgid "Enter a valid zip code."
 msgstr "Sisesta korrektne postiindeks."
 
-#: it/forms.py:57
+#: it/forms.py:65
 msgid "Enter a valid Social Security number."
 msgstr "Sisesta korrektne sotsiaalturvatunnus."
 
-#: it/forms.py:84
+#: it/forms.py:97
 msgid "Enter a valid VAT number."
 msgstr "Sisesta korrektne käibemaksukohuslase kood."
+
+#: it/util.py:46 it/util.py:59
+msgid "Check digit does not match."
+msgstr "Kontrollsumma ei klapi."
 
 #: jp/forms.py:19
 msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
 msgstr "Sisesta postiindeks kujul XXXXXXX või XXX-XXXX."
 
-#: jp/jp_prefectures.py:5
+#: jp/jp_prefectures.py:12 jp/jp_prefectures.py:64
 msgid "Hokkaido"
 msgstr ""
 
-#: jp/jp_prefectures.py:6
+#: jp/jp_prefectures.py:13 jp/jp_prefectures.py:65
 msgid "Aomori"
 msgstr ""
 
-#: jp/jp_prefectures.py:7
+#: jp/jp_prefectures.py:14 jp/jp_prefectures.py:66
 msgid "Iwate"
 msgstr ""
 
-#: jp/jp_prefectures.py:8
+#: jp/jp_prefectures.py:15 jp/jp_prefectures.py:67
 msgid "Miyagi"
 msgstr ""
 
-#: jp/jp_prefectures.py:9
+#: jp/jp_prefectures.py:16 jp/jp_prefectures.py:68
 msgid "Akita"
 msgstr ""
 
-#: jp/jp_prefectures.py:10
+#: jp/jp_prefectures.py:17 jp/jp_prefectures.py:69
 msgid "Yamagata"
 msgstr ""
 
-#: jp/jp_prefectures.py:11
+#: jp/jp_prefectures.py:18 jp/jp_prefectures.py:70
 msgid "Fukushima"
 msgstr ""
 
-#: jp/jp_prefectures.py:12
+#: jp/jp_prefectures.py:19 jp/jp_prefectures.py:71
 msgid "Ibaraki"
 msgstr ""
 
-#: jp/jp_prefectures.py:13
+#: jp/jp_prefectures.py:20 jp/jp_prefectures.py:72
 msgid "Tochigi"
 msgstr ""
 
-#: jp/jp_prefectures.py:14
+#: jp/jp_prefectures.py:21 jp/jp_prefectures.py:73
 msgid "Gunma"
 msgstr ""
 
-#: jp/jp_prefectures.py:15
+#: jp/jp_prefectures.py:22 jp/jp_prefectures.py:74
 msgid "Saitama"
 msgstr ""
 
-#: jp/jp_prefectures.py:16
+#: jp/jp_prefectures.py:23 jp/jp_prefectures.py:75
 msgid "Chiba"
 msgstr ""
 
-#: jp/jp_prefectures.py:17
+#: jp/jp_prefectures.py:24 jp/jp_prefectures.py:76
 msgid "Tokyo"
 msgstr ""
 
-#: jp/jp_prefectures.py:18
+#: jp/jp_prefectures.py:25 jp/jp_prefectures.py:77
 msgid "Kanagawa"
 msgstr ""
 
-#: jp/jp_prefectures.py:19
-msgid "Yamanashi"
-msgstr ""
-
-#: jp/jp_prefectures.py:20
-msgid "Nagano"
-msgstr ""
-
-#: jp/jp_prefectures.py:21
+#: jp/jp_prefectures.py:26 jp/jp_prefectures.py:78
 msgid "Niigata"
 msgstr ""
 
-#: jp/jp_prefectures.py:22
+#: jp/jp_prefectures.py:27 jp/jp_prefectures.py:79
 msgid "Toyama"
 msgstr ""
 
-#: jp/jp_prefectures.py:23
+#: jp/jp_prefectures.py:28 jp/jp_prefectures.py:80
 msgid "Ishikawa"
 msgstr ""
 
-#: jp/jp_prefectures.py:24
+#: jp/jp_prefectures.py:29 jp/jp_prefectures.py:81
 msgid "Fukui"
 msgstr ""
 
-#: jp/jp_prefectures.py:25
+#: jp/jp_prefectures.py:30 jp/jp_prefectures.py:82
+msgid "Yamanashi"
+msgstr ""
+
+#: jp/jp_prefectures.py:31 jp/jp_prefectures.py:83
+msgid "Nagano"
+msgstr ""
+
+#: jp/jp_prefectures.py:32 jp/jp_prefectures.py:84
 msgid "Gifu"
 msgstr ""
 
-#: jp/jp_prefectures.py:26
+#: jp/jp_prefectures.py:33 jp/jp_prefectures.py:85
 msgid "Shizuoka"
 msgstr ""
 
-#: jp/jp_prefectures.py:27
+#: jp/jp_prefectures.py:34 jp/jp_prefectures.py:86
 msgid "Aichi"
 msgstr ""
 
-#: jp/jp_prefectures.py:28
+#: jp/jp_prefectures.py:35 jp/jp_prefectures.py:87
 msgid "Mie"
 msgstr ""
 
-#: jp/jp_prefectures.py:29
+#: jp/jp_prefectures.py:36 jp/jp_prefectures.py:88
 msgid "Shiga"
 msgstr ""
 
-#: jp/jp_prefectures.py:30
+#: jp/jp_prefectures.py:37 jp/jp_prefectures.py:89
 msgid "Kyoto"
 msgstr ""
 
-#: jp/jp_prefectures.py:31
+#: jp/jp_prefectures.py:38 jp/jp_prefectures.py:90
 msgid "Osaka"
 msgstr ""
 
-#: jp/jp_prefectures.py:32
+#: jp/jp_prefectures.py:39 jp/jp_prefectures.py:91
 msgid "Hyogo"
 msgstr ""
 
-#: jp/jp_prefectures.py:33
+#: jp/jp_prefectures.py:40 jp/jp_prefectures.py:92
 msgid "Nara"
 msgstr ""
 
-#: jp/jp_prefectures.py:34
+#: jp/jp_prefectures.py:41 jp/jp_prefectures.py:93
 msgid "Wakayama"
 msgstr ""
 
-#: jp/jp_prefectures.py:35
+#: jp/jp_prefectures.py:42 jp/jp_prefectures.py:94
 msgid "Tottori"
 msgstr ""
 
-#: jp/jp_prefectures.py:36
+#: jp/jp_prefectures.py:43 jp/jp_prefectures.py:95
 msgid "Shimane"
 msgstr ""
 
-#: jp/jp_prefectures.py:37
+#: jp/jp_prefectures.py:44 jp/jp_prefectures.py:96
 msgid "Okayama"
 msgstr ""
 
-#: jp/jp_prefectures.py:38
+#: jp/jp_prefectures.py:45 jp/jp_prefectures.py:97
 msgid "Hiroshima"
 msgstr ""
 
-#: jp/jp_prefectures.py:39
+#: jp/jp_prefectures.py:46 jp/jp_prefectures.py:98
 msgid "Yamaguchi"
 msgstr ""
 
-#: jp/jp_prefectures.py:40
+#: jp/jp_prefectures.py:47 jp/jp_prefectures.py:99
 msgid "Tokushima"
 msgstr ""
 
-#: jp/jp_prefectures.py:41
+#: jp/jp_prefectures.py:48 jp/jp_prefectures.py:100
 msgid "Kagawa"
 msgstr ""
 
-#: jp/jp_prefectures.py:42
+#: jp/jp_prefectures.py:49 jp/jp_prefectures.py:101
 msgid "Ehime"
 msgstr ""
 
-#: jp/jp_prefectures.py:43
+#: jp/jp_prefectures.py:50 jp/jp_prefectures.py:102
 msgid "Kochi"
 msgstr ""
 
-#: jp/jp_prefectures.py:44
+#: jp/jp_prefectures.py:51 jp/jp_prefectures.py:103
 msgid "Fukuoka"
 msgstr ""
 
-#: jp/jp_prefectures.py:45
+#: jp/jp_prefectures.py:52 jp/jp_prefectures.py:104
 msgid "Saga"
 msgstr ""
 
-#: jp/jp_prefectures.py:46
+#: jp/jp_prefectures.py:53 jp/jp_prefectures.py:105
 msgid "Nagasaki"
 msgstr ""
 
-#: jp/jp_prefectures.py:47
+#: jp/jp_prefectures.py:54 jp/jp_prefectures.py:106
 msgid "Kumamoto"
 msgstr ""
 
-#: jp/jp_prefectures.py:48
+#: jp/jp_prefectures.py:55 jp/jp_prefectures.py:107
 msgid "Oita"
 msgstr ""
 
-#: jp/jp_prefectures.py:49
+#: jp/jp_prefectures.py:56 jp/jp_prefectures.py:108
 msgid "Miyazaki"
 msgstr ""
 
-#: jp/jp_prefectures.py:50
+#: jp/jp_prefectures.py:57 jp/jp_prefectures.py:109
 msgid "Kagoshima"
 msgstr ""
 
-#: jp/jp_prefectures.py:51
+#: jp/jp_prefectures.py:58 jp/jp_prefectures.py:110
 msgid "Okinawa"
 msgstr ""
 
@@ -2095,21 +2121,29 @@ msgstr ""
 msgid "Enter a valid Kuwaiti Civil ID number"
 msgstr ""
 
-#: lt/forms.py:37
+#: lt/forms.py:42
 msgid "ID Code consists of exactly 11 decimal digits."
-msgstr ""
+msgstr "ID-kood sisaldab täpselt 11 numbrikohta."
 
-#: lt/forms.py:38
+#: lt/forms.py:43
 msgid "Wrong ID Code checksum."
-msgstr ""
+msgstr "Vale ID-koodi kontrollsumma."
 
-#: lt/forms.py:39
+#: lt/forms.py:44
 msgid "ID Code contains invalid date."
-msgstr ""
+msgstr "ID-kood sisaldab ebakorrektset kuupäeva."
 
-#: lt/forms.py:95
+#: lt/forms.py:100
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr ""
+msgstr "Sisesta postikood kujul XXXXX või LT-XXXXX."
+
+#: lt/forms.py:146
+msgid "Phone number can only contain digits"
+msgstr "Telefoninumber võib sisaldada ainult numbreid"
+
+#: lt/forms.py:147
+msgid "Could not validate the phone number"
+msgstr "Telefoninumbri kontroll ei õnnestunud"
 
 #: lt/lt_choices.py:7
 msgid "Alytus"
@@ -2390,6 +2424,494 @@ msgstr ""
 #: lt/lt_choices.py:80
 msgid "Zarasai district"
 msgstr ""
+
+#: lv/forms.py:26
+msgid "Enter a postal code in the format XXXX or LV-XXXX."
+msgstr "Sisesta postikood kujul XXXX või LV-XXXX."
+
+#: lv/forms.py:57
+msgid "Enter a Latvian personal code in format XXXXXX-XXXXX."
+msgstr "Sisesta Läti isikukood kujul XXXXXX-XXXXX."
+
+#: lv/forms.py:58
+msgid "Enter a valid Latvian personal code."
+msgstr "Sisesta kehtiv Läti isikukood."
+
+#: lv/lv_choices.py:9
+msgid "Daugavpils"
+msgstr "Daugavpils"
+
+#: lv/lv_choices.py:10
+msgid "Jelgava"
+msgstr "Jelgava"
+
+#: lv/lv_choices.py:11
+msgid "Jēkabpils"
+msgstr "Jēkabpils"
+
+#: lv/lv_choices.py:12
+msgid "Jūrmala"
+msgstr "Jūrmala"
+
+#: lv/lv_choices.py:13
+msgid "Liepāja"
+msgstr "Liepāja"
+
+#: lv/lv_choices.py:14
+msgid "Rēzekne"
+msgstr "Rēzekne"
+
+#: lv/lv_choices.py:15
+msgid "Riga"
+msgstr "Riia"
+
+#: lv/lv_choices.py:16
+msgid "Valmiera"
+msgstr "Valmiera"
+
+#: lv/lv_choices.py:17
+msgid "Ventspils"
+msgstr "Ventspils"
+
+#: lv/lv_choices.py:19
+msgid "Aglona municipality"
+msgstr "Aglona piirkond"
+
+#: lv/lv_choices.py:20
+msgid "Aizkraukle municipality"
+msgstr "Aizkraukle piirkond"
+
+#: lv/lv_choices.py:21
+msgid "Aizpute municipality"
+msgstr "Aizpute piirkond"
+
+#: lv/lv_choices.py:22
+msgid "Aknīste municipality"
+msgstr "Aknīste piirkond"
+
+#: lv/lv_choices.py:23
+msgid "Aloja municipality"
+msgstr "Aloja piirkond"
+
+#: lv/lv_choices.py:24
+msgid "Alsunga municipality"
+msgstr "Alsunga piirkond"
+
+#: lv/lv_choices.py:25
+msgid "Alūksne municipality"
+msgstr "Alūksne piirkond"
+
+#: lv/lv_choices.py:26
+msgid "Amata municipality"
+msgstr "Amata piirkond"
+
+#: lv/lv_choices.py:27
+msgid "Ape municipality"
+msgstr "Ape piirkond"
+
+#: lv/lv_choices.py:28
+msgid "Auce municipality"
+msgstr "Auce piirkond"
+
+#: lv/lv_choices.py:29
+msgid "Ādaži municipality"
+msgstr "Ādaži piirkond"
+
+#: lv/lv_choices.py:30
+msgid "Babīte municipality"
+msgstr "Babīte piirkond"
+
+#: lv/lv_choices.py:31
+msgid "Baldone municipality"
+msgstr "Baldone piirkond"
+
+#: lv/lv_choices.py:32
+msgid "Baltinava municipality"
+msgstr "Baltinava piirkond"
+
+#: lv/lv_choices.py:33
+msgid "Balvi municipality"
+msgstr "Balvi piirkond"
+
+#: lv/lv_choices.py:34
+msgid "Bauska municipality"
+msgstr "Bauska piirkond"
+
+#: lv/lv_choices.py:35
+msgid "Beverīna municipality"
+msgstr "Beverīna piirkond"
+
+#: lv/lv_choices.py:36
+msgid "Brocēni municipality"
+msgstr "Brocēni piirkond"
+
+#: lv/lv_choices.py:37
+msgid "Burtnieki municipality"
+msgstr "Burtnieki piirkond"
+
+#: lv/lv_choices.py:38
+msgid "Carnikava municipality"
+msgstr "Carnikava piirkond"
+
+#: lv/lv_choices.py:39
+msgid "Cesvaine municipality"
+msgstr "Cesvaine piirkond"
+
+#: lv/lv_choices.py:40
+msgid "Cēsis municipality"
+msgstr "Cēsis piirkond"
+
+#: lv/lv_choices.py:41
+msgid "Cibla municipality"
+msgstr "Cibla piirkond"
+
+#: lv/lv_choices.py:42
+msgid "Dagda municipality"
+msgstr "Dagda piirkond"
+
+#: lv/lv_choices.py:43
+msgid "Daugavpils municipality"
+msgstr "Daugavpils piirkond"
+
+#: lv/lv_choices.py:44
+msgid "Dobele municipality"
+msgstr "Dobele piirkond"
+
+#: lv/lv_choices.py:45
+msgid "Dundaga municipality"
+msgstr "Dundaga piirkond"
+
+#: lv/lv_choices.py:46
+msgid "Durbe municipality"
+msgstr "Durbe piirkond"
+
+#: lv/lv_choices.py:47
+msgid "Engure municipality"
+msgstr "Engure piirkond"
+
+#: lv/lv_choices.py:48
+msgid "Ērgļi municipality"
+msgstr "Ērgļi piirkond"
+
+#: lv/lv_choices.py:49
+msgid "Garkalne municipality"
+msgstr "Garkalne piirkond"
+
+#: lv/lv_choices.py:50
+msgid "Grobiņa municipality"
+msgstr "Grobiņa piirkond"
+
+#: lv/lv_choices.py:51
+msgid "Gulbene municipality"
+msgstr "Gulbene piirkond"
+
+#: lv/lv_choices.py:52
+msgid "Iecava municipality"
+msgstr "Iecava piirkond"
+
+#: lv/lv_choices.py:53
+msgid "Ikšķile municipality"
+msgstr "Ikšķile piirkond"
+
+#: lv/lv_choices.py:54
+msgid "Ilūkste municipality"
+msgstr "Ilūkste piirkond"
+
+#: lv/lv_choices.py:55
+msgid "Inčukalns municipality"
+msgstr "Inčukalns piirkond"
+
+#: lv/lv_choices.py:56
+msgid "Jaunjelgava municipality"
+msgstr "Jaunjelgava piirkond"
+
+#: lv/lv_choices.py:57
+msgid "Jaunpiebalga municipality"
+msgstr "Jaunpiebalga piirkond"
+
+#: lv/lv_choices.py:58
+msgid "Jaunpils municipality"
+msgstr "Jaunpils piirkond"
+
+#: lv/lv_choices.py:59
+msgid "Jelgava municipality"
+msgstr "Jelgava piirkond"
+
+#: lv/lv_choices.py:60
+msgid "Jēkabpils municipality"
+msgstr "Jēkabpils piirkond"
+
+#: lv/lv_choices.py:61
+msgid "Kandava municipality"
+msgstr "Kandava piirkond"
+
+#: lv/lv_choices.py:62
+msgid "Kārsava municipality"
+msgstr "Kārsava piirkond"
+
+#: lv/lv_choices.py:63
+msgid "Kocēni municipality"
+msgstr "Kocēni piirkond"
+
+#: lv/lv_choices.py:64
+msgid "Koknese municipality"
+msgstr "Koknese piirkond"
+
+#: lv/lv_choices.py:65
+msgid "Krāslava municipality"
+msgstr "Krāslava piirkond"
+
+#: lv/lv_choices.py:66
+msgid "Krimulda municipality"
+msgstr "Krimulda piirkond"
+
+#: lv/lv_choices.py:67
+msgid "Krustpils municipality"
+msgstr "Krustpils piirkond"
+
+#: lv/lv_choices.py:68
+msgid "Kuldīga municipality"
+msgstr "Kuldīga piirkond"
+
+#: lv/lv_choices.py:69
+msgid "Ķegums municipality"
+msgstr "Ķegums piirkond"
+
+#: lv/lv_choices.py:70
+msgid "Ķekava municipality"
+msgstr "Ķekava piirkond"
+
+#: lv/lv_choices.py:71
+msgid "Lielvārde municipality"
+msgstr "Lielvārde piirkond"
+
+#: lv/lv_choices.py:72
+msgid "Limbaži municipality"
+msgstr "Limbaži piirkond"
+
+#: lv/lv_choices.py:73
+msgid "Līgatne municipality"
+msgstr "Līgatne piirkond"
+
+#: lv/lv_choices.py:74
+msgid "Līvāni municipality"
+msgstr "Līvāni piirkond"
+
+#: lv/lv_choices.py:75
+msgid "Lubāna municipality"
+msgstr "Lubāna piirkond"
+
+#: lv/lv_choices.py:76
+msgid "Ludza municipality"
+msgstr "Ludza piirkond"
+
+#: lv/lv_choices.py:77
+msgid "Madona municipality"
+msgstr "Madona piirkond"
+
+#: lv/lv_choices.py:78
+msgid "Mazsalaca municipality"
+msgstr "Mazsalaca piirkond"
+
+#: lv/lv_choices.py:79
+msgid "Mālpils municipality"
+msgstr "Mālpils piirkond"
+
+#: lv/lv_choices.py:80
+msgid "Mārupe municipality"
+msgstr "Mārupe piirkond"
+
+#: lv/lv_choices.py:81
+msgid "Mērsrags municipality"
+msgstr "Mērsrags piirkond"
+
+#: lv/lv_choices.py:82
+msgid "Naukšēni municipality"
+msgstr "Naukšēni piirkond"
+
+#: lv/lv_choices.py:83
+msgid "Nereta municipality"
+msgstr "Nereta piirkond"
+
+#: lv/lv_choices.py:84
+msgid "Nīca municipality"
+msgstr "Nīca piirkond"
+
+#: lv/lv_choices.py:85
+msgid "Ogre municipality"
+msgstr "Ogre piirkond"
+
+#: lv/lv_choices.py:86
+msgid "Olaine municipality"
+msgstr "Olaine piirkond"
+
+#: lv/lv_choices.py:87
+msgid "Ozolnieki municipality"
+msgstr "Ozolnieki piirkond"
+
+#: lv/lv_choices.py:88
+msgid "Pārgauja municipality"
+msgstr "Pārgauja piirkond"
+
+#: lv/lv_choices.py:89
+msgid "Pāvilosta municipality"
+msgstr "Pāvilosta piirkond"
+
+#: lv/lv_choices.py:90
+msgid "Pļaviņas municipality"
+msgstr "Pļaviņas piirkond"
+
+#: lv/lv_choices.py:91
+msgid "Preiļi municipality"
+msgstr "Preiļi piirkond"
+
+#: lv/lv_choices.py:92
+msgid "Priekule municipality"
+msgstr "Priekule piirkond"
+
+#: lv/lv_choices.py:93
+msgid "Priekuļi municipality"
+msgstr "Priekuļi piirkond"
+
+#: lv/lv_choices.py:94
+msgid "Rauna municipality"
+msgstr "Rauna piirkond"
+
+#: lv/lv_choices.py:95
+msgid "Rēzekne municipality"
+msgstr "Rēzekne piirkond"
+
+#: lv/lv_choices.py:96
+msgid "Riebiņi municipality"
+msgstr "Riebiņi piirkond"
+
+#: lv/lv_choices.py:97
+msgid "Roja municipality"
+msgstr "Roja piirkond"
+
+#: lv/lv_choices.py:98
+msgid "Ropaži municipality"
+msgstr "Ropaži piirkond"
+
+#: lv/lv_choices.py:99
+msgid "Rucava municipality"
+msgstr "Rucava piirkond"
+
+#: lv/lv_choices.py:100
+msgid "Rugāji municipality"
+msgstr "Rugāji piirkond"
+
+#: lv/lv_choices.py:101
+msgid "Rundāle municipality"
+msgstr "Rundāle piirkond"
+
+#: lv/lv_choices.py:102
+msgid "Rūjiena municipality"
+msgstr "Rūjiena piirkond"
+
+#: lv/lv_choices.py:103
+msgid "Sala municipality"
+msgstr "Sala piirkond"
+
+#: lv/lv_choices.py:104
+msgid "Salacgrīva municipality"
+msgstr "Salacgrīva piirkond"
+
+#: lv/lv_choices.py:105
+msgid "Salaspils municipality"
+msgstr "Salaspils piirkond"
+
+#: lv/lv_choices.py:106
+msgid "Saldus municipality"
+msgstr "Saldus piirkond"
+
+#: lv/lv_choices.py:107
+msgid "Saulkrasti municipality"
+msgstr "Saulkrasti piirkond"
+
+#: lv/lv_choices.py:108
+msgid "Sēja municipality"
+msgstr "Sēja piirkond"
+
+#: lv/lv_choices.py:109
+msgid "Sigulda municipality"
+msgstr "Sigulda piirkond"
+
+#: lv/lv_choices.py:110
+msgid "Skrīveri municipality"
+msgstr "Skrīveri piirkond"
+
+#: lv/lv_choices.py:111
+msgid "Skrunda municipality"
+msgstr "Skrunda piirkond"
+
+#: lv/lv_choices.py:112
+msgid "Smiltene municipality"
+msgstr "Smiltene piirkond"
+
+#: lv/lv_choices.py:113
+msgid "Stopiņi municipality"
+msgstr "Stopiņi piirkond"
+
+#: lv/lv_choices.py:114
+msgid "Strenči municipality"
+msgstr "Strenči piirkond"
+
+#: lv/lv_choices.py:115
+msgid "Talsi municipality"
+msgstr "Talsi piirkond"
+
+#: lv/lv_choices.py:116
+msgid "Tērvete municipality"
+msgstr "Tērvete piirkond"
+
+#: lv/lv_choices.py:117
+msgid "Tukums municipality"
+msgstr "Tukums piirkond"
+
+#: lv/lv_choices.py:118
+msgid "Vaiņode municipality"
+msgstr "Vaiņode piirkond"
+
+#: lv/lv_choices.py:119
+msgid "Valka municipality"
+msgstr "Valka piirkond"
+
+#: lv/lv_choices.py:120
+msgid "Varakļāni municipality"
+msgstr "Varakļāni piirkond"
+
+#: lv/lv_choices.py:121
+msgid "Vārkava municipality"
+msgstr "Vārkava piirkond"
+
+#: lv/lv_choices.py:122
+msgid "Vecpiebalga municipality"
+msgstr "Vecpiebalga piirkond"
+
+#: lv/lv_choices.py:123
+msgid "Vecumnieki municipality"
+msgstr "Vecumnieki piirkond"
+
+#: lv/lv_choices.py:124
+msgid "Ventspils municipality"
+msgstr "Ventspils piirkond"
+
+#: lv/lv_choices.py:125
+msgid "Viesīte municipality"
+msgstr "Viesīte piirkond"
+
+#: lv/lv_choices.py:126
+msgid "Viļaka municipality"
+msgstr "Viļaka piirkond"
+
+#: lv/lv_choices.py:127
+msgid "Viļāni municipality"
+msgstr "Viļāni piirkond"
+
+#: lv/lv_choices.py:128
+msgid "Zilupe municipality"
+msgstr "Zilupe piirkond"
 
 #: mk/forms.py:18
 msgid ""
@@ -2941,6 +3463,14 @@ msgstr "Sisesta kehtiv postiindeks"
 msgid "Enter a valid SoFi number"
 msgstr "Sisesta kehtiv SoFi number"
 
+#: nl/models.py:19
+msgid "Enter a valid bank account number"
+msgstr "Sisesta valiidne pangakonto number"
+
+#: nl/models.py:20
+msgid "Bank account numbers have 1 - 7, 9 or 10 digits"
+msgstr "Pangakonto number peab olema 1 - 7, 9 või 10-kohaline"
+
 #: nl/nl_provinces.py:8
 msgid "Drenthe"
 msgstr ""
@@ -3001,6 +3531,58 @@ msgstr "Sellel väljal peab olema 8 numbrit."
 msgid "This field requires 11 digits."
 msgstr "Sellel väljal peab olema 11 numbrit."
 
+#: pk/forms.py:26
+msgid "Enter a 5 digit postcode."
+msgstr "Sisesta 5-kohaline postikood."
+
+#: pk/forms.py:40
+msgid "Phone numbers must contain 9, 10 or 11 digits."
+msgstr ""
+
+#: pk/models.py:14
+msgid "Pakistani State"
+msgstr ""
+
+#: pk/models.py:28
+msgid "Pakistani Postcode"
+msgstr ""
+
+#: pk/models.py:45
+msgid "Pakistani Phone number"
+msgstr ""
+
+#: pk/pk_states.py:6
+msgid "Azad Jammu & Kashmir"
+msgstr ""
+
+#: pk/pk_states.py:7
+msgid "Balochistan"
+msgstr ""
+
+#: pk/pk_states.py:8
+msgid "Federally Administered Tribal Areas"
+msgstr ""
+
+#: pk/pk_states.py:9
+msgid "Gilgit-Baltistan"
+msgstr ""
+
+#: pk/pk_states.py:10
+msgid "Islamabad"
+msgstr ""
+
+#: pk/pk_states.py:11
+msgid "Khyber Pakhtunkhwa"
+msgstr ""
+
+#: pk/pk_states.py:12
+msgid "Punjab"
+msgstr ""
+
+#: pk/pk_states.py:13
+msgid "Sindh"
+msgstr ""
+
 #: pl/forms.py:45
 msgid "National Identification Number consists of 11 digits."
 msgstr "Riiklik isikukood koosneb 11 numbrist."
@@ -3011,17 +3593,19 @@ msgstr "Isikukoodil on vale kontrollsumma."
 
 #: pl/forms.py:83
 msgid "National ID Card Number consists of 3 letters and 6 digits."
-msgstr ""
+msgstr "Riiklik ID-kaardi number sisaldab 3 tähte ja 6 numbrit."
 
 #: pl/forms.py:84
 msgid "Wrong checksum for the National ID Card Number."
-msgstr ""
+msgstr "Vale kontrollsumma riikliku ID-kaardi numbri jaoks."
 
 #: pl/forms.py:136
 msgid ""
 "Enter a tax number field (NIP) in the format XXX-XXX-XX-XX, XXX-XX-XX-XXX or "
 "XXXXXXXXXX."
 msgstr ""
+"Sisesta maksukohstusnumber (NIP) kujul XXX-XXX-XX-XX, XXX-XX-XX-XXX või "
+"XXXXXXXXXX."
 
 #: pl/forms.py:137
 msgid "Wrong checksum for the Tax Number (NIP)."
@@ -3035,7 +3619,7 @@ msgstr "Riikliku Äriregistri Number (REGON) koosneb 9 või 14 numbrist."
 msgid "Wrong checksum for the National Business Register Number (REGON)."
 msgstr "Riiklikul Äriregistri Numbri (REGON) kontrollsumma on vale."
 
-#: pl/forms.py:220
+#: pl/forms.py:226
 msgid "Enter a postal code in the format XX-XXX."
 msgstr "Sisesta postiindeks kujul XX-XXX."
 
@@ -3237,387 +3821,387 @@ msgstr "Sisesta postiindeks kujul XXXXXX"
 
 #: ru/forms.py:39
 msgid "Enter a postal code in the format XXXXXX."
-msgstr ""
+msgstr "Sisesta postikood kujul XXXXXX."
 
 #: ru/forms.py:53
 msgid "Enter a passport number in the format XXXX XXXXXX."
-msgstr ""
+msgstr "Sisesta passi number kujul XXXX XXXXXX."
 
 #: ru/forms.py:67
 msgid "Enter a passport number in the format XX XXXXXXX."
-msgstr ""
+msgstr "Sisesta passi number kujul XX XXXXXXX."
 
 #: ru/ru_regions.py:6
 msgid "Central Federal County"
-msgstr ""
+msgstr "Keskföderaalringkond"
 
 #: ru/ru_regions.py:7
 msgid "South Federal County"
-msgstr ""
+msgstr "Lõuna föderaalringkond"
 
 #: ru/ru_regions.py:8
 msgid "North-West Federal County"
-msgstr ""
+msgstr "Loode föderaalringkond"
 
 #: ru/ru_regions.py:9
 msgid "Far-East Federal County"
-msgstr ""
+msgstr "Kaug-Ida föderaalringkond"
 
 #: ru/ru_regions.py:10
 msgid "Siberian Federal County"
-msgstr ""
+msgstr "Siberi föderaalringkond"
 
 #: ru/ru_regions.py:11
 msgid "Ural Federal County"
-msgstr ""
+msgstr "Uurali föderaalringkond"
 
 #: ru/ru_regions.py:12
 msgid "Privolzhsky Federal County"
-msgstr ""
+msgstr "Volga föderaalringkond"
 
 #: ru/ru_regions.py:13
 msgid "North-Caucasian Federal County"
-msgstr ""
+msgstr "Põhja-Kaukaasia föderaalringkond"
 
 #: ru/ru_regions.py:18
 msgid "Moskva"
-msgstr ""
+msgstr "Moskva"
 
 #: ru/ru_regions.py:19
 msgid "Saint-Peterburg"
-msgstr ""
+msgstr "Sankt-Peterburg"
 
 #: ru/ru_regions.py:20
 msgid "Moskovskaya oblast'"
-msgstr ""
+msgstr "Moskva oblast"
 
 #: ru/ru_regions.py:21
 msgid "Adygeya, Respublika"
-msgstr ""
+msgstr "Adõgee Vabariik"
 
 #: ru/ru_regions.py:22
 msgid "Bashkortostan, Respublika"
-msgstr ""
+msgstr "Baškortostani Vabariik"
 
 #: ru/ru_regions.py:23
 msgid "Buryatia, Respublika"
-msgstr ""
+msgstr "Burjaatia Vabariik"
 
 #: ru/ru_regions.py:24
 msgid "Altay, Respublika"
-msgstr ""
+msgstr "Altai Vabariik"
 
 #: ru/ru_regions.py:25
 msgid "Dagestan, Respublika"
-msgstr ""
+msgstr "Dagestani Vabariik"
 
 #: ru/ru_regions.py:26
 msgid "Ingushskaya Respublika"
-msgstr ""
+msgstr "Inguši Vabariik"
 
 #: ru/ru_regions.py:27
 msgid "Kabardino-Balkarskaya Respublika"
-msgstr ""
+msgstr "Kabardi-Balkaari Vabariik"
 
 #: ru/ru_regions.py:28
 msgid "Kalmykia, Respublika"
-msgstr ""
+msgstr "Kalmõkkia Vabariik"
 
 #: ru/ru_regions.py:29
 msgid "Karachaevo-Cherkesskaya Respublika"
-msgstr ""
+msgstr "Karatšai-Tšerkessi Vabariik"
 
 #: ru/ru_regions.py:30
 msgid "Karelia, Respublika"
-msgstr ""
+msgstr "Karjala Vabariik"
 
 #: ru/ru_regions.py:31
 msgid "Komi, Respublika"
-msgstr ""
+msgstr "Komi Vabariik"
 
 #: ru/ru_regions.py:32
 msgid "Mariy Ehl, Respublika"
-msgstr ""
+msgstr "Mari Eli Vabariik"
 
 #: ru/ru_regions.py:33
 msgid "Mordovia, Respublika"
-msgstr ""
+msgstr "Mordva Vabariik"
 
 #: ru/ru_regions.py:34
 msgid "Sakha, Respublika (Yakutiya)"
-msgstr ""
+msgstr "Sahha Vabariik (Jakuutia)"
 
 #: ru/ru_regions.py:35
 msgid "Severnaya Osetia, Respublika (Alania)"
-msgstr ""
+msgstr "Põhja-Osseetia Vabariik (Alaania)"
 
 #: ru/ru_regions.py:36
 msgid "Tatarstan, Respublika"
-msgstr ""
+msgstr "Tatarstani Vabariik"
 
 #: ru/ru_regions.py:37
 msgid "Tyva, Respublika (Tuva)"
-msgstr ""
+msgstr "Tõva Vabariik"
 
 #: ru/ru_regions.py:38
 msgid "Udmurtskaya Respublika"
-msgstr ""
+msgstr "Udmurdi Vabariik"
 
 #: ru/ru_regions.py:39
 msgid "Khakassiya, Respublika"
-msgstr ""
+msgstr "Hakassia Vabariik"
 
 #: ru/ru_regions.py:40
 msgid "Chechenskaya Respublika"
-msgstr ""
+msgstr "Tšetšeeni Vabariik"
 
 #: ru/ru_regions.py:41
 msgid "Chuvashskaya Respublika"
-msgstr ""
+msgstr "Tšuvaši Vabariik"
 
 #: ru/ru_regions.py:42
 msgid "Altayskiy Kray"
-msgstr ""
+msgstr "Altai krai"
 
 #: ru/ru_regions.py:43
 msgid "Zabaykalskiy Kray"
-msgstr ""
+msgstr "Habarovski krai"
 
 #: ru/ru_regions.py:44
 msgid "Kamchatskiy Kray"
-msgstr ""
+msgstr "Kamtšatka krai"
 
 #: ru/ru_regions.py:45
 msgid "Krasnodarskiy Kray"
-msgstr ""
+msgstr "Krasnodari krai"
 
 #: ru/ru_regions.py:46
 msgid "Krasnoyarskiy Kray"
-msgstr ""
+msgstr "Krasnojarski krai"
 
 #: ru/ru_regions.py:47
 msgid "Permskiy Kray"
-msgstr ""
+msgstr "Permi krai"
 
 #: ru/ru_regions.py:48
 msgid "Primorskiy Kray"
-msgstr ""
+msgstr "Primorje krai"
 
 #: ru/ru_regions.py:49
 msgid "Stavropol'siyy Kray"
-msgstr ""
+msgstr "Stavropoli krai"
 
 #: ru/ru_regions.py:50
 msgid "Khabarovskiy Kray"
-msgstr ""
+msgstr "Taga-Baikali krai"
 
 #: ru/ru_regions.py:51
 msgid "Amurskaya oblast'"
-msgstr ""
+msgstr "Amuuri oblast"
 
 #: ru/ru_regions.py:52
 msgid "Arkhangel'skaya oblast'"
-msgstr ""
+msgstr "Arhangelski oblast"
 
 #: ru/ru_regions.py:53
 msgid "Astrakhanskaya oblast'"
-msgstr ""
+msgstr "Astrahani oblast"
 
 #: ru/ru_regions.py:54
 msgid "Belgorodskaya oblast'"
-msgstr ""
+msgstr "Belgorodi oblast"
 
 #: ru/ru_regions.py:55
 msgid "Bryanskaya oblast'"
-msgstr ""
+msgstr "Brjanski oblast"
 
 #: ru/ru_regions.py:56
 msgid "Vladimirskaya oblast'"
-msgstr ""
+msgstr "Vladimiri oblast"
 
 #: ru/ru_regions.py:57
 msgid "Volgogradskaya oblast'"
-msgstr ""
+msgstr "Volgogradi oblast"
 
 #: ru/ru_regions.py:58
 msgid "Vologodskaya oblast'"
-msgstr ""
+msgstr "Vologda oblast"
 
 #: ru/ru_regions.py:59
 msgid "Voronezhskaya oblast'"
-msgstr ""
+msgstr "Voroneži oblast"
 
 #: ru/ru_regions.py:60
 msgid "Ivanovskaya oblast'"
-msgstr ""
+msgstr "Ivanovo oblast"
 
 #: ru/ru_regions.py:61
 msgid "Irkutskaya oblast'"
-msgstr ""
+msgstr "Irkutski oblast"
 
 #: ru/ru_regions.py:62
 msgid "Kaliningradskaya oblast'"
-msgstr ""
+msgstr "Kaliningradi oblast"
 
 #: ru/ru_regions.py:63
 msgid "Kaluzhskaya oblast'"
-msgstr ""
+msgstr "Kaluga oblast"
 
 #: ru/ru_regions.py:64
 msgid "Kemerovskaya oblast'"
-msgstr ""
+msgstr "Kemerovo oblast"
 
 #: ru/ru_regions.py:65
 msgid "Kirovskaya oblast'"
-msgstr ""
+msgstr "Kirovi oblast"
 
 #: ru/ru_regions.py:66
 msgid "Kostromskaya oblast'"
-msgstr ""
+msgstr "Kostroma oblast"
 
 #: ru/ru_regions.py:67
 msgid "Kurganskaya oblast'"
-msgstr ""
+msgstr "Kurgani oblast"
 
 #: ru/ru_regions.py:68
 msgid "Kurskaya oblast'"
-msgstr ""
+msgstr "Kurski oblast"
 
 #: ru/ru_regions.py:69
 msgid "Leningradskaya oblast'"
-msgstr ""
+msgstr "Leningradi oblast"
 
 #: ru/ru_regions.py:70
 msgid "Lipeckaya oblast'"
-msgstr ""
+msgstr "Lipetski oblast"
 
 #: ru/ru_regions.py:71
 msgid "Magadanskaya oblast'"
-msgstr ""
+msgstr "Magadani oblast"
 
 #: ru/ru_regions.py:72
 msgid "Murmanskaya oblast'"
-msgstr ""
+msgstr "Murmanski oblast"
 
 #: ru/ru_regions.py:73
 msgid "Nizhegorodskaja oblast'"
-msgstr ""
+msgstr "Nižni Novgorodi oblast"
 
 #: ru/ru_regions.py:74
 msgid "Novgorodskaya oblast'"
-msgstr ""
+msgstr "Novgorodi oblast"
 
 #: ru/ru_regions.py:75
 msgid "Novosibirskaya oblast'"
-msgstr ""
+msgstr "Novosibirski oblast"
 
 #: ru/ru_regions.py:76
 msgid "Omskaya oblast'"
-msgstr ""
+msgstr "Omski oblast"
 
 #: ru/ru_regions.py:77
 msgid "Orenburgskaya oblast'"
-msgstr ""
+msgstr "Orenburgi oblast"
 
 #: ru/ru_regions.py:78
 msgid "Orlovskaya oblast'"
-msgstr ""
+msgstr "Orjoli oblast"
 
 #: ru/ru_regions.py:79
 msgid "Penzenskaya oblast'"
-msgstr ""
+msgstr "Penza oblast"
 
 #: ru/ru_regions.py:80
 msgid "Pskovskaya oblast'"
-msgstr ""
+msgstr "Pihkva oblast"
 
 #: ru/ru_regions.py:81
 msgid "Rostovskaya oblast'"
-msgstr ""
+msgstr "Rostovi oblast"
 
 #: ru/ru_regions.py:82
 msgid "Rjazanskaya oblast'"
-msgstr ""
+msgstr "Rjazani oblast"
 
 #: ru/ru_regions.py:83
 msgid "Samarskaya oblast'"
-msgstr ""
+msgstr "Samara oblast"
 
 #: ru/ru_regions.py:84
 msgid "Saratovskaya oblast'"
-msgstr ""
+msgstr "Saratovi oblast"
 
 #: ru/ru_regions.py:85
 msgid "Sakhalinskaya oblast'"
-msgstr ""
+msgstr "Sahhalini oblast"
 
 #: ru/ru_regions.py:86
 msgid "Sverdlovskaya oblast'"
-msgstr ""
+msgstr "Sverdlovski oblast"
 
 #: ru/ru_regions.py:87
 msgid "Smolenskaya oblast'"
-msgstr ""
+msgstr "Smolenski oblast"
 
 #: ru/ru_regions.py:88
 msgid "Tambovskaya oblast'"
-msgstr ""
+msgstr "Tambovi oblast"
 
 #: ru/ru_regions.py:89
 msgid "Tverskaya oblast'"
-msgstr ""
+msgstr "Tveri oblast"
 
 #: ru/ru_regions.py:90
 msgid "Tomskaya oblast'"
-msgstr ""
+msgstr "Tomski oblast"
 
 #: ru/ru_regions.py:91
 msgid "Tul'skaya oblast'"
-msgstr ""
+msgstr "Tula oblast"
 
 #: ru/ru_regions.py:92
 msgid "Tyumenskaya oblast'"
-msgstr ""
+msgstr "Tjumeni oblast"
 
 #: ru/ru_regions.py:93
 msgid "Ul'ianovskaya oblast'"
-msgstr ""
+msgstr "Uljanovski oblast"
 
 #: ru/ru_regions.py:94
 msgid "Chelyabinskaya oblast'"
-msgstr ""
+msgstr "Tšeljabinski oblast"
 
 #: ru/ru_regions.py:95
 msgid "Yaroslavskaya oblast'"
-msgstr ""
+msgstr "Jaroslavli oblast"
 
 #: ru/ru_regions.py:96
 msgid "Evreyskaya avtonomnaja oblast'"
-msgstr ""
+msgstr "Juudi autonoomne oblast"
 
 #: ru/ru_regions.py:97
 msgid "Neneckiy autonomnyy okrug"
-msgstr ""
+msgstr "Neenetsi autonoomne ringkond"
 
 #: ru/ru_regions.py:98
 msgid "Khanty-Mansiyskiy avtonomnyy okrug - Yugra"
-msgstr ""
+msgstr "Handi-Mansi autonoomne ringkond - Jugra"
 
 #: ru/ru_regions.py:99
 msgid "Chukotskiy avtonomnyy okrug"
-msgstr ""
+msgstr "Tšuktši autonoomne ringkond"
 
 #: ru/ru_regions.py:100
 msgid "Yamalo-Neneckiy avtonomnyy okrug"
-msgstr ""
+msgstr "Jamali Neenetsi autonoomne ringkond"
 
 #: se/forms.py:55
 msgid "Enter a valid Swedish organisation number."
-msgstr ""
+msgstr "Sisesta kehtiv Rootsi organisatsiooni number."
 
 #: se/forms.py:112
 msgid "Enter a valid Swedish personal identity number."
-msgstr ""
+msgstr "Sisesta kehtiv Rootsi isikukood."
 
 #: se/forms.py:113
 msgid "Co-ordination numbers are not allowed."
@@ -3625,7 +4209,7 @@ msgstr ""
 
 #: se/forms.py:155
 msgid "Enter a Swedish postal code in the format XXXXX."
-msgstr ""
+msgstr "Sisesta Rootsi postikood kujul XXXXX."
 
 #: se/se_counties.py:9
 msgid "Stockholm"
@@ -3665,7 +4249,7 @@ msgstr ""
 
 #: se/se_counties.py:18
 msgid "Gotland"
-msgstr ""
+msgstr "Ojamaa"
 
 #: se/se_counties.py:19
 msgid "Blekinge"
@@ -4099,7 +4683,7 @@ msgstr "Sisesta postiindeks kujul XXXXX või XXXXX-XXXX."
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr "Sisesta kehtiv U.S. Social Security number formaadis XXX-XX-XXXX."
 
-#: us/forms.py:102
+#: us/forms.py:101
 msgid "Enter a U.S. state or territory."
 msgstr "Sisestage USA osariik või piirkond."
 
