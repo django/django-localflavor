@@ -40,8 +40,9 @@ class LTLocalFlavorTests(SimpleTestCase):
     def test_LTPostalCodeField(self):
         errors = LTPostalCodeField().error_messages
 
-        valid = {'00000': '00000',
-                 'LT-00000': 'LT-00000'}
+        valid = {'00000': 'LT-00000',
+                 'LT-00000': 'LT-00000',
+                 'lt - 12345': 'LT-12345'}
         invalid = {'000000': [errors['invalid']],
                    '0000': [errors['invalid']],
                    'LT-00': [errors['invalid']],
