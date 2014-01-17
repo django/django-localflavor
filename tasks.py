@@ -1,4 +1,5 @@
 import os
+import os.path
 from invoke import run, task
 
 
@@ -11,6 +12,12 @@ def clean():
 def test(lang='all'):
     test_cmd = 'coverage run `which django-admin.py` test --settings=tests.settings'
     flake_cmd = 'flake8 --ignore=W801,E128,E501,W402'
+
+    # Fix issue #49
+    cwp = os.path.dirname(os.path.abspath(__name__))
+    pythonpath = os.environ.get('PYTHONPATH', '').split(os.pathsep)
+    pythonpath.append(os.path.join(cwp, 'tests'))
+    os.environ['PYTHONPATH'] = os.pathsep.join(pythonpath)
 
     if lang == 'all':
         run('{0} localflavor'.format(flake_cmd))
