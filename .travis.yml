@@ -1,22 +1,15 @@
 language: python
-
-python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
-
 install:
-  - pip install -r tests/requirements.txt
-  - pip install $DJANGO
-  - pip install coveralls
-  - pip install -e .
-
+  - pip install tox coveralls
 script:
-  - invoke test
-
+  - tox
 env:
-  - DJANGO="Django>=1.5,<1.6"
-  - DJANGO="Django>=1.6,<1.7"
-
+  - TOXENV=py26-1.5
+  - TOXENV=py26-1.6
+  - TOXENV=py27-1.5
+  - TOXENV=py27-1.6
+  - TOXENV=py32-1.5
+  - TOXENV=py32-1.6
+  - TOXENV=py33-1.5
+  - TOXENV=py33-1.6
 after_success: coveralls
