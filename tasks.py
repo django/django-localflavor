@@ -9,9 +9,10 @@ def clean():
 
 
 @task
-def test(lang='all'):
+def test(country='all'):
     test_cmd = 'coverage run `which django-admin.py` test --settings=tests.settings'
     flake_cmd = 'flake8 --ignore=W801,E128,E501,W402'
+    country = os.environ.get('COUNTRY', country)
 
     # Fix issue #49
     cwp = os.path.dirname(os.path.abspath(__name__))
@@ -19,16 +20,16 @@ def test(lang='all'):
     pythonpath.append(os.path.join(cwp, 'tests'))
     os.environ['PYTHONPATH'] = os.pathsep.join(pythonpath)
 
-    if lang == 'all':
+    if country == 'all':
         run('{0} localflavor'.format(flake_cmd))
         run('{0} tests'.format(test_cmd))
         run('coverage report')
-    elif lang not in os.listdir('localflavor'):
-        print('This language {0!r} is not supported yet.'.format(lang))
+    elif country not in os.listdir('localflavor'):
+        print('The country {0!r} is not supported yet.'.format(country))
     else:
-        run('{0} localflavor/{1}'.format(flake_cmd, lang))
-        run('{0} tests.test_{1}'.format(test_cmd, lang))
-        run('coverage report -m --include=localflavor/{0}/*'.format(lang))
+        run('{0} localflavor/{1}'.format(flake_cmd, country))
+        run('{0} tests.test_{1}'.format(test_cmd, country))
+        run('coverage report -m --include=localflavor/{0}/*'.format(country))
 
 
 @task

@@ -140,6 +140,9 @@ any code you'd like to contribute. One thing we ask is that you please use
 Unicode objects (``u'mystring'``) for strings, rather than setting the encoding
 in the file. See any of the existing flavors for examples.
 
+See the `contributing documentation`_ for how to run the tests while working on a
+local flavor.
+
 If you consider adding a new localflavor for country here are some examples
 that you might consider implementing:
 
@@ -158,6 +161,7 @@ that you might consider implementing:
   Transifex: https://www.transifex.com/projects/p/django-localflavor/
 
 .. _create a ticket: https://github.com/django/django-localflavor/issues
+.. _contributing documentation: https://github.com/django/django-localflavor/blob/master/CONTRIBUTING.rst
 
 Releases
 ========
