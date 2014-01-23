@@ -62,7 +62,7 @@ NORTHERN_IRELAND_REGION_CHOICES = (
     ("County Tyrone", _("County Tyrone")),
 )
 
-# Welsh regions: http://en.wikipedia.org/wiki/Subdivisions_of_Wales
+#: Welsh regions: http://en.wikipedia.org/wiki/Subdivisions_of_Wales
 WALES_REGION_CHOICES = (
     ("Blaenau Gwent", _("Blaenau Gwent")),
     ("Bridgend", _("Bridgend")),
