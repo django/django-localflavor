@@ -113,7 +113,10 @@ class ITVatNumberField(Field):
 
 class ITPhoneNumberField(CharField):
     """
-    A form field that validates input as an Italian phone number.
+    A form field that validates input as an Italian phone number. Will strip
+    any +39 country prefix from the number.
+
+    .. versionadded:: 1.1
     """
     default_error_messages = {
         'invalid': _('Enter a valid Italian phone number.'),
