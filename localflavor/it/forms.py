@@ -8,12 +8,16 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms.fields import Field, RegexField, Select, CharField
+from django.utils.encoding import smart_text
 from django.utils.translation import ugettext_lazy as _
 
 from .it_province import PROVINCE_CHOICES
 from .it_region import REGION_CHOICES
 from .util import vat_number_validation, ssn_validation
+
+
+phone_digits_re = re.compile(r'^(?:\+?39)?((06)(\d{8})|(3\d{2})(\d{6,8}))$')
 
 
 class ITZipCodeField(RegexField):
@@ -105,3 +109,22 @@ class ITVatNumberField(Field):
             return vat_number_validation(value)
         except ValueError:
             raise ValidationError(self.error_messages['invalid'])
+
+
+class ITPhoneNumberField(CharField):
+    """
+    A form field that validates input as an Italian phone number.
+    """
+    default_error_messages = {
+        'invalid': _('Enter a valid Italian phone number.'),
+    }
+
+    def clean(self, value):
+        super(ITPhoneNumberField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+        value = re.sub(r'[^\+\d]', '', smart_text(value))
+        m = phone_digits_re.match(value)
+        if m:
+            return '%s %s' % tuple(group for group in m.groups()[1:] if group)
+        raise ValidationError(self.error_messages['invalid'])

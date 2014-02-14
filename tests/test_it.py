@@ -4,7 +4,7 @@ from django.test import SimpleTestCase
 
 from localflavor.it.forms import (ITZipCodeField, ITRegionSelect,
                                   ITSocialSecurityNumberField,
-                                  ITVatNumberField)
+                                  ITVatNumberField, ITPhoneNumberField)
 
 
 class ITLocalFlavorTests(SimpleTestCase):
@@ -83,3 +83,31 @@ class ITLocalFlavorTests(SimpleTestCase):
             'A7973780013': error_invalid,
         }
         self.assertFieldOutput(ITVatNumberField, valid, invalid)
+
+    def test_ITPhoneNumberField(self):
+        error_format = ['Enter a valid Italian phone number.']
+        valid = {
+            '+39 347 1234567': '347 1234567',
+            '39 347 123 4567': '347 1234567',
+            '347-1234567': '347 1234567',
+            '3471234567': '347 1234567',
+            '+39 347 12345678': '347 12345678',
+            '39 347 123 45678': '347 12345678',
+            '347-12345678': '347 12345678',
+            '34712345678': '347 12345678',
+            '+39 347 123456': '347 123456',
+            '39 347 123 456': '347 123456',
+            '347-123456': '347 123456',
+            '347123456': '347 123456',
+            '+39 06 12345678': '06 12345678',
+            '39 06 1234 5678': '06 12345678',
+            '06-12345678': '06 12345678',
+            '0612345678': '06 12345678',
+        }
+        invalid = {
+            '+44 347 1234567': error_format,
+            '0471234567': error_format,
+            '06 1234567': error_format,
+            '06 123456789': error_format,
+        }
+        self.assertFieldOutput(ITPhoneNumberField, valid, invalid)
