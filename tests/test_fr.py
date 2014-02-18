@@ -5,7 +5,8 @@ from django.test import SimpleTestCase
 from localflavor.fr.forms import (
     FRZipCodeField, FRPhoneNumberField,
     FRDepartmentField, FRRegionField,
-    FRRegionSelect, FRDepartmentSelect
+    FRRegionSelect, FRDepartmentSelect,
+    FRNationalIdentificationNumber
 )
 
 DEP_SELECT_OUTPUT = '''
@@ -202,3 +203,21 @@ class FRLocalFlavorTests(SimpleTestCase):
     def test_FRRegionSelect(self):
         f = FRRegionSelect()
         self.assertHTMLEqual(f.render('reg', '25'), REG_SELECT_OUTPUT)
+
+    def test_FRNationalIdentificationNumber(self):
+        error_format = ['Enter a valid French French National Identification number.']
+        valid = {
+            '869067543002289': '869067543002289',
+            '869069713002256': '869069713002256',   # Good Overseas
+        }
+        invalid = {
+            '369067543002289': error_format,    # Gender mismatch
+            '869069873002289': error_format,    # Bad Department
+            '869069773002289': error_format,    # Bad overseas Department
+            '869069710002256': error_format,    # Good overseas Bad Commune
+            '869067500002289': error_format,    # Bad Commune
+            '869067543000009': error_format,    # Bad "Person Unique Number"
+            '869067543002298': error_format,    # Bad Control key
+            '869067443002289': error_format,    # Fails validation
+        }
+        self.assertFieldOutput(FRNationalIdentificationNumber, valid, invalid)
