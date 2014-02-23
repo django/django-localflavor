@@ -21,6 +21,10 @@ class USZipCodeField(RegexField):
     """"
     A form field that validates input as a U.S. ZIP code. Valid formats are
     XXXXX or XXXXX-XXXX.
+
+    .. versionadded:: 1.1
+
+    Whitespace around the ZIP code is accepted and automatically trimmed.
     """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX or XXXXX-XXXX.'),
@@ -29,6 +33,10 @@ class USZipCodeField(RegexField):
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
         super(USZipCodeField, self).__init__(r'^\d{5}(?:-\d{4})?$',
                                              max_length, min_length, *args, **kwargs)
+
+    def to_python(self, value):
+        value = super(USZipCodeField, self).to_python(value)
+        return value.strip()
 
 
 class USPhoneNumberField(CharField):
