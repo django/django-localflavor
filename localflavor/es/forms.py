@@ -84,7 +84,7 @@ class ESIdentityCardNumberField(RegexField):
         self.only_nif = only_nif
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
-        self.cif_types = 'ABCDEFGHKLMNPQS'
+        self.cif_types = 'ABCDEFGHJKLMNPQS'
         self.nie_types = 'XT'
         id_card_re = re.compile(r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$' % (self.cif_types + self.nie_types, self.nif_control + self.cif_control), re.IGNORECASE)
         super(ESIdentityCardNumberField, self).__init__(
