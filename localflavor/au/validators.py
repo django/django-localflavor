@@ -27,7 +27,7 @@ def validate_medicare_number(value):
     # remove spaces and hyphens
     value = re.sub(r'\s+|-', '', smart_text(value))
 
-    if not re.match(r'\d{10}', smart_text(value)):
+    if not re.match(r'^\d{10}$', smart_text(value)):
         raise ValidationError(_('Medicare number must be 10 digits.'))
 
     if not (2 <= int(value[0]) <= 6):

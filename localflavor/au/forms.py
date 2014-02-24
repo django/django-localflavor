@@ -109,7 +109,10 @@ class AUMedicareNumberField(MultiValueField):
             *args, **kwargs)
 
     def compress(self, values):
-        mcn, irn = values
+        try:
+            mcn, irn = values
+        except ValueError:
+            return ''
 
         mcn = re.sub(r'\s+|-', '', smart_text(mcn))
 

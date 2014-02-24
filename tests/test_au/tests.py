@@ -110,12 +110,44 @@ class AULocalflavorTests(TestCase):
 
 class AUMedicareNumberTests(TestCase):
 
+    maxDiff = None
+
+    def test_AUMedicareNumberField(self):
+        errors = {
+            'invalid': ['Medicare number is not valid.'],
+            'mcn-length': ['Medicare number must be 10 digits.'],
+            'irn-length': ['IRN must be a single digit.'],
+        }
+
+        valid = {
+            ('2123 45670 1', '1'): ('2123456701', '1'),
+            ('2123456701', '2'): ('2123456701', '2'),
+            ('21 23 45 67 03', '1'): ('2123456703', '1'),
+            ('2123-45670-1', '1'): ('2123456701', '1'),
+        }
+        invalid = {
+            # bad checksum
+            ('2123 45671 1', '1'): errors['invalid'],
+            # valid checksum, bad first digit
+            ('1123 45679 1', '1'): errors['invalid'],
+            # not enough digits
+            ('123', '1'): errors['mcn-length'],
+            # too many digits
+            ('12345678901', '1'): errors['mcn-length'],
+            # not a digit
+            ('1234a67890', '1'): errors['mcn-length'],
+            # bad IRN
+            ('2123456701', 'a'): errors['irn-length'],
+            ('1234567890', 'a'): errors['invalid'] + errors['irn-length'],
+        }
+        self.assertFieldOutput(AUMedicareNumberField, valid, invalid)
+
     def test_AUMedicareNumberField_in_form(self):
         f = MedicareForm()
         out = """
 <p>
     <label for="id_medicare_no_0">Medicare no:</label>
-    <input class="au-medicare-card-number" id="id_medicare_no_0" name="medicare_no_0" placeholder="Card Number" type="number" />
+    <input class="au-medicare-card-number" id="id_medicare_no_0" name="medicare_no_0" placeholder="Card number" type="number" />
     <input class="au-medicare-irn" id="id_medicare_no_1" name="medicare_no_1" placeholder="IRN" type="number" />
 </p>
         """
@@ -128,7 +160,7 @@ class AUMedicareNumberTests(TestCase):
         out = """
 <p>
     <label for="id_medicare_no_0">Medicare no:</label>
-    <input class="au-medicare-card-number" id="id_medicare_no_0" name="medicare_no_0" placeholder="Card Number" type="number" value="2123 45670 1"/>
+    <input class="au-medicare-card-number" id="id_medicare_no_0" name="medicare_no_0" placeholder="Card number" type="number" value="2123 45670 1"/>
     <input class="au-medicare-irn" id="id_medicare_no_1" name="medicare_no_1" placeholder="IRN" type="number" value="1"/>
 </p>
         """
@@ -137,21 +169,3 @@ class AUMedicareNumberTests(TestCase):
         self.assertTrue(f.is_valid())
         self.assertEqual(f.cleaned_data['medicare_no'],
                          ('2123456701', '1'))
-
-    def test_AUMedicareNumberField_does_not_validate(self):
-        f = MedicareForm(dict(medicare_no_0='2123 45671 1',
-                              medicare_no_1='1'))
-        self.assertFalse(f.is_valid())
-        self.assertEqual(f.errors,
-                         {
-                             'medicare_no': ["Medicare number is not valid."],
-                         })
-
-        # bad first digit but valid check bit
-        f = MedicareForm(dict(medicare_no_0='1123 45679 1',
-                              medicare_no_1='1'))
-        self.assertFalse(f.is_valid())
-        self.assertEqual(f.errors,
-                         {
-                             'medicare_no': ["Medicare number is not valid."],
-                         })

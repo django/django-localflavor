@@ -12,13 +12,7 @@ except ImportError:
     from django.forms import TextInput
 
     class NumberInput(TextInput):
-        def __init__(self, attrs=None, *args, **kwargs):
-            if not attrs:
-                attrs = {}
-
-            attrs['type'] = 'number'
-
-            super(NumberInput, self).__init__(attrs=attrs, *args, **kwargs)
+        input_type = 'number'
 
 
 class AUMedicareNumberWidget(MultiWidget):
