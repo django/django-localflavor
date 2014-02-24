@@ -3,6 +3,7 @@ Australian specific form widgets
 """
 
 from django.forms import MultiWidget
+from django.utils.translation import ugettext_lazy as _
 
 try:
     from django.forms import NumberInput
@@ -30,11 +31,11 @@ class AUMedicareNumberWidget(MultiWidget):
     def __init__(self, *args, **kwargs):
         widgets = (
             NumberInput(attrs={
-                'placeholder': "Card Number",
+                'placeholder': _('Card number'),
                 'class': 'au-medicare-card-number',
             }),
             NumberInput(attrs={
-                'placeholder': "IRN",
+                'placeholder': _('IRN'),
                 'class': 'au-medicare-irn',
             }),
         )

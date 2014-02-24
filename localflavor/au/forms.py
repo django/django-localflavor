@@ -41,7 +41,7 @@ class AUPhoneNumberField(CharField):
     Valid numbers have ten digits.
     """
     default_error_messages = {
-        'invalid': 'Phone numbers must contain 10 digits.',
+        'invalid': _('Phone numbers must contain 10 digits.'),
     }
 
     def clean(self, value):
@@ -80,7 +80,7 @@ class AUMedicareNumberField(MultiValueField):
 
     def __init__(self, widget=AUMedicareNumberWidget, *args, **kwargs):
         error_messages = {
-            'incomplete': "Enter a Medicare card number and IRN.",
+            'incomplete': _('Enter a Medicare card number and IRN.'),
         }
 
         fields = (
@@ -89,15 +89,15 @@ class AUMedicareNumberField(MultiValueField):
                     validate_medicare_number,
                 ],
                 error_messages={
-                    'incomplete': "Enter a Medicare card number.",
+                    'incomplete': _('Enter a Medicare card number.'),
                 }
             ),
             CharField(
                 validators=[
-                    RegexValidator(r'^\d$', "IRN must be a single digit."),
+                    RegexValidator(r'^\d$', _('IRN must be a single digit.')),
                 ],
                 error_messages={
-                    'incomplete': "Enter an IRN (the number next to the name).",
+                    'incomplete': _('Enter an IRN (the number next to the name).'),
                 }
             ),
         )
