@@ -23,6 +23,8 @@ except ImportError:
 class AUMedicareNumberWidget(MultiWidget):
     """
     A widget for capturing an Australian Medicare number
+
+    .. versionadded:: 1.1
     """
 
     def __init__(self, *args, **kwargs):
