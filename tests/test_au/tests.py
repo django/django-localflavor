@@ -137,3 +137,21 @@ class AUMedicareNumberTests(TestCase):
         self.assertTrue(f.is_valid())
         self.assertEqual(f.cleaned_data['medicare_no'],
                          ('2123456701', '1'))
+
+    def test_AUMedicareNumberField_does_not_validate(self):
+        f = MedicareForm(dict(medicare_no_0='2123 45671 1',
+                              medicare_no_1='1'))
+        self.assertFalse(f.is_valid())
+        self.assertEqual(f.errors,
+                         {
+                             'medicare_no': ["Medicare number is not valid."],
+                         })
+
+        # bad first digit but valid check bit
+        f = MedicareForm(dict(medicare_no_0='1123 45679 1',
+                              medicare_no_1='1'))
+        self.assertFalse(f.is_valid())
+        self.assertEqual(f.errors,
+                         {
+                             'medicare_no': ["Medicare number is not valid."],
+                         })
