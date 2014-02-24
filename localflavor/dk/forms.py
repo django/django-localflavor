@@ -5,8 +5,7 @@ Denmark specific form helpers.
 from __future__ import absolute_import, unicode_literals
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
-from django.forms import widgets
-from django.forms import fields
+from django.forms import widgets, fields
 
 from .dk_postalcodes import DK_POSTALCODES
 from .dk_municipalities import DK_MUNICIPALITIES
