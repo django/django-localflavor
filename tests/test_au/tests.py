@@ -110,7 +110,7 @@ class AULocalflavorTests(TestCase):
 
 class AUMedicareNumberTests(TestCase):
 
-    def test_AUMedicareNumberField(self):
+    def test_AUMedicareNumberField_in_form(self):
         f = MedicareForm()
         out = """
 <p>
@@ -120,3 +120,20 @@ class AUMedicareNumberTests(TestCase):
 </p>
         """
         self.assertHTMLEqual(f.as_p(), out)
+
+    def test_AUMedicareNumberField_validates(self):
+        f = MedicareForm(dict(medicare_no_0='2123 45670 1',
+                              medicare_no_1='1'))
+
+        out = """
+<p>
+    <label for="id_medicare_no_0">Medicare no:</label>
+    <input class="au-medicare-card-number" id="id_medicare_no_0" name="medicare_no_0" placeholder="Card Number" type="number" value="2123 45670 1"/>
+    <input class="au-medicare-irn" id="id_medicare_no_1" name="medicare_no_1" placeholder="IRN" type="number" value="1"/>
+</p>
+        """
+
+        self.assertHTMLEqual(f.as_p(), out)
+        self.assertTrue(f.is_valid())
+        self.assertEqual(f.cleaned_data['medicare_no'],
+                         ('2123456701', '1'))

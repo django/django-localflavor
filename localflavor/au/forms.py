@@ -83,8 +83,6 @@ class AUMedicareNumberField(MultiValueField):
         fields = (
             CharField(
                 validators=[
-                    RegexValidator(r'^\d{10}$',
-                                   "Medicare number must be 10 digits."),
                     self._validate_medicare_checksum,
                 ],
                 error_messages={
@@ -130,11 +128,14 @@ class AUMedicareNumberField(MultiValueField):
         # remove spaces and hyphens
         value = re.sub(r'\s+|-', '', smart_text(value))
 
-        if 2 <= int(value[0]) <= 6:
+        if not re.match(r'\d{10}', smart_text(value)):
+            raise ValidationError("Medicare number must be 10 digits.")
+
+        if not (2 <= int(value[0]) <= 6):
             raise ValidationError("Medicare number is not valid.")
 
         weightings = (1, 3, 7, 9, 1, 3, 7, 9)
         check_bit = sum(int(a) * b for (a, b) in zip(value, weightings)) % 10
 
-        if check_bit != value[8]:
+        if check_bit != int(value[8]):
             raise ValidationError("Medicare number is not valid.")
