@@ -68,7 +68,7 @@ class AUStateSelect(Select):
 
 class AUMedicareNumberField(MultiValueField):
     """
-    A composed field for capturing a patient's medicare number and IRN
+    A composed field for capturing a patient's Medicare number and IRN
 
     The format of a medicare number is documented in
     http://www.medicareaustralia.gov.au/provider/vendors/files/acir-immunisation-document-formats.pdf
@@ -77,7 +77,7 @@ class AUMedicareNumberField(MultiValueField):
 
     def __init__(self, widget=AUMedicareNumberWidget, *args, **kwargs):
         error_messages = {
-            'incomplete': "Enter a medicare card number and IRN.",
+            'incomplete': "Enter a Medicare card number and IRN.",
         }
 
         fields = (
@@ -86,7 +86,7 @@ class AUMedicareNumberField(MultiValueField):
                     self._validate_medicare_checksum,
                 ],
                 error_messages={
-                    'incomplete': "Enter a medicare card number.",
+                    'incomplete': "Enter a Medicare card number.",
                 }
             ),
             CharField(
