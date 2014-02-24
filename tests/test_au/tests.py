@@ -5,8 +5,8 @@ import re
 from django.test import TestCase
 
 from localflavor.au.forms import (AUPostCodeField, AUPhoneNumberField,
-                                  AUStateSelect)
-from .forms import AustralianPlaceForm
+                                  AUStateSelect, AUMedicareNumberField)
+from .forms import AustralianPlaceForm, MedicareForm
 
 
 SELECTED_OPTION_PATTERN = r'<option value="%s" selected="selected">'
@@ -106,3 +106,17 @@ class AULocalflavorTests(TestCase):
             '1800DJANGO': error_format,
         }
         self.assertFieldOutput(AUPhoneNumberField, valid, invalid)
+
+
+class AUMedicareNumberTests(TestCase):
+
+    def test_AUMedicareNumberField(self):
+        f = MedicareForm()
+        out = """
+<p>
+    <label for="id_medicare_no_0">Medicare no:</label>
+    <input class="au-medicare-card-number" id="id_medicare_no_0" name="medicare_no_0" placeholder="Card Number" type="number" />
+    <input class="au-medicare-irn" id="id_medicare_no_1" name="medicare_no_1" placeholder="IRN" type="number" />
+</p>
+        """
+        self.assertHTMLEqual(f.as_p(), out)
