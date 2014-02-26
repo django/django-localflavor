@@ -102,12 +102,12 @@ class ITLocalFlavorTests(SimpleTestCase):
             '+39 06 12345678': '06 12345678',
             '39 06 1234 5678': '06 12345678',
             '06-12345678': '06 12345678',
-            '0612345678': '06 12345678',
+            '085 12345': '085 12345',
         }
         invalid = {
             '+44 347 1234567': error_format,
             '0471234567': error_format,
-            '06 1234567': error_format,
             '06 123456789': error_format,
+            '06123456789': error_format,
         }
         self.assertFieldOutput(ITPhoneNumberField, valid, invalid)
