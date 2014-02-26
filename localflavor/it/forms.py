@@ -17,7 +17,7 @@ from .it_region import REGION_CHOICES
 from .util import vat_number_validation, ssn_validation
 
 
-phone_digits_re = re.compile(r'^(?:\+?39)?((06)(\d{8})|(3\d{2})(\d{6,8}))$')
+phone_digits_re = re.compile(r'^(?:\+?39)?((0\d{1,3})(\d{4,8})|(3\d{2})(\d{6,8}))$')
 
 
 class ITZipCodeField(RegexField):
