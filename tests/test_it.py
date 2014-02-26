@@ -106,7 +106,7 @@ class ITLocalFlavorTests(SimpleTestCase):
         }
         invalid = {
             '+44 347 1234567': error_format,
-            '0471234567': error_format,
+            '14471234567': error_format,
             '0861 123456789': error_format,
             '08661234567890': error_format,
         }
