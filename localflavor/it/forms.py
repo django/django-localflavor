@@ -17,7 +17,7 @@ from .it_region import REGION_CHOICES
 from .util import vat_number_validation, ssn_validation
 
 
-phone_digits_re = re.compile(r'^(?:\+?39)?((0\d{1,3})(\d{4,8})|(3\d{2})(\d{6,8}))$')
+phone_digits_re = re.compile(r'^(?:\+?39)?((\d{3,11}))$')
 
 
 class ITZipCodeField(RegexField):
@@ -115,6 +115,10 @@ class ITPhoneNumberField(CharField):
     """
     A form field that validates input as an Italian phone number. Will strip
     any +39 country prefix from the number.
+    
+    For reference see http://www.gazzettaufficiale.it and search for:
+    
+    * 'Piano di numerazione nel settore delle telecomunicazioni e disciplina attuativa. (Deliberazione n. 26/08/CIR)'
 
     .. versionadded:: 1.1
     """
