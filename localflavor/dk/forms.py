@@ -12,7 +12,7 @@ from .dk_municipalities import DK_MUNICIPALITIES
 
 
 def postal_code_validator(value):
-    if value not in DK_POSTALCODES.iterkeys():
+    if value not in [zip for zip, city in DK_POSTALCODES]:
         raise ValidationError(_('Enter a postal code in the format XXXX.'))
 
 
