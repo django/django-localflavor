@@ -20,7 +20,7 @@ class DKPostalCodeSelect(fields.CharField):
     """
     A Select widget that uses a list of Danish postal codes as its choices.
     """
-    default_validators = [postal_code_validator, ]
+    default_validators = [postal_code_validator]
 
 
 class DKMunicipalitySelect(widgets.Select):
