@@ -16,7 +16,7 @@ def postal_code_validator(value):
         raise ValidationError(_('Enter a postal code in the format XXXX.'))
 
 
-class DKPostalCodeSelect(fields.CharField):
+class DKPostalCodeField(fields.CharField):
     """
     A Select widget that uses a list of Danish postal codes as its choices.
     """

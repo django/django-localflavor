@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 from django.utils.translation import ugettext_lazy as _, override
 
+from __future__ import unicode_literals
+
 from localflavor.dk.forms import (
     DKPhoneNumberField,
     DKPostalCodeSelect,
@@ -46,7 +48,7 @@ class DKLocalFlavorTests(SimpleTestCase):
     def test_DKMunicipalitySelect(self):
         with override("en"):
             f = DKMunicipalitySelect()
-            out = u"""
+            out = """
 <select name="municipalities">
     <optgroup label="Region Hovedstaden">
         <option value="albertslund">Albertslund</option>
