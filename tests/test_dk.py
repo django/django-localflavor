@@ -3,11 +3,9 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 from django.utils.translation import ugettext_lazy as _, override
 
-from __future__ import unicode_literals
-
 from localflavor.dk.forms import (
     DKPhoneNumberField,
-    DKPostalCodeSelect,
+    DKPostalCodeField,
     DKMunicipalitySelect
 )
 
@@ -24,7 +22,7 @@ class DKLocalFlavorTests(SimpleTestCase):
             "abcd": error_format,  # illegal characters
             "12345": error_format,  # to many digits
         }
-        self.assertFieldOutput(DKPostalCodeSelect, valid, invalid)
+        self.assertFieldOutput(DKPostalCodeField, valid, invalid)
 
     def test_DKPhoneNumberField(self):
         error_format = [
