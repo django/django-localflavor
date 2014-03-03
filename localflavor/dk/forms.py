@@ -19,8 +19,6 @@ def postal_code_validator(value):
 class DKPostalCodeField(fields.CharField):
     """
     An Input widget that uses a list of Danish postal codes as valid input.
-    
-    .. version_added:: 1.0
     """
     default_validators = [postal_code_validator]
 
@@ -29,8 +27,6 @@ class DKMunicipalitySelect(widgets.Select):
     """
     A Select widget that uses a list of Danish municipalities (kommuner)
     as its choices.
-
-    .. version_added:: 1.0
     """
     def __init__(self, attrs=None, *args, **kwargs):
         super(DKMunicipalitySelect, self).__init__(
@@ -45,8 +41,6 @@ class DKPhoneNumberField(fields.RegexField):
     """
     Field with phone number validation. Requires a phone number with
     8 digits and optional country code
-
-    .. version_added:: 1.0
     """
     default_error_messages = {
         'invalid': _(
