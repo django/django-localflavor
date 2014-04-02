@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 FR-specific Form helpers
 """
