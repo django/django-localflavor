@@ -156,11 +156,11 @@ class FRNationalIdentificationNumber(CharField):
         person_unique_number = match.group('person_unique_number')
         control_key = int(match.group('control_key'))
 
-        #Department number 98 is for Monaco, 20 doesn't exist
+        # Department number 98 is for Monaco, 20 doesn't exist
         if department_of_origin in ['98', '20']:
             raise ValidationError(self.error_messages['invalid'])
 
-        #Overseas department numbers starts with 97 and are 3 digits long
+        # Overseas department numbers starts with 97 and are 3 digits long
         if department_of_origin == '97':
             department_of_origin += commune_of_origin[:1]
             if int(department_of_origin) not in range(971, 976):
