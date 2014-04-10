@@ -18,3 +18,7 @@ class IBANField(models.CharField):
         kwargs.setdefault('max_length', 34)
         super(IBANField, self).__init__(*args, **kwargs)
         self.validators.append(IBANValidator(use_nordea_extensions))
+
+    def to_python(self, value):
+        value = super(IBANField, self).to_python(value)
+        return value.replace(' ', '')
