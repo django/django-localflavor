@@ -82,7 +82,7 @@ class INLocalFlavorTests(SimpleTestCase):
             'O2B 2R3': error_format
         }
         self.assertFieldOutput(INZipCodeField, valid, invalid)
-    
+
     def test_INAadhaarNumberField(self):
         error_format = ['Enter a valid Aadhaar number in XXXX XXXX XXXX or '
                                                     'XXXX-XXXX-XXXX format.']
