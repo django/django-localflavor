@@ -1,5 +1,6 @@
 import os
 import os.path
+import sys
 from invoke import run, task
 
 
@@ -10,6 +11,7 @@ def clean():
 
 @task
 def test(country='all'):
+    print('Python version: ' + sys.version)
     test_cmd = 'coverage run `which django-admin.py` test --settings=tests.settings'
     flake_cmd = 'flake8 --ignore=W801,E128,E501,W402'
     country = os.environ.get('COUNTRY', country)
