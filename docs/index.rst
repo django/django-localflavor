@@ -86,7 +86,7 @@ French telephone number::
 
 The ``localflavor`` package also includes a :doc:`generic </generic>` subpackage,
 containing useful code that is not specific to one particular country or culture.
-Currently, it defines date, datetime and split datetime input fields based on
+This package defines date, datetime and split datetime input fields based on
 those from the forms, but with non-US default formats. Here's an example of
 how to use them::
 
@@ -95,6 +95,15 @@ how to use them::
 
     class MyForm(forms.Form):
         my_date_field = generic.forms.DateField()
+
+The ``localflavor`` package also has an IBAN model and form field. Here's an example
+of how to use the IBAN form field::
+
+    from django import forms
+    from localflavor.generic.forms import IBANFormField
+
+    class MyForm(forms.Form):
+        iban = IBANFormField()
 
 Installation
 ============
