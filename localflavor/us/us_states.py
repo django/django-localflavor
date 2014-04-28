@@ -159,11 +159,14 @@ USPS_CHOICES = tuple(sorted(US_STATES + US_TERRITORIES + ARMED_FORCES_STATES + C
 
 #: Normalized versions of state names
 STATES_NORMALIZED = {
+    'aa': 'AA',
+    'ae': 'AE',
     'ak': 'AK',
     'al': 'AL',
     'ala': 'AL',
     'alabama': 'AL',
     'alaska': 'AK',
+    'ap': 'AP',
     'american samao': 'AS',
     'american samoa': 'AS',
     'ar': 'AR',
