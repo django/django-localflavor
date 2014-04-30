@@ -31,8 +31,8 @@ class FRZipCodeField(RegexField):
 
     def __init__(self, *args, **kwargs):
         kwargs['label'] = kwargs.get('label', _('Zip code'))
-        kwargs['max_length'] = kwargs.get('max_length'), 5)
-        kwargs['min_length'] = kwargs.get('min_length'), 5)
+        kwargs['max_length'] = kwargs.get('max_length', 5)
+        kwargs['min_length'] = kwargs.get('min_length', 5)
         
         super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
@@ -52,8 +52,8 @@ class FRPhoneNumberField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['label'] = kwargs.get('label', _('Phone number'))
-        kwargs['max_length'] = kwargs.get('max_length'), 14)
-        kwargs['min_length'] = kwargs.get('min_length'), 10)
+        kwargs['max_length'] = kwargs.get('max_length', 14)
+        kwargs['min_length'] = kwargs.get('min_length', 10)
         
         super(FRPhoneNumberField, self).__init__(*args, **kwargs)
 
