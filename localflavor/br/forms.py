@@ -147,7 +147,8 @@ class BRCPFField(CharField):
         value = value[:-1] + str(new_2dv)
         if value[-2:] != orig_dv:
             raise ValidationError(self.error_messages['invalid'])
-
+        if value.count(value[0]) == 11:
+            raise ValidationError(self.error_messages['invalid'])
         return orig_value
 
 

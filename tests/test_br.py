@@ -54,6 +54,10 @@ class BRLocalFlavorTests(SimpleTestCase):
         invalid = {
             '489.294.654-54': error_format,
             '295.669.575-98': error_format,
+            '111.111.111-11': error_format,
+            '11111111111': error_format,
+            '222.222.222-22': error_format,
+            '22222222222': error_format,
             '539.315.127-22': error_format,
             '375.788.573-XX': error_numbersonly,
             '375.788.573-000': error_atmost_chars,
