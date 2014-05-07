@@ -6,6 +6,8 @@ from localflavor.it.forms import (ITZipCodeField, ITRegionSelect,
                                   ITSocialSecurityNumberField,
                                   ITVatNumberField, ITPhoneNumberField)
 
+from localflavor.it.it_province import PROVINCE_CHOICES, PROVINCE_REGION
+from localflavor.it.it_region import REGION_CHOICES, REGION_PROVINCE
 
 class ITLocalFlavorTests(SimpleTestCase):
     def test_ITRegionSelect(self):
@@ -111,3 +113,25 @@ class ITLocalFlavorTests(SimpleTestCase):
             '08661234567890': error_format,
         }
         self.assertFieldOutput(ITPhoneNumberField, valid, invalid)
+
+    def test_province_in_regions(self):
+        # we cover all provinces
+        provinces = sorted([p[0] for p in PROVINCE_CHOICES])
+        provinces_in_regions = sorted(PROVINCE_REGION.keys())
+        # we have all the regions in the dict
+        regions = sorted(set([r[0] for r in REGION_CHOICES]))
+        regions_from_provinces = sorted(set(PROVINCE_REGION.values()))
+
+        self.assertEqual(provinces, provinces_in_regions)
+        self.assertEqual(regions, regions_from_provinces)
+
+    def test_regions_in_province(self):
+        # we cover all the regions
+        regions = sorted([r[0] for r in REGION_CHOICES])
+        regions_in_provinces = sorted(REGION_PROVINCE.keys())
+        # we have all the provinces in the dict
+        provinces = sorted(set([p[0] for p in PROVINCE_CHOICES]))
+        provinces_from_regions = sorted(set([p for provs in REGION_PROVINCE.values() for p in provs]))
+
+        self.assertEqual(regions, regions_in_provinces)
+        self.assertEqual(provinces, provinces_from_regions)
