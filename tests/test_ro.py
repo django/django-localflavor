@@ -102,16 +102,14 @@ class ROLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(ROCountyField, valid, invalid)
 
     def test_ROIBANField(self):
-        error_invalid = ['Enter a valid IBAN in ROXX-XXXX-XXXX-XXXX-XXXX-XXXX format']
-        error_atleast = ['Ensure this value has at least 24 characters (it has 23).']
         valid = {
             'RO56RZBR0000060003291177': 'RO56RZBR0000060003291177',
             'RO56-RZBR-0000-0600-0329-1177': 'RO56RZBR0000060003291177',
         }
         invalid = {
-            'RO56RZBR0000060003291176': error_invalid,
-            'AT61 1904 3002 3457 3201': error_invalid,
-            'RO56RZBR000006000329117': error_atleast + error_invalid,
+            'RO56RZBR0000060003291176': ['Not a valid IBAN.'],
+            'AT61 1904 3002 3457 3201': ['AT IBANs are not allowed in this field.'],
+            'RO56RZBR000006000329117': ['RO IBANs must contain 24 characters.']
         }
         self.assertFieldOutput(ROIBANField, valid, invalid)
 

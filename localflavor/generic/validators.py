@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, ImproperlyConfigured
 from django.utils.translation import ugettext_lazy as _
 
 # Dictionary of ISO country code to IBAN length.
@@ -108,25 +108,36 @@ NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
 class IBANValidator(object):
     """ A validator for International Bank Account Numbers (IBAN - ISO 13616-1:2007). """
 
-    def __init__(self, use_nordea_extensions=False):
-        self.use_nordea_extensions = use_nordea_extensions
+    def __init__(self, use_nordea_extensions=False, include_countries=None):
+        self.validation_countries = IBAN_COUNTRY_CODE_LENGTH.copy()
+        if use_nordea_extensions:
+            self.validation_countries.update(NORDEA_COUNTRY_CODE_LENGTH)
+
+        self.include_countries = include_countries
+        if self.include_countries:
+            for country_code in include_countries:
+                if country_code not in self.validation_countries:
+                    raise ImproperlyConfigured(_('Explicitly requested country code {0} is not part of the configured IBAN validation set.'
+                                                 ''.format(country_code)))
 
     def __call__(self, value):
+        """
+        Validates the IBAN value using the official IBAN validation algorithm.
 
-        if self.use_nordea_extensions:
-            IBAN_COUNTRY_CODE_LENGTH.update(NORDEA_COUNTRY_CODE_LENGTH)
-
-        # Official IBAN validation algorithm:
-        # https://en.wikipedia.org/wiki/International_Bank_Account_Number#Validating_the_IBAN
+        https://en.wikipedia.org/wiki/International_Bank_Account_Number#Validating_the_IBAN
+        """
         # 1. Check that the total IBAN length is correct as per the country. If not, the IBAN is invalid.
         country_code = value[:2]
-        if country_code in IBAN_COUNTRY_CODE_LENGTH:
-            if IBAN_COUNTRY_CODE_LENGTH[country_code] != len(value):
+        if country_code in self.validation_countries:
+            if self.validation_countries[country_code] != len(value):
                 raise ValidationError(_('{0} IBANs must contain {1} characters.'
-                                        ''.format(country_code, IBAN_COUNTRY_CODE_LENGTH[country_code])))
+                                        ''.format(country_code, self.validation_countries[country_code])))
 
         else:
             raise ValidationError(_('{0} is not a valid country code for IBAN.'.format(country_code)))
+
+        if self.include_countries and country_code not in self.include_countries:
+            raise ValidationError(_('{0} IBANs are not allowed in this field.'.format(country_code)))
 
         # 2. Move the four initial characters to the end of the string.
         value = value[4:] + value[:4]

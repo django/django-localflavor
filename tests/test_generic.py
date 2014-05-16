@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, ImproperlyConfigured
 from django.test import TestCase
 
 from localflavor.generic.forms import IBANFormField
@@ -31,7 +31,7 @@ class IBANTests(TestCase):
             IBANValidator(iban)
 
         for iban in invalid:
-           self.assertRaisesMessage(ValidationError,  invalid[iban], IBANValidator(), iban)
+            self.assertRaisesMessage(ValidationError,  invalid[iban], IBANValidator(), iban)
 
     def test_iban_fields(self):
         """ Test the IBAN model and form field. """
@@ -89,3 +89,43 @@ class IBANTests(TestCase):
         # Run the validator to ensure there are no ValidationErrors raised.
         iban_validator('EG1100006001880800100014553')
 
+    def test_include_countries(self):
+        """ Test the IBAN model and form include_countries feature. """
+        include_countries = ('NL', 'BE', 'LU')
+
+        valid = {
+            'NL02ABNA0123456789': 'NL02ABNA0123456789',
+            'BE68539007547034': 'BE68539007547034',
+            'LU280019400644750000': 'LU280019400644750000'
+        }
+
+        invalid = {
+            # This IBAN is valid but not for the configured countries.
+            'GB82WEST12345698765432': ['GB IBANs are not allowed in this field.']
+        }
+
+        self.assertFieldOutput(IBANFormField, field_kwargs={'include_countries': include_countries},
+                               valid=valid, invalid=invalid)
+
+        # Test valid inputs for model field.
+        iban_model_field = IBANField(include_countries=include_countries)
+        for input, output in valid.items():
+            self.assertEqual(iban_model_field.clean(input, None), output)
+
+        # Invalid inputs for model field.
+        for input, errors in invalid.items():
+            with self.assertRaises(ValidationError) as context_manager:
+                iban_model_field.clean(input, None)
+            # The error messages for models are in a different order.
+            errors.reverse()
+            self.assertEqual(context_manager.exception.messages, errors)
+
+    def test_misconfigured_include_countries(self):
+        """ Test that an IBAN field or model raises an error when asked to validate a country not part of IBAN.
+        """
+        # Test an unassigned ISO 3166-1 country code so that the tests will work even if a country joins IBAN.
+        self.assertRaises(ImproperlyConfigured, IBANValidator, include_countries=('JJ',))
+        self.assertRaises(ImproperlyConfigured, IBANValidator, use_nordea_extensions=True, include_countries=('JJ',))
+
+        # Test a Nordea IBAN when Nordea extensions are turned off.
+        self.assertRaises(ImproperlyConfigured, IBANValidator, include_countries=('AO',))
