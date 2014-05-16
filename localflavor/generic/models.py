@@ -1,5 +1,7 @@
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
+from .forms import IBANFormField
 from .validators import IBANValidator
 
 
@@ -17,6 +19,8 @@ class IBANField(models.CharField):
 
     .. versionadded:: 1.1
     """
+    description = _('An International Bank Account Number')
+
     def __init__(self, use_nordea_extensions=False, include_countries=None, *args, **kwargs):
         kwargs.setdefault('max_length', 34)
         super(IBANField, self).__init__(*args, **kwargs)
@@ -25,3 +29,8 @@ class IBANField(models.CharField):
     def to_python(self, value):
         value = super(IBANField, self).to_python(value)
         return value.replace(' ', '')
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': IBANFormField}
+        defaults.update(kwargs)
+        return super(IBANField, self).formfield(**defaults)
