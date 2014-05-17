@@ -64,7 +64,7 @@ class IBANFormField(forms.CharField):
     alpha-2 codes. For example, `limit_countries=('NL', 'BE, 'LU')`.
 
     In addition to validating official IBANs, this field can optionally validate unofficial IBANs that have been
-    catalogued by Nordea by setting the use_nordea_extensions argument to True.
+    catalogued by Nordea by setting the `use_nordea_extensions` argument to True.
 
     https://en.wikipedia.org/wiki/International_Bank_Account_Number
 
@@ -82,12 +82,10 @@ class IBANFormField(forms.CharField):
 
     def prepare_value(self, value):
         """ The display format for IBAN has a space every 4 characters. """
-        separation_length = 4
-        start = 0
-        end = separation_length
+        grouping = 4
+        index = 0
         display_iban = ''
-        while start < len(value):
-            display_iban += value[start:end] + ' '
-            start += separation_length
-            end += separation_length
+        while index < len(value):
+            display_iban += value[index:index + grouping] + ' '
+            index += grouping
         return display_iban

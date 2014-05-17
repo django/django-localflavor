@@ -149,7 +149,7 @@ class ROIBANField(IBANFormField):
     For Romanian IBAN validation algorithm see http://validari.ro/iban.html
 
     .. versionchanged:: 1.1
-        Validation error messages changed to the messages used in `IBANFormField`
+        Validation error messages changed to the messages used in :class:`.IBANFormField`
 
     .. deprecated:: 1.1
         Use `IBANFormField` with `included_countries=('RO',)` option instead.

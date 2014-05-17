@@ -13,7 +13,7 @@ class IBANField(models.CharField):
     alpha-2 codes. For example, `limit_countries=('NL', 'BE, 'LU')`.
 
     In addition to validating official IBANs, this field can optionally validate unofficial IBANs that have been
-    catalogued by Nordea by setting the use_nordea_extensions argument to True.
+    catalogued by Nordea by setting the `use_nordea_extensions` argument to True.
 
     https://en.wikipedia.org/wiki/International_Bank_Account_Number
 
