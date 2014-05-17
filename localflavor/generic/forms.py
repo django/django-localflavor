@@ -1,6 +1,6 @@
 from django import forms
 
-from .validators import IBANValidator, IBAN_COUNTRY_CODE_LENGTH
+from .validators import IBANValidator, BICValidator, IBAN_COUNTRY_CODE_LENGTH
 
 
 DEFAULT_DATE_INPUT_FORMATS = (
@@ -103,3 +103,33 @@ class IBANFormField(forms.CharField):
         grouping = 4
         value = value.upper().replace(' ', '').replace('-', '')
         return ' '.join(value[i:i + grouping] for i in range(0, len(value), grouping))
+
+
+class BICFormField(forms.CharField):
+    """
+    A BIC consists of 8 (BIC8) or 11 (BIC11) alphanumeric characters.
+
+    BICs are also known as SWIFT-BIC, BIC code, SWIFT ID, SWIFT code or ISO 9362.
+
+    https://en.wikipedia.org/wiki/ISO_9362
+
+    .. versionadded:: 1.1
+    """
+    default_validators = [BICValidator()]
+
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('max_length', 11)
+        super(BICFormField, self).__init__(*args, **kwargs)
+
+    def to_python(self, value):
+        # BIC is always written in upper case.
+        # https://www2.swift.com/uhbonline/books/public/en_uk/bic_policy/bic_policy.pdf
+        value = super(BICFormField, self).to_python(value)
+        return value.upper()
+
+    def prepare_value(self, value):
+        # BIC is always written in upper case.
+        value = super(BICFormField, self).prepare_value(value)
+        if value is not None:
+            return value.upper()
+        return value

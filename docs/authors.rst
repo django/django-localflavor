@@ -12,6 +12,7 @@ Authors
 * Andrew Godwin
 * Aymeric Augustin
 * Ben Davis
+* Ben Konrath
 * Bruno M. Custódio
 * Claude Paroz
 * Douglas Miranda
@@ -28,6 +29,7 @@ Authors
 * James Bennett
 * Jannis Leidel
 * Jérémie Ferry
+* Jocelyn Delalande
 * Jonas Ghyllebert
 * Jocelyn Delalande
 * Joseph Kocherhans
