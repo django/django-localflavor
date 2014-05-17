@@ -60,8 +60,22 @@ class IBANFormField(forms.CharField):
     """
     An IBAN consists of up to 34 alphanumeric characters.
 
-    To limit validation to specific countries, set the include_countries argument with a tuple or list of ISO 3166-1
-    alpha-2 codes. For example, `limit_countries=('NL', 'BE, 'LU')`.
+    To limit validation to specific countries, set the 'include_countries' argument with a tuple or list of ISO 3166-1
+    alpha-2 codes. For example, `include_countries=('NL', 'BE, 'LU')`.
+
+    A list of countries that use IBANs as part of SEPA is included for convenience. To use this feature, set
+    `include_countries=IBAN_SEPA_COUNTRIES` as an argument to the field.
+
+    Example:
+
+    .. code-block:: python
+
+        from django import forms
+        from localflavor.generic.forms import IBANFormField
+        from localflavor.generic.sepa_countries import IBAN_SEPA_COUNTRIES
+
+        class MyForm(forms.Form):
+            iban = IBANFormField(include_countries=IBAN_SEPA_COUNTRIES)
 
     In addition to validating official IBANs, this field can optionally validate unofficial IBANs that have been
     catalogued by Nordea by setting the `use_nordea_extensions` argument to True.
