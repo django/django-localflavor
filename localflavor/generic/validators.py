@@ -126,6 +126,11 @@ class IBANValidator(object):
 
         https://en.wikipedia.org/wiki/International_Bank_Account_Number#Validating_the_IBAN
         """
+        if value is None:
+            return value
+
+        value = value.replace(' ', '').replace('-', '')
+
         # 1. Check that the total IBAN length is correct as per the country. If not, the IBAN is invalid.
         country_code = value[:2]
         if country_code in self.validation_countries:

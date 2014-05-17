@@ -92,7 +92,9 @@ class IBANFormField(forms.CharField):
 
     def to_python(self, value):
         value = super(IBANFormField, self).to_python(value)
-        return value.replace(' ', '')
+        if value is not None:
+            return value.replace(' ', '').replace('-', '')
+        return value
 
     def prepare_value(self, value):
         """ The display format for IBAN has a space every 4 characters. """

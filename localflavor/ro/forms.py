@@ -146,8 +146,6 @@ class ROIBANField(IBANFormField):
     """
     Romanian International Bank Account Number (IBAN) field
 
-    For Romanian IBAN validation algorithm see http://validari.ro/iban.html
-
     .. versionchanged:: 1.1
         Validation error messages changed to the messages used in :class:`.IBANFormField`
 
@@ -156,10 +154,6 @@ class ROIBANField(IBANFormField):
     """
     def __init__(self, *args, **kwargs):
         super(ROIBANField, self).__init__(use_nordea_extensions=False, include_countries=('RO',), **kwargs)
-
-    def to_python(self, value):
-        value = super(ROIBANField, self).to_python(value)
-        return value.replace('-', '')
 
 
 class ROPhoneNumberField(RegexField):

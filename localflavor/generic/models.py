@@ -42,7 +42,9 @@ class IBANField(models.CharField):
 
     def to_python(self, value):
         value = super(IBANField, self).to_python(value)
-        return value.replace(' ', '')
+        if value is not None:
+            return value.replace(' ', '').replace('-', '')
+        return value
 
     def formfield(self, **kwargs):
         defaults = {'form_class': IBANFormField}
