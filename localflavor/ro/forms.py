@@ -10,6 +10,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError, Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from ..generic.forms import IBANFormField
 from .ro_counties import COUNTIES_CHOICES
 
 
@@ -141,41 +142,18 @@ class ROCountySelect(Select):
         super(ROCountySelect, self).__init__(attrs, choices=COUNTIES_CHOICES)
 
 
-class ROIBANField(RegexField):
+class ROIBANField(IBANFormField):
     """
     Romanian International Bank Account Number (IBAN) field
 
-    For Romanian IBAN validation algorithm see http://validari.ro/iban.html
+    .. versionchanged:: 1.1
+        Validation error messages changed to the messages used in :class:`.IBANFormField`
+
+    .. deprecated:: 1.1
+        Use `IBANFormField` with `included_countries=('RO',)` option instead.
     """
-    default_error_messages = {
-        'invalid': _('Enter a valid IBAN in ROXX-XXXX-XXXX-XXXX-XXXX-XXXX format'),
-    }
-
-    def __init__(self, max_length=40, min_length=24, *args, **kwargs):
-        super(ROIBANField, self).__init__(r'^[0-9A-Za-z\-\s]{24,40}$',
-                                          max_length, min_length, *args, **kwargs)
-
-    def clean(self, value):
-        """
-        Strips - and spaces, performs country code and checksum validation
-        """
-        value = super(ROIBANField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = value.replace('-', '')
-        value = value.replace(' ', '')
-        value = value.upper()
-        if value[0:2] != 'RO':
-            raise ValidationError(self.error_messages['invalid'])
-        numeric_format = ''
-        for char in value[4:] + value[0:4]:
-            if char.isalpha():
-                numeric_format += str(ord(char) - 55)
-            else:
-                numeric_format += char
-        if int(numeric_format) % 97 != 1:
-            raise ValidationError(self.error_messages['invalid'])
-        return value
+    def __init__(self, *args, **kwargs):
+        super(ROIBANField, self).__init__(use_nordea_extensions=False, include_countries=('RO',), **kwargs)
 
 
 class ROPhoneNumberField(RegexField):
