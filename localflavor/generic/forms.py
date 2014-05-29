@@ -98,5 +98,7 @@ class IBANFormField(forms.CharField):
 
     def prepare_value(self, value):
         """ The display format for IBAN has a space every 4 characters. """
+        if value is None:
+            return value
         grouping = 4
         return ' '.join(value[i:i + grouping] for i in range(0, len(value), grouping))

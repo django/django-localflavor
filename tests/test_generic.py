@@ -186,6 +186,11 @@ class IBANTests(TestCase):
         # Run the validator to ensure there are no ValidationErrors raised.
         iban_validator('EG1100006001880800100014553')
 
+    def test_form_field_formatting(self):
+        iban_form_field = IBANFormField()
+        self.assertEqual(iban_form_field.prepare_value('NL02ABNA0123456789'), 'NL02 ABNA 0123 4567 89')
+        self.assertIsNone(iban_form_field.prepare_value(None))
+
     def test_include_countries(self):
         """ Test the IBAN model and form include_countries feature. """
         include_countries = ('NL', 'BE', 'LU')
