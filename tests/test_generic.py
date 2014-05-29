@@ -189,6 +189,7 @@ class IBANTests(TestCase):
     def test_form_field_formatting(self):
         iban_form_field = IBANFormField()
         self.assertEqual(iban_form_field.prepare_value('NL02ABNA0123456789'), 'NL02 ABNA 0123 4567 89')
+        self.assertEqual(iban_form_field.prepare_value('NL02 ABNA 0123 4567 89'), 'NL02 ABNA 0123 4567 89')
         self.assertIsNone(iban_form_field.prepare_value(None))
 
     def test_include_countries(self):

@@ -101,4 +101,5 @@ class IBANFormField(forms.CharField):
         if value is None:
             return value
         grouping = 4
+        value = value.replace(' ', '').replace('-', '')
         return ' '.join(value[i:i + grouping] for i in range(0, len(value), grouping))
