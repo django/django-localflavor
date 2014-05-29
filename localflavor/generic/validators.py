@@ -117,8 +117,8 @@ class IBANValidator(object):
         if self.include_countries:
             for country_code in include_countries:
                 if country_code not in self.validation_countries:
-                    raise ImproperlyConfigured(_('Explicitly requested country code {0} is not part of the configured IBAN validation set.'
-                                                 ''.format(country_code)))
+                    msg = _('Explicitly requested country code {0} is not part of the configured IBAN validation set.')
+                    raise ImproperlyConfigured(msg.format(country_code))
 
     def __call__(self, value):
         """
@@ -134,15 +134,15 @@ class IBANValidator(object):
         # 1. Check that the total IBAN length is correct as per the country. If not, the IBAN is invalid.
         country_code = value[:2]
         if country_code in self.validation_countries:
+
             if self.validation_countries[country_code] != len(value):
-                raise ValidationError(_('{0} IBANs must contain {1} characters.'
-                                        ''.format(country_code, self.validation_countries[country_code])))
+                msg = _('{0} IBANs must contain {1} characters.')
+                raise ValidationError(msg.format(country_code, self.validation_countries[country_code]))
 
         else:
-            raise ValidationError(_('{0} is not a valid country code for IBAN.'.format(country_code)))
-
+            raise ValidationError(_('{0} is not a valid country code for IBAN.').format(country_code))
         if self.include_countries and country_code not in self.include_countries:
-            raise ValidationError(_('{0} IBANs are not allowed in this field.'.format(country_code)))
+            raise ValidationError(_('{0} IBANs are not allowed in this field.').format(country_code))
 
         # 2. Move the four initial characters to the end of the string.
         value = value[4:] + value[:4]
@@ -157,7 +157,7 @@ class IBANValidator(object):
             elif 65 <= ord_value <= 90:  # A - Z
                 value_digits += str(ord_value - 55)
             else:
-                raise ValidationError(_('{0} is not a valid character for IBAN.'.format(x)))
+                raise ValidationError(_('{0} is not a valid character for IBAN.').format(x))
 
         # 4. Interpret the string as a decimal integer and compute the remainder of that number on division by 97.
         if int(value_digits) % 97 != 1:
