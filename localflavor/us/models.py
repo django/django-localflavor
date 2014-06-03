@@ -47,3 +47,22 @@ class PhoneNumberField(CharField):
         defaults = {'form_class': USPhoneNumberField}
         defaults.update(kwargs)
         return super(PhoneNumberField, self).formfield(**defaults)
+
+
+class USSocialSecurityNumberField(CharField):
+    """
+    A model field that forms represent as ``forms.USSocialSecurityNumberField``
+    and stores in the format ``XXX-XX-XXXX``.
+    """
+    description = _("Social security number")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 11
+        super(USSocialSecurityNumberField, self).__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        from localflavor.us.forms import (USSocialSecurityNumberField as
+            USSocialSecurityNumberFieldFormField)
+        defaults = {'form_class': USSocialSecurityNumberFieldFormField}
+        defaults.update(kwargs)
+        return super(USSocialSecurityNumberField, self).formfield(**defaults)

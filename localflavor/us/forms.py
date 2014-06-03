@@ -58,7 +58,7 @@ class USPhoneNumberField(CharField):
         raise ValidationError(self.error_messages['invalid'])
 
 
-class USSocialSecurityNumberField(Field):
+class USSocialSecurityNumberField(CharField):
     """
     A United States Social Security number.
 

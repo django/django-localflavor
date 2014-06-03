@@ -26,6 +26,21 @@ class USLocalFlavorTests(SimpleTestCase):
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['state_req'], ['This field is required.'])
 
+    def test_errors(self):
+        form = USPlaceForm({
+            'state': 'invalid',
+            'state_req': 'invalid',
+            'postal_code': 'invalid',
+            'name': 'name',
+            'ssn': 'invalid'
+        })
+        self.assertFalse(form.is_valid())
+        choice_messages = ['Select a valid choice. invalid is not one of the available choices.']
+        self.assertEqual(form.errors['state'], choice_messages)
+        self.assertEqual(form.errors['state_req'], choice_messages)
+        self.assertEqual(form.errors['postal_code'], choice_messages)
+        self.assertEqual(form.errors['ssn'], ['Enter a valid U.S. Social Security number in XXX-XX-XXXX format.'])
+
     def test_field_blank_option(self):
         """Test that the empty option is there."""
         state_select_html = """\
