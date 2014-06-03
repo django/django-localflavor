@@ -6,6 +6,10 @@ from localflavor.it.forms import (ITZipCodeField, ITRegionSelect,
                                   ITSocialSecurityNumberField,
                                   ITVatNumberField, ITPhoneNumberField)
 
+# import calculated data structures
+from localflavor.it.it_province import *
+from localflavor.it.it_region import *
+
 
 class ITLocalFlavorTests(SimpleTestCase):
     def test_ITRegionSelect(self):
