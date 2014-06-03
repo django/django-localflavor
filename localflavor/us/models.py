@@ -53,6 +53,8 @@ class USSocialSecurityNumberField(CharField):
     """
     A model field that forms represent as ``forms.USSocialSecurityNumberField``
     and stores in the format ``XXX-XX-XXXX``.
+
+    .. versionadded:: 1.1
     """
     description = _("Social security number")
 
