@@ -41,6 +41,7 @@ class INLocalFlavorTests(SimpleTestCase):
 <option value="RJ">Rajasthan</option>
 <option value="HP">Himachal Pradesh</option>
 <option value="JK">Jammu and Kashmir</option>
+<option value="TG">Telangana</option>
 <option value="AR">Arunachal Pradesh</option>
 <option value="AS">Assam</option>
 <option value="BR">Bihar</option>
@@ -176,6 +177,8 @@ class INLocalFlavorTests(SimpleTestCase):
             'tn': 'TN',
             'tamilnadu': 'TN',
             'tamilnad': 'TN',
+            'telangana': 'TG',
+            'tg': 'TG',
             'tr': 'TR',
             'tripura': 'TR',
             'ua': 'UA',
