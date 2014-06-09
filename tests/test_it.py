@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
@@ -43,7 +45,7 @@ class ITLocalFlavorTests(SimpleTestCase):
         out = '''<select name="region_provinces">
 <optgroup label="Abruzzo">
 <option value="CH">Chieti</option>
-<option value="AQ">L’Aquila</option>
+<option value="AQ">L\u2019Aquila</option>
 <option value="PE" selected="selected">Pescara</option>
 <option value="TE">Teramo</option>
 </optgroup>
@@ -68,7 +70,7 @@ class ITLocalFlavorTests(SimpleTestCase):
 <optgroup label="Emilia-Romagna">
 <option value="BO">Bologna</option>
 <option value="FE">Ferrara</option>
-<option value="FC">Forlì-Cesena</option>
+<option value="FC">Forl\xec-Cesena</option>
 <option value="MO">Modena</option>
 <option value="PR">Parma</option>
 <option value="PC">Piacenza</option>
@@ -179,7 +181,7 @@ class ITLocalFlavorTests(SimpleTestCase):
 <option value="PG">Perugia</option>
 <option value="TR">Terni</option>
 </optgroup>
-<optgroup label="Valle d’Aosta">
+<optgroup label="Valle d\u2019Aosta">
 <option value="AO">Aosta</option>
 </optgroup>
 <optgroup label="Veneto">
