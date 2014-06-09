@@ -29,12 +29,11 @@ class FRZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXXX.'),
     }
 
-    def __init__(self, max_length=5, min_length=5, *args, **kwargs):
-        kwargs['label'] = _('Zip code')
-        kwargs['max_length'] = max_length
-        kwargs['min_length'] = min_length
-        super(FRZipCodeField, self).__init__(
-            r'^\d{5}$', *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('label', _('Zip code'))
+        kwargs['max_length'] = 5
+        kwargs['min_length'] = 5
+        super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
 
 class FRPhoneNumberField(CharField):
@@ -50,10 +49,10 @@ class FRPhoneNumberField(CharField):
         'invalid': _('Phone numbers must be in 0X XX XX XX XX format.'),
     }
 
-    def __init__(self, max_length=14, min_length=10, *args, **kwargs):
-        kwargs['label'] = _('Phone number')
-        kwargs['max_length'] = max_length
-        kwargs['min_length'] = min_length
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('label', _('Phone number'))
+        kwargs['max_length'] = 14
+        kwargs['min_length'] = 10
         super(FRPhoneNumberField, self).__init__(*args, **kwargs)
 
     def clean(self, value):
@@ -110,7 +109,7 @@ class FRDepartmentField(CharField):
     widget = FRDepartmentSelect
 
     def __init__(self, *args, **kwargs):
-        kwargs['label'] = _('Select Department')
+        kwargs.setdefault('label', _('Select Department'))
         super(FRDepartmentField, self).__init__(*args, **kwargs)
 
 
@@ -121,7 +120,7 @@ class FRRegionField(CharField):
     widget = FRRegionSelect
 
     def __init__(self, *args, **kwargs):
-        kwargs['label'] = _('Select Region')
+        kwargs.setdefault('label', _('Select Region'))
         super(FRRegionField, self).__init__(*args, **kwargs)
 
 
