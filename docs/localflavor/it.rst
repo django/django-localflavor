@@ -28,3 +28,7 @@ Data
 
    .. versionadded:: 1.1
 
+.. autodata:: localflavor.it.it_region.REGION_PROVINCE_CHOICES
+
+   .. versionadded:: 1.1
+

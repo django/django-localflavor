@@ -13,7 +13,7 @@ from django.utils.encoding import smart_text
 from django.utils.translation import ugettext_lazy as _
 
 from .it_province import PROVINCE_CHOICES
-from .it_region import REGION_CHOICES
+from .it_region import REGION_CHOICES, REGION_PROVINCE_CHOICES
 from .util import vat_number_validation, ssn_validation
 
 
@@ -40,6 +40,14 @@ class ITRegionSelect(Select):
     """
     def __init__(self, attrs=None):
         super(ITRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+
+
+class ITRegionProvinceSelect(Select):
+    """
+    A Select widget that uses a named group list of IT regions mapped to regions as its choices.
+    """
+    def __init__(self, attrs=None):
+        super(ITRegionProvinceSelect, self).__init__(attrs, choices=REGION_PROVINCE_CHOICES)
 
 
 class ITProvinceSelect(Select):
