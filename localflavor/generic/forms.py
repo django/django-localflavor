@@ -93,7 +93,7 @@ class IBANFormField(forms.CharField):
     def to_python(self, value):
         value = super(IBANFormField, self).to_python(value)
         if value is not None:
-            return value.replace(' ', '').replace('-', '')
+            return value.upper().replace(' ', '').replace('-', '')
         return value
 
     def prepare_value(self, value):
@@ -101,5 +101,5 @@ class IBANFormField(forms.CharField):
         if value is None:
             return value
         grouping = 4
-        value = value.replace(' ', '').replace('-', '')
+        value = value.upper().replace(' ', '').replace('-', '')
         return ' '.join(value[i:i + grouping] for i in range(0, len(value), grouping))

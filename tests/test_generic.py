@@ -97,7 +97,7 @@ class SplitDateTimeFieldTests(DateTimeFieldTestCase):
 class IBANTests(TestCase):
     def test_iban_validator(self):
         valid = [
-            'GB82WEST12345698765432',
+            'GB82WeST12345698765432',
             'GB82 WEST 1234 5698 7654 32',
 
             'GR1601101250000000012300695',
@@ -130,6 +130,7 @@ class IBANTests(TestCase):
         """ Test the IBAN model and form field. """
         valid = {
             'NL02ABNA0123456789': 'NL02ABNA0123456789',
+            'Nl02aBNa0123456789': 'NL02ABNA0123456789',
             'NL02 ABNA 0123 4567 89': 'NL02ABNA0123456789',
             'NL02-ABNA-0123-4567-89': 'NL02ABNA0123456789',
 
@@ -184,7 +185,7 @@ class IBANTests(TestCase):
         """ Test a valid IBAN in the Nordea extensions. """
         iban_validator = IBANValidator(use_nordea_extensions=True)
         # Run the validator to ensure there are no ValidationErrors raised.
-        iban_validator('EG1100006001880800100014553')
+        iban_validator('Eg1100006001880800100014553')
 
     def test_form_field_formatting(self):
         iban_form_field = IBANFormField()

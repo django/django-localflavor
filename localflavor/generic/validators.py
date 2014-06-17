@@ -129,7 +129,7 @@ class IBANValidator(object):
         if value is None:
             return value
 
-        value = value.replace(' ', '').replace('-', '')
+        value = value.upper().replace(' ', '').replace('-', '')
 
         # 1. Check that the total IBAN length is correct as per the country. If not, the IBAN is invalid.
         country_code = value[:2]
