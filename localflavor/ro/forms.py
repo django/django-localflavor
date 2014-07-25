@@ -163,15 +163,18 @@ class ROIBANField(IBANFormField):
 class ROPhoneNumberField(RegexField):
     """
     Romanian phone number field
+
+    Official documentation (in English): http://www.ancom.org.ro/en/pnn_1300
+    Official documentation (in Romanian): http://www.ancom.org.ro/pnn_1300
     """
     default_error_messages = {
         'invalid_length':
             _('Phone numbers may only have 7 or 10 digits, except the ' +
-                'national short numbers which have 3 or 6 digits'),
+                'national short numbers which have 3 to 6 digits'),
         'invalid_long_format':
             _('Normal phone numbers (7 or 10 digits) must begin with "0"'),
         'invalid_short_format':
-            _('National short numbers (3 or 6 digits) must begin with "1"'),
+            _('National short numbers (3 to 6 digits) must begin with "1"'),
     }
 
     def __init__(self, max_length=20, min_length=3, *args, **kwargs):
@@ -187,11 +190,11 @@ class ROPhoneNumberField(RegexField):
             return ''
         value = re.sub('[()-. ]', '', value)
         length = len(value)
-        if length in (3, 6, 7, 10):
+        if length in (3, 4, 5, 6, 7, 10):
             if (length == 7 or length == 10) and value[0] != '0':
                 raise ValidationError(
                     self.error_messages['invalid_long_format'])
-            elif (length == 3 or length == 6) and value[0] != '1':
+            elif (3 <= length and length <= 6) and value[0] != '1':
                 raise ValidationError(
                     self.error_messages['invalid_short_format'])
         else:
