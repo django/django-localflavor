@@ -164,8 +164,13 @@ class ROPhoneNumberField(RegexField):
     """
     Romanian phone number field
 
-    Official documentation (in English): http://www.ancom.org.ro/en/pnn_1300
-    Official documentation (in Romanian): http://www.ancom.org.ro/pnn_1300
+    .. versionchanged:: 1.8
+    
+        Made the field also accept national short phone numbers and 7-digit
+        regional phone numbers besides the regular ones.
+        Official documentation (in English): http://www.ancom.org.ro/en/pnn_1300
+        Official documentation (in Romanian): http://www.ancom.org.ro/pnn_1300
+        
     """
     default_error_messages = {
         'invalid_length':
