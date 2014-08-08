@@ -10,6 +10,7 @@ from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import smart_text
 
+from .cl_regions import COMMUNE_CHOICES
 from .cl_regions import REGION_CHOICES
 
 
@@ -20,6 +21,15 @@ class CLRegionSelect(Select):
     """
     def __init__(self, attrs=None):
         super(CLRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+
+
+class CLCommuneSelect(Select):
+    """
+    A Select widget that uses a list of Chilean Communes (Comunas)
+    as its choices.
+    """
+    def __init__(self, attrs=None):
+        super(CLCommuneSelect, self).__init__(attrs, choices=COMMUNE_CHOICES)
 
 
 class CLRutField(RegexField):
@@ -39,13 +49,17 @@ class CLRutField(RegexField):
     def __init__(self, *args, **kwargs):
         if 'strict' in kwargs:
             del kwargs['strict']
-            super(CLRutField, self).__init__(r'^(\d{1,2}\.)?\d{3}\.\d{3}-[\dkK]$',
-                                             error_message=self.default_error_messages['strict'],
-                                             *args, **kwargs)
+            super(CLRutField, self).__init__(
+                r'^(\d{1,2}\.)?\d{3}\.\d{3}-[\dkK]$',
+                error_message=self.default_error_messages['strict'],
+                *args, **kwargs
+            )
         else:
             # In non-strict mode, accept RUTs that validate but do not exist in
             # the real world.
-            super(CLRutField, self).__init__(r'^[\d\.]{1,11}-?[\dkK]$', *args, **kwargs)
+            super(CLRutField, self).__init__(
+                r'^[\d\.]{1,11}-?[\dkK]$', *args, **kwargs
+            )
 
     def clean(self, value):
         """
@@ -78,12 +92,14 @@ class CLRutField(RegexField):
         Turns the RUT into one normalized format. Returns a (rut, verifier)
         tuple.
         """
-        rut = smart_text(rut).replace(' ', '').replace('.', '').replace('-', '')
+        rut = smart_text(rut).replace(' ', '').replace('.', '')
+        rut = rut.replace('-', '')
         return rut[:-1], rut[-1].upper()
 
     def _format(self, code, verifier=None):
         """
-        Formats the RUT from canonical form to the common string representation.
+        Formats the RUT from canonical form to the common string
+        representation.
         If verifier=None, then the last digit in 'code' is the verifier.
         """
         if verifier is None:
