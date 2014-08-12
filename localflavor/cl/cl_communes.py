@@ -3,6 +3,10 @@ from __future__ import unicode_literals
 
 #: A list of Chilean communes as `choices` in a formfield.
 # taken from http://es.wikipedia.org/wiki/Anexo:Comunas_de_Chile
+#
+# Validation references:
+# http://es.wikipedia.org/wiki/Anexo:Comunas_de_Chile
+# .. versionadded:: 1.1
 COMMUNE_CHOICES = (
     ('Arica', 'Arica'),
     ('Camarones', 'Camarones'),
@@ -283,7 +287,7 @@ COMMUNE_CHOICES = (
     ('Cisnes', 'Cisnes'),
     ('Guaitecas', 'Guaitecas'),
     ('Cochrane', 'Cochrane'),
-    ('O\'Higgins', 'O\'Higgins'),
+    ('O\'Higgins', 'O\'Higginss'),
     ('Tortel', 'Tortel'),
     ('Chile Chico', 'Chile Chico'),
     ('Río Ibáñez', 'Río Ibáñez'),
