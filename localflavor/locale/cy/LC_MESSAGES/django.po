@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-22 17:55+0900\n"
+"POT-Creation-Date: 2013-07-29 11:43+0200\n"
 "PO-Revision-Date: 2013-06-18 08:25+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Welsh (http://www.transifex.com/projects/p/django/language/"
@@ -292,10 +292,6 @@ msgstr ""
 
 #: br/forms.py:167
 msgid "This field requires at least 14 digits"
-msgstr ""
-
-#: br/models.py:11
-msgid "State of Brazil (two uppercase letters)"
 msgstr ""
 
 #: ca/ca_provinces.py:6
@@ -999,7 +995,7 @@ msgstr ""
 
 #: gb/forms.py:26
 msgid "Enter a valid postcode."
-msgstr "Mewnbynnwch côd post dilys"
+msgstr ""
 
 #: gb/gb_regions.py:5
 msgid "Bedfordshire"
@@ -1218,156 +1214,100 @@ msgid "County Tyrone"
 msgstr ""
 
 #: gb/gb_regions.py:67
-msgid "Blaenau Gwent"
+msgid "Clwyd"
 msgstr ""
 
 #: gb/gb_regions.py:68
-msgid "Bridgend"
-msgstr "Pen-y-bont ar Ogwr"
+msgid "Dyfed"
+msgstr ""
 
 #: gb/gb_regions.py:69
-msgid "Caerphilly"
-msgstr "Caerffili"
+msgid "Gwent"
+msgstr ""
 
 #: gb/gb_regions.py:70
-msgid "Cardiff"
-msgstr "Caerdydd"
-
-#: gb/gb_regions.py:71
-msgid "Carmarthenshire"
-msgstr "Sir Gaerfyrddin"
-
-#: gb/gb_regions.py:72
-msgid "Ceredigion"
-msgstr ""
-
-#: gb/gb_regions.py:73
-msgid "Conwy"
-msgstr "Sir Ddinbych"
-
-#: gb/gb_regions.py:74
-msgid "Denbighshire"
-msgstr ""
-
-#: gb/gb_regions.py:75
-msgid "Flintshire"
-msgstr "Sir y Fflint"
-
-#: gb/gb_regions.py:76
 msgid "Gwynedd"
 msgstr ""
 
-#: gb/gb_regions.py:77
-msgid "Isle of Anglesey"
-msgstr "Ynys Môn"
+#: gb/gb_regions.py:71
+msgid "Mid Glamorgan"
+msgstr ""
 
-#: gb/gb_regions.py:78
-msgid "Merthyr Tydfil"
-msgstr "Merthyr Tudful"
-
-#: gb/gb_regions.py:79
-msgid "Monmouthshire"
-msgstr "Sir Fynwy"
-
-#: gb/gb_regions.py:80
-msgid "Neath Port Talbot"
-msgstr "Castell-nedd Port Talbot"
-
-#: gb/gb_regions.py:81
-msgid "Newport"
-msgstr "Casnewydd"
-
-#: gb/gb_regions.py:82
-msgid "Pembrokeshire"
-msgstr "Sir Benfro"
-
-#: gb/gb_regions.py:83
+#: gb/gb_regions.py:72
 msgid "Powys"
 msgstr ""
 
-#: gb/gb_regions.py:84
-msgid "Rhondda Cynon Taf"
+#: gb/gb_regions.py:73
+msgid "South Glamorgan"
 msgstr ""
 
-#: gb/gb_regions.py:85
-msgid "Swansea"
-msgstr "Abertawe"
+#: gb/gb_regions.py:74
+msgid "West Glamorgan"
+msgstr ""
 
-#: gb/gb_regions.py:86
-msgid "Torfaen"
-msgstr "Tor-faen"
-
-#: gb/gb_regions.py:87
-msgid "Vale of Glamorgan"
-msgstr "Bro Morgannwg"
-
-#: gb/gb_regions.py:88
-msgid "Wrexham"
-msgstr "Wrecsam"
-
-#: gb/gb_regions.py:93
+#: gb/gb_regions.py:79
 msgid "Borders"
 msgstr ""
 
-#: gb/gb_regions.py:94
+#: gb/gb_regions.py:80
 msgid "Central Scotland"
 msgstr ""
 
-#: gb/gb_regions.py:95
+#: gb/gb_regions.py:81
 msgid "Dumfries and Galloway"
 msgstr ""
 
-#: gb/gb_regions.py:96
+#: gb/gb_regions.py:82
 msgid "Fife"
 msgstr ""
 
-#: gb/gb_regions.py:97
+#: gb/gb_regions.py:83
 msgid "Grampian"
 msgstr ""
 
-#: gb/gb_regions.py:98
+#: gb/gb_regions.py:84
 msgid "Highland"
 msgstr ""
 
-#: gb/gb_regions.py:99
+#: gb/gb_regions.py:85
 msgid "Lothian"
 msgstr ""
 
-#: gb/gb_regions.py:100
+#: gb/gb_regions.py:86
 msgid "Orkney Islands"
 msgstr ""
 
-#: gb/gb_regions.py:101
+#: gb/gb_regions.py:87
 msgid "Shetland Islands"
 msgstr ""
 
-#: gb/gb_regions.py:102
+#: gb/gb_regions.py:88
 msgid "Strathclyde"
 msgstr ""
 
-#: gb/gb_regions.py:103
+#: gb/gb_regions.py:89
 msgid "Tayside"
 msgstr ""
 
-#: gb/gb_regions.py:104
+#: gb/gb_regions.py:90
 msgid "Western Isles"
 msgstr ""
 
-#: gb/gb_regions.py:109
+#: gb/gb_regions.py:95
 msgid "England"
-msgstr "Lloegr"
+msgstr ""
 
-#: gb/gb_regions.py:110
+#: gb/gb_regions.py:96
 msgid "Northern Ireland"
-msgstr "Gogledd Iwerddon"
+msgstr ""
 
-#: gb/gb_regions.py:111
+#: gb/gb_regions.py:97
 msgid "Scotland"
-msgstr "Yr Alban"
+msgstr ""
 
-#: gb/gb_regions.py:112
+#: gb/gb_regions.py:98
 msgid "Wales"
-msgstr "Cymru"
+msgstr ""
 
 #: gr/forms.py:27
 msgid "Enter a valid 5-digit greek postal code."
@@ -1920,25 +1860,16 @@ msgstr ""
 msgid "Enter a valid Mobile Number."
 msgstr ""
 
-#: in_/forms.py:48
+#: in_/forms.py:46
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr ""
 
-#: in_/forms.py:71
+#: in_/forms.py:69
 msgid "Enter an Indian state or territory."
 msgstr ""
 
-#: in_/forms.py:111
-msgid ""
-"Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
-msgstr ""
-
-#: in_/forms.py:152
+#: in_/forms.py:108
 msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
-msgstr ""
-
-#: in_/models.py:12
-msgid "Indian state (two uppercase letters)"
 msgstr ""
 
 #: is_/forms.py:29
@@ -1950,211 +1881,207 @@ msgstr ""
 msgid "The Icelandic identification number is not valid."
 msgstr ""
 
-#: it/forms.py:25
+#: it/forms.py:26
 msgid "Enter a valid zip code."
 msgstr ""
 
-#: it/forms.py:65
+#: it/forms.py:57
 msgid "Enter a valid Social Security number."
 msgstr ""
 
-#: it/forms.py:97
+#: it/forms.py:84
 msgid "Enter a valid VAT number."
-msgstr ""
-
-#: it/util.py:46 it/util.py:59
-msgid "Check digit does not match."
 msgstr ""
 
 #: jp/forms.py:19
 msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
 msgstr ""
 
-#: jp/jp_prefectures.py:12 jp/jp_prefectures.py:64
+#: jp/jp_prefectures.py:5
 msgid "Hokkaido"
 msgstr ""
 
-#: jp/jp_prefectures.py:13 jp/jp_prefectures.py:65
+#: jp/jp_prefectures.py:6
 msgid "Aomori"
 msgstr ""
 
-#: jp/jp_prefectures.py:14 jp/jp_prefectures.py:66
+#: jp/jp_prefectures.py:7
 msgid "Iwate"
 msgstr ""
 
-#: jp/jp_prefectures.py:15 jp/jp_prefectures.py:67
+#: jp/jp_prefectures.py:8
 msgid "Miyagi"
 msgstr ""
 
-#: jp/jp_prefectures.py:16 jp/jp_prefectures.py:68
+#: jp/jp_prefectures.py:9
 msgid "Akita"
 msgstr ""
 
-#: jp/jp_prefectures.py:17 jp/jp_prefectures.py:69
+#: jp/jp_prefectures.py:10
 msgid "Yamagata"
 msgstr ""
 
-#: jp/jp_prefectures.py:18 jp/jp_prefectures.py:70
+#: jp/jp_prefectures.py:11
 msgid "Fukushima"
 msgstr ""
 
-#: jp/jp_prefectures.py:19 jp/jp_prefectures.py:71
+#: jp/jp_prefectures.py:12
 msgid "Ibaraki"
 msgstr ""
 
-#: jp/jp_prefectures.py:20 jp/jp_prefectures.py:72
+#: jp/jp_prefectures.py:13
 msgid "Tochigi"
 msgstr ""
 
-#: jp/jp_prefectures.py:21 jp/jp_prefectures.py:73
+#: jp/jp_prefectures.py:14
 msgid "Gunma"
 msgstr ""
 
-#: jp/jp_prefectures.py:22 jp/jp_prefectures.py:74
+#: jp/jp_prefectures.py:15
 msgid "Saitama"
 msgstr ""
 
-#: jp/jp_prefectures.py:23 jp/jp_prefectures.py:75
+#: jp/jp_prefectures.py:16
 msgid "Chiba"
 msgstr ""
 
-#: jp/jp_prefectures.py:24 jp/jp_prefectures.py:76
+#: jp/jp_prefectures.py:17
 msgid "Tokyo"
 msgstr ""
 
-#: jp/jp_prefectures.py:25 jp/jp_prefectures.py:77
+#: jp/jp_prefectures.py:18
 msgid "Kanagawa"
 msgstr ""
 
-#: jp/jp_prefectures.py:26 jp/jp_prefectures.py:78
-msgid "Niigata"
-msgstr ""
-
-#: jp/jp_prefectures.py:27 jp/jp_prefectures.py:79
-msgid "Toyama"
-msgstr ""
-
-#: jp/jp_prefectures.py:28 jp/jp_prefectures.py:80
-msgid "Ishikawa"
-msgstr ""
-
-#: jp/jp_prefectures.py:29 jp/jp_prefectures.py:81
-msgid "Fukui"
-msgstr ""
-
-#: jp/jp_prefectures.py:30 jp/jp_prefectures.py:82
+#: jp/jp_prefectures.py:19
 msgid "Yamanashi"
 msgstr ""
 
-#: jp/jp_prefectures.py:31 jp/jp_prefectures.py:83
+#: jp/jp_prefectures.py:20
 msgid "Nagano"
 msgstr ""
 
-#: jp/jp_prefectures.py:32 jp/jp_prefectures.py:84
+#: jp/jp_prefectures.py:21
+msgid "Niigata"
+msgstr ""
+
+#: jp/jp_prefectures.py:22
+msgid "Toyama"
+msgstr ""
+
+#: jp/jp_prefectures.py:23
+msgid "Ishikawa"
+msgstr ""
+
+#: jp/jp_prefectures.py:24
+msgid "Fukui"
+msgstr ""
+
+#: jp/jp_prefectures.py:25
 msgid "Gifu"
 msgstr ""
 
-#: jp/jp_prefectures.py:33 jp/jp_prefectures.py:85
+#: jp/jp_prefectures.py:26
 msgid "Shizuoka"
 msgstr ""
 
-#: jp/jp_prefectures.py:34 jp/jp_prefectures.py:86
+#: jp/jp_prefectures.py:27
 msgid "Aichi"
 msgstr ""
 
-#: jp/jp_prefectures.py:35 jp/jp_prefectures.py:87
+#: jp/jp_prefectures.py:28
 msgid "Mie"
 msgstr ""
 
-#: jp/jp_prefectures.py:36 jp/jp_prefectures.py:88
+#: jp/jp_prefectures.py:29
 msgid "Shiga"
 msgstr ""
 
-#: jp/jp_prefectures.py:37 jp/jp_prefectures.py:89
+#: jp/jp_prefectures.py:30
 msgid "Kyoto"
 msgstr ""
 
-#: jp/jp_prefectures.py:38 jp/jp_prefectures.py:90
+#: jp/jp_prefectures.py:31
 msgid "Osaka"
 msgstr ""
 
-#: jp/jp_prefectures.py:39 jp/jp_prefectures.py:91
+#: jp/jp_prefectures.py:32
 msgid "Hyogo"
 msgstr ""
 
-#: jp/jp_prefectures.py:40 jp/jp_prefectures.py:92
+#: jp/jp_prefectures.py:33
 msgid "Nara"
 msgstr ""
 
-#: jp/jp_prefectures.py:41 jp/jp_prefectures.py:93
+#: jp/jp_prefectures.py:34
 msgid "Wakayama"
 msgstr ""
 
-#: jp/jp_prefectures.py:42 jp/jp_prefectures.py:94
+#: jp/jp_prefectures.py:35
 msgid "Tottori"
 msgstr ""
 
-#: jp/jp_prefectures.py:43 jp/jp_prefectures.py:95
+#: jp/jp_prefectures.py:36
 msgid "Shimane"
 msgstr ""
 
-#: jp/jp_prefectures.py:44 jp/jp_prefectures.py:96
+#: jp/jp_prefectures.py:37
 msgid "Okayama"
 msgstr ""
 
-#: jp/jp_prefectures.py:45 jp/jp_prefectures.py:97
+#: jp/jp_prefectures.py:38
 msgid "Hiroshima"
 msgstr ""
 
-#: jp/jp_prefectures.py:46 jp/jp_prefectures.py:98
+#: jp/jp_prefectures.py:39
 msgid "Yamaguchi"
 msgstr ""
 
-#: jp/jp_prefectures.py:47 jp/jp_prefectures.py:99
+#: jp/jp_prefectures.py:40
 msgid "Tokushima"
 msgstr ""
 
-#: jp/jp_prefectures.py:48 jp/jp_prefectures.py:100
+#: jp/jp_prefectures.py:41
 msgid "Kagawa"
 msgstr ""
 
-#: jp/jp_prefectures.py:49 jp/jp_prefectures.py:101
+#: jp/jp_prefectures.py:42
 msgid "Ehime"
 msgstr ""
 
-#: jp/jp_prefectures.py:50 jp/jp_prefectures.py:102
+#: jp/jp_prefectures.py:43
 msgid "Kochi"
 msgstr ""
 
-#: jp/jp_prefectures.py:51 jp/jp_prefectures.py:103
+#: jp/jp_prefectures.py:44
 msgid "Fukuoka"
 msgstr ""
 
-#: jp/jp_prefectures.py:52 jp/jp_prefectures.py:104
+#: jp/jp_prefectures.py:45
 msgid "Saga"
 msgstr ""
 
-#: jp/jp_prefectures.py:53 jp/jp_prefectures.py:105
+#: jp/jp_prefectures.py:46
 msgid "Nagasaki"
 msgstr ""
 
-#: jp/jp_prefectures.py:54 jp/jp_prefectures.py:106
+#: jp/jp_prefectures.py:47
 msgid "Kumamoto"
 msgstr ""
 
-#: jp/jp_prefectures.py:55 jp/jp_prefectures.py:107
+#: jp/jp_prefectures.py:48
 msgid "Oita"
 msgstr ""
 
-#: jp/jp_prefectures.py:56 jp/jp_prefectures.py:108
+#: jp/jp_prefectures.py:49
 msgid "Miyazaki"
 msgstr ""
 
-#: jp/jp_prefectures.py:57 jp/jp_prefectures.py:109
+#: jp/jp_prefectures.py:50
 msgid "Kagoshima"
 msgstr ""
 
-#: jp/jp_prefectures.py:58 jp/jp_prefectures.py:110
+#: jp/jp_prefectures.py:51
 msgid "Okinawa"
 msgstr ""
 
@@ -2162,28 +2089,20 @@ msgstr ""
 msgid "Enter a valid Kuwaiti Civil ID number"
 msgstr ""
 
-#: lt/forms.py:39
+#: lt/forms.py:37
 msgid "ID Code consists of exactly 11 decimal digits."
 msgstr ""
 
-#: lt/forms.py:40
+#: lt/forms.py:38
 msgid "Wrong ID Code checksum."
 msgstr ""
 
-#: lt/forms.py:41
+#: lt/forms.py:39
 msgid "ID Code contains invalid date."
 msgstr ""
 
-#: lt/forms.py:97
+#: lt/forms.py:95
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr ""
-
-#: lt/forms.py:136
-msgid "Phone number can only contain digits"
-msgstr ""
-
-#: lt/forms.py:137
-msgid "Could not validate the phone number"
 msgstr ""
 
 #: lt/lt_choices.py:7
@@ -3014,14 +2933,6 @@ msgstr ""
 
 #: nl/forms.py:87
 msgid "Enter a valid SoFi number"
-msgstr ""
-
-#: nl/models.py:19
-msgid "Enter a valid bank account number"
-msgstr ""
-
-#: nl/models.py:20
-msgid "Bank account numbers have 1 - 7, 9 or 10 digits"
 msgstr ""
 
 #: nl/nl_provinces.py:8
