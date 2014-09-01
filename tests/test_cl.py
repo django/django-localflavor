@@ -34,7 +34,7 @@ class CLLocalFlavorTests(SimpleTestCase):
         # generate the list html options
         options = []
         for value, display_name in COMMUNE_CHOICES:
-            options.append('<option value="{}">{}</option>'.format(
+            options.append('<option value="{0}">{1}</option>'.format(
                 value, display_name.replace("'", '&#39;')))
 
         # generate the expected html of the select
