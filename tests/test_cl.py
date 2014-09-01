@@ -38,7 +38,7 @@ class CLLocalFlavorTests(SimpleTestCase):
                 value, display_name.replace("'", '&#39;')))
 
         # generate the expected html of the select
-        expected_select_html = '<select name="foo">{}</select>'.format(
+        expected_select_html = '<select name="foo">{0}</select>'.format(
             ''.join(options))
         self.assertHTMLEqual.__self__.maxDiff = None
         self.assertHTMLEqual(f.render('foo', 'bar'), expected_select_html)
