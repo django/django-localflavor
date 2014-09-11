@@ -1,5 +1,6 @@
 from .se_counties import numerical_county_code, full_county_name
 
+
 def county_decorator(field_names=()):
     """Decorator that adds get_FIELDNAME_numerical_code() and get_FIELDNAME_full_name() methods
     to django models for all FIELDNAME values supplied in the field_names tuple. Ideally
