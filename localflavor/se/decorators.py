@@ -1,4 +1,3 @@
-from django.utils.decorators import method_decorator
 from .se_counties import numerical_county_code, full_county_name
 
 def county_decorator(field_names=()):
