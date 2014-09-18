@@ -72,6 +72,8 @@ class USSocialSecurityNumberField(CharField):
         * The number is not one known to be invalid due to otherwise widespread
           promotional use or distribution (e.g., the Woolworth's number or the
           1962 promotional number).
+
+    .. versionadded:: 1.1
     """
     default_error_messages = {
         'invalid': _('Enter a valid U.S. Social Security number in XXX-XX-XXXX format.'),
