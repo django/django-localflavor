@@ -71,7 +71,7 @@ class SGNRIC_FINField(CharField):
     Checksum algorithm:
     1) Take for example I want to test the NRIC number S1234567.
     Multiply each digit by corresponding weight in this list [2,7,6,5,4,3,2]
-    and add them together. So,1×2 + 2×7 + 3×6 + 4×5 + 5×4 + 6×3 + 7×2 = 106.
+    and add them together. So 1x2 + 2x7 + 3x6 + 4x5 + 5x4 + 6x3 + 7x2 = 106.
     2) If the first letter of the NRIC starts with T or G, add 4 to the total.
     3) Then you divide the number by 11 and get the remainder. 106/11=9r7
     4) You can get the alphabet depending on the IC type (the first letter in
