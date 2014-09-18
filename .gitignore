@@ -6,4 +6,3 @@ build
 repos
 docs/_build/
 *.py[cod]
-.*
