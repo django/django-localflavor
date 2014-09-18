@@ -22,7 +22,8 @@ NRIC_FIN_CHECKSUM_FG = ['X', 'W', 'U', 'T', 'R', 'Q', 'P', 'N', 'M', 'L', 'K']
 
 
 class SGPostCodeField(RegexField):
-    """ Singapore post code field.
+    """
+    Singapore post code field.
 
     Assumed to be 6 digits.
     """
@@ -30,7 +31,7 @@ class SGPostCodeField(RegexField):
         'invalid': _('Enter a 6-digit postal code.'),
     }
 
-    def __init__(self, max_length=6, min_length=None, *args, **kwargs):
+    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
         super(SGPostCodeField, self).__init__(r'^\d{6}$',
                                               max_length, min_length,
                                               *args, **kwargs)
