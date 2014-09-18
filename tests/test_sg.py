@@ -39,7 +39,7 @@ class SGLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(SGPhoneNumberField, valid, invalid)
 
     def test_SGNRIC_FINField(self):
-        error_format = ['Invalid NRIC/FIN']
+        error_format = ['Invalid NRIC/FIN.']
         valid = {
             's8675985c': 'S8675985C',
             'S8776318H': 'S8776318H',
@@ -55,4 +55,3 @@ class SGLocalFlavorTests(SimpleTestCase):
             'G1087200K': error_format,
         }
         self.assertFieldOutput(SGNRIC_FINField, valid, invalid)
-

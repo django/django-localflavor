@@ -10,7 +10,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField
 from django.utils.encoding import smart_text
-# from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
 
 
 PHONE_DIGITS_RE = re.compile(r'^[689](\d{7})$')
@@ -27,7 +27,7 @@ class SGPostCodeField(RegexField):
     Assumed to be 6 digits.
     """
     default_error_messages = {
-        'invalid': 'Enter a 6-digit postal code.',
+        'invalid': _('Enter a 6-digit postal code.'),
     }
 
     def __init__(self, max_length=6, min_length=None, *args, **kwargs):
@@ -43,8 +43,8 @@ class SGPhoneNumberField(CharField):
     Valid numbers have 8 digits and start with either 6, 8, or 9
     """
     default_error_messages = {
-        'invalid': ('Phone numbers must contain 8 digits and start with '
-                    'either 6, or 8, or 9.')
+        'invalid': _('Phone numbers must contain 8 digits and start with '
+                     'either 6, or 8, or 9.')
 
     }
 
@@ -83,7 +83,7 @@ class SGNRIC_FINField(CharField):
         F or G: 0=X, 1=W, 2=U, 3=T, 4=R, 5=Q, 6=P, 7=N, 8=M, 9=L, 10=K
     """
     default_error_messages = {
-        'invalid': ('Invalid NRIC/FIN')
+        'invalid': _('Invalid NRIC/FIN.')
     }
 
     def clean(self, value):
