@@ -100,15 +100,15 @@ class SGNRIC_FINField(CharField):
 
         value = match.group()
         digit_list = list(value[1:-1])
-        products_sum = sum([int(x)*y for x, y in zip(digit_list,
-                                                     NRIC_FIN_DIGIT_WEIGHT)])
+        products_sum = sum([int(x) * y for x, y in zip(digit_list,
+                                                       NRIC_FIN_DIGIT_WEIGHT)])
         if value[0] in ['T', 'G']:
             products_sum += 4
         products_sum_remainder = products_sum % 11
         checksum_list = NRIC_FIN_CHECKSUM_ST if value[0] in ['S', 'T'] \
             else NRIC_FIN_CHECKSUM_FG
         checksum = checksum_list[products_sum_remainder]
-        if checksum == value[len(value)-1]:
+        if checksum == value[len(value) - 1]:
             return value
 
         raise ValidationError(self.error_messages['invalid'])
