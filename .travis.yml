@@ -6,10 +6,13 @@ script:
 env:
   - TOXENV=py26-1.5
   - TOXENV=py26-1.6
+  - TOXENV=py26-1.7
   - TOXENV=py27-1.5
   - TOXENV=py27-1.6
+  - TOXENV=py27-1.7
   - TOXENV=py32-1.5
   - TOXENV=py32-1.6
   - TOXENV=py33-1.5
   - TOXENV=py33-1.6
+  - TOXENV=py33-1.7
 after_success: coveralls
