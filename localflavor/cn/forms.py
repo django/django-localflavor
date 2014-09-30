@@ -25,7 +25,7 @@ __all__ = (
 ID_CARD_RE = r'^\d{15}(\d{2}[0-9xX])?$'
 POST_CODE_RE = r'^\d{6}$'
 PHONE_RE = r'^\d{3,4}-\d{7,8}(-\d+)?$'
-CELL_RE = r'^1[3458]\d{9}$'
+CELL_RE = r'^1[34578]\d{9}$'
 
 # Valid location code used in id card checking algorithm
 CN_LOCATION_CODES = (
@@ -201,7 +201,7 @@ class CNCellNumberField(RegexField):
     A valid cell number could be like: 13012345678
 
     We used a rough rule here, the first digit should be 1, the second could be
-    3, 5 and 8, the rest could be what so ever.
+    3, 4, 5, 7 and 8, the rest could be what so ever.
     The length of the cell number should be 11.
     """
     default_error_messages = {
