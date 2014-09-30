@@ -204,6 +204,11 @@ class CNCellNumberField(RegexField):
     A very rough rule is used here: the first digit should be 1, the second
     should be 3, 4, 5, 7 or 8, followed by 9 more digits.
     The total length of a cellphone number should be 11.
+
+    .. versionchanged:: 1.1
+
+       Added 7 as a valid second digit for Chinese virtual mobile ISPs.
+
     """
     default_error_messages = {
         'invalid': _('Enter a valid cell number.'),
