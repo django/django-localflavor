@@ -81,7 +81,7 @@ class ARLocalFlavorTests(SimpleTestCase):
     def test_ARCUITField(self):
         error_format = ['Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format.']
         error_invalid = ['Invalid CUIT.']
-        error_legal_type = ['Invalid legal type. Type must be 27, 20, 23 or 30.']
+        error_legal_type = ['Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33.']
         valid = {
             '20-10123456-9': '20-10123456-9',
             '20-10123456-9': '20-10123456-9',
@@ -89,6 +89,9 @@ class ARLocalFlavorTests(SimpleTestCase):
             '20101234569': '20-10123456-9',
             '27103456784': '27-10345678-4',
             '30011111110': '30-01111111-0',
+            '24117166062': '24-11716606-2',
+            '33500001599': '33-50000159-9',
+            '23000052264': '23-00005226-4',
         }
         invalid = {
             '2-10123456-9': error_format,
