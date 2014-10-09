@@ -11,6 +11,7 @@ from django.forms import ValidationError
 from django.forms.fields import Field, CharField, Select
 from django.utils.encoding import smart_text
 from django.utils.translation import ugettext_lazy as _
+from localflavor.generic.checksums import luhn
 
 
 phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
@@ -131,28 +132,6 @@ class CASocialInsuranceNumberField(Field):
             match.group(1),
             match.group(2),
             match.group(3))
-        if not self.luhn_checksum_is_valid(check_number):
+        if not luhn(check_number):
             raise ValidationError(self.error_messages['invalid'])
         return number
-
-    def luhn_checksum_is_valid(self, number):
-        """
-        Checks to make sure that the SIN passes a luhn mod-10 checksum
-        See: http://en.wikipedia.org/wiki/Luhn_algorithm
-        """
-
-        sum = 0
-        num_digits = len(number)
-        oddeven = num_digits & 1
-
-        for count in range(0, num_digits):
-            digit = int(number[count])
-
-            if not ((count & 1) ^ oddeven):
-                digit = digit * 2
-            if digit > 9:
-                digit = digit - 9
-
-            sum = sum + digit
-
-        return ((sum % 10) == 0)
