@@ -15,6 +15,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from .hr_choices import (HR_LICENSE_PLATE_PREFIX_CHOICES, HR_COUNTY_CHOICES,
                          HR_PHONE_NUMBER_PREFIX_CHOICES)
+from localflavor.generic.checksums import luhn
 
 
 jmbg_re = re.compile(r'^(?P<dd>\d{2})(?P<mm>\d{2})(?P<yyy>\d{3})' +
@@ -273,8 +274,7 @@ class HRJMBAGField(Field):
             raise ValidationError(self.error_messages['copy'])
 
         # Validate checksum using Luhn algorithm.
-        num = [int(x) for x in value]
-        if not sum(num[::-2] + [sum(divmod(d * 2, 10)) for d in num[-2::-2]]) % 10 == 0:
+        if not luhn(value):
             raise ValidationError(self.error_messages['invalid'])
 
         return '%s' % value

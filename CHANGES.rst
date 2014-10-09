@@ -43,6 +43,9 @@ Other modifications to existing flavors:
 - Rejected US SSN starting with 9 (gh-35)
 - Rejected Brazilian CPF number when all numbers all numbers are equal (gh-103)
 
+Other changes:
+
+- Added checksums module (from Django) providing a Luhn validator (gh-122)
 
 1.0.0 (2013-07-29)
 ------------------
