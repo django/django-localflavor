@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 """
 FR-specific Form helpers
 """
 from __future__ import absolute_import, unicode_literals
+from django.utils.checksums import luhn
 
 import re
 
@@ -183,3 +185,49 @@ class FRNationalIdentificationNumber(CharField):
             return value
         else:
             raise ValidationError(self.error_messages['invalid'])
+
+
+class FRINSEESIRENERNumber(CharField):
+    """ Abastract class for SIREN and SIRET, from the SIRENE register
+    """
+    def clean(self, value):
+        super(FRINSEESIRENERNumber, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+
+        value = value.replace(' ', '').replace('-', '')
+        if not self.r_valid.match(value) or not luhn(value):
+            raise ValidationError(self.error_messages['invalid'])
+        return value
+
+
+class FRSIRENField(FRINSEESIRENERNumber):
+    """ SIREN stands for
+    "Système d'identification du répertoire des entreprises"
+
+    It's under authority of the INSEE.
+    """
+    r_valid = re.compile(r'^\d{9}$')
+
+    default_error_messages = {
+        'invalid': _('Enter a valid French SIREN number.'),
+    }
+
+
+class FRSIRETField(FRINSEESIRENERNumber):
+    """ SIRET stands for
+    "Système d'identification du répertoire des établissements"
+
+    It's under authority of the INSEE.
+    """
+    r_valid = re.compile(r'^\d{14}$')
+
+    default_error_messages = {
+        'invalid': _('Enter a valid French SIRET number.'),
+    }
+
+    def clean(self, value):
+        ret = super(FRSIRETField, self).clean(value)
+        if not luhn(ret[:9]):
+            raise ValidationError(self.error_messages['invalid'])
+        return ret
