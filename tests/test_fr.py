@@ -236,6 +236,16 @@ class FRLocalFlavorTests(SimpleTestCase):
         }
         self.assertFieldOutput(FRSIRENField, valid, invalid)
 
+    def test_FRSIRENNumber_formatting(self):
+        siren_form_field = FRSIRENField()
+        self.assertEqual(
+            siren_form_field.prepare_value('752932715'),
+            '752 932 715')
+        self.assertEqual(
+            siren_form_field.prepare_value('752 932 715'),
+            '752 932 715')
+        self.assertIsNone(siren_form_field.prepare_value(None))
+
     def test_FRSIRETNumber(self):
         error_format = ['Enter a valid French SIRET number.']
         valid = {
@@ -249,3 +259,13 @@ class FRLocalFlavorTests(SimpleTestCase):
             '75293271000010': error_format,     # Bad luhn on whole
         }
         self.assertFieldOutput(FRSIRETField, valid, invalid)
+
+    def test_FRSIRETNumber_formatting(self):
+        siret_form_field = FRSIRETField()
+        self.assertEqual(
+            siret_form_field.prepare_value('75293271500010'),
+            '752 932 715 00010')
+        self.assertEqual(
+            siret_form_field.prepare_value('752 932 715 00010'),
+            '752 932 715 00010')
+        self.assertIsNone(siret_form_field.prepare_value(None))

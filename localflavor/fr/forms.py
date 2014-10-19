@@ -213,6 +213,13 @@ class FRSIRENField(FRINSEESIRENERNumber):
         'invalid': _('Enter a valid French SIREN number.'),
     }
 
+    def prepare_value(self, value):
+        """ Example : 752 932 715 00010 """
+        if value is None:
+            return value
+        value = value.replace(' ', '').replace('-', '')
+        return ' '.join((value[:3], value[3:6], value[6:]))
+
 
 class FRSIRETField(FRINSEESIRENERNumber):
     """ SIRET stands for
@@ -231,3 +238,10 @@ class FRSIRETField(FRINSEESIRENERNumber):
         if not luhn(ret[:9]):
             raise ValidationError(self.error_messages['invalid'])
         return ret
+
+    def prepare_value(self, value):
+        """ Example : 752 932 715 00010 """
+        if value is None:
+            return value
+        value = value.replace(' ', '').replace('-', '')
+        return ' '.join((value[:3], value[3:6], value[6:9], value[9:]))
