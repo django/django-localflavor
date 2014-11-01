@@ -19,6 +19,11 @@ def lazy_repr(obj):
         if isinstance(obj, tuple):
             values = tuple(values)
         return values
+    elif isinstance(obj, dict):
+        values = {}
+        for key, value in obj.items():
+            values[lazy_repr(key)] = lazy_repr(value)
+        return values
     else:
         if isinstance(obj, Promise):
             obj = force_unicode(obj)
@@ -28,46 +33,7 @@ def lazy_repr(obj):
 def setup(app):
     from sphinx.ext import autodoc
 
-    def lazy_safe_repr(obj):
-        items = lazy_repr(obj)
-        repr_list = []
-
-        if list_or_tuple(items):
-            repr_list.append('(')
-            items_length = len(items)
-            for i, item in enumerate(items, 1):
-
-                if list_or_tuple(item):
-                    item_repr_list = ['(']
-                    item_length = len(item)
-                    for j, x in enumerate(item, 1):
-                        if isinstance(x, int):
-                            x_repr = '%s' % x
-                        else:
-                            x_repr = "'%s'" % x
-                        if j == item_length:
-                            item_repr_list.append("%s" % x_repr)
-                        else:
-                            item_repr_list.append("%s, " % x_repr)
-
-                    if i == items_length:
-                        item_repr_list.append(')')
-                    else:
-                        item_repr_list.append('), ')
-
-                else:
-                    if isinstance(item, int):
-                        item_repr = '%s' % item
-                    else:
-                        item_repr = "'%s'" % item
-                    item_repr_list = ["'%s'" % item_repr]
-
-                repr_list.append(''.join(item_repr_list))
-
-            repr_list.append(')')
-
-            return ''.join(repr_list)
-
-        return safe_repr(obj)
+    def lazy_safe_repr(object):
+        return safe_repr(lazy_repr(object))
 
     autodoc.safe_repr = lazy_safe_repr  # noqa
