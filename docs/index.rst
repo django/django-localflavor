@@ -107,6 +107,8 @@ of how to use the IBAN form field::
     class MyForm(forms.Form):
         iban = IBANFormField()
 
+.. _ISO 3166 country codes: http://www.iso.org/iso/country_codes.htm
+
 Installation
 ============
 
@@ -251,11 +253,14 @@ localflavor you would use the following code::
 Indices and tables
 ==================
 
+.. toctree::
+
+    authors
+    changelog
+
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-.. _ISO 3166 country codes: http://www.iso.org/iso/country_codes.htm
 
 .. toctree::
    :glob:

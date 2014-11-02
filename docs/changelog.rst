@@ -1,7 +1,7 @@
-CHANGES
-=======
+Changelog
+=========
 
-tip   (unreleased)
+1.1   (unreleased)
 ------------------
 
 New flavors:
@@ -45,7 +45,7 @@ Other modifications to existing flavors:
 - Rejected Brazilian CPF number when all numbers all numbers are equal (gh-103)
 
 
-1.0.0 (2013-07-29)
-------------------
+1.0 (2013-07-29)
+----------------
 
 Initial release
