@@ -24,6 +24,7 @@ New fields for existing flavors:
 - Added form field for French National Identification Number (gh-75)
 - Added IBAN model and form fields (gh-86)
 - Added SSN model field for US (gh-96)
+- Added ZIP code model field for US (gh-55)
 
 Other modifications to existing flavors:
 
