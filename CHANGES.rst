@@ -15,6 +15,7 @@ New flavors:
 
 New fields for existing flavors:
 
+- Added model and form fields for French SIREN/SIRET numbers (gh-123)
 - Added model field for states of Brazil (gh-22)
 - Added form field for Indian Aadhaar numbers (gh-23)
 - Added model field for states of India (gh-23)

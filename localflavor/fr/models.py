@@ -6,6 +6,8 @@ class FRSIRENField(CharField):
     """
     A :class:`~django.db.models.CharField` that checks that the value
     is a valid French SIREN number
+
+    .. versionadded:: 1.1
     """
     description = _("SIREN Number")
 
@@ -25,6 +27,8 @@ class FRSIRETField(CharField):
     """
     A :class:`~django.db.models.CharField` that checks that the value
     is a valid French SIRET number
+
+    .. versionadded:: 1.1
     """
     description = _("SIRET Number")
 

@@ -189,6 +189,8 @@ class FRNationalIdentificationNumber(CharField):
 
 class FRINSEESIRENERNumber(CharField):
     """ Abastract class for SIREN and SIRET, from the SIRENE register
+
+    .. versionadded:: 1.1
     """
     def clean(self, value):
         super(FRINSEESIRENERNumber, self).clean(value)
@@ -206,6 +208,8 @@ class FRSIRENField(FRINSEESIRENERNumber):
     "Système d'identification du répertoire des entreprises"
 
     It's under authority of the INSEE.
+
+    .. versionadded:: 1.1
     """
     r_valid = re.compile(r'^\d{9}$')
 
@@ -226,6 +230,8 @@ class FRSIRETField(FRINSEESIRENERNumber):
     "Système d'identification du répertoire des établissements"
 
     It's under authority of the INSEE.
+
+    .. versionadded:: 1.1
     """
     r_valid = re.compile(r'^\d{14}$')
 

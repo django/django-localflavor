@@ -28,6 +28,7 @@ Authors
 * Jannis Leidel
 * Jérémie Ferry
 * Jonas Ghyllebert
+* Jocelyn Delalande
 * Joseph Kocherhans
 * Julien Phalip
 * Justin Bronn
