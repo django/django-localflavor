@@ -16,9 +16,8 @@ class FRSIRENField(CharField):
         super(FRSIRENField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
-        from localflavor.fr.forms import (FRSIRENField as
-                                          FRSIRENFormField)
-        defaults = {'form_class': FRSIRENFormField}
+        from . import forms
+        defaults = {'form_class': forms.FRSIRENField}
         defaults.update(kwargs)
         return super(FRSIRENField, self).formfield(**defaults)
 
@@ -37,8 +36,7 @@ class FRSIRETField(CharField):
         super(FRSIRETField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
-        from localflavor.fr.forms import (FRSIRETField as
-                                          FRSIRETFormField)
-        defaults = {'form_class': FRSIRETFormField}
+        from . import forms
+        defaults = {'form_class': forms.FRSIRETField}
         defaults.update(kwargs)
         return super(FRSIRETField, self).formfield(**defaults)

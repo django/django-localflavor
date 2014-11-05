@@ -187,13 +187,12 @@ class FRNationalIdentificationNumber(CharField):
             raise ValidationError(self.error_messages['invalid'])
 
 
-class FRINSEESIRENERNumber(CharField):
-    """ Abastract class for SIREN and SIRET, from the SIRENE register
-
-    .. versionadded:: 1.1
+class FRSIRENENumberMixin(object):
+    """
+    Abstract class for SIREN and SIRET numbers, from the SIRENE register
     """
     def clean(self, value):
-        super(FRINSEESIRENERNumber, self).clean(value)
+        super(FRSIRENENumberMixin, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -203,11 +202,11 @@ class FRINSEESIRENERNumber(CharField):
         return value
 
 
-class FRSIRENField(FRINSEESIRENERNumber):
-    """ SIREN stands for
-    "Système d'identification du répertoire des entreprises"
+class FRSIRENField(FRSIRENENumberMixin, CharField):
+    """
+    SIREN stands for "Système d'identification du répertoire des entreprises"
 
-    It's under authority of the INSEE.
+    It's under authority of the INSEE. See http://fr.wikipedia.org/wiki/Système_d'identification_du_répertoire_des_entreprises for more information.
 
     .. versionadded:: 1.1
     """
@@ -218,18 +217,17 @@ class FRSIRENField(FRINSEESIRENERNumber):
     }
 
     def prepare_value(self, value):
-        """ Example : 752 932 715 00010 """
         if value is None:
             return value
         value = value.replace(' ', '').replace('-', '')
         return ' '.join((value[:3], value[3:6], value[6:]))
 
 
-class FRSIRETField(FRINSEESIRENERNumber):
-    """ SIRET stands for
-    "Système d'identification du répertoire des établissements"
+class FRSIRETField(FRSIRENENumberMixin, CharField):
+    """
+    SIRET stands for "Système d'identification du répertoire des établissements"
 
-    It's under authority of the INSEE.
+    It's under authority of the INSEE. See http://fr.wikipedia.org/wiki/Système_d'identification_du_répertoire_des_établissements for more information.
 
     .. versionadded:: 1.1
     """
@@ -246,7 +244,6 @@ class FRSIRETField(FRINSEESIRENERNumber):
         return ret
 
     def prepare_value(self, value):
-        """ Example : 752 932 715 00010 """
         if value is None:
             return value
         value = value.replace(' ', '').replace('-', '')
