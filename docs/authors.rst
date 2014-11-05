@@ -23,6 +23,7 @@ Authors
 * Grzes Furga
 * Honza Král
 * Horst Gutmann
+* Jaap Roes
 * Jacob Kaplan-Moss
 * James Bennett
 * Jannis Leidel

@@ -12,7 +12,13 @@ from .forms import USPlaceForm
 class USLocalFlavorTests(SimpleTestCase):
 
     def setUp(self):
-        self.form = USPlaceForm({'state': 'GA', 'state_req': 'NC', 'postal_code': 'GA', 'name': 'impossible'})
+        self.form = USPlaceForm({
+            'state': 'GA',
+            'state_req': 'NC',
+            'postal_code': 'GA',
+            'name': 'impossible',
+            'zip_code': '12345',
+        })
 
     def test_get_display_methods(self):
         """Test that the get_*_display() methods are added to the model instances."""
@@ -32,7 +38,8 @@ class USLocalFlavorTests(SimpleTestCase):
             'state_req': 'invalid',
             'postal_code': 'invalid',
             'name': 'name',
-            'ssn': 'invalid'
+            'ssn': 'invalid',
+            'zip_code': 'invalid'
         })
         self.assertFalse(form.is_valid())
         choice_messages = ['Select a valid choice. invalid is not one of the available choices.']
@@ -40,6 +47,7 @@ class USLocalFlavorTests(SimpleTestCase):
         self.assertEqual(form.errors['state_req'], choice_messages)
         self.assertEqual(form.errors['postal_code'], choice_messages)
         self.assertEqual(form.errors['ssn'], ['Enter a valid U.S. Social Security number in XXX-XX-XXXX format.'])
+        self.assertEqual(form.errors['zip_code'], ['Enter a zip code in the format XXXXX or XXXXX-XXXX.'])
 
     def test_field_blank_option(self):
         """Test that the empty option is there."""
@@ -258,6 +266,11 @@ class USLocalFlavorTests(SimpleTestCase):
             '60606-': error_format,
         }
         self.assertFieldOutput(USZipCodeField, valid, invalid)
+
+    def test_USZipCodeField_formfield(self):
+        """Test that the full US ZIP code field is really the full list."""
+        self.assertHTMLEqual(str(self.form['zip_code']),
+                             '<input id="id_zip_code" maxlength="10" name="zip_code" type="text" value="12345" />')
 
     def test_USPhoneNumberField(self):
         error_format = ['Phone numbers must be in XXX-XXX-XXXX format.']

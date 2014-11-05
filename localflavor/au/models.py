@@ -22,7 +22,7 @@ class AUStateField(CharField):
 class AUPostCodeField(CharField):
     """
     A model field that forms represent as a
-    :class:`~localflavor.forms.AUPostCodeField` field and stores the
+    :class:`~localflavor.au.forms.AUPostCodeField` field and stores the
     four-digit Australian postcode in the database.
     """
     description = _("Australian Postcode")

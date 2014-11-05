@@ -1,7 +1,7 @@
-CHANGES
-=======
+Changelog
+=========
 
-tip   (unreleased)
+1.1   (unreleased)
 ------------------
 
 New flavors:
@@ -25,6 +25,7 @@ New fields for existing flavors:
 - Added form field for French National Identification Number (gh-75)
 - Added IBAN model and form fields (gh-86)
 - Added SSN model field for US (gh-96)
+- Added ZIP code model field for US (gh-55)
 
 Other modifications to existing flavors:
 
@@ -44,8 +45,11 @@ Other modifications to existing flavors:
 - Rejected US SSN starting with 9 (gh-35)
 - Rejected Brazilian CPF number when all numbers all numbers are equal (gh-103)
 
+Other changes:
 
-1.0.0 (2013-07-29)
-------------------
+- Added checksums module (from Django) providing a Luhn validator (gh-122)
+
+1.0 (2013-07-29)
+----------------
 
 Initial release
