@@ -62,16 +62,30 @@ NORTHERN_IRELAND_REGION_CHOICES = (
     ("County Tyrone", _("County Tyrone")),
 )
 
-#: Welsh regions: http://en.wikipedia.org/wiki/Preserved_counties_of_Wales
+#: Welsh regions: http://en.wikipedia.org/wiki/Subdivisions_of_Wales
 WALES_REGION_CHOICES = (
-    ("Clwyd", _("Clwyd")),
-    ("Dyfed", _("Dyfed")),
-    ("Gwent", _("Gwent")),
+    ("Blaenau Gwent", _("Blaenau Gwent")),
+    ("Bridgend", _("Bridgend")),
+    ("Caerphilly", _("Caerphilly")),
+    ("Cardiff", _("Cardiff")),
+    ("Carmarthenshire", _("Carmarthenshire")),
+    ("Ceredigion", _("Ceredigion")),
+    ("Conwy", _("Conwy")),
+    ("Denbighshire", _("Denbighshire")),
+    ("Flintshire", _("Flintshire")),
     ("Gwynedd", _("Gwynedd")),
-    ("Mid Glamorgan", _("Mid Glamorgan")),
+    ("Isle of Anglesey", _("Isle of Anglesey")),
+    ("Merthyr Tydfil", _("Merthyr Tydfil")),
+    ("Monmouthshire", _("Monmouthshire")),
+    ("Neath Port Talbot", _("Neath Port Talbot")),
+    ("Newport", _("Newport")),
+    ("Pembrokeshire", _("Pembrokeshire")),
     ("Powys", _("Powys")),
-    ("South Glamorgan", _("South Glamorgan")),
-    ("West Glamorgan", _("West Glamorgan")),
+    ("Rhondda Cynon Taf", _("Rhondda Cynon Taf")),
+    ("Swansea", _("Swansea")),
+    ("Torfaen", _("Torfaen")),
+    ("Vale of Glamorgan", _("Vale of Glamorgan")),
+    ("Wrexham", _("Wrexham")),
 )
 
 #: Scottish regions: http://en.wikipedia.org/wiki/Regions_and_districts_of_Scotland
