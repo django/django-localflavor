@@ -110,27 +110,27 @@ NORTHERN_IRELAND_REGION_CHOICES = (
 #: Retrieved 10th Nov 2014 from http://en.wikipedia.org/wiki/Local_government_in_Wales
 WALES_REGION_CHOICES = (
     ("Blaenau Gwent", _("Blaenau Gwent")),
-    ("Bridgend (Pen-y-bont ar Ogwr)", _("Bridgend (Pen-y-bont ar Ogwr)")),
-    ("Caerphilly (Caerffili)", _("Caerphilly (Caerffili)")),
-    ("Cardiff (Caerdydd)", _("Cardiff (Caerdydd)")),
-    ("Carmarthenshire (Sir Gaerfyrddin)", _("Carmarthenshire (Sir Gaerfyrddin)")),
+    ("Bridgend", _("Bridgend")),
+    ("Caerphilly", _("Caerphilly")),
+    ("Cardiff", _("Cardiff")),
+    ("Carmarthenshire", _("Carmarthenshire")),
     ("Ceredigion", _("Ceredigion")),
     ("Conwy", _("Conwy")),
-    ("Denbighshire (Sir Ddinbych)", _("Denbighshire (Sir Ddinbych)")),
-    ("Flintshire (Sir y Fflint)", _("Flintshire (Sir y Fflint)")),
+    ("Denbighshire", _("Denbighshire")),
+    ("Flintshire", _("Flintshire")),
     ("Gwynedd", _("Gwynedd")),
-    ("Isle of Anglesey (Ynys Môn)", _("Isle of Anglesey (Ynys Môn)")),
-    ("Merthyr Tydfil (Merthyr Tudful)", _("Merthyr Tydfil (Merthyr Tudful)")),
-    ("Monmouthshire (Sir Fynwy)", _("Monmouthshire (Sir Fynwy)")),
-    ("Neath Port Talbot (Castell-nedd Port Talbot)", _("Neath Port Talbot (Castell-nedd Port Talbot)")),
-    ("Newport (Casnewydd)", _("Newport (Casnewydd)")),
-    ("Pembrokeshire (Sir Benfro)", _("Pembrokeshire (Sir Benfro)")),
+    ("Isle of Anglesey", _("Isle of Anglesey")),
+    ("Merthyr Tydfil", _("Merthyr Tydfil")),
+    ("Monmouthshire", _("Monmouthshire")),
+    ("Neath Port Talbot", _("Neath Port Talbot")),
+    ("Newport", _("Newport")),
+    ("Pembrokeshire", _("Pembrokeshire")),
     ("Powys", _("Powys")),
     ("Rhondda Cynon Taf", _("Rhondda Cynon Taf")),
-    ("Swansea (Abertawe)", _("Swansea (Abertawe)")),
-    ("Torfaen (Tor-faen)", _("Torfaen (Tor-faen)")),
-    ("Vale of Glamorgan (Bro Morgannwg)", _("Vale of Glamorgan (Bro Morgannwg)")),
-    ("Wrexham (Wrecsam)", _("Wrexham (Wrecsam)"))
+    ("Swansea", _("Swansea")),
+    ("Torfaen", _("Torfaen")),
+    ("Vale of Glamorgan", _("Vale of Glamorgan")),
+    ("Wrexham", _("Wrexham"))
 )
 
 
