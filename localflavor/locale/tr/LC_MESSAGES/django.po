@@ -4534,7 +4534,7 @@ msgstr "Bölge Seç"
 
 #: fr/forms.py:135
 msgid "Enter a valid French French National Identification number."
-msgstr ""
+msgstr "Lütfen geçerli bir Fransız Vatandaşlık Numarası girin."
 
 #: gb/forms.py:26
 msgid "Enter a valid postcode."
@@ -4854,31 +4854,31 @@ msgstr "Galler"
 
 #: generic/models.py:36
 msgid "An International Bank Account Number"
-msgstr ""
+msgstr "Uluslararası Banka Hesap Numarası (IBAN)"
 
 #: generic/validators.py:140
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
-msgstr ""
+msgstr "%(country_code)s IBAN %(number)s karakterden oluşmalıdır."
 
 #: generic/validators.py:143
 #, python-format
 msgid "%s is not a valid country code for IBAN."
-msgstr ""
+msgstr "%s geçerli bir IBAN ülke kodu değil."
 
 #: generic/validators.py:145
 #, python-format
 msgid "%s IBANs are not allowed in this field."
-msgstr ""
+msgstr "Bu alanda %s IBANları kabul edilmemektedir."
 
 #: generic/validators.py:160
 #, python-format
 msgid "%s is not a valid character for IBAN."
-msgstr ""
+msgstr "IBAN %s karakterini içermemelidir."
 
 #: generic/validators.py:164
 msgid "Not a valid IBAN."
-msgstr ""
+msgstr "Geçersiz IBAN."
 
 #: gr/forms.py:27
 msgid "Enter a valid 5-digit greek postal code."
@@ -6477,11 +6477,11 @@ msgstr "Kimlik kartı numaraları ya 4 ila 7 rakam ya da bir büyük harf ve 7 r
 
 #: mk/forms.py:57 si/forms.py:26
 msgid "This field should contain exactly 13 digits."
-msgstr "Bu alan tam olarak 13 rakam içermeli."
+msgstr "Bu alan tam olarak 13 rakam içermelidir."
 
 #: mk/forms.py:58
 msgid "The first 7 digits of the UMCN must represent a valid past date."
-msgstr "UMCN'nin ilk 7 rakamı geçerli bir geçmiş tarihi ifade etmek zorunda."
+msgstr "UMCN'nin ilk 7 rakamı geçerli bir geçmiş tarihi ifade etmek zorundadır."
 
 #: mk/forms.py:59
 msgid "The UMCN is not valid."
