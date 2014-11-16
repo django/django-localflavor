@@ -29,6 +29,7 @@ New fields for existing flavors:
 
 Other modifications to existing flavors:
 
+- *backward incompatible* Updated the region lists of Great Britain (gh-43, gh-126)
 - Added Ceuta and Mellila to regions of Spain (gh-8)
 - Added support entities in Italian SSN form field (gh-20)
 - Added Japanese prefecture codes and fix prefecture order (gh-27)
