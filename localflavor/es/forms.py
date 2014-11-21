@@ -71,6 +71,9 @@ class ESIdentityCardNumberField(RegexField):
     can be a number or a letter depending on company type. Algorithm is not
     public, and different authors have different opinions on which ones allows
     letters, so both validations are assumed true for all types.
+
+    .. versionchanged:: 1.1
+
     """
     default_error_messages = {
         'invalid': _('Please enter a valid NIF, NIE, or CIF.'),
@@ -85,11 +88,17 @@ class ESIdentityCardNumberField(RegexField):
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
         self.cif_types = 'ABCDEFGHJKLMNPQS'
-        self.nie_types = 'XT'
-        id_card_re = re.compile(r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$' % (self.cif_types + self.nie_types, self.nif_control + self.cif_control), re.IGNORECASE)
+        self.nie_types = 'XTY'
+        self.id_card_pattern = r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$'
+        id_card_re = re.compile(self.id_card_pattern %
+                                (self.cif_types + self.nie_types,
+                                 self.nif_control + self.cif_control),
+                                re.IGNORECASE)
+        error_message = self.default_error_messages['invalid%s' %
+                                                    (self.only_nif and '_only_nif' or '')]
         super(ESIdentityCardNumberField, self).__init__(
             id_card_re, max_length, min_length,
-            error_message=self.default_error_messages['invalid%s' % (self.only_nif and '_only_nif' or '')], *args, **kwargs)
+            error_message=error_message, *args, **kwargs)
 
     def clean(self, value):
         super(ESIdentityCardNumberField, self).clean(value)
@@ -98,7 +107,10 @@ class ESIdentityCardNumberField(RegexField):
         nif_get_checksum = lambda d: self.nif_control[int(d) % 23]
 
         value = value.upper().replace(' ', '').replace('-', '')
-        m = re.match(r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$' % (self.cif_types + self.nie_types, self.nif_control + self.cif_control), value)
+        m = re.match(self.id_card_pattern %
+                     (self.cif_types + self.nie_types,
+                      self.nif_control + self.cif_control),
+                     value)
         letter1, number, letter2 = m.groups()
 
         if not letter1 and letter2:

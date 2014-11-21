@@ -45,6 +45,7 @@ Other modifications to existing flavors:
 - Fixed REGON number validation for Poland (gh-62)
 - Rejected US SSN starting with 9 (gh-35)
 - Rejected Brazilian CPF number when all numbers all numbers are equal (gh-103)
+- Added 'Y' to the NIE number validation for Spain (gh-127)
 
 Other changes:
 
