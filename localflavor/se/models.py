@@ -42,10 +42,10 @@ class SECountyField(models.CharField):
 
     def __init__(self, *args, **kwargs):
 
-        if not 'choices' in kwargs:
+        if 'choices' not in kwargs:
             kwargs['choices'] = COUNTY_CHOICES
 
-        if not 'max_length' in kwargs:
+        if 'max_length' not in kwargs:
             kwargs['max_length'] = 2
 
         super(SECountyField, self).__init__(*args, **kwargs)
