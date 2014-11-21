@@ -36,7 +36,7 @@ COUNTY_CHOICES = (
 #: and code system described at https://sv.wikipedia.org/wiki/Länskod
 #: and http://www.scb.se/sv_/Hitta-statistik/Regional-statistik-och-kartor/Regionala-indelningar/Lan-och-kommuner/Lan-och-kommuner-i-kodnummerordning/
 
-NUMERICAL_COUNTY_CODE_CHOICES = {
+NUMERICAL_COUNTY_CODE_CHOICES = (
     ('AB', '01',),
     ('AC', '24',),
     ('BD', '25',),
@@ -58,13 +58,13 @@ NUMERICAL_COUNTY_CODE_CHOICES = {
     ('X', '21',),
     ('Y', '22',),
     ('Z', '23',),
-}
+)
 
 #: A dictionary of full county names, as these are not as
 #: somewhat in Swedish, e.g. "Skåne län" as opposed to
 #: the more generic "Stockholms län" (ending with genitive case s)
 
-FULL_COUNTY_NAME_CHOICES = {
+FULL_COUNTY_NAME_CHOICES = (
     ('AB', _('Stockholm County'),),
     ('AC', _('Västerbotten County'),),
     ('BD', _('Norrbotten County'),),
@@ -86,4 +86,4 @@ FULL_COUNTY_NAME_CHOICES = {
     ('X', _('Gävleborg County'),),
     ('Y', _('Västernorrland County'),),
     ('Z', _('Jämtland County'),),
-}
+)
