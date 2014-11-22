@@ -72,7 +72,7 @@ class IBANFormField(forms.CharField):
 
         from django import forms
         from localflavor.generic.forms import IBANFormField
-        from localflavor.generic.sepa_countries import IBAN_SEPA_COUNTRIES
+        from localflavor.generic.countries.sepa import IBAN_SEPA_COUNTRIES
 
         class MyForm(forms.Form):
             iban = IBANFormField(include_countries=IBAN_SEPA_COUNTRIES)

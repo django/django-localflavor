@@ -21,7 +21,7 @@ class IBANField(models.CharField):
 
         from django.db import models
         from localflavor.generic.models import IBANField
-        from localflavor.generic.sepa_countries import IBAN_SEPA_COUNTRIES
+        from localflavor.generic.countries.sepa import IBAN_SEPA_COUNTRIES
 
         class MyModel(models.Model):
             iban = IBANField(include_countries=IBAN_SEPA_COUNTRIES)

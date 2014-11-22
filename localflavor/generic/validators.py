@@ -5,7 +5,7 @@ import string
 
 from django.core.exceptions import ValidationError, ImproperlyConfigured
 from django.utils.translation import ugettext_lazy as _
-from .iso_3166_countries import ISO_3166_1_ALPHA2_COUNTRY_CODES
+from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 
 # Dictionary of ISO country code to IBAN length.
 #
