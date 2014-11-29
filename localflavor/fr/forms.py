@@ -238,7 +238,11 @@ class FRSIRETField(FRSIRENENumberMixin, CharField):
     }
 
     def clean(self, value):
+        if value not in EMPTY_VALUES:
+            value = value.replace(' ', '').replace('-', '')
+
         ret = super(FRSIRETField, self).clean(value)
+
         if not luhn(ret[:9]):
             raise ValidationError(self.error_messages['invalid'])
         return ret
