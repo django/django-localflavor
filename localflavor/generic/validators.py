@@ -151,11 +151,10 @@ class IBANValidator(object):
         #    A = 10, B = 11, ..., Z = 35.
         value_digits = ''
         for x in chk_value:
-            ord_value = ord(x)
-            if 48 <= ord_value <= 57:  # 0 - 9
+            if '0' <= x <= '9':
                 value_digits += x
-            elif 65 <= ord_value <= 90:  # A - Z
-                value_digits += str(ord_value - 55)
+            elif 'A' <= x <= 'Z':
+                value_digits += str(ord(x) - 55)
             else:
                 raise ValidationError(_('%s is not a valid character for IBAN.') % x)
 
