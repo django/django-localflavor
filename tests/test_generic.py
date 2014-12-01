@@ -5,10 +5,9 @@ from django.core.exceptions import ValidationError, ImproperlyConfigured
 from django.test import SimpleTestCase, TestCase
 from django.utils import formats
 
-from localflavor.generic.models import IBANField
-from localflavor.generic.validators import IBANValidator
-from localflavor.generic.forms import (DateField, DateTimeField,
-                                       SplitDateTimeField, IBANFormField)
+from localflavor.generic.models import BICField, IBANField
+from localflavor.generic.validators import BICValidator, IBANValidator
+from localflavor.generic.forms import DateField, DateTimeField, SplitDateTimeField, BICFormField, IBANFormField
 
 
 class DateTimeFieldTestCase(SimpleTestCase):
@@ -233,3 +232,73 @@ class IBANTests(TestCase):
 
         # Test a Nordea IBAN when Nordea extensions are turned off.
         self.assertRaises(ImproperlyConfigured, IBANValidator, include_countries=('AO',))
+
+
+class BICTests(TestCase):
+    def test_bic_validator(self):
+        valid = [
+            'DEUTDEFF',
+            'deutdeff',
+
+            'NEDSZAJJXXX',
+            'NEDSZAJJxxx',
+
+            'DABADKKK',
+            'daBadKkK',
+
+            'UNCRIT2B912',
+            'DSBACNBXSHA',
+
+            None,
+        ]
+
+        invalid = {
+            'NEDSZAJJXX': 'BIC codes have either 8 or 11 characters.',
+            '': 'BIC codes have either 8 or 11 characters.',
+            'CIBCJJH2': 'JJ is not a valid country code.',
+            'DÉUTDEFF': 'is not a valid institution code.'
+        }
+
+        bic_validator = BICValidator()
+        for bic in valid:
+            bic_validator(bic)
+
+        for bic in invalid:
+            self.assertRaisesMessage(ValidationError,  invalid[bic], BICValidator(), bic)
+
+    def test_form_field_formatting(self):
+        bic_form_field = BICFormField()
+        self.assertEqual(bic_form_field.prepare_value('deutdeff'), 'DEUTDEFF')
+        self.assertIsNone(bic_form_field.prepare_value(None))
+        self.assertEqual(bic_form_field.to_python(None), '')
+
+    def test_bic_model_field(self):
+        valid = {
+            'DEUTDEFF': 'DEUTDEFF',
+            'NEDSZAJJXXX': 'NEDSZAJJXXX',
+            'DABADKKK': 'DABADKKK',
+            'UNCRIT2B912': 'UNCRIT2B912',
+            'DSBACNBXSHA': 'DSBACNBXSHA'
+        }
+
+        invalid = {
+            'NEDSZAJJXX': ['BIC codes have either 8 or 11 characters.'],
+            'CIBCJJH2': ['JJ is not a valid country code.'],
+            'D3UTDEFF': ['D3UT is not a valid institution code.']
+        }
+
+        self.assertFieldOutput(BICFormField, valid=valid, invalid=invalid)
+
+        bic_model_field = BICField()
+
+        # Test valid inputs for model field.
+        for input, output in valid.items():
+            self.assertEqual(bic_model_field.clean(input, None), output)
+
+        self.assertIsNone(bic_model_field.to_python(None))
+
+        # Invalid inputs for model field.
+        for input, errors in invalid.items():
+            with self.assertRaises(ValidationError) as context_manager:
+                bic_model_field.clean(input, None)
+            self.assertEqual(errors, context_manager.exception.messages)

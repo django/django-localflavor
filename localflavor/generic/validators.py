@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import string
+
 from django.core.exceptions import ValidationError, ImproperlyConfigured
 from django.utils.translation import ugettext_lazy as _
+from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 
 # Dictionary of ISO country code to IBAN length.
 #
@@ -162,3 +165,34 @@ class IBANValidator(object):
         # 4. Interpret the string as a decimal integer and compute the remainder of that number on division by 97.
         if int(value_digits) % 97 != 1:
             raise ValidationError(_('Not a valid IBAN.'))
+
+
+class BICValidator(object):
+    """
+    A validator for SWIFT Business Identifier Codes (ISO 9362:2009). Validation is based on the BIC structure found on
+    wikipedia.
+
+    https://en.wikipedia.org/wiki/ISO_9362#Structure
+    """
+
+    def __call__(self, value):
+        if value is None:
+            return value
+
+        value = value.upper()
+
+        # Length is 8 or 11.
+        bic_length = len(value)
+        if bic_length != 8 and bic_length != 11:
+            raise ValidationError(_('BIC codes have either 8 or 11 characters.'))
+
+        # First 4 letters are A - Z.
+        institution_code = value[:4]
+        for x in institution_code:
+            if x not in string.ascii_uppercase:
+                raise ValidationError(_('%s is not a valid institution code.') % institution_code)
+
+        # Letters 5 and 6 consist of an ISO 3166-1 alpha-2 country code.
+        country_code = value[4:6]
+        if country_code not in ISO_3166_1_ALPHA2_COUNTRY_CODES:
+            raise ValidationError(_('%s is not a valid country code.') % country_code)

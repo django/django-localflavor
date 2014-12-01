@@ -24,4 +24,5 @@ Checksums
 Data
 ----
 
-.. autodata:: localflavor.generic.sepa_countries.IBAN_SEPA_COUNTRIES
+.. autodata:: localflavor.generic.countries.iso_3166.ISO_3166_1_ALPHA2_COUNTRY_CODES
+.. autodata:: localflavor.generic.countries.sepa.IBAN_SEPA_COUNTRIES
