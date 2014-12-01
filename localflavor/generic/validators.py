@@ -123,6 +123,27 @@ class IBANValidator(object):
                     msg = 'Explicitly requested country code %s is not part of the configured IBAN validation set.' % country_code
                     raise ImproperlyConfigured(msg)
 
+    @staticmethod
+    def iban_checksum(value):
+        """ Returns check digits for an input IBAN number. Original checksum in input value is ignored. """
+
+        # 1. Move the two initial characters to the end of the string, replacing checksum for '00'
+        value = value[4:] + value[:2] + '00'
+
+        # 2. Replace each letter in the string with two digits, thereby expanding the string, where
+        #    A = 10, B = 11, ..., Z = 35.
+        value_digits = ''
+        for x in value:
+            if '0' <= x <= '9':
+                value_digits += x
+            elif 'A' <= x <= 'Z':
+                value_digits += str(ord(x) - 55)
+            else:
+                raise ValidationError(_('%s is not a valid character for IBAN.') % x)
+
+        # 3. The remainder of the number above when divided by 97 is then subtracted from 98.
+        return '%02d' % (98 - int(value_digits) % 97)
+
     def __call__(self, value):
         """
         Validates the IBAN value using the official IBAN validation algorithm.
@@ -134,7 +155,7 @@ class IBANValidator(object):
 
         value = value.upper().replace(' ', '').replace('-', '')
 
-        # 1. Check that the total IBAN length is correct as per the country. If not, the IBAN is invalid.
+        # Check that the total IBAN length is correct as per the country. If not, the IBAN is invalid.
         country_code = value[:2]
         if country_code in self.validation_countries:
 
@@ -147,23 +168,7 @@ class IBANValidator(object):
         if self.include_countries and country_code not in self.include_countries:
             raise ValidationError(_('%s IBANs are not allowed in this field.') % country_code)
 
-        # 2. Move the four initial characters to the end of the string.
-        value = value[4:] + value[:4]
-
-        # 3. Replace each letter in the string with two digits, thereby expanding the string, where
-        #    A = 10, B = 11, ..., Z = 35.
-        value_digits = ''
-        for x in value:
-            ord_value = ord(x)
-            if 48 <= ord_value <= 57:  # 0 - 9
-                value_digits += x
-            elif 65 <= ord_value <= 90:  # A - Z
-                value_digits += str(ord_value - 55)
-            else:
-                raise ValidationError(_('%s is not a valid character for IBAN.') % x)
-
-        # 4. Interpret the string as a decimal integer and compute the remainder of that number on division by 97.
-        if int(value_digits) % 97 != 1:
+        if self.iban_checksum(value) != value[2:4]:
             raise ValidationError(_('Not a valid IBAN.'))
 
 

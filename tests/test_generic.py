@@ -109,7 +109,8 @@ class IBANTests(TestCase):
             'SA0380 0 0000 06 0 8 0 1 0 1 6 7 519 ',
 
             'CH9300762011623852957',
-            'IL620108000000099999999'
+            'IL620108000000099999999',
+            'EE982200221111099080',
         ]
 
         invalid = {
@@ -117,13 +118,14 @@ class IBANTests(TestCase):
             'CA34CIBC123425345': 'CA is not a valid country code for IBAN.',
             'GB29ÉWBK60161331926819': 'is not a valid character for IBAN.',
             'SA0380000000608019167519': 'Not a valid IBAN.',
+            'EE012200221111099080': 'Not a valid IBAN.',
         }
 
         for iban in valid:
             IBANValidator(iban)
 
         for iban in invalid:
-            self.assertRaisesMessage(ValidationError,  invalid[iban], IBANValidator(), iban)
+            self.assertRaisesMessage(ValidationError, invalid[iban], IBANValidator(), iban)
 
     def test_iban_fields(self):
         """ Test the IBAN model and form field. """
