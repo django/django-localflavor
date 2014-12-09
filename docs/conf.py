@@ -22,6 +22,9 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tests.settings')
 sys.path.insert(0, os.path.abspath('extensions'))
 sys.path.insert(0, os.path.abspath('..'))
 
+import django
+django.setup()
+
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
