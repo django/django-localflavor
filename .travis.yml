@@ -1,17 +1,29 @@
+sudo: no
 language: python
 install:
   - pip install tox coveralls
 script:
   - tox
 env:
-  - TOXENV=py26-1.5
-  - TOXENV=py26-1.6
-  - TOXENV=py27-1.5
-  - TOXENV=py27-1.6
-  - TOXENV=py27-1.7
-  - TOXENV=py32-1.5
-  - TOXENV=py32-1.6
-  - TOXENV=py33-1.5
-  - TOXENV=py33-1.6
-  - TOXENV=py33-1.7
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py26-1.5
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py26-1.6
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py27-1.5
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py27-1.6
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py27-1.7
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py27-master
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py32-1.5
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py32-1.6
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py32-1.7
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py32-master
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py33-1.5
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py33-1.6
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py33-1.7
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py33-master
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-1.5
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-1.6
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-1.7
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-master
 after_success: coveralls
+cache:
+  directories:
+    - pip_cache
