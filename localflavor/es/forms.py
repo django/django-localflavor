@@ -72,6 +72,8 @@ class ESIdentityCardNumberField(RegexField):
     public, and different authors have different opinions on which ones allows
     letters, so both validations are assumed true for all types.
 
+    http://es.wikipedia.org/wiki/N%C3%BAmero_de_identificaci%C3%B3n_fiscal
+
     .. versionchanged:: 1.1
 
     """
@@ -87,7 +89,7 @@ class ESIdentityCardNumberField(RegexField):
         self.only_nif = only_nif
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
-        self.cif_types = 'ABCDEFGHJKLMNPQS'
+        self.cif_types = 'ABCDEFGHJKLMNPQRSVW'
         self.nie_types = 'XTY'
         self.id_card_pattern = r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$'
         id_card_re = re.compile(self.id_card_pattern %
