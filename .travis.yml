@@ -23,6 +23,7 @@ env:
   - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-1.6
   - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-1.7
   - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-master
+  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=docs
 after_success: coveralls
 cache:
   directories:
