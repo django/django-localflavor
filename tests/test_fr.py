@@ -222,11 +222,10 @@ class FRLocalFlavorTests(SimpleTestCase):
         }
         self.assertFieldOutput(FRNationalIdentificationNumber, valid, invalid)
 
-
     def test_FRSIRENNumber(self):
         error_format = ['Enter a valid French SIREN number.']
         valid = {
-            '752932715'   : '752932715',
+            '752932715': '752932715',
             '752 932 715': '752932715',
             '752-932-715': '752932715',
         }
@@ -249,7 +248,7 @@ class FRLocalFlavorTests(SimpleTestCase):
     def test_FRSIRETNumber(self):
         error_format = ['Enter a valid French SIRET number.']
         valid = {
-            '75293271500010'   : '75293271500010',
+            '75293271500010': '75293271500010',
             '752 932 715 00010': '75293271500010',
             '752-932-715-00010': '75293271500010',
         }
@@ -269,3 +268,5 @@ class FRLocalFlavorTests(SimpleTestCase):
             siret_form_field.prepare_value('752 932 715 00010'),
             '752 932 715 00010')
         self.assertIsNone(siret_form_field.prepare_value(None))
+        self.assertEqual(
+            siret_form_field.clean('752 932 715 00010'), '75293271500010')
