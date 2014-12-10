@@ -38,7 +38,7 @@ class EECountySelect(Select):
 
 
 class EEPersonalIdentificationCode(Field):
-    """A form field that validates input as a Estonian personal identification code.
+    """A form field that validates input as an Estonian personal identification code.
 
     See: https://www.riigiteataja.ee/akt/106032012004
     """
@@ -91,7 +91,7 @@ class EEPersonalIdentificationCode(Field):
         return value
 
 
-class EEBusinessRegistryCode(EEPersonalIdentificationCode, Field):
+class EEBusinessRegistryCode(Field):
     """A form field that validates input as an
     Estonian business registration code.
     """
@@ -99,6 +99,10 @@ class EEBusinessRegistryCode(EEPersonalIdentificationCode, Field):
         'invalid_format': _('Enter an 8-digit Estonian business registry code.'),
         'invalid': _('Enter a valid Estonian business registry code.'),
     }
+
+    @staticmethod
+    def ee_checksum(value):
+        return EEPersonalIdentificationCode.ee_checksum(value)
 
     def clean(self, value):
         value = super(EEBusinessRegistryCode, self).clean(value)

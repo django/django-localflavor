@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 
 from localflavor.ee.forms import (EEZipCodeField, EEPersonalIdentificationCode,
-                                  EECountySelect)
+                                  EECountySelect, EEBusinessRegistryCode)
 
 
 class EELocalFlavorTests(SimpleTestCase):
@@ -59,3 +59,17 @@ class EELocalFlavorTests(SimpleTestCase):
             '61402291232': invalid,  # not leap year
         }
         self.assertFieldOutput(EEPersonalIdentificationCode, valid, invalid)
+
+    def test_EEBusinessRegistryCode(self):
+        invalid = ['Enter a valid Estonian business registry code.']
+        invalid_format = ['Enter an 8-digit Estonian business registry code.']
+        valid = {
+            '80053370': '80053370',
+            '11694365': '11694365',  # checksum base 1
+            '10223576': '10223576',  # checksum base 3
+        }
+        invalid = {
+            '4329865': invalid_format,
+            '33333333': invalid,  # invalid checksum
+        }
+        self.assertFieldOutput(EEBusinessRegistryCode, valid, invalid)
