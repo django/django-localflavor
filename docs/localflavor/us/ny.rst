@@ -1,4 +1,4 @@
-United States of America (``us``)
+New York State (``us.ny``)
 =================================
 
 Forms
