@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-02 09:31-0600\n"
-"PO-Revision-Date: 2014-11-02 15:33+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2014-12-10 12:21+0100\n"
+"PO-Revision-Date: 2014-12-10 11:44+0000\n"
+"Last-Translator: Burak Yavuz\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/django-localflavor/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,17 +134,17 @@ msgstr "Bu alan sadece sayıları gerektirir."
 msgid "This field requires 7 or 8 digits."
 msgstr "Bu alan 7 veya 8 rakam gerektirir."
 
-#: ar/forms.py:89
+#: ar/forms.py:95
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
 msgstr "XX-XXXXXXXX-X ya da XXXXXXXXXXXX biçiminde geçerli bir CUIT girin."
 
-#: ar/forms.py:90
+#: ar/forms.py:96
 msgid "Invalid CUIT."
 msgstr "Geçersiz CUIT."
 
-#: ar/forms.py:91
-msgid "Invalid legal type. Type must be 27, 20, 23 or 30."
-msgstr "Geçersiz legal türü. Yazı 27, 20, 23 ya da 30 olmak zorundadır."
+#: ar/forms.py:97
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
+msgstr "Geçersiz legal türü. Yazı 27, 20, 30, 23, 24 ya da 33 olmak zorundadır."
 
 #: at/at_states.py:6
 msgid "Burgenland"
@@ -355,19 +355,19 @@ msgstr "Saskatchewan"
 msgid "Yukon"
 msgstr "Yukon"
 
-#: ca/forms.py:30
+#: ca/forms.py:31
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "XXX XXX biçiminde bir posta kodu girin."
 
-#: ca/forms.py:50 us/forms.py:52
+#: ca/forms.py:51 us/forms.py:52
 msgid "Phone numbers must be in XXX-XXX-XXXX format."
 msgstr "Telefon numaraları XXX-XXX-XXXX biçiminde olmak zorundadır."
 
-#: ca/forms.py:71
+#: ca/forms.py:72
 msgid "Enter a Canadian province or territory."
 msgstr "Kanada eyaleti veya bölgesi girin."
 
-#: ca/forms.py:117
+#: ca/forms.py:118
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr "XXX-XXX-XXX biçiminde geçerli bir Kanada Sosyal Güvenlik numarası girin."
 
@@ -661,7 +661,7 @@ msgstr "Schleswig-Holstein"
 msgid "Thuringia"
 msgstr "Türingiya"
 
-#: de/forms.py:26 ee/forms.py:24 fi/forms.py:23 fr/forms.py:29
+#: de/forms.py:26 ee/forms.py:24 fi/forms.py:23 fr/forms.py:31
 msgid "Enter a zip code in the format XXXXX."
 msgstr "XXXXX biçiminde bir posta kodu girin."
 
@@ -4127,7 +4127,7 @@ msgstr ""
 
 #: dk/forms.py:16
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
+msgstr "XXXX biçiminde bir posta kodu girin."
 
 #: dk/forms.py:47 no/forms.py:102
 msgid "A phone number must be 8 digits and may have country code"
@@ -4479,32 +4479,32 @@ msgid ""
 "9XXXXXXXX."
 msgstr "6XXXXXXXX, 8XXXXXXXX veya 9XXXXXXXX biçimlerinden birine uygun geçerli bir telefon numarası girin."
 
-#: es/forms.py:76
+#: es/forms.py:81
 msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr "Lütfen geçerli bir NIF, NIE ya da CIF girin."
 
-#: es/forms.py:77
+#: es/forms.py:82
 msgid "Please enter a valid NIF or NIE."
 msgstr "Lütfen geçerli bir NIF ya da NIE girin."
 
-#: es/forms.py:78
+#: es/forms.py:83
 msgid "Invalid checksum for NIF."
 msgstr "NIF için geçersiz sağlama."
 
-#: es/forms.py:79
+#: es/forms.py:84
 msgid "Invalid checksum for NIE."
 msgstr "NIE için geçersiz sağlama."
 
-#: es/forms.py:80
+#: es/forms.py:85
 msgid "Invalid checksum for CIF."
 msgstr "CIF için geçersiz sağlama."
 
-#: es/forms.py:153
+#: es/forms.py:167
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr "Lütfen XXXX-XXXX-XX-XXXXXXXXXX biçiminde geçerli bir banka hesap numarası girin."
 
-#: es/forms.py:154
+#: es/forms.py:168
 msgid "Invalid checksum for bank account number."
 msgstr "Banka hesap numarası için geçersiz sağlama."
 
@@ -4512,373 +4512,687 @@ msgstr "Banka hesap numarası için geçersiz sağlama."
 msgid "Enter a valid Finnish social security number."
 msgstr "Geçerli bir Finlandiya sosyal güvenlik numarası girin."
 
-#: fr/forms.py:33
+#: fr/forms.py:35
 msgid "Zip code"
 msgstr "Posta kodu"
 
-#: fr/forms.py:49
+#: fr/forms.py:51
 msgid "Phone numbers must be in 0X XX XX XX XX format."
 msgstr "Telefon numaraları 0X XX XX XX XX biçiminde olmak zorundadır."
 
-#: fr/forms.py:53 us/models.py:71
+#: fr/forms.py:55 us/models.py:71
 msgid "Phone number"
 msgstr "Telefon numarası"
 
-#: fr/forms.py:112
+#: fr/forms.py:114
 msgid "Select Department"
 msgstr "Bölüm Seç"
 
-#: fr/forms.py:123
+#: fr/forms.py:125
 msgid "Select Region"
 msgstr "Bölge Seç"
 
-#: fr/forms.py:135
+#: fr/forms.py:137
 msgid "Enter a valid French French National Identification number."
-msgstr ""
+msgstr "Geçerli bir Fransız Ulusal Kimlik numarası girin."
+
+#: fr/forms.py:216
+msgid "Enter a valid French SIREN number."
+msgstr "Geçerli bir Fransız SIREN numarası girin."
+
+#: fr/forms.py:237
+msgid "Enter a valid French SIRET number."
+msgstr "Geçerli bir Fransız SIRET numarası girin."
+
+#: fr/models.py:12
+msgid "SIREN Number"
+msgstr "SIREN Numarası"
+
+#: fr/models.py:32
+msgid "SIRET Number"
+msgstr "SIRET Numarası"
 
 #: gb/forms.py:26
 msgid "Enter a valid postcode."
 msgstr "Geçerli bir posta kodu girin."
 
-#: gb/gb_regions.py:5
-msgid "Bedfordshire"
-msgstr "Bedfordshire"
+#: gb/gb_regions.py:19
+msgid "Bath and North East Somerset"
+msgstr ""
 
-#: gb/gb_regions.py:6
+#: gb/gb_regions.py:20
+msgid "Bedford"
+msgstr ""
+
+#: gb/gb_regions.py:21
 msgid "Berkshire"
 msgstr "Berkshire"
 
-#: gb/gb_regions.py:7
+#: gb/gb_regions.py:22
+msgid "Blackburn with Darwen"
+msgstr ""
+
+#: gb/gb_regions.py:23
+msgid "Blackpool"
+msgstr ""
+
+#: gb/gb_regions.py:24
+msgid "Bournemouth"
+msgstr ""
+
+#: gb/gb_regions.py:25
+msgid "Brighton & Hove"
+msgstr ""
+
+#: gb/gb_regions.py:26
 msgid "Bristol"
 msgstr "Bristol"
 
-#: gb/gb_regions.py:8
+#: gb/gb_regions.py:27
 msgid "Buckinghamshire"
 msgstr "Buckinghamshire"
 
-#: gb/gb_regions.py:9
+#: gb/gb_regions.py:28
 msgid "Cambridgeshire"
 msgstr "Cambridgeshire"
 
-#: gb/gb_regions.py:10
-msgid "Cheshire"
-msgstr "Cheshire"
+#: gb/gb_regions.py:29
+msgid "Central Bedfordshire"
+msgstr ""
 
-#: gb/gb_regions.py:11
-msgid "City of London"
-msgstr "Londra Şehri"
+#: gb/gb_regions.py:30
+msgid "Cheshire East"
+msgstr ""
 
-#: gb/gb_regions.py:12
+#: gb/gb_regions.py:31
+msgid "Cheshire West and Chester"
+msgstr ""
+
+#: gb/gb_regions.py:32
 msgid "Cornwall"
 msgstr "Cornwall"
 
-#: gb/gb_regions.py:13
-msgid "County Durham"
-msgstr "Durham Kontluğu"
-
-#: gb/gb_regions.py:14
+#: gb/gb_regions.py:33
 msgid "Cumbria"
 msgstr "Cumbria"
 
-#: gb/gb_regions.py:15
+#: gb/gb_regions.py:34
+msgid "Darlington"
+msgstr ""
+
+#: gb/gb_regions.py:35
+msgid "Derby"
+msgstr ""
+
+#: gb/gb_regions.py:36
 msgid "Derbyshire"
 msgstr "Derbyshire"
 
-#: gb/gb_regions.py:16
+#: gb/gb_regions.py:37
 msgid "Devon"
 msgstr "Devon"
 
-#: gb/gb_regions.py:17
+#: gb/gb_regions.py:38
 msgid "Dorset"
 msgstr "Dorset"
 
-#: gb/gb_regions.py:18
+#: gb/gb_regions.py:39
+msgid "Durham"
+msgstr ""
+
+#: gb/gb_regions.py:40
 msgid "East Riding of Yorkshire"
 msgstr "East Riding of Yorkshire"
 
-#: gb/gb_regions.py:19
+#: gb/gb_regions.py:41
 msgid "East Sussex"
 msgstr "Doğu  Sussex"
 
-#: gb/gb_regions.py:20
+#: gb/gb_regions.py:42
 msgid "Essex"
 msgstr "Essex"
 
-#: gb/gb_regions.py:21
+#: gb/gb_regions.py:43
 msgid "Gloucestershire"
 msgstr "Gloucestershire"
 
-#: gb/gb_regions.py:22
-msgid "Greater London"
-msgstr "Büyük İngiltere"
-
-#: gb/gb_regions.py:23
+#: gb/gb_regions.py:44
 msgid "Greater Manchester"
 msgstr "Büyük Manchester"
 
-#: gb/gb_regions.py:24
+#: gb/gb_regions.py:45
+msgid "Halton"
+msgstr ""
+
+#: gb/gb_regions.py:46
 msgid "Hampshire"
 msgstr "Hampshire"
 
-#: gb/gb_regions.py:25
+#: gb/gb_regions.py:47
+msgid "Hartlepool"
+msgstr ""
+
+#: gb/gb_regions.py:48
 msgid "Herefordshire"
 msgstr "Herefordshire"
 
-#: gb/gb_regions.py:26
+#: gb/gb_regions.py:49
 msgid "Hertfordshire"
 msgstr "Hertfordshire"
 
-#: gb/gb_regions.py:27
+#: gb/gb_regions.py:50
 msgid "Isle of Wight"
 msgstr "Wight Adası"
 
-#: gb/gb_regions.py:28
+#: gb/gb_regions.py:51
 msgid "Kent"
 msgstr "Kent"
 
-#: gb/gb_regions.py:29
+#: gb/gb_regions.py:52
+msgid "Kingston upon Hull"
+msgstr ""
+
+#: gb/gb_regions.py:53
 msgid "Lancashire"
 msgstr "Lancashire"
 
-#: gb/gb_regions.py:30
+#: gb/gb_regions.py:54
+msgid "Leicester"
+msgstr ""
+
+#: gb/gb_regions.py:55
 msgid "Leicestershire"
 msgstr "Leicestershire"
 
-#: gb/gb_regions.py:31
+#: gb/gb_regions.py:56
 msgid "Lincolnshire"
 msgstr "Lincolnshire"
 
-#: gb/gb_regions.py:32
+#: gb/gb_regions.py:57
+msgid "London"
+msgstr ""
+
+#: gb/gb_regions.py:58
+msgid "Luton"
+msgstr ""
+
+#: gb/gb_regions.py:59
+msgid "Medway"
+msgstr ""
+
+#: gb/gb_regions.py:60
 msgid "Merseyside"
 msgstr "Merseyside"
 
-#: gb/gb_regions.py:33
+#: gb/gb_regions.py:61
+msgid "Middlesbrough"
+msgstr ""
+
+#: gb/gb_regions.py:62
+msgid "Milton Keynes"
+msgstr ""
+
+#: gb/gb_regions.py:63
 msgid "Norfolk"
 msgstr "Norfolk"
 
-#: gb/gb_regions.py:34
+#: gb/gb_regions.py:64
+msgid "North East Lincolnshire"
+msgstr ""
+
+#: gb/gb_regions.py:65
+msgid "North Lincolnshire"
+msgstr ""
+
+#: gb/gb_regions.py:66
+msgid "North Somerset"
+msgstr ""
+
+#: gb/gb_regions.py:67
 msgid "North Yorkshire"
 msgstr "Kuzey Yorkshire"
 
-#: gb/gb_regions.py:35
+#: gb/gb_regions.py:68
 msgid "Northamptonshire"
 msgstr "Northamptonshire"
 
-#: gb/gb_regions.py:36
+#: gb/gb_regions.py:69
 msgid "Northumberland"
 msgstr "Northumberland"
 
-#: gb/gb_regions.py:37
+#: gb/gb_regions.py:70
+msgid "Nottingham"
+msgstr ""
+
+#: gb/gb_regions.py:71
 msgid "Nottinghamshire"
 msgstr "Nottinghamshire"
 
-#: gb/gb_regions.py:38
+#: gb/gb_regions.py:72
 msgid "Oxfordshire"
 msgstr "Oxfordshire"
 
-#: gb/gb_regions.py:39
+#: gb/gb_regions.py:73
+msgid "Peterborough"
+msgstr ""
+
+#: gb/gb_regions.py:74
+msgid "Plymouth"
+msgstr ""
+
+#: gb/gb_regions.py:75
+msgid "Poole"
+msgstr ""
+
+#: gb/gb_regions.py:76
+msgid "Portsmouth"
+msgstr ""
+
+#: gb/gb_regions.py:77
+msgid "Redcar and Cleveland"
+msgstr ""
+
+#: gb/gb_regions.py:78
 msgid "Rutland"
 msgstr "Rutland"
 
-#: gb/gb_regions.py:40
+#: gb/gb_regions.py:79
 msgid "Shropshire"
 msgstr "Shropshire"
 
-#: gb/gb_regions.py:41
+#: gb/gb_regions.py:80
 msgid "Somerset"
 msgstr "Somerset"
 
-#: gb/gb_regions.py:42
+#: gb/gb_regions.py:81
+msgid "South Gloucestershire"
+msgstr ""
+
+#: gb/gb_regions.py:82
 msgid "South Yorkshire"
 msgstr "Güney Yorkshire"
 
-#: gb/gb_regions.py:43
+#: gb/gb_regions.py:83
+msgid "Southampton"
+msgstr ""
+
+#: gb/gb_regions.py:84
+msgid "Southend-on-Sea"
+msgstr ""
+
+#: gb/gb_regions.py:85
 msgid "Staffordshire"
 msgstr "Staffordshire"
 
-#: gb/gb_regions.py:44
+#: gb/gb_regions.py:86
+msgid "Stockton-on-Tees"
+msgstr ""
+
+#: gb/gb_regions.py:87
+msgid "Stoke-on-Trent"
+msgstr ""
+
+#: gb/gb_regions.py:88
 msgid "Suffolk"
 msgstr "Suffolk"
 
-#: gb/gb_regions.py:45
+#: gb/gb_regions.py:89
 msgid "Surrey"
 msgstr "Surrey"
 
-#: gb/gb_regions.py:46
+#: gb/gb_regions.py:90
+msgid "Swindon"
+msgstr ""
+
+#: gb/gb_regions.py:91
+msgid "Telford and Wrekin"
+msgstr ""
+
+#: gb/gb_regions.py:92
+msgid "Thurrock"
+msgstr ""
+
+#: gb/gb_regions.py:93
+msgid "Torbay"
+msgstr ""
+
+#: gb/gb_regions.py:94
 msgid "Tyne and Wear"
 msgstr "Tyne ve Wear"
 
-#: gb/gb_regions.py:47
+#: gb/gb_regions.py:95
+msgid "Warrington"
+msgstr ""
+
+#: gb/gb_regions.py:96
 msgid "Warwickshire"
 msgstr "Warwickshire"
 
-#: gb/gb_regions.py:48
+#: gb/gb_regions.py:97
 msgid "West Midlands"
 msgstr "Batı Midlands"
 
-#: gb/gb_regions.py:49
+#: gb/gb_regions.py:98
 msgid "West Sussex"
 msgstr "Batı Sussex"
 
-#: gb/gb_regions.py:50
+#: gb/gb_regions.py:99
 msgid "West Yorkshire"
 msgstr "Batı Yorkshire"
 
-#: gb/gb_regions.py:51
+#: gb/gb_regions.py:100
 msgid "Wiltshire"
 msgstr "Wiltshire"
 
-#: gb/gb_regions.py:52
+#: gb/gb_regions.py:101
 msgid "Worcestershire"
 msgstr "Worcestershire"
 
-#: gb/gb_regions.py:57
-msgid "County Antrim"
-msgstr "Antrim Kontluğu"
+#: gb/gb_regions.py:102
+msgid "York"
+msgstr ""
 
-#: gb/gb_regions.py:58
-msgid "County Armagh"
-msgstr "Armagh Kontluğu"
+#: gb/gb_regions.py:110
+msgid "Antrim"
+msgstr ""
 
-#: gb/gb_regions.py:59
-msgid "County Down"
-msgstr "Down Kontluğu"
+#: gb/gb_regions.py:111
+msgid "Armagh"
+msgstr ""
 
-#: gb/gb_regions.py:60
-msgid "County Fermanagh"
-msgstr "Fermanagh Kontluğu"
+#: gb/gb_regions.py:112
+msgid "Down"
+msgstr ""
 
-#: gb/gb_regions.py:61
-msgid "County Londonderry"
-msgstr "Londonderry Kontluğu"
+#: gb/gb_regions.py:113
+msgid "Fermanagh"
+msgstr ""
 
-#: gb/gb_regions.py:62
-msgid "County Tyrone"
-msgstr "Tyrone Kontluğu"
+#: gb/gb_regions.py:114
+msgid "Londonderry"
+msgstr ""
 
-#: gb/gb_regions.py:67
-msgid "Clwyd"
-msgstr "Clwyd"
+#: gb/gb_regions.py:115
+msgid "Tyrone"
+msgstr ""
 
-#: gb/gb_regions.py:68
-msgid "Dyfed"
-msgstr "Dyfed"
+#: gb/gb_regions.py:123
+msgid "Blaenau Gwent"
+msgstr ""
 
-#: gb/gb_regions.py:69
-msgid "Gwent"
-msgstr "Gwent"
+#: gb/gb_regions.py:124
+msgid "Bridgend"
+msgstr ""
 
-#: gb/gb_regions.py:70
+#: gb/gb_regions.py:125
+msgid "Caerphilly"
+msgstr ""
+
+#: gb/gb_regions.py:126
+msgid "Cardiff"
+msgstr ""
+
+#: gb/gb_regions.py:127
+msgid "Carmarthenshire"
+msgstr ""
+
+#: gb/gb_regions.py:128
+msgid "Ceredigion"
+msgstr ""
+
+#: gb/gb_regions.py:129
+msgid "Conwy"
+msgstr ""
+
+#: gb/gb_regions.py:130
+msgid "Denbighshire"
+msgstr ""
+
+#: gb/gb_regions.py:131
+msgid "Flintshire"
+msgstr ""
+
+#: gb/gb_regions.py:132
 msgid "Gwynedd"
 msgstr "Gwynedd"
 
-#: gb/gb_regions.py:71
-msgid "Mid Glamorgan"
-msgstr "Orta Glamorgan"
+#: gb/gb_regions.py:133
+msgid "Isle of Anglesey"
+msgstr ""
 
-#: gb/gb_regions.py:72
+#: gb/gb_regions.py:134
+msgid "Merthyr Tydfil"
+msgstr ""
+
+#: gb/gb_regions.py:135
+msgid "Monmouthshire"
+msgstr ""
+
+#: gb/gb_regions.py:136
+msgid "Neath Port Talbot"
+msgstr ""
+
+#: gb/gb_regions.py:137
+msgid "Newport"
+msgstr ""
+
+#: gb/gb_regions.py:138
+msgid "Pembrokeshire"
+msgstr ""
+
+#: gb/gb_regions.py:139
 msgid "Powys"
 msgstr "Powys"
 
-#: gb/gb_regions.py:73
-msgid "South Glamorgan"
-msgstr "Kuzey Glamorgan"
+#: gb/gb_regions.py:140
+msgid "Rhondda Cynon Taf"
+msgstr ""
 
-#: gb/gb_regions.py:74
-msgid "West Glamorgan"
-msgstr "Batı Glamorgan"
+#: gb/gb_regions.py:141
+msgid "Swansea"
+msgstr ""
 
-#: gb/gb_regions.py:79
-msgid "Borders"
-msgstr "Sınırlar"
+#: gb/gb_regions.py:142
+msgid "Torfaen"
+msgstr ""
 
-#: gb/gb_regions.py:80
-msgid "Central Scotland"
-msgstr "Orta İskoçya"
+#: gb/gb_regions.py:143
+msgid "Vale of Glamorgan"
+msgstr ""
 
-#: gb/gb_regions.py:81
+#: gb/gb_regions.py:144
+msgid "Wrexham"
+msgstr ""
+
+#: gb/gb_regions.py:151
+msgid "Aberdeen City"
+msgstr ""
+
+#: gb/gb_regions.py:152
+msgid "Aberdeenshire"
+msgstr ""
+
+#: gb/gb_regions.py:153
+msgid "Angus"
+msgstr ""
+
+#: gb/gb_regions.py:154
+msgid "Argyll and Bute"
+msgstr ""
+
+#: gb/gb_regions.py:155
+msgid "Clackmannanshire"
+msgstr ""
+
+#: gb/gb_regions.py:156
 msgid "Dumfries and Galloway"
 msgstr "Dumfries ve Galloway"
 
-#: gb/gb_regions.py:82
+#: gb/gb_regions.py:157
+msgid "Dundee City"
+msgstr ""
+
+#: gb/gb_regions.py:158
+msgid "East Ayrshire"
+msgstr ""
+
+#: gb/gb_regions.py:159
+msgid "East Dunbartonshire"
+msgstr ""
+
+#: gb/gb_regions.py:160
+msgid "East Lothian"
+msgstr ""
+
+#: gb/gb_regions.py:161
+msgid "East Renfrewshire"
+msgstr ""
+
+#: gb/gb_regions.py:162
+msgid "Edinburgh, City of"
+msgstr ""
+
+#: gb/gb_regions.py:163
+msgid "Falkirk"
+msgstr ""
+
+#: gb/gb_regions.py:164
 msgid "Fife"
 msgstr "Fife"
 
-#: gb/gb_regions.py:83
-msgid "Grampian"
-msgstr "Grampian"
+#: gb/gb_regions.py:165
+msgid "Glasgow City"
+msgstr ""
 
-#: gb/gb_regions.py:84
+#: gb/gb_regions.py:166
 msgid "Highland"
 msgstr "Highland"
 
-#: gb/gb_regions.py:85
-msgid "Lothian"
-msgstr "Lothian"
+#: gb/gb_regions.py:167
+msgid "Inverclyde"
+msgstr ""
 
-#: gb/gb_regions.py:86
+#: gb/gb_regions.py:168
+msgid "Midlothian"
+msgstr ""
+
+#: gb/gb_regions.py:169
+msgid "Moray"
+msgstr ""
+
+#: gb/gb_regions.py:170
+msgid "North Ayrshire"
+msgstr ""
+
+#: gb/gb_regions.py:171
+msgid "North Lanarkshire"
+msgstr ""
+
+#: gb/gb_regions.py:172
+msgid "Perth and Kinross"
+msgstr ""
+
+#: gb/gb_regions.py:173
+msgid "Renfrewshire"
+msgstr ""
+
+#: gb/gb_regions.py:174
+msgid "Scottish Borders"
+msgstr ""
+
+#: gb/gb_regions.py:175
+msgid "South Ayrshire"
+msgstr ""
+
+#: gb/gb_regions.py:176
+msgid "South Lanarkshire"
+msgstr ""
+
+#: gb/gb_regions.py:177
+msgid "Stirling"
+msgstr ""
+
+#: gb/gb_regions.py:178
+msgid "West Dunbartonshire"
+msgstr ""
+
+#: gb/gb_regions.py:179
+msgid "West Lothian"
+msgstr ""
+
+#: gb/gb_regions.py:180
+msgid "Na h-Eileanan Siar"
+msgstr ""
+
+#: gb/gb_regions.py:181
 msgid "Orkney Islands"
 msgstr "Orkney Adaları"
 
-#: gb/gb_regions.py:87
+#: gb/gb_regions.py:182
 msgid "Shetland Islands"
 msgstr "Shetland Adaları"
 
-#: gb/gb_regions.py:88
-msgid "Strathclyde"
-msgstr "Strathclyde"
-
-#: gb/gb_regions.py:89
-msgid "Tayside"
-msgstr "Tayside"
-
-#: gb/gb_regions.py:90
-msgid "Western Isles"
-msgstr "Batı Adaları"
-
-#: gb/gb_regions.py:95
+#: gb/gb_regions.py:188
 msgid "England"
 msgstr "İngiltere"
 
-#: gb/gb_regions.py:96
+#: gb/gb_regions.py:189
 msgid "Northern Ireland"
 msgstr "Kuzey İrlanda"
 
-#: gb/gb_regions.py:97
-msgid "Scotland"
-msgstr "İskoçya"
-
-#: gb/gb_regions.py:98
+#: gb/gb_regions.py:190
 msgid "Wales"
 msgstr "Galler"
 
+#: gb/gb_regions.py:191
+msgid "Scotland"
+msgstr "İskoçya"
+
 #: generic/models.py:36
 msgid "An International Bank Account Number"
-msgstr ""
+msgstr "Uluslararası Banka Hesap Numarası"
 
-#: generic/validators.py:140
-#, python-format
-msgid "%(country_code)s IBANs must contain %(number)s characters."
-msgstr ""
+#: generic/models.py:65
+msgid "Business Identifier Code"
+msgstr "İşletme Kimlik Kodu"
 
-#: generic/validators.py:143
-#, python-format
-msgid "%s is not a valid country code for IBAN."
-msgstr ""
-
-#: generic/validators.py:145
-#, python-format
-msgid "%s IBANs are not allowed in this field."
-msgstr ""
-
-#: generic/validators.py:160
+#: generic/validators.py:142
 #, python-format
 msgid "%s is not a valid character for IBAN."
-msgstr ""
+msgstr "%s, IBAN için geçerli bir karakter değil."
 
 #: generic/validators.py:164
+#, python-format
+msgid "%(country_code)s IBANs must contain %(number)s characters."
+msgstr "%(country_code)s IBAN'leri %(number)s karakter içermek zorundadır."
+
+#: generic/validators.py:167
+#, python-format
+msgid "%s is not a valid country code for IBAN."
+msgstr "%s, IBAN için geçerli bir ülke kodu değil."
+
+#: generic/validators.py:169
+#, python-format
+msgid "%s IBANs are not allowed in this field."
+msgstr "%s IBAN'lerine bu alanda izin verilmez."
+
+#: generic/validators.py:172
 msgid "Not a valid IBAN."
-msgstr ""
+msgstr "Geçerli bir IBAN değil."
+
+#: generic/validators.py:192
+msgid "BIC codes have either 8 or 11 characters."
+msgstr "BIC kodları ya 8 ya da 11 karakter olur."
+
+#: generic/validators.py:198
+#, python-format
+msgid "%s is not a valid institution code."
+msgstr "%s geçerli bir kurum kodu değil."
+
+#: generic/validators.py:203
+#, python-format
+msgid "%s is not a valid country code."
+msgstr "%s geçerli bir ülke kodu değil."
 
 #: gr/forms.py:27
 msgid "Enter a valid 5-digit greek postal code."
@@ -4911,51 +5225,51 @@ msgstr "Telefon numarası şurada belirtilen biçimlerden biri olmak zorundadır
 msgid "Phone number should start with one of the followings: %s."
 msgstr "Telefon numarası şurada belirtilenlerden biri ile başlamalı: %s."
 
-#: hr/forms.py:74
+#: hr/forms.py:75
 msgid "Enter a valid 13 digit JMBG"
 msgstr "Geçerli bir 13 rakamlı JMBG girin"
 
-#: hr/forms.py:75
+#: hr/forms.py:76
 msgid "Error in date segment"
 msgstr "Tarih bölümünde hata"
 
-#: hr/forms.py:121
+#: hr/forms.py:122
 msgid "Enter a valid 11 digit OIB"
 msgstr "Geçerli bir 11 rakamlı OIB girin"
 
-#: hr/forms.py:150 id_/forms.py:112
+#: hr/forms.py:151 id_/forms.py:112
 msgid "Enter a valid vehicle license plate number"
 msgstr "Geçerli bir araç plaka numarası girin"
 
-#: hr/forms.py:151
+#: hr/forms.py:152
 msgid "Enter a valid location code"
 msgstr "Geçerli bir konum kodu girin"
 
-#: hr/forms.py:152
+#: hr/forms.py:153
 msgid "Number part cannot be zero"
 msgstr "Numara bölümü sıfır olamaz"
 
-#: hr/forms.py:188
+#: hr/forms.py:189
 msgid "Enter a valid 5 digit postal code"
 msgstr "Geçerli bir 5 rakamlı posta kodu girin"
 
-#: hr/forms.py:216 id_/forms.py:72 nl/forms.py:60
+#: hr/forms.py:217 id_/forms.py:72 nl/forms.py:60
 msgid "Enter a valid phone number"
 msgstr "Geçerli bir telefon numarası girin"
 
-#: hr/forms.py:217
+#: hr/forms.py:218
 msgid "Enter a valid area or mobile network code"
 msgstr "Geçerli bir alan veya mobil şebeke kodu girin"
 
-#: hr/forms.py:218
+#: hr/forms.py:219
 msgid "The phone number is too long"
 msgstr "Telefon numarası çok uzun"
 
-#: hr/forms.py:256
+#: hr/forms.py:257
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr "601983 ile başlayan geçerli bir 19 rakamlı JMBAG girin"
 
-#: hr/forms.py:257
+#: hr/forms.py:258
 msgid "Card issue number cannot be zero"
 msgstr "Kart basım numarası sıfır olamaz"
 
@@ -5475,7 +5789,7 @@ msgstr "Geçerli bir VAT numarası girin."
 
 #: it/forms.py:130
 msgid "Enter a valid Italian phone number."
-msgstr ""
+msgstr "Geçerli bir İtalya telefon numarası girin."
 
 #: it/util.py:46 it/util.py:59
 msgid "Check digit does not match."
@@ -6837,7 +7151,7 @@ msgstr "Benzersiz ana vatandaşlık numarası (13 rakam)"
 
 #: mt/forms.py:19
 msgid "Enter a valid postal code in format AAA 0000."
-msgstr ""
+msgstr "AAA 0000 biçiminde geçerli bir posta kodu girin."
 
 #: mx/forms.py:65
 msgid "Enter a valid zip code in the format XXXXX."
@@ -7081,15 +7395,15 @@ msgstr "Geçerli bir Norveç Sosyal Güvenlik numarası girin."
 
 #: nz/forms.py:73
 msgid "Invalid post code."
-msgstr ""
+msgstr "Geçersiz posta kodu."
 
 #: nz/forms.py:86
 msgid "Invalid phone number."
-msgstr ""
+msgstr "Geçersiz telefon numarası."
 
 #: nz/forms.py:130
 msgid "Invalid bank account number."
-msgstr ""
+msgstr "Geçersiz banka hesap numarası."
 
 #: nz/nz_councils.py:31
 msgid "Far North District"
@@ -7417,7 +7731,7 @@ msgstr ""
 
 #: nz/nz_regions.py:27
 msgid "West Coast"
-msgstr ""
+msgstr "Batı Yakası"
 
 #: pe/forms.py:30
 msgid "This field requires 8 digits."
@@ -7507,11 +7821,11 @@ msgstr "Vergi Numarası (NIP) için yanlış sağlama."
 
 #: pl/forms.py:178
 msgid "National Business Register Number (REGON) consists of 9 or 14 digits."
-msgstr "Ulusal İş Kayıt Numarası (REGON) 9 veya 17 rakamdan meydana gelir."
+msgstr "Ulusal İşletme Kayıt Numarası (REGON) 9 veya 14 rakamdan meydana gelir."
 
 #: pl/forms.py:179
 msgid "Wrong checksum for the National Business Register Number (REGON)."
-msgstr "Ulusal İş Kayıt Numarası (REGON) için yanlış sağlama."
+msgstr "Ulusal İşletme Kayıt Numarası (REGON) için yanlış sağlama."
 
 #: pl/forms.py:226
 msgid "Enter a postal code in the format XX-XXX."
@@ -7705,15 +8019,15 @@ msgstr "Geçerli bir CNP girin."
 msgid ""
 "Phone numbers may only have 7 or 10 digits, except the national short "
 "numbers which have 3 to 6 digits"
-msgstr ""
+msgstr "Telefon numaraları sadece 7 ya da 10 rakam olabilir, 3 ila 6 rakam arasında olan ulusal kısa numaralar hariçtir."
 
 #: ro/forms.py:180
 msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr ""
+msgstr "Normal telefon numaraları (7 veya 10 rakam) \"0\" ile başlamak zorundadır"
 
 #: ro/forms.py:182
 msgid "National short numbers (3 to 6 digits) must begin with \"1\""
-msgstr ""
+msgstr "Ulusal telefon numaraları (3 veya 6 rakam) \"1\" ile başlamak zorundadır"
 
 #: ro/forms.py:213
 msgid "Enter a valid postal code in the format XXXXXX"
@@ -8197,16 +8511,16 @@ msgstr "Jamtland"
 
 #: sg/forms.py:31
 msgid "Enter a 6-digit postal code."
-msgstr ""
+msgstr "6 rakamlı posta kodu girin."
 
 #: sg/forms.py:45
 msgid ""
 "Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
+msgstr "Telefon numarası 8 rakam içermek zorundadır ve, ya 6, ya da 8, ya da 9 ile başlama zorundadır."
 
 #: sg/forms.py:82
 msgid "Invalid NRIC/FIN."
-msgstr ""
+msgstr "Geçersiz NRIC/FIN."
 
 #: si/forms.py:27
 msgid "The first 7 digits of the EMSO must represent a valid past date."
@@ -8610,11 +8924,11 @@ msgstr "A.B.D. posta kodu (iki büyük harf)"
 
 #: us/models.py:54
 msgid "U.S. ZIP code"
-msgstr ""
+msgstr "A.B.D. Posta kodu"
 
 #: us/models.py:91
 msgid "Social security number"
-msgstr ""
+msgstr "Sosyal güvenlik numarası"
 
 #: uy/forms.py:30
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."

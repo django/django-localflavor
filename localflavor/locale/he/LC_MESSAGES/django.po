@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-02 09:31-0600\n"
-"PO-Revision-Date: 2014-11-02 15:33+0000\n"
+"POT-Creation-Date: 2014-12-10 12:21+0100\n"
+"PO-Revision-Date: 2014-12-10 11:22+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/django-localflavor/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -129,17 +129,17 @@ msgstr "יש להזין רק ספרות בשדה זה."
 msgid "This field requires 7 or 8 digits."
 msgstr "שדה זה דורש 7 או 8 ספרות."
 
-#: ar/forms.py:89
+#: ar/forms.py:95
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
 msgstr "יש להזין מספר CUIT חוקי בתבנית XX-XXXXXXXX-X או XXXXXXXXXXXX."
 
-#: ar/forms.py:90
+#: ar/forms.py:96
 msgid "Invalid CUIT."
 msgstr "CUIT שגוי"
 
-#: ar/forms.py:91
-msgid "Invalid legal type. Type must be 27, 20, 23 or 30."
-msgstr "סוג חוקי שגוי. סוג חייב להיות  27, 20, 23 או 30."
+#: ar/forms.py:97
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
+msgstr ""
 
 #: at/at_states.py:6
 msgid "Burgenland"
@@ -350,19 +350,19 @@ msgstr "ססקצ'ואן"
 msgid "Yukon"
 msgstr "יוקון"
 
-#: ca/forms.py:30
+#: ca/forms.py:31
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "יש להזין מיקוד בתבנית XXX XXX."
 
-#: ca/forms.py:50 us/forms.py:52
+#: ca/forms.py:51 us/forms.py:52
 msgid "Phone numbers must be in XXX-XXX-XXXX format."
 msgstr "מספרי טלפון חייבים להיות בתבנית XXX-XXX-XXXX."
 
-#: ca/forms.py:71
+#: ca/forms.py:72
 msgid "Enter a Canadian province or territory."
 msgstr "יש להזין פרובינציה או טריטוריה קנדיים."
 
-#: ca/forms.py:117
+#: ca/forms.py:118
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr "יש להזין מספר ביטוח לאומי קנדי חוקי בתבנית XXX-XXX-XXXX."
 
@@ -656,7 +656,7 @@ msgstr "שלזוויג־הולשטיין"
 msgid "Thuringia"
 msgstr "תורינגיה"
 
-#: de/forms.py:26 ee/forms.py:24 fi/forms.py:23 fr/forms.py:29
+#: de/forms.py:26 ee/forms.py:24 fi/forms.py:23 fr/forms.py:31
 msgid "Enter a zip code in the format XXXXX."
 msgstr "יש להזין מיקוד בתבנית XXXXX."
 
@@ -4474,32 +4474,32 @@ msgid ""
 "9XXXXXXXX."
 msgstr "נא להזין מספר טלפון חוקי באחת מהתבניות 6XXXXXXXX, 8XXXXXXXX  או 9XXXXXXXX."
 
-#: es/forms.py:76
+#: es/forms.py:81
 msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr "נא להזין NIF, NIE, או CIF חוקי."
 
-#: es/forms.py:77
+#: es/forms.py:82
 msgid "Please enter a valid NIF or NIE."
 msgstr "נא להזין NIF או NIE חוקי."
 
-#: es/forms.py:78
+#: es/forms.py:83
 msgid "Invalid checksum for NIF."
 msgstr "סיכום ביקורת שגוי עבור NIF."
 
-#: es/forms.py:79
+#: es/forms.py:84
 msgid "Invalid checksum for NIE."
 msgstr "סיכום ביקורת שגוי עבור NIE."
 
-#: es/forms.py:80
+#: es/forms.py:85
 msgid "Invalid checksum for CIF."
 msgstr "סיכום ביקורת שגוי עבור CIF."
 
-#: es/forms.py:153
+#: es/forms.py:167
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr "נא להזין מספר חשבון בנק חוקי בתבנית XXXX-XXXX-XX-XXXXXXXXXX."
 
-#: es/forms.py:154
+#: es/forms.py:168
 msgid "Invalid checksum for bank account number."
 msgstr "סיכום ביקורת שגוי עבור מספר חשבון בנק."
 
@@ -4507,372 +4507,686 @@ msgstr "סיכום ביקורת שגוי עבור מספר חשבון בנק."
 msgid "Enter a valid Finnish social security number."
 msgstr "יש להזין מספר ביטוח לאומי פיני חוקי."
 
-#: fr/forms.py:33
+#: fr/forms.py:35
 msgid "Zip code"
 msgstr "מיקוד"
 
-#: fr/forms.py:49
+#: fr/forms.py:51
 msgid "Phone numbers must be in 0X XX XX XX XX format."
 msgstr "מספרי טלפון חייבים  להיות בתבנית 0X XX XX XX XX."
 
-#: fr/forms.py:53 us/models.py:71
+#: fr/forms.py:55 us/models.py:71
 msgid "Phone number"
 msgstr "מספר טלפון"
 
-#: fr/forms.py:112
+#: fr/forms.py:114
 msgid "Select Department"
 msgstr "בחר מחלקה"
 
-#: fr/forms.py:123
+#: fr/forms.py:125
 msgid "Select Region"
 msgstr "בחר מחוז"
 
-#: fr/forms.py:135
+#: fr/forms.py:137
 msgid "Enter a valid French French National Identification number."
+msgstr ""
+
+#: fr/forms.py:216
+msgid "Enter a valid French SIREN number."
+msgstr ""
+
+#: fr/forms.py:237
+msgid "Enter a valid French SIRET number."
+msgstr ""
+
+#: fr/models.py:12
+msgid "SIREN Number"
+msgstr ""
+
+#: fr/models.py:32
+msgid "SIRET Number"
 msgstr ""
 
 #: gb/forms.py:26
 msgid "Enter a valid postcode."
 msgstr "יש להזין מיקוד חוקי."
 
-#: gb/gb_regions.py:5
-msgid "Bedfordshire"
-msgstr " בדפורשייר"
+#: gb/gb_regions.py:19
+msgid "Bath and North East Somerset"
+msgstr ""
 
-#: gb/gb_regions.py:6
+#: gb/gb_regions.py:20
+msgid "Bedford"
+msgstr ""
+
+#: gb/gb_regions.py:21
 msgid "Berkshire"
 msgstr "ברקשייר"
 
-#: gb/gb_regions.py:7
+#: gb/gb_regions.py:22
+msgid "Blackburn with Darwen"
+msgstr ""
+
+#: gb/gb_regions.py:23
+msgid "Blackpool"
+msgstr ""
+
+#: gb/gb_regions.py:24
+msgid "Bournemouth"
+msgstr ""
+
+#: gb/gb_regions.py:25
+msgid "Brighton & Hove"
+msgstr ""
+
+#: gb/gb_regions.py:26
 msgid "Bristol"
 msgstr "בריסטול"
 
-#: gb/gb_regions.py:8
+#: gb/gb_regions.py:27
 msgid "Buckinghamshire"
 msgstr "באקינגהמשייר"
 
-#: gb/gb_regions.py:9
+#: gb/gb_regions.py:28
 msgid "Cambridgeshire"
 msgstr "קיימברידג'שייר"
 
-#: gb/gb_regions.py:10
-msgid "Cheshire"
-msgstr " צ'שייר"
+#: gb/gb_regions.py:29
+msgid "Central Bedfordshire"
+msgstr ""
 
-#: gb/gb_regions.py:11
-msgid "City of London"
-msgstr "הסיטי של לונדון"
+#: gb/gb_regions.py:30
+msgid "Cheshire East"
+msgstr ""
 
-#: gb/gb_regions.py:12
+#: gb/gb_regions.py:31
+msgid "Cheshire West and Chester"
+msgstr ""
+
+#: gb/gb_regions.py:32
 msgid "Cornwall"
 msgstr "קורנוול"
 
-#: gb/gb_regions.py:13
-msgid "County Durham"
-msgstr "מחוז דרהאם"
-
-#: gb/gb_regions.py:14
+#: gb/gb_regions.py:33
 msgid "Cumbria"
 msgstr " קאמבריה"
 
-#: gb/gb_regions.py:15
+#: gb/gb_regions.py:34
+msgid "Darlington"
+msgstr ""
+
+#: gb/gb_regions.py:35
+msgid "Derby"
+msgstr ""
+
+#: gb/gb_regions.py:36
 msgid "Derbyshire"
 msgstr "דרבישייר"
 
-#: gb/gb_regions.py:16
+#: gb/gb_regions.py:37
 msgid "Devon"
 msgstr " דבון"
 
-#: gb/gb_regions.py:17
+#: gb/gb_regions.py:38
 msgid "Dorset"
 msgstr "דורסט"
 
-#: gb/gb_regions.py:18
+#: gb/gb_regions.py:39
+msgid "Durham"
+msgstr ""
+
+#: gb/gb_regions.py:40
 msgid "East Riding of Yorkshire"
 msgstr "מזרח רידינג של יורקשייר"
 
-#: gb/gb_regions.py:19
+#: gb/gb_regions.py:41
 msgid "East Sussex"
 msgstr "מזרח אסקס"
 
-#: gb/gb_regions.py:20
+#: gb/gb_regions.py:42
 msgid "Essex"
 msgstr "אסקס"
 
-#: gb/gb_regions.py:21
+#: gb/gb_regions.py:43
 msgid "Gloucestershire"
 msgstr "גלוסטרשייר"
 
-#: gb/gb_regions.py:22
-msgid "Greater London"
-msgstr "לונדון רבתי"
-
-#: gb/gb_regions.py:23
+#: gb/gb_regions.py:44
 msgid "Greater Manchester"
 msgstr "מנצ'סטר רבתי"
 
-#: gb/gb_regions.py:24
+#: gb/gb_regions.py:45
+msgid "Halton"
+msgstr ""
+
+#: gb/gb_regions.py:46
 msgid "Hampshire"
 msgstr "המפשייר"
 
-#: gb/gb_regions.py:25
+#: gb/gb_regions.py:47
+msgid "Hartlepool"
+msgstr ""
+
+#: gb/gb_regions.py:48
 msgid "Herefordshire"
 msgstr "הרפורדשייר"
 
-#: gb/gb_regions.py:26
+#: gb/gb_regions.py:49
 msgid "Hertfordshire"
 msgstr "הארטפורדשייר"
 
-#: gb/gb_regions.py:27
+#: gb/gb_regions.py:50
 msgid "Isle of Wight"
 msgstr "האי וייט"
 
-#: gb/gb_regions.py:28
+#: gb/gb_regions.py:51
 msgid "Kent"
 msgstr "קנט"
 
-#: gb/gb_regions.py:29
+#: gb/gb_regions.py:52
+msgid "Kingston upon Hull"
+msgstr ""
+
+#: gb/gb_regions.py:53
 msgid "Lancashire"
 msgstr "לנקשייר"
 
-#: gb/gb_regions.py:30
+#: gb/gb_regions.py:54
+msgid "Leicester"
+msgstr ""
+
+#: gb/gb_regions.py:55
 msgid "Leicestershire"
 msgstr "ליסטרשייר"
 
-#: gb/gb_regions.py:31
+#: gb/gb_regions.py:56
 msgid "Lincolnshire"
 msgstr " לינקולנשייר"
 
-#: gb/gb_regions.py:32
+#: gb/gb_regions.py:57
+msgid "London"
+msgstr ""
+
+#: gb/gb_regions.py:58
+msgid "Luton"
+msgstr ""
+
+#: gb/gb_regions.py:59
+msgid "Medway"
+msgstr ""
+
+#: gb/gb_regions.py:60
 msgid "Merseyside"
 msgstr "מרסיסייד"
 
-#: gb/gb_regions.py:33
+#: gb/gb_regions.py:61
+msgid "Middlesbrough"
+msgstr ""
+
+#: gb/gb_regions.py:62
+msgid "Milton Keynes"
+msgstr ""
+
+#: gb/gb_regions.py:63
 msgid "Norfolk"
 msgstr "נורפולק"
 
-#: gb/gb_regions.py:34
+#: gb/gb_regions.py:64
+msgid "North East Lincolnshire"
+msgstr ""
+
+#: gb/gb_regions.py:65
+msgid "North Lincolnshire"
+msgstr ""
+
+#: gb/gb_regions.py:66
+msgid "North Somerset"
+msgstr ""
+
+#: gb/gb_regions.py:67
 msgid "North Yorkshire"
 msgstr "צפון יורקשייר"
 
-#: gb/gb_regions.py:35
+#: gb/gb_regions.py:68
 msgid "Northamptonshire"
 msgstr "נורת'המפטונשייר"
 
-#: gb/gb_regions.py:36
+#: gb/gb_regions.py:69
 msgid "Northumberland"
 msgstr "נורת'אמברלנד"
 
-#: gb/gb_regions.py:37
+#: gb/gb_regions.py:70
+msgid "Nottingham"
+msgstr ""
+
+#: gb/gb_regions.py:71
 msgid "Nottinghamshire"
 msgstr "נוטינגהאמשייר"
 
-#: gb/gb_regions.py:38
+#: gb/gb_regions.py:72
 msgid "Oxfordshire"
 msgstr "אוקספורדשייר"
 
-#: gb/gb_regions.py:39
+#: gb/gb_regions.py:73
+msgid "Peterborough"
+msgstr ""
+
+#: gb/gb_regions.py:74
+msgid "Plymouth"
+msgstr ""
+
+#: gb/gb_regions.py:75
+msgid "Poole"
+msgstr ""
+
+#: gb/gb_regions.py:76
+msgid "Portsmouth"
+msgstr ""
+
+#: gb/gb_regions.py:77
+msgid "Redcar and Cleveland"
+msgstr ""
+
+#: gb/gb_regions.py:78
 msgid "Rutland"
 msgstr "ראטלנד"
 
-#: gb/gb_regions.py:40
+#: gb/gb_regions.py:79
 msgid "Shropshire"
 msgstr "שרופשייר"
 
-#: gb/gb_regions.py:41
+#: gb/gb_regions.py:80
 msgid "Somerset"
 msgstr "סומרסט"
 
-#: gb/gb_regions.py:42
+#: gb/gb_regions.py:81
+msgid "South Gloucestershire"
+msgstr ""
+
+#: gb/gb_regions.py:82
 msgid "South Yorkshire"
 msgstr "דרום יורקשייר"
 
-#: gb/gb_regions.py:43
+#: gb/gb_regions.py:83
+msgid "Southampton"
+msgstr ""
+
+#: gb/gb_regions.py:84
+msgid "Southend-on-Sea"
+msgstr ""
+
+#: gb/gb_regions.py:85
 msgid "Staffordshire"
 msgstr "סטאפורדשייר"
 
-#: gb/gb_regions.py:44
+#: gb/gb_regions.py:86
+msgid "Stockton-on-Tees"
+msgstr ""
+
+#: gb/gb_regions.py:87
+msgid "Stoke-on-Trent"
+msgstr ""
+
+#: gb/gb_regions.py:88
 msgid "Suffolk"
 msgstr " סאפוק"
 
-#: gb/gb_regions.py:45
+#: gb/gb_regions.py:89
 msgid "Surrey"
 msgstr "סוריי"
 
-#: gb/gb_regions.py:46
+#: gb/gb_regions.py:90
+msgid "Swindon"
+msgstr ""
+
+#: gb/gb_regions.py:91
+msgid "Telford and Wrekin"
+msgstr ""
+
+#: gb/gb_regions.py:92
+msgid "Thurrock"
+msgstr ""
+
+#: gb/gb_regions.py:93
+msgid "Torbay"
+msgstr ""
+
+#: gb/gb_regions.py:94
 msgid "Tyne and Wear"
 msgstr "טיין ו־וויר"
 
-#: gb/gb_regions.py:47
+#: gb/gb_regions.py:95
+msgid "Warrington"
+msgstr ""
+
+#: gb/gb_regions.py:96
 msgid "Warwickshire"
 msgstr " וורוויקשייר"
 
-#: gb/gb_regions.py:48
+#: gb/gb_regions.py:97
 msgid "West Midlands"
 msgstr "מערב המידלנדס"
 
-#: gb/gb_regions.py:49
+#: gb/gb_regions.py:98
 msgid "West Sussex"
 msgstr "מערב סאסקס"
 
-#: gb/gb_regions.py:50
+#: gb/gb_regions.py:99
 msgid "West Yorkshire"
 msgstr "מערב יורקשייר"
 
-#: gb/gb_regions.py:51
+#: gb/gb_regions.py:100
 msgid "Wiltshire"
 msgstr " ווילטשייר"
 
-#: gb/gb_regions.py:52
+#: gb/gb_regions.py:101
 msgid "Worcestershire"
 msgstr " ווסטרשייר"
 
-#: gb/gb_regions.py:57
-msgid "County Antrim"
-msgstr "מחוז אנטרים"
+#: gb/gb_regions.py:102
+msgid "York"
+msgstr ""
 
-#: gb/gb_regions.py:58
-msgid "County Armagh"
-msgstr "ארמה"
+#: gb/gb_regions.py:110
+msgid "Antrim"
+msgstr ""
 
-#: gb/gb_regions.py:59
-msgid "County Down"
-msgstr "מחוז דאון"
+#: gb/gb_regions.py:111
+msgid "Armagh"
+msgstr ""
 
-#: gb/gb_regions.py:60
-msgid "County Fermanagh"
-msgstr "מחוז פרמאנה"
+#: gb/gb_regions.py:112
+msgid "Down"
+msgstr ""
 
-#: gb/gb_regions.py:61
-msgid "County Londonderry"
-msgstr "מחוז לונדונברי"
+#: gb/gb_regions.py:113
+msgid "Fermanagh"
+msgstr ""
 
-#: gb/gb_regions.py:62
-msgid "County Tyrone"
-msgstr "מחוז טיירון"
+#: gb/gb_regions.py:114
+msgid "Londonderry"
+msgstr ""
 
-#: gb/gb_regions.py:67
-msgid "Clwyd"
-msgstr "קלוויד"
+#: gb/gb_regions.py:115
+msgid "Tyrone"
+msgstr ""
 
-#: gb/gb_regions.py:68
-msgid "Dyfed"
-msgstr "דייפד"
+#: gb/gb_regions.py:123
+msgid "Blaenau Gwent"
+msgstr ""
 
-#: gb/gb_regions.py:69
-msgid "Gwent"
-msgstr "גוונט"
+#: gb/gb_regions.py:124
+msgid "Bridgend"
+msgstr ""
 
-#: gb/gb_regions.py:70
+#: gb/gb_regions.py:125
+msgid "Caerphilly"
+msgstr ""
+
+#: gb/gb_regions.py:126
+msgid "Cardiff"
+msgstr ""
+
+#: gb/gb_regions.py:127
+msgid "Carmarthenshire"
+msgstr ""
+
+#: gb/gb_regions.py:128
+msgid "Ceredigion"
+msgstr ""
+
+#: gb/gb_regions.py:129
+msgid "Conwy"
+msgstr ""
+
+#: gb/gb_regions.py:130
+msgid "Denbighshire"
+msgstr ""
+
+#: gb/gb_regions.py:131
+msgid "Flintshire"
+msgstr ""
+
+#: gb/gb_regions.py:132
 msgid "Gwynedd"
 msgstr "גווינד"
 
-#: gb/gb_regions.py:71
-msgid "Mid Glamorgan"
-msgstr "מרכז גלמורגן"
+#: gb/gb_regions.py:133
+msgid "Isle of Anglesey"
+msgstr ""
 
-#: gb/gb_regions.py:72
+#: gb/gb_regions.py:134
+msgid "Merthyr Tydfil"
+msgstr ""
+
+#: gb/gb_regions.py:135
+msgid "Monmouthshire"
+msgstr ""
+
+#: gb/gb_regions.py:136
+msgid "Neath Port Talbot"
+msgstr ""
+
+#: gb/gb_regions.py:137
+msgid "Newport"
+msgstr ""
+
+#: gb/gb_regions.py:138
+msgid "Pembrokeshire"
+msgstr ""
+
+#: gb/gb_regions.py:139
 msgid "Powys"
 msgstr "ַפואיס"
 
-#: gb/gb_regions.py:73
-msgid "South Glamorgan"
-msgstr "דרום גלמורגן"
+#: gb/gb_regions.py:140
+msgid "Rhondda Cynon Taf"
+msgstr ""
 
-#: gb/gb_regions.py:74
-msgid "West Glamorgan"
-msgstr "מערב גלמורגן"
+#: gb/gb_regions.py:141
+msgid "Swansea"
+msgstr ""
 
-#: gb/gb_regions.py:79
-msgid "Borders"
-msgstr "גבולות"
+#: gb/gb_regions.py:142
+msgid "Torfaen"
+msgstr ""
 
-#: gb/gb_regions.py:80
-msgid "Central Scotland"
-msgstr "מרכז סקוטלנד"
+#: gb/gb_regions.py:143
+msgid "Vale of Glamorgan"
+msgstr ""
 
-#: gb/gb_regions.py:81
+#: gb/gb_regions.py:144
+msgid "Wrexham"
+msgstr ""
+
+#: gb/gb_regions.py:151
+msgid "Aberdeen City"
+msgstr ""
+
+#: gb/gb_regions.py:152
+msgid "Aberdeenshire"
+msgstr ""
+
+#: gb/gb_regions.py:153
+msgid "Angus"
+msgstr ""
+
+#: gb/gb_regions.py:154
+msgid "Argyll and Bute"
+msgstr ""
+
+#: gb/gb_regions.py:155
+msgid "Clackmannanshire"
+msgstr ""
+
+#: gb/gb_regions.py:156
 msgid "Dumfries and Galloway"
 msgstr "דמפרייס וגאלוויי"
 
-#: gb/gb_regions.py:82
+#: gb/gb_regions.py:157
+msgid "Dundee City"
+msgstr ""
+
+#: gb/gb_regions.py:158
+msgid "East Ayrshire"
+msgstr ""
+
+#: gb/gb_regions.py:159
+msgid "East Dunbartonshire"
+msgstr ""
+
+#: gb/gb_regions.py:160
+msgid "East Lothian"
+msgstr ""
+
+#: gb/gb_regions.py:161
+msgid "East Renfrewshire"
+msgstr ""
+
+#: gb/gb_regions.py:162
+msgid "Edinburgh, City of"
+msgstr ""
+
+#: gb/gb_regions.py:163
+msgid "Falkirk"
+msgstr ""
+
+#: gb/gb_regions.py:164
 msgid "Fife"
 msgstr "פייף"
 
-#: gb/gb_regions.py:83
-msgid "Grampian"
-msgstr " גרמפיאן"
+#: gb/gb_regions.py:165
+msgid "Glasgow City"
+msgstr ""
 
-#: gb/gb_regions.py:84
+#: gb/gb_regions.py:166
 msgid "Highland"
 msgstr "רמה"
 
-#: gb/gb_regions.py:85
-msgid "Lothian"
-msgstr "לודיאן"
+#: gb/gb_regions.py:167
+msgid "Inverclyde"
+msgstr ""
 
-#: gb/gb_regions.py:86
+#: gb/gb_regions.py:168
+msgid "Midlothian"
+msgstr ""
+
+#: gb/gb_regions.py:169
+msgid "Moray"
+msgstr ""
+
+#: gb/gb_regions.py:170
+msgid "North Ayrshire"
+msgstr ""
+
+#: gb/gb_regions.py:171
+msgid "North Lanarkshire"
+msgstr ""
+
+#: gb/gb_regions.py:172
+msgid "Perth and Kinross"
+msgstr ""
+
+#: gb/gb_regions.py:173
+msgid "Renfrewshire"
+msgstr ""
+
+#: gb/gb_regions.py:174
+msgid "Scottish Borders"
+msgstr ""
+
+#: gb/gb_regions.py:175
+msgid "South Ayrshire"
+msgstr ""
+
+#: gb/gb_regions.py:176
+msgid "South Lanarkshire"
+msgstr ""
+
+#: gb/gb_regions.py:177
+msgid "Stirling"
+msgstr ""
+
+#: gb/gb_regions.py:178
+msgid "West Dunbartonshire"
+msgstr ""
+
+#: gb/gb_regions.py:179
+msgid "West Lothian"
+msgstr ""
+
+#: gb/gb_regions.py:180
+msgid "Na h-Eileanan Siar"
+msgstr ""
+
+#: gb/gb_regions.py:181
 msgid "Orkney Islands"
 msgstr "איי אורקיי"
 
-#: gb/gb_regions.py:87
+#: gb/gb_regions.py:182
 msgid "Shetland Islands"
 msgstr "איי שטלנד"
 
-#: gb/gb_regions.py:88
-msgid "Strathclyde"
-msgstr "סטראת'קלייד"
-
-#: gb/gb_regions.py:89
-msgid "Tayside"
-msgstr "טייסייד"
-
-#: gb/gb_regions.py:90
-msgid "Western Isles"
-msgstr "האיים המערביים"
-
-#: gb/gb_regions.py:95
+#: gb/gb_regions.py:188
 msgid "England"
 msgstr "אנגליה"
 
-#: gb/gb_regions.py:96
+#: gb/gb_regions.py:189
 msgid "Northern Ireland"
 msgstr "צפון אירלנד"
 
-#: gb/gb_regions.py:97
-msgid "Scotland"
-msgstr "סקוטלנד"
-
-#: gb/gb_regions.py:98
+#: gb/gb_regions.py:190
 msgid "Wales"
 msgstr "וויילס"
+
+#: gb/gb_regions.py:191
+msgid "Scotland"
+msgstr "סקוטלנד"
 
 #: generic/models.py:36
 msgid "An International Bank Account Number"
 msgstr ""
 
-#: generic/validators.py:140
-#, python-format
-msgid "%(country_code)s IBANs must contain %(number)s characters."
+#: generic/models.py:65
+msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:143
-#, python-format
-msgid "%s is not a valid country code for IBAN."
-msgstr ""
-
-#: generic/validators.py:145
-#, python-format
-msgid "%s IBANs are not allowed in this field."
-msgstr ""
-
-#: generic/validators.py:160
+#: generic/validators.py:142
 #, python-format
 msgid "%s is not a valid character for IBAN."
 msgstr ""
 
 #: generic/validators.py:164
+#, python-format
+msgid "%(country_code)s IBANs must contain %(number)s characters."
+msgstr ""
+
+#: generic/validators.py:167
+#, python-format
+msgid "%s is not a valid country code for IBAN."
+msgstr ""
+
+#: generic/validators.py:169
+#, python-format
+msgid "%s IBANs are not allowed in this field."
+msgstr ""
+
+#: generic/validators.py:172
 msgid "Not a valid IBAN."
+msgstr ""
+
+#: generic/validators.py:192
+msgid "BIC codes have either 8 or 11 characters."
+msgstr ""
+
+#: generic/validators.py:198
+#, python-format
+msgid "%s is not a valid institution code."
+msgstr ""
+
+#: generic/validators.py:203
+#, python-format
+msgid "%s is not a valid country code."
 msgstr ""
 
 #: gr/forms.py:27
@@ -4906,51 +5220,51 @@ msgstr "מספר טלפון חייב להיות באחד מהפורמטים הב
 msgid "Phone number should start with one of the followings: %s."
 msgstr "מספר טלפון צריך להתחיל עם אחת מהספרות הבאות: %s."
 
-#: hr/forms.py:74
+#: hr/forms.py:75
 msgid "Enter a valid 13 digit JMBG"
 msgstr "הזן JMBG חוקי המכיל 13 ספרות"
 
-#: hr/forms.py:75
+#: hr/forms.py:76
 msgid "Error in date segment"
 msgstr "שגיאה במקטע תאריך"
 
-#: hr/forms.py:121
+#: hr/forms.py:122
 msgid "Enter a valid 11 digit OIB"
 msgstr "יש להזין OIB חוקי בן 11 ספרות"
 
-#: hr/forms.py:150 id_/forms.py:112
+#: hr/forms.py:151 id_/forms.py:112
 msgid "Enter a valid vehicle license plate number"
 msgstr "יש להזין מספר רישוי רכב חוקי"
 
-#: hr/forms.py:151
+#: hr/forms.py:152
 msgid "Enter a valid location code"
 msgstr "יש להזין קוד מיקום חוקי"
 
-#: hr/forms.py:152
+#: hr/forms.py:153
 msgid "Number part cannot be zero"
 msgstr "חלק מספרי לא יכול להיות אפס"
 
-#: hr/forms.py:188
+#: hr/forms.py:189
 msgid "Enter a valid 5 digit postal code"
 msgstr "יש להזין מיקוד חוקי המכיל 5 ספרות"
 
-#: hr/forms.py:216 id_/forms.py:72 nl/forms.py:60
+#: hr/forms.py:217 id_/forms.py:72 nl/forms.py:60
 msgid "Enter a valid phone number"
 msgstr "יש להזין מספר טלפון חוקי"
 
-#: hr/forms.py:217
+#: hr/forms.py:218
 msgid "Enter a valid area or mobile network code"
 msgstr "יש להזין את קוד אזור או רשת סלולרית חוקי"
 
-#: hr/forms.py:218
+#: hr/forms.py:219
 msgid "The phone number is too long"
 msgstr "מספר הטלפון ארוך מדי"
 
-#: hr/forms.py:256
+#: hr/forms.py:257
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr "יש להזין JMBAG חוקי המכיל 19 ספרות ומתחיל ב־601983"
 
-#: hr/forms.py:257
+#: hr/forms.py:258
 msgid "Card issue number cannot be zero"
 msgstr "מספר הנפקת כרטיס אינו יכול להיות אפס"
 
