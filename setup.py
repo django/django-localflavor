@@ -114,7 +114,7 @@ setup(
     url='http://django-localflavor.readthedocs.org/en/latest/',
     license='BSD',
     description="Country-specific Django helpers",
-    # long_description=read('README.rst'),
+    long_description=read('README.rst'),
     author='Django Software Foundation',
     author_email='foundation@djangoproject.com',
     packages=find_packages(exclude=['tests', 'tests.*']),
