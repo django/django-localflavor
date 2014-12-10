@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'django-localflavor'
-copyright = u'2013, Django Software Foundation and individual contributors'
+copyright = u'Django Software Foundation and individual contributors'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -268,7 +268,7 @@ texinfo_documents = [
 epub_title = u'django-localflavor'
 epub_author = u'Django Software Foundation and individual contributors'
 epub_publisher = u'Django Software Foundation and individual contributors'
-epub_copyright = u'2013, Django Software Foundation and individual contributors'
+epub_copyright = u'Django Software Foundation and individual contributors'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
