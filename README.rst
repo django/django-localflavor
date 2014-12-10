@@ -2,13 +2,16 @@
 django-localflavor
 ==================
 
-.. image:: https://secure.travis-ci.org/django/django-localflavor.png
+.. image:: http://img.shields.io/pypi/v/django-localflavor.svg
+   :target: https://pypi.python.org/pypi/django-localflavor
+
+.. image:: https://img.shields.io/travis/django/django-localflavor.svg
     :target: http://travis-ci.org/django/django-localflavor
 
-.. image:: https://coveralls.io/repos/django/django-localflavor/badge.png?branch=master
+.. image:: https://img.shields.io/coveralls/django/django-localflavor.svg
    :target: https://coveralls.io/r/django/django-localflavor
 
-.. image:: https://readthedocs.org/projects/django-localflavor/badge/?version=latest&style=default
+.. image:: https://readthedocs.org/projects/django-localflavor/badge/?version=latest&style=plastic
    :target: http://django-localflavor.readthedocs.org/en/latest/
 
 Django's "localflavor" packages offer additional functionality for particular
