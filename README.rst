@@ -8,6 +8,9 @@ django-localflavor
 .. image:: https://coveralls.io/repos/django/django-localflavor/badge.png?branch=master
    :target: https://coveralls.io/r/django/django-localflavor
 
+.. image:: https://readthedocs.org/projects/django-localflavor/badge/?version=latest&style=default
+   :target: http://django-localflavor.readthedocs.org/en/latest/
+
 Django's "localflavor" packages offer additional functionality for particular
 countries or cultures. For example, these might include form fields for your
 country's postal codes, phone number formats or government ID numbers.
