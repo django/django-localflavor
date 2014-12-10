@@ -21,6 +21,14 @@ Checksums
 
 .. versionadded:: 1.1
 
+Validators
+----------
+
+.. automodule:: localflavor.generic.validators
+    :members:
+
+.. versionadded:: 1.1
+
 Data
 ----
 
