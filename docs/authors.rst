@@ -38,6 +38,7 @@ Authors
 * Karen Tracey
 * Luke Benstead
 * Malcolm Tredinnick
+* Marti Raudsepp
 * Martin Ogden
 * Matias Dinota
 * Olivier Sels
