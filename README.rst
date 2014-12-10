@@ -2,7 +2,7 @@
 django-localflavor
 ==================
 
-.. image:: http://img.shields.io/pypi/v/django-localflavor.svg
+.. image:: https://img.shields.io/pypi/v/django-localflavor.svg
    :target: https://pypi.python.org/pypi/django-localflavor
 
 .. image:: https://img.shields.io/travis/django/django-localflavor.svg
