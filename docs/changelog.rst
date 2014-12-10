@@ -48,6 +48,7 @@ Other modifications to existing flavors:
 - Rejected Brazilian CPF number when all numbers all numbers are equal (gh-103)
 - Added 'Y' to the NIE number validation for Spain (gh-127)
 - Updated Argentina's CUIT numer validation to support legal types 24 and 33 (gh-121)
+- Added 'R', 'V' and 'W' to the Spanish identity card number validation (gh-132)
 
 Other changes:
 
