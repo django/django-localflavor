@@ -35,18 +35,25 @@ def test(country='all'):
 
 
 @task
-def translations(pull=False, locale=None):
-    if pull:
-        if locale:
-            run('tx pull -l {0}'.format(locale))
-        else:
-            run('tx pull -a')
+def compile_translations():
+    run('cd localflavor; django-admin.py compilemessages; cd ..')
+
+
+@task(post=[compile_translations])
+def pull_translations(locale=None):
     if locale:
-        run('cd localflavor; django-admin.py makemessages -l {0}; '
-            'django-admin.py compilemessages -l {0}; cd ..'.format(locale))
+        run('tx pull -f -l {0}'.format(locale))
     else:
-        run('cd localflavor; django-admin.py makemessages -a; '
-            'django-admin.py compilemessages; cd ..')
+        run('tx pull --minimum-perc=1 -f -a')
+
+
+@task(post=[compile_translations])
+def make_translations(locale=None):
+    if locale:
+        run('cd localflavor; '
+            'django-admin.py makemessages -l {0}; '.format(locale))
+    else:
+        run('cd localflavor; django-admin.py makemessages -a')
 
 
 @task
