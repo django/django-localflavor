@@ -16,6 +16,6 @@ Models
 Data
 ----
 
-.. autodata:: localflavor.us.us_states.NYS_COUNTIES
+.. autodata:: localflavor.us.ny.nys_detail.NYS_COUNTIES
 
-.. autodata:: localflavor.us.us_states.NYS_COUNTY_CHOICES
+.. autodata:: localflavor.us.ny.nys_detail.NYS_COUNTY_CHOICES

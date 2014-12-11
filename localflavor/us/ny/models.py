@@ -1,7 +1,6 @@
 from django.utils.translation import ugettext_lazy as _
 from django.db.models.fields import CharField
 
-from . import forms
 from .nys_detail import NYS_COUNTY_CHOICES
 
 
