@@ -13,7 +13,7 @@ from .ee_counties import COUNTY_CHOICES
 
 idcode = re.compile(r'^([1-6])(\d\d)(\d\d)(\d\d)(?:\d{3})(\d)$')
 zipcode = re.compile(r'^[1-9]\d{4}$')
-bregcode = re.compile(r'^(?:\d{7})(\d)$')
+bregcode = re.compile(r'^([1-9])(?:\d{6})(\d)$')
 
 
 class EEZipCodeField(RegexField):
@@ -49,7 +49,7 @@ class EEPersonalIdentificationCode(Field):
 
     @staticmethod
     def ee_checksum(value):
-        """Takes a string of 10 digits as input, returns check digit."""
+        """Takes a string of digits as input, returns check digit."""
 
         for i in (1, 3):
             check = 0
@@ -100,10 +100,6 @@ class EEBusinessRegistryCode(Field):
         'invalid': _('Enter a valid Estonian business registry code.'),
     }
 
-    @staticmethod
-    def ee_checksum(value):
-        return EEPersonalIdentificationCode.ee_checksum(value)
-
     def clean(self, value):
         value = super(EEBusinessRegistryCode, self).clean(value)
         if value in EMPTY_VALUES:
@@ -114,9 +110,9 @@ class EEBusinessRegistryCode(Field):
         if not match:
             raise ValidationError(self.error_messages['invalid_format'])
 
-        check = int(match.group(1))
+        check = int(match.group(2))
 
-        if check != self.ee_checksum(value[:7]):
+        if check != EEPersonalIdentificationCode.ee_checksum(value[:7]):
             raise ValidationError(self.error_messages['invalid'])
 
         return value
