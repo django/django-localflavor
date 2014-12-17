@@ -13,7 +13,7 @@ from .ee_counties import COUNTY_CHOICES
 
 idcode = re.compile(r'^([1-6])(\d\d)(\d\d)(\d\d)(?:\d{3})(\d)$')
 zipcode = re.compile(r'^[1-9]\d{4}$')
-bregcode = re.compile(r'^([1-9])(?:\d{6})(\d)$')
+bregcode = re.compile(r'^[1-9]\d{7}$')
 
 
 class EEZipCodeField(RegexField):
@@ -110,7 +110,7 @@ class EEBusinessRegistryCode(Field):
         if not match:
             raise ValidationError(self.error_messages['invalid_format'])
 
-        check = int(match.group(2))
+        check = int(value[7])
 
         if check != EEPersonalIdentificationCode.ee_checksum(value[:7]):
             raise ValidationError(self.error_messages['invalid'])
