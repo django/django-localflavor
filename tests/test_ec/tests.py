@@ -10,7 +10,7 @@ class ECLocalFlavorTests(SimpleTestCase):
 
     def setUp(self):
         self.form = ECPlaceForm({
-            'province':'SD'
+            'province': 'SD'
         })
 
     def test_ECProvinceSelect(self):
