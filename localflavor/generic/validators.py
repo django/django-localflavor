@@ -9,7 +9,13 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 
 # Dictionary of ISO country code to IBAN length.
 #
-# References:
+# The official IBAN Registry document is the best source for up-to-date information about IBAN formats and which
+# countries are in IBAN.
+#
+# http://www.swift.com/dsp/resources/documents/IBAN_Registry.pdf
+#
+# Other Resources:
+#
 # https://en.wikipedia.org/wiki/International_Bank_Account_Number#IBAN_formats_by_country
 # http://www.ecbs.org/iban/france-bank-account-number.html
 # https://www.nordea.com/V%C3%A5ra+tj%C3%A4nster/Internationella+produkter+och+tj%C3%A4nster/Cash+Management/IBAN+countries/908472.html
@@ -79,9 +85,11 @@ IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
                             'SI': 19,  # Slovenia
                             'SK': 24,  # Slovakia
                             'SM': 27,  # San Marino
+                            'TL': 23,  # Timor-Leste
                             'TN': 24,  # Tunisia
                             'TR': 26,  # Turkey
-                            'VG': 24}  # British Virgin Islands
+                            'VG': 24,  # British Virgin Islands
+                            'XK': 20}  # Republic of Kosovo (user-assigned country code)
 
 
 # Nordea has catalogued IBANs for some additional countries but they are not part of the office IBAN network yet.
