@@ -252,4 +252,5 @@ ISO_3166_1_ALPHA2_COUNTRY_CODES = (
     'ZA',  # South Africa
     'ZM',  # Zambia
     'ZW',  # Zimbabwe
+    'XK'   # Republic of Kosovo (user-assigned country code)
 )
