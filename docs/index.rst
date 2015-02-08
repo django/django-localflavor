@@ -71,6 +71,7 @@ validate Finnish social security numbers.
    * :doc:`localflavor/se`
    * :doc:`localflavor/si`
    * :doc:`localflavor/sk`
+   * :doc:`localflavor/tn`
    * :doc:`localflavor/tr`
    * :doc:`localflavor/us`
    * :doc:`localflavor/uy`
