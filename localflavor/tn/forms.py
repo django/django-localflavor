@@ -11,7 +11,7 @@ from .tn_governorates import GOVERNORATE_CHOICES
 
 class TNGovernorateSelect(Select):
     """
-    A Select widget that uses a list of the Tunisian governorates as its 
+    A Select widget that uses a list of the Tunisian governorates as its
     choices.
     """
     def __init__(self, attrs=None):
