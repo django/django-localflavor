@@ -170,12 +170,14 @@ class ESCCCField(RegexField):
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
         super(ESCCCField, self).__init__(r'^\d{4}[ -]?\d{4}[ -]?\d{2}[ -]?\d{10}$',
                                          max_length, min_length, *args, **kwargs)
+    
     def get_checksum(self, value):
         control_str = [1, 2, 4, 8, 5, 10, 9, 7, 3, 6]
+        
         return str(
             11 - sum(
                 [
-                    int(digit) * int(control) 
+                    int(digit) * int(control)
                     for digit, control in zip(value, control_str)
                 ]
             ) % 11
