@@ -21,7 +21,7 @@ class TNLocalFlavorTests(SimpleTestCase):
 <option value="beja">Beja</option>
 <option value="ben arous">Ben Arous</option>
 <option value="bizert">Bizert</option>
-<option value="gabes" selected="selected>Gabes</option>
+<option value="gabes" selected="selected">Gabes</option>
 <option value="gafsa">Gafsa</option>
 <option value="jendouba">Jendouba</option>
 <option value="kairouan">Kairouan</option>
