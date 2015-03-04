@@ -10,6 +10,7 @@ from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import smart_text
 
+from .cl_communes import COMMUNE_CHOICES
 from .cl_regions import REGION_CHOICES
 
 
@@ -20,6 +21,17 @@ class CLRegionSelect(Select):
     """
     def __init__(self, attrs=None):
         super(CLRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+
+
+class CLCommuneSelect(Select):
+    """
+    A Select widget that uses a list of Chilean Communes (Comunas)
+    as its choices.
+
+    .. versionadded:: 1.2
+    """
+    def __init__(self, attrs=None):
+        super(CLCommuneSelect, self).__init__(attrs, choices=COMMUNE_CHOICES)
 
 
 class CLRutField(RegexField):
