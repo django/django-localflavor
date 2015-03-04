@@ -181,7 +181,7 @@ msgstr "Vienne"
 
 #: at/forms.py:25 ch/forms.py:29 no/forms.py:24
 msgid "Enter a zip code in the format XXXX."
-msgstr "Saisissez un code postal norvégien au format XXXX."
+msgstr "Saisissez un code postal au format XXXX."
 
 #: at/forms.py:54
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
