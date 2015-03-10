@@ -63,6 +63,7 @@ class ROLocalFlavorTests(SimpleTestCase):
         error_atleast = ['Ensure this value has at least 2 characters (it has 1).']
         valid = {
             '21694681': '21694681',
+            '21694681 ': '21694681',
             'RO21694681': '21694681',
         }
         invalid = {
