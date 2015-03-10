@@ -36,7 +36,7 @@ class ROCIFField(RegexField):
         """
         CIF validation
         """
-        value = super(ROCIFField, self).clean(value)
+        value = super(ROCIFField, self).clean(value).strip()
         if value in EMPTY_VALUES:
             return ''
         # strip RO part
