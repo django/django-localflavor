@@ -3,7 +3,6 @@
 FR-specific Form helpers
 """
 from __future__ import absolute_import, unicode_literals
-from django.utils.checksums import luhn
 
 import re
 
@@ -12,6 +11,7 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import smart_text
 from django.utils.translation import ugettext_lazy as _
+from localflavor.generic.checksums import luhn
 
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
 from .fr_region import REGION_CHOICES
