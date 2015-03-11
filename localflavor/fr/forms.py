@@ -179,8 +179,8 @@ class FRNationalIdentificationNumber(CharField):
             raise ValidationError(self.error_messages['invalid'])
 
         control_number = int(gender + year_of_birth + month_of_birth +
-                             department_of_origin.replace('A', '0').replace('B', '0')
-                             + commune_of_origin + person_unique_number)
+                             department_of_origin.replace('A', '0').replace('B', '0') +
+                             commune_of_origin + person_unique_number)
         if (97 - control_number % 97) == control_key:
             return value
         else:
