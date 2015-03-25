@@ -1,30 +1,40 @@
 sudo: no
 language: python
-install:
-  - pip install tox coveralls
-script:
-  - tox
 env:
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py26-1.5
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py26-1.6
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py27-1.5
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py27-1.6
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py27-1.7
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py27-master
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py32-1.5
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py32-1.6
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py32-1.7
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py32-master
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py33-1.5
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py33-1.6
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py33-1.7
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py33-master
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-1.5
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-1.6
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-1.7
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=py34-master
-  - PIP_DOWNLOAD_CACHE=pip_cache TOXENV=docs
-after_success: coveralls
+  matrix:
+    - TOXENV=docs
+    - TOXENV=py26-1.5
+    - TOXENV=py26-1.6
+    - TOXENV=py27-1.5
+    - TOXENV=py27-1.6
+    - TOXENV=py27-1.7
+    - TOXENV=py27-1.8
+    - TOXENV=py27-master
+    - TOXENV=py32-1.5
+    - TOXENV=py32-1.6
+    - TOXENV=py32-1.7
+    - TOXENV=py32-1.8
+    - TOXENV=py32-master
+    - TOXENV=py33-1.5
+    - TOXENV=py33-1.6
+    - TOXENV=py33-1.7
+    - TOXENV=py33-1.8
+    - TOXENV=py33-master
+    - TOXENV=py34-1.5
+    - TOXENV=py34-1.6
+    - TOXENV=py34-1.7
+    - TOXENV=py34-1.8
+    - TOXENV=py34-master
+  global:
+    - PIP_WHEEL_DIR=$HOME/.wheels
+    - PIP_FIND_LINKS=file://$PIP_WHEEL_DIR
 cache:
   directories:
-    - pip_cache
+    - $HOME/.wheels
+install:
+    - mkdir -p $PIP_WHEEL_DIR
+    - pip wheel -r tests/requirements.txt coveralls
+    - pip install coveralls tox
+script:
+  - tox
+after_success: coveralls
