@@ -6,7 +6,7 @@ except ImportError:
 
 from django.utils.functional import Promise
 
-from sphinx.util.inspect import safe_repr
+from sphinx.util.inspect import object_description
 
 list_or_tuple = lambda x: isinstance(x, (tuple, list))
 
@@ -34,6 +34,6 @@ def setup(app):
     from sphinx.ext import autodoc
 
     def lazy_safe_repr(object):
-        return safe_repr(lazy_repr(object))
+        return object_description(lazy_repr(object))
 
     autodoc.safe_repr = lazy_safe_repr  # noqa
