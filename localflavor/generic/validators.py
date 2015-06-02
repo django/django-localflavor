@@ -235,4 +235,4 @@ class EANValidator(object):
         if self.strip_nondigits:
             value = re.compile(r'[^\d]+').sub('', value)
         if not checksums.ean(value):
-            raise ValidationError(self.message)
+            raise ValidationError(self.message, code='invalid')

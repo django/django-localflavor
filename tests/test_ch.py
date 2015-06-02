@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
-from django.utils.translation import override, ugettext_lazy as _
+from django.utils.translation import override, ugettext as _
 
 from localflavor.ch.forms import (CHZipCodeField, CHPhoneNumberField,
-                                  CHIdentityCardNumberField, CHStateSelect)
+                                  CHIdentityCardNumberField, CHStateSelect,
+                                  CHSocialSecurityNumberField)
 
 
 class CHLocalFlavorTests(SimpleTestCase):
@@ -79,3 +80,16 @@ class CHLocalFlavorTests(SimpleTestCase):
             '2123456701': error_format,
         }
         self.assertFieldOutput(CHIdentityCardNumberField, valid, invalid)
+
+    def test_CHSocialSecurityNumberField(self):
+        error_format = [_('Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format.')]
+        valid = {
+            '756.1234.5678.97': '756.1234.5678.97',
+            '756.9217.0769.85': '756.9217.0769.85',
+        }
+        invalid = {
+            '756.1234.5678.96': error_format,
+            '757.1234.5678.97': error_format,
+            '756.1234.5678': error_format,
+        }
+        self.assertFieldOutput(CHSocialSecurityNumberField, valid, invalid)
