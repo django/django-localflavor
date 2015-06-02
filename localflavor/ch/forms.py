@@ -14,24 +14,29 @@ from django.utils.translation import ugettext_lazy as _
 
 from .ch_states import STATE_CHOICES
 
+zip_re = re.compile(r'^[1-9]\d{3}$')
 
 id_re = re.compile(
     r"^(?P<idnumber>\w{8})(?P<pos9>(\d{1}|<))(?P<checksum>\d{1})$")
+
 phone_digits_re = re.compile(r'^0([1-9]{1})\d{8}$')
 
 
 class CHZipCodeField(RegexField):
     """
     A form field that validates input as a Swiss zip code. Valid codes
-    consist of four digits.
+    consist of four digits ranging from 1XXX to 9XXX.
+
+    See:
+    http://en.wikipedia.org/wiki/Postal_codes_in_Switzerland_and_Liechtenstein
     """
+
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXX.'),
+        'invalid': _('Enter a valid postal code in the range and format 1XXX - 9XXX.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(CHZipCodeField, self).__init__(r'^\d{4}$',
-                                             max_length, min_length, *args, **kwargs)
+        super(CHZipCodeField, self).__init__(zip_re, max_length, min_length, *args, **kwargs)
 
 
 class CHPhoneNumberField(Field):
