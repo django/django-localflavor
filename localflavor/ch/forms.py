@@ -7,19 +7,20 @@ from __future__ import absolute_import, unicode_literals
 import re
 
 from django.core.validators import EMPTY_VALUES
+from django import forms
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import smart_text
 from django.utils.translation import ugettext_lazy as _
 
 from .ch_states import STATE_CHOICES
+from ..generic import validators
 
 zip_re = re.compile(r'^[1-9]\d{3}$')
-
 id_re = re.compile(
     r"^(?P<idnumber>\w{8})(?P<pos9>(\d{1}|<))(?P<checksum>\d{1})$")
-
 phone_digits_re = re.compile(r'^0([1-9]{1})\d{8}$')
+ssn_re = re.compile(r'^756.\d{4}\.\d{4}\.\d{2}$')
 
 
 class CHZipCodeField(RegexField):
@@ -135,3 +136,31 @@ class CHIdentityCardNumberField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
         return '%s%s%s' % (idnumber, pos9, checksum)
+
+
+class CHSocialSecurityNumberField(forms.RegexField):
+    """
+    A Swiss Social Security number (also known as the new AHV Number).
+
+    Checks the following rules to determine whether the number is valid:
+
+        * Conforms to the 756.XXXX.XXXX.XX
+        * Included checksums match calculated checksums
+
+    See:
+    http://de.wikipedia.org/wiki/Sozialversicherungsnummer#Versichertennummer
+    """
+    default_error_messages = {
+        'invalid': _('Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format.'),
+    }
+
+    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
+        super(CHSocialSecurityNumberField, self).__init__(ssn_re, max_length, min_length, *args, **kwargs)
+
+    def clean(self, value):
+        super(CHSocialSecurityNumberField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+        validator = validators.EANValidator(strip_nondigits=True, message=self.error_messages['invalid'])
+        validator(value)
+        return value
