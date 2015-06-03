@@ -43,14 +43,16 @@ class CHLocalFlavorTests(SimpleTestCase):
             self.assertHTMLEqual(f.render('state', 'AG'), out)
 
     def test_CHZipCodeField(self):
-        error_format = [_('Enter a zip code in the format XXXX.')]
+        error_format = [_('Enter a valid postal code in the range and format 1XXX - 9XXX.')]
         valid = {
             '1234': '1234',
-            '0000': '0000',
+            '9999': '9999',
         }
         invalid = {
+            '0000': error_format,
             '800x': error_format,
             '80 00': error_format,
+            '99990': error_format,
         }
         self.assertFieldOutput(CHZipCodeField, valid, invalid)
 
