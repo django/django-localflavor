@@ -7,7 +7,7 @@ from django.utils import formats
 
 from localflavor.generic.countries.sepa import IBAN_SEPA_COUNTRIES
 from localflavor.generic.models import BICField, IBANField
-from localflavor.generic.validators import BICValidator, IBANValidator
+from localflavor.generic.validators import BICValidator, IBANValidator, EANValidator
 from localflavor.generic.forms import DateField, DateTimeField, SplitDateTimeField, BICFormField, IBANFormField
 
 
@@ -337,3 +337,63 @@ class BICTests(TestCase):
     def test_default_form(self):
         bic_model_field = BICField()
         self.assertEqual(type(bic_model_field.formfield()), type(BICFormField()))
+
+
+class EANTests(TestCase):
+
+    def test_ean_validator(self):
+        valid = [
+            '4006381333931',
+            '73513537',
+
+            '012345678905',
+            '0012345678905',
+
+            None,
+        ]
+        error_message = 'Not a valid EAN code.'
+        invalid = [
+            '400.6381.3339.31',
+            '4006381333930',
+            '',
+            '0',
+            'DÉUTDEFF',
+        ]
+
+        validator = EANValidator()
+        for value in valid:
+            validator(value)
+
+        for value in invalid:
+            self.assertRaisesMessage(ValidationError,  error_message, validator, value)
+
+    def test_ean_validator_strip_nondigits(self):
+        valid = [
+            '4006381333931',
+            '400.6381.3339.31',
+            '73513537',
+            '73-51-3537',
+            '73 51 3537',
+            '73A51B3537',
+
+            '012345678905',
+            '0012345678905',
+
+            None,
+        ]
+        error_message = 'Not a valid EAN code.'
+        invalid = [
+            '4006381333930',
+            '400-63-813-339-30',
+            '400 63 813 339 30',
+            '',
+            '0',
+            'DÉUTDEFF',
+        ]
+
+        validator = EANValidator(strip_nondigits=True)
+        for value in valid:
+            validator(value)
+
+        for value in invalid:
+            self.assertRaisesMessage(ValidationError,  error_message, validator, value)

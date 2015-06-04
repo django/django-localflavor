@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import re
+
 import string
 
 from django.core.exceptions import ValidationError, ImproperlyConfigured
 from django.utils.translation import ugettext_lazy as _
+
 from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
+from . import checksums
 
 # Dictionary of ISO country code to IBAN length.
 #
@@ -19,6 +23,7 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 # https://en.wikipedia.org/wiki/International_Bank_Account_Number#IBAN_formats_by_country
 # http://www.ecbs.org/iban/france-bank-account-number.html
 # https://www.nordea.com/V%C3%A5ra+tj%C3%A4nster/Internationella+produkter+och+tj%C3%A4nster/Cash+Management/IBAN+countries/908472.html
+
 
 IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
                             'AD': 24,  # Andorra
@@ -209,3 +214,25 @@ class BICValidator(object):
         country_code = value[4:6]
         if country_code not in ISO_3166_1_ALPHA2_COUNTRY_CODES:
             raise ValidationError(_('%s is not a valid country code.') % country_code)
+
+
+class EANValidator(object):
+    """
+    A generic validator for EAN like codes with the last digit being the checksum.
+
+    http://en.wikipedia.org/wiki/International_Article_Number_(EAN)
+    """
+    message = _('Not a valid EAN code.')
+
+    def __init__(self, strip_nondigits=False, message=None):
+        if message is not None:
+            self.message = message
+        self.strip_nondigits = strip_nondigits
+
+    def __call__(self, value):
+        if value is None:
+            return value
+        if self.strip_nondigits:
+            value = re.compile(r'[^\d]+').sub('', value)
+        if not checksums.ean(value):
+            raise ValidationError(self.message)

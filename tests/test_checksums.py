@@ -5,11 +5,16 @@ from localflavor.generic import checksums
 
 class TestUtilsChecksums(unittest.TestCase):
 
+    def assertChecksumOuput(self, checksum, result_pairs):
+        for value, output in result_pairs:
+            self.assertEqual(checksum(value), output, "Expected %s(%s) == %s but got %s" % (
+                checksum.__name__, repr(value), output, not output))
+
     def test_luhn(self):
         """
         Check that function(value) equals output.
         """
-        items = (
+        result_pairs = (
             (4111111111111111, True),
             ('4111111111111111', True),
             (4222222222222, True),
@@ -30,5 +35,18 @@ class TestUtilsChecksums(unittest.TestCase):
             (None, False),
             (object(), False),
         )
-        for value, output in items:
-            self.assertEqual(checksums.luhn(value), output, value)
+        self.assertChecksumOuput(checksums.luhn, result_pairs)
+
+    def test_ean(self):
+        result_pairs = (
+            ('73513537', True),
+            (73513537, True),
+            ('73513538', False),
+            (73513538, False),
+            ('4006381333931', True),
+            (4006381333931, True),
+            ('abc', False),
+            (None, False),
+            (object(), False),
+        )
+        self.assertChecksumOuput(checksums.ean, result_pairs)
