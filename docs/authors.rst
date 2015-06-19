@@ -2,6 +2,7 @@ Authors
 =======
 
 * Aaron Boman
+* Adam Taylor
 * Adrian Holovaty
 * Alex Butum
 * Alex Gaynor

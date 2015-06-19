@@ -18,6 +18,8 @@ Modifications to existing flavors:
 
 - Moved Dutch validators from localflavor.nl.forms to localflavor.nl.validators
   (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
+- Fix check for promotional social security numbers in USSocialSecurityNumberField
+  (`gh-157 <https://github.com/django/django-localflavor/pull/157>`_).
 
 Other changes:
 

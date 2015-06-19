@@ -312,7 +312,10 @@ class USLocalFlavorTests(TestCase):
         }
         invalid = {
             '078-05-1120': error_invalid,
+            '078051120': error_invalid,
             '900-12-3456': error_invalid,
+            '900123456': error_invalid,
             '999-98-7652': error_invalid,
+            '999987652': error_invalid,
         }
         self.assertFieldOutput(USSocialSecurityNumberField, valid, invalid)
