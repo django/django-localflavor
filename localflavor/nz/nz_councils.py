@@ -46,7 +46,7 @@ NORTH_ISLAND_COUNCIL_CHOICES = (
     ('Tauranga', _('Tauranga')),
     ('Opotiki', _('Opotiki District')),
     ('Whakatane', _('Whakatane District')),
-    ('Rotorua	', _('Rotorua District	')),
+    ('Rotorua	', _('Rotorua District')),
     ('Kawerau', _('Kawerau District')),
     ('Gisborne', _('Gisborne District')),
     ('Wairoa', _('Wairoa District')),
