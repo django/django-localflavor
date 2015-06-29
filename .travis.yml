@@ -31,8 +31,8 @@ cache:
     - $HOME/.wheels
 install:
     - mkdir -p $PIP_WHEEL_DIR
-    - pip wheel -r tests/requirements.txt coveralls
-    - pip install coveralls tox
+    - pip wheel -r tests/requirements.txt codecov
+    - pip install codecov tox
 script:
   - tox
-after_success: coveralls
+after_success: codecov
