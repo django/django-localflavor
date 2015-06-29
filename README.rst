@@ -8,8 +8,8 @@ django-localflavor
 .. image:: https://img.shields.io/travis/django/django-localflavor.svg
     :target: http://travis-ci.org/django/django-localflavor
 
-.. image:: https://img.shields.io/coveralls/django/django-localflavor.svg
-   :target: https://coveralls.io/r/django/django-localflavor
+.. image:: https://img.shields.io/codecov/c/github/django/django-localflavor/master.svg
+   :target: http://codecov.io/github/django/django-localflavor?branch=master
 
 .. image:: https://readthedocs.org/projects/django-localflavor/badge/?version=latest&style=plastic
    :target: http://django-localflavor.readthedocs.org/en/latest/
