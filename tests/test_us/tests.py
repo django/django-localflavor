@@ -1,5 +1,6 @@
 from __future__ import absolute_import, unicode_literals
 
+import django
 from django.test import TestCase
 
 from localflavor.us import forms
@@ -317,15 +318,17 @@ class USLocalFlavorTests(TestCase):
         self.assertFieldOutput(forms.USSocialSecurityNumberField, valid, invalid)
 
     def test_deconstruct_methods(self):
-        classes = (models.USStateField, models.USPostalCodeField,
-                   models.USZipCodeField, models.PhoneNumberField,
-                   models.USSocialSecurityNumberField)
-        for cls in classes:
-            test_instance = cls()
-            name, path, args, kwargs = test_instance.deconstruct()
-            new_instance = cls(*args, **kwargs)
-            for attr in ('choices', 'max_length'):
-                self.assertEqual(
-                    getattr(test_instance, attr),
-                    getattr(new_instance, attr),
-                )
+        """Test the deconstruct method that was added in Django 1.7"""
+        if django.VERSION > (1, 7):
+            classes = (models.USStateField, models.USPostalCodeField,
+                       models.USZipCodeField, models.PhoneNumberField,
+                       models.USSocialSecurityNumberField)
+            for cls in classes:
+                test_instance = cls()
+                name, path, args, kwargs = test_instance.deconstruct()
+                new_instance = cls(*args, **kwargs)
+                for attr in ('choices', 'max_length'):
+                    self.assertEqual(
+                        getattr(test_instance, attr),
+                        getattr(new_instance, attr),
+                    )
