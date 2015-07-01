@@ -17,6 +17,12 @@ class USStateField(CharField):
         kwargs['max_length'] = 2
         super(USStateField, self).__init__(*args, **kwargs)
 
+    def deconstruct(self):
+        name, path, args, kwargs = super(USStateField, self).deconstruct()
+        del kwargs["choices"]
+        del kwargs["max_length"]
+        return name, path, args, kwargs
+
 
 class USPostalCodeField(CharField):
     """"
@@ -35,6 +41,12 @@ class USPostalCodeField(CharField):
         kwargs['choices'] = USPS_CHOICES
         kwargs['max_length'] = 2
         super(USPostalCodeField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(USPostalCodeField, self).deconstruct()
+        del kwargs["choices"]
+        del kwargs["max_length"]
+        return name, path, args, kwargs
 
 
 class USZipCodeField(CharField):
@@ -57,6 +69,11 @@ class USZipCodeField(CharField):
         kwargs['max_length'] = 10
         super(USZipCodeField, self).__init__(*args, **kwargs)
 
+    def deconstruct(self):
+        name, path, args, kwargs = super(USZipCodeField, self).deconstruct()
+        del kwargs["max_length"]
+        return name, path, args, kwargs
+
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.USZipCodeField}
         defaults.update(kwargs)
@@ -73,6 +90,11 @@ class PhoneNumberField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 20
         super(PhoneNumberField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(PhoneNumberField, self).deconstruct()
+        del kwargs["max_length"]
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         from localflavor.us.forms import USPhoneNumberField
@@ -93,6 +115,11 @@ class USSocialSecurityNumberField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
         super(USSocialSecurityNumberField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(USSocialSecurityNumberField, self).deconstruct()
+        del kwargs["max_length"]
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         from localflavor.us.forms import (USSocialSecurityNumberField as
