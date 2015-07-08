@@ -94,6 +94,8 @@ class EEPersonalIdentificationCode(Field):
 class EEBusinessRegistryCode(Field):
     """A form field that validates input as an
     Estonian business registration code.
+
+    .. versionadded:: 1.2
     """
     default_error_messages = {
         'invalid_format': _('Enter an 8-digit Estonian business registry code.'),
