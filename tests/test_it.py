@@ -207,7 +207,7 @@ class ITLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(ITZipCodeField, valid, invalid)
 
     def test_ITSocialSecurityNumberField(self):
-        error_invalid = ['Enter a valid Social Security number.']
+        error_invalid = ['Enter a valid Tax Code.']
         valid = {
             'LVSGDU99T71H501L': 'LVSGDU99T71H501L',
             'LBRRME11A01L736W': 'LBRRME11A01L736W',
@@ -221,7 +221,7 @@ class ITLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(ITSocialSecurityNumberField, valid, invalid)
 
     def test_ITSocialSecurityNumberField_for_entities(self):
-        error_invalid = ['Enter a valid Social Security number.']
+        error_invalid = ['Enter a valid Tax Code.']
         valid = {
             '07973780013': '07973780013',
             '7973780013': '07973780013',

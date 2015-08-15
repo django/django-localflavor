@@ -74,7 +74,7 @@ class ITSocialSecurityNumberField(RegexField):
     entities (numeric-only form).
     """
     default_error_messages = {
-        'invalid': _('Enter a valid Social Security number.'),
+        'invalid': _('Enter a valid Tax Code.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):

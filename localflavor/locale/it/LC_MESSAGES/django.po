@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-10 12:21+0100\n"
-"PO-Revision-Date: 2014-12-10 11:22+0000\n"
+"PO-Revision-Date: 2015-08-14 20:39+0200\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/django-localflavor/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -5778,8 +5778,8 @@ msgid "Enter a valid zip code."
 msgstr "Inserisci un codice postale valido."
 
 #: it/forms.py:77
-msgid "Enter a valid Social Security number."
-msgstr "Inserisci un numero di Assistenza Sociale valido."
+msgid "Enter a valid Tax Code."
+msgstr "Inserisci un Codice Fiscale valido."
 
 #: it/forms.py:109
 msgid "Enter a valid VAT number."
