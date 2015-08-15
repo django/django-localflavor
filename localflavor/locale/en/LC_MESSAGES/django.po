@@ -5779,7 +5779,7 @@ msgid "Enter a valid zip code."
 msgstr ""
 
 #: it/forms.py:77
-msgid "Enter a valid Social Security number."
+msgid "Enter a valid Tax code."
 msgstr ""
 
 #: it/forms.py:109
