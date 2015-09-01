@@ -5,15 +5,15 @@
 # Translators:
 # Alex Gaynor <alex.gaynor@gmail.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
-# Meir Kriheli <mkriheli@gmail.com>, 2013
+# Meir Kriheli <mkriheli@gmail.com>, 2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-10 12:21+0100\n"
-"PO-Revision-Date: 2014-12-10 11:22+0000\n"
+"POT-Creation-Date: 2015-06-24 21:27+0200\n"
+"PO-Revision-Date: 2015-08-16 08:54+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
-"Language-Team: Hebrew (http://www.transifex.com/projects/p/django-localflavor/language/he/)\n"
+"Language-Team: Hebrew (http://www.transifex.com/django/django-localflavor/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -139,7 +139,7 @@ msgstr "CUIT שגוי"
 
 #: ar/forms.py:97
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
-msgstr ""
+msgstr "סוג חוקי שגוי. סוג חייב להיות  27, 20, 30, 23, 24 או 33."
 
 #: at/at_states.py:6
 msgid "Burgenland"
@@ -177,7 +177,7 @@ msgstr "פורארלברג"
 msgid "Vienna"
 msgstr "וינה"
 
-#: at/forms.py:25 ch/forms.py:29 no/forms.py:24
+#: at/forms.py:25 no/forms.py:24
 msgid "Enter a zip code in the format XXXX."
 msgstr "יש להזין מיקוד בתבנית XXXX."
 
@@ -257,7 +257,7 @@ msgstr "אזור פלמי"
 msgid "Wallonia"
 msgstr "ולוניה"
 
-#: be/forms.py:26
+#: be/forms.py:26 ch/forms.py:35
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "נא להזין מיקוד חוקי בטווח ובתבנית 1XXX - 9XXX."
 
@@ -296,7 +296,7 @@ msgstr "שדה זה דורש לפחות 14 ספרות."
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
-msgstr ""
+msgstr "מדינת ברזיל (שתי אותיות גדולות)"
 
 #: ca/ca_provinces.py:6
 msgid "Alberta"
@@ -470,15 +470,19 @@ msgstr "צוג"
 msgid "Zurich"
 msgstr "ציריך"
 
-#: ch/forms.py:45
+#: ch/forms.py:50
 msgid "Phone numbers must be in 0XX XXX XX XX format."
 msgstr "מספרי טלפון חייבים להיות בפורמט 0XX XXX XX XX."
 
-#: ch/forms.py:78
+#: ch/forms.py:83
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr "יש להזין מספר זהות או כרטיס פספורט שווייצריים בפורמט  X1234567<0 או 1234567890."
+
+#: ch/forms.py:153
+msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
+msgstr ""
 
 #: cl/forms.py:34
 msgid "Enter a valid Chilean RUT."
@@ -668,7 +672,7 @@ msgstr "יש להזין מספר זיהוי גרמני חוקי בתבנית XXX
 
 #: dk/dk_municipalities.py:8 dk/dk_postalcodes.py:689
 msgid "Albertslund"
-msgstr ""
+msgstr "אלברטסלונד"
 
 #: dk/dk_municipalities.py:9 dk/dk_postalcodes.py:748
 msgid "Allerød"
@@ -4494,12 +4498,12 @@ msgstr "סיכום ביקורת שגוי עבור NIE."
 msgid "Invalid checksum for CIF."
 msgstr "סיכום ביקורת שגוי עבור CIF."
 
-#: es/forms.py:167
+#: es/forms.py:169
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr "נא להזין מספר חשבון בנק חוקי בתבנית XXXX-XXXX-XX-XXXXXXXXXX."
 
-#: es/forms.py:168
+#: es/forms.py:170
 msgid "Invalid checksum for bank account number."
 msgstr "סיכום ביקורת שגוי עבור מספר חשבון בנק."
 
@@ -5151,42 +5155,46 @@ msgstr ""
 msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:142
+#: generic/validators.py:155
 #, python-format
 msgid "%s is not a valid character for IBAN."
 msgstr ""
 
-#: generic/validators.py:164
+#: generic/validators.py:177
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
-#: generic/validators.py:167
+#: generic/validators.py:180
 #, python-format
 msgid "%s is not a valid country code for IBAN."
 msgstr ""
 
-#: generic/validators.py:169
+#: generic/validators.py:182
 #, python-format
 msgid "%s IBANs are not allowed in this field."
 msgstr ""
 
-#: generic/validators.py:172
+#: generic/validators.py:185
 msgid "Not a valid IBAN."
 msgstr ""
 
-#: generic/validators.py:192
+#: generic/validators.py:205
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#: generic/validators.py:198
+#: generic/validators.py:211
 #, python-format
 msgid "%s is not a valid institution code."
 msgstr ""
 
-#: generic/validators.py:203
+#: generic/validators.py:216
 #, python-format
 msgid "%s is not a valid country code."
+msgstr ""
+
+#: generic/validators.py:225
+msgid "Not a valid EAN code."
 msgstr ""
 
 #: gr/forms.py:27
@@ -5775,8 +5783,8 @@ msgid "Enter a valid zip code."
 msgstr "יש להזין מיקוד חוקי."
 
 #: it/forms.py:77
-msgid "Enter a valid Social Security number."
-msgstr "יש להזין מספר ביטוח לאומי חוקי."
+msgid "Enter a valid Tax code."
+msgstr ""
 
 #: it/forms.py:109
 msgid "Enter a valid VAT number."
@@ -7900,23 +7908,23 @@ msgid ""
 "is a digit and Y is an alphanumeric character)."
 msgstr "מספרי כרטיסי אזרח הם בתבנית XXXXXXXXXYYX או XXXXXXXX-XYYX (כאשר X הוא ספרה ו־Y הוא תו אלפא נומרי)."
 
-#: pt/forms.py:78
+#: pt/forms.py:83
 msgid ""
 "Phone numbers have at least 3 and at most 9 digits and may optionally be "
 "prefixed with '00351' or '+351'."
 msgstr "מספרי טלפון כוללים לפחות 3 ספרות ו־9 ספרות לכל היותר ועשויים להתחיל אופציונלית ב־'00351' או '‎+351'."
 
-#: pt/forms.py:113
+#: pt/forms.py:118
 msgid "The specified number is not a valid Social Security number."
 msgstr "המספר שצוין אינו מספר ביטוח לאומי חוקי."
 
-#: pt/forms.py:114
+#: pt/forms.py:119
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either"
 " 1 or 2 and Y is any other digit)."
 msgstr "מספרי ביטוח הלאומי חייבים להיות בתבנית XYYYYYYYYYY (כאשר X הוא 1 או 2 ו־Y הוא כל ספרות אחרת)."
 
-#: pt/forms.py:150
+#: pt/forms.py:155
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9"
 " and Y is any other digit)."

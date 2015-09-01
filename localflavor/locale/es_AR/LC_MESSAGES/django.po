@@ -4,16 +4,16 @@
 # 
 # Translators:
 # Jannis Leidel <jannis@leidel.info>, 2011
-# Ramiro Morales <cramm0@gmail.com>, 2011,2013
-# Walter Alini <walteralini@gmail.com>, 2014
+# Ramiro Morales, 2011,2013
+# Walter Alini <walteralini@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-10 12:21+0100\n"
-"PO-Revision-Date: 2014-12-10 11:22+0000\n"
+"POT-Creation-Date: 2015-06-24 21:27+0200\n"
+"PO-Revision-Date: 2015-08-16 08:54+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
-"Language-Team: Spanish (Argentina) (http://www.transifex.com/projects/p/django-localflavor/language/es_AR/)\n"
+"Language-Team: Spanish (Argentina) (http://www.transifex.com/django/django-localflavor/language/es_AR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -177,7 +177,7 @@ msgstr "Vorarlberg"
 msgid "Vienna"
 msgstr "Viena"
 
-#: at/forms.py:25 ch/forms.py:29 no/forms.py:24
+#: at/forms.py:25 no/forms.py:24
 msgid "Enter a zip code in the format XXXX."
 msgstr "Introduzca un zip code en formato XXXX."
 
@@ -257,7 +257,7 @@ msgstr "Región Flamenca"
 msgid "Wallonia"
 msgstr "Valonia"
 
-#: be/forms.py:26
+#: be/forms.py:26 ch/forms.py:35
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Introduzca un código postal válido con el rango y el formato 1XXX - 9XXX."
 
@@ -296,7 +296,7 @@ msgstr "Este campo requiere al menos 14 dígitos."
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
-msgstr ""
+msgstr "Estado de Brasil (dos letras mayúsculas)"
 
 #: ca/ca_provinces.py:6
 msgid "Alberta"
@@ -304,31 +304,31 @@ msgstr "Alberta"
 
 #: ca/ca_provinces.py:7
 msgid "British Columbia"
-msgstr ""
+msgstr "Columbia Británica"
 
 #: ca/ca_provinces.py:8
 msgid "Manitoba"
-msgstr ""
+msgstr "Manitoba"
 
 #: ca/ca_provinces.py:9
 msgid "New Brunswick"
-msgstr ""
+msgstr "Nuevo Brunswick"
 
 #: ca/ca_provinces.py:10
 msgid "Newfoundland and Labrador"
-msgstr ""
+msgstr "Terranova y Labrador"
 
 #: ca/ca_provinces.py:11
 msgid "Northwest Territories"
-msgstr ""
+msgstr "Territorios del Noroeste"
 
 #: ca/ca_provinces.py:12
 msgid "Nova Scotia"
-msgstr ""
+msgstr "Nueva Escocia"
 
 #: ca/ca_provinces.py:13
 msgid "Nunavut"
-msgstr ""
+msgstr "Nunavut"
 
 #: ca/ca_provinces.py:14
 msgid "Ontario"
@@ -336,19 +336,19 @@ msgstr "Ontario"
 
 #: ca/ca_provinces.py:15
 msgid "Prince Edward Island"
-msgstr ""
+msgstr "Isla del Príncipe Eduardo"
 
 #: ca/ca_provinces.py:16
 msgid "Quebec"
-msgstr ""
+msgstr "Quebec"
 
 #: ca/ca_provinces.py:17
 msgid "Saskatchewan"
-msgstr ""
+msgstr "Saskatchewan"
 
 #: ca/ca_provinces.py:18
 msgid "Yukon"
-msgstr ""
+msgstr "Yukón"
 
 #: ca/forms.py:31
 msgid "Enter a postal code in the format XXX XXX."
@@ -470,15 +470,19 @@ msgstr "Zug"
 msgid "Zurich"
 msgstr "Zurich"
 
-#: ch/forms.py:45
+#: ch/forms.py:50
 msgid "Phone numbers must be in 0XX XXX XX XX format."
 msgstr "Los números telefónicosdeben tener el formato 0XX XXX XX XX."
 
-#: ch/forms.py:78
+#: ch/forms.py:83
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr "Introduzca un número válido de tarjeta de identidad o pasaporte Suizos en formato X1234567<0 o 1234567890."
+
+#: ch/forms.py:153
+msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
+msgstr ""
 
 #: cl/forms.py:34
 msgid "Enter a valid Chilean RUT."
@@ -668,15 +672,15 @@ msgstr "Introduzca un número de tarjeta de identidad alemán válido en formato
 
 #: dk/dk_municipalities.py:8 dk/dk_postalcodes.py:689
 msgid "Albertslund"
-msgstr ""
+msgstr "Albertslund"
 
 #: dk/dk_municipalities.py:9 dk/dk_postalcodes.py:748
 msgid "Allerød"
-msgstr ""
+msgstr "Allerød"
 
 #: dk/dk_municipalities.py:10 dk/dk_postalcodes.py:704
 msgid "Ballerup"
-msgstr ""
+msgstr "Ballerup"
 
 #: dk/dk_municipalities.py:11
 msgid "Bornholm"
@@ -4122,7 +4126,7 @@ msgstr ""
 
 #: dk/forms.py:16
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
+msgstr "Introduzca un código postal en el formato XXXX."
 
 #: dk/forms.py:47 no/forms.py:102
 msgid "A phone number must be 8 digits and may have country code"
@@ -4174,19 +4178,19 @@ msgstr ""
 
 #: ee/ee_counties.py:20
 msgid "Tartu County"
-msgstr ""
+msgstr "Condado de Tartu"
 
 #: ee/ee_counties.py:21
 msgid "Valga County"
-msgstr ""
+msgstr "Condado de Valga"
 
 #: ee/ee_counties.py:22
 msgid "Viljandi County"
-msgstr ""
+msgstr "Condado de Viljandi"
 
 #: ee/ee_counties.py:23
 msgid "Võru County"
-msgstr ""
+msgstr "Condado de Võru"
 
 #: ee/forms.py:45
 msgid "Enter an 11-digit Estonian personal identification code."
@@ -4494,12 +4498,12 @@ msgstr "Código de verificación de NIE inválido."
 msgid "Invalid checksum for CIF."
 msgstr "Código de verificación de CIF inválido."
 
-#: es/forms.py:167
+#: es/forms.py:169
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr "Por favor introduzca un número de cuenta bancaria válido en formato XXXX-XXXX-XX-XXXXXXXXXX."
 
-#: es/forms.py:168
+#: es/forms.py:170
 msgid "Invalid checksum for bank account number."
 msgstr "Código de verificación de número de cuenta bancaria inválido."
 
@@ -5151,42 +5155,46 @@ msgstr ""
 msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:142
+#: generic/validators.py:155
 #, python-format
 msgid "%s is not a valid character for IBAN."
 msgstr ""
 
-#: generic/validators.py:164
+#: generic/validators.py:177
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
-#: generic/validators.py:167
+#: generic/validators.py:180
 #, python-format
 msgid "%s is not a valid country code for IBAN."
 msgstr ""
 
-#: generic/validators.py:169
+#: generic/validators.py:182
 #, python-format
 msgid "%s IBANs are not allowed in this field."
 msgstr ""
 
-#: generic/validators.py:172
+#: generic/validators.py:185
 msgid "Not a valid IBAN."
 msgstr ""
 
-#: generic/validators.py:192
+#: generic/validators.py:205
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#: generic/validators.py:198
+#: generic/validators.py:211
 #, python-format
 msgid "%s is not a valid institution code."
 msgstr ""
 
-#: generic/validators.py:203
+#: generic/validators.py:216
 #, python-format
 msgid "%s is not a valid country code."
+msgstr ""
+
+#: generic/validators.py:225
+msgid "Not a valid EAN code."
 msgstr ""
 
 #: gr/forms.py:27
@@ -5775,8 +5783,8 @@ msgid "Enter a valid zip code."
 msgstr "Introduzca un zip code válido."
 
 #: it/forms.py:77
-msgid "Enter a valid Social Security number."
-msgstr "Introduzca un número de Seguridad Social válido."
+msgid "Enter a valid Tax code."
+msgstr ""
 
 #: it/forms.py:109
 msgid "Enter a valid VAT number."
@@ -5784,7 +5792,7 @@ msgstr "Introduzca un número VAT válido."
 
 #: it/forms.py:130
 msgid "Enter a valid Italian phone number."
-msgstr ""
+msgstr "Introduzca un número de teléfono italiano válido."
 
 #: it/util.py:46 it/util.py:59
 msgid "Check digit does not match."
@@ -6292,7 +6300,7 @@ msgstr ""
 
 #: lv/forms.py:27
 msgid "Enter a postal code in the format XXXX or LV-XXXX."
-msgstr ""
+msgstr "Introduzca un código postal en formato XXXX o LV-XXXX."
 
 #: lv/forms.py:52
 msgid "Enter a Latvian personal code in format XXXXXX-XXXXX."
@@ -7334,7 +7342,7 @@ msgstr "Introduzca un número SoFi válido."
 
 #: nl/models.py:19
 msgid "Enter a valid bank account number"
-msgstr ""
+msgstr "Introduzca un número de cuenta bancaria válido"
 
 #: nl/models.py:20
 msgid "Bank account numbers have 1 - 7, 9 or 10 digits"
@@ -7394,11 +7402,11 @@ msgstr ""
 
 #: nz/forms.py:86
 msgid "Invalid phone number."
-msgstr ""
+msgstr "Número telefónico inválido."
 
 #: nz/forms.py:130
 msgid "Invalid bank account number."
-msgstr ""
+msgstr "Número de cuenta bancaria inválido."
 
 #: nz/nz_councils.py:31
 msgid "Far North District"
@@ -7900,23 +7908,23 @@ msgid ""
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
 
-#: pt/forms.py:78
+#: pt/forms.py:83
 msgid ""
 "Phone numbers have at least 3 and at most 9 digits and may optionally be "
 "prefixed with '00351' or '+351'."
 msgstr ""
 
-#: pt/forms.py:113
+#: pt/forms.py:118
 msgid "The specified number is not a valid Social Security number."
 msgstr "El  valor introducido no es un número de Seguridad Social válido."
 
-#: pt/forms.py:114
+#: pt/forms.py:119
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either"
 " 1 or 2 and Y is any other digit)."
 msgstr ""
 
-#: pt/forms.py:150
+#: pt/forms.py:155
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9"
 " and Y is any other digit)."
@@ -8511,7 +8519,7 @@ msgstr ""
 #: sg/forms.py:45
 msgid ""
 "Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
+msgstr "Los números telefónicos deben ser de 8 dígitos y comenzar con 6, 8 o 9."
 
 #: sg/forms.py:82
 msgid "Invalid NRIC/FIN."
@@ -8923,7 +8931,7 @@ msgstr ""
 
 #: us/models.py:91
 msgid "Social security number"
-msgstr ""
+msgstr "Número de Seguridad Social."
 
 #: uy/forms.py:30
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
