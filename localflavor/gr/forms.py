@@ -54,6 +54,8 @@ class GRTaxNumberCodeField(Field):
         val = re.sub('[\-\s\(\)]', '', smart_text(value))
         if(len(val) < 9):
             raise ValidationError(self.error_messages['invalid'])
+        if not all(char.isdigit() for char in val):
+            raise ValidationError(self.error_messages['invalid'])
         if not self.allow_test_value and val == '000000000':
             raise ValidationError(self.error_messages['invalid'])
         digits = list(map(int, val))
