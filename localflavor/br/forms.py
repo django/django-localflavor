@@ -20,6 +20,10 @@ except ImportError:
 from .br_states import STATE_CHOICES
 
 phone_digits_re = re.compile(r'^(\d{2})[-\.]?(\d{4,5})[-\.]?(\d{4})$')
+cpf_digits_re = re.compile(r'^(\d{3})\.(\d{3})\.(\d{3})-(\d{2})$')
+cnpj_digits_re = re.compile(
+    r'^(\d{2})[.-]?(\d{3})[.-]?(\d{3})/(\d{4})-(\d{2})$'
+)
 
 
 class BRZipCodeField(RegexField):
@@ -112,7 +116,6 @@ class BRCPFField(CharField):
     default_error_messages = {
         'invalid': _("Invalid CPF number."),
         'max_digits': _("This field requires at most 11 digits or 14 characters."),
-        'digits_only': _("This field requires only numbers."),
     }
 
     def __init__(self, max_length=14, min_length=11, *args, **kwargs):
@@ -128,11 +131,12 @@ class BRCPFField(CharField):
             return ''
         orig_value = value[:]
         if not value.isdigit():
-            value = re.sub("[-\. ]", "", value)
-        try:
-            int(value)
-        except ValueError:
-            raise ValidationError(self.error_messages['digits_only'])
+            cpf = cpf_digits_re.search(value)
+            if cpf:
+                value = ''.join(cpf.groups())
+            else:
+                raise ValidationError(self.error_messages['invalid'])
+
         if len(value) != 11:
             raise ValidationError(self.error_messages['max_digits'])
         orig_dv = value[-2:]
@@ -164,7 +168,6 @@ class BRCNPJField(Field):
     """
     default_error_messages = {
         'invalid': _("Invalid CNPJ number."),
-        'digits_only': _("This field requires only numbers."),
         'max_digits': _("This field requires at least 14 digits"),
     }
 
@@ -178,11 +181,12 @@ class BRCNPJField(Field):
             return ''
         orig_value = value[:]
         if not value.isdigit():
-            value = re.sub("[-/\.]", "", value)
-        try:
-            int(value)
-        except ValueError:
-            raise ValidationError(self.error_messages['digits_only'])
+            cnpj = cnpj_digits_re.search(value)
+            if cnpj:
+                value = ''.join(cnpj.groups())
+            else:
+                raise ValidationError(self.error_messages['invalid'])
+
         if len(value) != 14:
             raise ValidationError(self.error_messages['max_digits'])
         orig_dv = value[-2:]
