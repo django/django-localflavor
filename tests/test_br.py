@@ -5,7 +5,7 @@ from django.test import SimpleTestCase
 
 from localflavor.br.forms import (BRZipCodeField, BRCNPJField, BRCPFField,
                                   BRPhoneNumberField, BRStateSelect,
-                                  BRStateChoiceField)
+                                  BRStateChoiceField, BRProcessoField)
 
 
 class BRLocalFlavorTests(SimpleTestCase):
@@ -91,6 +91,29 @@ class BRLocalFlavorTests(SimpleTestCase):
             '41 3562–3464': error_format,
         }
         self.assertFieldOutput(BRPhoneNumberField, valid, invalid)
+
+    def test_BRProcessoField(self):
+        error_format = ['Invalid Process number.']
+        error_atmost_chars = [
+            'Ensure this value has at most 25 characters (it has 27).'
+        ]
+        error_atleast_chars = [
+            'Ensure this value has at least 20 characters (it has 19).'
+        ]
+        valid = {
+            '0013753-68.2014.8.21.0003': '0013753-68.2014.8.21.0003',
+            '0002684-10.2012.8.21.0003': '0002684-10.2012.8.21.0003',
+            '00026841020128210003': '00026841020128210003',
+            '0019536-41.2014.8.21.0003': '0019536-41.2014.8.21.0003',
+            '0017279-66.2007.811.0003': '0017279-66.2007.811.0003',
+        }
+        invalid = {
+            '-....00137536820148210003': error_format,
+            '00137531820148210003': error_format,
+            '0137531820148210003': error_atleast_chars,
+            '001375318201482100031111123': error_atmost_chars,
+        }
+        self.assertFieldOutput(BRProcessoField, valid, invalid)
 
     def test_BRStateSelect(self):
         f = BRStateSelect()
