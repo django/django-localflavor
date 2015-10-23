@@ -24,6 +24,9 @@ cpf_digits_re = re.compile(r'^(\d{3})\.(\d{3})\.(\d{3})-(\d{2})$')
 cnpj_digits_re = re.compile(
     r'^(\d{2})[.-]?(\d{3})[.-]?(\d{3})/(\d{4})-(\d{2})$'
 )
+process_digits_re = re.compile(
+    r'^(\d{7})-?(\d{2})\.?(\d{4})\.?(\d)\.?(\d{2})\.?(\d{4})$'
+)
 
 
 class BRZipCodeField(RegexField):
@@ -213,34 +216,30 @@ class BRProcessoField(CharField):
     A Processo number is
     compounded by NNNNNNN-DD.AAAA.J.TR.OOOO. The two DD digits are check digits.
     More information:
-    http://www.cnj.jus.br/atos-administrativos/12179:resolucao-no-65-de-16-de-dezembro-de-2008
+    http://www.cnj.jus.br/busca-atos-adm?documento=2748
     """
-    default_error_messages = {
-        'invalid': _("Invalid Process number."),
-        'max_digits': _("This field requires at most 20 digits or 25 characters."),
-        'digits_only': _("This field requires only numbers."),
-    }
+    default_error_messages = {'invalid': _("Invalid Process number.")}
 
     def __init__(self, max_length=25, min_length=20, *args, **kwargs):
         super(BRProcessoField, self).__init__(max_length, min_length, *args, **kwargs)
 
     def clean(self, value):
         """
-        Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or an
-        20-digit number.
+        Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or
+        an 20-digit number.
         """
         value = super(BRProcessoField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
+
         orig_value = value[:]
         if not value.isdigit():
-            value = re.sub("[-\. ]", "", value)
-        try:
-            int(value)
-        except ValueError:
-            raise ValidationError(self.error_messages['digits_only'])
-        if len(value) != 20:
-            raise ValidationError(self.error_messages['max_digits'])
+            process_number = process_digits_re.search(value)
+            if process_number:
+                value = ''.join(process_number.groups())
+            else:
+                raise ValidationError(self.error_messages['invalid'])
+
         orig_dv = value[7:9]
 
         value_without_digits = int(value[0:7] + value[9:])
