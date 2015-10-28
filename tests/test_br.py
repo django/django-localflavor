@@ -10,7 +10,7 @@ from localflavor.br.forms import (BRZipCodeField, BRCNPJField, BRCPFField,
 
 class BRLocalFlavorTests(SimpleTestCase):
     def test_BRZipCodeField(self):
-        error_format = ['Enter a zip code in the format XXXXX-XXX.']
+        error_format = ['Enter a zip code in the format XXXXX-XXX, XX.XXX-XXX or XXXXXXXX.']
         valid = {
             '12345-123': '12345-123',
             '12.345-123': '12.345-123',
