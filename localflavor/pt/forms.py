@@ -55,16 +55,21 @@ class PTCitizenCardNumberField(Field):
         encoded = number + checkdigits
         decoded = [int(digit, 36) for digit in encoded]
 
-        rectify = lambda value: value if value < 10 else value - 9
-        compute = lambda index, value: value if index % 2 else rectify(2 * value)
-
-        checksum = sum([compute(index, decoded_value)
+        checksum = sum([PTCitizenCardNumberField.compute(index, decoded_value)
                         for index, decoded_value in enumerate(decoded)])
 
         if not checksum % 10 == 0:
             raise ValidationError(self.error_messages['badchecksum'])
 
         return '{0}-{1}'.format(number, checkdigits)
+
+    @staticmethod
+    def compute(index, value):
+        if index % 2:
+            return value
+        else:
+            value *= 2
+            return value if value < 10 else value - 9
 
 
 class PTPhoneNumberField(Field):

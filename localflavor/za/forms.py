@@ -9,8 +9,8 @@ from datetime import date
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.checksums import luhn
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
+from localflavor.generic.checksums import luhn
 
 id_re = re.compile(r'^(?P<yy>\d\d)(?P<mm>\d\d)(?P<dd>\d\d)(?P<mid>\d{4})(?P<end>\d{3})')
 

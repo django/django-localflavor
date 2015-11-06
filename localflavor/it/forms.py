@@ -13,7 +13,7 @@ from django.utils.encoding import smart_text
 from django.utils.translation import ugettext_lazy as _
 
 from .it_province import PROVINCE_CHOICES
-from .it_region import REGION_CHOICES
+from .it_region import REGION_CHOICES, REGION_PROVINCE_CHOICES
 from .util import vat_number_validation, ssn_validation
 
 
@@ -42,6 +42,14 @@ class ITRegionSelect(Select):
         super(ITRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
+class ITRegionProvinceSelect(Select):
+    """
+    A Select widget that uses a named group list of IT regions mapped to regions as its choices.
+    """
+    def __init__(self, attrs=None):
+        super(ITRegionProvinceSelect, self).__init__(attrs, choices=REGION_PROVINCE_CHOICES)
+
+
 class ITProvinceSelect(Select):
     """
     A Select widget that uses a list of IT provinces as its choices.
@@ -52,8 +60,7 @@ class ITProvinceSelect(Select):
 
 class ITSocialSecurityNumberField(RegexField):
     """
-    A form field that validates Italian Social Security numbers (codice fiscale) for
-    both persons and entities.
+    A form field that validates Italian Tax code (codice fiscale) for both persons and entities.
 
     For reference see http://www.agenziaentrate.it/ and search for:
 
@@ -66,7 +73,7 @@ class ITSocialSecurityNumberField(RegexField):
     entities (numeric-only form).
     """
     default_error_messages = {
-        'invalid': _('Enter a valid Social Security number.'),
+        'invalid': _('Enter a valid Tax code.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):

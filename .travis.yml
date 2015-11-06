@@ -1,15 +1,38 @@
+sudo: no
 language: python
+env:
+  matrix:
+    - TOXENV=docs
+    - TOXENV=py26-1.5
+    - TOXENV=py26-1.6
+    - TOXENV=py27-1.5
+    - TOXENV=py27-1.6
+    - TOXENV=py27-1.7
+    - TOXENV=py27-1.8
+    - TOXENV=py27-master
+    - TOXENV=py32-1.5
+    - TOXENV=py32-1.6
+    - TOXENV=py32-1.7
+    - TOXENV=py32-1.8
+    - TOXENV=py33-1.5
+    - TOXENV=py33-1.6
+    - TOXENV=py33-1.7
+    - TOXENV=py33-1.8
+    - TOXENV=py34-1.5
+    - TOXENV=py34-1.6
+    - TOXENV=py34-1.7
+    - TOXENV=py34-1.8
+    - TOXENV=py34-master
+  global:
+    - PIP_WHEEL_DIR=$HOME/.wheels
+    - PIP_FIND_LINKS=file://$PIP_WHEEL_DIR
+cache:
+  directories:
+    - $HOME/.wheels
 install:
-  - pip install tox coveralls
+    - mkdir -p $PIP_WHEEL_DIR
+    - pip wheel -r tests/requirements.txt codecov
+    - pip install codecov tox
 script:
   - tox
-env:
-  - TOXENV=py26-1.5
-  - TOXENV=py26-1.6
-  - TOXENV=py27-1.5
-  - TOXENV=py27-1.6
-  - TOXENV=py32-1.5
-  - TOXENV=py32-1.6
-  - TOXENV=py33-1.5
-  - TOXENV=py33-1.6
-after_success: coveralls
+after_success: codecov

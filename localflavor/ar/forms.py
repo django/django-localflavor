@@ -84,11 +84,17 @@ class ARCUITField(RegexField):
     """
     This field validates a CUIT (Código Único de Identificación Tributaria). A
     CUIT is of the form XX-XXXXXXXX-V. The last digit is a check digit.
+
+    More info:
+    http://es.wikipedia.org/wiki/Clave_%C3%9Anica_de_Identificaci%C3%B3n_Tributaria
+
+    English info:
+    http://www.justlanded.com/english/Argentina/Argentina-Guide/Visas-Permits/Other-Legal-Documents
     """
     default_error_messages = {
         'invalid': _('Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format.'),
         'checksum': _("Invalid CUIT."),
-        'legal_type': _('Invalid legal type. Type must be 27, 20, 23 or 30.'),
+        'legal_type': _('Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
@@ -104,7 +110,7 @@ class ARCUITField(RegexField):
         if value in EMPTY_VALUES:
             return ''
         value, cd = self._canon(value)
-        if not value[:2] in ['27', '20', '23', '30']:
+        if not value[:2] in ['27', '20', '30', '23', '24', '33']:
             raise ValidationError(self.error_messages['legal_type'])
         if self._calc_cd(value) != cd:
             raise ValidationError(self.error_messages['checksum'])

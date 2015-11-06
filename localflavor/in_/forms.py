@@ -66,6 +66,12 @@ class INStateField(Field):
     A form field that validates its input is a Indian state name or
     abbreviation. It normalizes the input to the standard two-letter vehicle
     registration abbreviation for the given state or union territory
+
+    .. versionchanged:: 1.1
+
+       Added Telangana to list of states. More details at
+       https://en.wikipedia.org/wiki/Telangana#Bifurcation_of_Andhra_Pradesh
+
     """
     default_error_messages = {
         'invalid': _('Enter an Indian state or territory.'),
@@ -133,6 +139,12 @@ class INStateSelect(Select):
     """
     A Select widget that uses a list of Indian states/territories as its
     choices.
+
+    .. versionchanged:: 1.1
+
+       Added Telangana to list of states. More details at
+       https://en.wikipedia.org/wiki/Telangana#Bifurcation_of_Andhra_Pradesh
+
     """
     def __init__(self, attrs=None):
         super(INStateSelect, self).__init__(attrs, choices=STATE_CHOICES)

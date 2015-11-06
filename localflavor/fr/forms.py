@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 FR-specific Form helpers
 """
@@ -10,6 +11,7 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import smart_text
 from django.utils.translation import ugettext_lazy as _
+from localflavor.generic.checksums import luhn
 
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
 from .fr_region import REGION_CHOICES
@@ -29,12 +31,11 @@ class FRZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXXX.'),
     }
 
-    def __init__(self, max_length=5, min_length=5, *args, **kwargs):
-        kwargs['label'] = _('Zip code')
-        kwargs['max_length'] = max_length
-        kwargs['min_length'] = min_length
-        super(FRZipCodeField, self).__init__(
-            r'^\d{5}$', *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('label', _('Zip code'))
+        kwargs['max_length'] = 5
+        kwargs['min_length'] = 5
+        super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
 
 class FRPhoneNumberField(CharField):
@@ -50,10 +51,10 @@ class FRPhoneNumberField(CharField):
         'invalid': _('Phone numbers must be in 0X XX XX XX XX format.'),
     }
 
-    def __init__(self, max_length=14, min_length=10, *args, **kwargs):
-        kwargs['label'] = _('Phone number')
-        kwargs['max_length'] = max_length
-        kwargs['min_length'] = min_length
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('label', _('Phone number'))
+        kwargs['max_length'] = 14
+        kwargs['min_length'] = 10
         super(FRPhoneNumberField, self).__init__(*args, **kwargs)
 
     def clean(self, value):
@@ -110,7 +111,7 @@ class FRDepartmentField(CharField):
     widget = FRDepartmentSelect
 
     def __init__(self, *args, **kwargs):
-        kwargs['label'] = _('Select Department')
+        kwargs.setdefault('label', _('Select Department'))
         super(FRDepartmentField, self).__init__(*args, **kwargs)
 
 
@@ -121,7 +122,7 @@ class FRRegionField(CharField):
     widget = FRRegionSelect
 
     def __init__(self, *args, **kwargs):
-        kwargs['label'] = _('Select Region')
+        kwargs.setdefault('label', _('Select Region'))
         super(FRRegionField, self).__init__(*args, **kwargs)
 
 
@@ -178,9 +179,76 @@ class FRNationalIdentificationNumber(CharField):
             raise ValidationError(self.error_messages['invalid'])
 
         control_number = int(gender + year_of_birth + month_of_birth +
-                             department_of_origin.replace('A', '0').replace('B', '0')
-                             + commune_of_origin + person_unique_number)
+                             department_of_origin.replace('A', '0').replace('B', '0') +
+                             commune_of_origin + person_unique_number)
         if (97 - control_number % 97) == control_key:
             return value
         else:
             raise ValidationError(self.error_messages['invalid'])
+
+
+class FRSIRENENumberMixin(object):
+    """
+    Abstract class for SIREN and SIRET numbers, from the SIRENE register
+    """
+    def clean(self, value):
+        super(FRSIRENENumberMixin, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+
+        value = value.replace(' ', '').replace('-', '')
+        if not self.r_valid.match(value) or not luhn(value):
+            raise ValidationError(self.error_messages['invalid'])
+        return value
+
+
+class FRSIRENField(FRSIRENENumberMixin, CharField):
+    """
+    SIREN stands for "Système d'identification du répertoire des entreprises"
+
+    It's under authority of the INSEE. See http://fr.wikipedia.org/wiki/Système_d'identification_du_répertoire_des_entreprises for more information.
+
+    .. versionadded:: 1.1
+    """
+    r_valid = re.compile(r'^\d{9}$')
+
+    default_error_messages = {
+        'invalid': _('Enter a valid French SIREN number.'),
+    }
+
+    def prepare_value(self, value):
+        if value is None:
+            return value
+        value = value.replace(' ', '').replace('-', '')
+        return ' '.join((value[:3], value[3:6], value[6:]))
+
+
+class FRSIRETField(FRSIRENENumberMixin, CharField):
+    """
+    SIRET stands for "Système d'identification du répertoire des établissements"
+
+    It's under authority of the INSEE. See http://fr.wikipedia.org/wiki/Système_d'identification_du_répertoire_des_établissements for more information.
+
+    .. versionadded:: 1.1
+    """
+    r_valid = re.compile(r'^\d{14}$')
+
+    default_error_messages = {
+        'invalid': _('Enter a valid French SIRET number.'),
+    }
+
+    def clean(self, value):
+        if value not in EMPTY_VALUES:
+            value = value.replace(' ', '').replace('-', '')
+
+        ret = super(FRSIRETField, self).clean(value)
+
+        if not luhn(ret[:9]):
+            raise ValidationError(self.error_messages['invalid'])
+        return ret
+
+    def prepare_value(self, value):
+        if value is None:
+            return value
+        value = value.replace(' ', '').replace('-', '')
+        return ' '.join((value[:3], value[3:6], value[6:9], value[9:]))

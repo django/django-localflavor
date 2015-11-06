@@ -22,7 +22,7 @@ class PKStateField(CharField):
 class PKPostCodeField(CharField):
     """
     A model field that forms represent as a
-    :class:`~localflavor.forms.PKPostCodeField` field and stores the
+    :class:`~localflavor.pk.forms.PKPostCodeField` field and stores the
     five-digit Pakistani postcode in the database.
     """
     description = _("Pakistani Postcode")

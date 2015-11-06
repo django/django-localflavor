@@ -71,6 +71,11 @@ class ESIdentityCardNumberField(RegexField):
     can be a number or a letter depending on company type. Algorithm is not
     public, and different authors have different opinions on which ones allows
     letters, so both validations are assumed true for all types.
+
+    http://es.wikipedia.org/wiki/N%C3%BAmero_de_identificaci%C3%B3n_fiscal
+
+    .. versionchanged:: 1.1
+
     """
     default_error_messages = {
         'invalid': _('Please enter a valid NIF, NIE, or CIF.'),
@@ -84,32 +89,40 @@ class ESIdentityCardNumberField(RegexField):
         self.only_nif = only_nif
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
-        self.cif_types = 'ABCDEFGHJKLMNPQS'
-        self.nie_types = 'XT'
-        id_card_re = re.compile(r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$' % (self.cif_types + self.nie_types, self.nif_control + self.cif_control), re.IGNORECASE)
+        self.cif_types = 'ABCDEFGHJKLMNPQRSVW'
+        self.nie_types = 'XTY'
+        self.id_card_pattern = r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$'
+        id_card_re = re.compile(self.id_card_pattern %
+                                (self.cif_types + self.nie_types,
+                                 self.nif_control + self.cif_control),
+                                re.IGNORECASE)
+        error_message = self.default_error_messages['invalid%s' %
+                                                    (self.only_nif and '_only_nif' or '')]
         super(ESIdentityCardNumberField, self).__init__(
             id_card_re, max_length, min_length,
-            error_message=self.default_error_messages['invalid%s' % (self.only_nif and '_only_nif' or '')], *args, **kwargs)
+            error_message=error_message, *args, **kwargs)
 
     def clean(self, value):
         super(ESIdentityCardNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        nif_get_checksum = lambda d: self.nif_control[int(d) % 23]
 
         value = value.upper().replace(' ', '').replace('-', '')
-        m = re.match(r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$' % (self.cif_types + self.nie_types, self.nif_control + self.cif_control), value)
+        m = re.match(self.id_card_pattern %
+                     (self.cif_types + self.nie_types,
+                      self.nif_control + self.cif_control),
+                     value)
         letter1, number, letter2 = m.groups()
 
         if not letter1 and letter2:
             # NIF
-            if letter2 == nif_get_checksum(number):
+            if letter2 == self.nif_get_checksum(number):
                 return value
             else:
                 raise ValidationError(self.error_messages['invalid_nif'])
         elif letter1 in self.nie_types and letter2:
             # NIE
-            if letter2 == nif_get_checksum(number):
+            if letter2 == self.nif_get_checksum(number):
                 return value
             else:
                 raise ValidationError(self.error_messages['invalid_nie'])
@@ -124,6 +137,9 @@ class ESIdentityCardNumberField(RegexField):
                 raise ValidationError(self.error_messages['invalid_cif'])
         else:
             raise ValidationError(self.error_messages['invalid'])
+
+    def nif_get_checksum(self, d):
+        return self.nif_control[int(d) % 23]
 
 
 class ESCCCField(RegexField):
@@ -162,14 +178,18 @@ class ESCCCField(RegexField):
         super(ESCCCField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        control_str = [1, 2, 4, 8, 5, 10, 9, 7, 3, 6]
         m = re.match(r'^(\d{4})[ -]?(\d{4})[ -]?(\d{2})[ -]?(\d{10})$', value)
         entity, office, checksum, account = m.groups()
-        get_checksum = lambda d: str(11 - sum([int(digit) * int(control) for digit, control in zip(d, control_str)]) % 11).replace('10', '1').replace('11', '0')
         if get_checksum('00' + entity + office) + get_checksum(account) == checksum:
             return value
         else:
             raise ValidationError(self.error_messages['checksum'])
+
+
+def get_checksum(d):
+    control_str = [1, 2, 4, 8, 5, 10, 9, 7, 3, 6]
+    digits = [int(digit) * int(control) for digit, control in zip(d, control_str)]
+    return str(11 - sum(digits) % 11).replace('10', '1').replace('11', '0')
 
 
 class ESRegionSelect(Select):

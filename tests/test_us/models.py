@@ -1,6 +1,8 @@
 from django.db import models
 
-from localflavor.us.models import USStateField, USPostalCodeField
+from localflavor.us.models import (USStateField, USPostalCodeField,
+                                   USSocialSecurityNumberField,
+                                   USZipCodeField)
 
 
 class USPlace(models.Model):
@@ -9,3 +11,5 @@ class USPlace(models.Model):
     state_default = USStateField(default="CA", blank=True)
     postal_code = USPostalCodeField(blank=True)
     name = models.CharField(max_length=20)
+    ssn = USSocialSecurityNumberField(blank=True)
+    zip_code = USZipCodeField(blank=True)

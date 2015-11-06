@@ -6,7 +6,8 @@ from localflavor.fr.forms import (
     FRZipCodeField, FRPhoneNumberField,
     FRDepartmentField, FRRegionField,
     FRRegionSelect, FRDepartmentSelect,
-    FRNationalIdentificationNumber
+    FRNationalIdentificationNumber,
+    FRSIRENField, FRSIRETField
 )
 
 DEP_SELECT_OUTPUT = '''
@@ -159,7 +160,6 @@ REG_SELECT_OUTPUT = '''
 
 
 class FRLocalFlavorTests(SimpleTestCase):
-
     def test_FRZipCodeField(self):
         error_format = ['Enter a zip code in the format XXXXX.']
         valid = {
@@ -221,3 +221,52 @@ class FRLocalFlavorTests(SimpleTestCase):
             '869067443002289': error_format,    # Fails validation
         }
         self.assertFieldOutput(FRNationalIdentificationNumber, valid, invalid)
+
+    def test_FRSIRENNumber(self):
+        error_format = ['Enter a valid French SIREN number.']
+        valid = {
+            '752932715': '752932715',
+            '752 932 715': '752932715',
+            '752-932-715': '752932715',
+        }
+        invalid = {
+            '1234': error_format,               # wrong size
+            '752932712': error_format,     # Bad luhn on SIREN
+        }
+        self.assertFieldOutput(FRSIRENField, valid, invalid)
+
+    def test_FRSIRENNumber_formatting(self):
+        siren_form_field = FRSIRENField()
+        self.assertEqual(
+            siren_form_field.prepare_value('752932715'),
+            '752 932 715')
+        self.assertEqual(
+            siren_form_field.prepare_value('752 932 715'),
+            '752 932 715')
+        self.assertIsNone(siren_form_field.prepare_value(None))
+
+    def test_FRSIRETNumber(self):
+        error_format = ['Enter a valid French SIRET number.']
+        valid = {
+            '75293271500010': '75293271500010',
+            '752 932 715 00010': '75293271500010',
+            '752-932-715-00010': '75293271500010',
+        }
+        invalid = {
+            '1234': error_format,               # wrong size
+            '75293271200017': error_format,     # Bad luhn on SIREN
+            '75293271000010': error_format,     # Bad luhn on whole
+        }
+        self.assertFieldOutput(FRSIRETField, valid, invalid)
+
+    def test_FRSIRETNumber_formatting(self):
+        siret_form_field = FRSIRETField()
+        self.assertEqual(
+            siret_form_field.prepare_value('75293271500010'),
+            '752 932 715 00010')
+        self.assertEqual(
+            siret_form_field.prepare_value('752 932 715 00010'),
+            '752 932 715 00010')
+        self.assertIsNone(siret_form_field.prepare_value(None))
+        self.assertEqual(
+            siret_form_field.clean('752 932 715 00010'), '75293271500010')

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 
-from django.test import SimpleTestCase
+from django.test import TestCase
 
 from localflavor.mx.forms import (MXZipCodeField, MXRFCField,
                                   MXStateSelect, MXCURPField,
@@ -10,7 +10,7 @@ from localflavor.mx.forms import (MXZipCodeField, MXRFCField,
 from .forms import MXPersonProfileForm
 
 
-class MXLocalFlavorTests(SimpleTestCase):
+class MXLocalFlavorTests(TestCase):
 
     def setUp(self):
         self.form = MXPersonProfileForm({

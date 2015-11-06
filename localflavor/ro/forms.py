@@ -5,12 +5,17 @@ Romanian specific form helpers.
 from __future__ import absolute_import, unicode_literals
 
 import datetime
+import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError, Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from ..generic.forms import IBANFormField
 from .ro_counties import COUNTIES_CHOICES
+
+
+phone_digits_re = re.compile(r'^[0-9\-\.\(\)\s]{3,20}$')
 
 
 class ROCIFField(RegexField):
@@ -31,7 +36,7 @@ class ROCIFField(RegexField):
         """
         CIF validation
         """
-        value = super(ROCIFField, self).clean(value)
+        value = super(ROCIFField, self).clean(value).strip()
         if value in EMPTY_VALUES:
             return ''
         # strip RO part
@@ -141,66 +146,64 @@ class ROCountySelect(Select):
         super(ROCountySelect, self).__init__(attrs, choices=COUNTIES_CHOICES)
 
 
-class ROIBANField(RegexField):
+class ROIBANField(IBANFormField):
     """
     Romanian International Bank Account Number (IBAN) field
 
-    For Romanian IBAN validation algorithm see http://validari.ro/iban.html
+    .. versionchanged:: 1.1
+        Validation error messages changed to the messages used in :class:`.IBANFormField`
+
+    .. deprecated:: 1.1
+        Use `IBANFormField` with `included_countries=('RO',)` option instead.
     """
-    default_error_messages = {
-        'invalid': _('Enter a valid IBAN in ROXX-XXXX-XXXX-XXXX-XXXX-XXXX format'),
-    }
-
-    def __init__(self, max_length=40, min_length=24, *args, **kwargs):
-        super(ROIBANField, self).__init__(r'^[0-9A-Za-z\-\s]{24,40}$',
-                                          max_length, min_length, *args, **kwargs)
-
-    def clean(self, value):
-        """
-        Strips - and spaces, performs country code and checksum validation
-        """
-        value = super(ROIBANField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = value.replace('-', '')
-        value = value.replace(' ', '')
-        value = value.upper()
-        if value[0:2] != 'RO':
-            raise ValidationError(self.error_messages['invalid'])
-        numeric_format = ''
-        for char in value[4:] + value[0:4]:
-            if char.isalpha():
-                numeric_format += str(ord(char) - 55)
-            else:
-                numeric_format += char
-        if int(numeric_format) % 97 != 1:
-            raise ValidationError(self.error_messages['invalid'])
-        return value
+    def __init__(self, *args, **kwargs):
+        super(ROIBANField, self).__init__(use_nordea_extensions=False, include_countries=('RO',), **kwargs)
 
 
 class ROPhoneNumberField(RegexField):
-    """Romanian phone number field"""
+    """
+    Romanian phone number field
+
+    .. versionchanged:: 1.1
+
+        Made the field also accept national short phone numbers and 7-digit
+        regional phone numbers besides the regular ones.
+        Official documentation (in English): http://www.ancom.org.ro/en/pnn_1300
+        Official documentation (in Romanian): http://www.ancom.org.ro/pnn_1300
+
+    """
     default_error_messages = {
-        'invalid': _('Phone numbers must be in XXXX-XXXXXX format.'),
+        'invalid_length':
+            _('Phone numbers may only have 7 or 10 digits, except the ' +
+                'national short numbers which have 3 to 6 digits'),
+        'invalid_long_format':
+            _('Normal phone numbers (7 or 10 digits) must begin with "0"'),
+        'invalid_short_format':
+            _('National short numbers (3 to 6 digits) must begin with "1"'),
     }
 
-    def __init__(self, max_length=20, min_length=10, *args, **kwargs):
-        super(ROPhoneNumberField, self).__init__(r'^[0-9\-\(\)\s]{10,20}$',
-                                                 max_length, min_length, *args, **kwargs)
+    def __init__(self, max_length=20, min_length=3, *args, **kwargs):
+        super(ROPhoneNumberField, self).__init__(phone_digits_re,
+                max_length, min_length, *args, **kwargs)
 
     def clean(self, value):
         """
-        Strips -, (, ) and spaces. Checks the final length.
+        Strips braces, dashes, dots and spaces. Checks the final length.
         """
         value = super(ROPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = value.replace('-', '')
-        value = value.replace('(', '')
-        value = value.replace(')', '')
-        value = value.replace(' ', '')
-        if len(value) != 10:
-            raise ValidationError(self.error_messages['invalid'])
+        value = re.sub('[()-. ]', '', value)
+        length = len(value)
+        if length in (3, 4, 5, 6, 7, 10):
+            if (length == 7 or length == 10) and value[0] != '0':
+                raise ValidationError(
+                    self.error_messages['invalid_long_format'])
+            elif (3 <= length and length <= 6) and value[0] != '1':
+                raise ValidationError(
+                    self.error_messages['invalid_short_format'])
+        else:
+            raise ValidationError(self.error_messages['invalid_length'])
         return value
 
 

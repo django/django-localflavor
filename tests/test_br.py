@@ -5,7 +5,7 @@ from django.test import SimpleTestCase
 
 from localflavor.br.forms import (BRZipCodeField, BRCNPJField, BRCPFField,
                                   BRPhoneNumberField, BRStateSelect,
-                                  BRStateChoiceField)
+                                  BRStateChoiceField, BRProcessoField)
 
 
 class BRLocalFlavorTests(SimpleTestCase):
@@ -25,23 +25,22 @@ class BRLocalFlavorTests(SimpleTestCase):
 
     def test_BRCNPJField(self):
         error_format = ['Invalid CNPJ number.']
-        error_numbersonly = ['This field requires only numbers.']
         valid = {
             '64.132.916/0001-88': '64.132.916/0001-88',
             '64-132-916/0001-88': '64-132-916/0001-88',
             '64132916/0001-88': '64132916/0001-88',
         }
         invalid = {
+            '../-12345678901210': error_format,
             '12-345-678/9012-10': error_format,
             '12.345.678/9012-10': error_format,
             '12345678/9012-10': error_format,
-            '64.132.916/0001-XX': error_numbersonly,
+            '64.132.916/0001-XX': error_format,
         }
         self.assertFieldOutput(BRCNPJField, valid, invalid)
 
     def test_BRCPFField(self):
         error_format = ['Invalid CPF number.']
-        error_numbersonly = ['This field requires only numbers.']
         error_atmost_chars = ['Ensure this value has at most 14 characters (it has 15).']
         error_atleast_chars = ['Ensure this value has at least 11 characters (it has 10).']
         error_atmost = ['This field requires at most 11 digits or 14 characters.']
@@ -52,10 +51,15 @@ class BRLocalFlavorTests(SimpleTestCase):
             '84828509895': '84828509895',
         }
         invalid = {
+            '..-48929465454': error_format,
             '489.294.654-54': error_format,
             '295.669.575-98': error_format,
+            '111.111.111-11': error_format,
+            '11111111111': error_format,
+            '222.222.222-22': error_format,
+            '22222222222': error_format,
             '539.315.127-22': error_format,
-            '375.788.573-XX': error_numbersonly,
+            '375.788.573-XX': error_format,
             '375.788.573-000': error_atmost_chars,
             '123.456.78': error_atleast_chars,
             '123456789555': error_atmost,
@@ -87,6 +91,29 @@ class BRLocalFlavorTests(SimpleTestCase):
             '41 3562–3464': error_format,
         }
         self.assertFieldOutput(BRPhoneNumberField, valid, invalid)
+
+    def test_BRProcessoField(self):
+        error_format = ['Invalid Process number.']
+        error_atmost_chars = [
+            'Ensure this value has at most 25 characters (it has 27).'
+        ]
+        error_atleast_chars = [
+            'Ensure this value has at least 20 characters (it has 19).'
+        ]
+        valid = {
+            '0013753-68.2014.8.21.0003': '0013753-68.2014.8.21.0003',
+            '0002684-10.2012.8.21.0003': '0002684-10.2012.8.21.0003',
+            '00026841020128210003': '00026841020128210003',
+            '0019536-41.2014.8.21.0003': '0019536-41.2014.8.21.0003',
+            '0017279-66.2007.811.0003': '0017279-66.2007.811.0003',
+        }
+        invalid = {
+            '-....00137536820148210003': error_format,
+            '00137531820148210003': error_format,
+            '0137531820148210003': error_atleast_chars,
+            '001375318201482100031111123': error_atmost_chars,
+        }
+        self.assertFieldOutput(BRProcessoField, valid, invalid)
 
     def test_BRStateSelect(self):
         f = BRStateSelect()

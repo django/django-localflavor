@@ -22,6 +22,11 @@ class USZipCodeField(RegexField):
     A form field that validates input as a U.S. ZIP code. Valid formats are
     XXXXX or XXXXX-XXXX.
 
+    .. note::
+
+        If you are looking for a form field with a list of U.S. Postal Service
+        locations please use :class:`~localflavor.us.forms.USPSSelect`.
+
     .. versionadded:: 1.1
 
     Whitespace around the ZIP code is accepted and automatically trimmed.
@@ -58,7 +63,7 @@ class USPhoneNumberField(CharField):
         raise ValidationError(self.error_messages['invalid'])
 
 
-class USSocialSecurityNumberField(Field):
+class USSocialSecurityNumberField(CharField):
     """
     A United States Social Security number.
 
@@ -72,6 +77,8 @@ class USSocialSecurityNumberField(Field):
         * The number is not one known to be invalid due to otherwise widespread
           promotional use or distribution (e.g., the Woolworth's number or the
           1962 promotional number).
+
+    .. versionadded:: 1.1
     """
     default_error_messages = {
         'invalid': _('Enter a valid U.S. Social Security number in XXX-XX-XXXX format.'),
@@ -139,6 +146,12 @@ class USPSSelect(Select):
     """
     A Select widget that uses a list of US Postal Service codes as its
     choices.
+
+    .. note::
+
+        If you are looking for a form field that validates U.S. ZIP codes
+        please use :class:`~localflavor.us.forms.USZipCodeField`.
+
     """
     def __init__(self, attrs=None):
         from .us_states import USPS_CHOICES

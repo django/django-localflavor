@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
+"""
+China(mainland)-specific Form helpers
+"""
 
-"""
-Chinese-specific form helpers
-"""
 from __future__ import absolute_import, unicode_literals
 
 import re
@@ -12,6 +11,7 @@ from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .cn_provinces import CN_PROVINCE_CHOICES
+
 
 __all__ = (
     'CNProvinceSelect',
@@ -25,7 +25,7 @@ __all__ = (
 ID_CARD_RE = r'^\d{15}(\d{2}[0-9xX])?$'
 POST_CODE_RE = r'^\d{6}$'
 PHONE_RE = r'^\d{3,4}-\d{7,8}(-\d+)?$'
-CELL_RE = r'^1[3458]\d{9}$'
+CELL_RE = r'^1[34578]\d{9}$'
 
 # Valid location code used in id card checking algorithm
 CN_LOCATION_CODES = (
@@ -68,7 +68,8 @@ CN_LOCATION_CODES = (
 
 class CNProvinceSelect(Select):
     """
-    A select widget with list of Chinese provinces as choices.
+    A select widget providing the list of provinces and districts
+    in People's Republic of China as choices.
     """
     def __init__(self, attrs=None):
         super(CNProvinceSelect, self).__init__(attrs, choices=CN_PROVINCE_CHOICES)
@@ -76,8 +77,8 @@ class CNProvinceSelect(Select):
 
 class CNPostCodeField(RegexField):
     """
-    A form field that validates as Chinese post code.
-    Valid code is XXXXXX where X is digit.
+    A form field that validates input as postal codes in mainland China.
+    Valid codes are in the format of XXXXXX where X is a digit.
     """
     default_error_messages = {
         'invalid': _('Enter a post code in the format XXXXXX.'),
@@ -89,16 +90,17 @@ class CNPostCodeField(RegexField):
 
 class CNIDCardField(CharField):
     """
-    A form field that validates as Chinese Identification Card Number.
+    A form field that validates input as a Resident Identity Card (PRC) number.
 
     This field would check the following restrictions:
-        * the length could only be 15 or 18.
-        * if the length is 18, the last digit could be x or X.
-        * has a valid checksum.(length 18 only)
-        * has a valid birthdate.
-        * has a valid location.
+        * the length could only be 15 or 18;
+        * if the length is 18, the last character can be x or X;
+        * has a valid checksum (only for those with a length of 18);
+        * has a valid date of birth;
+        * has a valid province.
 
     The checksum algorithm is described in GB11643-1999.
+    See: http://en.wikipedia.org/wiki/Resident_Identity_Card#Identity_card_number
     """
     default_error_messages = {
         'invalid': _('ID Card Number consists of 15 or 18 digits.'),
@@ -135,8 +137,8 @@ class CNIDCardField(CharField):
 
     def has_valid_birthday(self, value):
         """
-        This function would grab the birthdate from the ID card number and test
-        whether it is a valid date.
+        This method would grab the date of birth from the ID card number and
+        test whether it is a valid date.
         """
         from datetime import datetime
         if len(value) == 15:
@@ -156,14 +158,15 @@ class CNIDCardField(CharField):
 
     def has_valid_location(self, value):
         """
-        This method checks if the first two digits in the ID Card are valid.
+        This method checks if the first two digits in the ID Card are
+        valid province code.
         """
         return int(value[:2]) in CN_LOCATION_CODES
 
     def has_valid_checksum(self, value):
         """
-        This method checks if the last letter/digit in value is valid
-        according to the algorithm the ID Card follows.
+        This method checks if the last letter/digit is valid according to
+        GB11643-1999.
         """
         # If the length of the number is not 18, then the number is a 1st
         # generation ID card number, and there is no checksum to be checked.
@@ -179,12 +182,11 @@ class CNIDCardField(CharField):
 
 class CNPhoneNumberField(RegexField):
     """
-    A form field that validates as Chinese phone number
+    A form field that validates input as a telephone number in mainland China.
+    A valid phone number could be like: 010-12345678.
 
-    A valid phone number could be like: 010-55555555
-
-    Considering there might be extension phone numbers,
-    so this could also be: 010-55555555-35
+    Considering there might be extension numbers,
+    this could also be: 010-12345678-35.
     """
     default_error_messages = {
         'invalid': _('Enter a valid phone number.'),
@@ -196,13 +198,17 @@ class CNPhoneNumberField(RegexField):
 
 class CNCellNumberField(RegexField):
     """
-    A form field that validates as Chinese cell number
+    A form field that validates input as a cellphone number in mainland China.
+    A valid cellphone number could be like: 13012345678.
 
-    A valid cell number could be like: 13012345678
+    A very rough rule is used here: the first digit should be 1, the second
+    should be 3, 4, 5, 7 or 8, followed by 9 more digits.
+    The total length of a cellphone number should be 11.
 
-    We used a rough rule here, the first digit should be 1, the second could be
-    3, 5 and 8, the rest could be what so ever.
-    The length of the cell number should be 11.
+    .. versionchanged:: 1.1
+
+       Added 7 as a valid second digit for Chinese virtual mobile ISPs.
+
     """
     default_error_messages = {
         'invalid': _('Enter a valid cell number.'),

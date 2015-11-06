@@ -12,6 +12,7 @@ Authors
 * Andrew Godwin
 * Aymeric Augustin
 * Ben Davis
+* Ben Konrath
 * Bruno M. Custódio
 * Claude Paroz
 * Douglas Miranda
@@ -23,17 +24,21 @@ Authors
 * Grzes Furga
 * Honza Král
 * Horst Gutmann
+* Jaap Roes
 * Jacob Kaplan-Moss
 * James Bennett
 * Jannis Leidel
 * Jérémie Ferry
+* Jocelyn Delalande
 * Jonas Ghyllebert
+* Jocelyn Delalande
 * Joseph Kocherhans
 * Julien Phalip
 * Justin Bronn
 * Karen Tracey
 * Luke Benstead
 * Malcolm Tredinnick
+* Marti Raudsepp
 * Martin Ogden
 * Matias Dinota
 * Olivier Sels

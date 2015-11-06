@@ -2,11 +2,17 @@
 django-localflavor
 ==================
 
-.. image:: https://secure.travis-ci.org/django/django-localflavor.png
+.. image:: https://img.shields.io/pypi/v/django-localflavor.svg
+   :target: https://pypi.python.org/pypi/django-localflavor
+
+.. image:: https://img.shields.io/travis/django/django-localflavor.svg
     :target: http://travis-ci.org/django/django-localflavor
 
-.. image:: https://coveralls.io/repos/django/django-localflavor/badge.png?branch=master
-   :target: https://coveralls.io/r/django/django-localflavor
+.. image:: https://img.shields.io/codecov/c/github/django/django-localflavor/master.svg
+   :target: http://codecov.io/github/django/django-localflavor?branch=master
+
+.. image:: https://readthedocs.org/projects/django-localflavor/badge/?version=latest&style=plastic
+   :target: http://django-localflavor.readthedocs.org/en/latest/
 
 Django's "localflavor" packages offer additional functionality for particular
 countries or cultures. For example, these might include form fields for your

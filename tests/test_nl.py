@@ -37,6 +37,9 @@ class NLLocalFlavorTests(SimpleTestCase):
             '(0123) 456789': '(0123) 456789',
         }
         invalid = {
+            '(010) 12345678': error_invalid,
+            '06-123456789': error_invalid,
+            '+31 6123456789': error_invalid,
             'foo': error_invalid,
         }
         self.assertFieldOutput(NLPhoneNumberField, valid, invalid)
