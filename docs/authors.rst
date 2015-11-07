@@ -3,6 +3,7 @@ Authors
 
 * Aaron Boman
 * Adrian Holovaty
+* Alex Butum
 * Alex Gaynor
 * Alex Hill
 * Alex Zhang
