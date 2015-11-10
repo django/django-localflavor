@@ -13,6 +13,7 @@ from .ee_counties import COUNTY_CHOICES
 
 idcode = re.compile(r'^([1-6])(\d\d)(\d\d)(\d\d)(?:\d{3})(\d)$')
 zipcode = re.compile(r'^[1-9]\d{4}$')
+bregcode = re.compile(r'^[1-9]\d{7}$')
 
 
 class EEZipCodeField(RegexField):
@@ -37,7 +38,7 @@ class EECountySelect(Select):
 
 
 class EEPersonalIdentificationCode(Field):
-    """A form field that validates input as a Estonian personal identification code.
+    """A form field that validates input as an Estonian personal identification code.
 
     See: https://www.riigiteataja.ee/akt/106032012004
     """
@@ -48,7 +49,7 @@ class EEPersonalIdentificationCode(Field):
 
     @staticmethod
     def ee_checksum(value):
-        """Takes a string of 10 digits as input, returns check digit."""
+        """Takes a string of digits as input, returns check digit."""
 
         for i in (1, 3):
             check = 0
@@ -85,6 +86,35 @@ class EEPersonalIdentificationCode(Field):
         try:
             date(year, month, day)
         except ValueError:
+            raise ValidationError(self.error_messages['invalid'])
+
+        return value
+
+
+class EEBusinessRegistryCode(Field):
+    """A form field that validates input as an
+    Estonian business registration code.
+
+    .. versionadded:: 1.2
+    """
+    default_error_messages = {
+        'invalid_format': _('Enter an 8-digit Estonian business registry code.'),
+        'invalid': _('Enter a valid Estonian business registry code.'),
+    }
+
+    def clean(self, value):
+        value = super(EEBusinessRegistryCode, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+        value = value.strip()
+
+        match = re.match(bregcode, value)
+        if not match:
+            raise ValidationError(self.error_messages['invalid_format'])
+
+        check = int(value[7])
+
+        if check != EEPersonalIdentificationCode.ee_checksum(value[:7]):
             raise ValidationError(self.error_messages['invalid'])
 
         return value
