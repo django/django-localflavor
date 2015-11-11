@@ -58,6 +58,7 @@ Authors
 * Tyler Ball
 * baffolobill
 * d.merc
+* jleeothon
 * luyikei
 * tadeo
 * Łukasz Langa
