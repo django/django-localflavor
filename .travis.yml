@@ -1,31 +1,60 @@
 sudo: no
 language: python
 env:
-  matrix:
-    - TOXENV=docs
-    - TOXENV=py26-1.5
-    - TOXENV=py26-1.6
-    - TOXENV=py27-1.5
-    - TOXENV=py27-1.6
-    - TOXENV=py27-1.7
-    - TOXENV=py27-1.8
-    - TOXENV=py27-master
-    - TOXENV=py32-1.5
-    - TOXENV=py32-1.6
-    - TOXENV=py32-1.7
-    - TOXENV=py32-1.8
-    - TOXENV=py33-1.5
-    - TOXENV=py33-1.6
-    - TOXENV=py33-1.7
-    - TOXENV=py33-1.8
-    - TOXENV=py34-1.5
-    - TOXENV=py34-1.6
-    - TOXENV=py34-1.7
-    - TOXENV=py34-1.8
-    - TOXENV=py34-master
   global:
     - PIP_WHEEL_DIR=$HOME/.wheels
     - PIP_FIND_LINKS=file://$PIP_WHEEL_DIR
+matrix:
+  include:
+    - env: TOXENV=docs
+    - python: 2.6
+      env: TOXENV=py26-1.5
+    - python: 2.6
+      env: TOXENV=py26-1.6
+    - python: 2.7
+      env: TOXENV=py27-1.5
+    - python: 2.7
+      env: TOXENV=py27-1.6
+    - python: 2.7
+      env: TOXENV=py27-1.7
+    - python: 2.7
+      env: TOXENV=py27-1.8
+    - python: 2.7
+      env: TOXENV=py27-1.9
+    - python: 2.7
+      env: TOXENV=py27-master
+    - python: 3.2
+      env: TOXENV=py32-1.5
+    - python: 3.2
+      env: TOXENV=py32-1.6
+    - python: 3.2
+      env: TOXENV=py32-1.7
+    - python: 3.2
+      env: TOXENV=py32-1.8
+    - python: 3.3
+      env: TOXENV=py33-1.5
+    - python: 3.3
+      env: TOXENV=py33-1.6
+    - python: 3.3
+      env: TOXENV=py33-1.7
+    - python: 3.3
+      env: TOXENV=py33-1.8
+    - python: 3.4
+      env: TOXENV=py34-1.5
+    - python: 3.4
+      env: TOXENV=py34-1.6
+    - python: 3.4
+      env: TOXENV=py34-1.7
+    - python: 3.4
+      env: TOXENV=py34-1.8
+    - python: 3.4
+      env: TOXENV=py34-1.9
+    - python: 3.4
+      env: TOXENV=py34-master
+    - python: 3.5
+      env: TOXENV=py35-1.9
+    - python: 3.5
+      env: TOXENV=py35-master
 cache:
   directories:
     - $HOME/.wheels
