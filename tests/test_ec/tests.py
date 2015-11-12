@@ -1,11 +1,19 @@
 from __future__ import unicode_literals
 
-from django.test import SimpleTestCase
+from django.test import TestCase
 
 from localflavor.ec.forms import ECProvinceSelect
 
+from .forms import ECPlaceForm
 
-class ECLocalFlavorTests(SimpleTestCase):
+
+class ECLocalFlavorTests(TestCase):
+
+    def setUp(self):
+        self.form = ECPlaceForm({
+            'province': 'SD'
+        })
+
     def test_ECProvinceSelect(self):
         p = ECProvinceSelect()
         out = """<select name="province">
@@ -35,3 +43,9 @@ class ECLocalFlavorTests(SimpleTestCase):
 <option value="Z">Zamora Chinchipe</option>
 </select>"""
         self.assertHTMLEqual(p.render('province', 'U'), out)
+
+    def test_get_display_methods(self):
+        """Test that the get_*_display() methods are added to the model instances."""
+        place = self.form.save()
+        self.assertEqual(place.get_province_display(),
+                         "Santo Domingo de los Ts\xe1chilas")
