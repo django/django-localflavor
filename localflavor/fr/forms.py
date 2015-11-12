@@ -134,7 +134,7 @@ class FRNationalIdentificationNumber(CharField):
     .. versionadded:: 1.1
     """
     default_error_messages = {
-        'invalid': _('Enter a valid French French National Identification number.'),
+        'invalid': _('Enter a valid French National Identification number.'),
     }
 
     def clean(self, value):
