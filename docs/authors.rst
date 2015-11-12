@@ -31,8 +31,8 @@ Authors
 * Jannis Leidel
 * Jérémie Ferry
 * Jocelyn Delalande
+* Johnny Lee Othon
 * Jonas Ghyllebert
-* Jocelyn Delalande
 * Joseph Kocherhans
 * Julien Phalip
 * Justin Bronn
@@ -58,7 +58,6 @@ Authors
 * Tyler Ball
 * baffolobill
 * d.merc
-* jleeothon
 * luyikei
 * tadeo
 * Łukasz Langa
