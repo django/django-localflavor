@@ -24,3 +24,5 @@ if django.VERSION[:2] < (1, 6):
     TEST_RUNNER = 'discover_runner.DiscoverRunner'
 
 SECRET_KEY = 'spam-spam-spam-spam'
+
+SILENCED_SYSTEM_CHECKS = ('1_7.W001',)
