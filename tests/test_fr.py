@@ -205,7 +205,7 @@ class FRLocalFlavorTests(SimpleTestCase):
         self.assertHTMLEqual(f.render('reg', '25'), REG_SELECT_OUTPUT)
 
     def test_FRNationalIdentificationNumber(self):
-        error_format = ['Enter a valid French French National Identification number.']
+        error_format = ['Enter a valid French National Identification number.']
         valid = {
             '869067543002289': '869067543002289',
             '869069713002256': '869069713002256',   # Good Overseas
