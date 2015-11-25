@@ -36,4 +36,4 @@ def setup(app):
     def lazy_safe_repr(object):
         return object_description(lazy_repr(object))
 
-    autodoc.safe_repr = lazy_safe_repr  # noqa
+    autodoc.object_description = lazy_safe_repr  # noqa
