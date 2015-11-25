@@ -213,6 +213,8 @@ class FRLocalFlavorTests(SimpleTestCase):
         invalid = {
             '369067543002289': error_format,    # Gender mismatch
             '869069873002289': error_format,    # Bad Department
+            '878062073002289': error_format,    # Bad Department with birthdate
+            '869062A73002289': error_format,    # Bad Department with birthdate
             '869069773002289': error_format,    # Bad overseas Department
             '869069710002256': error_format,    # Good overseas Bad Commune
             '869067500002289': error_format,    # Bad Commune
