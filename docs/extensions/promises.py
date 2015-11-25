@@ -33,7 +33,7 @@ def lazy_repr(obj):
 def setup(app):
     from sphinx.ext import autodoc
 
-    def lazy_safe_repr(object):
+    def lazy_object_description(object):
         return object_description(lazy_repr(object))
 
-    autodoc.object_description = lazy_safe_repr  # noqa
+    autodoc.object_description = lazy_object_description  # noqa
