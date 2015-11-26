@@ -208,19 +208,38 @@ class FRLocalFlavorTests(SimpleTestCase):
         error_format = ['Enter a valid French National Identification number.']
         valid = {
             '869067543002289': '869067543002289',
-            '869069713002256': '869069713002256',   # Good Overseas
+            # Good Overseas
+            '869069713002256': '869069713002256',
+            # Good, old Corsica department number (20) with birthdate < 1976
+            '870062009002285': '870062009002285',
+            # Good, new Corsica department number (2A) with birthdate >= 1976
+            '882062A09002279': '882062A09002279',
+            # Good, new Corsica department number (2B) with birthdate >= 1976
+            '882062B09002279': '882062B09002279',
         }
         invalid = {
-            '369067543002289': error_format,    # Gender mismatch
-            '869069873002289': error_format,    # Bad Department
-            '878062073002289': error_format,    # Bad Department with birthdate
-            '869062A73002289': error_format,    # Bad Department with birthdate
-            '869069773002289': error_format,    # Bad overseas Department
-            '869069710002256': error_format,    # Good overseas Bad Commune
-            '869067500002289': error_format,    # Bad Commune
-            '869067543000009': error_format,    # Bad "Person Unique Number"
-            '869067543002298': error_format,    # Bad Control key
-            '869067443002289': error_format,    # Fails validation
+            # Gender mismatch
+            '369067543002289': error_format,
+            # Bad Department
+            '869069873002289': error_format,
+            # Fails, old Corsica department number (20) with birthdate > 1976
+            '880062009002280': error_format,
+            # Fails, new Corsica department number (2A) with birthdate < 1976
+            '874062A09002213': error_format,
+            # Fails, new Corsica department number (2B) with birthdate < 1976
+            '874062B09002213': error_format,
+            # Bad overseas Department
+            '869069773002289': error_format,
+            # Good overseas Bad Commune
+            '869069710002256': error_format,
+            # Bad Commune
+            '869067500002289': error_format,
+            # Bad "Person Unique Number"
+            '869067543000009': error_format,
+            # Bad Control key
+            '869067543002298': error_format,
+            # Fails validation
+            '869067443002289': error_format,
         }
         self.assertFieldOutput(FRNationalIdentificationNumber, valid, invalid)
 
