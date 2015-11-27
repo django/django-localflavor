@@ -16,6 +16,11 @@ Modifications to existing flavors:
 
 - None
 
+Other changes:
+
+- Drop support for Django 1.5, Django 1.6 and Python 2.6
+  (`gh-170 <https://github.com/django/django-localflavor/pull/170>`_).
+
 1.2   (2015-11-27)
 ------------------
 
