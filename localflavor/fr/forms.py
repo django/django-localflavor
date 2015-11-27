@@ -157,9 +157,19 @@ class FRNationalIdentificationNumber(CharField):
         person_unique_number = match.group('person_unique_number')
         control_key = int(match.group('control_key'))
 
-        # Department number 98 is for Monaco, 20 doesn't exist
-        if department_of_origin in ['98', '20']:
+        # Department number 98 is for Monaco
+        if department_of_origin == '98':
             raise ValidationError(self.error_messages['invalid'])
+
+        # Departments number 20, 2A and 2B represent Corsica
+        if department_of_origin in ['20', '2A', '2B']:
+            # For people born before 1976, Corsica number was 20
+            if int(year_of_birth) < 76 and department_of_origin != '20':
+                raise ValidationError(self.error_messages['invalid'])
+            # For people born from 1976, Corsica dep number is either 2A or 2B
+            if (int(year_of_birth) > 75 and
+                    department_of_origin not in ['2A', '2B']):
+                raise ValidationError(self.error_messages['invalid'])
 
         # Overseas department numbers starts with 97 and are 3 digits long
         if department_of_origin == '97':
