@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# André Bouatchidzé <a@anbz.net>, 2015
 # avsd05 <avsd05@gmail.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-24 21:27+0200\n"
-"PO-Revision-Date: 2015-08-16 08:54+0000\n"
+"POT-Creation-Date: 2015-11-12 20:32+0100\n"
+"PO-Revision-Date: 2015-11-13 09:10+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Georgian (http://www.transifex.com/django/django-localflavor/language/ka/)\n"
 "MIME-Version: 1.0\n"
@@ -21,19 +22,19 @@ msgstr ""
 
 #: ar/ar_provinces.py:9
 msgid "Buenos Aires"
-msgstr ""
+msgstr "ბუენოს-აირესი"
 
 #: ar/ar_provinces.py:10
 msgid "Catamarca"
-msgstr ""
+msgstr "კატამარკა"
 
 #: ar/ar_provinces.py:11
 msgid "Chaco"
-msgstr ""
+msgstr "ჩაკო"
 
 #: ar/ar_provinces.py:12
 msgid "Chubut"
-msgstr ""
+msgstr "ჩუბუტი"
 
 #: ar/ar_provinces.py:13
 msgid "Ciudad Autónoma de Buenos Aires"
@@ -41,15 +42,15 @@ msgstr ""
 
 #: ar/ar_provinces.py:14
 msgid "Córdoba"
-msgstr ""
+msgstr "კორდობა"
 
 #: ar/ar_provinces.py:15
 msgid "Corrientes"
-msgstr ""
+msgstr "კორიენტესი"
 
 #: ar/ar_provinces.py:16
 msgid "Entre Ríos"
-msgstr ""
+msgstr "ენტრე-რიოსი"
 
 #: ar/ar_provinces.py:17
 msgid "Formosa"
@@ -119,8 +120,7 @@ msgstr ""
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
 msgstr "შეიყვანეთ საფოსტო კოდი ერთ-ერთ ფორმატში: NNNN ან ANNNNAAA."
 
-#: ar/forms.py:58 br/forms.py:115 br/forms.py:167 pe/forms.py:29
-#: pe/forms.py:58
+#: ar/forms.py:58 pe/forms.py:29 pe/forms.py:58
 msgid "This field requires only numbers."
 msgstr "ამ ველში შეიძლება იყოს მხოლოდ ციფრები."
 
@@ -267,31 +267,35 @@ msgid ""
 "0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
 msgstr "შეიყვანეთ ტელეფონის ნომერი დასაშვებ ფორმატში: 0x xxx xx xx, 0xx xx xx xx, 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
 
-#: br/forms.py:31
+#: br/forms.py:38
 msgid "Enter a zip code in the format XXXXX-XXX."
 msgstr "შეიყვანეთ zip-კოდი ფორმატში: XXXXX-XXX."
 
-#: br/forms.py:76
+#: br/forms.py:83
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
 msgstr "შეიყვანეთ დასაშვები ბრაზილიური შტატი. მოცემული შტატი არ არის დასაშვები."
 
-#: br/forms.py:113
+#: br/forms.py:120
 msgid "Invalid CPF number."
 msgstr "არასწორი CPF ნომერი."
 
-#: br/forms.py:114
+#: br/forms.py:121
 msgid "This field requires at most 11 digits or 14 characters."
 msgstr "ეს ველი უნდა შეიცავდეს 11 ციფრს ან 14 სიმბოლოს, ან ნაკლებს."
 
-#: br/forms.py:166
+#: br/forms.py:173
 msgid "Invalid CNPJ number."
 msgstr "არასწორი CNPJ ნომერი."
 
-#: br/forms.py:168
+#: br/forms.py:174
 msgid "This field requires at least 14 digits"
 msgstr "ეს ველი მოითხოვს არაუმეტეს 14 თანრიგისა"
+
+#: br/forms.py:221
+msgid "Invalid Process number."
+msgstr ""
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
@@ -659,7 +663,7 @@ msgstr "შლეზვიგ-ჰოლშტაინი"
 msgid "Thuringia"
 msgstr "თურინგია"
 
-#: de/forms.py:26 ee/forms.py:24 fi/forms.py:23 fr/forms.py:31
+#: de/forms.py:26 ee/forms.py:25 fi/forms.py:23 fr/forms.py:31
 msgid "Enter a zip code in the format XXXXX."
 msgstr "შეიყვანეთ zip-კოდი ფორმატში XXXXX."
 
@@ -4131,6 +4135,10 @@ msgstr ""
 msgid "A phone number must be 8 digits and may have country code"
 msgstr ""
 
+#: ec/models.py:14
+msgid "Ecuadorian province"
+msgstr ""
+
 #: ee/ee_counties.py:9
 msgid "Harju County"
 msgstr ""
@@ -4191,12 +4199,20 @@ msgstr ""
 msgid "Võru County"
 msgstr ""
 
-#: ee/forms.py:45
+#: ee/forms.py:46
 msgid "Enter an 11-digit Estonian personal identification code."
 msgstr ""
 
-#: ee/forms.py:46
+#: ee/forms.py:47
 msgid "Enter a valid Estonian personal identification code."
+msgstr ""
+
+#: ee/forms.py:101
+msgid "Enter an 8-digit Estonian business registry code."
+msgstr ""
+
+#: ee/forms.py:102
+msgid "Enter a valid Estonian business registry code."
 msgstr ""
 
 #: es/es_provinces.py:6
@@ -4531,7 +4547,7 @@ msgid "Select Region"
 msgstr ""
 
 #: fr/forms.py:137
-msgid "Enter a valid French French National Identification number."
+msgid "Enter a valid French National Identification number."
 msgstr ""
 
 #: fr/forms.py:216
@@ -5204,11 +5220,11 @@ msgstr ""
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr ""
 
-#: gr/forms.py:77
+#: gr/forms.py:79
 msgid "Enter a 10-digit greek phone number."
 msgstr ""
 
-#: gr/forms.py:102
+#: gr/forms.py:104
 msgid "Enter a greek mobile phone number starting with 69."
 msgstr ""
 
@@ -5781,15 +5797,15 @@ msgstr "ისლანდიური საიდენტიფიკაც�
 msgid "Enter a valid zip code."
 msgstr "შეიყვანეთ სწორი zip-კოდი."
 
-#: it/forms.py:77
+#: it/forms.py:76
 msgid "Enter a valid Tax code."
 msgstr ""
 
-#: it/forms.py:109
+#: it/forms.py:108
 msgid "Enter a valid VAT number."
 msgstr "შეიყვანეთ სწორი დღგ-ს ნომერი."
 
-#: it/forms.py:130
+#: it/forms.py:129
 msgid "Enter a valid Italian phone number."
 msgstr ""
 
@@ -7480,7 +7496,7 @@ msgid "Whakatane District"
 msgstr ""
 
 #: nz/nz_councils.py:49
-msgid "Rotorua District\t"
+msgid "Rotorua District"
 msgstr ""
 
 #: nz/nz_councils.py:50
@@ -8013,25 +8029,25 @@ msgstr ""
 msgid "Enter a valid CIF."
 msgstr "შეიყვანეთ სწორი URL."
 
-#: ro/forms.py:66
+#: ro/forms.py:76
 msgid "Enter a valid CNP."
 msgstr "შეიყვანეთ სწორი URL."
 
-#: ro/forms.py:177
+#: ro/forms.py:208
 msgid ""
 "Phone numbers may only have 7 or 10 digits, except the national short "
 "numbers which have 3 to 6 digits"
 msgstr ""
 
-#: ro/forms.py:180
+#: ro/forms.py:211
 msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
 msgstr ""
 
-#: ro/forms.py:182
+#: ro/forms.py:213
 msgid "National short numbers (3 to 6 digits) must begin with \"1\""
 msgstr ""
 
-#: ro/forms.py:213
+#: ro/forms.py:250
 msgid "Enter a valid postal code in the format XXXXXX"
 msgstr "შეიყვანეთ საფოსტო კოდი ფორმატში: XXX XXX."
 
@@ -8930,6 +8946,270 @@ msgstr ""
 
 #: us/models.py:91
 msgid "Social security number"
+msgstr ""
+
+#: us/us_states.py:15 us/us_states.py:68
+msgid "Alabama"
+msgstr ""
+
+#: us/us_states.py:16 us/us_states.py:70
+msgid "Arizona"
+msgstr ""
+
+#: us/us_states.py:17 us/us_states.py:71
+msgid "Arkansas"
+msgstr ""
+
+#: us/us_states.py:18 us/us_states.py:72
+msgid "California"
+msgstr ""
+
+#: us/us_states.py:19 us/us_states.py:73
+msgid "Colorado"
+msgstr ""
+
+#: us/us_states.py:20 us/us_states.py:74
+msgid "Connecticut"
+msgstr ""
+
+#: us/us_states.py:21 us/us_states.py:75
+msgid "Delaware"
+msgstr ""
+
+#: us/us_states.py:22 us/us_states.py:76
+msgid "District of Columbia"
+msgstr ""
+
+#: us/us_states.py:23 us/us_states.py:77
+msgid "Florida"
+msgstr ""
+
+#: us/us_states.py:24 us/us_states.py:78
+msgid "Georgia"
+msgstr ""
+
+#: us/us_states.py:25 us/us_states.py:80
+msgid "Idaho"
+msgstr ""
+
+#: us/us_states.py:26 us/us_states.py:81
+msgid "Illinois"
+msgstr ""
+
+#: us/us_states.py:27 us/us_states.py:82
+msgid "Indiana"
+msgstr ""
+
+#: us/us_states.py:28 us/us_states.py:83
+msgid "Iowa"
+msgstr ""
+
+#: us/us_states.py:29 us/us_states.py:84
+msgid "Kansas"
+msgstr ""
+
+#: us/us_states.py:30 us/us_states.py:85
+msgid "Kentucky"
+msgstr ""
+
+#: us/us_states.py:31 us/us_states.py:86
+msgid "Louisiana"
+msgstr ""
+
+#: us/us_states.py:32 us/us_states.py:87
+msgid "Maine"
+msgstr ""
+
+#: us/us_states.py:33 us/us_states.py:88
+msgid "Maryland"
+msgstr ""
+
+#: us/us_states.py:34 us/us_states.py:89
+msgid "Massachusetts"
+msgstr ""
+
+#: us/us_states.py:35 us/us_states.py:90
+msgid "Michigan"
+msgstr ""
+
+#: us/us_states.py:36 us/us_states.py:91
+msgid "Minnesota"
+msgstr ""
+
+#: us/us_states.py:37 us/us_states.py:92
+msgid "Mississippi"
+msgstr ""
+
+#: us/us_states.py:38 us/us_states.py:93
+msgid "Missouri"
+msgstr ""
+
+#: us/us_states.py:39 us/us_states.py:94
+msgid "Montana"
+msgstr ""
+
+#: us/us_states.py:40 us/us_states.py:95
+msgid "Nebraska"
+msgstr ""
+
+#: us/us_states.py:41 us/us_states.py:96
+msgid "Nevada"
+msgstr ""
+
+#: us/us_states.py:42 us/us_states.py:97
+msgid "New Hampshire"
+msgstr ""
+
+#: us/us_states.py:43 us/us_states.py:98
+msgid "New Jersey"
+msgstr ""
+
+#: us/us_states.py:44 us/us_states.py:99
+msgid "New Mexico"
+msgstr ""
+
+#: us/us_states.py:45 us/us_states.py:100
+msgid "New York"
+msgstr ""
+
+#: us/us_states.py:46 us/us_states.py:101
+msgid "North Carolina"
+msgstr ""
+
+#: us/us_states.py:47 us/us_states.py:102
+msgid "North Dakota"
+msgstr ""
+
+#: us/us_states.py:48 us/us_states.py:103
+msgid "Ohio"
+msgstr ""
+
+#: us/us_states.py:49 us/us_states.py:104
+msgid "Oklahoma"
+msgstr ""
+
+#: us/us_states.py:50 us/us_states.py:105
+msgid "Oregon"
+msgstr ""
+
+#: us/us_states.py:51 us/us_states.py:106
+msgid "Pennsylvania"
+msgstr ""
+
+#: us/us_states.py:52 us/us_states.py:107
+msgid "Rhode Island"
+msgstr ""
+
+#: us/us_states.py:53 us/us_states.py:108
+msgid "South Carolina"
+msgstr ""
+
+#: us/us_states.py:54 us/us_states.py:109
+msgid "South Dakota"
+msgstr ""
+
+#: us/us_states.py:55 us/us_states.py:110
+msgid "Tennessee"
+msgstr ""
+
+#: us/us_states.py:56 us/us_states.py:111
+msgid "Texas"
+msgstr ""
+
+#: us/us_states.py:57 us/us_states.py:112
+msgid "Utah"
+msgstr ""
+
+#: us/us_states.py:58 us/us_states.py:113
+msgid "Vermont"
+msgstr ""
+
+#: us/us_states.py:59 us/us_states.py:114
+msgid "Virginia"
+msgstr ""
+
+#: us/us_states.py:60 us/us_states.py:115
+msgid "Washington"
+msgstr ""
+
+#: us/us_states.py:61 us/us_states.py:116
+msgid "West Virginia"
+msgstr ""
+
+#: us/us_states.py:62 us/us_states.py:117
+msgid "Wisconsin"
+msgstr ""
+
+#: us/us_states.py:63 us/us_states.py:118
+msgid "Wyoming"
+msgstr ""
+
+#: us/us_states.py:69
+msgid "Alaska"
+msgstr ""
+
+#: us/us_states.py:79
+msgid "Hawaii"
+msgstr ""
+
+#: us/us_states.py:123
+msgid "American Samoa"
+msgstr ""
+
+#: us/us_states.py:124
+msgid "Guam"
+msgstr ""
+
+#: us/us_states.py:125
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: us/us_states.py:126
+msgid "Puerto Rico"
+msgstr ""
+
+#: us/us_states.py:127
+msgid "Virgin Islands"
+msgstr ""
+
+#: us/us_states.py:133
+msgid "Armed Forces Americas"
+msgstr ""
+
+#: us/us_states.py:134
+msgid "Armed Forces Europe"
+msgstr ""
+
+#: us/us_states.py:135
+msgid "Armed Forces Pacific"
+msgstr ""
+
+#: us/us_states.py:141
+msgid "Federated States of Micronesia"
+msgstr ""
+
+#: us/us_states.py:142
+msgid "Marshall Islands"
+msgstr ""
+
+#: us/us_states.py:143
+msgid "Palau"
+msgstr ""
+
+#: us/us_states.py:149
+msgid "Commonwealth of the Northern Mariana Islands"
+msgstr ""
+
+#: us/us_states.py:150
+msgid "Panama Canal Zone"
+msgstr ""
+
+#: us/us_states.py:151
+msgid "Philippine Islands"
+msgstr ""
+
+#: us/us_states.py:152
+msgid "Trust Territory of the Pacific Islands"
 msgstr ""
 
 #: uy/forms.py:30

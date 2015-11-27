@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-24 21:27+0200\n"
-"PO-Revision-Date: 2015-08-25 23:34+0000\n"
-"Last-Translator: Mertcan Gokgoz <admin@mertcangokgoz.com>\n"
+"POT-Creation-Date: 2015-11-12 20:32+0100\n"
+"PO-Revision-Date: 2015-11-13 14:24+0000\n"
+"Last-Translator: BouRock\n"
 "Language-Team: Turkish (http://www.transifex.com/django/django-localflavor/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,8 +127,7 @@ msgstr "Tucuman"
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
 msgstr "NNNN ya da ANNNNAAA biçiminde bir posta kodu girin."
 
-#: ar/forms.py:58 br/forms.py:115 br/forms.py:167 pe/forms.py:29
-#: pe/forms.py:58
+#: ar/forms.py:58 pe/forms.py:29 pe/forms.py:58
 msgid "This field requires only numbers."
 msgstr "Bu alan sadece sayıları gerektirir."
 
@@ -275,31 +274,35 @@ msgid ""
 "0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
 msgstr "0x xxx xx xx, 0xx xx xx xx, 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx veya 04xxxxxxxx biçimlerinden birine uygun geçerli bir telefon numarası girin."
 
-#: br/forms.py:31
+#: br/forms.py:38
 msgid "Enter a zip code in the format XXXXX-XXX."
 msgstr "XXXXX-XXX biçiminde bir posta kodu girin."
 
-#: br/forms.py:76
+#: br/forms.py:83
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
 msgstr "Geçerli bir Brezilya eyaleti seçin. Bu bölge mevcut eyaletlerden biri değildir."
 
-#: br/forms.py:113
+#: br/forms.py:120
 msgid "Invalid CPF number."
 msgstr "Geçersiz CPF numarası."
 
-#: br/forms.py:114
+#: br/forms.py:121
 msgid "This field requires at most 11 digits or 14 characters."
 msgstr "Bu alan en fazla 11 rakam veya 14 karakter gerektirir."
 
-#: br/forms.py:166
+#: br/forms.py:173
 msgid "Invalid CNPJ number."
 msgstr "Geçersiz CNPJ numarası."
 
-#: br/forms.py:168
+#: br/forms.py:174
 msgid "This field requires at least 14 digits"
 msgstr "Bu alan en az 14 rakam gerektirir"
+
+#: br/forms.py:221
+msgid "Invalid Process number."
+msgstr "Geçersiz İşlem numarası."
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
@@ -667,7 +670,7 @@ msgstr "Schleswig-Holstein"
 msgid "Thuringia"
 msgstr "Türingiya"
 
-#: de/forms.py:26 ee/forms.py:24 fi/forms.py:23 fr/forms.py:31
+#: de/forms.py:26 ee/forms.py:25 fi/forms.py:23 fr/forms.py:31
 msgid "Enter a zip code in the format XXXXX."
 msgstr "XXXXX biçiminde bir posta kodu girin."
 
@@ -1096,7 +1099,7 @@ msgstr ""
 
 #: dk/dk_postalcodes.py:8
 msgid "Scanning"
-msgstr ""
+msgstr "Taranıyor"
 
 #: dk/dk_postalcodes.py:9
 msgid "Høje Taastrup"
@@ -1141,7 +1144,7 @@ msgstr ""
 
 #: dk/dk_postalcodes.py:22
 msgid "Internationalt Postcenter"
-msgstr ""
+msgstr "Uluslararası Posta Merkezi"
 
 #: dk/dk_postalcodes.py:24 dk/dk_postalcodes.py:25 dk/dk_postalcodes.py:26
 #: dk/dk_postalcodes.py:27 dk/dk_postalcodes.py:28 dk/dk_postalcodes.py:29
@@ -4139,6 +4142,10 @@ msgstr "XXXX biçiminde bir posta kodu girin."
 msgid "A phone number must be 8 digits and may have country code"
 msgstr "Telefon numarası 8 rakam olmak zorundadır ve ülke koduna sahip olabilir"
 
+#: ec/models.py:14
+msgid "Ecuadorian province"
+msgstr "Ekvador ili"
+
 #: ee/ee_counties.py:9
 msgid "Harju County"
 msgstr "Harju İli"
@@ -4199,13 +4206,21 @@ msgstr "Viljandi İli"
 msgid "Võru County"
 msgstr "Võru İli"
 
-#: ee/forms.py:45
+#: ee/forms.py:46
 msgid "Enter an 11-digit Estonian personal identification code."
 msgstr "11 rakamlı Estonya kişisel kimlik kodu girin."
 
-#: ee/forms.py:46
+#: ee/forms.py:47
 msgid "Enter a valid Estonian personal identification code."
 msgstr "Geçerli bir Estonya kişisel kimlik kodu girin."
+
+#: ee/forms.py:101
+msgid "Enter an 8-digit Estonian business registry code."
+msgstr "8 rakamlı Estonya işletme kayıt kodu girin."
+
+#: ee/forms.py:102
+msgid "Enter a valid Estonian business registry code."
+msgstr "Geçerli bir Estonya işletme kayıt kodu girin."
 
 #: es/es_provinces.py:6
 msgid "Araba"
@@ -4539,7 +4554,7 @@ msgid "Select Region"
 msgstr "Bölge Seç"
 
 #: fr/forms.py:137
-msgid "Enter a valid French French National Identification number."
+msgid "Enter a valid French National Identification number."
 msgstr "Geçerli bir Fransız Ulusal Kimlik numarası girin."
 
 #: fr/forms.py:216
@@ -4568,7 +4583,7 @@ msgstr ""
 
 #: gb/gb_regions.py:20
 msgid "Bedford"
-msgstr ""
+msgstr "Bedford"
 
 #: gb/gb_regions.py:21
 msgid "Berkshire"
@@ -5202,7 +5217,7 @@ msgstr "%s geçerli bir ülke kodu değil."
 
 #: generic/validators.py:225
 msgid "Not a valid EAN code."
-msgstr ""
+msgstr "Geçerli bir EAN kodu değil."
 
 #: gr/forms.py:27
 msgid "Enter a valid 5-digit greek postal code."
@@ -5212,11 +5227,11 @@ msgstr "Geçerli bir 5 rakamlı yunanistan posta kodu girin."
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr "Geçerli bir yunanistan vergi numarası (9 rakam) girin."
 
-#: gr/forms.py:77
+#: gr/forms.py:79
 msgid "Enter a 10-digit greek phone number."
 msgstr "10 rakamlı yunanistan telefon numarası girin."
 
-#: gr/forms.py:102
+#: gr/forms.py:104
 msgid "Enter a greek mobile phone number starting with 69."
 msgstr "69 ile başlayan yunanistan cep telefonu numarası girin."
 
@@ -5789,15 +5804,15 @@ msgstr "İzlanda kimlik numarası geçerli değil."
 msgid "Enter a valid zip code."
 msgstr "Geçerli bir posta kodu girin."
 
-#: it/forms.py:77
+#: it/forms.py:76
 msgid "Enter a valid Tax code."
-msgstr ""
+msgstr "Geçerli bir Vergi kodu girin."
 
-#: it/forms.py:109
+#: it/forms.py:108
 msgid "Enter a valid VAT number."
 msgstr "Geçerli bir VAT numarası girin."
 
-#: it/forms.py:130
+#: it/forms.py:129
 msgid "Enter a valid Italian phone number."
 msgstr "Geçerli bir İtalya telefon numarası girin."
 
@@ -7488,7 +7503,7 @@ msgid "Whakatane District"
 msgstr ""
 
 #: nz/nz_councils.py:49
-msgid "Rotorua District\t"
+msgid "Rotorua District"
 msgstr ""
 
 #: nz/nz_councils.py:50
@@ -7689,11 +7704,11 @@ msgstr ""
 
 #: nz/nz_provinces.py:24 nz/nz_regions.py:26
 msgid "Marlborough"
-msgstr ""
+msgstr "Marlborough"
 
 #: nz/nz_provinces.py:26 nz/nz_regions.py:28
 msgid "Canterbury"
-msgstr ""
+msgstr "Canterbury"
 
 #: nz/nz_provinces.py:27
 msgid "South Canterbury"
@@ -7701,15 +7716,15 @@ msgstr ""
 
 #: nz/nz_provinces.py:28
 msgid "Westland"
-msgstr ""
+msgstr "Westland"
 
 #: nz/nz_provinces.py:29 nz/nz_regions.py:29
 msgid "Otago"
-msgstr ""
+msgstr "Otago"
 
 #: nz/nz_provinces.py:30 nz/nz_regions.py:30
 msgid "Southland"
-msgstr ""
+msgstr "Southland"
 
 #: nz/nz_provinces.py:31
 msgid "Chatham Islands"
@@ -7717,11 +7732,11 @@ msgstr ""
 
 #: nz/nz_regions.py:15
 msgid "Northland"
-msgstr ""
+msgstr "Northland"
 
 #: nz/nz_regions.py:17
 msgid "Waikato"
-msgstr ""
+msgstr "Waikato"
 
 #: nz/nz_regions.py:18
 msgid "Bay of Plenty"
@@ -7729,7 +7744,7 @@ msgstr ""
 
 #: nz/nz_regions.py:19
 msgid "Gisborne"
-msgstr ""
+msgstr "Gisborne"
 
 #: nz/nz_regions.py:22
 msgid "Manawatu-Wanganui"
@@ -7737,7 +7752,7 @@ msgstr ""
 
 #: nz/nz_regions.py:24
 msgid "Tasman"
-msgstr ""
+msgstr "Tasman"
 
 #: nz/nz_regions.py:27
 msgid "West Coast"
@@ -8021,25 +8036,25 @@ msgstr "Regiao Autonoma dos Açores"
 msgid "Enter a valid CIF."
 msgstr "Geçerli bir CIF girin."
 
-#: ro/forms.py:66
+#: ro/forms.py:76
 msgid "Enter a valid CNP."
 msgstr "Geçerli bir CNP girin."
 
-#: ro/forms.py:177
+#: ro/forms.py:208
 msgid ""
 "Phone numbers may only have 7 or 10 digits, except the national short "
 "numbers which have 3 to 6 digits"
 msgstr "Telefon numaraları sadece 7 ya da 10 rakam olabilir, 3 ila 6 rakam arasında olan ulusal kısa numaralar hariçtir."
 
-#: ro/forms.py:180
+#: ro/forms.py:211
 msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
 msgstr "Normal telefon numaraları (7 veya 10 rakam) \"0\" ile başlamak zorundadır"
 
-#: ro/forms.py:182
+#: ro/forms.py:213
 msgid "National short numbers (3 to 6 digits) must begin with \"1\""
 msgstr "Ulusal telefon numaraları (3 veya 6 rakam) \"1\" ile başlamak zorundadır"
 
-#: ro/forms.py:213
+#: ro/forms.py:250
 msgid "Enter a valid postal code in the format XXXXXX"
 msgstr "XXXXXX biçiminde geçerli bir posta kodu girin."
 
@@ -8939,6 +8954,270 @@ msgstr "A.B.D. Posta kodu"
 #: us/models.py:91
 msgid "Social security number"
 msgstr "Sosyal güvenlik numarası"
+
+#: us/us_states.py:15 us/us_states.py:68
+msgid "Alabama"
+msgstr "Alabama"
+
+#: us/us_states.py:16 us/us_states.py:70
+msgid "Arizona"
+msgstr "Arizona"
+
+#: us/us_states.py:17 us/us_states.py:71
+msgid "Arkansas"
+msgstr "Arkansas"
+
+#: us/us_states.py:18 us/us_states.py:72
+msgid "California"
+msgstr "Kaliforniya"
+
+#: us/us_states.py:19 us/us_states.py:73
+msgid "Colorado"
+msgstr "Colorado"
+
+#: us/us_states.py:20 us/us_states.py:74
+msgid "Connecticut"
+msgstr "Connecticut"
+
+#: us/us_states.py:21 us/us_states.py:75
+msgid "Delaware"
+msgstr "Delaware"
+
+#: us/us_states.py:22 us/us_states.py:76
+msgid "District of Columbia"
+msgstr ""
+
+#: us/us_states.py:23 us/us_states.py:77
+msgid "Florida"
+msgstr "Florida"
+
+#: us/us_states.py:24 us/us_states.py:78
+msgid "Georgia"
+msgstr "Georgia"
+
+#: us/us_states.py:25 us/us_states.py:80
+msgid "Idaho"
+msgstr "Idaho"
+
+#: us/us_states.py:26 us/us_states.py:81
+msgid "Illinois"
+msgstr "Illinois"
+
+#: us/us_states.py:27 us/us_states.py:82
+msgid "Indiana"
+msgstr "Indiana"
+
+#: us/us_states.py:28 us/us_states.py:83
+msgid "Iowa"
+msgstr "Iowa"
+
+#: us/us_states.py:29 us/us_states.py:84
+msgid "Kansas"
+msgstr "Kansas"
+
+#: us/us_states.py:30 us/us_states.py:85
+msgid "Kentucky"
+msgstr "Kentucky"
+
+#: us/us_states.py:31 us/us_states.py:86
+msgid "Louisiana"
+msgstr "Louisiana"
+
+#: us/us_states.py:32 us/us_states.py:87
+msgid "Maine"
+msgstr "Maine"
+
+#: us/us_states.py:33 us/us_states.py:88
+msgid "Maryland"
+msgstr "Maryland"
+
+#: us/us_states.py:34 us/us_states.py:89
+msgid "Massachusetts"
+msgstr "Massachusetts"
+
+#: us/us_states.py:35 us/us_states.py:90
+msgid "Michigan"
+msgstr "Michigan"
+
+#: us/us_states.py:36 us/us_states.py:91
+msgid "Minnesota"
+msgstr "Minnesota"
+
+#: us/us_states.py:37 us/us_states.py:92
+msgid "Mississippi"
+msgstr "Mississippi"
+
+#: us/us_states.py:38 us/us_states.py:93
+msgid "Missouri"
+msgstr "Missouri"
+
+#: us/us_states.py:39 us/us_states.py:94
+msgid "Montana"
+msgstr "Montana"
+
+#: us/us_states.py:40 us/us_states.py:95
+msgid "Nebraska"
+msgstr "Nebraska"
+
+#: us/us_states.py:41 us/us_states.py:96
+msgid "Nevada"
+msgstr "Nevada"
+
+#: us/us_states.py:42 us/us_states.py:97
+msgid "New Hampshire"
+msgstr "New Hampshire"
+
+#: us/us_states.py:43 us/us_states.py:98
+msgid "New Jersey"
+msgstr "New Jersey"
+
+#: us/us_states.py:44 us/us_states.py:99
+msgid "New Mexico"
+msgstr "New Mexico"
+
+#: us/us_states.py:45 us/us_states.py:100
+msgid "New York"
+msgstr "New York"
+
+#: us/us_states.py:46 us/us_states.py:101
+msgid "North Carolina"
+msgstr "Kuzey Karolina"
+
+#: us/us_states.py:47 us/us_states.py:102
+msgid "North Dakota"
+msgstr "Kuzey Dakota"
+
+#: us/us_states.py:48 us/us_states.py:103
+msgid "Ohio"
+msgstr "Ohio"
+
+#: us/us_states.py:49 us/us_states.py:104
+msgid "Oklahoma"
+msgstr "Oklahoma"
+
+#: us/us_states.py:50 us/us_states.py:105
+msgid "Oregon"
+msgstr "Oregon"
+
+#: us/us_states.py:51 us/us_states.py:106
+msgid "Pennsylvania"
+msgstr "Pennsylvania"
+
+#: us/us_states.py:52 us/us_states.py:107
+msgid "Rhode Island"
+msgstr "Rhode Island"
+
+#: us/us_states.py:53 us/us_states.py:108
+msgid "South Carolina"
+msgstr "Güney Karolina"
+
+#: us/us_states.py:54 us/us_states.py:109
+msgid "South Dakota"
+msgstr "Güney Dakota"
+
+#: us/us_states.py:55 us/us_states.py:110
+msgid "Tennessee"
+msgstr "Tennessee"
+
+#: us/us_states.py:56 us/us_states.py:111
+msgid "Texas"
+msgstr "Teksas"
+
+#: us/us_states.py:57 us/us_states.py:112
+msgid "Utah"
+msgstr "Utah"
+
+#: us/us_states.py:58 us/us_states.py:113
+msgid "Vermont"
+msgstr "Vermont"
+
+#: us/us_states.py:59 us/us_states.py:114
+msgid "Virginia"
+msgstr "Virginia"
+
+#: us/us_states.py:60 us/us_states.py:115
+msgid "Washington"
+msgstr "Washington"
+
+#: us/us_states.py:61 us/us_states.py:116
+msgid "West Virginia"
+msgstr "Batı Virginia"
+
+#: us/us_states.py:62 us/us_states.py:117
+msgid "Wisconsin"
+msgstr "Wisconsin"
+
+#: us/us_states.py:63 us/us_states.py:118
+msgid "Wyoming"
+msgstr ""
+
+#: us/us_states.py:69
+msgid "Alaska"
+msgstr "Alaska"
+
+#: us/us_states.py:79
+msgid "Hawaii"
+msgstr "Hawaii"
+
+#: us/us_states.py:123
+msgid "American Samoa"
+msgstr "Amerikan Samoası"
+
+#: us/us_states.py:124
+msgid "Guam"
+msgstr "Guam"
+
+#: us/us_states.py:125
+msgid "Northern Mariana Islands"
+msgstr "Kuzey Mariana Adaları"
+
+#: us/us_states.py:126
+msgid "Puerto Rico"
+msgstr "Porto Riko"
+
+#: us/us_states.py:127
+msgid "Virgin Islands"
+msgstr "Virgin Adaları"
+
+#: us/us_states.py:133
+msgid "Armed Forces Americas"
+msgstr ""
+
+#: us/us_states.py:134
+msgid "Armed Forces Europe"
+msgstr ""
+
+#: us/us_states.py:135
+msgid "Armed Forces Pacific"
+msgstr ""
+
+#: us/us_states.py:141
+msgid "Federated States of Micronesia"
+msgstr "Mikronezya Federal Devletleri"
+
+#: us/us_states.py:142
+msgid "Marshall Islands"
+msgstr "Marshall Adaları"
+
+#: us/us_states.py:143
+msgid "Palau"
+msgstr "Palau"
+
+#: us/us_states.py:149
+msgid "Commonwealth of the Northern Mariana Islands"
+msgstr ""
+
+#: us/us_states.py:150
+msgid "Panama Canal Zone"
+msgstr "Panama Kanalı Bölgesi"
+
+#: us/us_states.py:151
+msgid "Philippine Islands"
+msgstr "Filipin Adaları"
+
+#: us/us_states.py:152
+msgid "Trust Territory of the Pacific Islands"
+msgstr ""
 
 #: uy/forms.py:30
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
