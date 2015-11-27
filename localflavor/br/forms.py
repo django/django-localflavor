@@ -217,6 +217,8 @@ class BRProcessoField(CharField):
     compounded by NNNNNNN-DD.AAAA.J.TR.OOOO. The two DD digits are check digits.
     More information:
     http://www.cnj.jus.br/busca-atos-adm?documento=2748
+
+    .. versionadded:: 1.2
     """
     default_error_messages = {'invalid': _("Invalid Process number.")}
 

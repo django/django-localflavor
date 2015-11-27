@@ -148,6 +148,8 @@ class CHSocialSecurityNumberField(CharField):
 
     See:
     http://de.wikipedia.org/wiki/Sozialversicherungsnummer#Versichertennummer
+
+    .. versionadded:: 1.2
     """
     default_error_messages = {
         'invalid': _('Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format.'),
