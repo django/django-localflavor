@@ -1,62 +1,110 @@
-import re
-from django.core.exceptions import ValidationError
-from django.core.validators import RegexValidator
+from __future__ import absolute_import, unicode_literals
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from . import forms
+from .nl_provinces import PROVINCE_CHOICES
+from .validators import (NLBankAccountNumberFieldValidator,
+                         NLPhoneNumberFieldValidator,
+                         NLSoFiNumberFieldValidator, NLZipCodeFieldValidator)
 
-class NLBankAccountNumberFieldValidator(RegexValidator):
+
+class NLZipCodeField(models.CharField):
     """
-    Validation for Dutch bank accounts.
+    A Dutch zip code model field.
 
-    Validation references:
-    http://www.mobilefish.com/services/elfproef/elfproef.php
-    http://www.credit-card.be/BankAccount/ValidationRules.htm#NL_Validation
+    This model field uses :class:`validators.NLZipCodeFieldValidator` for validation.
 
-    .. versionadded:: 1.1
+    .. versionadded:: 1.3
     """
-    default_error_messages = {
-        'invalid': _('Enter a valid bank account number'),
-        'wrong_length': _('Bank account numbers have 1 - 7, 9 or 10 digits'),
-    }
 
-    def __init__(self, regex=None, message=None, code=None):
-        super(NLBankAccountNumberFieldValidator, self).__init__(regex='^[0-9]+$',
-                                                                message=self.default_error_messages['invalid'])
-        self.no_leading_zeros_regex = re.compile('[1-9]+')
+    description = _('Dutch zipcode')
 
-    def __call__(self, value):
-        super(NLBankAccountNumberFieldValidator, self).__call__(value)
+    validators = [NLZipCodeFieldValidator()]
 
-        # Need to check for values over the field's max length before the zero are stripped.
-        # This check is needed to allow this validator to be used without Django's MaxLengthValidator.
-        if len(value) > 10:
-            raise ValidationError(self.default_error_messages['wrong_length'])
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 7
+        super(NLZipCodeField, self).__init__(*args, **kwargs)
 
-        # Strip the leading zeros.
-        m = re.search(self.no_leading_zeros_regex, value)
-        if not m:
-            raise ValidationError(self.default_error_messages['invalid'])
-        value = value[m.start():]
+    def to_python(self, value):
+        value = super(NLZipCodeField, self).to_python(value)
+        if value is not None:
+            value = value.upper().replace(' ', '')
+            return '%s %s' % (value[:4], value[4:])
+        return value
 
-        if len(value) != 9 and len(value) != 10 and not 1 <= len(value) <= 7:
-            raise ValidationError(self.default_error_messages['wrong_length'])
+    def formfield(self, **kwargs):
+        defaults = {'form_class': forms.NLZipCodeField}
+        defaults.update(kwargs)
+        return super(NLZipCodeField, self).formfield(**defaults)
 
-        # Perform the eleven test validation on non-PostBank numbers.
-        if len(value) == 9 or len(value) == 10:
-            if len(value) == 9:
-                value = "0" + value
 
-            eleven_test_sum = sum([int(a) * b for a, b in zip(value, range(1, 11))])
-            if eleven_test_sum % 11 != 0:
-                raise ValidationError(self.default_error_messages['invalid'])
+class NLProvinceField(models.CharField):
+    """
+    A Dutch Provice field.
+
+    .. versionadded:: 1.3
+    """
+    description = _('Dutch province')
+
+    def __init__(self, *args, **kwargs):
+        kwargs.update({
+            'choices': PROVINCE_CHOICES,
+            'max_length': 3
+        })
+        super(NLProvinceField, self).__init__(*args, **kwargs)
+
+
+class NLSoFiNumberField(models.CharField):
+    """
+    A Dutch social security number (SoFi)
+
+    This model field uses :class:`validators.NLSoFiNumberFieldValidator` for validation.
+
+    .. versionadded:: 1.3
+    """
+    description = _('Dutch social security number (SoFi)')
+
+    validators = [NLSoFiNumberFieldValidator()]
+
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('max_length', 12)
+        super(NLSoFiNumberField, self).__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': forms.NLSoFiNumberField}
+        defaults.update(kwargs)
+        return super(NLSoFiNumberField, self).formfield(**defaults)
+
+
+class NLPhoneNumberField(models.CharField):
+    """
+    Dutch phone number model field
+
+    This model field uses :class:`validators.NLPhoneNumberFieldValidator` for validation.
+
+    .. versionadded:: 1.3
+    """
+    description = _('Dutch phone number')
+
+    validator = [NLPhoneNumberFieldValidator()]
+
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('max_length', 12)
+        super(NLPhoneNumberField, self).__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': forms.NLPhoneNumberField}
+        defaults.update(kwargs)
+        return super(NLPhoneNumberField, self).formfield(**defaults)
 
 
 class NLBankAccountNumberField(models.CharField):
     """
     A Dutch bank account model field.
 
-    This model field uses :class:`.NLBankAccountNumberFieldValidator` for validation.
+    This model field uses :class:`validators.NLBankAccountNumberFieldValidator` for validation.
 
     .. versionadded:: 1.1
     """

@@ -10,11 +10,13 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- Added NLZipCodeField, NLProvinceField, NLSoFiNumberField, NLPhoneNumberField model fields.
+  (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
 
 Modifications to existing flavors:
 
-- None
+- Moved Dutch validators from localflavor.nl.forms to localflavor.nl.validators
+  (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
 
 Other changes:
 

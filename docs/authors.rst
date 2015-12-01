@@ -27,6 +27,7 @@ Authors
 * Horst Gutmann
 * Jaap Roes
 * Jacob Kaplan-Moss
+* Jan Pieter Waagmeester
 * James Bennett
 * Jannis Leidel
 * Jérémie Ferry
