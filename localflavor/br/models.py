@@ -22,16 +22,69 @@ class BRCPFField(CharField):
     A model field for the brazilian document named of CPF (Cadastro de Pessoa Física)
     """
 
-    description = _("CPF with 11 numbers")
+    description = _("CPF Document")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 14
         kwargs['validators'] = [
             RegexValidator(
                 regex='^[0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2}$',
-                message='CPF apenas com números, ou no formato 000.000.000-00',
+                message='CPF apenas com números ou no formato 000.000.000-00',
                 code='CPF inválido',
             ),
         ]
         super(BRCPFField, self).__init__(*args, **kwargs)
 
+
+class BRCNPJField(CharField):
+    """
+    A model field for the brazilian document named of CNPJ (Cadastro Nacional de Pessoa Jurídica)
+    """
+
+    description = _("CNPJ Document")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 18
+        kwargs['validators'] = [
+            RegexValidator(
+                regex='^[0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2}$',
+                message='CNPJ apenas com números ou no formato 00.000.000/0000-00',
+                code='CNPJ inválido',
+            ),
+        ]
+
+
+class BRTelephoneField(CharField):
+    """
+    A model field for the brazilian telephone
+    """
+
+    description = _("Telephone (with DDD)")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 14
+        kwargs['validators'] = [
+            RegexValidator(
+                regex='^[(]?[0-9]{2}[)]?[\s]?[0-9]{4}[-]?[0-9]{4}$',
+                message='Telefone apenas com números ou no formato (00) 0000-0000',
+                code='Telefone inválido',
+            ),
+        ]
+
+
+class BRCellPhoneField(CharField):
+    """
+    A model field for the brazilian cell phone
+    """
+
+    description = _("Cell Phone (whith DDD)")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 15
+        kwargs['validators'] = [
+            RegexValidator(
+                regex='^[(]?[0-9]{2}[)]?[\s]?([0-9]{1})?[0-9]{4}[-]?[0-9]{4}$',
+                message='Celular apenas com números ou no formato (00) 00000-0000',
+                code='Celular inválido',
+            ),
+        ]
