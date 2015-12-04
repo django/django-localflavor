@@ -14,6 +14,7 @@ Authors
 * Alexey Kotlyarov
 * Alix Martineau
 * Alonisser
+* André Ramos
 * Andreas Pelme
 * Andres Torres Marroquin
 * Andrew Godwin
