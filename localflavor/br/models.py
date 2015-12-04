@@ -1,9 +1,6 @@
 from django.utils.translation import ugettext_lazy as _
 from django.db.models.fields import CharField
-<<<<<<< HEAD
 from django.core.validators import RegexValidator
-=======
->>>>>>> 6b37fc47b915888f6da60edc9665a43c99bcbe82
 
 from .br_states import STATE_CHOICES
 
@@ -18,7 +15,6 @@ class BRStateField(CharField):
         kwargs['choices'] = STATE_CHOICES
         kwargs['max_length'] = 2
         super(BRStateField, self).__init__(*args, **kwargs)
-<<<<<<< HEAD
 
 
 class BRCPFField(CharField):
@@ -38,5 +34,4 @@ class BRCPFField(CharField):
             ),
         ]
         super(BRCPFField, self).__init__(*args, **kwargs)
-=======
->>>>>>> 6b37fc47b915888f6da60edc9665a43c99bcbe82
+
