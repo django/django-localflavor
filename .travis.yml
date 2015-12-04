@@ -1,0 +1,47 @@
+sudo: no
+language: python
+env:
+  global:
+    - PIP_WHEEL_DIR=$HOME/.wheels
+    - PIP_FIND_LINKS=file://$PIP_WHEEL_DIR
+matrix:
+  include:
+    - env: TOXENV=docs
+    - python: 2.7
+      env: TOXENV=py27-1.7
+    - python: 2.7
+      env: TOXENV=py27-1.8
+    - python: 2.7
+      env: TOXENV=py27-1.9
+    - python: 2.7
+      env: TOXENV=py27-master
+    - python: 3.2
+      env: TOXENV=py32-1.7
+    - python: 3.2
+      env: TOXENV=py32-1.8
+    - python: 3.3
+      env: TOXENV=py33-1.7
+    - python: 3.3
+      env: TOXENV=py33-1.8
+    - python: 3.4
+      env: TOXENV=py34-1.7
+    - python: 3.4
+      env: TOXENV=py34-1.8
+    - python: 3.4
+      env: TOXENV=py34-1.9
+    - python: 3.4
+      env: TOXENV=py34-master
+    - python: 3.5
+      env: TOXENV=py35-1.9
+    - python: 3.5
+      env: TOXENV=py35-master
+cache:
+  directories:
+    - $HOME/.wheels
+install:
+    - mkdir -p $PIP_WHEEL_DIR
+    - pip wheel -r tests/requirements.txt codecov
+    - pip install codecov tox
+script:
+  - tox
+after_success: codecov

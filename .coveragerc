@@ -1,0 +1,6 @@
+[run]
+source = localflavor
+branch = 1
+
+[report]
+omit = localflavor/*tests*

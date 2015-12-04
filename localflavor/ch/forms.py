@@ -1,0 +1,167 @@
+"""
+Swiss-specific Form helpers
+"""
+
+from __future__ import absolute_import, unicode_literals
+
+import re
+
+from django.core.validators import EMPTY_VALUES, RegexValidator
+from django.forms import ValidationError
+from django.forms.fields import CharField, Field, RegexField, Select
+from django.utils.encoding import smart_text
+from django.utils.translation import ugettext_lazy as _
+
+from .ch_states import STATE_CHOICES
+from ..generic import validators
+
+zip_re = re.compile(r'^[1-9]\d{3}$')
+id_re = re.compile(
+    r"^(?P<idnumber>\w{8})(?P<pos9>(\d{1}|<))(?P<checksum>\d{1})$")
+phone_digits_re = re.compile(r'^0([1-9]{1})\d{8}$')
+ssn_re = re.compile(r'^756.\d{4}\.\d{4}\.\d{2}$')
+
+
+class CHZipCodeField(RegexField):
+    """
+    A form field that validates input as a Swiss zip code. Valid codes
+    consist of four digits ranging from 1XXX to 9XXX.
+
+    See:
+    http://en.wikipedia.org/wiki/Postal_codes_in_Switzerland_and_Liechtenstein
+    """
+
+    default_error_messages = {
+        'invalid': _('Enter a valid postal code in the range and format 1XXX - 9XXX.'),
+    }
+
+    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
+        super(CHZipCodeField, self).__init__(zip_re, max_length, min_length, *args, **kwargs)
+
+
+class CHPhoneNumberField(Field):
+    """
+    Validate local Swiss phone number (not international ones)
+    The correct format is '0XX XXX XX XX'.
+    '0XX.XXX.XX.XX' and '0XXXXXXXXX' validate but are corrected to
+    '0XX XXX XX XX'.
+    """
+    default_error_messages = {
+        'invalid': _('Phone numbers must be in 0XX XXX XX XX format.'),
+    }
+
+    def clean(self, value):
+        super(CHPhoneNumberField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+        value = re.sub('(\.|\s|/|-)', '', smart_text(value))
+        m = phone_digits_re.search(value)
+        if m:
+            return '%s %s %s %s' % (value[0:3], value[3:6], value[6:8], value[8:10])
+        raise ValidationError(self.error_messages['invalid'])
+
+
+class CHStateSelect(Select):
+    """
+    A Select widget that uses a list of CH states as its choices.
+    """
+    def __init__(self, attrs=None):
+        super(CHStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+
+
+class CHIdentityCardNumberField(Field):
+    """
+    A Swiss identity card number.
+
+    Checks the following rules to determine whether the number is valid:
+
+        * Conforms to the X1234567<0 or 1234567890 format.
+        * Included checksums match calculated checksums
+
+    """
+    default_error_messages = {
+        'invalid': _('Enter a valid Swiss identity or passport card number in X1234567<0 or 1234567890 format.'),
+    }
+
+    def has_valid_checksum(self, number):
+        given_number, given_checksum = number[:-1], number[-1]
+        new_number = given_number
+        calculated_checksum = 0
+        fragment = ""
+        parameter = 7
+
+        first = str(number[:1])
+        if first.isalpha():
+            num = ord(first.upper()) - 65
+            if num < 0 or num > 8:
+                return False
+            new_number = str(num) + new_number[1:]
+            new_number = new_number[:8] + '0'
+
+        if not new_number.isdigit():
+            return False
+
+        for i in range(len(new_number)):
+            fragment = int(new_number[i]) * parameter
+            calculated_checksum += fragment
+
+            if parameter == 1:
+                parameter = 7
+            elif parameter == 3:
+                parameter = 1
+            elif parameter == 7:
+                parameter = 3
+
+        return str(calculated_checksum)[-1] == given_checksum
+
+    def clean(self, value):
+        super(CHIdentityCardNumberField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+
+        match = re.match(id_re, value)
+        if not match:
+            raise ValidationError(self.error_messages['invalid'])
+
+        result = match.groupdict()
+        idnumber, pos9, checksum = result['idnumber'], result['pos9'], result['checksum']
+
+        if (idnumber == '00000000' or
+                idnumber == 'A0000000'):
+            raise ValidationError(self.error_messages['invalid'])
+
+        all_digits = "%s%s%s" % (idnumber, pos9, checksum)
+        if not self.has_valid_checksum(all_digits):
+            raise ValidationError(self.error_messages['invalid'])
+
+        return '%s%s%s' % (idnumber, pos9, checksum)
+
+
+class CHSocialSecurityNumberField(CharField):
+    """
+    A Swiss Social Security number (also known as the new AHV Number).
+
+    Checks the following rules to determine whether the number is valid:
+
+        * Conforms to the 756.XXXX.XXXX.XX
+        * Included checksums match calculated checksums
+
+    See:
+    http://de.wikipedia.org/wiki/Sozialversicherungsnummer#Versichertennummer
+
+    .. versionadded:: 1.2
+    """
+    default_error_messages = {
+        'invalid': _('Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format.'),
+    }
+    default_validators = [
+        RegexValidator(regex=ssn_re),
+        validators.EANValidator(strip_nondigits=True),
+    ]
+
+    def run_validators(self, value):
+        try:
+            super(CHSocialSecurityNumberField, self).run_validators(value)
+        except ValidationError as errs:
+            # Deduplicate error messages, if any
+            raise ValidationError(list(set(errs.messages)))
