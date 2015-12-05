@@ -9,9 +9,6 @@ New flavors:
 - None
 
 New fields for existing flavors:
-- Added BRZipCodeField, BRCPFField, BRCNPJField, BRTelephonField, BRCelPhoneField models fields.
-
-New fields for existing flavors:
 
 - Added NLZipCodeField, NLProvinceField, NLSoFiNumberField, NLPhoneNumberField model fields.
   (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
