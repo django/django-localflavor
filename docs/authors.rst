@@ -8,6 +8,7 @@ Authors
 * Alex Hill
 * Alex Zhang
 * Alonisser
+* André Ramos
 * Andreas Pelme
 * Andres Torres Marroquin
 * Andrew Godwin
