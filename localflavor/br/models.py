@@ -52,6 +52,7 @@ class BRCNPJField(CharField):
                 code='CNPJ inválido',
             ),
         ]
+        super(BRCNPJField, self).__init__(*args, **kwargs)
 
 
 class BRTelephoneField(CharField):
@@ -70,6 +71,7 @@ class BRTelephoneField(CharField):
                 code='Telefone inválido',
             ),
         ]
+        super(BRTelephoneField, self).__init__(*args, **kwargs)
 
 
 class BRCellPhoneField(CharField):
@@ -88,3 +90,23 @@ class BRCellPhoneField(CharField):
                 code='Celular inválido',
             ),
         ]
+        super(BRCellPhoneField, self).__init__(*args, **kwargs)
+
+
+class BRZipCodeField(CharField):
+    """
+    A model field for the brazilian zip code
+    """
+
+    description = _("Zip Code")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 9
+        kwargs['validators'] = [
+            RegexValidator(
+                regex='^[0-9]{5}[-]?[0-9]{3}$',
+                message='CEP apenas com números ou no formato 00000-000',
+                code='CEP inválido'
+            ),
+        ]
+        super(BRZipCodeField, self).__init__(*args, **kwargs)

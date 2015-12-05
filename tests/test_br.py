@@ -7,6 +7,8 @@ from localflavor.br.forms import (BRZipCodeField, BRCNPJField, BRCPFField,
                                   BRPhoneNumberField, BRStateSelect,
                                   BRStateChoiceField, BRProcessoField)
 
+from localflavor.br.forms import (BRCNPJField, BRCPFField, BRPhoneNumberField)
+
 
 class BRLocalFlavorTests(SimpleTestCase):
     def test_BRZipCodeField(self):
