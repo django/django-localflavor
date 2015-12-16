@@ -6,7 +6,8 @@ Changelog
 
 New flavors:
 
-- None
+- Added local flavor for Bulgaria
+  (`gh-191 <https://github.com/django/django-localflavor/pull/191>`_)
 
 New fields for existing flavors:
 

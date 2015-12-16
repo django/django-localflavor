@@ -57,6 +57,7 @@ Authors
 * Tino de Bruijn
 * Trey Hunner
 * Tyler Ball
+* Venelin Stoykov
 * baffolobill
 * d.merc
 * luyikei
