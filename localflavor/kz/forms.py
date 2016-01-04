@@ -14,8 +14,8 @@ from django.utils.translation import ugettext_lazy as _
 
 class KZZipCodeField(RegexField):
     """
-    Kazakhstani Zip Code. Valid format is XXXXXX, eg. 050000 - Almaty base zipcode
-    Automatically strips whitespaces around value
+    Kazakhstani Zip Code. Valid format is XXXXXX where X is any digit.
+    Strips whitespaces around value.
     """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX'),
@@ -32,18 +32,23 @@ class KZZipCodeField(RegexField):
 
 class KZIndividualIDField(Field):
     """
-    Kazakhstan individual ID number
+    Kazakhstani Individual ID number are 12 digits.
+
     Format XXXXXXXXXXXX, where
-    XX - birth year
-    XX - birth month
-    XX - birth day
-    XXXXXX - any digit
+        * XX - birth year
+        * XX - birth month
+        * XX - birth day
+        * XXXXXX - any digit
     """
     default_error_messages = {
         'invalid': _('Enter a valid Kazakhstani Individual ID number'),
     }
 
     def clean(self, value):
+        """
+        Validates the input and returns a string that contains only numbers.
+        Returns empty string for empty values.
+        """
         super(KZIndividualIDField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
@@ -62,9 +67,9 @@ class KZIndividualIDField(Field):
 
 class KZCivilPassportNumberField(RegexField):
     """
-    Kazakhstan Civil Passport ID Field
-    Format NXXXXXXXX
-    Truncates whitespaces
+    Kazakhstani Civil Passport ID Field.
+    Format is NXXXXXXXX, where X is any digit.
+    Strips whitespaces around value.
     """
     default_error_messages = {
         'invalid': _('Enter valid Kazakhstani Passport number. Format NXXXXXXXX'),
