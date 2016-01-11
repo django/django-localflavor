@@ -93,16 +93,19 @@ class AULocalflavorTests(TestCase):
     def test_AUPhoneNumberField(self):
         error_format = ['Phone numbers must contain 10 digits.']
         valid = {
-            '1234567890': '1234567890',
+            '61234567890': '0234567890',
             '0213456789': '0213456789',
             '02 13 45 67 89': '0213456789',
             '(02) 1345 6789': '0213456789',
             '(02) 1345-6789': '0213456789',
             '(02)1345-6789': '0213456789',
             '0408 123 456': '0408123456',
+            '1800DJANGO': '1800352646',
+            '131122': '131122',
+            '1300111222': '1300111222',
         }
         invalid = {
             '123': error_format,
-            '1800DJANGO': error_format,
+            '88884444': error_format,
         }
         self.assertFieldOutput(AUPhoneNumberField, valid, invalid)

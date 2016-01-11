@@ -6,11 +6,10 @@ from __future__ import absolute_import, unicode_literals
 
 import re
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-from django.forms.fields import CharField, RegexField, Select
-from django.utils.encoding import smart_text
+from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor.generic.forms import PhoneNumberField
 
 from .au_states import STATE_CHOICES
 
@@ -32,28 +31,17 @@ class AUPostCodeField(RegexField):
                                               max_length, min_length, *args, **kwargs)
 
 
-class AUPhoneNumberField(CharField):
+class AUPhoneNumberField(PhoneNumberField):
     """
     A form field that validates input as an Australian phone number.
 
     Valid numbers have ten digits.
     """
+    region = 'AU'
+
     default_error_messages = {
         'invalid': 'Phone numbers must contain 10 digits.',
     }
-
-    def clean(self, value):
-        """
-        Validate a phone number. Strips parentheses, whitespace and hyphens.
-        """
-        super(AUPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub('(\(|\)|\s+|-)', '', smart_text(value))
-        phone_match = PHONE_DIGITS_RE.search(value)
-        if phone_match:
-            return '%s' % phone_match.group(1)
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class AUStateSelect(Select):

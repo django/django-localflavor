@@ -1,4 +1,9 @@
+import re
+
 from django import forms
+from django.core.validators import EMPTY_VALUES
+import phonenumbers
+from phonenumbers.phonenumberutil import number_type
 
 from .validators import IBANValidator, BICValidator, IBAN_COUNTRY_CODE_LENGTH
 
@@ -131,3 +136,66 @@ class BICFormField(forms.CharField):
         if value is not None:
             return value.upper()
         return value
+
+
+class PhoneNumberField(forms.CharField):
+    """
+    A field that uses libphonenumbers for validation and formatting
+    """
+    region = None
+
+    default_error_messages = {
+        'invalid': 'Enter a valid phone number.',
+        'international_only': 'International numbers are not allowed.',
+        'wrong_type': 'This number type is not allowed.'
+    }
+
+    def __init__(self, *args, **kwargs):
+        """
+        Initialise some settings
+        """
+        self.allow_international = kwargs.pop('allow_international', True)
+
+        self.allowed_types = kwargs.pop('allowed_types', set())
+
+        self.region = kwargs.pop('region', self.region)
+
+        super(PhoneNumberField, self).__init__(*args, **kwargs)
+
+    def clean(self, value):
+        """
+        Validate a phone number and strip any non digits from it. Numbers not
+        from the chosen region are prefixed with + as per E.164
+        """
+        value = super(PhoneNumberField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+
+        try:
+            number = phonenumbers.parse(value, self.region)
+        except phonenumbers.NumberParseException:
+            raise forms.ValidationError(self.error_messages['invalid'])
+
+        if not phonenumbers.is_valid_number(number):
+            raise forms.ValidationError(self.error_messages['invalid'])
+
+        expected_country_code = phonenumbers.PhoneMetadata\
+            .metadata_for_region(self.region).country_code
+
+        if number.country_code == expected_country_code:
+            number_format = phonenumbers.PhoneNumberFormat.NATIONAL
+        elif self.allow_international:
+            number_format = phonenumbers.PhoneNumberFormat.E164
+        else:
+            raise forms.ValidationError(
+                self.error_messages['international_only'])
+
+        if self.allowed_types and \
+                number_type(number) not in self.allowed_types:
+            raise forms.ValidationError(self.error_messages['wrong_type'])
+
+        number = phonenumbers.format_number(number, number_format)
+
+        number = re.sub(r'[^+\d+]+', '', number)
+
+        return number
