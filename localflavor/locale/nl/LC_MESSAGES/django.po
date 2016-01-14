@@ -5152,39 +5152,39 @@ msgstr "Schotland"
 
 #: generic/models.py:36
 msgid "An International Bank Account Number"
-msgstr ""
+msgstr "Een International Bank Account Number"
 
 #: generic/models.py:65
 msgid "Business Identifier Code"
-msgstr ""
+msgstr "Business Identifier Code"
 
 #: generic/validators.py:155
 #, python-format
 msgid "%s is not a valid character for IBAN."
-msgstr ""
+msgstr "%s is geen geldig teken voor IBAN."
 
 #: generic/validators.py:177
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
-msgstr ""
+msgstr "%(country_code)s IBANs moeten %(number)s tekens bevatten."
 
 #: generic/validators.py:180
 #, python-format
 msgid "%s is not a valid country code for IBAN."
-msgstr ""
+msgstr "%s is geen geldige landcode voor IBAN."
 
 #: generic/validators.py:182
 #, python-format
 msgid "%s IBANs are not allowed in this field."
-msgstr ""
+msgstr "%s IBANs zijn in dit veld niet toegestaan."
 
 #: generic/validators.py:185
 msgid "Not a valid IBAN."
-msgstr ""
+msgstr "Geen geldige IBAN."
 
 #: generic/validators.py:205
 msgid "BIC codes have either 8 or 11 characters."
-msgstr ""
+msgstr "BIC codes hebben 8 of 11 tekens."
 
 #: generic/validators.py:211
 #, python-format
@@ -5194,11 +5194,11 @@ msgstr ""
 #: generic/validators.py:216
 #, python-format
 msgid "%s is not a valid country code."
-msgstr ""
+msgstr "%s is geen geldige landcode."
 
 #: generic/validators.py:225
 msgid "Not a valid EAN code."
-msgstr ""
+msgstr "Geen valide EAN code."
 
 #: gr/forms.py:27
 msgid "Enter a valid 5-digit greek postal code."
