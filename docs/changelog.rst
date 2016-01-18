@@ -14,7 +14,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
+  (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).
 
 1.3   (2016-04-06)
 ------------------
