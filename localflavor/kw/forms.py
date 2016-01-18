@@ -11,7 +11,12 @@ from django.forms import ValidationError
 from django.forms.fields import Field
 from django.utils.translation import gettext_lazy as _
 
-id_re = re.compile(r'^(?P<initial>\d{1})(?P<yy>\d\d)(?P<mm>\d\d)(?P<dd>\d\d)(?P<mid>\d{4})(?P<checksum>\d{1})')
+id_re = re.compile(r'''^(?P<initial>\d{1})
+                       (?P<yy>\d\d)
+                       (?P<mm>\d\d)
+                       (?P<dd>\d\d)
+                       (?P<mid>\d{4})
+                       (?P<checksum>\d{1})''', re.VERBOSE)
 
 
 class KWCivilIDNumberField(Field):
@@ -45,15 +50,19 @@ class KWCivilIDNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        if not re.match(r'^\d{12}$', value):
-            raise ValidationError(self.error_messages['invalid'])
-
         match = re.match(id_re, value)
 
         if not match:
             raise ValidationError(self.error_messages['invalid'])
 
         gd = match.groupdict()
+
+        # Fix the dates so that those born
+        # in 2000+ pass the validation check
+        if int(value[0]) == 3:
+            gd['yy'] = '20{}'.format(gd['yy'])
+        elif int(value[0]) == 2:
+            gd['yy'] = '19{}'.format(gd['yy'])
 
         try:
             date(int(gd['yy']), int(gd['mm']), int(gd['dd']))

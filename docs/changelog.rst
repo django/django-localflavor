@@ -8,18 +8,41 @@ New flavors:
 
 - Added local flavor for Bulgaria
   (`gh-191 <https://github.com/django/django-localflavor/pull/191>`_)
+- Added local flavor for Tunisia
+  (`gh-141 <https://github.com/django/django-localflavor/pull/141>`_)
+- Added local flavor for Hungary
+  (`gh-213 <https://github.com/django/django-localflavor/pull/213>`_)
 
 New fields for existing flavors:
 
+- Added ARCBUField form field.
+  (`gh-151 <https://github.com/django/django-localflavor/pull/151>`_).
 - Added NLZipCodeField, NLProvinceField, NLSoFiNumberField, NLPhoneNumberField model fields.
   (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
 
 Modifications to existing flavors:
 
+- Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
+  (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).
 - Moved Dutch validators from localflavor.nl.forms to localflavor.nl.validators
   (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
 - Fix check for promotional social security numbers in USSocialSecurityNumberField
   (`gh-157 <https://github.com/django/django-localflavor/pull/157>`_).
+- Updated IBANField to support the latest additions to the IBAN Registry (version 64 / March 2016).
+- Fix bug with MXRFCField where some incorrect values would validate correctly.
+  (`gh-204 <https://github.com/django/django-localflavor/issues/204>`_).
+- Fixed bug with IBANFormField validation.
+  (`gh-215 <https://github.com/django/django-localflavor/pull/215>`_).
+- Update regex in DEZipCodeField to prohibit invalid postal codes.
+  (`gh-216 <https://github.com/django/django-localflavor/pull/216>`_).
+- Added deconstructor methods to validators.
+  (`gh-220 <https://github.com/django/django-localflavor/pull/220>`_).
+- Fix bug in ESIdentityCardNumberField where some valid values for NIE numbers were not
+  validating.
+  (`gh-217 <https://github.com/django/django-localflavor/pull/217>`_)
+- Add deconstruct method to all model fields.
+  (`gh-162 <https://github.com/django/django-localflavor/pull/162>`_)
+  (`gh-224 <https://github.com/django/django-localflavor/pull/224>`_)
 
 Other changes:
 

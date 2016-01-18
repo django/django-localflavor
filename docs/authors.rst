@@ -16,6 +16,7 @@ Authors
 * Ben Davis
 * Ben Konrath
 * Bruno M. Custódio
+* Burhan Khalid
 * Claude Paroz
 * Douglas Miranda
 * Erik Romijn
