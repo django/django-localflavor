@@ -2,8 +2,6 @@
 Belgium-specific Form helpers
 """
 
-from __future__ import absolute_import
-
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 

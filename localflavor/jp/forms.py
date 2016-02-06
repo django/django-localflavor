@@ -2,11 +2,10 @@
 JP-specific Form helpers
 """
 
-from __future__ import absolute_import
-
-from .jp_prefectures import JP_PREFECTURES, JP_PREFECTURE_CODES
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
+
+from .jp_prefectures import JP_PREFECTURES, JP_PREFECTURE_CODES
 
 
 class JPPostalCodeField(RegexField):

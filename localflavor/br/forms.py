@@ -3,7 +3,7 @@
 BR-specific Form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 

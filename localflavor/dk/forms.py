@@ -2,7 +2,8 @@
 Denmark specific Form helpers.
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
+
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from django.forms import widgets, fields
