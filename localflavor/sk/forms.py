@@ -2,7 +2,7 @@
 Slovak-specific form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 from django.forms.fields import Select, RegexField
 from django.utils.translation import ugettext_lazy as _

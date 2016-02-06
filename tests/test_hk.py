@@ -1,5 +1,3 @@
-from __future__ import absolute_import
-
 from django.test import SimpleTestCase
 
 from localflavor.hk.forms import HKPhoneNumberField
