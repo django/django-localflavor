@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Bashar Al-Abdulhadi, 2015
 # Bashar Al-Abdulhadi, 2014
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Ossama Khayat <okhayat@gmail.com>, 2011
@@ -10,10 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-10 12:21+0100\n"
-"PO-Revision-Date: 2014-12-10 11:22+0000\n"
+"POT-Creation-Date: 2015-06-24 21:27+0200\n"
+"PO-Revision-Date: 2015-08-16 08:54+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
-"Language-Team: Arabic (http://www.transifex.com/projects/p/django-localflavor/language/ar/)\n"
+"Language-Team: Arabic (http://www.transifex.com/django/django-localflavor/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -139,7 +140,7 @@ msgstr "رمز CUIT غير صحيح."
 
 #: ar/forms.py:97
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
-msgstr ""
+msgstr "نوع قانوني خاطئ. يجب أن يكون نوع 27، 20، 30، 23، 24، أو 33."
 
 #: at/at_states.py:6
 msgid "Burgenland"
@@ -177,7 +178,7 @@ msgstr "فورارلبيرغ"
 msgid "Vienna"
 msgstr "فيينا"
 
-#: at/forms.py:25 ch/forms.py:29 no/forms.py:24
+#: at/forms.py:25 no/forms.py:24
 msgid "Enter a zip code in the format XXXX."
 msgstr "أدخل رمز zip بالنسق XXXX."
 
@@ -257,7 +258,7 @@ msgstr "المنطقة الفلمنكية"
 msgid "Wallonia"
 msgstr "والونيا"
 
-#: be/forms.py:26
+#: be/forms.py:26 ch/forms.py:35
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "أدخل الرمز البريدي بالتسلسل الصحيح ما بين 1XXX - 9XXX."
 
@@ -296,7 +297,7 @@ msgstr "يتطلب هذا الحقل 14 رقماً على الأقل."
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
-msgstr ""
+msgstr "ولاية برازيلية (حرفان كبيران)"
 
 #: ca/ca_provinces.py:6
 msgid "Alberta"
@@ -368,116 +369,120 @@ msgstr "أدخل رقم ضمان اجتماعي كندي صحيح بالنسق X
 
 #: ch/ch_states.py:6
 msgid "Aargau"
-msgstr ""
+msgstr "أراغاو"
 
 #: ch/ch_states.py:7
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "أبنزل إينرهودن"
 
 #: ch/ch_states.py:8
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "أبنزل أوسيرهودن"
 
 #: ch/ch_states.py:9
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "بازل شتات"
 
 #: ch/ch_states.py:10
 msgid "Basel-Land"
-msgstr ""
+msgstr "بازل-لاند"
 
 #: ch/ch_states.py:11
 msgid "Berne"
-msgstr ""
+msgstr "برن"
 
 #: ch/ch_states.py:12
 msgid "Fribourg"
-msgstr ""
+msgstr "فريبورغ"
 
 #: ch/ch_states.py:13
 msgid "Geneva"
-msgstr ""
+msgstr "جنيف"
 
 #: ch/ch_states.py:14
 msgid "Glarus"
-msgstr ""
+msgstr "جلاروس"
 
 #: ch/ch_states.py:15
 msgid "Graubuenden"
-msgstr ""
+msgstr "غراوبوندن"
 
 #: ch/ch_states.py:16
 msgid "Jura"
-msgstr ""
+msgstr "جورا"
 
 #: ch/ch_states.py:17
 msgid "Lucerne"
-msgstr ""
+msgstr "لوسيرن"
 
 #: ch/ch_states.py:18
 msgid "Neuchatel"
-msgstr ""
+msgstr "نيوشاتل"
 
 #: ch/ch_states.py:19
 msgid "Nidwalden"
-msgstr ""
+msgstr "نيدوالدن"
 
 #: ch/ch_states.py:20
 msgid "Obwalden"
-msgstr ""
+msgstr "أوبوالدن"
 
 #: ch/ch_states.py:21
 msgid "Schaffhausen"
-msgstr ""
+msgstr "شافهاوزن"
 
 #: ch/ch_states.py:22
 msgid "Schwyz"
-msgstr ""
+msgstr "شويز"
 
 #: ch/ch_states.py:23
 msgid "Solothurn"
-msgstr ""
+msgstr "سولوتورن"
 
 #: ch/ch_states.py:24
 msgid "St. Gallen"
-msgstr ""
+msgstr "سانت غالن"
 
 #: ch/ch_states.py:25
 msgid "Thurgau"
-msgstr ""
+msgstr "ثورجو"
 
 #: ch/ch_states.py:26
 msgid "Ticino"
-msgstr ""
+msgstr "تيسان"
 
 #: ch/ch_states.py:27
 msgid "Uri"
-msgstr ""
+msgstr "أوري"
 
 #: ch/ch_states.py:28
 msgid "Valais"
-msgstr ""
+msgstr "فاليه"
 
 #: ch/ch_states.py:29
 msgid "Vaud"
-msgstr ""
+msgstr "فو"
 
 #: ch/ch_states.py:30
 msgid "Zug"
-msgstr ""
+msgstr "زوغ"
 
 #: ch/ch_states.py:31
 msgid "Zurich"
-msgstr ""
+msgstr "زيوريخ"
 
-#: ch/forms.py:45
+#: ch/forms.py:50
 msgid "Phone numbers must be in 0XX XXX XX XX format."
-msgstr ""
+msgstr "أرقام الهواتف يجب أن تكون بالنسق 0XXX XXX XX XX."
 
-#: ch/forms.py:78
+#: ch/forms.py:83
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
+msgstr ""
+
+#: ch/forms.py:153
+msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
 
 #: cl/forms.py:34
@@ -494,7 +499,7 @@ msgstr "قيمة RUT التشيلية غير صحيحة."
 
 #: cn/forms.py:84
 msgid "Enter a post code in the format XXXXXX."
-msgstr ""
+msgstr "أدخل رمزاً بريدياً بنسق XXXXXX."
 
 #: cn/forms.py:106
 msgid "ID Card Number consists of 15 or 18 digits."
@@ -514,7 +519,7 @@ msgstr ""
 
 #: cn/forms.py:192
 msgid "Enter a valid phone number."
-msgstr ""
+msgstr "أدخل رقم هاتف صحيح."
 
 #: cn/forms.py:214
 msgid "Enter a valid cell number."
@@ -4494,12 +4499,12 @@ msgstr "تدقيق مجموع NIE غير صحيح."
 msgid "Invalid checksum for CIF."
 msgstr "تدقيق مجموع CIF غير صحيح."
 
-#: es/forms.py:167
+#: es/forms.py:169
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr "رجاءً أدخل رقم حساب بنكي صحيح بالنسق XXXX-XXXX-XX-XXXXXXXXXX."
 
-#: es/forms.py:168
+#: es/forms.py:170
 msgid "Invalid checksum for bank account number."
 msgstr "تدقيق مجموع رقم حساب البنك غير صحيح."
 
@@ -5151,42 +5156,46 @@ msgstr ""
 msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:142
+#: generic/validators.py:155
 #, python-format
 msgid "%s is not a valid character for IBAN."
 msgstr ""
 
-#: generic/validators.py:164
+#: generic/validators.py:177
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
-#: generic/validators.py:167
+#: generic/validators.py:180
 #, python-format
 msgid "%s is not a valid country code for IBAN."
 msgstr ""
 
-#: generic/validators.py:169
+#: generic/validators.py:182
 #, python-format
 msgid "%s IBANs are not allowed in this field."
 msgstr ""
 
-#: generic/validators.py:172
+#: generic/validators.py:185
 msgid "Not a valid IBAN."
 msgstr ""
 
-#: generic/validators.py:192
+#: generic/validators.py:205
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#: generic/validators.py:198
+#: generic/validators.py:211
 #, python-format
 msgid "%s is not a valid institution code."
 msgstr ""
 
-#: generic/validators.py:203
+#: generic/validators.py:216
 #, python-format
 msgid "%s is not a valid country code."
+msgstr ""
+
+#: generic/validators.py:225
+msgid "Not a valid EAN code."
 msgstr ""
 
 #: gr/forms.py:27
@@ -5775,8 +5784,8 @@ msgid "Enter a valid zip code."
 msgstr "أدخل رمز zip صحيح."
 
 #: it/forms.py:77
-msgid "Enter a valid Social Security number."
-msgstr "أدخل رقم ضمان اجتماعي صحيح."
+msgid "Enter a valid Tax code."
+msgstr ""
 
 #: it/forms.py:109
 msgid "Enter a valid VAT number."
@@ -7900,23 +7909,23 @@ msgid ""
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
 
-#: pt/forms.py:78
+#: pt/forms.py:83
 msgid ""
 "Phone numbers have at least 3 and at most 9 digits and may optionally be "
 "prefixed with '00351' or '+351'."
 msgstr ""
 
-#: pt/forms.py:113
+#: pt/forms.py:118
 msgid "The specified number is not a valid Social Security number."
 msgstr ""
 
-#: pt/forms.py:114
+#: pt/forms.py:119
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either"
 " 1 or 2 and Y is any other digit)."
 msgstr ""
 
-#: pt/forms.py:150
+#: pt/forms.py:155
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9"
 " and Y is any other digit)."

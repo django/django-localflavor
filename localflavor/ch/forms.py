@@ -6,32 +6,37 @@ from __future__ import absolute_import, unicode_literals
 
 import re
 
-from django.core.validators import EMPTY_VALUES
+from django.core.validators import EMPTY_VALUES, RegexValidator
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import smart_text
 from django.utils.translation import ugettext_lazy as _
 
 from .ch_states import STATE_CHOICES
+from ..generic import validators
 
-
+zip_re = re.compile(r'^[1-9]\d{3}$')
 id_re = re.compile(
     r"^(?P<idnumber>\w{8})(?P<pos9>(\d{1}|<))(?P<checksum>\d{1})$")
 phone_digits_re = re.compile(r'^0([1-9]{1})\d{8}$')
+ssn_re = re.compile(r'^756.\d{4}\.\d{4}\.\d{2}$')
 
 
 class CHZipCodeField(RegexField):
     """
     A form field that validates input as a Swiss zip code. Valid codes
-    consist of four digits.
+    consist of four digits ranging from 1XXX to 9XXX.
+
+    See:
+    http://en.wikipedia.org/wiki/Postal_codes_in_Switzerland_and_Liechtenstein
     """
+
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXX.'),
+        'invalid': _('Enter a valid postal code in the range and format 1XXX - 9XXX.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(CHZipCodeField, self).__init__(r'^\d{4}$',
-                                             max_length, min_length, *args, **kwargs)
+        super(CHZipCodeField, self).__init__(zip_re, max_length, min_length, *args, **kwargs)
 
 
 class CHPhoneNumberField(Field):
@@ -130,3 +135,33 @@ class CHIdentityCardNumberField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
         return '%s%s%s' % (idnumber, pos9, checksum)
+
+
+class CHSocialSecurityNumberField(CharField):
+    """
+    A Swiss Social Security number (also known as the new AHV Number).
+
+    Checks the following rules to determine whether the number is valid:
+
+        * Conforms to the 756.XXXX.XXXX.XX
+        * Included checksums match calculated checksums
+
+    See:
+    http://de.wikipedia.org/wiki/Sozialversicherungsnummer#Versichertennummer
+
+    .. versionadded:: 1.2
+    """
+    default_error_messages = {
+        'invalid': _('Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format.'),
+    }
+    default_validators = [
+        RegexValidator(regex=ssn_re),
+        validators.EANValidator(strip_nondigits=True),
+    ]
+
+    def run_validators(self, value):
+        try:
+            super(CHSocialSecurityNumberField, self).run_validators(value)
+        except ValidationError as errs:
+            # Deduplicate error messages, if any
+            raise ValidationError(list(set(errs.messages)))

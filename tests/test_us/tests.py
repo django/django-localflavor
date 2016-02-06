@@ -1,6 +1,6 @@
 from __future__ import absolute_import, unicode_literals
 
-from django.test import SimpleTestCase
+from django.test import TestCase
 
 from localflavor.us.forms import (USZipCodeField, USPhoneNumberField,
                                   USStateField, USStateSelect,
@@ -9,7 +9,7 @@ from localflavor.us.forms import (USZipCodeField, USPhoneNumberField,
 from .forms import USPlaceForm
 
 
-class USLocalFlavorTests(SimpleTestCase):
+class USLocalFlavorTests(TestCase):
 
     def setUp(self):
         self.form = USPlaceForm({
@@ -312,7 +312,10 @@ class USLocalFlavorTests(SimpleTestCase):
         }
         invalid = {
             '078-05-1120': error_invalid,
+            '078051120': error_invalid,
             '900-12-3456': error_invalid,
+            '900123456': error_invalid,
             '999-98-7652': error_invalid,
+            '999987652': error_invalid,
         }
         self.assertFieldOutput(USSocialSecurityNumberField, valid, invalid)

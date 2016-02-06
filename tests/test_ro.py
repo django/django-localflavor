@@ -12,49 +12,50 @@ class ROLocalFlavorTests(SimpleTestCase):
     def test_ROCountySelect(self):
         f = ROCountySelect()
         out = '''<select name="county">
-<option value="AB">Alba</option>
-<option value="AR">Arad</option>
-<option value="AG">Arge\u015f</option>
-<option value="BC">Bac\u0103u</option>
-<option value="BH">Bihor</option>
-<option value="BN">Bistri\u0163a-N\u0103s\u0103ud</option>
-<option value="BT">Boto\u015fani</option>
-<option value="BV">Bra\u015fov</option>
-<option value="BR">Br\u0103ila</option>
-<option value="B">Bucure\u015fti</option>
-<option value="BZ">Buz\u0103u</option>
-<option value="CS">Cara\u015f-Severin</option>
-<option value="CL">C\u0103l\u0103ra\u015fi</option>
-<option value="CJ" selected="selected">Cluj</option>
-<option value="CT">Constan\u0163a</option>
-<option value="CV">Covasna</option>
-<option value="DB">D\xe2mbovi\u0163a</option>
-<option value="DJ">Dolj</option>
-<option value="GL">Gala\u0163i</option>
-<option value="GR">Giurgiu</option>
-<option value="GJ">Gorj</option>
-<option value="HR">Harghita</option>
-<option value="HD">Hunedoara</option>
-<option value="IL">Ialomi\u0163a</option>
-<option value="IS">Ia\u015fi</option>
-<option value="IF">Ilfov</option>
-<option value="MM">Maramure\u015f</option>
-<option value="MH">Mehedin\u0163i</option>
-<option value="MS">Mure\u015f</option>
-<option value="NT">Neam\u0163</option>
-<option value="OT">Olt</option>
-<option value="PH">Prahova</option>
-<option value="SM">Satu Mare</option>
-<option value="SJ">S\u0103laj</option>
-<option value="SB">Sibiu</option>
-<option value="SV">Suceava</option>
-<option value="TR">Teleorman</option>
-<option value="TM">Timi\u015f</option>
-<option value="TL">Tulcea</option>
-<option value="VS">Vaslui</option>
-<option value="VL">V\xe2lcea</option>
-<option value="VN">Vrancea</option>
-</select>'''
+                <option value="AB">Alba</option>
+                <option value="AR">Arad</option>
+                <option value="AG">Arge\u0219</option>
+                <option value="BC">Bac\u0103u</option>
+                <option value="BH">Bihor</option>
+                <option value="BN">Bistri\u021ba-N\u0103s\u0103ud</option>
+                <option value="BT">Boto\u0219ani</option>
+                <option value="BV">Bra\u0219ov</option>
+                <option value="BR">Br\u0103ila</option>
+                <option value="B">Bucure\u0219ti</option>
+                <option value="BZ">Buz\u0103u</option>
+                <option value="CS">Cara\u0219-Severin</option>
+                <option value="CL">C\u0103l\u0103ra\u0219i</option>
+                <option value="CJ" selected="selected">Cluj</option>
+                <option value="CT">Constan\u021ba</option>
+                <option value="CV">Covasna</option>
+                <option value="DB">D\xe2mbovi\u021ba</option>
+                <option value="DJ">Dolj</option>
+                <option value="GL">Gala\u021bi</option>
+                <option value="GR">Giurgiu</option>
+                <option value="GJ">Gorj</option>
+                <option value="HR">Harghita</option>
+                <option value="HD">Hunedoara</option>
+                <option value="IL">Ialomi\u021ba</option>
+                <option value="IS">Ia\u0219i</option>
+                <option value="IF">Ilfov</option>
+                <option value="MM">Maramure\u0219</option>
+                <option value="MH">Mehedin\u021bi</option>
+                <option value="MS">Mure\u0219</option>
+                <option value="NT">Neam\u021b</option>
+                <option value="OT">Olt</option>
+                <option value="PH">Prahova</option>
+                <option value="SM">Satu Mare</option>
+                <option value="SJ">S\u0103laj</option>
+                <option value="SB">Sibiu</option>
+                <option value="SV">Suceava</option>
+                <option value="TR">Teleorman</option>
+                <option value="TM">Timi\u0219</option>
+                <option value="TL">Tulcea</option>
+                <option value="VS">Vaslui</option>
+                <option value="VL">V\xe2lcea</option>
+                <option value="VN">Vrancea</option>
+                </select>
+                '''
         self.assertHTMLEqual(f.render('county', 'CJ'), out)
 
     def test_ROCIFField(self):
@@ -63,6 +64,7 @@ class ROLocalFlavorTests(SimpleTestCase):
         error_atleast = ['Ensure this value has at least 2 characters (it has 1).']
         valid = {
             '21694681': '21694681',
+            '21694681 ': '21694681',
             'RO21694681': '21694681',
         }
         invalid = {
@@ -93,8 +95,8 @@ class ROLocalFlavorTests(SimpleTestCase):
         valid = {
             'CJ': 'CJ',
             'cj': 'CJ',
-            'Argeş': 'AG',
-            'argeş': 'AG',
+            'Argeș': 'AG',
+            'argeș': 'AG',
         }
         invalid = {
             'Arges': error_format,

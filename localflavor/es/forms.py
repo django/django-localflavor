@@ -116,13 +116,13 @@ class ESIdentityCardNumberField(RegexField):
 
         if not letter1 and letter2:
             # NIF
-            if letter2 == self.nif_control[int(number) % 23]:
+            if letter2 == self.nif_get_checksum(number):
                 return value
             else:
                 raise ValidationError(self.error_messages['invalid_nif'])
         elif letter1 in self.nie_types and letter2:
             # NIE
-            if letter2 == self.nif_control[int(number) % 23]:
+            if letter2 == self.nif_get_checksum(number):
                 return value
             else:
                 raise ValidationError(self.error_messages['invalid_nie'])
@@ -137,6 +137,9 @@ class ESIdentityCardNumberField(RegexField):
                 raise ValidationError(self.error_messages['invalid_cif'])
         else:
             raise ValidationError(self.error_messages['invalid'])
+
+    def nif_get_checksum(self, d):
+        return self.nif_control[int(d) % 23]
 
 
 class ESCCCField(RegexField):
@@ -171,28 +174,22 @@ class ESCCCField(RegexField):
         super(ESCCCField, self).__init__(r'^\d{4}[ -]?\d{4}[ -]?\d{2}[ -]?\d{10}$',
                                          max_length, min_length, *args, **kwargs)
 
-    def get_checksum(self, value):
-        control_str = [1, 2, 4, 8, 5, 10, 9, 7, 3, 6]
-        return str(
-            11 - sum(
-                [
-                    int(digit) * int(control)
-                    for digit, control in zip(value, control_str)
-                ]
-            ) % 11
-        ).replace('10', '1').replace('11', '0')
-
     def clean(self, value):
         super(ESCCCField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        iban_match = re.match(r'^(\d{4})[ -]?(\d{4})[ -]?(\d{2})[ -]?(\d{10})$', value)
-        entity, office, checksum, account = iban_match.groups()
-
-        if self.get_checksum('00' + entity + office) + self.get_checksum(account) == checksum:
+        m = re.match(r'^(\d{4})[ -]?(\d{4})[ -]?(\d{2})[ -]?(\d{10})$', value)
+        entity, office, checksum, account = m.groups()
+        if get_checksum('00' + entity + office) + get_checksum(account) == checksum:
             return value
         else:
             raise ValidationError(self.error_messages['checksum'])
+
+
+def get_checksum(d):
+    control_str = [1, 2, 4, 8, 5, 10, 9, 7, 3, 6]
+    digits = [int(digit) * int(control) for digit, control in zip(d, control_str)]
+    return str(11 - sum(digits) % 11).replace('10', '1').replace('11', '0')
 
 
 class ESRegionSelect(Select):

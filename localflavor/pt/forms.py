@@ -39,12 +39,6 @@ class PTCitizenCardNumberField(Field):
         'invalid': _('Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X is a digit and Y is an alphanumeric character).'),
     }
 
-    def rectify(self, value):
-        return value if value < 10 else value - 9
-
-    def compute(self, index, value):
-        return value if index % 2 else self.rectify(2 * value)
-
     def clean(self, value):
         super(PTCitizenCardNumberField, self).clean(value)
 
@@ -61,13 +55,21 @@ class PTCitizenCardNumberField(Field):
         encoded = number + checkdigits
         decoded = [int(digit, 36) for digit in encoded]
 
-        checksum = sum([self.compute(index, decoded_value)
+        checksum = sum([PTCitizenCardNumberField.compute(index, decoded_value)
                         for index, decoded_value in enumerate(decoded)])
 
         if not checksum % 10 == 0:
             raise ValidationError(self.error_messages['badchecksum'])
 
         return '{0}-{1}'.format(number, checkdigits)
+
+    @staticmethod
+    def compute(index, value):
+        if index % 2:
+            return value
+        else:
+            value *= 2
+            return value if value < 10 else value - 9
 
 
 class PTPhoneNumberField(Field):

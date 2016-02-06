@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import os
 
 DATABASES = {
     'default': {
@@ -11,15 +10,13 @@ DATABASES = {
 INSTALLED_APPS = [
     'localflavor',
     'tests.test_au',
+    'tests.test_ec',
     'tests.test_mk',
     'tests.test_mx',
     'tests.test_us',
     'tests.test_pk',
 ]
 
-import django
-
-if django.VERSION[:2] < (1, 6):
-    TEST_RUNNER = 'discover_runner.DiscoverRunner'
-
 SECRET_KEY = 'spam-spam-spam-spam'
+
+SILENCED_SYSTEM_CHECKS = ('1_7.W001',)

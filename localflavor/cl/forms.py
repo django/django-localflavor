@@ -40,7 +40,7 @@ class CLRutField(RegexField):
         if 'strict' in kwargs:
             del kwargs['strict']
             super(CLRutField, self).__init__(r'^(\d{1,2}\.)?\d{3}\.\d{3}-[\dkK]$',
-                                             error_message=self.default_error_messages['strict'],
+                                             error_messages={'invalid': self.default_error_messages['strict']},
                                              *args, **kwargs)
         else:
             # In non-strict mode, accept RUTs that validate but do not exist in

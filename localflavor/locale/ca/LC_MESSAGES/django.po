@@ -8,14 +8,15 @@
 # Carles Barrobés <carles@barrobes.com>, 2011-2012
 # el_libre como el chaval <el.libre@gmail.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
+# Roger Pons <rogerpons@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-10 12:21+0100\n"
-"PO-Revision-Date: 2014-12-10 11:22+0000\n"
+"POT-Creation-Date: 2015-06-24 21:27+0200\n"
+"PO-Revision-Date: 2015-08-16 08:54+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
-"Language-Team: Catalan (http://www.transifex.com/projects/p/django-localflavor/language/ca/)\n"
+"Language-Team: Catalan (http://www.transifex.com/django/django-localflavor/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -125,11 +126,11 @@ msgstr "Introduïu un codi postal en el format NNNN o ANNNNAAA."
 #: ar/forms.py:58 br/forms.py:115 br/forms.py:167 pe/forms.py:29
 #: pe/forms.py:58
 msgid "This field requires only numbers."
-msgstr "Aquest camp precisa només números."
+msgstr "Aquest camp requereix només números."
 
 #: ar/forms.py:59
 msgid "This field requires 7 or 8 digits."
-msgstr "Aquest camp precisa 7 o 8 dígits."
+msgstr "Aquest camp requereix 7 o 8 dígits."
 
 #: ar/forms.py:95
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
@@ -179,7 +180,7 @@ msgstr "Tirol"
 msgid "Vienna"
 msgstr "Viena"
 
-#: at/forms.py:25 ch/forms.py:29 no/forms.py:24
+#: at/forms.py:25 no/forms.py:24
 msgid "Enter a zip code in the format XXXX."
 msgstr "Introduïu un codi zip en el format XXXX."
 
@@ -259,7 +260,7 @@ msgstr "Regió flamenca"
 msgid "Wallonia"
 msgstr "Valònia"
 
-#: be/forms.py:26
+#: be/forms.py:26 ch/forms.py:35
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Introduïu un codi postal vàlid en el rang i format 1XXX - 9XXX."
 
@@ -286,7 +287,7 @@ msgstr "Número CPF invàlid."
 
 #: br/forms.py:114
 msgid "This field requires at most 11 digits or 14 characters."
-msgstr "Aquest camp precisa com a màxim 11 dígits o 14 caràcters."
+msgstr "Aquest camp requereix com a màxim 11 dígits o 14 caràcters."
 
 #: br/forms.py:166
 msgid "Invalid CNPJ number."
@@ -294,7 +295,7 @@ msgstr "Número CNPJ invàlid."
 
 #: br/forms.py:168
 msgid "This field requires at least 14 digits"
-msgstr "Aquest camp precisa almenys 14 dígits."
+msgstr "Aquest camp requereix un mínim de 14 dígits."
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
@@ -472,15 +473,19 @@ msgstr ""
 msgid "Zurich"
 msgstr ""
 
-#: ch/forms.py:45
+#: ch/forms.py:50
 msgid "Phone numbers must be in 0XX XXX XX XX format."
 msgstr "Els números de telèfon han de tenir el format 0XXX XXX XXXX."
 
-#: ch/forms.py:78
+#: ch/forms.py:83
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr "Introdueix una identificació suïssa o passaport en el format X1234567<0 o 1234567890"
+
+#: ch/forms.py:153
+msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
+msgstr ""
 
 #: cl/forms.py:34
 msgid "Enter a valid Chilean RUT."
@@ -4496,12 +4501,12 @@ msgstr "Verificació del NIE invàlida."
 msgid "Invalid checksum for CIF."
 msgstr "Verificació del CIF invàlida."
 
-#: es/forms.py:167
+#: es/forms.py:169
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr "Introduïu un número de compte bancari vàlid en el format XXXX-XXXX-XX-XXXXXXXXXX."
 
-#: es/forms.py:168
+#: es/forms.py:170
 msgid "Invalid checksum for bank account number."
 msgstr "Verificació del número de compte bancari invàlida."
 
@@ -5153,42 +5158,46 @@ msgstr ""
 msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:142
+#: generic/validators.py:155
 #, python-format
 msgid "%s is not a valid character for IBAN."
 msgstr ""
 
-#: generic/validators.py:164
+#: generic/validators.py:177
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
-#: generic/validators.py:167
+#: generic/validators.py:180
 #, python-format
 msgid "%s is not a valid country code for IBAN."
 msgstr ""
 
-#: generic/validators.py:169
+#: generic/validators.py:182
 #, python-format
 msgid "%s IBANs are not allowed in this field."
 msgstr ""
 
-#: generic/validators.py:172
+#: generic/validators.py:185
 msgid "Not a valid IBAN."
 msgstr ""
 
-#: generic/validators.py:192
+#: generic/validators.py:205
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#: generic/validators.py:198
+#: generic/validators.py:211
 #, python-format
 msgid "%s is not a valid institution code."
 msgstr ""
 
-#: generic/validators.py:203
+#: generic/validators.py:216
 #, python-format
 msgid "%s is not a valid country code."
+msgstr ""
+
+#: generic/validators.py:225
+msgid "Not a valid EAN code."
 msgstr ""
 
 #: gr/forms.py:27
@@ -5777,8 +5786,8 @@ msgid "Enter a valid zip code."
 msgstr "Introduïu un codi zip vàlid."
 
 #: it/forms.py:77
-msgid "Enter a valid Social Security number."
-msgstr "Introduïu un número valid de la Seguretat Social."
+msgid "Enter a valid Tax code."
+msgstr ""
 
 #: it/forms.py:109
 msgid "Enter a valid VAT number."
@@ -7732,11 +7741,11 @@ msgstr ""
 
 #: pe/forms.py:30
 msgid "This field requires 8 digits."
-msgstr "Aquest camp precisa 8 dígits."
+msgstr "Aquest camp requereix 8 dígits."
 
 #: pe/forms.py:59
 msgid "This field requires 11 digits."
-msgstr "Aquest camp precisa 11 dígits."
+msgstr "Aquest camp requereix 11 dígits."
 
 #: pk/forms.py:26
 msgid "Enter a 5 digit postcode."
@@ -7902,23 +7911,23 @@ msgid ""
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
 
-#: pt/forms.py:78
+#: pt/forms.py:83
 msgid ""
 "Phone numbers have at least 3 and at most 9 digits and may optionally be "
 "prefixed with '00351' or '+351'."
 msgstr ""
 
-#: pt/forms.py:113
+#: pt/forms.py:118
 msgid "The specified number is not a valid Social Security number."
 msgstr ""
 
-#: pt/forms.py:114
+#: pt/forms.py:119
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either"
 " 1 or 2 and Y is any other digit)."
 msgstr ""
 
-#: pt/forms.py:150
+#: pt/forms.py:155
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9"
 " and Y is any other digit)."

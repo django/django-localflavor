@@ -60,8 +60,7 @@ class ITProvinceSelect(Select):
 
 class ITSocialSecurityNumberField(RegexField):
     """
-    A form field that validates Italian Social Security numbers (codice fiscale) for
-    both persons and entities.
+    A form field that validates Italian Tax code (codice fiscale) for both persons and entities.
 
     For reference see http://www.agenziaentrate.it/ and search for:
 
@@ -74,7 +73,7 @@ class ITSocialSecurityNumberField(RegexField):
     entities (numeric-only form).
     """
     default_error_messages = {
-        'invalid': _('Enter a valid Social Security number.'),
+        'invalid': _('Enter a valid Tax code.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):

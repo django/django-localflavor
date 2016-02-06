@@ -2,7 +2,9 @@ Authors
 =======
 
 * Aaron Boman
+* Adam Taylor
 * Adrian Holovaty
+* Alex Butum
 * Alex Gaynor
 * Alex Hill
 * Alex Zhang
@@ -27,12 +29,13 @@ Authors
 * Horst Gutmann
 * Jaap Roes
 * Jacob Kaplan-Moss
+* Jan Pieter Waagmeester
 * James Bennett
 * Jannis Leidel
 * Jérémie Ferry
 * Jocelyn Delalande
+* Johnny Lee Othon
 * Jonas Ghyllebert
-* Jocelyn Delalande
 * Joseph Kocherhans
 * Julien Phalip
 * Justin Bronn
@@ -56,6 +59,7 @@ Authors
 * Tino de Bruijn
 * Trey Hunner
 * Tyler Ball
+* Venelin Stoykov
 * baffolobill
 * d.merc
 * luyikei

@@ -1,6 +1,76 @@
 Changelog
 =========
 
+1.3   (unreleased)
+------------------
+
+New flavors:
+
+- Added local flavor for Bulgaria
+  (`gh-191 <https://github.com/django/django-localflavor/pull/191>`_)
+
+New fields for existing flavors:
+
+- Added NLZipCodeField, NLProvinceField, NLSoFiNumberField, NLPhoneNumberField model fields.
+  (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
+
+Modifications to existing flavors:
+
+- Moved Dutch validators from localflavor.nl.forms to localflavor.nl.validators
+  (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
+- Fix check for promotional social security numbers in USSocialSecurityNumberField
+  (`gh-157 <https://github.com/django/django-localflavor/pull/157>`_).
+
+Other changes:
+
+- Drop support for Django 1.5, Django 1.6 and Python 2.6
+  (`gh-170 <https://github.com/django/django-localflavor/pull/170>`_).
+
+1.2   (2015-11-27)
+------------------
+
+New flavors:
+
+- None
+
+New fields for existing flavors:
+
+- Added form field for Estonian business registration codes
+  (`gh-135 <https://github.com/django/django-localflavor/pull/135>`_).
+- Added model field for Ecuadorian provinces
+  (`gh-138 <https://github.com/django/django-localflavor/pull/138>`_).
+- Added form field for Swiss Social Security numbers (
+  (`gh-155 <https://github.com/django/django-localflavor/pull/155>`_).
+- Added form field for Brazilian Legal Process numbers (Processo)
+  (`gh-163 <https://github.com/django/django-localflavor/pull/163>`_).
+
+Modifications to existing flavors:
+
+- Fixed misspelled Polish administrative unit names
+  (`gh-136 <https://github.com/django/django-localflavor/pull/136>`_).
+- Added Kosovo and Timor-Leste to list of IBAN countries
+  (`gh-139 <https://github.com/django/django-localflavor/pull/139>`_).
+- Fixed error in Romanian fiscal identity code (CIF) field when value has a trailing slash
+  (`gh-146 <https://github.com/django/django-localflavor/pull/146>`_).
+- Updated validation in Swiss postal code field to only accept values in the range 1000 - 9000
+  (`gh-154 <https://github.com/django/django-localflavor/pull/154>`_).
+- Added validator for International Article Number (EAN) to the generic module
+  (`gh-156 <https://github.com/django/django-localflavor/pull/156>`_).
+- Updated Italian social security number field to use 'tax code' in error message
+  (`gh-167 <https://github.com/django/django-localflavor/pull/167>`_).
+- Fixed error in Greek tax number code field when value has only alpha characters
+  (`gh-171 <https://github.com/django/django-localflavor/pull/171>`_).
+- Added stricter validation in the Brazilian Cadastro de Pessoas Físicas (CPF) field
+  (`gh-172 <https://github.com/django/django-localflavor/pull/172>`_).
+- Corrected Romanian counties choice names to use ș and ț (comma below)
+  (`gh-175 <https://github.com/django/django-localflavor/pull/175>`_).
+- Updated Brazilian postal code field to also accept values with XX.XXX-XXX and XXXXXXXX formats
+  (`gh-177 <https://github.com/django/django-localflavor/pull/177>`_).
+- Marked US state names for translation
+  (`gh-178 <https://github.com/django/django-localflavor/pull/178>`_).
+- Fixed French national identification number validation for people born before 1976 in Corsica
+  (`gh-186 <https://github.com/django/django-localflavor/pull/186>`_).
+
 1.1   (2014-12-10)
 ------------------
 
@@ -47,7 +117,7 @@ Other modifications to existing flavors:
 - Rejected US SSN starting with 9 (gh-35)
 - Rejected Brazilian CPF number when all numbers all numbers are equal (gh-103)
 - Added 'Y' to the NIE number validation for Spain (gh-127)
-- Updated Argentina's CUIT numer validation to support legal types 24 and 33 (gh-121)
+- Updated Argentina's CUIT number validation to support legal types 24 and 33 (gh-121)
 - Added 'R', 'V' and 'W' to the Spanish identity card number validation (gh-132)
 
 Other changes:

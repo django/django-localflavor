@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 
-from django.test import SimpleTestCase
+from django.test import TestCase
 
 from localflavor.mk.forms import (MKIdentityCardNumberField,
                                   MKMunicipalitySelect, UMCNField)
@@ -9,7 +9,7 @@ from localflavor.mk.forms import (MKIdentityCardNumberField,
 from .forms import MKPersonForm
 
 
-class MKLocalFlavorTests(SimpleTestCase):
+class MKLocalFlavorTests(TestCase):
 
     def setUp(self):
         self.form = MKPersonForm({

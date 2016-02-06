@@ -9,21 +9,22 @@
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Michael Bashkirov <michael.bashkirov@gmail.com>, 2011
 # Mikhail Zholobov <legal90@gmail.com>, 2013
+# Panasoft <cc072aa3@opayq.com>, 2014
 # Taras Semenenko <taras.semenenko@gmail.com>, 2013
-# Алексей Борискин <sun.void@gmail.com>, 2012-2013
+# Алексей Борискин <sun.void@gmail.com>, 2012-2013,2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-10 12:21+0100\n"
-"PO-Revision-Date: 2014-12-10 11:22+0000\n"
+"POT-Creation-Date: 2015-06-24 21:27+0200\n"
+"PO-Revision-Date: 2015-08-16 08:54+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/django-localflavor/language/ru/)\n"
+"Language-Team: Russian (http://www.transifex.com/django/django-localflavor/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ar/ar_provinces.py:9
 msgid "Buenos Aires"
@@ -144,7 +145,7 @@ msgstr "Неверный CUIT."
 
 #: ar/forms.py:97
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
-msgstr ""
+msgstr "Неправильный допустимый тип. Тип должен быть 27, 20, 30, 23, 24 или 33."
 
 #: at/at_states.py:6
 msgid "Burgenland"
@@ -182,7 +183,7 @@ msgstr "Ворарлберг"
 msgid "Vienna"
 msgstr "Вена"
 
-#: at/forms.py:25 ch/forms.py:29 no/forms.py:24
+#: at/forms.py:25 no/forms.py:24
 msgid "Enter a zip code in the format XXXX."
 msgstr "Введите правильный индекс в формате XXXX."
 
@@ -262,7 +263,7 @@ msgstr "Фламандский регион"
 msgid "Wallonia"
 msgstr "Валлония"
 
-#: be/forms.py:26
+#: be/forms.py:26 ch/forms.py:35
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Введите действительный почтовый индекс в диапазон и формат 1xxx - 9xxx."
 
@@ -475,15 +476,19 @@ msgstr "Цуг"
 msgid "Zurich"
 msgstr "Цюрих"
 
-#: ch/forms.py:45
+#: ch/forms.py:50
 msgid "Phone numbers must be in 0XX XXX XX XX format."
 msgstr "Телефонные номера должны быть в формате  0XX XXX XX XX."
 
-#: ch/forms.py:78
+#: ch/forms.py:83
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr "Введите номер швейцарского паспорта или карты идентификации в формате X1234567<0 или 1234567890."
+
+#: ch/forms.py:153
+msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
+msgstr ""
 
 #: cl/forms.py:34
 msgid "Enter a valid Chilean RUT."
@@ -673,196 +678,196 @@ msgstr "Введите правильный номер паспорта личн
 
 #: dk/dk_municipalities.py:8 dk/dk_postalcodes.py:689
 msgid "Albertslund"
-msgstr ""
+msgstr "Альбертслунн"
 
 #: dk/dk_municipalities.py:9 dk/dk_postalcodes.py:748
 msgid "Allerød"
-msgstr ""
+msgstr "Аллерёд"
 
 #: dk/dk_municipalities.py:10 dk/dk_postalcodes.py:704
 msgid "Ballerup"
-msgstr ""
+msgstr "Баллеруп"
 
 #: dk/dk_municipalities.py:11
 msgid "Bornholm"
-msgstr ""
+msgstr "Борнхольм"
 
 #: dk/dk_municipalities.py:12 dk/dk_postalcodes.py:687
 msgid "Brøndby"
-msgstr ""
+msgstr "Брённбю"
 
 #: dk/dk_municipalities.py:13 dk/dk_postalcodes.py:708
 msgid "Dragør"
-msgstr ""
+msgstr "Драгёр"
 
 #: dk/dk_municipalities.py:14
 msgid "Egedal"
-msgstr ""
+msgstr "Эгедаль"
 
 #: dk/dk_municipalities.py:15 dk/dk_postalcodes.py:750
 msgid "Fredensborg"
-msgstr ""
+msgstr "Фреденсборг"
 
 #: dk/dk_municipalities.py:16 dk/dk_postalcodes.py:678
 msgid "Frederiksberg"
-msgstr ""
+msgstr "Фредериксберг"
 
 #: dk/dk_municipalities.py:17 dk/dk_postalcodes.py:756
 msgid "Frederikssund"
-msgstr ""
+msgstr "Фредерикссунн"
 
 #: dk/dk_municipalities.py:18
 msgid "Furesø"
-msgstr ""
+msgstr "Фуресё"
 
 #: dk/dk_municipalities.py:19 dk/dk_postalcodes.py:710
 msgid "Gentofte"
-msgstr ""
+msgstr "Гентофте"
 
 #: dk/dk_municipalities.py:20
 msgid "Gladsaxe"
-msgstr ""
+msgstr "Гладсаксе"
 
 #: dk/dk_municipalities.py:21 dk/dk_postalcodes.py:686
 msgid "Glostrup"
-msgstr ""
+msgstr "Глоструп"
 
 #: dk/dk_municipalities.py:22
 msgid "Gribskov"
-msgstr ""
+msgstr "Грибсков"
 
 #: dk/dk_municipalities.py:23
 msgid "Halsnæs"
-msgstr ""
+msgstr "Хальснес"
 
 #: dk/dk_municipalities.py:24 dk/dk_postalcodes.py:726
 msgid "Helsingør"
-msgstr ""
+msgstr "Хельсингёр"
 
 #: dk/dk_municipalities.py:25 dk/dk_postalcodes.py:702
 msgid "Herlev"
-msgstr ""
+msgstr "Херлев"
 
 #: dk/dk_municipalities.py:26 dk/dk_postalcodes.py:747
 msgid "Hillerød"
-msgstr ""
+msgstr "Хиллерёд"
 
 #: dk/dk_municipalities.py:27 dk/dk_postalcodes.py:694
 msgid "Hvidovre"
-msgstr ""
+msgstr "Видовре"
 
 #: dk/dk_municipalities.py:28
 msgid "Høje-Taastrup"
-msgstr ""
+msgstr "Хёе-Тоструп"
 
 #: dk/dk_municipalities.py:29 dk/dk_postalcodes.py:723
 msgid "Hørsholm"
-msgstr ""
+msgstr "Хёрсхольм"
 
 #: dk/dk_municipalities.py:30 dk/dk_postalcodes.py:692
 msgid "Ishøj"
-msgstr ""
+msgstr "Исхёй"
 
 #: dk/dk_municipalities.py:31
 msgid "København"
-msgstr ""
+msgstr "Копенгаген"
 
 #: dk/dk_municipalities.py:32
 msgid "Lyngby-Taarbæk"
-msgstr ""
+msgstr "Люнгбю-Торбек"
 
 #: dk/dk_municipalities.py:33
 msgid "Rudersdal"
-msgstr ""
+msgstr "Рудерсдаль"
 
 #: dk/dk_municipalities.py:34 dk/dk_postalcodes.py:688
 msgid "Rødovre"
-msgstr ""
+msgstr "Рёдовре"
 
 #: dk/dk_municipalities.py:35
 msgid "Tårnby"
-msgstr ""
+msgstr "Торнбю"
 
 #: dk/dk_municipalities.py:36 dk/dk_postalcodes.py:690
 msgid "Vallensbæk"
-msgstr ""
+msgstr "Валленсбек"
 
 #: dk/dk_municipalities.py:42
 msgid "Favrskov"
-msgstr ""
+msgstr "Фаврсков"
 
 #: dk/dk_municipalities.py:43 dk/dk_postalcodes.py:1189
 msgid "Hedensted"
-msgstr ""
+msgstr "Хеденстед"
 
 #: dk/dk_municipalities.py:44 dk/dk_postalcodes.py:1081
 #: dk/dk_postalcodes.py:1082
 msgid "Herning"
-msgstr ""
+msgstr "Хернинг"
 
 #: dk/dk_municipalities.py:45 dk/dk_postalcodes.py:1090
 msgid "Holstebro"
-msgstr ""
+msgstr "Хольстебро"
 
 #: dk/dk_municipalities.py:46 dk/dk_postalcodes.py:1187
 msgid "Horsens"
-msgstr ""
+msgstr "Хорсенс"
 
 #: dk/dk_municipalities.py:47
 msgid "Ikast-Brande"
-msgstr ""
+msgstr "Икаст-Бранне"
 
 #: dk/dk_municipalities.py:48 dk/dk_postalcodes.py:1096
 msgid "Lemvig"
-msgstr ""
+msgstr "Лемвиг"
 
 #: dk/dk_municipalities.py:49
 msgid "Norddjurs"
-msgstr ""
+msgstr "Норддюрс"
 
 #: dk/dk_municipalities.py:50 dk/dk_postalcodes.py:1141
 msgid "Odder"
-msgstr ""
+msgstr "Оддер"
 
 #: dk/dk_municipalities.py:51
 msgid "Randers"
-msgstr ""
+msgstr "Раннерс"
 
 #: dk/dk_municipalities.py:52
 msgid "Ringkøbing-Skjern"
-msgstr ""
+msgstr "Рингкёбинг-Скьерн"
 
 #: dk/dk_municipalities.py:53 dk/dk_postalcodes.py:1142
 msgid "Samsø"
-msgstr ""
+msgstr "Самсё"
 
 #: dk/dk_municipalities.py:54 dk/dk_postalcodes.py:1177
 msgid "Silkeborg"
-msgstr ""
+msgstr "Силькеборг"
 
 #: dk/dk_municipalities.py:55 dk/dk_postalcodes.py:1184
 msgid "Skanderborg"
-msgstr ""
+msgstr "Сканнерборг"
 
 #: dk/dk_municipalities.py:56 dk/dk_postalcodes.py:1110
 msgid "Skive"
-msgstr ""
+msgstr "Скиве"
 
 #: dk/dk_municipalities.py:57 dk/dk_postalcodes.py:1095
 msgid "Struer"
-msgstr ""
+msgstr "Струэр"
 
 #: dk/dk_municipalities.py:58
 msgid "Syddjurs"
-msgstr ""
+msgstr "Сюддюрс"
 
 #: dk/dk_municipalities.py:59 dk/dk_postalcodes.py:1201
 msgid "Viborg"
-msgstr ""
+msgstr "Виборг"
 
 #: dk/dk_municipalities.py:60
 msgid "Aarhus"
-msgstr ""
+msgstr "Орхус"
 
 #: dk/dk_municipalities.py:66 dk/dk_postalcodes.py:1273
 msgid "Brønderslev"
@@ -4499,12 +4504,12 @@ msgstr "Неверная проверочная сумма для NIE."
 msgid "Invalid checksum for CIF."
 msgstr "Неверная проверочная сумма для CIF."
 
-#: es/forms.py:167
+#: es/forms.py:169
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr "Пожалуйста, введите правильный банковский номер в формате XXXX-XXXX-XX-XXXXXXXXXX."
 
-#: es/forms.py:168
+#: es/forms.py:170
 msgid "Invalid checksum for bank account number."
 msgstr "Неверная проверочная сумма для банковского номера."
 
@@ -5156,42 +5161,46 @@ msgstr ""
 msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:142
+#: generic/validators.py:155
 #, python-format
 msgid "%s is not a valid character for IBAN."
 msgstr ""
 
-#: generic/validators.py:164
+#: generic/validators.py:177
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
-#: generic/validators.py:167
+#: generic/validators.py:180
 #, python-format
 msgid "%s is not a valid country code for IBAN."
 msgstr ""
 
-#: generic/validators.py:169
+#: generic/validators.py:182
 #, python-format
 msgid "%s IBANs are not allowed in this field."
 msgstr ""
 
-#: generic/validators.py:172
+#: generic/validators.py:185
 msgid "Not a valid IBAN."
 msgstr ""
 
-#: generic/validators.py:192
+#: generic/validators.py:205
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#: generic/validators.py:198
+#: generic/validators.py:211
 #, python-format
 msgid "%s is not a valid institution code."
 msgstr ""
 
-#: generic/validators.py:203
+#: generic/validators.py:216
 #, python-format
 msgid "%s is not a valid country code."
+msgstr ""
+
+#: generic/validators.py:225
+msgid "Not a valid EAN code."
 msgstr ""
 
 #: gr/forms.py:27
@@ -5780,8 +5789,8 @@ msgid "Enter a valid zip code."
 msgstr "Введите правильный почтовый индекс."
 
 #: it/forms.py:77
-msgid "Enter a valid Social Security number."
-msgstr "Введите правильный номер социального страхования."
+msgid "Enter a valid Tax code."
+msgstr ""
 
 #: it/forms.py:109
 msgid "Enter a valid VAT number."
@@ -7905,23 +7914,23 @@ msgid ""
 "is a digit and Y is an alphanumeric character)."
 msgstr "Номер карты гражданина имеет формат XXXXXXXXXYYX или XXXXXXXX-XYYX (здесь X — цифра, а Y — буква или цифра)."
 
-#: pt/forms.py:78
+#: pt/forms.py:83
 msgid ""
 "Phone numbers have at least 3 and at most 9 digits and may optionally be "
 "prefixed with '00351' or '+351'."
 msgstr "Телефонные номера содержат минимум 3 и максимум 9 цифр и могут начинаться с '00351' или '+351'."
 
-#: pt/forms.py:113
+#: pt/forms.py:118
 msgid "The specified number is not a valid Social Security number."
 msgstr "Введённое число не является корректным номером социального страхования."
 
-#: pt/forms.py:114
+#: pt/forms.py:119
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either"
 " 1 or 2 and Y is any other digit)."
 msgstr "Номер социального страхования должен иметь формат XYYYYYYYYYY (где X это либо 1, либо 2, а Y — любая цифра)."
 
-#: pt/forms.py:150
+#: pt/forms.py:155
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9"
 " and Y is any other digit)."
@@ -8511,16 +8520,16 @@ msgstr "Емтланд"
 
 #: sg/forms.py:31
 msgid "Enter a 6-digit postal code."
-msgstr ""
+msgstr "Введите 6-значный почтовый индекс."
 
 #: sg/forms.py:45
 msgid ""
 "Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
+msgstr "Номер телефона должен состоять из 8 цифр и начинаться с одной из цифр: 6, 8 или 9."
 
 #: sg/forms.py:82
 msgid "Invalid NRIC/FIN."
-msgstr ""
+msgstr "Неверный NRIC/FIN."
 
 #: si/forms.py:27
 msgid "The first 7 digits of the EMSO must represent a valid past date."
@@ -8924,11 +8933,11 @@ msgstr "Американский индекс (две заглавные бук�
 
 #: us/models.py:54
 msgid "U.S. ZIP code"
-msgstr ""
+msgstr "почтовый индекс США"
 
 #: us/models.py:91
 msgid "Social security number"
-msgstr ""
+msgstr "Номер социального страхования"
 
 #: uy/forms.py:30
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."

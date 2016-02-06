@@ -1,6 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.utils import six
-from django.test import SimpleTestCase
+from django.test import TestCase
 
 from localflavor.tr.forms import (TRPostalCodeField, TRPhoneNumberField,
                                   TRIdentificationNumberField)
@@ -15,7 +15,7 @@ def assertRaisesRegex(self, *args, **kwargs):
     return getattr(self, _assertRaisesRegex)(*args, **kwargs)
 
 
-class TRLocalFlavorTests(SimpleTestCase):
+class TRLocalFlavorTests(TestCase):
     def test_TRPostalCodeField(self):
         f = TRPostalCodeField()
         self.assertEqual(f.clean("06531"), "06531")
