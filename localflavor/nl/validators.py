@@ -5,7 +5,7 @@ import re
 
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -66,7 +66,7 @@ class NLPhoneNumberFieldValidator(object):
     """
 
     def __call__(self, value):
-        phone_nr = re.sub('[\-\s\(\)]', '', smart_text(value))
+        phone_nr = re.sub('[\-\s\(\)]', '', force_text(value))
         numeric_re = re.compile('^\d+$')
 
         if len(phone_nr) == 10 and numeric_re.search(phone_nr):

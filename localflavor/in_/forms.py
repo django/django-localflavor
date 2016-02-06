@@ -9,7 +9,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, CharField, Select
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .in_states import STATES_NORMALIZED, STATE_CHOICES
@@ -87,7 +87,7 @@ class INStateField(Field):
             pass
         else:
             try:
-                return smart_text(STATES_NORMALIZED[value.strip().lower()])
+                return force_text(STATES_NORMALIZED[value.strip().lower()])
             except KeyError:
                 pass
         raise ValidationError(self.error_messages['invalid'])
@@ -168,7 +168,7 @@ class INPhoneNumberField(CharField):
         value = super(INPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = smart_text(value)
+        value = force_text(value)
         m = phone_digits_re.match(value)
         if m:
             return '%s' % (value)

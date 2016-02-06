@@ -10,7 +10,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, Select, RegexField
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .hr_choices import (HR_LICENSE_PLATE_PREFIX_CHOICES, HR_COUNTY_CHOICES,
@@ -158,7 +158,7 @@ class HRLicensePlateField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        value = re.sub(r'[\s\-]+', '', smart_text(value.strip())).upper()
+        value = re.sub(r'[\s\-]+', '', force_text(value.strip())).upper()
 
         matches = plate_re.search(value)
         if matches is None:
@@ -224,7 +224,7 @@ class HRPhoneNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        value = re.sub(r'[\-\s\(\)]', '', smart_text(value))
+        value = re.sub(r'[\-\s\(\)]', '', force_text(value))
 
         matches = phone_re.search(value)
         if matches is None:

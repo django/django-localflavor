@@ -13,7 +13,7 @@ from .pt_regions import REGION_CHOICES
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 from re import compile as regex_compile, sub as regex_replace
 
@@ -89,7 +89,7 @@ class PTPhoneNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        value = regex_replace('(\.|\s)', '', smart_text(value))
+        value = regex_replace('(\.|\s)', '', force_text(value))
         match = PHONE_NUMBER_REGEX.search(value)
 
         if not match:

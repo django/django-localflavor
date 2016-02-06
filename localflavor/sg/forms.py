@@ -9,7 +9,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -54,7 +54,7 @@ class SGPhoneNumberField(CharField):
         super(SGPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\(|\)|\s+|-)', '', smart_text(value))
+        value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
         phone_match = PHONE_DIGITS_RE.search(value)
         if phone_match:
             return '%s' % phone_match.group()
@@ -89,7 +89,7 @@ class SGNRIC_FINField(CharField):
         super(SGNRIC_FINField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\s+)', '', smart_text(value.upper()))
+        value = re.sub('(\s+)', '', force_text(value.upper()))
         match = NRIC_FIN_RE.search(value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])
