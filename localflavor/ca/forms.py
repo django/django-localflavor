@@ -9,7 +9,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, CharField, Select
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 from localflavor.generic.checksums import luhn
 
@@ -55,7 +55,7 @@ class CAPhoneNumberField(Field):
         super(CAPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\(|\)|\s+)', '', smart_text(value))
+        value = re.sub('(\(|\)|\s+)', '', force_text(value))
         m = phone_digits_re.search(value)
         if m:
             return '%s-%s-%s' % (m.group(1), m.group(2), m.group(3))

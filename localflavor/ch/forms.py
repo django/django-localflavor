@@ -9,7 +9,7 @@ import re
 from django.core.validators import EMPTY_VALUES, RegexValidator
 from django.forms import ValidationError
 from django.forms.fields import CharField, Field, RegexField, Select
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .ch_states import STATE_CHOICES
@@ -54,7 +54,7 @@ class CHPhoneNumberField(Field):
         super(CHPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\.|\s|/|-)', '', smart_text(value))
+        value = re.sub('(\.|\s|/|-)', '', force_text(value))
         m = phone_digits_re.search(value)
         if m:
             return '%s %s %s %s' % (value[0:3], value[3:6], value[6:8], value[8:10])

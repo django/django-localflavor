@@ -10,12 +10,8 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, CharField, Select
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
-try:
-    from django.utils.encoding import smart_text
-except ImportError:
-    from django.utils.encoding import smart_unicode as smart_text
 
 from .br_states import STATE_CHOICES
 
@@ -57,7 +53,7 @@ class BRPhoneNumberField(Field):
         super(BRPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\(|\)|\s+)', '', smart_text(value))
+        value = re.sub('(\(|\)|\s+)', '', force_text(value))
         m = phone_digits_re.search(value)
         if m:
             return '%s-%s-%s' % (m.group(1), m.group(2), m.group(3))
@@ -93,10 +89,10 @@ class BRStateChoiceField(Field):
         value = super(BRStateChoiceField, self).clean(value)
         if value in EMPTY_VALUES:
             value = ''
-        value = smart_text(value)
+        value = force_text(value)
         if value == '':
             return value
-        valid_values = set([smart_text(k) for k, v in self.widget.choices])
+        valid_values = set([force_text(k) for k, v in self.widget.choices])
         if value not in valid_values:
             raise ValidationError(self.error_messages['invalid'])
         return value

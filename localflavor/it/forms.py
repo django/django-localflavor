@@ -9,7 +9,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select, CharField
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .it_province import PROVINCE_CHOICES
@@ -133,7 +133,7 @@ class ITPhoneNumberField(CharField):
         super(ITPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub(r'[^\+\d]', '', smart_text(value))
+        value = re.sub(r'[^\+\d]', '', force_text(value))
         m = phone_digits_re.match(value)
         if m:
             return '%s %s' % tuple(group for group in m.groups()[1:] if group)
