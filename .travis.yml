@@ -44,6 +44,8 @@ install:
     - mkdir -p $PIP_WHEEL_DIR
     - pip wheel -r tests/requirements.txt codecov
     - pip install codecov tox
+    - pip --version
+    - pip list 
 script:
   - tox
 after_success: codecov
