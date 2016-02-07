@@ -39,14 +39,10 @@ cache:
   directories:
     - $HOME/.wheels
 install:
-    - pip --version
-    - pip list 
     - mkdir -p $PIP_WHEEL_DIR
     - pip install virtualenv==13.1.2
     - pip wheel -r tests/requirements.txt codecov
     - pip install codecov tox
-    - pip --version
-    - pip list 
 script:
   - tox
 after_success: codecov
