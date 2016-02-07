@@ -39,6 +39,7 @@ cache:
   directories:
     - $HOME/.wheels
 install:
+    - pip --version 
     - mkdir -p $PIP_WHEEL_DIR
     - pip wheel -r tests/requirements.txt codecov
     - pip install codecov tox
