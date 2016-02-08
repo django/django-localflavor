@@ -23,6 +23,7 @@ Authors
 * Florian Apolloner
 * Gary Wilson Jr
 * Gerardo Orozco
+* Ghassen Telmoudi
 * Grzes Furga
 * Honza Král
 * Horst Gutmann
