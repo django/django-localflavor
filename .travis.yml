@@ -40,6 +40,7 @@ cache:
     - $HOME/.wheels
 install:
     - mkdir -p $PIP_WHEEL_DIR
+    - pip install virtualenv==13.1.2
     - pip wheel -r tests/requirements.txt codecov
     # virtualenv>=14.0.0 has dropped Python 3.2 support
     - pip install "virtualenv<14.0.0" codecov tox
