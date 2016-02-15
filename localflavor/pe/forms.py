@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import RegexField, CharField, Select
+from django.forms.fields import CharField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .pe_region import REGION_CHOICES
@@ -49,7 +49,7 @@ class PEDNIField(CharField):
         return value
 
 
-class PERUCField(RegexField):
+class PERUCField(CharField):
     """
     This field validates a RUC (Registro Unico de Contribuyentes). A RUC is of
     the form XXXXXXXXXXX.
