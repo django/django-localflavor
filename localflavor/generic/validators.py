@@ -16,7 +16,10 @@ from . import checksums
 # The official IBAN Registry document is the best source for up-to-date information about IBAN formats and which
 # countries are in IBAN.
 #
-# http://www.swift.com/dsp/resources/documents/IBAN_Registry.pdf
+# https://www.swift.com/standards/data-standards/iban
+#
+# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 64 of the IBAN Registry document which was published
+# in March 2016.
 #
 # Other Resources:
 #
@@ -65,6 +68,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
                             'KZ': 20,  # Kazakhstan
                             'KW': 30,  # Kuwait
                             'LB': 28,  # Lebanon
+                            'LC': 32,  # Saint Lucia
                             'LI': 21,  # Liechtenstein
                             'LT': 20,  # Lithuania
                             'LU': 20,  # Luxembourg
@@ -86,13 +90,16 @@ IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
                             'RO': 24,  # Romania
                             'RS': 22,  # Serbia
                             'SA': 24,  # Saudi Arabia
+                            'SC': 31,  # Seychelles
                             'SE': 24,  # Sweden
                             'SI': 19,  # Slovenia
                             'SK': 24,  # Slovakia
                             'SM': 27,  # San Marino
+                            'ST': 25,  # Sao Tome And Principe
                             'TL': 23,  # Timor-Leste
                             'TN': 24,  # Tunisia
                             'TR': 26,  # Turkey
+                            'UA': 29,  # Ukraine
                             'VG': 24,  # British Virgin Islands
                             'XK': 20}  # Republic of Kosovo (user-assigned country code)
 
@@ -117,7 +124,6 @@ NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
                               'MG': 27,  # Madagascar
                               'ML': 28,  # Mali
                               'MZ': 25,  # Mozambique
-                              'UA': 29,  # Ukraine
                               'SN': 28}  # Senegal
 
 

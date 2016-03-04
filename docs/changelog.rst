@@ -22,6 +22,7 @@ Modifications to existing flavors:
   (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
 - Fix check for promotional social security numbers in USSocialSecurityNumberField
   (`gh-157 <https://github.com/django/django-localflavor/pull/157>`_).
+- Updated IBANField to support the latest additions to the IBAN Registry (version 64 / March 2016).
 
 Other changes:
 
