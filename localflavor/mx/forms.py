@@ -109,8 +109,8 @@ class MXRFCField(RegexField):
         'invalid_checksum': _('Invalid checksum for RFC.'),
     }
 
-    def __init__(self, min_length=9, max_length=13, *args, **kwargs):
-        rfc_re = re.compile(r'^([A-Z&Ññ]{3}|[A-Z][AEIOU][A-Z]{2})%s([A-Z0-9]{2}[0-9A])?$' % DATE_RE,
+    def __init__(self, min_length=12, max_length=13, *args, **kwargs):
+        rfc_re = re.compile(r'^([A-Z&Ññ]{3}|[A-Z][AEIOU][A-Z]{2})%s[A-Z0-9]{2}[0-9A]$' % DATE_RE,
                             re.IGNORECASE)
         super(MXRFCField, self).__init__(rfc_re, min_length=min_length,
                                          max_length=max_length, *args, **kwargs)

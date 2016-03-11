@@ -37,7 +37,7 @@ class MXLocalFlavorTests(TestCase):
         })
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors['state'], ['Select a valid choice. Invalid state is not one of the available choices.'])
-        self.assertEqual(form.errors['rfc'], ['Enter a valid RFC.'])
+        self.assertEqual(form.errors['rfc'], ['Ensure this value has at least 12 characters (it has 11).', 'Enter a valid RFC.'])
         self.assertEqual(form.errors['curp'], ['Ensure this value has at least 18 characters (it has 12).', 'Enter a valid CURP.'])
         self.assertEqual(form.errors['zip_code'], ['Enter a valid zip code in the format XXXXX.'])
         self.assertEqual(form.errors['ssn'], ['Enter a valid Social Security Number.'])
@@ -139,6 +139,8 @@ class MXLocalFlavorTests(TestCase):
     def test_MXRFCField(self):
         error_format = ['Enter a valid RFC.']
         error_checksum = ['Invalid checksum for RFC.']
+        error_too_short = ['Ensure this value has at least 12 characters (it has 9).']
+        error_too_long = ['Ensure this value has at most 13 characters (it has 14).']
         valid = {
             'MoFN641205eX5': 'MOFN641205EX5',
             'ICa060120873': 'ICA060120873',
@@ -152,6 +154,9 @@ class MXLocalFlavorTests(TestCase):
             'MED0000000XA': error_format,
             '0000000000XA': error_format,
             'AAA000000AA6': error_format,
+            # Length
+            'GOH831115': error_too_short + error_format,
+            'MED0000000XAAA': error_too_long + error_format,
             # Dates
             'XXX880002XXX': error_format,
             'XXX880200XXX': error_format,
