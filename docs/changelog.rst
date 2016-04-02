@@ -10,6 +10,8 @@ New flavors:
   (`gh-191 <https://github.com/django/django-localflavor/pull/191>`_)
 - Added local flavor for Tunisia
   (`gh-141 <https://github.com/django/django-localflavor/pull/141>`_)
+- Added local flavor for Hungary
+  (`gh-213 <https://github.com/django/django-localflavor/pull/213>`_)
 
 New fields for existing flavors:
 

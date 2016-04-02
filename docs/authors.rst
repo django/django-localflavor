@@ -40,6 +40,7 @@ Authors
 * Julien Phalip
 * Justin Bronn
 * Karen Tracey
+* László Ratskó
 * Luke Benstead
 * Malcolm Tredinnick
 * Marti Raudsepp
