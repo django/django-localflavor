@@ -4,6 +4,23 @@ Changelog
 1.3   (unreleased)
 ------------------
 
+
+Deprecation Policy:
+
+- A formal deprecation policy has been introduced to make it easier for you to update to the latest version of
+  `django-localflavor`, and allows us to safely remove outdated functionality in a timely manner.
+
+  Features in localflavour that are deprecated raise a DeprecationWarning for two subsequent releases before being
+  removed. For example:
+
+    * Version 1.3 introduces some API changes that are detailed in the release notes. All changes will remain fully
+      compatible for *two* releases in the 6 month cycle, totalling one year. Usages of the deprecated APIs/modules
+      will throw a `DeprecationWarning` during this time, the message of which will explain what version the functionality
+      is being removed in.
+
+    * Version 1.5 will remove the deprecated portions of the API.
+
+
 New flavors:
 
 - Added local flavor for Bulgaria

@@ -57,6 +57,7 @@ Authors
 * Stefan Kjartansson
 * Thiago Avelino
 * Tino de Bruijn
+* Tom Forbes
 * Trey Hunner
 * Tyler Ball
 * Venelin Stoykov

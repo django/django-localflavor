@@ -236,8 +236,8 @@ if a government body makes a change to add, alter, or remove a province
 (or state, or county), that change will be reflected in localflavor in the
 next release.
 
-When a backwards-incompatible change is made (for example, the removal
-or renaming of a province) the localflavor in question will raise a
+When a backwards-incompatible change is made to a specific locale (for example,
+the removal or renaming of a province) the localflavor in question will raise a
 warning when that localflavor is imported. This provides a run-time
 indication that something may require attention.
 
@@ -252,6 +252,14 @@ localflavor you would use the following code::
                             category=RuntimeWarning,
                             module='localflavor.id')
     from localflavor.id import forms as id_forms
+
+Deprecation Policy
+------------------
+
+When non-internal parts of the project are deprecated a `DeprecationWarning` will be thrown upon use for
+the next two subsequent releases, after which they will be removed. The warning will explain how to safely update your
+code, and which version the functionality will be removed in.
+
 
 Indices and tables
 ==================
