@@ -62,6 +62,7 @@ Authors
 * Trey Hunner
 * Tyler Ball
 * Venelin Stoykov
+* Vladimir Nani
 * baffolobill
 * d.merc
 * luyikei

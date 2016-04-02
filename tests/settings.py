@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'tests.test_mx',
     'tests.test_us',
     'tests.test_pk',
+    'tests.test_generic',
 ]
 
 SECRET_KEY = 'spam-spam-spam-spam'

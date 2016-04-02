@@ -38,6 +38,8 @@ class IBANField(models.CharField):
     def __init__(self, use_nordea_extensions=False, include_countries=None, *args, **kwargs):
         kwargs.setdefault('max_length', 34)
         super(IBANField, self).__init__(*args, **kwargs)
+        self.use_nordea_extensions = use_nordea_extensions
+        self.include_countries = include_countries
         self.validators.append(IBANValidator(use_nordea_extensions, include_countries))
 
     def to_python(self, value):
@@ -47,7 +49,11 @@ class IBANField(models.CharField):
         return value
 
     def formfield(self, **kwargs):
-        defaults = {'form_class': IBANFormField}
+        defaults = {
+            'use_nordea_extensions': self.use_nordea_extensions,
+            'include_countries': self.include_countries,
+            'form_class': IBANFormField,
+        }
         defaults.update(kwargs)
         return super(IBANField, self).formfield(**defaults)
 

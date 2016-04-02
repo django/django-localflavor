@@ -9,6 +9,7 @@ from localflavor.generic.countries.sepa import IBAN_SEPA_COUNTRIES
 from localflavor.generic.models import BICField, IBANField
 from localflavor.generic.validators import BICValidator, IBANValidator, EANValidator
 from localflavor.generic.forms import DateField, DateTimeField, SplitDateTimeField, BICFormField, IBANFormField
+from .forms import UseNordeaExtensionsForm, UseIncludedCountriesForm
 
 
 class DateTimeFieldTestCase(SimpleTestCase):
@@ -193,6 +194,15 @@ class IBANTests(TestCase):
         iban_validator = IBANValidator(use_nordea_extensions=True)
         # Run the validator to ensure there are no ValidationErrors raised.
         iban_validator('Eg1100006001880800100014553')
+
+    def test_use_nordea_extensions_formfield(self):
+        form = UseNordeaExtensionsForm({'iban': 'EG1100006001880800100014553'})
+        self.assertFalse(form.errors)
+
+    def test_include_countries_formfield(self):
+        valid_not_included = 'CH9300762011623852957'
+        form = UseIncludedCountriesForm({'iban': valid_not_included})
+        self.assertRaises(ValidationError, form.fields['iban'].run_validators, valid_not_included)
 
     def test_form_field_formatting(self):
         iban_form_field = IBANFormField()
