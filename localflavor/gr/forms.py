@@ -8,6 +8,7 @@ from django.forms import RegexField, Field, ValidationError
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 
 NUMERIC_RE = re.compile('^\d+$')
 
@@ -64,7 +65,7 @@ class GRTaxNumberCodeField(Field):
         return val
 
 
-class GRPhoneNumberField(Field):
+class GRPhoneNumberField(DeprecatedPhoneNumber, Field):
     """
     Greek general phone field - 10 digits (can also start with +30
     which is the country-code foor greece)
@@ -89,7 +90,7 @@ class GRPhoneNumberField(Field):
         raise ValidationError(self.error_messages['invalid'])
 
 
-class GRMobilePhoneNumberField(Field):
+class GRMobilePhoneNumberField(DeprecatedPhoneNumber, Field):
     """
     Greek mobile phone field - 10 digits starting with 69
     (could also start with +30 which is the country-code foor greece)

@@ -13,6 +13,7 @@ from django.forms.fields import Field, Select
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import force_text
 
+from localflavor import DeprecatedPhoneNumber
 
 postcode_re = re.compile(r'^[1-9]\d{4}$')
 phone_re = re.compile(r'^(\+62|0)[2-9]\d{7,10}$')
@@ -62,7 +63,7 @@ class IDProvinceSelect(Select):
         super(IDProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class IDPhoneNumberField(Field):
+class IDPhoneNumberField(DeprecatedPhoneNumber, Field):
     """
     An Indonesian telephone number field.
 

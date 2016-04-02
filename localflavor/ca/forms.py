@@ -11,6 +11,8 @@ from django.forms import ValidationError
 from django.forms.fields import Field, CharField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor import DeprecatedPhoneNumber
 from localflavor.generic.checksums import luhn
 
 
@@ -45,7 +47,7 @@ class CAPostalCodeField(CharField):
         return "%s %s" % (m.group(1), m.group(2))
 
 
-class CAPhoneNumberField(Field):
+class CAPhoneNumberField(DeprecatedPhoneNumber, Field):
     """Canadian phone number form field."""
     default_error_messages = {
         'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),

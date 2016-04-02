@@ -8,6 +8,8 @@ from django.core.exceptions import ValidationError
 from django.core.validators import EMPTY_VALUES
 from django.forms.fields import RegexField, Field
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor import DeprecatedPhoneNumber
 from localflavor.generic.checksums import luhn
 
 id_number_re = re.compile(r'^(?P<number>\d{1,8})-?(?P<check>\d)$')
@@ -69,7 +71,7 @@ class ILIDNumberField(Field):
         return value
 
 
-class ILMobilePhoneNumberField(RegexField):
+class ILMobilePhoneNumberField(DeprecatedPhoneNumber, RegexField):
     """
     A form field that validates its input as an Israeli Mobile phone number.
     """

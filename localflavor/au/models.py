@@ -1,6 +1,7 @@
 from django.db.models.fields import CharField
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 from . import forms
 from .au_states import STATE_CHOICES
 
@@ -37,7 +38,7 @@ class AUPostCodeField(CharField):
         return super(AUPostCodeField, self).formfield(**defaults)
 
 
-class AUPhoneNumberField(CharField):
+class AUPhoneNumberField(DeprecatedPhoneNumber, CharField):
     """
     A model field that checks that the value is a valid Australian phone
     number (ten digits).

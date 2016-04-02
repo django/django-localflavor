@@ -13,6 +13,7 @@ from django.forms.fields import Field, Select, RegexField
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 from .hr_choices import (HR_LICENSE_PLATE_PREFIX_CHOICES, HR_COUNTY_CHOICES,
                          HR_PHONE_NUMBER_PREFIX_CHOICES)
 from localflavor.generic.checksums import luhn
@@ -205,7 +206,7 @@ class HRPostalCodeField(Field):
         return '%s' % value
 
 
-class HRPhoneNumberField(Field):
+class HRPhoneNumberField(DeprecatedPhoneNumber, Field):
     """
     Phone number of Croatia field.
     Format: Complete country code or leading zero, area code prefix, 6 or 7

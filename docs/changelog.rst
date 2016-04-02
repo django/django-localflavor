@@ -4,6 +4,12 @@ Changelog
 1.3   (unreleased)
 ------------------
 
+Deprecations:
+
+- Deprecated all phone number model and form fields in favor of the much more extensive
+  (django-phonenumber-field `https://github.com/stefanfoulis/django-phonenumber-field/`). Support for these classes
+  will be dropped in localflavor 1.5.
+
 New flavors:
 
 - Added local flavor for Bulgaria

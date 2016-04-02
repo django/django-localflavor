@@ -8,6 +8,7 @@ from __future__ import unicode_literals
 import six
 from django import forms
 
+from localflavor import DeprecatedPhoneNumber
 from .nl_provinces import PROVINCE_CHOICES
 from .validators import (NLPhoneNumberFieldValidator,
                          NLSoFiNumberFieldValidator, NLZipCodeFieldValidator)
@@ -38,7 +39,7 @@ class NLProvinceSelect(forms.Select):
         super(NLProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class NLPhoneNumberField(forms.CharField):
+class NLPhoneNumberField(DeprecatedPhoneNumber, forms.CharField):
     """
     A Dutch telephone number field.
     """

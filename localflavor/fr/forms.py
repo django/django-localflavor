@@ -11,6 +11,8 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor import DeprecatedPhoneNumber
 from localflavor.generic.checksums import luhn
 
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
@@ -38,7 +40,7 @@ class FRZipCodeField(RegexField):
         super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
 
-class FRPhoneNumberField(CharField):
+class FRPhoneNumberField(DeprecatedPhoneNumber, CharField):
     """
     Validate local French phone number (not international ones)
     The correct format is '0X XX XX XX XX'.
