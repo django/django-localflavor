@@ -6,6 +6,7 @@ Spanish-specific Form helpers
 from __future__ import unicode_literals
 
 import re
+import six
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -90,7 +91,7 @@ class ESIdentityCardNumberField(RegexField):
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
         self.cif_types = 'ABCDEFGHJKLMNPQRSVW'
-        self.nie_types = 'XTY'
+        self.nie_types = 'XYZ'
         self.id_card_pattern = r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$'
         id_card_re = re.compile(self.id_card_pattern %
                                 (self.cif_types + self.nie_types,
@@ -123,7 +124,7 @@ class ESIdentityCardNumberField(RegexField):
                 raise ValidationError(self.error_messages['invalid_nif'])
         elif letter1 in self.nie_types and letter2:
             # NIE
-            if letter2 == self.nif_get_checksum(number):
+            if letter2 == self.nif_get_checksum(six.text_type(self.nie_types.index(letter1)) + number):
                 return value
             else:
                 raise ValidationError(self.error_messages['invalid_nie'])

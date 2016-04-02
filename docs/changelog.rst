@@ -33,6 +33,9 @@ Modifications to existing flavors:
   (`gh-216 <https://github.com/django/django-localflavor/pull/216>`_).
 - Added deconstructor methods to validators.
   (`gh-220 <https://github.com/django/django-localflavor/pull/220>`_).
+- Fix bug in ESIdentityCardNumberField where some valid values for NIE numbers were not
+  validating.
+  (`gh-217 <https://github.com/django/django-localflavor/pull/217>`_)
 
 Other changes:
 
