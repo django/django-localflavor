@@ -35,6 +35,7 @@ class DELocalFlavorTests(SimpleTestCase):
             '99423': '99423',
         }
         invalid = {
+            '00000': error_format,
             ' 99423': error_format,
         }
         self.assertFieldOutput(DEZipCodeField, valid, invalid)

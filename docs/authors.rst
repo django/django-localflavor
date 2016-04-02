@@ -18,6 +18,7 @@ Authors
 * Bruno M. Custódio
 * Claude Paroz
 * Daniel Roschka
+* Daniela Ponader
 * Douglas Miranda
 * Erik Romijn
 * Flavio Curella

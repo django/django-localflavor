@@ -28,11 +28,8 @@ class DEZipCodeField(RegexField):
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(DEZipCodeField, self).__init__(r'^\d{5}$',
-                                             max_length,
-                                             min_length,
-                                             *args,
-                                             **kwargs)
+        super(DEZipCodeField, self).__init__(r'^([0]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{3}$',
+                                             max_length, min_length, *args, **kwargs)
 
 
 class DEStateSelect(Select):
