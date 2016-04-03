@@ -17,6 +17,7 @@ Authors
 * Ben Konrath
 * Bruno M. Custódio
 * Claude Paroz
+* Daniel Ampuero
 * Daniel Roschka
 * Douglas Miranda
 * Erik Romijn
