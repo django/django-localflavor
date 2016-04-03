@@ -5,6 +5,7 @@ import re
 
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
+from django.utils.deconstruct import deconstructible
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
@@ -58,12 +59,17 @@ class NLSoFiNumberFieldValidator(RegexValidator):
             raise ValidationError(self.error_message)
 
 
+@deconstructible
 class NLPhoneNumberFieldValidator(object):
     """
     Validation for Dutch phone numbers.
 
     .. versionadded:: 1.3
     """
+
+    def __eq__(self, other):
+        # The is no outside modification of properties so this should always be true by default.
+        return True
 
     def __call__(self, value):
         phone_nr = re.sub('[\-\s\(\)]', '', force_text(value))

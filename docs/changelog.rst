@@ -31,6 +31,8 @@ Modifications to existing flavors:
   (`gh-215 <https://github.com/django/django-localflavor/pull/215>`_).
 - Update regex in DEZipCodeField to prohibit invalid postal codes.
   (`gh-216 <https://github.com/django/django-localflavor/pull/216>`_).
+- Added deconstructor methods to validators.
+  (`gh-220 <https://github.com/django/django-localflavor/pull/220>`_).
 
 Other changes:
 
