@@ -19,6 +19,7 @@ Authors
 * Claude Paroz
 * Daniel Ampuero
 * Daniel Roschka
+* Daniela Ponader
 * Douglas Miranda
 * Erik Romijn
 * Flavio Curella
@@ -29,6 +30,7 @@ Authors
 * Grzes Furga
 * Honza Král
 * Horst Gutmann
+* Ivan Fisun
 * Jaap Roes
 * Jacob Kaplan-Moss
 * Jan Pieter Waagmeester
@@ -42,6 +44,7 @@ Authors
 * Julien Phalip
 * Justin Bronn
 * Karen Tracey
+* László Ratskó
 * Luke Benstead
 * Malcolm Tredinnick
 * Marti Raudsepp
@@ -62,6 +65,7 @@ Authors
 * Trey Hunner
 * Tyler Ball
 * Venelin Stoykov
+* Vladimir Nani
 * baffolobill
 * d.merc
 * luyikei

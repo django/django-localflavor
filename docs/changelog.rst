@@ -10,6 +10,8 @@ New flavors:
   (`gh-191 <https://github.com/django/django-localflavor/pull/191>`_)
 - Added local flavor for Tunisia
   (`gh-141 <https://github.com/django/django-localflavor/pull/141>`_)
+- Added local flavor for Hungary
+  (`gh-213 <https://github.com/django/django-localflavor/pull/213>`_)
 
 New fields for existing flavors:
 
@@ -28,6 +30,12 @@ Modifications to existing flavors:
 - Fix bug in ESIdentityCardNumberField where some valid values for NIE numbers were not
   validating.
   (`gh-204 <https://github.com/django/django-localflavor/pull/217>`_)
+- Fixed bug with IBANFormField validation.
+  (`gh-215 <https://github.com/django/django-localflavor/pull/215>`_).
+- Update regex in DEZipCodeField to prohibit invalid postal codes.
+  (`gh-216 <https://github.com/django/django-localflavor/pull/216>`_).
+- Added deconstructor methods to validators.
+  (`gh-220 <https://github.com/django/django-localflavor/pull/220>`_).
 
 Other changes:
 

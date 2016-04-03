@@ -7,6 +7,7 @@ import string
 
 from django.core.exceptions import ValidationError, ImproperlyConfigured
 from django.utils.translation import ugettext_lazy as _
+from django.utils.deconstruct import deconstructible
 
 from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 from . import checksums
@@ -127,20 +128,27 @@ NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
                               'SN': 28}  # Senegal
 
 
+@deconstructible
 class IBANValidator(object):
     """ A validator for International Bank Account Numbers (IBAN - ISO 13616-1:2007). """
 
     def __init__(self, use_nordea_extensions=False, include_countries=None):
+        self.use_nordea_extensions = use_nordea_extensions
+        self.include_countries = include_countries
+
         self.validation_countries = IBAN_COUNTRY_CODE_LENGTH.copy()
-        if use_nordea_extensions:
+        if self.use_nordea_extensions:
             self.validation_countries.update(NORDEA_COUNTRY_CODE_LENGTH)
 
-        self.include_countries = include_countries
         if self.include_countries:
-            for country_code in include_countries:
+            for country_code in self.include_countries:
                 if country_code not in self.validation_countries:
                     msg = 'Explicitly requested country code %s is not part of the configured IBAN validation set.' % country_code
                     raise ImproperlyConfigured(msg)
+
+    def __eq__(self, other):
+        return (self.use_nordea_extensions == other.use_nordea_extensions and
+                self.include_countries == other.include_countries)
 
     @staticmethod
     def iban_checksum(value):
@@ -191,6 +199,7 @@ class IBANValidator(object):
             raise ValidationError(_('Not a valid IBAN.'))
 
 
+@deconstructible
 class BICValidator(object):
     """
     A validator for SWIFT Business Identifier Codes (ISO 9362:2009). Validation is based on the BIC structure found on
@@ -198,6 +207,10 @@ class BICValidator(object):
 
     https://en.wikipedia.org/wiki/ISO_9362#Structure
     """
+
+    def __eq__(self, other):
+        # The is no outside modification of properties so this should always be true by default.
+        return True
 
     def __call__(self, value):
         if value is None:
@@ -222,6 +235,7 @@ class BICValidator(object):
             raise ValidationError(_('%s is not a valid country code.') % country_code)
 
 
+@deconstructible
 class EANValidator(object):
     """
     A generic validator for EAN like codes with the last digit being the checksum.
@@ -234,6 +248,10 @@ class EANValidator(object):
         if message is not None:
             self.message = message
         self.strip_nondigits = strip_nondigits
+
+    def __eq__(self, other):
+        return ((not hasattr(self, 'message') or self.message == other.message) and
+                self.strip_nondigits == other.strip_nondigits)
 
     def __call__(self, value):
         if value is None:

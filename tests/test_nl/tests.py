@@ -62,6 +62,15 @@ class NLLocalFlavorValidatorTests(SimpleTestCase):
         ]
         self.assert_validator(validators.NLPhoneNumberFieldValidator(), valid, invalid)
 
+    def test_NLPhoneNumberValidator_deconstruct(self):
+        # Deconstruct method is required for django 1.7+ compatibility.
+        nlphone1 = validators.NLPhoneNumberFieldValidator()
+        nlphone2 = validators.NLPhoneNumberFieldValidator()
+        self.assertEqual(nlphone1, nlphone2, msg="NLPhoneNumberFieldValidator are not equal.")
+
+        # Call to the deconstruct method to see if it exists.
+        nlphone1.deconstruct()
+
     def test_NLBankAccountNumberFieldValidator(self):
         valid = [
             '0417164300',
