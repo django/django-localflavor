@@ -1,10 +1,10 @@
 from __future__ import unicode_literals
 
+import django
 from django.test import TestCase
 
-from localflavor.us.forms import (USZipCodeField, USPhoneNumberField,
-                                  USStateField, USStateSelect,
-                                  USSocialSecurityNumberField)
+from localflavor.us import forms
+from localflavor.us import models
 
 from .forms import USPlaceForm
 
@@ -187,7 +187,7 @@ class USLocalFlavorTests(TestCase):
         self.assertHTMLEqual(str(self.form['postal_code']), usps_select_html)
 
     def test_USStateSelect(self):
-        f = USStateSelect()
+        f = forms.USStateSelect()
         out = '''<select name="state">
 <option value="AL">Alabama</option>
 <option value="AK">Alaska</option>
@@ -265,7 +265,7 @@ class USLocalFlavorTests(TestCase):
             '6060-1234': error_format,
             '60606-': error_format,
         }
-        self.assertFieldOutput(USZipCodeField, valid, invalid)
+        self.assertFieldOutput(forms.USZipCodeField, valid, invalid)
 
     def test_USZipCodeField_formfield(self):
         """Test that the full US ZIP code field is really the full list."""
@@ -288,7 +288,7 @@ class USLocalFlavorTests(TestCase):
             '555-1212': error_format,
             '312-55-1212': error_format,
         }
-        self.assertFieldOutput(USPhoneNumberField, valid, invalid)
+        self.assertFieldOutput(forms.USPhoneNumberField, valid, invalid)
 
     def test_USStateField(self):
         error_invalid = ['Enter a U.S. state or territory.']
@@ -301,7 +301,7 @@ class USLocalFlavorTests(TestCase):
         invalid = {
             60606: error_invalid,
         }
-        self.assertFieldOutput(USStateField, valid, invalid)
+        self.assertFieldOutput(forms.USStateField, valid, invalid)
 
     def test_USSocialSecurityNumberField(self):
         error_invalid = ['Enter a valid U.S. Social Security number in XXX-XX-XXXX format.']
@@ -318,4 +318,20 @@ class USLocalFlavorTests(TestCase):
             '999-98-7652': error_invalid,
             '999987652': error_invalid,
         }
-        self.assertFieldOutput(USSocialSecurityNumberField, valid, invalid)
+        self.assertFieldOutput(forms.USSocialSecurityNumberField, valid, invalid)
+
+    def test_deconstruct_methods(self):
+        """Test the deconstruct method that was added in Django 1.7"""
+        if django.VERSION > (1, 7):
+            classes = (models.USStateField, models.USPostalCodeField,
+                       models.USZipCodeField, models.PhoneNumberField,
+                       models.USSocialSecurityNumberField)
+            for cls in classes:
+                test_instance = cls()
+                name, path, args, kwargs = test_instance.deconstruct()
+                new_instance = cls(*args, **kwargs)
+                for attr in ('choices', 'max_length'):
+                    self.assertEqual(
+                        getattr(test_instance, attr),
+                        getattr(new_instance, attr),
+                    )
