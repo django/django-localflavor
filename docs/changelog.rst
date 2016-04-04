@@ -27,6 +27,9 @@ Modifications to existing flavors:
 - Updated IBANField to support the latest additions to the IBAN Registry (version 64 / March 2016).
 - Fix bug with MXRFCField where some incorrect values would validate correctly.
   (`gh-204 <https://github.com/django/django-localflavor/issues/204>`_).
+- Fix bug in ESIdentityCardNumberField where some valid values for NIE numbers were not
+  validating.
+  (`gh-204 <https://github.com/django/django-localflavor/pull/217>`_)
 - Fixed bug with IBANFormField validation.
   (`gh-215 <https://github.com/django/django-localflavor/pull/215>`_).
 - Update regex in DEZipCodeField to prohibit invalid postal codes.
