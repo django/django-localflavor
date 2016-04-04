@@ -33,6 +33,8 @@ Modifications to existing flavors:
   (`gh-216 <https://github.com/django/django-localflavor/pull/216>`_).
 - Added deconstructor methods to validators.
   (`gh-220 <https://github.com/django/django-localflavor/pull/220>`_).
+- Fixed Slovenian tax number validation when control code equals 11
+  (`gh-206 <https://github.com/django/django-localflavor/issues/206>`_).
 
 Other changes:
 
