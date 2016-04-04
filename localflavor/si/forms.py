@@ -108,7 +108,7 @@ class SITaxNumberField(CharField):
         for a, b in zip(int_values, range(8, 1, -1)):
             s += a * b
         chk = 11 - (s % 11)
-        if chk == 10:
+        if chk == 10 or chk == 11:
             chk = 0
 
         if int_values[-1] != chk:
