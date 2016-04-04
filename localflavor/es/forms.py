@@ -96,11 +96,12 @@ class ESIdentityCardNumberField(RegexField):
                                 (self.cif_types + self.nie_types,
                                  self.nif_control + self.cif_control),
                                 re.IGNORECASE)
-        error_message = self.default_error_messages['invalid%s' %
-                                                    (self.only_nif and '_only_nif' or '')]
-        super(ESIdentityCardNumberField, self).__init__(
-            id_card_re, max_length, min_length,
-            error_message=error_message, *args, **kwargs)
+
+        error_messages = kwargs.get('error_messages') or {}
+        error_messages['invalid'] = self.default_error_messages['invalid%s' % (self.only_nif and '_only_nif' or '')]
+        kwargs['error_messages'] = error_messages
+
+        super(ESIdentityCardNumberField, self).__init__(id_card_re, max_length, min_length, *args, **kwargs)
 
     def clean(self, value):
         super(ESIdentityCardNumberField, self).clean(value)
