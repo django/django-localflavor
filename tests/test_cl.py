@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 
 from localflavor.cl.forms import CLRutField, CLRegionSelect
+from localflavor.cl.forms import CLCommuneSelect
+from localflavor.cl.cl_communes import COMMUNE_CHOICES
 
 
 class CLLocalFlavorTests(SimpleTestCase):
@@ -26,6 +28,23 @@ class CLLocalFlavorTests(SimpleTestCase):
 <option value="XV">Regi\xf3n de Arica-Parinacota</option>
 </select>'''
         self.assertHTMLEqual(f.render('foo', 'bar'), out)
+
+    def test_CLCommuneSelect(self):
+        f = CLCommuneSelect()
+
+        # generate the list html options
+        options = []
+        for value, display_name in COMMUNE_CHOICES:
+            # handle the Apostrophe on commune named O'Higgins
+            display_name = display_name.replace("'", '&#39;')
+
+            options.append('<option value="{0}">{1}</option>'.format(value, display_name))
+
+        # generate the expected html of the select
+        expected_select_html = '<select name="foo">{0}</select>'.format(''.join(options))
+
+        self.assertHTMLEqual.__self__.maxDiff = None
+        self.assertHTMLEqual(f.render('foo', 'bar'), expected_select_html)
 
     def test_CLRutField(self):
         error_invalid = ['The Chilean RUT is not valid.']
