@@ -132,27 +132,18 @@ REG_SELECT_OUTPUT = '''
         <option value="02">02 - Martinique</option>
         <option value="03">03 - Guyane</option>
         <option value="04">04 - La Réunion</option>
-        <option value="05">05 - Mayotte</option>
+        <option value="06">06 - Mayotte</option>
         <option value="11">11 - Île-de-France</option>
-        <option value="21">21 - Champagne-Ardenne</option>
-        <option value="22">22 - Picardie</option>
-        <option value="23">23 - Haute-Normandie</option>
-        <option value="24">24 - Centre</option>
-        <option value="25" selected="selected">25 - Basse-Normandie</option>
-        <option value="26">26 - Bourgogne</option>
-        <option value="31">31 - Nord-Pas-de-Calais</option>
-        <option value="41">41 - Lorraine</option>
-        <option value="42">42 - Alsace</option>
-        <option value="43">43 - Franche-Comté</option>
+        <option value="24" selected="selected">24 - Centre-Val de Loire</option>
+        <option value="27">27 - Bourgogne-Franche-Comté</option>
+        <option value="28">28 - Normandie</option>
+        <option value="32">32 - Nord-Pas-de-Calais-Picardie</option>
+        <option value="44">44 - Alsace-Champagne-Ardenne-Lorraine</option>
         <option value="52">52 - Pays de la Loire</option>
         <option value="53">53 - Bretagne</option>
-        <option value="54">54 - Poitou-Charentes</option>
-        <option value="72">72 - Aquitaine</option>
-        <option value="73">73 - Midi-Pyrénées</option>
-        <option value="74">74 - Limousin</option>
-        <option value="82">82 - Rhône-Alpes</option>
-        <option value="83">83 - Auvergne</option>
-        <option value="91">91 - Languedoc-Roussillon</option>
+        <option value="75">75 - Aquitaine-Limousin-Poitou-Charentes</option>
+        <option value="76">76 - Languedoc-Roussillon-Midi-Pyrénées</option>
+        <option value="84">84 - Auvergne-Rhône-Alpes</option>
         <option value="93">93 - Provence-Alpes-Côte d&#39;Azur</option>
         <option value="94">94 - Corse</option>
     </select>
@@ -194,7 +185,7 @@ class FRLocalFlavorTests(SimpleTestCase):
 
     def test_FRRegionfield(self):
         f = FRRegionField()
-        self.assertHTMLEqual(f.widget.render('reg', '25'), REG_SELECT_OUTPUT)
+        self.assertHTMLEqual(f.widget.render('reg', '24'), REG_SELECT_OUTPUT)
 
     def test_FRDepartmentSelect(self):
         f = FRDepartmentSelect()
@@ -202,7 +193,7 @@ class FRLocalFlavorTests(SimpleTestCase):
 
     def test_FRRegionSelect(self):
         f = FRRegionSelect()
-        self.assertHTMLEqual(f.render('reg', '25'), REG_SELECT_OUTPUT)
+        self.assertHTMLEqual(f.render('reg', '24'), REG_SELECT_OUTPUT)
 
     def test_FRNationalIdentificationNumber(self):
         error_format = ['Enter a valid French National Identification number.']
