@@ -50,6 +50,7 @@ Authors
 * Marti Raudsepp
 * Martin Ogden
 * Matias Dinota
+* Mike Lissner
 * Olivier Sels
 * Rael Max
 * Ramiro Morales
