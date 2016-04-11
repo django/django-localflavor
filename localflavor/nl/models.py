@@ -27,6 +27,11 @@ class NLZipCodeField(models.CharField):
         kwargs['max_length'] = 7
         super(NLZipCodeField, self).__init__(*args, **kwargs)
 
+    def deconstruct(self):
+        name, path, args, kwargs = super(NLZipCodeField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
     def to_python(self, value):
         value = super(NLZipCodeField, self).to_python(value)
         if value is not None:
@@ -42,7 +47,7 @@ class NLZipCodeField(models.CharField):
 
 class NLProvinceField(models.CharField):
     """
-    A Dutch Provice field.
+    A Dutch Province field.
 
     .. versionadded:: 1.3
     """
@@ -54,6 +59,12 @@ class NLProvinceField(models.CharField):
             'max_length': 3
         })
         super(NLProvinceField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(NLProvinceField, self).deconstruct()
+        del kwargs['choices']
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
 
 class NLSoFiNumberField(models.CharField):
@@ -71,6 +82,11 @@ class NLSoFiNumberField(models.CharField):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 12)
         super(NLSoFiNumberField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(NLSoFiNumberField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.NLSoFiNumberField}
@@ -94,6 +110,11 @@ class NLPhoneNumberField(models.CharField):
         kwargs.setdefault('max_length', 12)
         super(NLPhoneNumberField, self).__init__(*args, **kwargs)
 
+    def deconstruct(self):
+        name, path, args, kwargs = super(NLPhoneNumberField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.NLPhoneNumberField}
         defaults.update(kwargs)
@@ -113,3 +134,8 @@ class NLBankAccountNumberField(models.CharField):
         super(NLBankAccountNumberField, self).__init__(*args, **kwargs)
         # Ensure that only the NLBankAccountNumberFieldValidator is set.
         self.validators = [NLBankAccountNumberFieldValidator()]
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(NLBankAccountNumberField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs

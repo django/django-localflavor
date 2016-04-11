@@ -1,5 +1,5 @@
 from django.utils.translation import ugettext_lazy as _
-from django.db.models.fields import CharField
+from django.db.models import CharField
 
 from .in_states import STATE_CHOICES
 
@@ -15,3 +15,9 @@ class INStateField(CharField):
         kwargs['choices'] = STATE_CHOICES
         kwargs['max_length'] = 2
         super(INStateField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(INStateField, self).deconstruct()
+        del kwargs['choices']
+        del kwargs['max_length']
+        return name, path, args, kwargs

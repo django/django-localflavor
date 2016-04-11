@@ -1,4 +1,4 @@
-from django.db.models.fields import CharField
+from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
 from . import forms
@@ -18,6 +18,12 @@ class PKStateField(CharField):
         kwargs['max_length'] = 5
         super(PKStateField, self).__init__(*args, **kwargs)
 
+    def deconstruct(self):
+        name, path, args, kwargs = super(PKStateField, self).deconstruct()
+        del kwargs['choices']
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
 
 class PKPostCodeField(CharField):
     """
@@ -30,6 +36,11 @@ class PKPostCodeField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
         super(PKPostCodeField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(PKPostCodeField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.PKPostCodeField}
@@ -47,6 +58,11 @@ class PKPhoneNumberField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 20
         super(PKPhoneNumberField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(PKPhoneNumberField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.PKPhoneNumberField}

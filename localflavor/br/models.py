@@ -14,3 +14,9 @@ class BRStateField(CharField):
         kwargs['choices'] = STATE_CHOICES
         kwargs['max_length'] = 2
         super(BRStateField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(BRStateField, self).deconstruct()
+        del kwargs['choices']
+        del kwargs['max_length']
+        return name, path, args, kwargs

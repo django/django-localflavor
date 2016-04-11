@@ -1,5 +1,5 @@
 from django.utils.translation import ugettext_lazy as _
-from django.db.models.fields import CharField
+from django.db.models import CharField
 
 
 class FRSIRENField(CharField):
@@ -14,6 +14,11 @@ class FRSIRENField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 9
         super(FRSIRENField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(FRSIRENField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         from . import forms
@@ -34,6 +39,11 @@ class FRSIRETField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 14
         super(FRSIRETField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(FRSIRETField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         from . import forms

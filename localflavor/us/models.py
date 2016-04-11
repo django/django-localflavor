@@ -1,5 +1,5 @@
 from django.utils.translation import ugettext_lazy as _
-from django.db.models.fields import CharField
+from django.db.models import CharField
 
 from . import forms
 from .us_states import STATE_CHOICES, USPS_CHOICES
@@ -19,8 +19,8 @@ class USStateField(CharField):
 
     def deconstruct(self):
         name, path, args, kwargs = super(USStateField, self).deconstruct()
-        del kwargs["choices"]
-        del kwargs["max_length"]
+        del kwargs['choices']
+        del kwargs['max_length']
         return name, path, args, kwargs
 
 
@@ -44,8 +44,8 @@ class USPostalCodeField(CharField):
 
     def deconstruct(self):
         name, path, args, kwargs = super(USPostalCodeField, self).deconstruct()
-        del kwargs["choices"]
-        del kwargs["max_length"]
+        del kwargs['choices']
+        del kwargs['max_length']
         return name, path, args, kwargs
 
 
@@ -71,7 +71,7 @@ class USZipCodeField(CharField):
 
     def deconstruct(self):
         name, path, args, kwargs = super(USZipCodeField, self).deconstruct()
-        del kwargs["max_length"]
+        del kwargs['max_length']
         return name, path, args, kwargs
 
     def formfield(self, **kwargs):
@@ -93,7 +93,7 @@ class PhoneNumberField(CharField):
 
     def deconstruct(self):
         name, path, args, kwargs = super(PhoneNumberField, self).deconstruct()
-        del kwargs["max_length"]
+        del kwargs['max_length']
         return name, path, args, kwargs
 
     def formfield(self, **kwargs):
@@ -118,7 +118,7 @@ class USSocialSecurityNumberField(CharField):
 
     def deconstruct(self):
         name, path, args, kwargs = super(USSocialSecurityNumberField, self).deconstruct()
-        del kwargs["max_length"]
+        del kwargs['max_length']
         return name, path, args, kwargs
 
     def formfield(self, **kwargs):

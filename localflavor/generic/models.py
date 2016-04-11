@@ -42,6 +42,13 @@ class IBANField(models.CharField):
         self.include_countries = include_countries
         self.validators.append(IBANValidator(use_nordea_extensions, include_countries))
 
+    def deconstruct(self):
+        name, path, args, kwargs = super(IBANField, self).deconstruct()
+        del kwargs['max_length']
+        args.append(self.use_nordea_extensions)
+        args.append(self.include_countries)
+        return name, path, args, kwargs
+
     def to_python(self, value):
         value = super(IBANField, self).to_python(value)
         if value is not None:
@@ -74,6 +81,11 @@ class BICField(models.CharField):
         kwargs.setdefault('max_length', 11)
         super(BICField, self).__init__(*args, **kwargs)
         self.validators.append(BICValidator())
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(BICField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def to_python(self, value):
         # BIC is always written in upper case.

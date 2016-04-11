@@ -36,6 +36,9 @@ Modifications to existing flavors:
 - Fix bug in ESIdentityCardNumberField where some valid values for NIE numbers were not
   validating.
   (`gh-217 <https://github.com/django/django-localflavor/pull/217>`_)
+- Add deconstruct method to all model fields.
+  (`gh-162 <https://github.com/django/django-localflavor/pull/162>`_)
+  (`gh-224 <https://github.com/django/django-localflavor/pull/224>`_)
 
 Other changes:
 

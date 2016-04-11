@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 from django.test import TestCase
 
 from localflavor.us import forms
-from localflavor.us import models
 
 from .forms import USPlaceForm
 
@@ -318,17 +317,3 @@ class USLocalFlavorTests(TestCase):
             '999987652': error_invalid,
         }
         self.assertFieldOutput(forms.USSocialSecurityNumberField, valid, invalid)
-
-    def test_deconstruct_methods(self):
-        classes = (models.USStateField, models.USPostalCodeField,
-                   models.USZipCodeField, models.PhoneNumberField,
-                   models.USSocialSecurityNumberField)
-        for cls in classes:
-            test_instance = cls()
-            name, path, args, kwargs = test_instance.deconstruct()
-            new_instance = cls(*args, **kwargs)
-            for attr in ('choices', 'max_length'):
-                self.assertEqual(
-                    getattr(test_instance, attr),
-                    getattr(new_instance, attr),
-                )
