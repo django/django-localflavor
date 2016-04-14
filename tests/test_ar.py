@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 
 from localflavor.ar.forms import (ARProvinceSelect, ARPostalCodeField,
-                                  ARDNIField, ARCUITField)
+                                  ARDNIField, ARCUITField, ARCBUField)
 
 
 class ARLocalFlavorTests(SimpleTestCase):
@@ -104,3 +104,30 @@ class ARLocalFlavorTests(SimpleTestCase):
             '11211111110': error_legal_type,
         }
         self.assertFieldOutput(ARCUITField, valid, invalid)
+
+    def test_ARCBUField(self):
+        error_format = ['Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format.']
+        error_length = ['CBU must be exactly 22 digits long.']
+        error_checksum = ['Invalid CBU.']
+        valid = {
+            '2237628810898098715378': '2237628810898098715378',
+            '5433758936130717465023': '5433758936130717465023',
+            '5729195067928761667584': '5729195067928761667584',
+            '9498175528566296510521': '9498175528566296510521',
+            '7362966507842824472644': '7362966507842824472644',
+            '8693513393883886497274': '8693513393883886497274',
+            '1542952861593836535608': '1542952861593836535608',
+            '5833008953419074707467': '5833008953419074707467',
+            '9687027721961737239525': '9687027721961737239525',
+            '8048819274216931992586': '8048819274216931992586'
+        }
+
+        invalid = {
+            'abc123def456-9024-2313': error_format,
+            '142512591859898123123': error_length,
+            '12312452521512526125566': error_length,
+            '1234567891234567891234': error_checksum,
+            '1234562374545894589234': error_checksum,
+            '0987653759257883891234': error_checksum,
+        }
+        self.assertFieldOutput(ARCBUField, valid, invalid)

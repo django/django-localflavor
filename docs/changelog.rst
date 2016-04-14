@@ -15,6 +15,8 @@ New flavors:
 
 New fields for existing flavors:
 
+- Added ARCBUField form field.
+  (`gh-151 <https://github.com/django/django-localflavor/pull/151>`_).
 - Added NLZipCodeField, NLProvinceField, NLSoFiNumberField, NLPhoneNumberField model fields.
   (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
 

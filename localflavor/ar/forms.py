@@ -137,3 +137,64 @@ class ARCUITField(RegexField):
             check_digit = cuit[-1]
             cuit = cuit[:-1]
         return '%s-%s-%s' % (cuit[:2], cuit[2:], check_digit)
+
+
+class ARCBUField(CharField):
+    """
+    This field validates a CBU (Clave Bancaria Uniforme). A CBU is a 22-digits long
+    number. The first 8 digits denote bank and branch number, plus a verifying digit.
+    The remaining 14 digits denote an account number, plus a verifying digit.
+
+    More info:
+    https://es.wikipedia.org/wiki/Clave_Bancaria_Uniforme
+
+    .. versionadded:: 1.3
+    """
+    default_error_messages = {
+        'invalid': _('Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format.'),
+        'max_length': _('CBU must be exactly 22 digits long.'),
+        'min_length': _('CBU must be exactly 22 digits long.'),
+        'checksum': _('Invalid CBU.'),
+    }
+
+    def __init__(self, *args, **kwargs):
+        kwargs['min_length'] = kwargs['max_length'] = 22
+        super(ARCBUField, self).__init__(*args, **kwargs)
+
+    def _valid_block(self, block, ponderator):
+        number = block[:-1]
+        v_digit = int(block[-1])
+
+        block_sum = sum(x * int(y) for x, y in zip(ponderator, number))
+        remainder = block_sum % 10
+
+        # The verification digit and the result of the calculation must be the same.
+        # In the edge case that the remainder is 0, the verification digit must be 0 too.
+        if remainder == 0:
+            return v_digit == remainder
+
+        return v_digit == (10 - remainder)
+
+    def _checksum(self, value):
+        block_1 = value[0:8]
+        block_2 = value[8:22]
+
+        PONDERATOR_1 = (9, 7, 1, 3, 9, 7, 1, 3)
+        PONDERATOR_2 = (3, 9, 7, 1, 3, 9, 7, 1, 3, 9, 7, 1, 3)
+
+        is_valid_1 = self._valid_block(block_1, PONDERATOR_1)
+        is_valid_2 = self._valid_block(block_2, PONDERATOR_2)
+        return is_valid_1 and is_valid_2
+
+    def clean(self, value):
+        """
+        Value must be a 22 digits long number.
+        """
+        value = super(ARCBUField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+        if not value.isdigit():
+            raise ValidationError(self.error_messages['invalid'])
+        if not self._checksum(value):
+            raise ValidationError(self.error_messages['checksum'])
+        return value
