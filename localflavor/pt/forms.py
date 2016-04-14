@@ -9,6 +9,8 @@ Contains PT-specific Django form helpers.
 
 
 from __future__ import unicode_literals
+
+from localflavor import DeprecatedPhoneNumber
 from .pt_regions import REGION_CHOICES
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -72,7 +74,7 @@ class PTCitizenCardNumberField(Field):
             return value if value < 10 else value - 9
 
 
-class PTPhoneNumberField(Field):
+class PTPhoneNumberField(DeprecatedPhoneNumber, Field):
     """
     A field which validates Portuguese phone numbers.
 

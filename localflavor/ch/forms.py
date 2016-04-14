@@ -12,6 +12,7 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 from .ch_states import STATE_CHOICES
 from ..generic import validators
 
@@ -39,7 +40,7 @@ class CHZipCodeField(RegexField):
         super(CHZipCodeField, self).__init__(zip_re, max_length, min_length, *args, **kwargs)
 
 
-class CHPhoneNumberField(Field):
+class CHPhoneNumberField(DeprecatedPhoneNumber, Field):
     """
     Validate local Swiss phone number (not international ones)
     The correct format is '0XX XXX XX XX'.

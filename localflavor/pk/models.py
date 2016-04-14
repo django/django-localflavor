@@ -1,6 +1,7 @@
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 from . import forms
 from .pk_states import STATE_CHOICES
 
@@ -48,7 +49,7 @@ class PKPostCodeField(CharField):
         return super(PKPostCodeField, self).formfield(**defaults)
 
 
-class PKPhoneNumberField(CharField):
+class PKPhoneNumberField(DeprecatedPhoneNumber, CharField):
     """
     A model field that checks that the value is a valid Pakistani phone
     number (nine to eleven digits).

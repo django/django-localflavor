@@ -11,6 +11,7 @@ from django.forms.widgets import Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 from .is_postalcodes import IS_POSTALCODES
 
 
@@ -62,7 +63,7 @@ class ISIdNumberField(RegexField):
         return force_text(value[:6] + '-' + value[6:])
 
 
-class ISPhoneNumberField(RegexField):
+class ISPhoneNumberField(DeprecatedPhoneNumber, RegexField):
     """
     Icelandic phone number. Seven digits with an optional hyphen or space after
     the first three digits.

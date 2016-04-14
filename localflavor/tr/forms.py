@@ -8,6 +8,7 @@ from django.forms.fields import Field, RegexField, Select, CharField
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 from .tr_provinces import PROVINCE_CHOICES
 
 
@@ -39,7 +40,7 @@ class TRPostalCodeField(RegexField):
         return value
 
 
-class TRPhoneNumberField(CharField):
+class TRPhoneNumberField(DeprecatedPhoneNumber, CharField):
     """
     A form field that validates input as a Turkish phone number. The correct
     format is 0xxx xxx xxxx. +90xxx xxx xxxx and inputs without spaces also

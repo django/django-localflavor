@@ -10,6 +10,7 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 from .cn_provinces import CN_PROVINCE_CHOICES
 
 
@@ -180,7 +181,7 @@ class CNIDCardField(CharField):
         return '10X98765432'[checksum_index] == value[-1]
 
 
-class CNPhoneNumberField(RegexField):
+class CNPhoneNumberField(DeprecatedPhoneNumber, RegexField):
     """
     A form field that validates input as a telephone number in mainland China.
     A valid phone number could be like: 010-12345678.

@@ -13,6 +13,7 @@ from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 from .es_provinces import PROVINCE_CHOICES
 from .es_regions import REGION_CHOICES
 
@@ -34,7 +35,7 @@ class ESPostalCodeField(RegexField):
             max_length, min_length, *args, **kwargs)
 
 
-class ESPhoneNumberField(RegexField):
+class ESPhoneNumberField(DeprecatedPhoneNumber, RegexField):
     """
     A form field that validates its input as a Spanish phone number.
     Information numbers are ommited.

@@ -12,6 +12,7 @@ from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor import DeprecatedPhoneNumber
 from .au_states import STATE_CHOICES
 
 PHONE_DIGITS_RE = re.compile(r'^(\d{10})$')
@@ -32,7 +33,7 @@ class AUPostCodeField(RegexField):
                                               max_length, min_length, *args, **kwargs)
 
 
-class AUPhoneNumberField(CharField):
+class AUPhoneNumberField(DeprecatedPhoneNumber, CharField):
     """
     A form field that validates input as an Australian phone number.
 
