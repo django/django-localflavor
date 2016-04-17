@@ -5,9 +5,8 @@ from django.utils.translation import ugettext_lazy as _
 
 from . import forms
 from .nl_provinces import PROVINCE_CHOICES
-from .validators import (NLBankAccountNumberFieldValidator,
-                         NLPhoneNumberFieldValidator,
-                         NLSoFiNumberFieldValidator, NLZipCodeFieldValidator)
+from .validators import (NLBankAccountNumberFieldValidator, NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator,
+                         NLZipCodeFieldValidator)
 
 
 class NLZipCodeField(models.CharField):

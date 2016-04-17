@@ -6,8 +6,12 @@ env:
     - PIP_FIND_LINKS=file://$PIP_WHEEL_DIR
 matrix:
   include:
-    - env: TOXENV=docs
-    - env: TOXENV=prospector
+    - python: 2.7
+      env: TOXENV=docs
+    - python: 2.7
+      env: TOXENV=prospector
+    - python: 3.5
+      env: TOXENV=isort
     - python: 2.7
       env: TOXENV=py27-1.7
     - python: 2.7

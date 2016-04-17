@@ -10,7 +10,6 @@ from django.utils.translation import ugettext_lazy as _
 
 from .lv_choices import MUNICIPALITY_CHOICES
 
-
 zipcode = re.compile(r'^(LV\s?-\s?)?(?P<code>[1-5]\d{3})$', re.IGNORECASE)
 idcode = re.compile(r'^(\d\d)(\d\d)(\d\d)-([0-2])(?:\d{3})(\d)$')
 

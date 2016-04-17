@@ -1,10 +1,11 @@
-from django.utils.translation import ugettext_lazy as _
 from django.db.models import CharField
+from django.utils.translation import ugettext_lazy as _
 
+from .forms import MXCURPField as MXCURPFormField
+from .forms import MXRFCField as MXRFCFormField
+from .forms import MXSocialSecurityNumberField as MXSocialSecurityNumberFormField
+from .forms import MXZipCodeField as MXZipCodeFormField
 from .mx_states import STATE_CHOICES
-from .forms import (MXRFCField as MXRFCFormField,
-                    MXZipCodeField as MXZipCodeFormField, MXCURPField as MXCURPFormField,
-                    MXSocialSecurityNumberField as MXSocialSecurityNumberFormField)
 
 
 class MXStateField(CharField):

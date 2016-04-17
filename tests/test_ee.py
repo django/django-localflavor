@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.ee.forms import (EEZipCodeField, EEPersonalIdentificationCode,
-                                  EECountySelect, EEBusinessRegistryCode)
+from localflavor.ee.forms import EEBusinessRegistryCode, EECountySelect, EEPersonalIdentificationCode, EEZipCodeField
 
 
 class EELocalFlavorTests(SimpleTestCase):

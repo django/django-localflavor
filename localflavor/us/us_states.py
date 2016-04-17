@@ -9,7 +9,6 @@ when explicitly needed.
 """
 from django.utils.translation import ugettext_lazy as _
 
-
 #: The 48 contiguous states, plus the District of Columbia.
 CONTIGUOUS_STATES = (
     ('AL', _('Alabama')),

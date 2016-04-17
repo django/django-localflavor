@@ -2,13 +2,11 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
-from localflavor.fr.forms import (
-    FRZipCodeField, FRPhoneNumberField,
-    FRDepartmentField, FRRegionField,
-    FRRegionSelect, FRDepartmentSelect,
-    FRNationalIdentificationNumber,
-    FRSIRENField, FRSIRETField
-)
+
+from localflavor.fr.forms import (FRDepartmentField, FRDepartmentSelect, FRNationalIdentificationNumber,
+                                  FRPhoneNumberField, FRRegionField, FRRegionSelect, FRSIRENField, FRSIRETField,
+                                  FRZipCodeField)
+
 
 DEP_SELECT_OUTPUT = '''
     <select name="dep">

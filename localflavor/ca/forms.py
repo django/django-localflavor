@@ -8,11 +8,11 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, CharField, Select
+from django.forms.fields import CharField, Field, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-from localflavor.generic.checksums import luhn
 
+from localflavor.generic.checksums import luhn
 
 phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 sin_re = re.compile(r"^(\d{3})-(\d{3})-(\d{3})$")

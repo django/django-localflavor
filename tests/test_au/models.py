@@ -1,7 +1,6 @@
 from django.db import models
 
-from localflavor.au.models import (AUStateField, AUPostCodeField,
-                                   AUPhoneNumberField)
+from localflavor.au.models import AUPhoneNumberField, AUPostCodeField, AUStateField
 
 
 class AustralianPlace(models.Model):

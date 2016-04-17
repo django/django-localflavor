@@ -8,14 +8,13 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select, CharField
+from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .it_province import PROVINCE_CHOICES
 from .it_region import REGION_CHOICES, REGION_PROVINCE_CHOICES
-from .util import vat_number_validation, ssn_validation
-
+from .util import ssn_validation, vat_number_validation
 
 phone_digits_re = re.compile(r'^(?:\+?39)?((0\d{1,3})(\d{4,8})|(3\d{2})(\d{6,8}))$')
 

@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 
-from .models import UseNordeaExtensionsModel, UseIncludedCountriesModel
+from .models import UseIncludedCountriesModel, UseNordeaExtensionsModel
 
 
 class UseNordeaExtensionsForm(ModelForm):
@@ -13,4 +13,3 @@ class UseIncludedCountriesForm(ModelForm):
     class Meta:
         model = UseIncludedCountriesModel
         fields = ('iban',)
-

@@ -1,5 +1,5 @@
-from django.utils.translation import ugettext_lazy as _
 from django.db.models.fields import CharField
+from django.utils.translation import ugettext_lazy as _
 
 from .br_states import STATE_CHOICES
 

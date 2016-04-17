@@ -1,5 +1,5 @@
-from django.utils.translation import ugettext_lazy as _
 from django.db.models import CharField
+from django.utils.translation import ugettext_lazy as _
 
 from .ec_provinces import PROVINCE_CHOICES
 

@@ -3,13 +3,14 @@
 Mexican-specific form helpers.
 """
 from __future__ import unicode_literals
+
 import re
 
+from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Select, RegexField
+from django.forms.fields import RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext_lazy as _
-from django.core.validators import EMPTY_VALUES
 
 from .mx_states import STATE_CHOICES
 

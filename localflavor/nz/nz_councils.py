@@ -23,8 +23,8 @@ eg.
 """
 
 from __future__ import unicode_literals
-from django.utils.translation import ugettext_lazy as _
 
+from django.utils.translation import ugettext_lazy as _
 
 #: A list of North Island city and district councils
 NORTH_ISLAND_COUNCIL_CHOICES = (

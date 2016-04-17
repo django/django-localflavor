@@ -1,7 +1,6 @@
 from django import forms
 
-from .validators import IBANValidator, BICValidator, IBAN_COUNTRY_CODE_LENGTH
-
+from .validators import IBAN_COUNTRY_CODE_LENGTH, BICValidator, IBANValidator
 
 DEFAULT_DATE_INPUT_FORMATS = (
     '%Y-%m-%d', '%d/%m/%Y', '%d/%m/%y',  # '2006-10-25', '25/10/2006', '25/10/06'

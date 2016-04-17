@@ -3,8 +3,7 @@ from __future__ import unicode_literals
 
 from django.test import TestCase
 
-from localflavor.mk.forms import (MKIdentityCardNumberField,
-                                  MKMunicipalitySelect, UMCNField)
+from localflavor.mk.forms import MKIdentityCardNumberField, MKMunicipalitySelect, UMCNField
 
 from .forms import MKPersonForm
 

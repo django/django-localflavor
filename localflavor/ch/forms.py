@@ -12,8 +12,8 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from .ch_states import STATE_CHOICES
 from ..generic import validators
+from .ch_states import STATE_CHOICES
 
 zip_re = re.compile(r'^[1-9]\d{3}$')
 id_re = re.compile(

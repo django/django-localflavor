@@ -8,12 +8,11 @@ import datetime
 import re
 
 from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError, Field, RegexField, Select
+from django.forms import Field, RegexField, Select, ValidationError
 from django.utils.translation import ugettext_lazy as _
 
 from ..generic.forms import IBANFormField
 from .ro_counties import COUNTIES_CHOICES
-
 
 phone_digits_re = re.compile(r'^[0-9\-\.\(\)\s]{3,20}$')
 

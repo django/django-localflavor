@@ -10,9 +10,8 @@ import time
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, Select
-from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import force_text
-
+from django.utils.translation import ugettext_lazy as _
 
 postcode_re = re.compile(r'^[1-9]\d{4}$')
 phone_re = re.compile(r'^(\+62|0)[2-9]\d{7,10}$')

@@ -9,14 +9,13 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, Select, RegexField
+from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from .hr_choices import (HR_LICENSE_PLATE_PREFIX_CHOICES, HR_COUNTY_CHOICES,
-                         HR_PHONE_NUMBER_PREFIX_CHOICES)
 from localflavor.generic.checksums import luhn
 
+from .hr_choices import HR_COUNTY_CHOICES, HR_LICENSE_PLATE_PREFIX_CHOICES, HR_PHONE_NUMBER_PREFIX_CHOICES
 
 jmbg_re = re.compile(r'^(?P<dd>\d{2})(?P<mm>\d{2})(?P<yyy>\d{3})' +
                      r'(?P<rr>\d{2})(?P<bbb>\d{3})(?P<k>\d{1})$')

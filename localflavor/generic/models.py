@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from .forms import IBANFormField, BICFormField
-from .validators import IBANValidator, BICValidator
+from .forms import BICFormField, IBANFormField
+from .validators import BICValidator, IBANValidator
 
 
 class IBANField(models.CharField):

@@ -10,7 +10,6 @@ from django.utils.translation import ugettext_lazy as _
 
 from .ee_counties import COUNTY_CHOICES
 
-
 idcode = re.compile(r'^([1-6])(\d\d)(\d\d)(\d\d)(?:\d{3})(\d)$')
 zipcode = re.compile(r'^[1-9]\d{4}$')
 bregcode = re.compile(r'^[1-9]\d{7}$')

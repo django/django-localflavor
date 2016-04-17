@@ -8,7 +8,7 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Select, RegexField, Field
+from django.forms.fields import Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .cz_regions import REGION_CHOICES

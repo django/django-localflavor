@@ -2,15 +2,14 @@
 from __future__ import unicode_literals
 
 import re
-
 import string
 
-from django.core.exceptions import ValidationError, ImproperlyConfigured
-from django.utils.translation import ugettext_lazy as _
+from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.utils.deconstruct import deconstructible
+from django.utils.translation import ugettext_lazy as _
 
-from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 from . import checksums
+from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 
 # Dictionary of ISO country code to IBAN length.
 #

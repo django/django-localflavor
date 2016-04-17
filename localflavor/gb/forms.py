@@ -6,8 +6,8 @@ from __future__ import unicode_literals
 
 import re
 
-from django.forms.fields import CharField, Select
 from django.forms import ValidationError
+from django.forms.fields import CharField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .gb_regions import GB_NATIONS_CHOICES, GB_REGION_CHOICES

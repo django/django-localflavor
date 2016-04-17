@@ -12,7 +12,6 @@ from django.utils.translation import ugettext_lazy as _
 
 from .cn_provinces import CN_PROVINCE_CHOICES
 
-
 __all__ = (
     'CNProvinceSelect',
     'CNPostCodeField',

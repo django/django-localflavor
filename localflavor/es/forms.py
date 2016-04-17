@@ -6,11 +6,11 @@ Spanish-specific Form helpers
 from __future__ import unicode_literals
 
 import re
-import six
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
+from django.utils import six
 from django.utils.translation import ugettext_lazy as _
 
 from .es_provinces import PROVINCE_CHOICES

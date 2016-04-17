@@ -11,7 +11,6 @@ from django.utils.translation import ugettext_lazy as _
 
 from .de_states import STATE_CHOICES
 
-
 ID_RE = re.compile(r"^(?P<residence>\d{10})(?P<origin>\w{1,3})"
                    r"[-\ ]?(?P<birthday>\d{7})[-\ ]?(?P<validity>\d{7})"
                    r"[-\ ]?(?P<checksum>\d{1})$")

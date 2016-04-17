@@ -1,9 +1,8 @@
 from django.core.exceptions import ValidationError
-from django.utils import six
 from django.test import TestCase
+from django.utils import six
 
-from localflavor.tr.forms import (TRPostalCodeField, TRPhoneNumberField,
-                                  TRIdentificationNumberField)
+from localflavor.tr.forms import TRIdentificationNumberField, TRPhoneNumberField, TRPostalCodeField
 
 if six.PY3:
     _assertRaisesRegex = "assertRaisesRegex"

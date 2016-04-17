@@ -5,12 +5,11 @@ NL-specific Form helpers
 
 from __future__ import unicode_literals
 
-import six
 from django import forms
+from django.utils import six
 
 from .nl_provinces import PROVINCE_CHOICES
-from .validators import (NLPhoneNumberFieldValidator,
-                         NLSoFiNumberFieldValidator, NLZipCodeFieldValidator)
+from .validators import NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator, NLZipCodeFieldValidator
 
 
 class NLZipCodeField(forms.CharField):

@@ -1,5 +1,5 @@
-from django.utils.translation import ugettext_lazy as _
 from django.db.models import CharField
+from django.utils.translation import ugettext_lazy as _
 
 from . import forms
 from .us_states import STATE_CHOICES, USPS_CHOICES

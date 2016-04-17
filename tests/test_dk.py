@@ -1,13 +1,11 @@
 # coding: utf-8
 from __future__ import unicode_literals
-from django.test import SimpleTestCase
-from django.utils.translation import ugettext_lazy as _, override
 
-from localflavor.dk.forms import (
-    DKPhoneNumberField,
-    DKPostalCodeField,
-    DKMunicipalitySelect
-)
+from django.test import SimpleTestCase
+from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import override
+
+from localflavor.dk.forms import DKMunicipalitySelect, DKPhoneNumberField, DKPostalCodeField
 
 
 class DKLocalFlavorTests(SimpleTestCase):

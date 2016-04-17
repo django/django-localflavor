@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.is_.forms import (ISIdNumberField, ISPhoneNumberField,
-                                   ISPostalCodeSelect)
+from localflavor.is_.forms import ISIdNumberField, ISPhoneNumberField, ISPostalCodeSelect
 
 
 class ISLocalFlavorTests(SimpleTestCase):

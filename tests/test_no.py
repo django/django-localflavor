@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.test import SimpleTestCase
-from django.utils.translation import ugettext_lazy as _, override
+from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import override
 
-from localflavor.no.forms import (NOPhoneNumberField, NOSocialSecurityNumber,
-                                  NOZipCodeField, NOMunicipalitySelect)
+from localflavor.no.forms import NOMunicipalitySelect, NOPhoneNumberField, NOSocialSecurityNumber, NOZipCodeField
 
 
 class NOLocalFlavorTests(SimpleTestCase):

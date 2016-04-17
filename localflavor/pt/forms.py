@@ -9,14 +9,17 @@ Contains PT-specific Django form helpers.
 
 
 from __future__ import unicode_literals
-from .pt_regions import REGION_CHOICES
+
+from re import compile as regex_compile
+from re import sub as regex_replace
+
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-from re import compile as regex_compile, sub as regex_replace
 
+from .pt_regions import REGION_CHOICES
 
 CITIZEN_CARD_NUMBER_REGEX = regex_compile(r'^(\d{8})-?(\d[A-Z0-9]{2}\d)$')
 PHONE_NUMBER_REGEX = regex_compile(r'^((00|\+)351)?\d{3,9}$')

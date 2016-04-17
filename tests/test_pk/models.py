@@ -1,6 +1,6 @@
 from django.db import models
 
-from localflavor.pk.models import PKStateField, PKPostCodeField, PKPhoneNumberField
+from localflavor.pk.models import PKPhoneNumberField, PKPostCodeField, PKStateField
 
 
 class PakistaniPlace(models.Model):

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.utils.translation import ugettext_lazy as _
 
-
 #: All the 24 Tunisian Governorates
 #: http://en.wikipedia.org/wiki/Governorates_of_Tunisia
 GOVERNORATE_CHOICES = (

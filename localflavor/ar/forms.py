@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import RegexField, CharField, Select
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .ar_provinces import PROVINCE_CHOICES

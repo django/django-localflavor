@@ -4,9 +4,9 @@ import re
 
 from django.test import TestCase
 
-from localflavor.pk.forms import PKPostCodeField, PKPhoneNumberField, PKStateSelect
-from .forms import PakistaniPlaceForm
+from localflavor.pk.forms import PKPhoneNumberField, PKPostCodeField, PKStateSelect
 
+from .forms import PakistaniPlaceForm
 
 SELECTED_OPTION_PATTERN = r'<option value="%s" selected="selected">'
 BLANK_OPTION_PATTERN = r'<option value="">'

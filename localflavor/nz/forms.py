@@ -9,17 +9,13 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-
+from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import smart_str
 from django.utils.translation import ugettext_lazy as _
 
-from django.forms.fields import (Field, Select, RegexField)
-
-from .nz_councils import NORTH_ISLAND_COUNCIL_CHOICES
-from .nz_councils import SOUTH_ISLAND_COUNCIL_CHOICES
-from .nz_regions import REGION_CHOICES
+from .nz_councils import NORTH_ISLAND_COUNCIL_CHOICES, SOUTH_ISLAND_COUNCIL_CHOICES
 from .nz_provinces import PROVINCE_CHOICES
-
+from .nz_regions import REGION_CHOICES
 
 PHONE_08_RE = re.compile(r'^((0800\d{6})|(0800\w{6,10}))$')
 PHONE_IN_RE = re.compile(r'^((0064|064|\+64|\+\+64)((\d{8})|(2\d{7,9})))$')

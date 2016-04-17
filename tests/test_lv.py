@@ -3,8 +3,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.lv.forms import (LVPersonalCodeField, LVPostalCodeField,
-                                  LVMunicipalitySelect)
+from localflavor.lv.forms import LVMunicipalitySelect, LVPersonalCodeField, LVPostalCodeField
 
 
 class LVLocalFlavorTests(SimpleTestCase):

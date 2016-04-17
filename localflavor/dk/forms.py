@@ -5,11 +5,11 @@ Denmark specific Form helpers.
 from __future__ import unicode_literals
 
 from django.core.exceptions import ValidationError
+from django.forms import fields, widgets
 from django.utils.translation import ugettext_lazy as _
-from django.forms import widgets, fields
 
-from .dk_postalcodes import DK_POSTALCODES
 from .dk_municipalities import DK_MUNICIPALITIES
+from .dk_postalcodes import DK_POSTALCODES
 
 
 def postal_code_validator(value):

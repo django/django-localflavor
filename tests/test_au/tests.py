@@ -4,10 +4,9 @@ import re
 
 from django.test import TestCase
 
-from localflavor.au.forms import (AUPostCodeField, AUPhoneNumberField,
-                                  AUStateSelect)
-from .forms import AustralianPlaceForm
+from localflavor.au.forms import AUPhoneNumberField, AUPostCodeField, AUStateSelect
 
+from .forms import AustralianPlaceForm
 
 SELECTED_OPTION_PATTERN = r'<option value="%s" selected="selected">'
 BLANK_OPTION_PATTERN = r'<option value="">'

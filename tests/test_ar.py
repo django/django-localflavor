@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.ar.forms import (ARProvinceSelect, ARPostalCodeField,
-                                  ARDNIField, ARCUITField, ARCBUField)
+from localflavor.ar.forms import ARCBUField, ARCUITField, ARDNIField, ARPostalCodeField, ARProvinceSelect
 
 
 class ARLocalFlavorTests(SimpleTestCase):

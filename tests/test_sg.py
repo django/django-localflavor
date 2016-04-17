@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.sg.forms import (SGPostCodeField, SGNRIC_FINField,
-                                  SGPhoneNumberField)
+from localflavor.sg.forms import SGNRIC_FINField, SGPhoneNumberField, SGPostCodeField
 
 
 class SGLocalFlavorTests(SimpleTestCase):

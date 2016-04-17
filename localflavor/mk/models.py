@@ -1,9 +1,9 @@
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
+from .forms import MKIdentityCardNumberField as MKIdentityCardNumberFormField
+from .forms import UMCNField as UMCNFormField
 from .mk_choices import MK_MUNICIPALITIES
-from .forms import (UMCNField as UMCNFormField,
-                    MKIdentityCardNumberField as MKIdentityCardNumberFormField)
 
 
 class MKIdentityCardNumberField(CharField):

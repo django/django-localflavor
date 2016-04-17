@@ -3,9 +3,7 @@ from __future__ import unicode_literals
 
 from django.test import TestCase
 
-from localflavor.mx.forms import (MXZipCodeField, MXRFCField,
-                                  MXStateSelect, MXCURPField,
-                                  MXSocialSecurityNumberField)
+from localflavor.mx.forms import MXCURPField, MXRFCField, MXSocialSecurityNumberField, MXStateSelect, MXZipCodeField
 
 from .forms import MXPersonProfileForm
 

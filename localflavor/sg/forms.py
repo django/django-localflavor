@@ -12,7 +12,6 @@ from django.forms.fields import CharField, RegexField
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-
 PHONE_DIGITS_RE = re.compile(r'^[689](\d{7})$')
 
 NRIC_FIN_RE = re.compile(r'^[SFTG](\d{7})[A-Z]$')

@@ -4,7 +4,7 @@ Slovak-specific form helpers
 
 from __future__ import unicode_literals
 
-from django.forms.fields import Select, RegexField
+from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .sk_districts import DISTRICT_CHOICES

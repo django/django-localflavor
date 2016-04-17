@@ -1,15 +1,15 @@
 from __future__ import unicode_literals
-from datetime import date
+
 import re
+from datetime import date
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Select, RegexField, Field
-from django.utils.translation import ugettext_lazy as _
+from django.forms.fields import Field, RegexField, Select
 from django.utils.six import text_type
+from django.utils.translation import ugettext_lazy as _
 
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
-
 
 postalcode = re.compile(r'^(LT\s?-\s?)?(?P<code>\d{5})$', re.IGNORECASE)
 

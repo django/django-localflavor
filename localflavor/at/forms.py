@@ -2,6 +2,7 @@
 AT-specific Form helpers
 """
 from __future__ import unicode_literals
+
 import re
 
 from django.core.validators import EMPTY_VALUES
@@ -10,7 +11,6 @@ from django.forms.fields import Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .at_states import STATE_CHOICES
-
 
 re_ssn = re.compile(r'^\d{4} \d{6}')
 

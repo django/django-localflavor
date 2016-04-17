@@ -8,12 +8,11 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, CharField, Select
+from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from .in_states import STATES_NORMALIZED, STATE_CHOICES
-
+from .in_states import STATE_CHOICES, STATES_NORMALIZED
 
 phone_digits_re = re.compile(r"""
 (
