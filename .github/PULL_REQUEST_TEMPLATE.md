@@ -1,4 +1,4 @@
-Thanks for your contribuation!
+Thanks for your contribution!
 
 Here's a checklist to go through which helps us keep the code contributions
 consistent and helps speed up the review process. You can add additional
