@@ -40,6 +40,13 @@ matrix:
       env: TOXENV=py35-1.9
     - python: 3.5
       env: TOXENV=py35-master
+  allow_failures:
+    - python: 2.7
+      env: TOXENV=py27-master
+    - python: 3.4
+      env: TOXENV=py34-master
+    - python: 3.5
+      env: TOXENV=py35-master
 cache:
   directories:
     - $HOME/.wheels
