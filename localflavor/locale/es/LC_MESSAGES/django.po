@@ -10,6 +10,7 @@
 # Ezequiel Pochiero <epochiero@gmail.com>, 2015
 # Herty Nava <translation@bolmedia.ca>, 2013
 # Jannis Leidel <jannis@leidel.info>, 2011
+# Yusuf (Josè) Luis <alagunajs@gmail.com>, 2016
 # Juan Antonio Infantes Díaz <ersame@gmail.com>, 2011
 # juanda097 <juanda097@openmailbox.org>, 2014-2015
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2011
@@ -20,8 +21,8 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-12 20:32+0100\n"
-"PO-Revision-Date: 2015-11-13 09:10+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2016-03-10 19:31+0000\n"
+"Last-Translator: Yusuf (Josè) Luis <alagunajs@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/django/django-localflavor/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -304,7 +305,7 @@ msgstr "Este campo necesita 14 dígitos como mínimo"
 
 #: br/forms.py:221
 msgid "Invalid Process number."
-msgstr ""
+msgstr "Número de proceso inválido."
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
@@ -1081,23 +1082,23 @@ msgstr "Aabenraa"
 
 #: dk/dk_municipalities.py:130
 msgid "Region Hovedstaden"
-msgstr ""
+msgstr "Región de Hovedstaden"
 
 #: dk/dk_municipalities.py:131
 msgid "Region Midtjylland"
-msgstr ""
+msgstr "Región de Midtjylland"
 
 #: dk/dk_municipalities.py:132
 msgid "Region Nordjylland"
-msgstr ""
+msgstr "Región de Nordjylland"
 
 #: dk/dk_municipalities.py:133
 msgid "Region Sjælland"
-msgstr ""
+msgstr "Región de Sjælland"
 
 #: dk/dk_municipalities.py:134
 msgid "Region Syddanmark"
-msgstr ""
+msgstr "Región de Syddanmark"
 
 #: dk/dk_postalcodes.py:8
 msgid "Scanning"
@@ -1105,48 +1106,48 @@ msgstr "Escaneado"
 
 #: dk/dk_postalcodes.py:9
 msgid "Høje Taastrup"
-msgstr ""
+msgstr "Høje Taastrup"
 
 #: dk/dk_postalcodes.py:10 dk/dk_postalcodes.py:16 dk/dk_postalcodes.py:17
 #: dk/dk_postalcodes.py:21 dk/dk_postalcodes.py:23
 msgid "København C"
-msgstr ""
+msgstr "København C"
 
 #: dk/dk_postalcodes.py:11
 msgid "Sjælland USF P"
-msgstr ""
+msgstr "Sjælland USF P"
 
 #: dk/dk_postalcodes.py:12
 msgid "Sjælland USF B"
-msgstr ""
+msgstr "Sjælland USF B"
 
 #: dk/dk_postalcodes.py:13
 msgid "Udbetaling"
-msgstr ""
+msgstr "Udbetaling"
 
 #: dk/dk_postalcodes.py:14
 msgid "eBrevsprækken"
-msgstr ""
+msgstr "eBrevsprækken"
 
 #: dk/dk_postalcodes.py:15
 msgid "Kommuneservice"
-msgstr ""
+msgstr "Kommuneservice"
 
 #: dk/dk_postalcodes.py:18
 msgid "Københavns Pakkecenter"
-msgstr ""
+msgstr "Københavns Pakkecenter"
 
 #: dk/dk_postalcodes.py:19
 msgid "Københavns Pakke BRC"
-msgstr ""
+msgstr "Københavns Pakke BRC"
 
 #: dk/dk_postalcodes.py:20
 msgid "Returprint BRC"
-msgstr ""
+msgstr "Returprint BRC"
 
 #: dk/dk_postalcodes.py:22
 msgid "Internationalt Postcenter"
-msgstr ""
+msgstr "Internationalt Postcenter"
 
 #: dk/dk_postalcodes.py:24 dk/dk_postalcodes.py:25 dk/dk_postalcodes.py:26
 #: dk/dk_postalcodes.py:27 dk/dk_postalcodes.py:28 dk/dk_postalcodes.py:29
@@ -1266,7 +1267,7 @@ msgstr ""
 #: dk/dk_postalcodes.py:369 dk/dk_postalcodes.py:370 dk/dk_postalcodes.py:371
 #: dk/dk_postalcodes.py:372
 msgid "København K"
-msgstr ""
+msgstr "København K"
 
 #: dk/dk_postalcodes.py:373 dk/dk_postalcodes.py:374 dk/dk_postalcodes.py:375
 #: dk/dk_postalcodes.py:376 dk/dk_postalcodes.py:377 dk/dk_postalcodes.py:378
@@ -1335,15 +1336,15 @@ msgstr ""
 #: dk/dk_postalcodes.py:567 dk/dk_postalcodes.py:568 dk/dk_postalcodes.py:569
 #: dk/dk_postalcodes.py:570
 msgid "København V"
-msgstr ""
+msgstr "København V"
 
 #: dk/dk_postalcodes.py:384
 msgid "Returpost"
-msgstr ""
+msgstr "Returpost"
 
 #: dk/dk_postalcodes.py:385
 msgid "Centraltastning"
-msgstr ""
+msgstr "Centraltastning"
 
 #: dk/dk_postalcodes.py:571 dk/dk_postalcodes.py:572 dk/dk_postalcodes.py:573
 #: dk/dk_postalcodes.py:574 dk/dk_postalcodes.py:575 dk/dk_postalcodes.py:576
@@ -1382,47 +1383,47 @@ msgstr ""
 #: dk/dk_postalcodes.py:673 dk/dk_postalcodes.py:674 dk/dk_postalcodes.py:675
 #: dk/dk_postalcodes.py:676 dk/dk_postalcodes.py:677
 msgid "Frederiksberg C"
-msgstr ""
+msgstr "Frederiksberg C"
 
 #: dk/dk_postalcodes.py:679
 msgid "København Ø"
-msgstr ""
+msgstr "København Ø"
 
 #: dk/dk_postalcodes.py:680
 msgid "Nordhavn"
-msgstr ""
+msgstr "Nordhavn"
 
 #: dk/dk_postalcodes.py:681
 msgid "København N"
-msgstr ""
+msgstr "København N"
 
 #: dk/dk_postalcodes.py:682
 msgid "København S"
-msgstr ""
+msgstr "København S"
 
 #: dk/dk_postalcodes.py:683
 msgid "København NV"
-msgstr ""
+msgstr "København NV"
 
 #: dk/dk_postalcodes.py:684
 msgid "København SV"
-msgstr ""
+msgstr "København SV"
 
 #: dk/dk_postalcodes.py:685
 msgid "Valby"
-msgstr ""
+msgstr "Valby"
 
 #: dk/dk_postalcodes.py:691
 msgid "Taastrup"
-msgstr ""
+msgstr "Taastrup"
 
 #: dk/dk_postalcodes.py:693
 msgid "Hedehusene"
-msgstr ""
+msgstr "Hedehusene"
 
 #: dk/dk_postalcodes.py:695
 msgid "Brøndby Strand"
-msgstr ""
+msgstr "Brøndby Strand"
 
 #: dk/dk_postalcodes.py:696
 msgid "Vallensbæk Strand"
@@ -1434,35 +1435,35 @@ msgstr ""
 
 #: dk/dk_postalcodes.py:699
 msgid "Karlslunde"
-msgstr ""
+msgstr "Karlslunde"
 
 #: dk/dk_postalcodes.py:700
 msgid "Brønshøj"
-msgstr ""
+msgstr "Brønshøj"
 
 #: dk/dk_postalcodes.py:701
 msgid "Vanløse"
-msgstr ""
+msgstr "Vanløse"
 
 #: dk/dk_postalcodes.py:703
 msgid "Skovlunde"
-msgstr ""
+msgstr "Skovlunde"
 
 #: dk/dk_postalcodes.py:705
 msgid "Måløv"
-msgstr ""
+msgstr "Måløv"
 
 #: dk/dk_postalcodes.py:706
 msgid "Smørum"
-msgstr ""
+msgstr "Smørum"
 
 #: dk/dk_postalcodes.py:707
 msgid "Kastrup"
-msgstr ""
+msgstr "Kastrup"
 
 #: dk/dk_postalcodes.py:709
 msgid "Kongens Lyngby"
-msgstr ""
+msgstr "Kongens Lyngby"
 
 #: dk/dk_postalcodes.py:711
 msgid "Virum"
@@ -8631,67 +8632,67 @@ msgstr ""
 
 #: sk/sk_districts.py:21
 msgid "Gelnica"
-msgstr ""
+msgstr "Gelnica"
 
 #: sk/sk_districts.py:22
 msgid "Hlohovec"
-msgstr ""
+msgstr "Hlohovec"
 
 #: sk/sk_districts.py:23
 msgid "Humenne"
-msgstr ""
+msgstr "Humenne"
 
 #: sk/sk_districts.py:24
 msgid "Ilava"
-msgstr ""
+msgstr "Ilava"
 
 #: sk/sk_districts.py:25
 msgid "Kezmarok"
-msgstr ""
+msgstr "Kezmarok"
 
 #: sk/sk_districts.py:26
 msgid "Komarno"
-msgstr ""
+msgstr "Komarno"
 
 #: sk/sk_districts.py:27
 msgid "Kosice I"
-msgstr ""
+msgstr "Kosice I"
 
 #: sk/sk_districts.py:28
 msgid "Kosice II"
-msgstr ""
+msgstr "Kosice II"
 
 #: sk/sk_districts.py:29
 msgid "Kosice III"
-msgstr ""
+msgstr "Kosice III"
 
 #: sk/sk_districts.py:30
 msgid "Kosice IV"
-msgstr ""
+msgstr "Kosice IV"
 
 #: sk/sk_districts.py:31
 msgid "Kosice - okolie"
-msgstr ""
+msgstr "Kosice - okolie"
 
 #: sk/sk_districts.py:32
 msgid "Krupina"
-msgstr ""
+msgstr "Krupina"
 
 #: sk/sk_districts.py:33
 msgid "Kysucke Nove Mesto"
-msgstr ""
+msgstr "Kysucke Nove Mesto"
 
 #: sk/sk_districts.py:34
 msgid "Levice"
-msgstr ""
+msgstr "Levice"
 
 #: sk/sk_districts.py:35
 msgid "Levoca"
-msgstr ""
+msgstr "Levoca"
 
 #: sk/sk_districts.py:36
 msgid "Liptovsky Mikulas"
-msgstr ""
+msgstr "Liptovsky Mikulas"
 
 #: sk/sk_districts.py:37
 msgid "Lucenec"
@@ -8699,23 +8700,23 @@ msgstr ""
 
 #: sk/sk_districts.py:38
 msgid "Malacky"
-msgstr ""
+msgstr "Malacky"
 
 #: sk/sk_districts.py:39
 msgid "Martin"
-msgstr ""
+msgstr "Martin"
 
 #: sk/sk_districts.py:40
 msgid "Medzilaborce"
-msgstr ""
+msgstr "Medzilaborce"
 
 #: sk/sk_districts.py:41
 msgid "Michalovce"
-msgstr ""
+msgstr "Michalovce"
 
 #: sk/sk_districts.py:42
 msgid "Myjava"
-msgstr ""
+msgstr "Myjava"
 
 #: sk/sk_districts.py:43
 msgid "Namestovo"
@@ -8723,7 +8724,7 @@ msgstr ""
 
 #: sk/sk_districts.py:44
 msgid "Nitra"
-msgstr ""
+msgstr "Nitra"
 
 #: sk/sk_districts.py:45
 msgid "Nove Mesto nad Vahom"
@@ -8731,67 +8732,67 @@ msgstr ""
 
 #: sk/sk_districts.py:46
 msgid "Nove Zamky"
-msgstr ""
+msgstr "Nove Zamky"
 
 #: sk/sk_districts.py:47
 msgid "Partizanske"
-msgstr ""
+msgstr "Partizanske"
 
 #: sk/sk_districts.py:48
 msgid "Pezinok"
-msgstr ""
+msgstr "Pezinok"
 
 #: sk/sk_districts.py:49
 msgid "Piestany"
-msgstr ""
+msgstr "Piestany"
 
 #: sk/sk_districts.py:50
 msgid "Poltar"
-msgstr ""
+msgstr "Poltar"
 
 #: sk/sk_districts.py:51
 msgid "Poprad"
-msgstr ""
+msgstr "Poprad"
 
 #: sk/sk_districts.py:52
 msgid "Povazska Bystrica"
-msgstr ""
+msgstr "Povazska Bystrica"
 
 #: sk/sk_districts.py:53
 msgid "Presov"
-msgstr ""
+msgstr "Presov"
 
 #: sk/sk_districts.py:54
 msgid "Prievidza"
-msgstr ""
+msgstr "Prievidza"
 
 #: sk/sk_districts.py:55
 msgid "Puchov"
-msgstr ""
+msgstr "Puchov"
 
 #: sk/sk_districts.py:56
 msgid "Revuca"
-msgstr ""
+msgstr "Revuca"
 
 #: sk/sk_districts.py:57
 msgid "Rimavska Sobota"
-msgstr ""
+msgstr "Rimavska Sobota"
 
 #: sk/sk_districts.py:58
 msgid "Roznava"
-msgstr ""
+msgstr "Roznava"
 
 #: sk/sk_districts.py:59
 msgid "Ruzomberok"
-msgstr ""
+msgstr "Ruzomberok"
 
 #: sk/sk_districts.py:60
 msgid "Sabinov"
-msgstr ""
+msgstr "Sabinov"
 
 #: sk/sk_districts.py:61
 msgid "Senec"
-msgstr ""
+msgstr "Senec"
 
 #: sk/sk_districts.py:62
 msgid "Senica"
@@ -8799,7 +8800,7 @@ msgstr ""
 
 #: sk/sk_districts.py:63
 msgid "Skalica"
-msgstr ""
+msgstr "Skalica"
 
 #: sk/sk_districts.py:64
 msgid "Snina"
@@ -8807,11 +8808,11 @@ msgstr ""
 
 #: sk/sk_districts.py:65
 msgid "Sobrance"
-msgstr ""
+msgstr "Sobrance"
 
 #: sk/sk_districts.py:66
 msgid "Spisska Nova Ves"
-msgstr ""
+msgstr "Spisska Nova Ves"
 
 #: sk/sk_districts.py:67
 msgid "Stara Lubovna"
@@ -8819,15 +8820,15 @@ msgstr ""
 
 #: sk/sk_districts.py:68
 msgid "Stropkov"
-msgstr ""
+msgstr "Stropkov"
 
 #: sk/sk_districts.py:69
 msgid "Svidnik"
-msgstr ""
+msgstr "Svidnik"
 
 #: sk/sk_districts.py:70
 msgid "Sala"
-msgstr ""
+msgstr "Sala"
 
 #: sk/sk_districts.py:71
 msgid "Topolcany"
@@ -8851,7 +8852,7 @@ msgstr "Turcianske Teplice"
 
 #: sk/sk_districts.py:76
 msgid "Tvrdosin"
-msgstr ""
+msgstr "Tvrdosin"
 
 #: sk/sk_districts.py:77
 msgid "Velky Krtis"
@@ -8863,7 +8864,7 @@ msgstr "Vranov nad Toplou"
 
 #: sk/sk_districts.py:79
 msgid "Zlate Moravce"
-msgstr ""
+msgstr "Zlate Moravce"
 
 #: sk/sk_districts.py:80
 msgid "Zvolen"
@@ -8959,15 +8960,15 @@ msgstr "Número de Seguriad Social"
 
 #: us/us_states.py:15 us/us_states.py:68
 msgid "Alabama"
-msgstr ""
+msgstr "Alabama"
 
 #: us/us_states.py:16 us/us_states.py:70
 msgid "Arizona"
-msgstr ""
+msgstr "Arizona"
 
 #: us/us_states.py:17 us/us_states.py:71
 msgid "Arkansas"
-msgstr ""
+msgstr "Arkansas"
 
 #: us/us_states.py:18 us/us_states.py:72
 msgid "California"
@@ -8979,23 +8980,23 @@ msgstr ""
 
 #: us/us_states.py:20 us/us_states.py:74
 msgid "Connecticut"
-msgstr ""
+msgstr "Connecticut"
 
 #: us/us_states.py:21 us/us_states.py:75
 msgid "Delaware"
-msgstr ""
+msgstr "Delaware"
 
 #: us/us_states.py:22 us/us_states.py:76
 msgid "District of Columbia"
-msgstr ""
+msgstr "Distrito de Columbia"
 
 #: us/us_states.py:23 us/us_states.py:77
 msgid "Florida"
-msgstr ""
+msgstr "Florida"
 
 #: us/us_states.py:24 us/us_states.py:78
 msgid "Georgia"
-msgstr ""
+msgstr "Georgia"
 
 #: us/us_states.py:25 us/us_states.py:80
 msgid "Idaho"
@@ -9003,223 +9004,223 @@ msgstr ""
 
 #: us/us_states.py:26 us/us_states.py:81
 msgid "Illinois"
-msgstr ""
+msgstr "Illinois"
 
 #: us/us_states.py:27 us/us_states.py:82
 msgid "Indiana"
-msgstr ""
+msgstr "Indiana"
 
 #: us/us_states.py:28 us/us_states.py:83
 msgid "Iowa"
-msgstr ""
+msgstr "Iowa"
 
 #: us/us_states.py:29 us/us_states.py:84
 msgid "Kansas"
-msgstr ""
+msgstr "Kansas"
 
 #: us/us_states.py:30 us/us_states.py:85
 msgid "Kentucky"
-msgstr ""
+msgstr "Kentucky"
 
 #: us/us_states.py:31 us/us_states.py:86
 msgid "Louisiana"
-msgstr ""
+msgstr "Louisiana"
 
 #: us/us_states.py:32 us/us_states.py:87
 msgid "Maine"
-msgstr ""
+msgstr "Maine"
 
 #: us/us_states.py:33 us/us_states.py:88
 msgid "Maryland"
-msgstr ""
+msgstr "Maryland"
 
 #: us/us_states.py:34 us/us_states.py:89
 msgid "Massachusetts"
-msgstr ""
+msgstr "Massachusetts"
 
 #: us/us_states.py:35 us/us_states.py:90
 msgid "Michigan"
-msgstr ""
+msgstr "Michigan"
 
 #: us/us_states.py:36 us/us_states.py:91
 msgid "Minnesota"
-msgstr ""
+msgstr "Minnesota"
 
 #: us/us_states.py:37 us/us_states.py:92
 msgid "Mississippi"
-msgstr ""
+msgstr "Mississippi"
 
 #: us/us_states.py:38 us/us_states.py:93
 msgid "Missouri"
-msgstr ""
+msgstr "Missouri"
 
 #: us/us_states.py:39 us/us_states.py:94
 msgid "Montana"
-msgstr ""
+msgstr "Montana"
 
 #: us/us_states.py:40 us/us_states.py:95
 msgid "Nebraska"
-msgstr ""
+msgstr "Nebraska"
 
 #: us/us_states.py:41 us/us_states.py:96
 msgid "Nevada"
-msgstr ""
+msgstr "Nevada"
 
 #: us/us_states.py:42 us/us_states.py:97
 msgid "New Hampshire"
-msgstr ""
+msgstr "Nueva Hampshire"
 
 #: us/us_states.py:43 us/us_states.py:98
 msgid "New Jersey"
-msgstr ""
+msgstr "Nueva Jersey"
 
 #: us/us_states.py:44 us/us_states.py:99
 msgid "New Mexico"
-msgstr ""
+msgstr "Nuevo México"
 
 #: us/us_states.py:45 us/us_states.py:100
 msgid "New York"
-msgstr ""
+msgstr "Nueva York"
 
 #: us/us_states.py:46 us/us_states.py:101
 msgid "North Carolina"
-msgstr ""
+msgstr " Carolina del Norte"
 
 #: us/us_states.py:47 us/us_states.py:102
 msgid "North Dakota"
-msgstr ""
+msgstr "Dakota del Norte"
 
 #: us/us_states.py:48 us/us_states.py:103
 msgid "Ohio"
-msgstr ""
+msgstr "Ohio"
 
 #: us/us_states.py:49 us/us_states.py:104
 msgid "Oklahoma"
-msgstr ""
+msgstr "Oklahoma"
 
 #: us/us_states.py:50 us/us_states.py:105
 msgid "Oregon"
-msgstr ""
+msgstr "Oregon"
 
 #: us/us_states.py:51 us/us_states.py:106
 msgid "Pennsylvania"
-msgstr ""
+msgstr "Pennsylvania"
 
 #: us/us_states.py:52 us/us_states.py:107
 msgid "Rhode Island"
-msgstr ""
+msgstr "Isla de Rhode"
 
 #: us/us_states.py:53 us/us_states.py:108
 msgid "South Carolina"
-msgstr ""
+msgstr "Carolina del Sur"
 
 #: us/us_states.py:54 us/us_states.py:109
 msgid "South Dakota"
-msgstr ""
+msgstr "Dakota del Sur"
 
 #: us/us_states.py:55 us/us_states.py:110
 msgid "Tennessee"
-msgstr ""
+msgstr "Tennessee"
 
 #: us/us_states.py:56 us/us_states.py:111
 msgid "Texas"
-msgstr ""
+msgstr "Texas"
 
 #: us/us_states.py:57 us/us_states.py:112
 msgid "Utah"
-msgstr ""
+msgstr "Utah"
 
 #: us/us_states.py:58 us/us_states.py:113
 msgid "Vermont"
-msgstr ""
+msgstr "Vermont"
 
 #: us/us_states.py:59 us/us_states.py:114
 msgid "Virginia"
-msgstr ""
+msgstr "Virginia"
 
 #: us/us_states.py:60 us/us_states.py:115
 msgid "Washington"
-msgstr ""
+msgstr "Washington"
 
 #: us/us_states.py:61 us/us_states.py:116
 msgid "West Virginia"
-msgstr ""
+msgstr "Virginia Occidental"
 
 #: us/us_states.py:62 us/us_states.py:117
 msgid "Wisconsin"
-msgstr ""
+msgstr "Wisconsin"
 
 #: us/us_states.py:63 us/us_states.py:118
 msgid "Wyoming"
-msgstr ""
+msgstr "Wyoming"
 
 #: us/us_states.py:69
 msgid "Alaska"
-msgstr ""
+msgstr "Alaska"
 
 #: us/us_states.py:79
 msgid "Hawaii"
-msgstr ""
+msgstr "Hawaii"
 
 #: us/us_states.py:123
 msgid "American Samoa"
-msgstr ""
+msgstr "Samoa Estado Unidense"
 
 #: us/us_states.py:124
 msgid "Guam"
-msgstr ""
+msgstr "Guam"
 
 #: us/us_states.py:125
 msgid "Northern Mariana Islands"
-msgstr ""
+msgstr "Norteñas Islas Mariana"
 
 #: us/us_states.py:126
 msgid "Puerto Rico"
-msgstr ""
+msgstr "Puerto Rico"
 
 #: us/us_states.py:127
 msgid "Virgin Islands"
-msgstr ""
+msgstr "Islas Virgenes"
 
 #: us/us_states.py:133
 msgid "Armed Forces Americas"
-msgstr ""
+msgstr "Fuerzas Armadas de América"
 
 #: us/us_states.py:134
 msgid "Armed Forces Europe"
-msgstr ""
+msgstr "Fuerzas Armadas de Europa"
 
 #: us/us_states.py:135
 msgid "Armed Forces Pacific"
-msgstr ""
+msgstr "Fuerzas Armadas del Pacífico"
 
 #: us/us_states.py:141
 msgid "Federated States of Micronesia"
-msgstr ""
+msgstr "Estados Federados de Micronesia"
 
 #: us/us_states.py:142
 msgid "Marshall Islands"
-msgstr ""
+msgstr "Islas Marshall"
 
 #: us/us_states.py:143
 msgid "Palau"
-msgstr ""
+msgstr "Palau"
 
 #: us/us_states.py:149
 msgid "Commonwealth of the Northern Mariana Islands"
-msgstr ""
+msgstr "Mancomunidad de las Norteñas Islas Mariana"
 
 #: us/us_states.py:150
 msgid "Panama Canal Zone"
-msgstr ""
+msgstr "Zona del Canal de Panamá"
 
 #: us/us_states.py:151
 msgid "Philippine Islands"
-msgstr ""
+msgstr "Islas Filipinas"
 
 #: us/us_states.py:152
 msgid "Trust Territory of the Pacific Islands"
-msgstr ""
+msgstr "Territorio Protegido de las Islas del Pacífico"
 
 #: uy/forms.py:30
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."

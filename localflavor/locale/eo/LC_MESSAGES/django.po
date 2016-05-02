@@ -5,13 +5,14 @@
 # Translators:
 # Jaffa McNeill <jaffa.mcneill@gmail.com>, 2012
 # kristjan <kristjan.schmidt@googlemail.com>, 2012
+# Meiyer G <interdist@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-24 21:27+0200\n"
-"PO-Revision-Date: 2015-08-16 08:54+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2015-11-12 20:32+0100\n"
+"PO-Revision-Date: 2016-03-30 09:46+0000\n"
+"Last-Translator: Meiyer G <interdist@gmail.com>\n"
 "Language-Team: Esperanto (http://www.transifex.com/django/django-localflavor/language/eo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -117,28 +118,27 @@ msgstr ""
 
 #: ar/forms.py:34
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
-msgstr "Enigu poŝtan kodon en la formato NNNN aŭ ANNNNAAA."
+msgstr "Enigu poŝtkodon en la formato NNNN aŭ ANNNNAAA."
 
-#: ar/forms.py:58 br/forms.py:115 br/forms.py:167 pe/forms.py:29
-#: pe/forms.py:58
+#: ar/forms.py:58 pe/forms.py:29 pe/forms.py:58
 msgid "This field requires only numbers."
-msgstr "Ĉi tiu kampo bezonas sole nombrojn."
+msgstr "En tiu ĉi kampo estas permesitaj sole nombroj."
 
 #: ar/forms.py:59
 msgid "This field requires 7 or 8 digits."
-msgstr "Ĉi tiu kampo bezonas 7 aŭ 8 ciferoj."
+msgstr "Ĉi tiu kampo devas enhavi 7 aŭ 8 ciferojn."
 
 #: ar/forms.py:95
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
-msgstr "Enigu validan CUIT en XX-XXXXXXXX-X aŭ XXXXXXXXXXXX formato."
+msgstr "Enigu ĝustan impostan identigkodon (CUIT) en la formato XX-XXXXXXXX-X aŭ XXXXXXXXXXXX."
 
 #: ar/forms.py:96
 msgid "Invalid CUIT."
-msgstr "Malvalida CUIT."
+msgstr "Malĝusta CUIT."
 
 #: ar/forms.py:97
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
-msgstr ""
+msgstr "Malĝusta kodo de jura tipo. Tipo devas esti 27, 20, 30, 23, 24 aŭ 33."
 
 #: at/at_states.py:6
 msgid "Burgenland"
@@ -178,23 +178,23 @@ msgstr "Vieno"
 
 #: at/forms.py:25 no/forms.py:24
 msgid "Enter a zip code in the format XXXX."
-msgstr "Enigu poŝtan kodon en la formato XXXX"
+msgstr "Enigu poŝtkodon en la formato XXXX."
 
 #: at/forms.py:54
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
-msgstr "Enigu validan Aŭstran Socialasekuran numeron en XXXX XXXXXX formato."
+msgstr "Enigu ĝustan aŭstrian social-asekuran numeron en la formato XXXX XXXXXX."
 
 #: au/forms.py:27
 msgid "Enter a 4 digit postcode."
-msgstr "Enigu 4 ciferon postkodon."
+msgstr "Enigu 4-ciferan poŝtkodon."
 
 #: au/models.py:14
 msgid "Australian State"
-msgstr "Aŭstralia ŝtato"
+msgstr "Subŝtato de Aŭstralio"
 
 #: au/models.py:28
 msgid "Australian Postcode"
-msgstr "Aŭstralia Posta Kodo"
+msgstr "Aŭstralia Poŝtkodo"
 
 #: au/models.py:45
 msgid "Australian Phone number"
@@ -258,44 +258,48 @@ msgstr "Valonio"
 
 #: be/forms.py:26 ch/forms.py:35
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
-msgstr "Enigu validan poŝtan kodon en la variado kaj formato 1XXX - 9XXX."
+msgstr "Enigu poŝtkodon el la ĝusta intervalo kaj en formato 1XXX - 9XXX."
 
 #: be/forms.py:50
 msgid ""
 "Enter a valid phone number in one of the formats 0x xxx xx xx, 0xx xx xx xx,"
 " 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, "
 "0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
-msgstr "Enigu validan telefonnumeron en unu el la formatoj 0x xxx xx xx, 0xx xx xx xx, 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
+msgstr "Enigu ĝustan telefonnumeron en unu el la formatoj 0x xxx xx xx, 0xx xx xx xx, 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx aŭ 04xxxxxxxx."
 
-#: br/forms.py:31
+#: br/forms.py:38
 msgid "Enter a zip code in the format XXXXX-XXX."
-msgstr "Enigu poŝtan kodon en la formato XXXXX-XXX"
+msgstr "Enigu poŝtkodon en la formato XXXXX-XXX."
 
-#: br/forms.py:76
+#: br/forms.py:83
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
-msgstr "Elektu validan brazilan staton. Kiu stato ne estas unu el la haveblaj statoj."
+msgstr "Elektu ekzistantan brazilan ŝtaton. Tiu ĉi ne estas el inter la ekzistantaj."
 
-#: br/forms.py:113
+#: br/forms.py:120
 msgid "Invalid CPF number."
-msgstr "Nevalida CPF numero"
+msgstr "Malĝusta numero CPF."
 
-#: br/forms.py:114
+#: br/forms.py:121
 msgid "This field requires at most 11 digits or 14 characters."
-msgstr "Ĉi tiu kampo bezonas maksimume 11 ciferojn aŭ 14 karakterojn."
+msgstr "Ĉi tiu kampo devas konsisti el 11 ciferoj eventuale dividitaj laŭ la formato XXX.XXX.XXX-XX."
 
-#: br/forms.py:166
+#: br/forms.py:173
 msgid "Invalid CNPJ number."
-msgstr "Nevalida CNPJ numero."
+msgstr "Malĝusta numero CNPJ."
 
-#: br/forms.py:168
+#: br/forms.py:174
 msgid "This field requires at least 14 digits"
-msgstr "Ĉi tiu kampo bezonas almenaŭ 14 ciferojn"
+msgstr "Ĉi tiu kampo devas konsisti el 14 ciferoj eventuale dividitaj laŭ la formato XX.XXX.XXX/XXXX-XX."
+
+#: br/forms.py:221
+msgid "Invalid Process number."
+msgstr "Malĝusta identiga numero de jura proceso."
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
-msgstr ""
+msgstr "Ŝtato de Brazilo (du majusklaj literoj)"
 
 #: ca/ca_provinces.py:6
 msgid "Alberta"
@@ -351,19 +355,19 @@ msgstr ""
 
 #: ca/forms.py:31
 msgid "Enter a postal code in the format XXX XXX."
-msgstr "Enigu poŝtan kodon en la formato XXX XXX"
+msgstr "Enigu poŝtkodon en la formato XXX XXX."
 
 #: ca/forms.py:51 us/forms.py:52
 msgid "Phone numbers must be in XXX-XXX-XXXX format."
-msgstr "Telefonnumeroj devus esti formate kiel XXX-XXX-XXXX."
+msgstr "Telefonnumeroj devas havi la formaton XXX-XXX-XXXX."
 
 #: ca/forms.py:72
 msgid "Enter a Canadian province or territory."
-msgstr ""
+msgstr "Indiku provincon aŭ teritorion de Kanado."
 
 #: ca/forms.py:118
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
-msgstr "Enigu validan Kanadan Socian Asekuron nombron en XXX-XXX-XXX formato."
+msgstr "Enigu ĝustan social-asekuran numeron kanadan (SIN/NAS) en la formato XXX-XXX-XXX."
 
 #: ch/ch_states.py:6
 msgid "Aargau"
@@ -471,57 +475,57 @@ msgstr ""
 
 #: ch/forms.py:50
 msgid "Phone numbers must be in 0XX XXX XX XX format."
-msgstr ""
+msgstr "Telefonnumeroj devas havi la formaton 0XX XXX XX XX."
 
 #: ch/forms.py:83
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
-msgstr ""
+msgstr "Enigu ĝustan numeron de svislanda identigilo aŭ pasporto, en la formato X1234567<0 aŭ 1234567890."
 
 #: ch/forms.py:153
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
-msgstr ""
+msgstr "Enigu ĝustan svislandan social-asekuran numeron en la formato 756.XXXX.XXXX.XX."
 
 #: cl/forms.py:34
 msgid "Enter a valid Chilean RUT."
-msgstr "Enigu validan Ĉilian RUT."
+msgstr "Enigu ĝustan ĉilian RUT."
 
 #: cl/forms.py:35
 msgid "Enter a valid Chilean RUT. The format is XX.XXX.XXX-X."
-msgstr "Enigu validan Ĉilian RUT. La formato estas XX.XXX.XXX-X."
+msgstr "Enigu ĝustan ĉilian RUT. La formato devas esti XX.XXX.XXX-X."
 
 #: cl/forms.py:36
 msgid "The Chilean RUT is not valid."
-msgstr "La Ĉilia RUT ne estas valida."
+msgstr "Tiu ĉi ĉilia RUT-numero enhavas eraron."
 
 #: cn/forms.py:84
 msgid "Enter a post code in the format XXXXXX."
-msgstr "Enigu postan kodon laŭformate XXXXXX."
+msgstr "Enigu poŝtkodon en la formato XXXXXX."
 
 #: cn/forms.py:106
 msgid "ID Card Number consists of 15 or 18 digits."
-msgstr "Identiga Karta Nombro konsistas el 15 aŭ 18 ciferoj."
+msgstr "Identigkarta numero konsistas el 15 aŭ 18 ciferoj."
 
 #: cn/forms.py:107
 msgid "Invalid ID Card Number: Wrong checksum"
-msgstr "Nevalida Identiga Karta Nombro: Malĝusta kontrolsumo"
+msgstr "Malĝusta identigkarta numero: Erara kontrolsumo."
 
 #: cn/forms.py:108
 msgid "Invalid ID Card Number: Wrong birthdate"
-msgstr "Nevalida Identiga Karta Nombro: Malĝusta naskiĝodato"
+msgstr "Malĝusta identigkarta numero: Erara naskiĝdato."
 
 #: cn/forms.py:109
 msgid "Invalid ID Card Number: Wrong location code"
-msgstr "Nevalida Identiga Karta Nombro: Malĝusta loka kodo"
+msgstr "Malĝusta identigkarta numero: Erara kodo de loko."
 
 #: cn/forms.py:192
 msgid "Enter a valid phone number."
-msgstr "Enigu validan Telefonnumeron"
+msgstr "Enigu ĝustan telefonnumeron."
 
 #: cn/forms.py:214
 msgid "Enter a valid cell number."
-msgstr "Enigu validan poŝtelefonnumeron"
+msgstr "Enigu ĝustan poŝtelefonnumeron."
 
 #: cz/cz_regions.py:5
 msgid "Prague"
@@ -581,19 +585,19 @@ msgstr "Moraviasilezia regiono"
 
 #: cz/forms.py:34 sk/forms.py:36
 msgid "Enter a postal code in the format XXXXX or XXX XX."
-msgstr "Enigu poŝtan kodon laŭ la formato XXXXX aŭ XXX XX."
+msgstr "Enigu poŝtkodon en la formato XXXXX aŭ XXX XX."
 
 #: cz/forms.py:55
 msgid "Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX."
-msgstr "Enigu naskiĝon nombron laŭ la formato  XXXXXX/XXXX aŭ XXXXXXXXXX."
+msgstr "Enigu naskiĝo-numeron (RČ) en la formato XXXXXX/XXXX aŭ XXXXXXXXXX."
 
 #: cz/forms.py:56
 msgid "Enter a valid birth number."
-msgstr "Enigu validan naskiĝon nombron."
+msgstr "Enigu ĝustan naskiĝo-numeron."
 
 #: cz/forms.py:106
 msgid "Enter a valid IC number."
-msgstr "Enigu validan IC nombron."
+msgstr "Enigu ĝustan numeron IČ."
 
 #: de/de_states.py:6
 msgid "Baden-Wuerttemberg"
@@ -659,15 +663,15 @@ msgstr "Ŝlesvigo-Holstinio"
 msgid "Thuringia"
 msgstr "Turingio"
 
-#: de/forms.py:26 ee/forms.py:24 fi/forms.py:23 fr/forms.py:31
+#: de/forms.py:26 ee/forms.py:25 fi/forms.py:23 fr/forms.py:31
 msgid "Enter a zip code in the format XXXXX."
-msgstr "Enigu poŝtan kodon laŭformate XXXXX."
+msgstr "Enigu poŝtkodon en la formato XXXXX."
 
 #: de/forms.py:55
 msgid ""
 "Enter a valid German identity card number in XXXXXXXXXXX-XXXXXXX-XXXXXXX-X "
 "format."
-msgstr "Enigu validan Germanan identigan karton nombron laŭformate  XXXXXXXXXXX-XXXXXXX-XXXXXXX-X."
+msgstr "Enigu ĝustan numeron de germania identigilo, en la formato XXXXXXXXXXX-XXXXXXX-XXXXXXX-X."
 
 #: dk/dk_municipalities.py:8 dk/dk_postalcodes.py:689
 msgid "Albertslund"
@@ -4125,11 +4129,15 @@ msgstr ""
 
 #: dk/forms.py:16
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
+msgstr "Enigu poŝtkodon en la formato XXXX."
 
 #: dk/forms.py:47 no/forms.py:102
 msgid "A phone number must be 8 digits and may have country code"
-msgstr ""
+msgstr "Telefonnumero devas konsisti el 8 ciferoj kaj povas enhavi kodon de la lando."
+
+#: ec/models.py:14
+msgid "Ecuadorian province"
+msgstr "Provinco de Ekvadoro"
 
 #: ee/ee_counties.py:9
 msgid "Harju County"
@@ -4191,13 +4199,21 @@ msgstr ""
 msgid "Võru County"
 msgstr ""
 
-#: ee/forms.py:45
-msgid "Enter an 11-digit Estonian personal identification code."
-msgstr ""
-
 #: ee/forms.py:46
+msgid "Enter an 11-digit Estonian personal identification code."
+msgstr "Enigu 11-ciferan estonian personan kodon identigan."
+
+#: ee/forms.py:47
 msgid "Enter a valid Estonian personal identification code."
-msgstr ""
+msgstr "Enigu ĝustan estonian personan kodon identigan."
+
+#: ee/forms.py:101
+msgid "Enter an 8-digit Estonian business registry code."
+msgstr "Enigu 8-ciferan estonian komercan kodon registran."
+
+#: ee/forms.py:102
+msgid "Enter a valid Estonian business registry code."
+msgstr "Enigu ĝustan estonian komercan kodon registran."
 
 #: es/es_provinces.py:6
 msgid "Araba"
@@ -4469,54 +4485,54 @@ msgstr ""
 
 #: es/forms.py:27
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
-msgstr "Enigu validan poŝtan kodon en la gamo kaj formato 01XXX - 52XXX."
+msgstr "Enigu poŝtkodon el la ĝusta intervalo kaj en formato 01XXX - 52XXX."
 
 #: es/forms.py:48
 msgid ""
 "Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or "
 "9XXXXXXXX."
-msgstr "Enigu validan telefonnumeron laŭformate 6XXXXXXXX, 8XXXXXXXX aŭ 9XXXXXXXX."
+msgstr "Enigu ĝustan telefonnumeron en la formato 6XXXXXXXX, 8XXXXXXXX aŭ 9XXXXXXXX."
 
 #: es/forms.py:81
 msgid "Please enter a valid NIF, NIE, or CIF."
-msgstr "Bonvolu enigu validan NIF, NIE, aŭ CIF."
+msgstr "Bonvole enigu ĝustan NIF, NIE, aŭ CIF."
 
 #: es/forms.py:82
 msgid "Please enter a valid NIF or NIE."
-msgstr "Bonvolu enigu validan NIF aŭ NIE."
+msgstr "Bonvole enigu ĝustan NIF aŭ NIE."
 
 #: es/forms.py:83
 msgid "Invalid checksum for NIF."
-msgstr "Nevalida kontrolsumo por NIF."
+msgstr "Erara kontrolsumo por NIF."
 
 #: es/forms.py:84
 msgid "Invalid checksum for NIE."
-msgstr "Nevalida kontrolsumo por NIE."
+msgstr "Erara kontrolsumo por NIE."
 
 #: es/forms.py:85
 msgid "Invalid checksum for CIF."
-msgstr "Nevalida kontrolsumo por CIF."
+msgstr "Erara kontrolsumo por CIF."
 
 #: es/forms.py:169
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
-msgstr "Bonvolu enigu validan bankokonton nombron laŭformate  XXXX-XXXX-XX-XXXXXXXXXX."
+msgstr "Bonvole enigu ĝustan numeron de banka konto, en la formato XXXX-XXXX-XX-XXXXXXXXXX."
 
 #: es/forms.py:170
 msgid "Invalid checksum for bank account number."
-msgstr "Nevalida kontrolsumo por bankokonto nombro."
+msgstr "Erara kontrolsumo por numero de banka konto."
 
 #: fi/forms.py:42
 msgid "Enter a valid Finnish social security number."
-msgstr "Enigu validan Finnan socialasekuran numeron."
+msgstr "Enigu ĝustan finnlandan social-asekuran numeron."
 
 #: fr/forms.py:35
 msgid "Zip code"
-msgstr ""
+msgstr "Poŝtkodo"
 
 #: fr/forms.py:51
 msgid "Phone numbers must be in 0X XX XX XX XX format."
-msgstr "Telefonnumeroj devus esti formate 0X XX XX XX XX."
+msgstr "Telefonnumeroj devas havi la formaton 0X XX XX XX XX."
 
 #: fr/forms.py:55 us/models.py:71
 msgid "Phone number"
@@ -4524,35 +4540,35 @@ msgstr "Telefonnumero"
 
 #: fr/forms.py:114
 msgid "Select Department"
-msgstr ""
+msgstr "Elektu Departementon"
 
 #: fr/forms.py:125
 msgid "Select Region"
-msgstr ""
+msgstr "Elektu Regionon"
 
 #: fr/forms.py:137
-msgid "Enter a valid French French National Identification number."
-msgstr ""
+msgid "Enter a valid French National Identification number."
+msgstr "Enigu ĝustan nacian identigan numeron francian (NIR)."
 
 #: fr/forms.py:216
 msgid "Enter a valid French SIREN number."
-msgstr ""
+msgstr "Enigu ĝustan francian numeron SIREN."
 
 #: fr/forms.py:237
 msgid "Enter a valid French SIRET number."
-msgstr ""
+msgstr "Enigu ĝustan francian numeron SIRET."
 
 #: fr/models.py:12
 msgid "SIREN Number"
-msgstr ""
+msgstr "Numero SIREN"
 
 #: fr/models.py:32
 msgid "SIRET Number"
-msgstr ""
+msgstr "Numero SIRET"
 
 #: gb/forms.py:26
 msgid "Enter a valid postcode."
-msgstr "Enigu validan poŝtan kodon."
+msgstr "Enigu ĝustan poŝtkodon."
 
 #: gb/gb_regions.py:19
 msgid "Bath and North East Somerset"
@@ -5198,82 +5214,82 @@ msgstr ""
 
 #: gr/forms.py:27
 msgid "Enter a valid 5-digit greek postal code."
-msgstr ""
+msgstr "Enigu ĝustan 5-ciferan poŝtkodon grekian."
 
 #: gr/forms.py:42
 msgid "Enter a valid greek tax number (9 digits)."
-msgstr ""
+msgstr "Enigu ĝustan imposto-numeron grekian (9 ciferoj)."
 
-#: gr/forms.py:77
+#: gr/forms.py:79
 msgid "Enter a 10-digit greek phone number."
-msgstr ""
+msgstr "Enigu 10-ciferan grekian telefonnumeron."
 
-#: gr/forms.py:102
+#: gr/forms.py:104
 msgid "Enter a greek mobile phone number starting with 69."
-msgstr ""
+msgstr "Enigu poŝtelefonan numeron grekian, komenciĝantan je 69."
 
 #: hk/forms.py:37
 #, python-format
 msgid "Phone number should not start with one of the followings: %s."
-msgstr ""
+msgstr "Telefonnumero ne komenciĝu per prefikso el inter: %s."
 
 #: hk/forms.py:40
 #, python-format
 msgid "Phone number must be in one of the following formats: %s."
-msgstr ""
+msgstr "Telefonnumero devas havi unu el la jenaj formatoj: %s."
 
 #: hk/forms.py:42
 #, python-format
 msgid "Phone number should start with one of the followings: %s."
-msgstr ""
+msgstr "Telefonnumero komenciĝu per %s."
 
 #: hr/forms.py:75
 msgid "Enter a valid 13 digit JMBG"
-msgstr "Enigu validan 13 cifero JMBG"
+msgstr "Enigu ĝustan 13-ciferan numeron JMBG."
 
 #: hr/forms.py:76
 msgid "Error in date segment"
-msgstr "Eraro en dato segmento"
+msgstr "Eraro en la data segmento de JMBG."
 
 #: hr/forms.py:122
 msgid "Enter a valid 11 digit OIB"
-msgstr "Enigu validan 11 cifero OIB"
+msgstr "Enigu ĝustan 11-ciferan numeron OIB."
 
 #: hr/forms.py:151 id_/forms.py:112
 msgid "Enter a valid vehicle license plate number"
-msgstr "Enigu validan veturilon licencplaton nombron"
+msgstr "Enigu ĝustan numeron de veturila licencplato."
 
 #: hr/forms.py:152
 msgid "Enter a valid location code"
-msgstr "Enigu validan lokan kodon"
+msgstr "Provizu ekzistantan kodon de lokigo."
 
 #: hr/forms.py:153
 msgid "Number part cannot be zero"
-msgstr "Nombra parto ne povas esti nulo"
+msgstr "La numera parto de aŭtokodo ne povas esti nulo."
 
 #: hr/forms.py:189
 msgid "Enter a valid 5 digit postal code"
-msgstr "Enigu validan 5 cifero postan kodon"
+msgstr "Enigu ĝustan 5-ciferan poŝtkodon."
 
 #: hr/forms.py:217 id_/forms.py:72 nl/forms.py:60
 msgid "Enter a valid phone number"
-msgstr "Enigu validan telefonnumeron"
+msgstr "Enigu ĝustan telefonnumeron."
 
 #: hr/forms.py:218
 msgid "Enter a valid area or mobile network code"
-msgstr "Eniri validan lokan aŭ moveblan retan kodo"
+msgstr "Indiku ĝustan kodon de regiono aŭ poŝtelefonnumeran prefikson."
 
 #: hr/forms.py:219
 msgid "The phone number is too long"
-msgstr ""
+msgstr "La telefonnumero estas tro longa."
 
 #: hr/forms.py:257
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
-msgstr "Eniri validan 19 ciferan JMBAG komence 601983"
+msgstr "Enigu ĝustan 19-ciferan numeron JMBAG, komenciĝantan per 601983."
 
 #: hr/forms.py:258
 msgid "Card issue number cannot be zero"
-msgstr "Karta eldona nombro ne povas est nulo"
+msgstr "La cifero indikanta karteldonon ne povas esti nulo."
 
 #: hr/hr_choices.py:9
 msgid "Grad Zagreb"
@@ -5361,11 +5377,11 @@ msgstr "Zagrebačka Distrikto"
 
 #: id_/forms.py:31
 msgid "Enter a valid post code"
-msgstr "Enigu validan poŝtkodon"
+msgstr "Enigu ĝustan poŝtkodon."
 
 #: id_/forms.py:176
 msgid "Enter a valid NIK/KTP number"
-msgstr "Enigu validan NIK/KTP nombron"
+msgstr "Enigu ĝustan identigan numeron NIK/KTP."
 
 #: id_/id_choices.py:7
 msgid "Aceh"
@@ -5737,69 +5753,69 @@ msgstr "Viklovo"
 
 #: il/forms.py:23
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
-msgstr ""
+msgstr "Enigu poŝtkodon en la formato XXXXXXX (aŭ XXXXX) - nur ciferoj."
 
 #: il/forms.py:53
 msgid "Enter a valid ID number."
-msgstr "Enigu validan identan nombron."
+msgstr "Enigu ĝustan identigan numeron."
 
 #: il/forms.py:78
 msgid "Enter a valid Mobile Number."
-msgstr ""
+msgstr "Enigu ĝustan poŝtelefonan numeron."
 
 #: in_/forms.py:48
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
-msgstr "Enigu poŝtan kodon laŭformate XXXXXX aŭ XXX XXX."
+msgstr "Enigu poŝtkodon en la formato XXXXXX aŭ XXX XXX."
 
 #: in_/forms.py:77
 msgid "Enter an Indian state or territory."
-msgstr "Enigu Baratan staton aŭ teritorion."
+msgstr "Provizu nomon de barata subŝtato aŭ unia teritorio."
 
 #: in_/forms.py:117
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
-msgstr ""
+msgstr "Enigu ĝustan identigan numeron Aadhaar, en la formato XXXX XXXX XXXX aŭ XXXX-XXXX-XXXX."
 
 #: in_/forms.py:164
 msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
-msgstr "Telefonnumeroj devus esti formate laŭ 02X-8X aŭ 03X-7X aŭ 04X-6X"
+msgstr "Telefonnumeroj devas havi la formaton 02X-8X aŭ 03X-7X aŭ 04X-6X."
 
 #: in_/models.py:12
 msgid "Indian state (two uppercase letters)"
-msgstr ""
+msgstr "Subŝtato de Barato (du majusklaj literoj)"
 
 #: is_/forms.py:29
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
-msgstr "Enigu validan Islandan identigan nombron laŭformate XXXXXX-XXXX."
+msgstr "Enigu ĝustan nacian identigan numeron islandan, en la formato XXXXXX-XXXX."
 
 #: is_/forms.py:30
 msgid "The Icelandic identification number is not valid."
-msgstr "La Icelandic identiga nombro ne estas valida."
+msgstr "Tiu ĉi islanda identiga numero enhavas eraron."
 
 #: it/forms.py:29
 msgid "Enter a valid zip code."
-msgstr "Enigu validan poŝtan kodon."
+msgstr "Enigu ĝustan poŝtkodon."
 
-#: it/forms.py:77
+#: it/forms.py:76
 msgid "Enter a valid Tax code."
-msgstr ""
+msgstr "Enigu ĝustan italian imposto-kodon (codice fiscale)."
 
-#: it/forms.py:109
+#: it/forms.py:108
 msgid "Enter a valid VAT number."
-msgstr "Enigu validann AVI nombro."
+msgstr "Enigu ĝustan registro-numeron por aldonvalora imposto (partita IVA)."
 
-#: it/forms.py:130
+#: it/forms.py:129
 msgid "Enter a valid Italian phone number."
-msgstr ""
+msgstr "Enigu ĝustan telefonnumeron italian."
 
 #: it/util.py:46 it/util.py:59
 msgid "Check digit does not match."
-msgstr ""
+msgstr "La kontrolcifero ne kongruas kun la resto de la numero."
 
 #: jp/forms.py:19
 msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
-msgstr "Enigu poŝtan kodon laŭformate XXXXXXX aŭ XXX-XXXX."
+msgstr "Enigu poŝtkodon en la formato XXXXXXX aŭ XXX-XXXX."
 
 #: jp/jp_prefectures.py:12 jp/jp_prefectures.py:64
 msgid "Hokkaido"
@@ -5991,31 +6007,31 @@ msgstr "Okinavo"
 
 #: kw/forms.py:28
 msgid "Enter a valid Kuwaiti Civil ID number"
-msgstr "Enigu validan Kuvajtan Civilan Identigan Kartan nombron"
+msgstr "Enigu ĝustan civitan-identigan numeron kuvajtan."
 
 #: lt/forms.py:42
 msgid "ID Code consists of exactly 11 decimal digits."
-msgstr ""
+msgstr "Persona kodo identiga konsistu el ekzakte 11 ciferoj."
 
 #: lt/forms.py:43
 msgid "Wrong ID Code checksum."
-msgstr ""
+msgstr "La kontrolcifero ne kongruas kun la resto de la numero."
 
 #: lt/forms.py:44
 msgid "ID Code contains invalid date."
-msgstr ""
+msgstr "La data segmento de la identiga kodo estas erara."
 
 #: lt/forms.py:100
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr ""
+msgstr "Enigu poŝtkodon en la formato XXXXX aŭ LT-XXXXX."
 
 #: lt/forms.py:146
 msgid "Phone number can only contain digits"
-msgstr ""
+msgstr "Telefonnumero povas enhavi nur ciferojn."
 
 #: lt/forms.py:147
 msgid "Could not validate the phone number"
-msgstr ""
+msgstr "Tio ne ŝajnas esti ĝusta litovia telefonnumero."
 
 #: lt/lt_choices.py:7
 msgid "Alytus"
@@ -6299,15 +6315,15 @@ msgstr ""
 
 #: lv/forms.py:27
 msgid "Enter a postal code in the format XXXX or LV-XXXX."
-msgstr ""
+msgstr "Enigu poŝtkodon en la formato XXXX aŭ LV-XXXX."
 
 #: lv/forms.py:52
 msgid "Enter a Latvian personal code in format XXXXXX-XXXXX."
-msgstr ""
+msgstr "Enigu latvian personan kodon identigan en la formato XXXXXX-XXXXX."
 
 #: lv/forms.py:53
 msgid "Enter a valid Latvian personal code."
-msgstr ""
+msgstr "Enigu ĝustan latvian personan kodon identigan."
 
 #: lv/lv_choices.py:9
 msgid "Daugavpils"
@@ -6789,19 +6805,19 @@ msgstr ""
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
-msgstr "Identiga karta nombroj devus enhavi aŭ 4 - 7 ciferoj aŭ majuskla letero kaj 7 ciferoj."
+msgstr "Ĝusta numero devas konsisti el 4 ĝis 7 ciferoj aŭ el majuskla litero kaj 7 ciferoj."
 
 #: mk/forms.py:57 si/forms.py:26
 msgid "This field should contain exactly 13 digits."
-msgstr "Ĉi tiu kampo enhavus ĝuste 13 ciferojn."
+msgstr "Ĉi tiu kampo devas konsisti el ekzakte 13 ciferoj."
 
 #: mk/forms.py:58
 msgid "The first 7 digits of the UMCN must represent a valid past date."
-msgstr "La unuaj 7 ciferoj de la UMCN devus reprezenti validan pasintecon daton."
+msgstr "La unuaj 7 ciferoj devas reprezenti ĝustan daton en pasinteco."
 
 #: mk/forms.py:59
 msgid "The UMCN is not valid."
-msgstr "La UMCN ne estas valida."
+msgstr "La provizita numero estas erara."
 
 #: mk/mk_choices.py:8
 msgid "Aerodrom"
@@ -7141,55 +7157,55 @@ msgstr "Šuto Orizario"
 
 #: mk/models.py:14
 msgid "Macedonian identity card number"
-msgstr "Macedonia identiga karta nombro"
+msgstr "Makedonia identeckarta numero"
 
 #: mk/models.py:31
 msgid "A Macedonian municipality (2 character code)"
-msgstr "Macedonia urbo (2 karaktero kodo)"
+msgstr "Makedonia urbo (2-litera kodo)"
 
 #: mk/models.py:53
 msgid "Unique master citizen number (13 digits)"
-msgstr "Unika mastra civitana nombro (13 ciferoj)"
+msgstr "Unika Civitan-Identiga Numero (ЕМБГ, 13 ciferoj)"
 
 #: mt/forms.py:19
 msgid "Enter a valid postal code in format AAA 0000."
-msgstr ""
+msgstr "Enigu ĝustan poŝtkodon en la formato AAA NNNN."
 
 #: mx/forms.py:65
 msgid "Enter a valid zip code in the format XXXXX."
-msgstr "Enigu validan poŝtan kodon laŭformate XXXXX."
+msgstr "Enigu ĝustan poŝtkodon en la formato XXXXX."
 
 #: mx/forms.py:108
 msgid "Enter a valid RFC."
-msgstr "Enigu validan RFC."
+msgstr "Enigu ĝustan impostan identigkodon RFC."
 
 #: mx/forms.py:109
 msgid "Invalid checksum for RFC."
-msgstr "Nevalida kontrolsumo por RFC."
+msgstr "Erara kontrolsumo por RFC."
 
 #: mx/forms.py:190
 msgid "Enter a valid CURP."
-msgstr "Enigu validan CURP."
+msgstr "Enigu ĝustan numeron CURP."
 
 #: mx/forms.py:191
 msgid "Invalid checksum for CURP."
-msgstr "Nevalida kontrolsumo por CURP."
+msgstr "Erara kontrolsumo por CURP."
 
 #: mx/forms.py:251
 msgid "Enter a valid Social Security Number."
-msgstr ""
+msgstr "Enigu ĝustan 11-ciferan numeron."
 
 #: mx/forms.py:252
 msgid "Invalid checksum for Social Security Number."
-msgstr ""
+msgstr "La provizita numero estas erara."
 
 #: mx/models.py:15
 msgid "Mexico state (three uppercase letters)"
-msgstr "Meksika stato (tri majusklaj leteroj)"
+msgstr "Subŝtato de Meksiko (tri majusklaj literoj)"
 
 #: mx/models.py:28
 msgid "Mexico zip code"
-msgstr "Meksika poŝta kodo"
+msgstr "Meksika poŝtkodo"
 
 #: mx/models.py:45
 msgid "Mexican RFC"
@@ -7197,11 +7213,11 @@ msgstr "Meksika RFC"
 
 #: mx/models.py:62
 msgid "Mexican CURP"
-msgstr "Meksika CURP"
+msgstr "Unika Numero de Loĝantaro-Registro (CURP) de Meksiko"
 
 #: mx/models.py:79
 msgid "Mexican Social Security Number"
-msgstr ""
+msgstr "Meksika social-asekura numero"
 
 #: mx/mx_states.py:8
 msgid "Aguascalientes"
@@ -7333,19 +7349,19 @@ msgstr "Zakatecaso"
 
 #: nl/forms.py:28
 msgid "Enter a valid postal code"
-msgstr "Enigu validan poŝtan kodon."
+msgstr "Enigu ĝustan poŝtkodon."
 
 #: nl/forms.py:87
 msgid "Enter a valid SoFi number"
-msgstr "Enigu validan SoFi nombron."
+msgstr "Enigu ĝustan numeron SoFi."
 
 #: nl/models.py:19
 msgid "Enter a valid bank account number"
-msgstr ""
+msgstr "Enigu ĝustan numeron de banka konto."
 
 #: nl/models.py:20
 msgid "Bank account numbers have 1 - 7, 9 or 10 digits"
-msgstr ""
+msgstr "Numeroj de bankaj kontoj konsistas el 1 ĝis 7, 9 aŭ 10 ciferoj."
 
 #: nl/nl_provinces.py:8
 msgid "Drenthe"
@@ -7393,19 +7409,19 @@ msgstr "Suda Holando"
 
 #: no/forms.py:46
 msgid "Enter a valid Norwegian social security number."
-msgstr "Enigu validan Norvegan socialasekuran numeron."
+msgstr "Enigu ĝustan nacian identigan numeron norvegian (fødselsnummer)."
 
 #: nz/forms.py:73
 msgid "Invalid post code."
-msgstr ""
+msgstr "Erara poŝtkodo (ĝi devas konsisti sole el 4 ciferoj)."
 
 #: nz/forms.py:86
 msgid "Invalid phone number."
-msgstr ""
+msgstr "Erara telefonnumero."
 
 #: nz/forms.py:130
 msgid "Invalid bank account number."
-msgstr ""
+msgstr "Malĝusta kontonumero de novzelanda banko."
 
 #: nz/nz_councils.py:31
 msgid "Far North District"
@@ -7480,7 +7496,7 @@ msgid "Whakatane District"
 msgstr ""
 
 #: nz/nz_councils.py:49
-msgid "Rotorua District\t"
+msgid "Rotorua District"
 msgstr ""
 
 #: nz/nz_councils.py:50
@@ -7737,31 +7753,31 @@ msgstr ""
 
 #: pe/forms.py:30
 msgid "This field requires 8 digits."
-msgstr "Ĉi tiu kampo bezonas 8 ciferojn."
+msgstr "Ĉi tiu kampo enhavu 8 ciferojn."
 
 #: pe/forms.py:59
 msgid "This field requires 11 digits."
-msgstr "Ĉi tiu kampo bezonas 11 ciferojn."
+msgstr "Ĉi tiu kampo enhavu 11 ciferojn."
 
 #: pk/forms.py:26
 msgid "Enter a 5 digit postcode."
-msgstr ""
+msgstr "Enigu 5-ciferan poŝtkodon."
 
 #: pk/forms.py:40
 msgid "Phone numbers must contain 9, 10 or 11 digits."
-msgstr ""
+msgstr "Telefonnumeroj devas konsisti el 9, 10, aŭ 11 ciferoj."
 
 #: pk/models.py:14
 msgid "Pakistani State"
-msgstr ""
+msgstr "Provinco de Pakistano"
 
 #: pk/models.py:28
 msgid "Pakistani Postcode"
-msgstr ""
+msgstr "Pakistana Poŝtkodo"
 
 #: pk/models.py:45
 msgid "Pakistani Phone number"
-msgstr ""
+msgstr "Pakistana Telefonnumero"
 
 #: pk/pk_states.py:6
 msgid "Azad Jammu & Kashmir"
@@ -7797,41 +7813,41 @@ msgstr ""
 
 #: pl/forms.py:45
 msgid "National Identification Number consists of 11 digits."
-msgstr "Nacia Identiga Nombro konsistas el 11 ciferoj."
+msgstr "La nacia identiga numero PESEL konsistas el 11 ciferoj."
 
 #: pl/forms.py:46
 msgid "Wrong checksum for the National Identification Number."
-msgstr "Malĝusta kontrolsumo por la Nacia Identiga Nombro."
+msgstr "Erara kontrolsumo por PESEL."
 
 #: pl/forms.py:83
 msgid "National ID Card Number consists of 3 letters and 6 digits."
-msgstr "Nacia Identiga Karta Nombro konsistas el 3 leteroj kaj 6 ciferoj."
+msgstr "La nacia identigkarta numero konsistas el 3 literoj kaj 6 ciferoj."
 
 #: pl/forms.py:84
 msgid "Wrong checksum for the National ID Card Number."
-msgstr "Malĝusta kontrolsumo por la Nacia Identiga Karta Nombro"
+msgstr "La provizita numero de nacia identiga karto estas erara."
 
 #: pl/forms.py:136
 msgid ""
 "Enter a tax number field (NIP) in the format XXX-XXX-XX-XX, XXX-XX-XX-XXX or"
 " XXXXXXXXXX."
-msgstr ""
+msgstr "Enigu impostan identignumeron (NIP) en la formato XXX-XXX-XX-XX, XXX-XX-XX-XXX aŭ XXXXXXXXXX."
 
 #: pl/forms.py:137
 msgid "Wrong checksum for the Tax Number (NIP)."
-msgstr "Malĝusta kontrolsumo por la imposta nombro (NIP)."
+msgstr "Erara kontrolsumo por NIP."
 
 #: pl/forms.py:178
 msgid "National Business Register Number (REGON) consists of 9 or 14 digits."
-msgstr "Nacia Komerca Registra Nombro (REGON) konsistas el 9 aŭ 14 ciferoj."
+msgstr "La nacia komerca numero registra (REGON) konsistas el 9 aŭ 14 ciferoj."
 
 #: pl/forms.py:179
 msgid "Wrong checksum for the National Business Register Number (REGON)."
-msgstr "Malĝusta kontrolsumo por la Komerca Registra Nombro (REGON)."
+msgstr "Erara kontrolsumo por REGON."
 
 #: pl/forms.py:226
 msgid "Enter a postal code in the format XX-XXX."
-msgstr "Enigu poŝtan kodon laŭformate XX-XXX."
+msgstr "Enigu poŝtkodon en la formato XX-XXX."
 
 #: pl/pl_voivodeships.py:5
 msgid "Lower Silesian"
@@ -7899,35 +7915,35 @@ msgstr "Okcidenta Pomerio"
 
 #: pt/forms.py:38
 msgid "The specified value is not a valid Citizen Card number."
-msgstr ""
+msgstr "La provizita numero de civitana karto estas erara."
 
 #: pt/forms.py:39
 msgid ""
 "Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X "
 "is a digit and Y is an alphanumeric character)."
-msgstr ""
+msgstr "Numero de civitana karto havas la formaton XXXXXXXXXYYX aŭ XXXXXXXX-XYYX (en kiu X estas cifero kaj Y cifero aŭ majuskla litero)."
 
 #: pt/forms.py:83
 msgid ""
 "Phone numbers have at least 3 and at most 9 digits and may optionally be "
 "prefixed with '00351' or '+351'."
-msgstr ""
+msgstr "Telefonnumeroj konsistu el 3 ĝis maksimume 9 ciferoj kaj povas (nenepre) havi la prefikson '00351' aŭ '+351'."
 
 #: pt/forms.py:118
 msgid "The specified number is not a valid Social Security number."
-msgstr ""
+msgstr "La provizita social-asekura numero estas erara."
 
 #: pt/forms.py:119
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either"
 " 1 or 2 and Y is any other digit)."
-msgstr ""
+msgstr "Portugalia social-asekura numero devas havi la formaton XYYYYYYYYYY (en kiu X estas la cifero 1 aŭ 2, kaj Y ajna cifero)."
 
 #: pt/forms.py:155
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9"
 " and Y is any other digit)."
-msgstr ""
+msgstr "Poŝtkodo devas havi la formaton XXXX-XXX kaj komenciĝi per cifero alia ol nulo."
 
 #: pt/pt_regions.py:7
 msgid "Aveiro"
@@ -8011,41 +8027,41 @@ msgstr ""
 
 #: ro/forms.py:28
 msgid "Enter a valid CIF."
-msgstr "Enigu validan CIF."
+msgstr "Enigu ĝustan imposto-kodon CIF."
 
-#: ro/forms.py:66
+#: ro/forms.py:76
 msgid "Enter a valid CNP."
-msgstr "Enigu validan CNP."
+msgstr "Enigu ĝustan personan identigan numeron CNP."
 
-#: ro/forms.py:177
+#: ro/forms.py:208
 msgid ""
 "Phone numbers may only have 7 or 10 digits, except the national short "
 "numbers which have 3 to 6 digits"
-msgstr ""
+msgstr "Telefonnumeroj konsistu sole el 7 aŭ 10 ciferoj, escepte de enlandaj kurtaj numeroj enhavantaj 3 ĝis 6 ciferojn."
 
-#: ro/forms.py:180
+#: ro/forms.py:211
 msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr ""
-
-#: ro/forms.py:182
-msgid "National short numbers (3 to 6 digits) must begin with \"1\""
-msgstr ""
+msgstr "Ordinaraj telefonnumeroj (7 aŭ 10 ciferoj) devas komenciĝi per \"0\"."
 
 #: ro/forms.py:213
+msgid "National short numbers (3 to 6 digits) must begin with \"1\""
+msgstr "La naciaj kurtaj numeroj (3 ĝis 6 ciferoj) devas komenciĝi per \"1\"."
+
+#: ro/forms.py:250
 msgid "Enter a valid postal code in the format XXXXXX"
-msgstr "Enigu validan poŝtan kodon laŭformate XXXXXX."
+msgstr "Enigu ĝustan poŝtkodon en la formato XXXXXX."
 
 #: ru/forms.py:39
 msgid "Enter a postal code in the format XXXXXX."
-msgstr "Enigu poŝtan kodon laŭformate XXXXXX."
+msgstr "Enigu poŝtkodon en la formato XXXXXX."
 
 #: ru/forms.py:53
 msgid "Enter a passport number in the format XXXX XXXXXX."
-msgstr "Enigu pasportan nombron laŭformate XXXX XXXXXX."
+msgstr "Enigu numeron de interna pasporto en la formato XXXX XXXXXX."
 
 #: ru/forms.py:67
 msgid "Enter a passport number in the format XX XXXXXXX."
-msgstr "Enigu pasportan nombron laŭformate XX XXXXXXX."
+msgstr "Enigu numeron de alilandana pasporto en la formato XX XXXXXXX."
 
 #: ru/ru_regions.py:6
 msgid "Central Federal County"
@@ -8413,19 +8429,19 @@ msgstr "Jamalo-Nenekija Aŭtonoma Areo"
 
 #: se/forms.py:55
 msgid "Enter a valid Swedish organisation number."
-msgstr "Enigu validan Svedan organizaĵon nombron."
+msgstr "Enigu ĝustan svedian organizo-registran numeron."
 
 #: se/forms.py:112
 msgid "Enter a valid Swedish personal identity number."
-msgstr "Enigu validan Svedan propran identecon nombron."
+msgstr "Enigu ĝustan personan identigan numeron svedian."
 
 #: se/forms.py:113
 msgid "Co-ordination numbers are not allowed."
-msgstr "Kunordigado nombroj ne permesita."
+msgstr "Personaj kunordigaj numeroj (samordningsnummer) ne estas permesitaj."
 
 #: se/forms.py:155
 msgid "Enter a Swedish postal code in the format XXXXX."
-msgstr "Enigu validan Svedan poŝtan kodon laŭformate XXXXX."
+msgstr "Enigu ĝustan svedian poŝtkodon en la formato XXXXX."
 
 #: se/se_counties.py:9
 msgid "Stockholm"
@@ -8513,32 +8529,32 @@ msgstr "Jamtlando"
 
 #: sg/forms.py:31
 msgid "Enter a 6-digit postal code."
-msgstr ""
+msgstr "Enigu 6-ciferan poŝtkodon."
 
 #: sg/forms.py:45
 msgid ""
 "Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
+msgstr "Telefonnumeroj konsistu el 8 ciferoj kaj komenciĝu per 6, 8, aŭ 9."
 
 #: sg/forms.py:82
 msgid "Invalid NRIC/FIN."
-msgstr ""
+msgstr "Malĝusta persona identiga numero NRIC/FIN."
 
 #: si/forms.py:27
 msgid "The first 7 digits of the EMSO must represent a valid past date."
-msgstr "La unuaj 7 ciferoj de la EMSO devas reprezenti validan pasintecon daton."
+msgstr "La unuaj 7 ciferoj de EMŠO devas reprezenti ĝustan daton en pasinteco."
 
 #: si/forms.py:28
 msgid "The EMSO is not valid."
-msgstr "La EMSO ne estas valida."
+msgstr "La provizita numero de EMŠO estas erara."
 
 #: si/forms.py:89
 msgid "Enter a valid tax number in form SIXXXXXXXX"
-msgstr "Enigu validan imposton nombron laŭformate SIXXXXXXXX"
+msgstr "Enigu ĝustan imposto-numeron slovenian, en la formato SIXXXXXXXX."
 
 #: si/forms.py:156
 msgid "Enter phone number in form +386XXXXXXXX or 0XXXXXXXX."
-msgstr "Enigu telefonnumeron laŭformate +386XXXXXXXX aŭ 0XXXXXXXX."
+msgstr "Enigu telefonnumeron en la formato +386XXXXXXXX aŭ 0XXXXXXXX."
 
 #: sk/sk_districts.py:5
 msgid "Banska Bystrica"
@@ -8890,96 +8906,360 @@ msgstr "Regiono Zilino"
 
 #: tr/forms.py:23
 msgid "Enter a postal code in the format XXXXX."
-msgstr "Enigu poŝtan kodon laŭformate XXXXX."
+msgstr "Enigu poŝtkodon en la formato XXXXX."
 
 #: tr/forms.py:49
 msgid "Phone numbers must be in 0XXX XXX XXXX format."
-msgstr "Telefonnumeroj dev esti en laŭformate 0XXX XXX XXXX."
+msgstr "Telefonnumeroj devas esti en la formato 0XXX XXX XXXX."
 
 #: tr/forms.py:77
 msgid "Enter a valid Turkish Identification number."
-msgstr "Enigu validan Turkan Identigon nombron."
+msgstr "Enigu ĝustan turkian numeron identigan."
 
 #: tr/forms.py:78
 msgid "Turkish Identification number must be 11 digits."
-msgstr "Turka Identigo nombro dev esti 11 ciferoj."
+msgstr "Turkia identiga numero devas konsisti el 11 ciferoj."
 
 #: us/forms.py:35
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
-msgstr "Enigu poŝtan kodon laŭformate XXXXX aŭ XXXXX-XXXX."
+msgstr "Enigu ZIP-kodon en la formato XXXXX aŭ XXXXX-XXXX."
 
 #: us/forms.py:84
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
-msgstr "Enigu validan usonan Socialasekuran numeron formate kiel XXX-XX-XXXX."
+msgstr "Enigu ĝustan usonan social-asekuran numeron (SSN) en la formato XXX-XX-XXXX."
 
 #: us/forms.py:116
 msgid "Enter a U.S. state or territory."
-msgstr "Enigu usonan staton aŭ teritorion."
+msgstr "Provizu nomon de usona ŝtato aŭ dependa teritorio."
 
 #: us/models.py:13
 msgid "U.S. state (two uppercase letters)"
-msgstr "Usonan stato (du majusklaj leteroj)"
+msgstr "Usona ŝtato (du majusklaj literoj)"
 
 #: us/models.py:32
 msgid "U.S. postal code (two uppercase letters)"
-msgstr "Usonan poŝta kodo (du majusklaj leteroj)"
+msgstr "Usona poŝta kodo (du majusklaj literoj)"
 
 #: us/models.py:54
 msgid "U.S. ZIP code"
-msgstr ""
+msgstr "Usona ZIP-kodo"
 
 #: us/models.py:91
 msgid "Social security number"
+msgstr "Social-asekura numero"
+
+#: us/us_states.py:15 us/us_states.py:68
+msgid "Alabama"
+msgstr ""
+
+#: us/us_states.py:16 us/us_states.py:70
+msgid "Arizona"
+msgstr ""
+
+#: us/us_states.py:17 us/us_states.py:71
+msgid "Arkansas"
+msgstr ""
+
+#: us/us_states.py:18 us/us_states.py:72
+msgid "California"
+msgstr ""
+
+#: us/us_states.py:19 us/us_states.py:73
+msgid "Colorado"
+msgstr ""
+
+#: us/us_states.py:20 us/us_states.py:74
+msgid "Connecticut"
+msgstr ""
+
+#: us/us_states.py:21 us/us_states.py:75
+msgid "Delaware"
+msgstr ""
+
+#: us/us_states.py:22 us/us_states.py:76
+msgid "District of Columbia"
+msgstr ""
+
+#: us/us_states.py:23 us/us_states.py:77
+msgid "Florida"
+msgstr ""
+
+#: us/us_states.py:24 us/us_states.py:78
+msgid "Georgia"
+msgstr ""
+
+#: us/us_states.py:25 us/us_states.py:80
+msgid "Idaho"
+msgstr ""
+
+#: us/us_states.py:26 us/us_states.py:81
+msgid "Illinois"
+msgstr ""
+
+#: us/us_states.py:27 us/us_states.py:82
+msgid "Indiana"
+msgstr ""
+
+#: us/us_states.py:28 us/us_states.py:83
+msgid "Iowa"
+msgstr ""
+
+#: us/us_states.py:29 us/us_states.py:84
+msgid "Kansas"
+msgstr ""
+
+#: us/us_states.py:30 us/us_states.py:85
+msgid "Kentucky"
+msgstr ""
+
+#: us/us_states.py:31 us/us_states.py:86
+msgid "Louisiana"
+msgstr ""
+
+#: us/us_states.py:32 us/us_states.py:87
+msgid "Maine"
+msgstr ""
+
+#: us/us_states.py:33 us/us_states.py:88
+msgid "Maryland"
+msgstr ""
+
+#: us/us_states.py:34 us/us_states.py:89
+msgid "Massachusetts"
+msgstr ""
+
+#: us/us_states.py:35 us/us_states.py:90
+msgid "Michigan"
+msgstr ""
+
+#: us/us_states.py:36 us/us_states.py:91
+msgid "Minnesota"
+msgstr ""
+
+#: us/us_states.py:37 us/us_states.py:92
+msgid "Mississippi"
+msgstr ""
+
+#: us/us_states.py:38 us/us_states.py:93
+msgid "Missouri"
+msgstr ""
+
+#: us/us_states.py:39 us/us_states.py:94
+msgid "Montana"
+msgstr ""
+
+#: us/us_states.py:40 us/us_states.py:95
+msgid "Nebraska"
+msgstr ""
+
+#: us/us_states.py:41 us/us_states.py:96
+msgid "Nevada"
+msgstr ""
+
+#: us/us_states.py:42 us/us_states.py:97
+msgid "New Hampshire"
+msgstr ""
+
+#: us/us_states.py:43 us/us_states.py:98
+msgid "New Jersey"
+msgstr ""
+
+#: us/us_states.py:44 us/us_states.py:99
+msgid "New Mexico"
+msgstr ""
+
+#: us/us_states.py:45 us/us_states.py:100
+msgid "New York"
+msgstr ""
+
+#: us/us_states.py:46 us/us_states.py:101
+msgid "North Carolina"
+msgstr ""
+
+#: us/us_states.py:47 us/us_states.py:102
+msgid "North Dakota"
+msgstr ""
+
+#: us/us_states.py:48 us/us_states.py:103
+msgid "Ohio"
+msgstr ""
+
+#: us/us_states.py:49 us/us_states.py:104
+msgid "Oklahoma"
+msgstr ""
+
+#: us/us_states.py:50 us/us_states.py:105
+msgid "Oregon"
+msgstr ""
+
+#: us/us_states.py:51 us/us_states.py:106
+msgid "Pennsylvania"
+msgstr ""
+
+#: us/us_states.py:52 us/us_states.py:107
+msgid "Rhode Island"
+msgstr ""
+
+#: us/us_states.py:53 us/us_states.py:108
+msgid "South Carolina"
+msgstr ""
+
+#: us/us_states.py:54 us/us_states.py:109
+msgid "South Dakota"
+msgstr ""
+
+#: us/us_states.py:55 us/us_states.py:110
+msgid "Tennessee"
+msgstr ""
+
+#: us/us_states.py:56 us/us_states.py:111
+msgid "Texas"
+msgstr ""
+
+#: us/us_states.py:57 us/us_states.py:112
+msgid "Utah"
+msgstr ""
+
+#: us/us_states.py:58 us/us_states.py:113
+msgid "Vermont"
+msgstr ""
+
+#: us/us_states.py:59 us/us_states.py:114
+msgid "Virginia"
+msgstr ""
+
+#: us/us_states.py:60 us/us_states.py:115
+msgid "Washington"
+msgstr ""
+
+#: us/us_states.py:61 us/us_states.py:116
+msgid "West Virginia"
+msgstr ""
+
+#: us/us_states.py:62 us/us_states.py:117
+msgid "Wisconsin"
+msgstr ""
+
+#: us/us_states.py:63 us/us_states.py:118
+msgid "Wyoming"
+msgstr ""
+
+#: us/us_states.py:69
+msgid "Alaska"
+msgstr ""
+
+#: us/us_states.py:79
+msgid "Hawaii"
+msgstr ""
+
+#: us/us_states.py:123
+msgid "American Samoa"
+msgstr ""
+
+#: us/us_states.py:124
+msgid "Guam"
+msgstr ""
+
+#: us/us_states.py:125
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: us/us_states.py:126
+msgid "Puerto Rico"
+msgstr ""
+
+#: us/us_states.py:127
+msgid "Virgin Islands"
+msgstr ""
+
+#: us/us_states.py:133
+msgid "Armed Forces Americas"
+msgstr ""
+
+#: us/us_states.py:134
+msgid "Armed Forces Europe"
+msgstr ""
+
+#: us/us_states.py:135
+msgid "Armed Forces Pacific"
+msgstr ""
+
+#: us/us_states.py:141
+msgid "Federated States of Micronesia"
+msgstr ""
+
+#: us/us_states.py:142
+msgid "Marshall Islands"
+msgstr ""
+
+#: us/us_states.py:143
+msgid "Palau"
+msgstr ""
+
+#: us/us_states.py:149
+msgid "Commonwealth of the Northern Mariana Islands"
+msgstr ""
+
+#: us/us_states.py:150
+msgid "Panama Canal Zone"
+msgstr ""
+
+#: us/us_states.py:151
+msgid "Philippine Islands"
+msgstr ""
+
+#: us/us_states.py:152
+msgid "Trust Territory of the Pacific Islands"
 msgstr ""
 
 #: uy/forms.py:30
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
-msgstr "Enigu validan CI numbron laŭformate X.XXX.XXX-X,XXXXXXX-X aŭ XXXXXXXX."
+msgstr "Enigu ĝustan numeron de urugvaja identigilo (CI), en la formato X.XXX.XXX-X, XXXXXXX-X aŭ XXXXXXXX."
 
 #: uy/forms.py:32
 msgid "Enter a valid CI number."
-msgstr "Enigu validan CI numbron."
+msgstr "La identigila numero estas erara."
 
 #: za/forms.py:25
 msgid "Enter a valid South African ID number"
-msgstr "Eniri validan Sudafrikan identigan kartan nombron"
+msgstr "Enigu ĝustan numeron de sudafrika identeckarto."
 
 #: za/forms.py:64
 msgid "Enter a valid South African postal code"
-msgstr "Eniri validan Sudafrikan identigan poŝtan kodon"
+msgstr "Enigu ĝustan sudafrikan poŝtkodon."
 
 #: za/za_provinces.py:5
 msgid "Eastern Cape"
-msgstr "Orienta Kabo"
+msgstr "Eastern Cape (Orienta Kabo)"
 
 #: za/za_provinces.py:6
 msgid "Free State"
-msgstr "Liberŝtato"
+msgstr "Free State (Liberŝtato)"
 
 #: za/za_provinces.py:7
 msgid "Gauteng"
-msgstr "Gaŭtengo"
+msgstr "Gauteng [Ĥauten]"
 
 #: za/za_provinces.py:8
 msgid "KwaZulu-Natal"
-msgstr "Kvazulu-Natalo"
+msgstr "KwaZulu-Natal [KŭaZulu-Netal]"
 
 #: za/za_provinces.py:9
 msgid "Limpopo"
-msgstr ""
+msgstr "Limpopo"
 
 #: za/za_provinces.py:10
 msgid "Mpumalanga"
-msgstr "Mpumalango"
+msgstr "Mpumalanga [Empumelange]"
 
 #: za/za_provinces.py:11
 msgid "Northern Cape"
-msgstr "Norda Kabo"
+msgstr "Northern Cape (Norda Kabo)"
 
 #: za/za_provinces.py:12
 msgid "North West"
-msgstr "Norda Okcidento"
+msgstr "North West (Norda Okcidento)"
 
 #: za/za_provinces.py:13
 msgid "Western Cape"
-msgstr "Okcidenta Kabo"
+msgstr "Western Cape (Okcidenta Kabo)"

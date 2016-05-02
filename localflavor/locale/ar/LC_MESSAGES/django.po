@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Bashar Al-Abdulhadi, 2015
+# Bashar Al-Abdulhadi, 2015-2016
 # Bashar Al-Abdulhadi, 2014
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Ossama Khayat <okhayat@gmail.com>, 2011
@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-24 21:27+0200\n"
-"PO-Revision-Date: 2015-08-16 08:54+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2015-11-12 20:32+0100\n"
+"PO-Revision-Date: 2016-04-02 14:23+0000\n"
+"Last-Translator: Bashar Al-Abdulhadi\n"
 "Language-Team: Arabic (http://www.transifex.com/django/django-localflavor/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -295,6 +295,10 @@ msgstr "رقم CNPJ غير صحيح."
 msgid "This field requires at least 14 digits"
 msgstr "يتطلب هذا الحقل 14 رقماً على الأقل."
 
+#: br/forms.py:221
+msgid "Invalid Process number."
+msgstr "رقم عملية غير صحيح."
+
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
 msgstr "ولاية برازيلية (حرفان كبيران)"
@@ -479,11 +483,11 @@ msgstr "أرقام الهواتف يجب أن تكون بالنسق 0XXX XXX XX 
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
-msgstr ""
+msgstr "أدخل رقم هوية أو رقم جواز سفر سويسري صحيح بالصيغة X1234567 <0 أو 1234567890 الشكل."
 
 #: ch/forms.py:153
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
-msgstr ""
+msgstr "أدخل رقم ضمان اجتماعي سويسري صحيح بالنسق 756.XXXX.XXXX.XX."
 
 #: cl/forms.py:34
 msgid "Enter a valid Chilean RUT."
@@ -4510,7 +4514,7 @@ msgstr "تدقيق مجموع رقم حساب البنك غير صحيح."
 
 #: fi/forms.py:42
 msgid "Enter a valid Finnish social security number."
-msgstr "أدخل رقم ضمان اجتماع فنلندي صحيح."
+msgstr "أدخل رقم ضمان اجتماعي فنلندي صحيح."
 
 #: fr/forms.py:35
 msgid "Zip code"
@@ -4533,7 +4537,7 @@ msgid "Select Region"
 msgstr ""
 
 #: fr/forms.py:137
-msgid "Enter a valid French French National Identification number."
+msgid "Enter a valid French National Identification number."
 msgstr ""
 
 #: fr/forms.py:216
@@ -7179,11 +7183,11 @@ msgstr ""
 
 #: mx/forms.py:251
 msgid "Enter a valid Social Security Number."
-msgstr ""
+msgstr "أدخل رقم ضمان اجتماعي صحيح."
 
 #: mx/forms.py:252
 msgid "Invalid checksum for Social Security Number."
-msgstr ""
+msgstr "تدقيق مجموع رقم الضمان الإجتماعي غير صحيح."
 
 #: mx/models.py:15
 msgid "Mexico state (three uppercase letters)"
@@ -7203,7 +7207,7 @@ msgstr ""
 
 #: mx/models.py:79
 msgid "Mexican Social Security Number"
-msgstr ""
+msgstr "رقم ضمان إجتماعي مكسيكي"
 
 #: mx/mx_states.py:8
 msgid "Aguascalientes"
@@ -7482,7 +7486,7 @@ msgid "Whakatane District"
 msgstr ""
 
 #: nz/nz_councils.py:49
-msgid "Rotorua District\t"
+msgid "Rotorua District"
 msgstr ""
 
 #: nz/nz_councils.py:50

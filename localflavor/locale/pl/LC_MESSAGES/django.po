@@ -3,19 +3,24 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Adam Stachowicz <saibamenppl@gmail.com>, 2015
 # Adrian Antończyk <linkedin@antonczyk.it>, 2015
+# angularcircle, 2011-2012
 # angularcircle, 2011
 # angularcircle, 2012
 # Jannis Leidel <jannis@leidel.info>, 2011
 # konryd <inactive+konryd@transifex.com>, 2011
+# konryd <inactive+konryd@transifex.com>, 2011
+# m_aciek <maciej.olko@gmail.com>, 2016
+# m_aciek <maciej.olko@gmail.com>, 2016
 # Roman Barczyński <rombar@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-12 20:32+0100\n"
-"PO-Revision-Date: 2015-11-13 09:10+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2016-04-06 21:07+0000\n"
+"Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-localflavor/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,99 +30,99 @@ msgstr ""
 
 #: ar/ar_provinces.py:9
 msgid "Buenos Aires"
-msgstr ""
+msgstr "Buenos Aires"
 
 #: ar/ar_provinces.py:10
 msgid "Catamarca"
-msgstr ""
+msgstr "Catamarca"
 
 #: ar/ar_provinces.py:11
 msgid "Chaco"
-msgstr ""
+msgstr "Chaco"
 
 #: ar/ar_provinces.py:12
 msgid "Chubut"
-msgstr ""
+msgstr "Chubut"
 
 #: ar/ar_provinces.py:13
 msgid "Ciudad Autónoma de Buenos Aires"
-msgstr ""
+msgstr "Ciudad Autónoma de Buenos Aires"
 
 #: ar/ar_provinces.py:14
 msgid "Córdoba"
-msgstr ""
+msgstr "Córdoba"
 
 #: ar/ar_provinces.py:15
 msgid "Corrientes"
-msgstr ""
+msgstr "Corrientes"
 
 #: ar/ar_provinces.py:16
 msgid "Entre Ríos"
-msgstr ""
+msgstr "Entre Ríos"
 
 #: ar/ar_provinces.py:17
 msgid "Formosa"
-msgstr ""
+msgstr "Formosa"
 
 #: ar/ar_provinces.py:18
 msgid "Jujuy"
-msgstr ""
+msgstr "Jujuy"
 
 #: ar/ar_provinces.py:19
 msgid "La Pampa"
-msgstr ""
+msgstr "La Pampa"
 
 #: ar/ar_provinces.py:20 es/es_provinces.py:31 es/es_regions.py:18
 msgid "La Rioja"
-msgstr ""
+msgstr "La Rioja"
 
 #: ar/ar_provinces.py:21
 msgid "Mendoza"
-msgstr ""
+msgstr "Mendoza"
 
 #: ar/ar_provinces.py:22
 msgid "Misiones"
-msgstr ""
+msgstr "Misiones"
 
 #: ar/ar_provinces.py:23
 msgid "Neuquén"
-msgstr ""
+msgstr "Neuquén"
 
 #: ar/ar_provinces.py:24
 msgid "Río Negro"
-msgstr ""
+msgstr "Río Negro"
 
 #: ar/ar_provinces.py:25
 msgid "Salta"
-msgstr ""
+msgstr "Salta"
 
 #: ar/ar_provinces.py:26
 msgid "San Juan"
-msgstr ""
+msgstr "San Juan"
 
 #: ar/ar_provinces.py:27
 msgid "San Luis"
-msgstr ""
+msgstr "San Luis"
 
 #: ar/ar_provinces.py:28
 msgid "Santa Cruz"
-msgstr ""
+msgstr "Santa Cruz"
 
 #: ar/ar_provinces.py:29
 msgid "Santa Fe"
-msgstr ""
+msgstr "Santa Fe"
 
 #: ar/ar_provinces.py:30
 msgid "Santiago del Estero"
-msgstr ""
+msgstr "Santiago del Estero"
 
 #: ar/ar_provinces.py:31
 msgid "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
-msgstr ""
+msgstr "Tierra del Fuego, Antartida e Islas del Atlantico Sur"
 
 #: ar/ar_provinces.py:32
 msgid "Tucumán"
-msgstr ""
+msgstr "Tucumán"
 
 #: ar/forms.py:34
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
@@ -141,11 +146,11 @@ msgstr "Niepoprawny CUIT"
 
 #: ar/forms.py:97
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
-msgstr ""
+msgstr "Niepoprawny typ prawny. Typ musi mieć wartość 27, 20, 30, 23, 24 lub 33."
 
 #: at/at_states.py:6
 msgid "Burgenland"
-msgstr ""
+msgstr "Burgenland"
 
 #: at/at_states.py:7
 msgid "Carinthia"
@@ -161,19 +166,19 @@ msgstr "Górna Austria"
 
 #: at/at_states.py:10
 msgid "Salzburg"
-msgstr ""
+msgstr "Salzburg"
 
 #: at/at_states.py:11
 msgid "Styria"
-msgstr ""
+msgstr "Styria"
 
 #: at/at_states.py:12
 msgid "Tyrol"
-msgstr ""
+msgstr "Tyrol"
 
 #: at/at_states.py:13
 msgid "Vorarlberg"
-msgstr ""
+msgstr "Vorarlberg"
 
 #: at/at_states.py:14
 msgid "Vienna"
@@ -221,11 +226,11 @@ msgstr "Brabancja Flamandzka"
 
 #: be/be_provinces.py:9
 msgid "Hainaut"
-msgstr ""
+msgstr "Hainaut"
 
 #: be/be_provinces.py:10
 msgid "Liege"
-msgstr ""
+msgstr "Liège"
 
 #: be/be_provinces.py:11 nl/nl_provinces.py:13
 msgid "Limburg"
@@ -237,7 +242,7 @@ msgstr "Luksemburg"
 
 #: be/be_provinces.py:13
 msgid "Namur"
-msgstr ""
+msgstr "Namur"
 
 #: be/be_provinces.py:14
 msgid "Walloon Brabant"
@@ -298,63 +303,63 @@ msgstr "To pole musi zawierać co najmniej 14 cyfr"
 
 #: br/forms.py:221
 msgid "Invalid Process number."
-msgstr ""
+msgstr "Niepoprawny numer procesu."
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
-msgstr ""
+msgstr "Stan Brazyli (dwie wielkie litery)"
 
 #: ca/ca_provinces.py:6
 msgid "Alberta"
-msgstr ""
+msgstr "Alberta"
 
 #: ca/ca_provinces.py:7
 msgid "British Columbia"
-msgstr ""
+msgstr "Kolumbia Brytyjska"
 
 #: ca/ca_provinces.py:8
 msgid "Manitoba"
-msgstr ""
+msgstr "Manitoba"
 
 #: ca/ca_provinces.py:9
 msgid "New Brunswick"
-msgstr ""
+msgstr "Nowy Brunszwik"
 
 #: ca/ca_provinces.py:10
 msgid "Newfoundland and Labrador"
-msgstr ""
+msgstr "Nowa Fundlandia i Labrador"
 
 #: ca/ca_provinces.py:11
 msgid "Northwest Territories"
-msgstr ""
+msgstr "Terytoria Północno-Zachodnie"
 
 #: ca/ca_provinces.py:12
 msgid "Nova Scotia"
-msgstr ""
+msgstr "Nowa Szkocja"
 
 #: ca/ca_provinces.py:13
 msgid "Nunavut"
-msgstr ""
+msgstr "Nunavut"
 
 #: ca/ca_provinces.py:14
 msgid "Ontario"
-msgstr ""
+msgstr "Ontario"
 
 #: ca/ca_provinces.py:15
 msgid "Prince Edward Island"
-msgstr ""
+msgstr "Wyspa Księcia Edwarda"
 
 #: ca/ca_provinces.py:16
 msgid "Quebec"
-msgstr ""
+msgstr "Quebec"
 
 #: ca/ca_provinces.py:17
 msgid "Saskatchewan"
-msgstr ""
+msgstr "Saskatchewan"
 
 #: ca/ca_provinces.py:18
 msgid "Yukon"
-msgstr ""
+msgstr "Jukon"
 
 #: ca/forms.py:31
 msgid "Enter a postal code in the format XXX XXX."
@@ -374,107 +379,107 @@ msgstr "Wpisz poprawny numer kanadyjskiego ubezpieczenia w formacie XXX-XXX-XXXX
 
 #: ch/ch_states.py:6
 msgid "Aargau"
-msgstr ""
+msgstr "Argowia"
 
 #: ch/ch_states.py:7
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "Appenzell Innerrhoden"
 
 #: ch/ch_states.py:8
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "Appenzell Ausserrhoden"
 
 #: ch/ch_states.py:9
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "Bazylea-Miasto"
 
 #: ch/ch_states.py:10
 msgid "Basel-Land"
-msgstr ""
+msgstr "Bazylea-Okręg"
 
 #: ch/ch_states.py:11
 msgid "Berne"
-msgstr ""
+msgstr "Berno"
 
 #: ch/ch_states.py:12
 msgid "Fribourg"
-msgstr ""
+msgstr "Fryburg"
 
 #: ch/ch_states.py:13
 msgid "Geneva"
-msgstr ""
+msgstr "Genewa"
 
 #: ch/ch_states.py:14
 msgid "Glarus"
-msgstr ""
+msgstr "Glarus"
 
 #: ch/ch_states.py:15
 msgid "Graubuenden"
-msgstr ""
+msgstr "Gryzonia"
 
 #: ch/ch_states.py:16
 msgid "Jura"
-msgstr ""
+msgstr "Jura"
 
 #: ch/ch_states.py:17
 msgid "Lucerne"
-msgstr ""
+msgstr "Lucerna"
 
 #: ch/ch_states.py:18
 msgid "Neuchatel"
-msgstr ""
+msgstr "Neuchâtel"
 
 #: ch/ch_states.py:19
 msgid "Nidwalden"
-msgstr ""
+msgstr " Nidwalden"
 
 #: ch/ch_states.py:20
 msgid "Obwalden"
-msgstr ""
+msgstr "Obwalden"
 
 #: ch/ch_states.py:21
 msgid "Schaffhausen"
-msgstr ""
+msgstr "Szafuza"
 
 #: ch/ch_states.py:22
 msgid "Schwyz"
-msgstr ""
+msgstr "Schwyz"
 
 #: ch/ch_states.py:23
 msgid "Solothurn"
-msgstr ""
+msgstr " Solura"
 
 #: ch/ch_states.py:24
 msgid "St. Gallen"
-msgstr ""
+msgstr "St. Gallen"
 
 #: ch/ch_states.py:25
 msgid "Thurgau"
-msgstr ""
+msgstr "Turgowia"
 
 #: ch/ch_states.py:26
 msgid "Ticino"
-msgstr ""
+msgstr "Ticino"
 
 #: ch/ch_states.py:27
 msgid "Uri"
-msgstr ""
+msgstr "Uri"
 
 #: ch/ch_states.py:28
 msgid "Valais"
-msgstr ""
+msgstr "Valais"
 
 #: ch/ch_states.py:29
 msgid "Vaud"
-msgstr ""
+msgstr "Vaud"
 
 #: ch/ch_states.py:30
 msgid "Zug"
-msgstr ""
+msgstr "Zug"
 
 #: ch/ch_states.py:31
 msgid "Zurich"
-msgstr ""
+msgstr "Zurych"
 
 #: ch/forms.py:50
 msgid "Phone numbers must be in 0XX XXX XX XX format."
@@ -484,11 +489,11 @@ msgstr "Numery telefoniczne muszą być w formacie 0XX XXX XX XX"
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
-msgstr ""
+msgstr "Wprowadź poprawny numer Szwajcarskiego paszportu lub dowodu osobistego w formacie X1234567<0 lub 1234567890."
 
 #: ch/forms.py:153
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
-msgstr ""
+msgstr "Wprowadź poprawny numer szwajcarskiego ubezpieczenia społecznego w formacie 756.XXXX.XXXX.XX."
 
 #: cl/forms.py:34
 msgid "Enter a valid Chilean RUT."
@@ -612,7 +617,7 @@ msgstr "Bawaria"
 
 #: de/de_states.py:8
 msgid "Berlin"
-msgstr ""
+msgstr "Berlin"
 
 #: de/de_states.py:9
 msgid "Brandenburg"
@@ -624,7 +629,7 @@ msgstr "Brema"
 
 #: de/de_states.py:11
 msgid "Hamburg"
-msgstr ""
+msgstr "Hamburg"
 
 #: de/de_states.py:12
 msgid "Hessen"
@@ -690,7 +695,7 @@ msgstr ""
 
 #: dk/dk_municipalities.py:11
 msgid "Bornholm"
-msgstr ""
+msgstr "Bornholm"
 
 #: dk/dk_municipalities.py:12 dk/dk_postalcodes.py:687
 msgid "Brøndby"
@@ -4204,19 +4209,19 @@ msgstr ""
 
 #: ee/forms.py:46
 msgid "Enter an 11-digit Estonian personal identification code."
-msgstr ""
+msgstr "Wprowadź 11-cyfrowy estoński osobisty numer identyfikacyjny."
 
 #: ee/forms.py:47
 msgid "Enter a valid Estonian personal identification code."
-msgstr ""
+msgstr "Wprowadź poprawny estoński osobisty numer identyfikacyjny."
 
 #: ee/forms.py:101
 msgid "Enter an 8-digit Estonian business registry code."
-msgstr ""
+msgstr "Wprowadź 8-cyfrowy estoński kod rejestracyjny firmy."
 
 #: ee/forms.py:102
 msgid "Enter a valid Estonian business registry code."
-msgstr ""
+msgstr "Wprowadź poprawny estoński kod rejestracyjny firmy."
 
 #: es/es_provinces.py:6
 msgid "Araba"
@@ -5167,7 +5172,7 @@ msgstr "Szkocja"
 
 #: generic/models.py:36
 msgid "An International Bank Account Number"
-msgstr ""
+msgstr "Międzynarodowy numer rachunku bankowego"
 
 #: generic/models.py:65
 msgid "Business Identifier Code"
@@ -5176,75 +5181,75 @@ msgstr ""
 #: generic/validators.py:155
 #, python-format
 msgid "%s is not a valid character for IBAN."
-msgstr ""
+msgstr "%s nie jest poprawnym znakiem dla IBAN."
 
 #: generic/validators.py:177
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
-msgstr ""
+msgstr "IBAN dla kraju o kodzie %(country_code)s musi zawierać %(number)s znaków."
 
 #: generic/validators.py:180
 #, python-format
 msgid "%s is not a valid country code for IBAN."
-msgstr ""
+msgstr "%s nie jest poprawnym kodem kraju IBAN"
 
 #: generic/validators.py:182
 #, python-format
 msgid "%s IBANs are not allowed in this field."
-msgstr ""
+msgstr "Numery IBAN %s nie są dopuszczone dla tego pola."
 
 #: generic/validators.py:185
 msgid "Not a valid IBAN."
-msgstr ""
+msgstr "Niepoprawny IBAN."
 
 #: generic/validators.py:205
 msgid "BIC codes have either 8 or 11 characters."
-msgstr ""
+msgstr "Kody BIC mają 8 lub 11 znaków."
 
 #: generic/validators.py:211
 #, python-format
 msgid "%s is not a valid institution code."
-msgstr ""
+msgstr "%s nie jest poprawnym kodem instytucji."
 
 #: generic/validators.py:216
 #, python-format
 msgid "%s is not a valid country code."
-msgstr ""
+msgstr "%s nie jest poprawnym kodem kraju."
 
 #: generic/validators.py:225
 msgid "Not a valid EAN code."
-msgstr ""
+msgstr "Niepoprawny kod EAN."
 
 #: gr/forms.py:27
 msgid "Enter a valid 5-digit greek postal code."
-msgstr ""
+msgstr "Wpisz poprawny 5-cio cyfrowy grecki kod pocztowy."
 
 #: gr/forms.py:42
 msgid "Enter a valid greek tax number (9 digits)."
-msgstr ""
+msgstr "Wpisz poprawny grecki numer podatkowy (9 cyfr)."
 
 #: gr/forms.py:79
 msgid "Enter a 10-digit greek phone number."
-msgstr ""
+msgstr "Wpisz 10-cio cyfrowy grecki numer telefonu."
 
 #: gr/forms.py:104
 msgid "Enter a greek mobile phone number starting with 69."
-msgstr ""
+msgstr "Wpisz grecki numer telefonu komórkowego zaczynający się od 69."
 
 #: hk/forms.py:37
 #, python-format
 msgid "Phone number should not start with one of the followings: %s."
-msgstr ""
+msgstr "Numer telefonu nie powinien zaczynać się od jednego z tych znaków: %s."
 
 #: hk/forms.py:40
 #, python-format
 msgid "Phone number must be in one of the following formats: %s."
-msgstr ""
+msgstr "Numer telefonu musi być w jednym z podanych formatów: %s."
 
 #: hk/forms.py:42
 #, python-format
 msgid "Phone number should start with one of the followings: %s."
-msgstr ""
+msgstr "Numer telefonu powinien zaczynać się od: %s."
 
 #: hr/forms.py:75
 msgid "Enter a valid 13 digit JMBG"
@@ -5284,7 +5289,7 @@ msgstr "Wpisz poprawny kod obszaru lub sieci komórkowej"
 
 #: hr/forms.py:219
 msgid "The phone number is too long"
-msgstr ""
+msgstr "Numer telefonu jest zbyt długi."
 
 #: hr/forms.py:257
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
@@ -5756,7 +5761,7 @@ msgstr ""
 
 #: il/forms.py:23
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
-msgstr ""
+msgstr "Wpisz kod pocztowy w formacie XXXXXXX (lub XXXXX) - tylko cyfry"
 
 #: il/forms.py:53
 msgid "Enter a valid ID number."
@@ -5764,7 +5769,7 @@ msgstr "Wpisz poprawny numer ID."
 
 #: il/forms.py:78
 msgid "Enter a valid Mobile Number."
-msgstr ""
+msgstr "Wpisz poprawny numer telefonu komórkowego."
 
 #: in_/forms.py:48
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
@@ -5777,7 +5782,7 @@ msgstr "Wpisz indyjski stan lub terytorium"
 #: in_/forms.py:117
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
-msgstr ""
+msgstr "Wpisz poprawny numer Aadhaar w formacie XXXX XXXX XXXX lub XXXX-XXXX-XXXX."
 
 #: in_/forms.py:164
 msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
@@ -5802,7 +5807,7 @@ msgstr "Wpisz poprawny kod pocztowy."
 
 #: it/forms.py:76
 msgid "Enter a valid Tax code."
-msgstr ""
+msgstr "Wpisz poprawny numer Aadhaar w formacie XXXX XXXX XXXX lub XXXX-XXXX-XXXX."
 
 #: it/forms.py:108
 msgid "Enter a valid VAT number."
@@ -5810,7 +5815,7 @@ msgstr "Wpisz poprawny numer VAT."
 
 #: it/forms.py:129
 msgid "Enter a valid Italian phone number."
-msgstr ""
+msgstr "Wpisz poprawny włoski numer telefonu."
 
 #: it/util.py:46 it/util.py:59
 msgid "Check digit does not match."
@@ -6026,15 +6031,15 @@ msgstr ""
 
 #: lt/forms.py:100
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr ""
+msgstr "Wpisz kod pocztowy w formacie XXXXX lub LT-XXXXX."
 
 #: lt/forms.py:146
 msgid "Phone number can only contain digits"
-msgstr ""
+msgstr "Numer telefonu może się składać jedynie z cyfr"
 
 #: lt/forms.py:147
 msgid "Could not validate the phone number"
-msgstr ""
+msgstr "Nie udało się zweryfikować numeru telefonu"
 
 #: lt/lt_choices.py:7
 msgid "Alytus"
@@ -7172,7 +7177,7 @@ msgstr "Unikatowy numer obywatela (13 cyfr)"
 
 #: mt/forms.py:19
 msgid "Enter a valid postal code in format AAA 0000."
-msgstr ""
+msgstr "Wpisz poprawny kod pocztowy w formacie AAA 0000."
 
 #: mx/forms.py:65
 msgid "Enter a valid zip code in the format XXXXX."
@@ -7196,11 +7201,11 @@ msgstr "Niepoprawna suma kontrolna CURP."
 
 #: mx/forms.py:251
 msgid "Enter a valid Social Security Number."
-msgstr ""
+msgstr "Wpisz poprawny numer ubezpieczenia społecznego."
 
 #: mx/forms.py:252
 msgid "Invalid checksum for Social Security Number."
-msgstr ""
+msgstr "Niepoprawna suma kontrolna numeru ubezpieczenia społecznego."
 
 #: mx/models.py:15
 msgid "Mexico state (three uppercase letters)"
@@ -7360,11 +7365,11 @@ msgstr "Wpisz poprawny numer SoFi"
 
 #: nl/models.py:19
 msgid "Enter a valid bank account number"
-msgstr ""
+msgstr "Wpisz poprawny numer konta bankowego"
 
 #: nl/models.py:20
 msgid "Bank account numbers have 1 - 7, 9 or 10 digits"
-msgstr ""
+msgstr "Numery kont bankowych mają 1 - 7, 9 lub 10 cyfr"
 
 #: nl/nl_provinces.py:8
 msgid "Drenthe"
@@ -7416,15 +7421,15 @@ msgstr "Wpis poprawny numer norweskiego ubezpieczenia socjalnego."
 
 #: nz/forms.py:73
 msgid "Invalid post code."
-msgstr ""
+msgstr "Niepoprawny kod pocztowy."
 
 #: nz/forms.py:86
 msgid "Invalid phone number."
-msgstr ""
+msgstr "Niepoprawny numer telefonu."
 
 #: nz/forms.py:130
 msgid "Invalid bank account number."
-msgstr ""
+msgstr "Niepoprawny numer konta bankowego."
 
 #: nz/nz_councils.py:31
 msgid "Far North District"
@@ -7764,11 +7769,11 @@ msgstr "To pole musi zawierać 11 cyfr."
 
 #: pk/forms.py:26
 msgid "Enter a 5 digit postcode."
-msgstr ""
+msgstr "Wprowadź 5-cio cyfrowy kod pocztowy."
 
 #: pk/forms.py:40
 msgid "Phone numbers must contain 9, 10 or 11 digits."
-msgstr ""
+msgstr "Numery telefonów muszą zawierać 9, 10 lub 11 cyfr."
 
 #: pk/models.py:14
 msgid "Pakistani State"
@@ -7918,35 +7923,35 @@ msgstr "zachodniopomorskie"
 
 #: pt/forms.py:38
 msgid "The specified value is not a valid Citizen Card number."
-msgstr ""
+msgstr "Podana wartość nie jest poprawnym numerem Karty Obywatela."
 
 #: pt/forms.py:39
 msgid ""
 "Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X "
 "is a digit and Y is an alphanumeric character)."
-msgstr ""
+msgstr "Numery Kart Obywatela mają format XXXXXXXXXYYX lub XXXXXXXX-XYYX (gdzie X to cyfry, a Y to znaki alfanumeryczne)."
 
 #: pt/forms.py:83
 msgid ""
 "Phone numbers have at least 3 and at most 9 digits and may optionally be "
 "prefixed with '00351' or '+351'."
-msgstr ""
+msgstr "Numery telefonów zawierają od 3 do 9 cyfr i mogą posiadać prefiks '00351' lub '+351'."
 
 #: pt/forms.py:118
 msgid "The specified number is not a valid Social Security number."
-msgstr ""
+msgstr "Podany numer nie jest poprawnym numerem ubezpieczenia społecznego."
 
 #: pt/forms.py:119
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either"
 " 1 or 2 and Y is any other digit)."
-msgstr ""
+msgstr "Numer ubezpieczenia społecznego musi być w formacie XYYYYYYYYYY (gdzie X to 1 lub 2, a Y to dowolne cyfry)."
 
 #: pt/forms.py:155
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9"
 " and Y is any other digit)."
-msgstr ""
+msgstr "Kod pocztowy musi być w formacie XYYY-YYY (gdzie X to cyfry od 1 do 9, a Y to dowolne inne cyfry)."
 
 #: pt/pt_regions.py:7
 msgid "Aveiro"
@@ -8040,15 +8045,15 @@ msgstr "Wpisz poprawny CNP."
 msgid ""
 "Phone numbers may only have 7 or 10 digits, except the national short "
 "numbers which have 3 to 6 digits"
-msgstr ""
+msgstr "Numery telefonu mogą zwierać jedynie 7 lub 10 cyfr, z wyjątkiem krótkich numerów narodowych, które mają 3 do 6 cyfr"
 
 #: ro/forms.py:211
 msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr ""
+msgstr "Normalne numery telefonów (7 lub 10 cyfr) muszą zaczynać się od \"0\""
 
 #: ro/forms.py:213
 msgid "National short numbers (3 to 6 digits) must begin with \"1\""
-msgstr ""
+msgstr "Narodowe krótkie numery (3 do 6 cyfr) muszą zaczynać się od \"1\""
 
 #: ro/forms.py:250
 msgid "Enter a valid postal code in the format XXXXXX"
@@ -8949,7 +8954,7 @@ msgstr ""
 
 #: us/models.py:91
 msgid "Social security number"
-msgstr ""
+msgstr "Numer ubezpieczenia społecznego"
 
 #: us/us_states.py:15 us/us_states.py:68
 msgid "Alabama"
@@ -8981,11 +8986,11 @@ msgstr ""
 
 #: us/us_states.py:22 us/us_states.py:76
 msgid "District of Columbia"
-msgstr ""
+msgstr "Dystrykt Kolumbii"
 
 #: us/us_states.py:23 us/us_states.py:77
 msgid "Florida"
-msgstr ""
+msgstr "Floryda"
 
 #: us/us_states.py:24 us/us_states.py:78
 msgid "Georgia"
@@ -9069,11 +9074,11 @@ msgstr ""
 
 #: us/us_states.py:44 us/us_states.py:99
 msgid "New Mexico"
-msgstr ""
+msgstr "Nowy Meksyk"
 
 #: us/us_states.py:45 us/us_states.py:100
 msgid "New York"
-msgstr ""
+msgstr "Nowy Jork"
 
 #: us/us_states.py:46 us/us_states.py:101
 msgid "North Carolina"
@@ -9093,7 +9098,7 @@ msgstr ""
 
 #: us/us_states.py:50 us/us_states.py:105
 msgid "Oregon"
-msgstr ""
+msgstr "Oregon"
 
 #: us/us_states.py:51 us/us_states.py:106
 msgid "Pennsylvania"
@@ -9101,7 +9106,7 @@ msgstr ""
 
 #: us/us_states.py:52 us/us_states.py:107
 msgid "Rhode Island"
-msgstr ""
+msgstr "Rhode Island"
 
 #: us/us_states.py:53 us/us_states.py:108
 msgid "South Carolina"

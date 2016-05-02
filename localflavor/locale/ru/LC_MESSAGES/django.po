@@ -4,7 +4,8 @@
 # 
 # Translators:
 # Mingun <Alexander_Sergey@mail.ru>, 2014
-# Denis Darii <sinednx@gmail.com>, 2011
+# Alexandr <alexromantsov@gmail.com>, 2016
+# Denis Darii <denis.darii@gmail.com>, 2011
 # Eugene MechanisM <contact@mechanism.name>, 2014
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Michael Bashkirov <michael.bashkirov@gmail.com>, 2011
@@ -16,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-24 21:27+0200\n"
-"PO-Revision-Date: 2015-08-16 08:54+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2015-11-12 20:32+0100\n"
+"PO-Revision-Date: 2016-04-27 02:37+0000\n"
+"Last-Translator: Alexandr <alexromantsov@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/django/django-localflavor/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -299,6 +300,10 @@ msgstr "Неправильный CNPJ номер."
 #: br/forms.py:168
 msgid "This field requires at least 14 digits"
 msgstr "Это поле требует как минимум 14 цифр"
+
+#: br/forms.py:221
+msgid "Invalid Process number."
+msgstr "Неверный номер процесса"
 
 #: br/models.py:11
 msgid "State of Brazil (two uppercase letters)"
@@ -4138,6 +4143,10 @@ msgstr ""
 msgid "A phone number must be 8 digits and may have country code"
 msgstr "Номер телефона должен состоять из 8 цифр и включать в себя код страны"
 
+#: ec/models.py:14
+msgid "Ecuadorian province"
+msgstr ""
+
 #: ee/ee_counties.py:9
 msgid "Harju County"
 msgstr "Харьюмаа"
@@ -4538,7 +4547,7 @@ msgid "Select Region"
 msgstr "Выберите регион"
 
 #: fr/forms.py:137
-msgid "Enter a valid French French National Identification number."
+msgid "Enter a valid French National Identification number."
 msgstr ""
 
 #: fr/forms.py:216
@@ -5179,29 +5188,29 @@ msgstr ""
 #: generic/validators.py:182
 #, python-format
 msgid "%s IBANs are not allowed in this field."
-msgstr ""
+msgstr "%s IBANs не допускаются в этой области."
 
 #: generic/validators.py:185
 msgid "Not a valid IBAN."
-msgstr ""
+msgstr "Не верный IBAN."
 
 #: generic/validators.py:205
 msgid "BIC codes have either 8 or 11 characters."
-msgstr ""
+msgstr "BIC коды имеют 8 или 11 символов."
 
 #: generic/validators.py:211
 #, python-format
 msgid "%s is not a valid institution code."
-msgstr ""
+msgstr "%s  не допустимый код учреждения."
 
 #: generic/validators.py:216
 #, python-format
 msgid "%s is not a valid country code."
-msgstr ""
+msgstr "%s не действительный код страны"
 
 #: generic/validators.py:225
 msgid "Not a valid EAN code."
-msgstr ""
+msgstr "Не действительный код EAN."
 
 #: gr/forms.py:27
 msgid "Enter a valid 5-digit greek postal code."
@@ -5788,17 +5797,17 @@ msgstr "Неправильный исландский идентификацио
 msgid "Enter a valid zip code."
 msgstr "Введите правильный почтовый индекс."
 
-#: it/forms.py:77
+#: it/forms.py:76
 msgid "Enter a valid Tax code."
-msgstr ""
+msgstr "Введите действующий Налоговый кодекс."
 
-#: it/forms.py:109
+#: it/forms.py:108
 msgid "Enter a valid VAT number."
 msgstr "Введите правильный VAT номер."
 
-#: it/forms.py:130
+#: it/forms.py:129
 msgid "Enter a valid Italian phone number."
-msgstr ""
+msgstr "Введите действующий итальянский номер телефона."
 
 #: it/util.py:46 it/util.py:59
 msgid "Check digit does not match."
@@ -7160,7 +7169,7 @@ msgstr "Индивидуальный номер гражданина (13 циф�
 
 #: mt/forms.py:19
 msgid "Enter a valid postal code in format AAA 0000."
-msgstr ""
+msgstr "Введите действительный почтовый индекс в формате AAA 0000."
 
 #: mx/forms.py:65
 msgid "Enter a valid zip code in the format XXXXX."
@@ -7487,7 +7496,7 @@ msgid "Whakatane District"
 msgstr ""
 
 #: nz/nz_councils.py:49
-msgid "Rotorua District\t"
+msgid "Rotorua District"
 msgstr ""
 
 #: nz/nz_councils.py:50
@@ -8020,25 +8029,25 @@ msgstr "Автономный регион Азорские острова"
 msgid "Enter a valid CIF."
 msgstr "Введите правильный CIF."
 
-#: ro/forms.py:66
+#: ro/forms.py:76
 msgid "Enter a valid CNP."
 msgstr "Введите правильный CNP."
 
-#: ro/forms.py:177
+#: ro/forms.py:208
 msgid ""
 "Phone numbers may only have 7 or 10 digits, except the national short "
 "numbers which have 3 to 6 digits"
-msgstr ""
+msgstr "Номера телефонов могут иметь только 7 или 10 цифр, за исключением национальных коротких номеров, которые имеют от 3 до 6 цифр"
 
-#: ro/forms.py:180
+#: ro/forms.py:211
 msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr ""
-
-#: ro/forms.py:182
-msgid "National short numbers (3 to 6 digits) must begin with \"1\""
-msgstr ""
+msgstr "Нормальные телефонные номера (7 или 10 цифр) должны начинаться с \"0\""
 
 #: ro/forms.py:213
+msgid "National short numbers (3 to 6 digits) must begin with \"1\""
+msgstr "Национальные короткие номера (от 3 до 6 цифр) должны начинаться с \"1\""
+
+#: ro/forms.py:250
 msgid "Enter a valid postal code in the format XXXXXX"
 msgstr "Введите почтовый индекс в формате XXXXXX."
 
@@ -8938,6 +8947,270 @@ msgstr "почтовый индекс США"
 #: us/models.py:91
 msgid "Social security number"
 msgstr "Номер социального страхования"
+
+#: us/us_states.py:15 us/us_states.py:68
+msgid "Alabama"
+msgstr "Алабама"
+
+#: us/us_states.py:16 us/us_states.py:70
+msgid "Arizona"
+msgstr "Аризона"
+
+#: us/us_states.py:17 us/us_states.py:71
+msgid "Arkansas"
+msgstr ""
+
+#: us/us_states.py:18 us/us_states.py:72
+msgid "California"
+msgstr "Калифорния"
+
+#: us/us_states.py:19 us/us_states.py:73
+msgid "Colorado"
+msgstr "Колорадо"
+
+#: us/us_states.py:20 us/us_states.py:74
+msgid "Connecticut"
+msgstr ""
+
+#: us/us_states.py:21 us/us_states.py:75
+msgid "Delaware"
+msgstr ""
+
+#: us/us_states.py:22 us/us_states.py:76
+msgid "District of Columbia"
+msgstr ""
+
+#: us/us_states.py:23 us/us_states.py:77
+msgid "Florida"
+msgstr "Флорида"
+
+#: us/us_states.py:24 us/us_states.py:78
+msgid "Georgia"
+msgstr ""
+
+#: us/us_states.py:25 us/us_states.py:80
+msgid "Idaho"
+msgstr "Айдахо"
+
+#: us/us_states.py:26 us/us_states.py:81
+msgid "Illinois"
+msgstr "Иллинойс"
+
+#: us/us_states.py:27 us/us_states.py:82
+msgid "Indiana"
+msgstr "Индиана"
+
+#: us/us_states.py:28 us/us_states.py:83
+msgid "Iowa"
+msgstr "Айова"
+
+#: us/us_states.py:29 us/us_states.py:84
+msgid "Kansas"
+msgstr "Канзас"
+
+#: us/us_states.py:30 us/us_states.py:85
+msgid "Kentucky"
+msgstr ""
+
+#: us/us_states.py:31 us/us_states.py:86
+msgid "Louisiana"
+msgstr ""
+
+#: us/us_states.py:32 us/us_states.py:87
+msgid "Maine"
+msgstr ""
+
+#: us/us_states.py:33 us/us_states.py:88
+msgid "Maryland"
+msgstr ""
+
+#: us/us_states.py:34 us/us_states.py:89
+msgid "Massachusetts"
+msgstr ""
+
+#: us/us_states.py:35 us/us_states.py:90
+msgid "Michigan"
+msgstr "Мичиган"
+
+#: us/us_states.py:36 us/us_states.py:91
+msgid "Minnesota"
+msgstr ""
+
+#: us/us_states.py:37 us/us_states.py:92
+msgid "Mississippi"
+msgstr "Миссисипи"
+
+#: us/us_states.py:38 us/us_states.py:93
+msgid "Missouri"
+msgstr ""
+
+#: us/us_states.py:39 us/us_states.py:94
+msgid "Montana"
+msgstr "Монтана"
+
+#: us/us_states.py:40 us/us_states.py:95
+msgid "Nebraska"
+msgstr ""
+
+#: us/us_states.py:41 us/us_states.py:96
+msgid "Nevada"
+msgstr "Невада"
+
+#: us/us_states.py:42 us/us_states.py:97
+msgid "New Hampshire"
+msgstr ""
+
+#: us/us_states.py:43 us/us_states.py:98
+msgid "New Jersey"
+msgstr ""
+
+#: us/us_states.py:44 us/us_states.py:99
+msgid "New Mexico"
+msgstr ""
+
+#: us/us_states.py:45 us/us_states.py:100
+msgid "New York"
+msgstr "Нью-Йорк"
+
+#: us/us_states.py:46 us/us_states.py:101
+msgid "North Carolina"
+msgstr ""
+
+#: us/us_states.py:47 us/us_states.py:102
+msgid "North Dakota"
+msgstr ""
+
+#: us/us_states.py:48 us/us_states.py:103
+msgid "Ohio"
+msgstr ""
+
+#: us/us_states.py:49 us/us_states.py:104
+msgid "Oklahoma"
+msgstr ""
+
+#: us/us_states.py:50 us/us_states.py:105
+msgid "Oregon"
+msgstr ""
+
+#: us/us_states.py:51 us/us_states.py:106
+msgid "Pennsylvania"
+msgstr ""
+
+#: us/us_states.py:52 us/us_states.py:107
+msgid "Rhode Island"
+msgstr ""
+
+#: us/us_states.py:53 us/us_states.py:108
+msgid "South Carolina"
+msgstr ""
+
+#: us/us_states.py:54 us/us_states.py:109
+msgid "South Dakota"
+msgstr ""
+
+#: us/us_states.py:55 us/us_states.py:110
+msgid "Tennessee"
+msgstr ""
+
+#: us/us_states.py:56 us/us_states.py:111
+msgid "Texas"
+msgstr "Техас"
+
+#: us/us_states.py:57 us/us_states.py:112
+msgid "Utah"
+msgstr ""
+
+#: us/us_states.py:58 us/us_states.py:113
+msgid "Vermont"
+msgstr ""
+
+#: us/us_states.py:59 us/us_states.py:114
+msgid "Virginia"
+msgstr ""
+
+#: us/us_states.py:60 us/us_states.py:115
+msgid "Washington"
+msgstr "Вашингтон"
+
+#: us/us_states.py:61 us/us_states.py:116
+msgid "West Virginia"
+msgstr ""
+
+#: us/us_states.py:62 us/us_states.py:117
+msgid "Wisconsin"
+msgstr ""
+
+#: us/us_states.py:63 us/us_states.py:118
+msgid "Wyoming"
+msgstr ""
+
+#: us/us_states.py:69
+msgid "Alaska"
+msgstr "Аляска"
+
+#: us/us_states.py:79
+msgid "Hawaii"
+msgstr "Гавайи"
+
+#: us/us_states.py:123
+msgid "American Samoa"
+msgstr ""
+
+#: us/us_states.py:124
+msgid "Guam"
+msgstr ""
+
+#: us/us_states.py:125
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: us/us_states.py:126
+msgid "Puerto Rico"
+msgstr ""
+
+#: us/us_states.py:127
+msgid "Virgin Islands"
+msgstr ""
+
+#: us/us_states.py:133
+msgid "Armed Forces Americas"
+msgstr ""
+
+#: us/us_states.py:134
+msgid "Armed Forces Europe"
+msgstr ""
+
+#: us/us_states.py:135
+msgid "Armed Forces Pacific"
+msgstr ""
+
+#: us/us_states.py:141
+msgid "Federated States of Micronesia"
+msgstr "Федеративные Штаты Микронезии"
+
+#: us/us_states.py:142
+msgid "Marshall Islands"
+msgstr ""
+
+#: us/us_states.py:143
+msgid "Palau"
+msgstr ""
+
+#: us/us_states.py:149
+msgid "Commonwealth of the Northern Mariana Islands"
+msgstr ""
+
+#: us/us_states.py:150
+msgid "Panama Canal Zone"
+msgstr ""
+
+#: us/us_states.py:151
+msgid "Philippine Islands"
+msgstr "Филиппинские острова"
+
+#: us/us_states.py:152
+msgid "Trust Territory of the Pacific Islands"
+msgstr ""
 
 #: uy/forms.py:30
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
