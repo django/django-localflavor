@@ -163,6 +163,49 @@ class MXRFCField(RegexField):
         return first_four in RFC_INCONVENIENT_WORDS
 
 
+class MXCLABEField(RegexField):
+    """This field validates a CLABE (Clave Bancaria Estandarizada).
+
+    A CLABE is a 18-digits long number. The first 6 digits denote bank and branch number.
+    The remaining 12 digits denote an account number, plus a verifying digit.
+
+    More info:
+    https://en.wikipedia.org/wiki/CLABE
+
+    .. versionadded:: 1.4
+    """
+
+    default_error_messages = {
+        'invalid': _('Enter a valid CLABE.'),
+        'invalid_checksum': _('Invalid checksum for CLABE.'),
+    }
+
+    def __init__(self, min_length=18, max_length=18, *args, **kwargs):
+        clabe_re = r'^\d{18}$'
+        super(MXCLABEField, self).__init__(clabe_re, min_length, max_length, *args, **kwargs)
+
+    def _checksum(self, value):
+        verification_digit = int(value[-1])
+        number = value[:-1]
+
+        weight_factor = (3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7)
+
+        sum_remainder = sum(x * int(y) % 10 for x, y in zip(weight_factor, number)) % 10
+
+        return verification_digit == (10 - sum_remainder) % 10
+
+    def clean(self, value):
+        value = super(MXCLABEField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+        if not value.isdigit():
+            raise ValidationError(self.error_messages['invalid'])
+        if not self._checksum(value):
+            raise ValidationError(self.error_messages['invalid_checksum'])
+
+        return value
+
+
 class MXCURPField(RegexField):
     """
     A field that validates a Mexican Clave Única de Registro de Población.

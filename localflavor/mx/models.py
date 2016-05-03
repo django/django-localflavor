@@ -1,6 +1,7 @@
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
+from .forms import MXCLABEField as MXCLABEFormField
 from .forms import MXCURPField as MXCURPFormField
 from .forms import MXRFCField as MXRFCFormField
 from .forms import MXSocialSecurityNumberField as MXSocialSecurityNumberFormField
@@ -69,6 +70,30 @@ class MXRFCField(CharField):
         defaults = {'form_class': MXRFCFormField}
         defaults.update(kwargs)
         return super(MXRFCField, self).formfield(**defaults)
+
+
+class MXCLABEField(CharField):
+    """
+    A model field that forms represent as a forms.MXCURPField field and
+    stores the value of a valid Mexican CLABE.
+
+    .. versionadded:: 1.4
+    """
+    description = _("Mexican CLABE")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 18
+        super(MXCLABEField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(MXCLABEField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': MXCLABEFormField}
+        defaults.update(kwargs)
+        return super(MXCLABEField, self).formfield(**defaults)
 
 
 class MXCURPField(CharField):

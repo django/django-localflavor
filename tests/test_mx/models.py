@@ -1,6 +1,6 @@
 from django.db import models
-
-from localflavor.mx.models import MXCURPField, MXRFCField, MXSocialSecurityNumberField, MXStateField, MXZipCodeField
+from localflavor.mx.models import (MXCLABEField, MXCURPField, MXRFCField, MXSocialSecurityNumberField, MXStateField,
+                                   MXZipCodeField)
 
 
 class MXPersonProfile(models.Model):
@@ -9,3 +9,4 @@ class MXPersonProfile(models.Model):
     curp = MXCURPField()
     zip_code = MXZipCodeField()
     ssn = MXSocialSecurityNumberField()
+    clabe = MXCLABEField()

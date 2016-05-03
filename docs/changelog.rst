@@ -10,7 +10,8 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- Added MXCLABEField model and form fields.
+  (`gh-227 <https://github.com/django/django-localflavor/pull/227>`_).
 
 Modifications to existing flavors:
 

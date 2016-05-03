@@ -7,4 +7,4 @@ class MXPersonProfileForm(ModelForm):
 
     class Meta:
         model = MXPersonProfile
-        fields = ('state', 'rfc', 'curp', 'zip_code', 'ssn')
+        fields = ('state', 'rfc', 'curp', 'zip_code', 'ssn', 'clabe')
