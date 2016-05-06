@@ -33,7 +33,7 @@ Package Index: https://pypi.python.org/pypi/django-localflavor
 You're encouraged to use the latest version of this package unless you need
 support for an unsupported version of Django.
 
-**2016-04-06 - 1.3**: Django 1.7 - 1.9
+**2016-05-06 - 1.3**: Django 1.7 - 1.9
 
 **2015-11-27 - 1.2**: Django 1.5 - 1.9
 
