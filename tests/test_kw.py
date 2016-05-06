@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.kw.forms import KWCivilIDNumberField
+from localflavor.kw.forms import KWCivilIDNumberField, KWGovernorateSelect
 
 
 class KWLocalFlavorTests(SimpleTestCase):
@@ -20,3 +20,15 @@ class KWLocalFlavorTests(SimpleTestCase):
             '2*9332013455': error_invalid,
         }
         self.assertFieldOutput(KWCivilIDNumberField, valid, invalid)
+
+    def test_KWGovernorateSelect(self):
+        f = KWGovernorateSelect()
+        result = '''<select name="governorates">
+<option value="AH">Ahmadi</option>
+<option value="FA">Farwaniyah</option>
+<option value="JA">Jahra</option>
+<option value="KU" selected="selected">Capital</option>
+<option value="HA">Hawalli</option>
+<option value="MU">Mubarak Al Kabir</option>
+</select>'''
+        self.assertHTMLEqual(f.render('governorates', 'KU'), result)

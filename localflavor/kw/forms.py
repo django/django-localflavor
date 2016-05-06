@@ -8,8 +8,10 @@ from datetime import date
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field
+from django.forms.fields import Field, Select
 from django.utils.translation import gettext_lazy as _
+
+from .kw_governorates import GOVERNORATE_CHOICES
 
 id_re = re.compile(r'''^(?P<initial>\d{1})
                        (?P<yy>\d\d)
@@ -73,3 +75,13 @@ class KWCivilIDNumberField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
         return value
+
+
+class KWGovernorateSelect(Select):
+    """
+    A Select widget that uses a list of Kuwait governorates
+    as its choices.
+    """
+    def __init__(self, attrs=None):
+        super(KWGovernorateSelect, self).__init__(attrs,
+                                                  choices=GOVERNORATE_CHOICES)
