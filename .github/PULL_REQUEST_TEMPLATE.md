@@ -1,16 +1,20 @@
 Thanks for your contribution!
 
-Here's a checklist to go through which helps us keep the code contributions
+A checklist is included below which helps us keep the code contributions
 consistent and helps speed up the review process. You can add additional
 commits to your pull request if you haven't met all of these points on your
 first version. You'll be asked to rebase and squash the commits before the
 final merge.
 
+Please replace these instructions with a description of your change. The
+'New Fields Only' checkboxes should be removed as well if your pull request
+doesn't add any new fields.
+
 **All Changes**
 
 - [ ] Add an entry to the docs/changelog.rst describing the change.
 
-- [ ] Add an entry for your name in the the docs/authors.rst file if it's not
+- [ ] Add an entry for your name in the docs/authors.rst file if it's not
       already there.
 
 - [ ] Adjust your imports to a standard form by running this command:
