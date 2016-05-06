@@ -40,6 +40,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
+- Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
+  (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).
 - Moved Dutch validators from localflavor.nl.forms to localflavor.nl.validators
   (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
 - Fix check for promotional social security numbers in USSocialSecurityNumberField
