@@ -4,7 +4,7 @@ from localflavor.mx.models import MXCURPField, MXRFCField, MXSocialSecurityNumbe
 
 
 class MXPersonProfile(models.Model):
-    state = MXStateField()
+    state = MXStateField(blank=True)
     rfc = MXRFCField()
     curp = MXCURPField()
     zip_code = MXZipCodeField()
