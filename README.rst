@@ -27,3 +27,14 @@ http://django-localflavor.readthedocs.org/
 
 django-localflavor can also be found on and installed from the Python
 Package Index: https://pypi.python.org/pypi/django-localflavor
+
+**Release Overview**
+
+You're encouraged to use the latest version of this package unless you need
+support for an unsupported version of Django.
+
+**2015-11-27 - 1.2**: Django 1.5 - 1.9
+
+**2014-12-10 - 1.1**: Django 1.5 - 1.7
+
+**2013-07-29 - 1.0**: Django 1.5 - 1.6
