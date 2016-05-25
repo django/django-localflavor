@@ -35,12 +35,12 @@ class IBANField(models.CharField):
     """
     description = _('An International Bank Account Number')
 
-    def __init__(self, use_nordea_extensions=False, include_countries=None, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 34)
+        self.use_nordea_extensions = kwargs.pop('use_nordea_extensions', False)
+        self.include_countries = kwargs.pop('include_countries', None)
         super(IBANField, self).__init__(*args, **kwargs)
-        self.use_nordea_extensions = use_nordea_extensions
-        self.include_countries = include_countries
-        self.validators.append(IBANValidator(use_nordea_extensions, include_countries))
+        self.validators.append(IBANValidator(self.use_nordea_extensions, self.include_countries))
 
     def deconstruct(self):
         name, path, args, kwargs = super(IBANField, self).deconstruct()
