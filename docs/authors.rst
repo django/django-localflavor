@@ -54,6 +54,7 @@ Authors
 * Marti Raudsepp
 * Martin Ogden
 * Matias Dinota
+* Michał Sałaban
 * Mike Lissner
 * Olivier Sels
 * Rael Max
