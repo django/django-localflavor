@@ -60,4 +60,4 @@ And combine both options::
     $ COUNTRY=us tox -e py27-1.7
 
 __ https://github.com/django/django-localflavor/issues
-__ http://tox.readthedocs.org/en/latest/install.html
+__ https://tox.readthedocs.io/en/latest/install.html
