@@ -12,7 +12,7 @@ django-localflavor
    :target: http://codecov.io/github/django/django-localflavor?branch=master
 
 .. image:: https://readthedocs.org/projects/django-localflavor/badge/?version=latest&style=plastic
-   :target: http://django-localflavor.readthedocs.org/en/latest/
+   :target: https://django-localflavor.readthedocs.io/en/latest/
 
 Django's "localflavor" packages offer additional functionality for particular
 countries or cultures. For example, these might include form fields for your
@@ -23,7 +23,7 @@ This code used to live in Django proper -- in ``django.contrib.localflavor``
 framework's core clean.
 
 For a full list of available localflavors, see
-http://django-localflavor.readthedocs.org/
+https://django-localflavor.readthedocs.io/
 
 django-localflavor can also be found on and installed from the Python
 Package Index: https://pypi.python.org/pypi/django-localflavor
