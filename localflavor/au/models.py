@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from . import forms
 from .au_states import STATE_CHOICES
-from .validators import AUBusinessNumberFieldValidator
+from .validators import AUBusinessNumberFieldValidator, AUTaxFileNumberFieldValidator
 
 
 class AUStateField(CharField):
@@ -102,6 +102,47 @@ class AUBusinessNumberField(CharField):
         Ensure the ABN is stored without spaces.
         """
         value = super(AUBusinessNumberField, self).to_python(value)
+
+        if value is not None:
+            return ''.join(value.split())
+
+        return value
+
+
+class AUTaxFileNumberField(CharField):
+    """
+    A model field that checks that the value is a valid Tax File Number (TFN).
+
+    A TFN is a number issued to a person by the Commissioner of Taxation and
+    is used to verify client identity and establish their income levels.
+    It is a eight or nine digit number without any embedded meaning.
+
+    .. versionadded:: 1.4
+    """
+
+    description = _("Australian Tax File Number")
+
+    validators = [AUTaxFileNumberFieldValidator()]
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 11
+        super(AUTaxFileNumberField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(AUTaxFileNumberField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': forms.AUTaxFileNumberField}
+        defaults.update(kwargs)
+        return super(AUTaxFileNumberField, self).formfield(**defaults)
+
+    def to_python(self, value):
+        """
+        Ensure the TFN is stored without spaces.
+        """
+        value = super(AUTaxFileNumberField, self).to_python(value)
 
         if value is not None:
             return ''.join(value.split())

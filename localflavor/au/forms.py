@@ -13,7 +13,7 @@ from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .au_states import STATE_CHOICES
-from .validators import AUBusinessNumberFieldValidator
+from .validators import AUBusinessNumberFieldValidator, AUTaxFileNumberFieldValidator
 
 
 PHONE_DIGITS_RE = re.compile(r'^(\d{10})$')
@@ -85,3 +85,23 @@ class AUBusinessNumberField(CharField):
 
         spaceless = ''.join(value.split())
         return '{} {} {} {}'.format(spaceless[:2], spaceless[2:5], spaceless[5:8], spaceless[8:])
+
+
+class AUTaxFileNumberField(CharField):
+    """
+    A form field that validates input as an Australian Tax File Number (TFN)
+
+    .. versionadded:: 1.4
+    """
+
+    default_validators = [AUTaxFileNumberFieldValidator()]
+
+    def prepare_value(self, value):
+        """
+        Format the value for display.
+        """
+        if value is None:
+            return value
+
+        spaceless = ''.join(value.split())
+        return '{} {} {}'.format(spaceless[:3], spaceless[3:6], spaceless[6:])

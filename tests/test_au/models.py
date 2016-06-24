@@ -1,5 +1,6 @@
 from django.db import models
-from localflavor.au.models import AUBusinessNumberField, AUPhoneNumberField, AUPostCodeField, AUStateField
+from localflavor.au.models import (AUBusinessNumberField, AUPhoneNumberField, AUPostCodeField, AUStateField,
+                                   AUTaxFileNumberField)
 
 
 class AustralianPlace(models.Model):
@@ -12,3 +13,4 @@ class AustralianPlace(models.Model):
     phone = AUPhoneNumberField(blank=True)
     name = models.CharField(max_length=20)
     abn = AUBusinessNumberField()
+    tfn = AUTaxFileNumberField()
