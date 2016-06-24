@@ -13,6 +13,9 @@ New fields for existing flavors:
 - Added MXCLABEField model and form fields.
   (`gh-227 <https://github.com/django/django-localflavor/pull/227>`_).
 
+- Added AUTaxFileNumberField model and form fields.
+  (`gh-238 <https://github.com/django/django-localflavor/pull/238>`_)
+
 Modifications to existing flavors:
 
 - Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms

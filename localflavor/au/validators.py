@@ -49,3 +49,46 @@ class AUBusinessNumberFieldValidator(RegexValidator):
         super(AUBusinessNumberFieldValidator, self).__call__(value)
         if not self._is_valid(value):
             raise ValidationError(self.error_message)
+
+
+class AUTaxFileNumberFieldValidator(RegexValidator):
+    """
+    Validation for Australian Tax File Numbers.
+
+    .. versionadded:: 1.4
+    """
+
+    error_message = _('Enter a valid TFN.')
+
+    def __init__(self):
+        """ Regex for 8 to 9 digits """
+        super(AUTaxFileNumberFieldValidator, self).__init__(
+            regex='^\d{8,9}$', message=self.error_message)
+
+    def _is_valid(self, value):
+        """
+        Return whether the given value is a valid TFN.
+
+        See http://www.mathgen.ch/codes/tfn.html for a description of the
+        validation algorithm.
+
+        """
+        # 1. Multiply each digit by its weighting factor.
+        digits = [int(i) for i in list(value)]
+        WEIGHTING_FACTORS = [1, 4, 3, 7, 5, 8, 6, 9, 10]
+        weighted = [digit * weight for digit, weight in zip(digits, WEIGHTING_FACTORS)]
+
+        # 2. Sum the resulting values.
+        total = sum(weighted)
+
+        # 3. Divide the total by 11, noting the remainder.
+        remainder = total % 11
+
+        # 4. If the remainder is zero, then it's a valid TFN.
+        return remainder == 0
+
+    def __call__(self, value):
+        value = value.replace(' ', '')
+        super(AUTaxFileNumberFieldValidator, self).__call__(value)
+        if not self._is_valid(value):
+            raise ValidationError(self.error_message)

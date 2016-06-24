@@ -9,4 +9,4 @@ class AustralianPlaceForm(ModelForm):
         model = AustralianPlace
         fields = ('state', 'state_required', 'state_default', 'postcode',
                   'postcode_required', 'postcode_default',
-                  'phone', 'name', 'abn')
+                  'phone', 'name', 'abn', 'tfn')

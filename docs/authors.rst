@@ -29,6 +29,7 @@ Authors
 * Erik Romijn
 * Flavio Curella
 * Florian Apolloner
+* François Constant
 * Gary Wilson Jr
 * Gerardo Orozco
 * Ghassen Telmoudi
