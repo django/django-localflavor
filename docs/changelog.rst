@@ -17,7 +17,7 @@ Modifications to existing flavors:
 
 - Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
   (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).
--  Allow passing field name as first positional argument of IBANField.
+- Allow passing field name as first positional argument of IBANField.
   (`gh-236 <https://github.com/django/django-localflavor/pull/236>`_).
 
 
