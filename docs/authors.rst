@@ -14,15 +14,17 @@ Authors
 * Andres Torres Marroquin
 * Andrew Godwin
 * Aymeric Augustin
+* baffolobill
 * Ben Davis
 * Ben Konrath
 * Bruno M. Custódio
 * Burhan Khalid
 * Claude Paroz
 * Daniel Ampuero
-* Daniel Roschka
 * Daniela Ponader
 * Danielle Madeley
+* Daniel Roschka
+* d.merc
 * Douglas Miranda
 * Erik Romijn
 * Flavio Curella
@@ -36,9 +38,9 @@ Authors
 * Ivan Fisun
 * Jaap Roes
 * Jacob Kaplan-Moss
-* Jan Pieter Waagmeester
 * James Bennett
 * Jannis Leidel
+* Jan Pieter Waagmeester
 * Jérémie Ferry
 * Jocelyn Delalande
 * Johnny Lee Othon
@@ -49,10 +51,12 @@ Authors
 * Justin Bronn
 * Karen Tracey
 * László Ratskó
+* Łukasz Langa
 * Luke Benstead
+* luyikei
 * Malcolm Tredinnick
-* Marti Raudsepp
 * Martin Ogden
+* Marti Raudsepp
 * Matias Dinota
 * Michał Sałaban
 * Mike Lissner
@@ -63,17 +67,13 @@ Authors
 * Russell Keith-Magee
 * Serafeim Papastefanos
 * Sergio Oliveira
-* Simon Charette
 * Simonas Kazlauskas
+* Simon Charette
 * Stefan Kjartansson
+* tadeo
 * Thiago Avelino
 * Tino de Bruijn
 * Trey Hunner
 * Tyler Ball
 * Venelin Stoykov
 * Vladimir Nani
-* baffolobill
-* d.merc
-* luyikei
-* tadeo
-* Łukasz Langa
