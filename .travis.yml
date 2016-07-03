@@ -19,6 +19,8 @@ matrix:
     - python: 2.7
       env: TOXENV=py27-1.9
     - python: 2.7
+      env: TOXENV=py27-1.10
+    - python: 2.7
       env: TOXENV=py27-master
     - python: 3.2
       env: TOXENV=py32-1.7
@@ -35,9 +37,13 @@ matrix:
     - python: 3.4
       env: TOXENV=py34-1.9
     - python: 3.4
+      env: TOXENV=py34-1.10
+    - python: 3.4
       env: TOXENV=py34-master
     - python: 3.5
       env: TOXENV=py35-1.9
+    - python: 3.5
+      env: TOXENV=py35-1.10
     - python: 3.5
       env: TOXENV=py35-master
   allow_failures:
