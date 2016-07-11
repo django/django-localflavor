@@ -4,6 +4,7 @@ Polish-specific form helpers
 
 from __future__ import unicode_literals
 
+import datetime
 import re
 
 from django.core.validators import EMPTY_VALUES
@@ -38,12 +39,16 @@ class PLPESELField(RegexField):
     Checks the following rules:
         * the length consist of 11 digits
         * has a valid checksum
+        * contains a valid birth date
 
     The algorithm is documented at http://en.wikipedia.org/wiki/PESEL.
+
+    .. versionchanged:: 1.4
     """
     default_error_messages = {
         'invalid': _('National Identification Number consists of 11 digits.'),
         'checksum': _('Wrong checksum for the National Identification Number.'),
+        'birthdate': _('The National Identification Number contains an invalid birth date.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
@@ -56,6 +61,8 @@ class PLPESELField(RegexField):
             return ''
         if not self.has_valid_checksum(value):
             raise ValidationError(self.error_messages['checksum'])
+        if not self.has_valid_birth_date(value):
+            raise ValidationError(self.error_messages['birthdate'])
         return '%s' % value
 
     def has_valid_checksum(self, number):
@@ -67,6 +74,25 @@ class PLPESELField(RegexField):
         for i in range(len(number)):
             result += int(number[i]) * multiple_table[i]
         return result % 10 == 0
+
+    def has_valid_birth_date(self, number):
+        """
+        Checks whether the birth date encoded in PESEL is valid.
+        """
+        y = int(number[:2])
+        m = int(number[2:4])
+        d = int(number[4:6])
+        md2century = {80: 1800, 0: 1900, 20: 2000, 40: 2100, 60: 2200}
+        for md, cent in md2century.items():
+            if 1 <= m - md <= 12:
+                y += cent
+                m -= md
+                break
+        try:
+            self.birth_date = datetime.date(y, m, d)
+            return True
+        except ValueError:
+            return False
 
 
 class PLNationalIDCardNumberField(RegexField):
