@@ -155,7 +155,7 @@ class BRCPFField(CharField):
         return orig_value
 
 
-class BRCNPJField(Field):
+class BRCNPJField(CharField):
     """
     A form field that validates input as `Brazilian CNPJ`_.
 
@@ -169,6 +169,9 @@ class BRCNPJField(Field):
         'invalid': _("Invalid CNPJ number."),
         'max_digits': _("This field requires at least 14 digits"),
     }
+
+    def __init__(self, min_length=14, max_length=18, *args, **kwargs):
+        super(BRCNPJField, self).__init__(max_length, min_length, *args, **kwargs)
 
     def clean(self, value):
         """

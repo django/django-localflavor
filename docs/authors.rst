@@ -62,6 +62,7 @@ Authors
 * Michał Sałaban
 * Mike Lissner
 * Olivier Sels
+* Paulo Poiati
 * Rael Max
 * Ramiro Morales
 * Rolf Erik Lekang
