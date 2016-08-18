@@ -22,7 +22,10 @@ Modifications to existing flavors:
   (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).
 - Allow passing field name as first positional argument of IBANField.
   (`gh-236 <https://github.com/django/django-localflavor/pull/236>`_).
-
+- Fixed French FRNationalIdentificationNumber bug with imaginary birth month values.
+  (`gh-242` <https://github.com/django/django-localflavor/pull/242>`_).
+- Fixed French FRNationalIdentificationNumber bug with corsican people born after 2000.
+  (`gh-242` <https://github.com/django/django-localflavor/pull/242>`_).
 
 1.3   (2016-05-06)
 ------------------

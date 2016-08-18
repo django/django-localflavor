@@ -214,6 +214,10 @@ class FRLocalFlavorTests(SimpleTestCase):
             '882062A09002279': '882062A09002279',
             # Good, new Corsica department number (2B) with birthdate >= 1976
             '882062B09002279': '882062B09002279',
+            # Good, new Corsica department number (2B) with birthdate >= 1976 (2005)
+            '105062B09002231': '105062B09002231',
+            # Good, new Corsica department number (20) with birthdate < 1976 (1905)
+            '105062009002231': '105062009002231',
             # Good, birth month not known (then, can be 20, [30-42] or [50-99])
             '140200109002223': '140200109002223',
             '141330109002285': '141330109002285',
