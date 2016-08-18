@@ -214,6 +214,11 @@ class FRLocalFlavorTests(SimpleTestCase):
             '882062A09002279': '882062A09002279',
             # Good, new Corsica department number (2B) with birthdate >= 1976
             '882062B09002279': '882062B09002279',
+            # Good, birth month not known (then, can be 20, [30-42] or [50-99])
+            '140200109002223': '140200109002223',
+            '141330109002285': '141330109002285',
+            '142580109002248': '142580109002248',
+            '143990109002273': '143990109002273',
         }
         invalid = {
             # Gender mismatch

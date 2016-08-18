@@ -17,9 +17,10 @@ from localflavor.generic.checksums import luhn
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
 from .fr_region import REGION_CHOICES
 
-nin_re = re.compile(r'^(?P<gender>[1278])(?P<year_of_birth>\d{2})(?P<month_of_birth>0[1-9]|1[0-2]|20)' +
-                    '(?P<department_of_origin>\d{2}|2[AB])(?P<commune_of_origin>\d{3})(?P<person_unique_number>\d{3})' +
-                    '(?P<control_key>\d{2})$')
+nin_re = re.compile(
+    r'^(?P<gender>[1278])(?P<year_of_birth>\d{2})(?P<month_of_birth>0[1-9]|1[0-2]|20|3[0-9]|4[0-2]|[5-9][0-9])'
+    r'(?P<department_of_origin>\d{2}|2[AB])(?P<commune_of_origin>\d{3})(?P<person_unique_number>\d{3})'
+    r'(?P<control_key>\d{2})$')
 
 
 class FRZipCodeField(RegexField):
