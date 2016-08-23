@@ -5,6 +5,7 @@ FR-specific Form helpers
 from __future__ import unicode_literals
 
 import re
+from datetime import date
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -17,9 +18,10 @@ from localflavor.generic.checksums import luhn
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
 from .fr_region import REGION_CHOICES
 
-nin_re = re.compile(r'^(?P<gender>[1278])(?P<year_of_birth>\d{2})(?P<month_of_birth>0[1-9]|1[0-2]|20)' +
-                    '(?P<department_of_origin>\d{2}|2[AB])(?P<commune_of_origin>\d{3})(?P<person_unique_number>\d{3})' +
-                    '(?P<control_key>\d{2})$')
+nin_re = re.compile(
+    r'^(?P<gender>[1278])(?P<year_of_birth>\d{2})(?P<month_of_birth>0[1-9]|1[0-2]|20|3[0-9]|4[0-2]|[5-9][0-9])'
+    r'(?P<department_of_origin>\d{2}|2[AB])(?P<commune_of_origin>\d{3})(?P<person_unique_number>\d{3})'
+    r'(?P<control_key>\d{2})$')
 
 
 class FRZipCodeField(RegexField):
@@ -157,6 +159,9 @@ class FRNationalIdentificationNumber(CharField):
         person_unique_number = match.group('person_unique_number')
         control_key = int(match.group('control_key'))
 
+        # Get current year
+        current_year = int(str(date.today().year)[2:])
+
         # Department number 98 is for Monaco
         if department_of_origin == '98':
             raise ValidationError(self.error_messages['invalid'])
@@ -164,7 +169,7 @@ class FRNationalIdentificationNumber(CharField):
         # Departments number 20, 2A and 2B represent Corsica
         if department_of_origin in ['20', '2A', '2B']:
             # For people born before 1976, Corsica number was 20
-            if int(year_of_birth) < 76 and department_of_origin != '20':
+            if current_year < int(year_of_birth) < 76 and department_of_origin != '20':
                 raise ValidationError(self.error_messages['invalid'])
             # For people born from 1976, Corsica dep number is either 2A or 2B
             if (int(year_of_birth) > 75 and
