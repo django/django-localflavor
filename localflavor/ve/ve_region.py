@@ -15,5 +15,5 @@ REGION_CHOICES = (
     ('507', _('Región Nor-Oriental')),
     ('508', _('Región Insular')),
     ('509', _('Región Guayana')),
-    ('509', _('Región Sur Occidental')),
+    ('510', _('Región Sur Occidental')),
 )
