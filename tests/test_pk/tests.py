@@ -8,7 +8,8 @@ from localflavor.pk.forms import PKPhoneNumberField, PKPostCodeField, PKStateSel
 
 from .forms import PakistaniPlaceForm
 
-SELECTED_OPTION_PATTERN = r'<option value="%s" selected="selected">'
+# From Django 1.11, HTML5 syntax is used (selected)
+SELECTED_OPTION_PATTERN = r'<option value="%s" selected(="selected")?>'
 BLANK_OPTION_PATTERN = r'<option value="">'
 INPUT_VALUE_PATTERN = r'<input[^>]*value="%s"[^>]*>'
 
