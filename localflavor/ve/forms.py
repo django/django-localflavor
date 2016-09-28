@@ -3,10 +3,7 @@
 Ve-specific Form helpers.
 """
 
-from __future__ import unicode_literals
-
 from django.forms.fields import Select
-from django.utils.translation import ugettext_lazy as _
 
 from .ve_region import REGION_CHOICES
 
