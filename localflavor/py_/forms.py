@@ -2,8 +2,6 @@
 PY-specific Form helpers.
 """
 
-from __future__ import absolute_import
-
 from django.forms.fields import Select
 
 from .py_department import DEPARTMENT_CHOICES, DEPARTMENT_ROMAN_CHOICES

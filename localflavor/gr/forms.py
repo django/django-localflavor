@@ -3,17 +3,10 @@ Greek-specific forms helpers
 """
 import re
 
-from django.forms.fields import RegexField, Field
-from django.utils.translation import ugettext_lazy as _
-
 from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-
-try:
-    from django.utils.encoding import smart_text
-except ImportError:
-    from django.utils.encoding import smart_unicode as smart_text
-
+from django.forms import Field, RegexField, ValidationError
+from django.utils.encoding import force_text
+from django.utils.translation import ugettext_lazy as _
 
 NUMERIC_RE = re.compile('^\d+$')
 
@@ -51,8 +44,10 @@ class GRTaxNumberCodeField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        val = re.sub('[\-\s\(\)]', '', smart_text(value))
+        val = re.sub('[\-\s\(\)]', '', force_text(value))
         if(len(val) < 9):
+            raise ValidationError(self.error_messages['invalid'])
+        if not all(char.isdigit() for char in val):
             raise ValidationError(self.error_messages['invalid'])
         if not self.allow_test_value and val == '000000000':
             raise ValidationError(self.error_messages['invalid'])
@@ -82,7 +77,7 @@ class GRPhoneNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        phone_nr = re.sub('[\-\s\(\)]', '', smart_text(value))
+        phone_nr = re.sub('[\-\s\(\)]', '', force_text(value))
 
         if len(phone_nr) == 10 and NUMERIC_RE.search(phone_nr):
             return value
@@ -107,7 +102,7 @@ class GRMobilePhoneNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        phone_nr = re.sub('[\-\s\(\)]', '', smart_text(value))
+        phone_nr = re.sub('[\-\s\(\)]', '', force_text(value))
 
         if len(phone_nr) == 10 and NUMERIC_RE.search(phone_nr) and phone_nr.startswith('69'):
             return value

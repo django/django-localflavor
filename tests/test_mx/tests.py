@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
-from django.test import SimpleTestCase
-
-from localflavor.mx.forms import (MXZipCodeField, MXRFCField,
-                                  MXStateSelect, MXCURPField,
-                                  MXSocialSecurityNumberField)
+from django.test import TestCase
+from localflavor.mx.forms import (MXCLABEField, MXCURPField, MXRFCField, MXSocialSecurityNumberField, MXStateSelect,
+                                  MXZipCodeField)
 
 from .forms import MXPersonProfileForm
 
 
-class MXLocalFlavorTests(SimpleTestCase):
+class MXLocalFlavorTests(TestCase):
 
     def setUp(self):
         self.form = MXPersonProfileForm({
@@ -19,6 +17,7 @@ class MXLocalFlavorTests(SimpleTestCase):
             'curp': 'toma880125hmnrrn02',
             'zip_code': '58120',
             'ssn': '53987417457',
+            'clabe': '032180000118359719'
         })
 
     def test_get_display_methods(self):
@@ -34,13 +33,21 @@ class MXLocalFlavorTests(SimpleTestCase):
             'curp': 'invalid curp',
             'zip_code': 'xxx',
             'ssn': 'invalid ssn',
+            'clabe': 'invalid clabexxxxx'
         })
         self.assertFalse(form.is_valid())
-        self.assertEqual(form.errors['state'], ['Select a valid choice. Invalid state is not one of the available choices.'])
-        self.assertEqual(form.errors['rfc'], ['Enter a valid RFC.'])
-        self.assertEqual(form.errors['curp'], ['Ensure this value has at least 18 characters (it has 12).', 'Enter a valid CURP.'])
+        self.assertEqual(
+            form.errors['state'], ['Select a valid choice. Invalid state is not one of the available choices.']
+        )
+        self.assertEqual(
+            form.errors['rfc'], ['Ensure this value has at least 12 characters (it has 11).', 'Enter a valid RFC.']
+        )
+        self.assertEqual(
+            form.errors['curp'], ['Ensure this value has at least 18 characters (it has 12).', 'Enter a valid CURP.']
+        )
         self.assertEqual(form.errors['zip_code'], ['Enter a valid zip code in the format XXXXX.'])
         self.assertEqual(form.errors['ssn'], ['Enter a valid Social Security Number.'])
+        self.assertEqual(form.errors['clabe'], ['Enter a valid CLABE.'])
 
     def test_field_blank_option(self):
         """Test that the empty option is there."""
@@ -139,6 +146,8 @@ class MXLocalFlavorTests(SimpleTestCase):
     def test_MXRFCField(self):
         error_format = ['Enter a valid RFC.']
         error_checksum = ['Invalid checksum for RFC.']
+        error_too_short = ['Ensure this value has at least 12 characters (it has 9).']
+        error_too_long = ['Ensure this value has at most 13 characters (it has 14).']
         valid = {
             'MoFN641205eX5': 'MOFN641205EX5',
             'ICa060120873': 'ICA060120873',
@@ -152,6 +161,9 @@ class MXLocalFlavorTests(SimpleTestCase):
             'MED0000000XA': error_format,
             '0000000000XA': error_format,
             'AAA000000AA6': error_format,
+            # Length
+            'GOH831115': error_too_short + error_format,
+            'MED0000000XAAA': error_too_long + error_format,
             # Dates
             'XXX880002XXX': error_format,
             'XXX880200XXX': error_format,
@@ -244,3 +256,28 @@ class MXLocalFlavorTests(SimpleTestCase):
             '53563800130': error_checksum,
         }
         self.assertFieldOutput(MXSocialSecurityNumberField, valid, invalid)
+
+    def test_MXCLABEField(self):
+        error_format = ['Enter a valid CLABE.']
+        error_checksum = ['Invalid checksum for CLABE.']
+        valid = {
+            '032180000118359719': '032180000118359719',
+            '002115016003269411': '002115016003269411',
+            '435816798316429530': '435816798316429530',
+            '102211657483920119': '102211657483920119',
+            '002846375894578321': '002846375894578321',
+            '012276385238571288': '012276385238571288',
+            '633790823578925966': '633790823578925966',
+            '613137129494921910': '613137129494921910',
+            '108180637932589295': '108180637932589295',
+        }
+
+        invalid = {
+            'abc123def456-902-4': error_format,
+            '123456789123456789': error_checksum,
+            '123456237454589458': error_checksum,
+            '098765375925788389': error_checksum,
+            '042560735684818257': error_checksum,
+            '037027587179835981': error_checksum,
+        }
+        self.assertFieldOutput(MXCLABEField, valid, invalid)

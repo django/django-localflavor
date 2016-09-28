@@ -2,19 +2,13 @@
 Iceland specific form helpers.
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField
 from django.forms.widgets import Select
-
-try:
-    from django.utils.encoding import smart_text
-except ImportError:
-    # Attempt to import from a lesser version
-    from django.utils.encoding import smart_unicode as smart_text
-
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .is_postalcodes import IS_POSTALCODES
@@ -65,7 +59,7 @@ class ISIdNumberField(RegexField):
         Takes in the value in canonical form and returns it in the common
         display format.
         """
-        return smart_text(value[:6] + '-' + value[6:])
+        return force_text(value[:6] + '-' + value[6:])
 
 
 class ISPhoneNumberField(RegexField):

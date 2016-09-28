@@ -1,9 +1,6 @@
-from __future__ import absolute_import
-
 from django.test import SimpleTestCase
 
-from localflavor.gr.forms import (GRPhoneNumberField, GRMobilePhoneNumberField,
-                                  GRTaxNumberCodeField, GRPostalCodeField)
+from localflavor.gr.forms import GRMobilePhoneNumberField, GRPhoneNumberField, GRPostalCodeField, GRTaxNumberCodeField
 
 
 class GRLocalFlavorTests(SimpleTestCase):
@@ -25,6 +22,7 @@ class GRLocalFlavorTests(SimpleTestCase):
             '123 32 12 3213': error,
             '32 123 5345': error,
             '0': error,
+            'abc': error,
             '00000': error,
             '000000000': error,
             '1111111': error,
@@ -33,6 +31,7 @@ class GRLocalFlavorTests(SimpleTestCase):
             '999999999': error,
             '123123123': error,
             '321000123': error,
+            'd21000123': error,
         }
         self.assertFieldOutput(GRTaxNumberCodeField, valid, invalid)
 
@@ -52,6 +51,7 @@ class GRLocalFlavorTests(SimpleTestCase):
             '124567': error,
             '1345': error,
             '134115': error,
+            'b231a': error,
         }
         self.assertFieldOutput(GRPostalCodeField, valid, invalid)
 
@@ -67,6 +67,7 @@ class GRLocalFlavorTests(SimpleTestCase):
             '124567': error,
             '21092929211': error,
             '661232123': error,
+            '694555555a': error,
 
         }
         self.assertFieldOutput(GRPhoneNumberField, valid, invalid)

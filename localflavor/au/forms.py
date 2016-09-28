@@ -2,17 +2,19 @@
 Australian-specific Form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .au_states import STATE_CHOICES
+from .validators import AUBusinessNumberFieldValidator, AUTaxFileNumberFieldValidator
+
 
 PHONE_DIGITS_RE = re.compile(r'^(\d{10})$')
 
@@ -49,7 +51,7 @@ class AUPhoneNumberField(CharField):
         super(AUPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\(|\)|\s+|-)', '', smart_text(value))
+        value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
         phone_match = PHONE_DIGITS_RE.search(value)
         if phone_match:
             return '%s' % phone_match.group(1)
@@ -63,3 +65,43 @@ class AUStateSelect(Select):
     """
     def __init__(self, attrs=None):
         super(AUStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+
+
+class AUBusinessNumberField(CharField):
+    """
+    A form field that validates input as an Australian Business Number (ABN)
+
+    .. versionadded:: 1.3
+    """
+
+    default_validators = [AUBusinessNumberFieldValidator()]
+
+    def prepare_value(self, value):
+        """
+        Format the value for display.
+        """
+        if value is None:
+            return value
+
+        spaceless = ''.join(value.split())
+        return '{} {} {} {}'.format(spaceless[:2], spaceless[2:5], spaceless[5:8], spaceless[8:])
+
+
+class AUTaxFileNumberField(CharField):
+    """
+    A form field that validates input as an Australian Tax File Number (TFN)
+
+    .. versionadded:: 1.4
+    """
+
+    default_validators = [AUTaxFileNumberFieldValidator()]
+
+    def prepare_value(self, value):
+        """
+        Format the value for display.
+        """
+        if value is None:
+            return value
+
+        spaceless = ''.join(value.split())
+        return '{} {} {}'.format(spaceless[:3], spaceless[3:6], spaceless[6:])

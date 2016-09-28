@@ -1,5 +1,4 @@
 include LICENSE
-include AUTHORS.rst
 include README.rst
 include CONTRIBUTING.rst
 include tasks.py

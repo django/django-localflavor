@@ -2,16 +2,15 @@
 USA-specific Form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select, CharField
-from django.utils.encoding import smart_text
+from django.forms.fields import CharField, Field, RegexField, Select
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
 
 phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 ssn_re = re.compile(r"^(?P<area>\d{3})[-\ ]?(?P<group>\d{2})[-\ ]?(?P<serial>\d{4})$")
@@ -21,6 +20,15 @@ class USZipCodeField(RegexField):
     """"
     A form field that validates input as a U.S. ZIP code. Valid formats are
     XXXXX or XXXXX-XXXX.
+
+    .. note::
+
+        If you are looking for a form field with a list of U.S. Postal Service
+        locations please use :class:`~localflavor.us.forms.USPSSelect`.
+
+    .. versionadded:: 1.1
+
+    Whitespace around the ZIP code is accepted and automatically trimmed.
     """
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX or XXXXX-XXXX.'),
@@ -29,6 +37,10 @@ class USZipCodeField(RegexField):
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
         super(USZipCodeField, self).__init__(r'^\d{5}(?:-\d{4})?$',
                                              max_length, min_length, *args, **kwargs)
+
+    def to_python(self, value):
+        value = super(USZipCodeField, self).to_python(value)
+        return value.strip()
 
 
 class USPhoneNumberField(CharField):
@@ -43,14 +55,14 @@ class USPhoneNumberField(CharField):
         super(USPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\(|\)|\s+)', '', smart_text(value))
+        value = re.sub('(\(|\)|\s+)', '', force_text(value))
         m = phone_digits_re.search(value)
         if m:
             return '%s-%s-%s' % (m.group(1), m.group(2), m.group(3))
         raise ValidationError(self.error_messages['invalid'])
 
 
-class USSocialSecurityNumberField(Field):
+class USSocialSecurityNumberField(CharField):
     """
     A United States Social Security number.
 
@@ -64,6 +76,8 @@ class USSocialSecurityNumberField(Field):
         * The number is not one known to be invalid due to otherwise widespread
           promotional use or distribution (e.g., the Woolworth's number or the
           1962 promotional number).
+
+    .. versionadded:: 1.1
     """
     default_error_messages = {
         'invalid': _('Enter a valid U.S. Social Security number in XXX-XX-XXXX format.'),
@@ -83,11 +97,10 @@ class USSocialSecurityNumberField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
         # Second pass: promotional and otherwise permanently invalid numbers.
-        if (area == '666' or (area == '987' and
-                              group == '65' and
-                              4320 <= int(serial) <= 4329) or
-                value == '078-05-1120' or
-                value == '219-09-9999'):
+        if (area == '666' or
+                area.startswith('9') or
+                (area == '078' and group == '05' and serial == '1120') or
+                (area == '219' and group == '09' and serial == '9999')):
             raise ValidationError(self.error_messages['invalid'])
         return '%s-%s-%s' % (area, group, serial)
 
@@ -132,6 +145,12 @@ class USPSSelect(Select):
     """
     A Select widget that uses a list of US Postal Service codes as its
     choices.
+
+    .. note::
+
+        If you are looking for a form field that validates U.S. ZIP codes
+        please use :class:`~localflavor.us.forms.USZipCodeField`.
+
     """
     def __init__(self, attrs=None):
         from .us_states import USPS_CHOICES

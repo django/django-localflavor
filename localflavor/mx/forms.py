@@ -3,13 +3,14 @@
 Mexican-specific form helpers.
 """
 from __future__ import unicode_literals
+
 import re
 
+from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Select, RegexField
+from django.forms.fields import RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext_lazy as _
-from django.core.validators import EMPTY_VALUES
 
 from .mx_states import STATE_CHOICES
 
@@ -109,8 +110,8 @@ class MXRFCField(RegexField):
         'invalid_checksum': _('Invalid checksum for RFC.'),
     }
 
-    def __init__(self, min_length=9, max_length=13, *args, **kwargs):
-        rfc_re = re.compile(r'^([A-Z&Ññ]{3}|[A-Z][AEIOU][A-Z]{2})%s([A-Z0-9]{2}[0-9A])?$' % DATE_RE,
+    def __init__(self, min_length=12, max_length=13, *args, **kwargs):
+        rfc_re = re.compile(r'^([A-Z&Ññ]{3}|[A-Z][AEIOU][A-Z]{2})%s[A-Z0-9]{2}[0-9A]$' % DATE_RE,
                             re.IGNORECASE)
         super(MXRFCField, self).__init__(rfc_re, min_length=min_length,
                                          max_length=max_length, *args, **kwargs)
@@ -122,9 +123,9 @@ class MXRFCField(RegexField):
         value = value.upper()
         if self._has_homoclave(value):
             if not value[-1] == self._checksum(value[:-1]):
-                raise ValidationError(self.default_error_messages['invalid_checksum'])
+                raise ValidationError(self.error_messages['invalid_checksum'])
         if self._has_inconvenient_word(value):
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
         return value
 
     def _has_homoclave(self, rfc):
@@ -160,6 +161,49 @@ class MXRFCField(RegexField):
     def _has_inconvenient_word(self, rfc):
         first_four = rfc[:4]
         return first_four in RFC_INCONVENIENT_WORDS
+
+
+class MXCLABEField(RegexField):
+    """This field validates a CLABE (Clave Bancaria Estandarizada).
+
+    A CLABE is a 18-digits long number. The first 6 digits denote bank and branch number.
+    The remaining 12 digits denote an account number, plus a verifying digit.
+
+    More info:
+    https://en.wikipedia.org/wiki/CLABE
+
+    .. versionadded:: 1.4
+    """
+
+    default_error_messages = {
+        'invalid': _('Enter a valid CLABE.'),
+        'invalid_checksum': _('Invalid checksum for CLABE.'),
+    }
+
+    def __init__(self, min_length=18, max_length=18, *args, **kwargs):
+        clabe_re = r'^\d{18}$'
+        super(MXCLABEField, self).__init__(clabe_re, min_length, max_length, *args, **kwargs)
+
+    def _checksum(self, value):
+        verification_digit = int(value[-1])
+        number = value[:-1]
+
+        weight_factor = (3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7)
+
+        sum_remainder = sum(x * int(y) % 10 for x, y in zip(weight_factor, number)) % 10
+
+        return verification_digit == (10 - sum_remainder) % 10
+
+    def clean(self, value):
+        value = super(MXCLABEField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+        if not value.isdigit():
+            raise ValidationError(self.error_messages['invalid'])
+        if not self._checksum(value):
+            raise ValidationError(self.error_messages['invalid_checksum'])
+
+        return value
 
 
 class MXCURPField(RegexField):
@@ -206,9 +250,9 @@ class MXCURPField(RegexField):
             return ''
         value = value.upper()
         if value[-1] != self._checksum(value[:-1]):
-            raise ValidationError(self.default_error_messages['invalid_checksum'])
+            raise ValidationError(self.error_messages['invalid_checksum'])
         if self._has_inconvenient_word(value):
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
         return value
 
     def _checksum(self, value):
@@ -265,7 +309,7 @@ class MXSocialSecurityNumberField(RegexField):
         if value in EMPTY_VALUES:
             return ''
         if value[-1] != self.__checksum(value[:-1]):
-            raise ValidationError(self.default_error_messages['invalid_checksum'])
+            raise ValidationError(self.error_messages['invalid_checksum'])
         return value
 
     def __checksum(self, value):

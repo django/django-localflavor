@@ -1,8 +1,6 @@
 """
 Ecuador-specific form helpers.
 """
-from __future__ import absolute_import
-
 from django.forms.fields import Select
 
 from .ec_provinces import PROVINCE_CHOICES

@@ -22,6 +22,9 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tests.settings')
 sys.path.insert(0, os.path.abspath('extensions'))
 sys.path.insert(0, os.path.abspath('..'))
 
+import django
+django.setup()
+
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -47,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'django-localflavor'
-copyright = u'2013, Django Software Foundation and individual contributors'
+copyright = u'Django Software Foundation and individual contributors'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -105,7 +108,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'classic'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -265,7 +268,7 @@ texinfo_documents = [
 epub_title = u'django-localflavor'
 epub_author = u'Django Software Foundation and individual contributors'
 epub_publisher = u'Django Software Foundation and individual contributors'
-epub_copyright = u'2013, Django Software Foundation and individual contributors'
+epub_copyright = u'Django Software Foundation and individual contributors'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
@@ -319,7 +322,7 @@ epub_copyright = u'2013, Django Software Foundation and individual contributors'
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    'http://docs.python.org/': None,
-    'django': ('http://docs.djangoproject.com/en/dev/',
-               'http://docs.djangoproject.com/en/dev/_objects/'),
+    'python': ('https://docs.python.org/2', None),
+    'django': ('https://docs.djangoproject.com/en/dev/',
+               'https://docs.djangoproject.com/en/dev/_objects/'),
 }

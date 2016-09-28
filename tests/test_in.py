@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.in_.forms import (INZipCodeField, INStateField,
-                                   INStateSelect, INPhoneNumberField)
+from localflavor.in_.forms import INAadhaarNumberField, INPhoneNumberField, INStateField, INStateSelect, INZipCodeField
 
 
 class INLocalFlavorTests(SimpleTestCase):
@@ -40,6 +39,7 @@ class INLocalFlavorTests(SimpleTestCase):
 <option value="RJ">Rajasthan</option>
 <option value="HP">Himachal Pradesh</option>
 <option value="JK">Jammu and Kashmir</option>
+<option value="TG">Telangana</option>
 <option value="AR">Arunachal Pradesh</option>
 <option value="AS">Assam</option>
 <option value="BR">Bihar</option>
@@ -81,6 +81,22 @@ class INLocalFlavorTests(SimpleTestCase):
             'O2B 2R3': error_format
         }
         self.assertFieldOutput(INZipCodeField, valid, invalid)
+
+    def test_INAadhaarNumberField(self):
+        error_format = ['Enter a valid Aadhaar number in XXXX XXXX XXXX or '
+                                                    'XXXX-XXXX-XXXX format.']
+        valid = {
+            '3603-1178-8988': '3603 1178 8988',
+            '1892 3114 7727': '1892 3114 7727',
+        }
+        invalid = {
+            '9910 182': error_format,
+            '3603111': error_format,
+            '000 0000 0000': error_format,
+            '0000 0000 0000': error_format,
+            '18888 8882 8288': error_format
+        }
+        self.assertFieldOutput(INAadhaarNumberField, valid, invalid)
 
     def test_INStateField(self):
         error_format = ['Enter an Indian state or territory.']
@@ -159,6 +175,8 @@ class INLocalFlavorTests(SimpleTestCase):
             'tn': 'TN',
             'tamilnadu': 'TN',
             'tamilnad': 'TN',
+            'telangana': 'TG',
+            'tg': 'TG',
             'tr': 'TR',
             'tripura': 'TR',
             'ua': 'UA',

@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
-from django.utils.translation import override, ugettext as _
+from django.utils.translation import ugettext as _
+from django.utils.translation import override
 
-from localflavor.ch.forms import (CHZipCodeField, CHPhoneNumberField,
-                                  CHIdentityCardNumberField, CHStateSelect)
+from localflavor.ch.forms import (CHIdentityCardNumberField, CHPhoneNumberField, CHSocialSecurityNumberField,
+                                  CHStateSelect, CHZipCodeField)
 
 
 class CHLocalFlavorTests(SimpleTestCase):
@@ -43,14 +44,16 @@ class CHLocalFlavorTests(SimpleTestCase):
             self.assertHTMLEqual(f.render('state', 'AG'), out)
 
     def test_CHZipCodeField(self):
-        error_format = [_('Enter a zip code in the format XXXX.')]
+        error_format = [_('Enter a valid postal code in the range and format 1XXX - 9XXX.')]
         valid = {
             '1234': '1234',
-            '0000': '0000',
+            '9999': '9999',
         }
         invalid = {
+            '0000': error_format,
             '800x': error_format,
             '80 00': error_format,
+            '99990': error_format,
         }
         self.assertFieldOutput(CHZipCodeField, valid, invalid)
 
@@ -77,3 +80,16 @@ class CHLocalFlavorTests(SimpleTestCase):
             '2123456701': error_format,
         }
         self.assertFieldOutput(CHIdentityCardNumberField, valid, invalid)
+
+    def test_CHSocialSecurityNumberField(self):
+        error_format = [_('Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format.')]
+        valid = {
+            '756.1234.5678.97': '756.1234.5678.97',
+            '756.9217.0769.85': '756.9217.0769.85',
+        }
+        invalid = {
+            '756.1234.5678.96': error_format,
+            '757.1234.5678.97': error_format,
+            '756.1234.5678': error_format,
+        }
+        self.assertFieldOutput(CHSocialSecurityNumberField, valid, invalid)

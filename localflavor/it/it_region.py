@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*
 from __future__ import unicode_literals
 
+from .it_province import PROVINCES
+
 #: An alphabetical list of regions
 REGION_CHOICES = (
     ('ABR', 'Abruzzo'),
@@ -24,3 +26,13 @@ REGION_CHOICES = (
     ('VAO', 'Valle d’Aosta'),
     ('VEN', 'Veneto'),
 )
+
+#: A dictionary of regions mapped to provinces
+REGION_PROVINCES = {}
+for region, _ in REGION_CHOICES:
+    REGION_PROVINCES[region] = sorted([p[0] for p in PROVINCES if p[2] == region])
+
+#: A alphabetical list of provinces mapped to regions
+REGION_PROVINCE_CHOICES = []
+for region, region_name in REGION_CHOICES:
+    REGION_PROVINCE_CHOICES.append((region_name, () + tuple((p[0], p[1]) for p in PROVINCES if p[2] == region)))

@@ -2,16 +2,17 @@
 Canada-specific Form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, CharField, Select
-from django.utils.encoding import smart_text
+from django.forms.fields import CharField, Field, Select
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.checksums import luhn
 
 phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 sin_re = re.compile(r"^(\d{3})-(\d{3})-(\d{3})$")
@@ -40,7 +41,7 @@ class CAPostalCodeField(CharField):
         postcode = value.upper().strip()
         m = self.postcode_regex.match(postcode)
         if not m:
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
         return "%s %s" % (m.group(1), m.group(2))
 
 
@@ -54,7 +55,7 @@ class CAPhoneNumberField(Field):
         super(CAPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\(|\)|\s+)', '', smart_text(value))
+        value = re.sub('(\(|\)|\s+)', '', force_text(value))
         m = phone_digits_re.search(value)
         if m:
             return '%s-%s-%s' % (m.group(1), m.group(2), m.group(3))
@@ -131,28 +132,6 @@ class CASocialInsuranceNumberField(Field):
             match.group(1),
             match.group(2),
             match.group(3))
-        if not self.luhn_checksum_is_valid(check_number):
+        if not luhn(check_number):
             raise ValidationError(self.error_messages['invalid'])
         return number
-
-    def luhn_checksum_is_valid(self, number):
-        """
-        Checks to make sure that the SIN passes a luhn mod-10 checksum
-        See: http://en.wikipedia.org/wiki/Luhn_algorithm
-        """
-
-        sum = 0
-        num_digits = len(number)
-        oddeven = num_digits & 1
-
-        for count in range(0, num_digits):
-            digit = int(number[count])
-
-            if not ((count & 1) ^ oddeven):
-                digit = digit * 2
-            if digit > 9:
-                digit = digit - 9
-
-            sum = sum + digit
-
-        return ((sum % 10) == 0)

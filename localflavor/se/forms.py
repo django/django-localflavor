@@ -2,17 +2,17 @@
 """
 Swedish specific Form helpers
 """
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django import forms
-from django.utils.translation import ugettext_lazy as _
 from django.core.validators import EMPTY_VALUES
-from .se_counties import COUNTY_CHOICES
-from .utils import (id_number_checksum, validate_id_birthday,
-                    format_personal_id_number, valid_organisation, format_organisation_number)
+from django.utils.translation import ugettext_lazy as _
 
+from .se_counties import COUNTY_CHOICES
+from .utils import (format_organisation_number, format_personal_id_number, id_number_checksum, valid_organisation,
+                    validate_id_birthday)
 
 __all__ = ('SECountySelect', 'SEOrganisationNumberField',
            'SEPersonalIdentityNumberField', 'SEPostalCodeField')

@@ -2,7 +2,7 @@
 ID-specific Form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 import time
@@ -10,9 +10,8 @@ import time
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, Select
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-from django.utils.encoding import smart_text
-
 
 postcode_re = re.compile(r'^[1-9]\d{4}$')
 phone_re = re.compile(r'^(\+62|0)[2-9]\d{7,10}$')
@@ -77,10 +76,10 @@ class IDPhoneNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        phone_number = re.sub(r'[\-\s\(\)]', '', smart_text(value))
+        phone_number = re.sub(r'[\-\s\(\)]', '', force_text(value))
 
         if phone_re.search(phone_number):
-            return smart_text(value)
+            return force_text(value)
 
         raise ValidationError(self.error_messages['invalid'])
 
@@ -120,7 +119,7 @@ class IDLicensePlateField(Field):
             return ''
 
         plate_number = re.sub(r'\s+', ' ',
-                              smart_text(value.strip())).upper()
+                              force_text(value.strip())).upper()
 
         matches = plate_re.search(plate_number)
         if matches is None:
@@ -181,7 +180,7 @@ class IDNationalIdentityNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        value = re.sub(r'[\s.]', '', smart_text(value))
+        value = re.sub(r'[\s.]', '', force_text(value))
 
         if not nik_re.search(value):
             raise ValidationError(self.error_messages['invalid'])

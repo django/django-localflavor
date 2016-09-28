@@ -1,9 +1,9 @@
-from django.db.models.fields import CharField
+from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
+from .forms import MKIdentityCardNumberField as MKIdentityCardNumberFormField
+from .forms import UMCNField as UMCNFormField
 from .mk_choices import MK_MUNICIPALITIES
-from .forms import (UMCNField as UMCNFormField,
-                    MKIdentityCardNumberField as MKIdentityCardNumberFormField)
 
 
 class MKIdentityCardNumberField(CharField):
@@ -16,6 +16,11 @@ class MKIdentityCardNumberField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 8
         super(MKIdentityCardNumberField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(MKIdentityCardNumberField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MKIdentityCardNumberFormField}
@@ -34,6 +39,12 @@ class MKMunicipalityField(CharField):
         kwargs['choices'] = MK_MUNICIPALITIES
         kwargs['max_length'] = 2
         super(MKMunicipalityField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(MKMunicipalityField, self).deconstruct()
+        del kwargs['choices']
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
 
 class UMCNField(CharField):
@@ -55,6 +66,11 @@ class UMCNField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
         super(UMCNField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(UMCNField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': UMCNFormField}

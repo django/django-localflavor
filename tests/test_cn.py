@@ -2,9 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.cn.forms import (CNProvinceSelect, CNPostCodeField,
-                                  CNIDCardField, CNPhoneNumberField,
-                                  CNCellNumberField)
+from localflavor.cn.forms import CNCellNumberField, CNIDCardField, CNPhoneNumberField, CNPostCodeField, CNProvinceSelect
 
 
 class CNLocalFlavorTests(SimpleTestCase):
@@ -109,6 +107,8 @@ class CNLocalFlavorTests(SimpleTestCase):
         valid = {
             '13012345678': '13012345678',
             '14700010002': '14700010002',
+            '17098765432': '17098765432',
+            '18911223344': '18911223344',
         }
         invalid = {
             '130123456789': error_format,

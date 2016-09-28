@@ -3,23 +3,26 @@
 BR-specific Form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, CharField, Select
+from django.forms.fields import CharField, Field, RegexField, Select
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
-try:
-    from django.utils.encoding import smart_text
-except ImportError:
-    from django.utils.encoding import smart_unicode as smart_text
 
 from .br_states import STATE_CHOICES
 
 phone_digits_re = re.compile(r'^(\d{2})[-\.]?(\d{4,5})[-\.]?(\d{4})$')
+cpf_digits_re = re.compile(r'^(\d{3})\.(\d{3})\.(\d{3})-(\d{2})$')
+cnpj_digits_re = re.compile(
+    r'^(\d{2})[.-]?(\d{3})[.-]?(\d{3})/(\d{4})-(\d{2})$'
+)
+process_digits_re = re.compile(
+    r'^(\d{7})-?(\d{2})\.?(\d{4})\.?(\d)\.?(\d{2})\.?(\d{4})$'
+)
 
 
 class BRZipCodeField(RegexField):
@@ -50,7 +53,7 @@ class BRPhoneNumberField(Field):
         super(BRPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\(|\)|\s+)', '', smart_text(value))
+        value = re.sub('(\(|\)|\s+)', '', force_text(value))
         m = phone_digits_re.search(value)
         if m:
             return '%s-%s-%s' % (m.group(1), m.group(2), m.group(3))
@@ -86,10 +89,10 @@ class BRStateChoiceField(Field):
         value = super(BRStateChoiceField, self).clean(value)
         if value in EMPTY_VALUES:
             value = ''
-        value = smart_text(value)
+        value = force_text(value)
         if value == '':
             return value
-        valid_values = set([smart_text(k) for k, v in self.widget.choices])
+        valid_values = set([force_text(k) for k, v in self.widget.choices])
         if value not in valid_values:
             raise ValidationError(self.error_messages['invalid'])
         return value
@@ -112,7 +115,6 @@ class BRCPFField(CharField):
     default_error_messages = {
         'invalid': _("Invalid CPF number."),
         'max_digits': _("This field requires at most 11 digits or 14 characters."),
-        'digits_only': _("This field requires only numbers."),
     }
 
     def __init__(self, max_length=14, min_length=11, *args, **kwargs):
@@ -128,11 +130,12 @@ class BRCPFField(CharField):
             return ''
         orig_value = value[:]
         if not value.isdigit():
-            value = re.sub("[-\. ]", "", value)
-        try:
-            int(value)
-        except ValueError:
-            raise ValidationError(self.error_messages['digits_only'])
+            cpf = cpf_digits_re.search(value)
+            if cpf:
+                value = ''.join(cpf.groups())
+            else:
+                raise ValidationError(self.error_messages['invalid'])
+
         if len(value) != 11:
             raise ValidationError(self.error_messages['max_digits'])
         orig_dv = value[-2:]
@@ -147,7 +150,8 @@ class BRCPFField(CharField):
         value = value[:-1] + str(new_2dv)
         if value[-2:] != orig_dv:
             raise ValidationError(self.error_messages['invalid'])
-
+        if value.count(value[0]) == 11:
+            raise ValidationError(self.error_messages['invalid'])
         return orig_value
 
 
@@ -163,7 +167,6 @@ class BRCNPJField(Field):
     """
     default_error_messages = {
         'invalid': _("Invalid CNPJ number."),
-        'digits_only': _("This field requires only numbers."),
         'max_digits': _("This field requires at least 14 digits"),
     }
 
@@ -177,11 +180,12 @@ class BRCNPJField(Field):
             return ''
         orig_value = value[:]
         if not value.isdigit():
-            value = re.sub("[-/\.]", "", value)
-        try:
-            int(value)
-        except ValueError:
-            raise ValidationError(self.error_messages['digits_only'])
+            cnpj = cnpj_digits_re.search(value)
+            if cnpj:
+                value = ''.join(cnpj.groups())
+            else:
+                raise ValidationError(self.error_messages['invalid'])
+
         if len(value) != 14:
             raise ValidationError(self.error_messages['max_digits'])
         orig_dv = value[-2:]
@@ -193,6 +197,52 @@ class BRCNPJField(Field):
         new_2dv = DV_maker(new_2dv % 11)
         value = value[:-1] + str(new_2dv)
         if value[-2:] != orig_dv:
+            raise ValidationError(self.error_messages['invalid'])
+
+        return orig_value
+
+
+def mod_97_base10(value):
+    return 98 - ((value * 100 % 97) % 97)
+
+
+class BRProcessoField(CharField):
+    """
+    A form field that validates a Legal Process(Processo) number or a Legal Process string.
+    A Processo number is
+    compounded by NNNNNNN-DD.AAAA.J.TR.OOOO. The two DD digits are check digits.
+    More information:
+    http://www.cnj.jus.br/busca-atos-adm?documento=2748
+
+    .. versionadded:: 1.2
+    """
+    default_error_messages = {'invalid': _("Invalid Process number.")}
+
+    def __init__(self, max_length=25, min_length=20, *args, **kwargs):
+        super(BRProcessoField, self).__init__(max_length, min_length, *args, **kwargs)
+
+    def clean(self, value):
+        """
+        Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or
+        an 20-digit number.
+        """
+        value = super(BRProcessoField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+
+        orig_value = value[:]
+        if not value.isdigit():
+            process_number = process_digits_re.search(value)
+            if process_number:
+                value = ''.join(process_number.groups())
+            else:
+                raise ValidationError(self.error_messages['invalid'])
+
+        orig_dv = value[7:9]
+
+        value_without_digits = int(value[0:7] + value[9:])
+
+        if str(mod_97_base10(value_without_digits)).zfill(2) != orig_dv:
             raise ValidationError(self.error_messages['invalid'])
 
         return orig_value

@@ -1,22 +1,66 @@
+sudo: no
 language: python
-
-python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
-
-install:
-  - pip install -r tests/requirements.txt
-  - pip install https://github.com/django/django/archive/${DJANGO}.zip#egg=django
-  - pip install coveralls
-  - pip install -e .
-
-script:
-  - invoke test
-
 env:
-  - DJANGO=1.5.1
-  - DJANGO=stable/1.6.x
-
-after_success: coveralls
+  global:
+    - PIP_WHEEL_DIR=$HOME/.wheels
+    - PIP_FIND_LINKS=file://$PIP_WHEEL_DIR
+matrix:
+  include:
+    - python: 2.7
+      env: TOXENV=docs
+    - python: 2.7
+      env: TOXENV=prospector
+    - python: 3.5
+      env: TOXENV=isort
+    - python: 2.7
+      env: TOXENV=py27-1.7
+    - python: 2.7
+      env: TOXENV=py27-1.8
+    - python: 2.7
+      env: TOXENV=py27-1.9
+    - python: 2.7
+      env: TOXENV=py27-1.10
+    - python: 2.7
+      env: TOXENV=py27-master
+    - python: 3.2
+      env: TOXENV=py32-1.7
+    - python: 3.2
+      env: TOXENV=py32-1.8
+    - python: 3.3
+      env: TOXENV=py33-1.7
+    - python: 3.3
+      env: TOXENV=py33-1.8
+    - python: 3.4
+      env: TOXENV=py34-1.7
+    - python: 3.4
+      env: TOXENV=py34-1.8
+    - python: 3.4
+      env: TOXENV=py34-1.9
+    - python: 3.4
+      env: TOXENV=py34-1.10
+    - python: 3.4
+      env: TOXENV=py34-master
+    - python: 3.5
+      env: TOXENV=py35-1.9
+    - python: 3.5
+      env: TOXENV=py35-1.10
+    - python: 3.5
+      env: TOXENV=py35-master
+  allow_failures:
+    - python: 2.7
+      env: TOXENV=py27-master
+    - python: 3.4
+      env: TOXENV=py34-master
+    - python: 3.5
+      env: TOXENV=py35-master
+cache:
+  directories:
+    - $HOME/.wheels
+install:
+    - mkdir -p $PIP_WHEEL_DIR
+    - pip wheel -r tests/requirements.txt codecov
+    # virtualenv>=14.0.0 has dropped Python 3.2 support
+    - pip install "virtualenv<14.0.0" codecov tox
+script:
+  - tox
+after_success: codecov

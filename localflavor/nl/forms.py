@@ -1,109 +1,57 @@
+# -*- coding: utf-8 -*-
 """
 NL-specific Form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
-import re
-
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-from django.forms.fields import Field, Select
-from django.utils.encoding import smart_text
-from django.utils.translation import ugettext_lazy as _
+from django import forms
+from django.utils import six
 
 from .nl_provinces import PROVINCE_CHOICES
+from .validators import NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator, NLZipCodeFieldValidator
 
 
-pc_re = re.compile('^\d{4}[A-Z]{2}$')
-sofi_re = re.compile('^\d{9}$')
-numeric_re = re.compile('^\d+$')
-
-
-class NLZipCodeField(Field):
+class NLZipCodeField(forms.CharField):
     """
-    A Dutch postal code field.
+    A Dutch zip code field.
     """
-    default_error_messages = {
-        'invalid': _('Enter a valid postal code'),
-    }
+    default_validators = [NLZipCodeFieldValidator()]
 
     def clean(self, value):
-        super(NLZipCodeField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if isinstance(value, six.string_types):
+            value = value.upper().replace(' ', '')
 
-        value = value.strip().upper().replace(' ', '')
-        if not pc_re.search(value):
-            raise ValidationError(self.error_messages['invalid'])
+            if len(value) == 6:
+                value = '%s %s' % (value[:4], value[4:])
 
-        if int(value[:4]) < 1000:
-            raise ValidationError(self.error_messages['invalid'])
-
-        return '%s %s' % (value[:4], value[4:])
+        return super(NLZipCodeField, self).clean(value)
 
 
-class NLProvinceSelect(Select):
+class NLProvinceSelect(forms.Select):
     """
-    A Select widget that uses a list of provinces of the Netherlands as its
+    A Select widget that uses a list of provinces of the Netherlands as it's
     choices.
     """
     def __init__(self, attrs=None):
         super(NLProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class NLPhoneNumberField(Field):
+class NLPhoneNumberField(forms.CharField):
     """
     A Dutch telephone number field.
     """
-    default_error_messages = {
-        'invalid': _('Enter a valid phone number'),
-    }
-
-    def clean(self, value):
-        super(NLPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        phone_nr = re.sub('[\-\s\(\)]', '', smart_text(value))
-
-        if len(phone_nr) == 10 and numeric_re.search(phone_nr):
-            return value
-
-        if phone_nr[:3] == '+31' and len(phone_nr) == 12 and \
-                numeric_re.search(phone_nr[3:]):
-            return value
-
-        raise ValidationError(self.error_messages['invalid'])
+    default_validators = [NLPhoneNumberFieldValidator()]
 
 
-class NLSoFiNumberField(Field):
+class NLSoFiNumberField(forms.CharField):
     """
     A Dutch social security number (SoFi/BSN) field.
 
     http://nl.wikipedia.org/wiki/Sofinummer
     """
-    default_error_messages = {
-        'invalid': _('Enter a valid SoFi number'),
-    }
+    default_validators = [NLSoFiNumberFieldValidator()]
 
-    def clean(self, value):
-        super(NLSoFiNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        if not sofi_re.search(value):
-            raise ValidationError(self.error_messages['invalid'])
-
-        if int(value) == 0:
-            raise ValidationError(self.error_messages['invalid'])
-
-        checksum = 0
-        for i in range(9, 1, -1):
-            checksum += int(value[9 - i]) * i
-        checksum -= int(value[-1])
-
-        if checksum % 11 != 0:
-            raise ValidationError(self.error_messages['invalid'])
-
-        return value
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 9
+        super(NLSoFiNumberField, self).__init__(*args, **kwargs)

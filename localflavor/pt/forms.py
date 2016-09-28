@@ -9,14 +9,17 @@ Contains PT-specific Django form helpers.
 
 
 from __future__ import unicode_literals
-from .pt_regions import REGION_CHOICES
+
+from re import compile as regex_compile
+from re import sub as regex_replace
+
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-from re import compile as regex_compile, sub as regex_replace
 
+from .pt_regions import REGION_CHOICES
 
 CITIZEN_CARD_NUMBER_REGEX = regex_compile(r'^(\d{8})-?(\d[A-Z0-9]{2}\d)$')
 PHONE_NUMBER_REGEX = regex_compile(r'^((00|\+)351)?\d{3,9}$')
@@ -55,16 +58,21 @@ class PTCitizenCardNumberField(Field):
         encoded = number + checkdigits
         decoded = [int(digit, 36) for digit in encoded]
 
-        rectify = lambda value: value if value < 10 else value - 9
-        compute = lambda index, value: value if index % 2 else rectify(2 * value)
-
-        checksum = sum([compute(index, decoded_value)
+        checksum = sum([PTCitizenCardNumberField.compute(index, decoded_value)
                         for index, decoded_value in enumerate(decoded)])
 
         if not checksum % 10 == 0:
             raise ValidationError(self.error_messages['badchecksum'])
 
         return '{0}-{1}'.format(number, checkdigits)
+
+    @staticmethod
+    def compute(index, value):
+        if index % 2:
+            return value
+        else:
+            value *= 2
+            return value if value < 10 else value - 9
 
 
 class PTPhoneNumberField(Field):
@@ -84,7 +92,7 @@ class PTPhoneNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        value = regex_replace('(\.|\s)', '', smart_text(value))
+        value = regex_replace('(\.|\s)', '', force_text(value))
         match = PHONE_NUMBER_REGEX.search(value)
 
         if not match:

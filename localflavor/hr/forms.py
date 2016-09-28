@@ -2,20 +2,20 @@
 """
 HR-specific Form helpers
 """
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import datetime
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, Select, RegexField
-from django.utils.encoding import smart_text
+from django.forms.fields import Field, RegexField, Select
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from .hr_choices import (HR_LICENSE_PLATE_PREFIX_CHOICES, HR_COUNTY_CHOICES,
-                         HR_PHONE_NUMBER_PREFIX_CHOICES)
+from localflavor.generic.checksums import luhn
 
+from .hr_choices import HR_COUNTY_CHOICES, HR_LICENSE_PLATE_PREFIX_CHOICES, HR_PHONE_NUMBER_PREFIX_CHOICES
 
 jmbg_re = re.compile(r'^(?P<dd>\d{2})(?P<mm>\d{2})(?P<yyy>\d{3})' +
                      r'(?P<rr>\d{2})(?P<bbb>\d{3})(?P<k>\d{1})$')
@@ -157,7 +157,7 @@ class HRLicensePlateField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        value = re.sub(r'[\s\-]+', '', smart_text(value.strip())).upper()
+        value = re.sub(r'[\s\-]+', '', force_text(value.strip())).upper()
 
         matches = plate_re.search(value)
         if matches is None:
@@ -223,7 +223,7 @@ class HRPhoneNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        value = re.sub(r'[\-\s\(\)]', '', smart_text(value))
+        value = re.sub(r'[\-\s\(\)]', '', force_text(value))
 
         matches = phone_re.search(value)
         if matches is None:
@@ -273,8 +273,7 @@ class HRJMBAGField(Field):
             raise ValidationError(self.error_messages['copy'])
 
         # Validate checksum using Luhn algorithm.
-        num = [int(x) for x in value]
-        if not sum(num[::-2] + [sum(divmod(d * 2, 10)) for d in num[-2::-2]]) % 10 == 0:
+        if not luhn(value):
             raise ValidationError(self.error_messages['invalid'])
 
         return '%s' % value

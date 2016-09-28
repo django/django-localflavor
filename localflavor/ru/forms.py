@@ -1,7 +1,7 @@
 """
 Russian-specific forms helpers
 """
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
@@ -9,7 +9,6 @@ from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .ru_regions import RU_COUNTY_CHOICES, RU_REGIONS_CHOICES
-
 
 phone_digits_re = re.compile(r'^(?:[78]-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 

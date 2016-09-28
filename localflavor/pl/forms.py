@@ -2,13 +2,13 @@
 Polish-specific form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Select, RegexField
+from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .pl_administrativeunits import ADMINISTRATIVE_UNIT_CHOICES
@@ -205,7 +205,13 @@ class PLREGONField(RegexField):
 
         for table in weights:
             checksum = sum([int(n) * w for n, w in zip(number, table)])
-            if checksum % 11 % 10:
+
+            mod_result = checksum % 11
+
+            if mod_result == 10 and number[-1] != '0':
+                return False
+
+            if mod_result % 10:
                 return False
 
         return bool(weights)

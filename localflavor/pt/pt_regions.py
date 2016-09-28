@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
 from django.utils.translation import ugettext_lazy as _
 
 #: A tuple representing Portuguese regions (as per ISO3166:2-PT).

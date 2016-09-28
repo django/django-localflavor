@@ -1,14 +1,17 @@
 from __future__ import unicode_literals
-from datetime import date
+
 import re
+from datetime import date
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Select, RegexField, Field
-from django.utils.translation import ugettext_lazy as _
+from django.forms.fields import Field, RegexField, Select
 from django.utils.six import text_type
+from django.utils.translation import ugettext_lazy as _
 
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
+
+postalcode = re.compile(r'^(LT\s?-\s?)?(?P<code>\d{5})$', re.IGNORECASE)
 
 
 class LTCountySelect(Select):
@@ -85,9 +88,9 @@ class LTIDCodeField(RegexField):
             return False
 
 
-class LTPostalCodeField(RegexField):
+class LTPostalCodeField(Field):
     """
-    A form field that validates as Lithuanian postal code
+    A form field that validates and normalizes Lithanuan postal codes.
 
     Lithuanian postal codes in following forms accepted:
         * XXXXX
@@ -97,9 +100,16 @@ class LTPostalCodeField(RegexField):
         'invalid': _('Enter a postal code in the format XXXXX or LT-XXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super(LTPostalCodeField, self).__init__(r'(?i)^(LT\s?-\s?)?\d{5}$',
-                                                *args, **kwargs)
+    def clean(self, value):
+        value = super(LTPostalCodeField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+
+        match = re.match(postalcode, value)
+        if not match:
+            raise ValidationError(self.error_messages['invalid'])
+
+        return 'LT-' + match.group('code')
 
 
 class LTPhoneField(Field):
@@ -121,6 +131,8 @@ class LTPhoneField(Field):
     The field tries its best to convert the number into one you can call to
     internationally. Currently emergency and most of landline_local numbers are
     not converted.
+
+    .. versionadded:: 1.1
     """
 
     # Order dependent (shorter codes cannot go before longer ones)

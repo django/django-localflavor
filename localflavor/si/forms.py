@@ -2,14 +2,14 @@
 Slovenian specific form helpers.
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import datetime
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import CharField, Select, ChoiceField
+from django.forms.fields import CharField, ChoiceField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .si_postalcodes import SI_POSTALCODES_CHOICES
@@ -38,7 +38,7 @@ class SIEMSOField(CharField):
 
         m = self.emso_regex.match(value)
         if m is None:
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
 
         # Validate EMSO
         s = 0
@@ -52,7 +52,7 @@ class SIEMSOField(CharField):
             K = 11 - chk
 
         if K == 10 or int_values[-1] != K:
-            raise ValidationError(self.default_error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'])
 
         # Extract extra info in the identification number
         day, month, year, nationality, gender, chksum = [int(i) for i in m.groups()]
@@ -99,7 +99,7 @@ class SITaxNumberField(CharField):
 
         m = self.sitax_regex.match(value)
         if m is None:
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
         value = m.groups()[0]
 
         # Validate Tax number
@@ -112,7 +112,7 @@ class SITaxNumberField(CharField):
             chk = 0
 
         if int_values[-1] != chk:
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
 
         return value
 
@@ -166,5 +166,5 @@ class SIPhoneNumberField(CharField):
         m = self.phone_regex.match(value)
 
         if m is None:
-            raise ValidationError(self.default_error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'])
         return m.groups()[0]

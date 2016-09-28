@@ -27,6 +27,7 @@ validate Finnish social security numbers.
    * :doc:`localflavor/at`
    * :doc:`localflavor/au`
    * :doc:`localflavor/be`
+   * :doc:`localflavor/bg`
    * :doc:`localflavor/br`
    * :doc:`localflavor/ca`
    * :doc:`localflavor/ch`
@@ -35,13 +36,17 @@ validate Finnish social security numbers.
    * :doc:`localflavor/co`
    * :doc:`localflavor/cz`
    * :doc:`localflavor/de`
+   * :doc:`localflavor/dk`
    * :doc:`localflavor/ec`
+   * :doc:`localflavor/ee`
    * :doc:`localflavor/es`
    * :doc:`localflavor/fi`
    * :doc:`localflavor/fr`
    * :doc:`localflavor/gb`
+   * :doc:`localflavor/gr`
    * :doc:`localflavor/hk`
    * :doc:`localflavor/hr`
+   * :doc:`localflavor/hu`
    * :doc:`localflavor/id_`
    * :doc:`localflavor/ie_`
    * :doc:`localflavor/il`
@@ -51,11 +56,15 @@ validate Finnish social security numbers.
    * :doc:`localflavor/jp`
    * :doc:`localflavor/kw`
    * :doc:`localflavor/lt`
+   * :doc:`localflavor/lv`
    * :doc:`localflavor/mk`
+   * :doc:`localflavor/mt`
    * :doc:`localflavor/mx`
    * :doc:`localflavor/nl`
    * :doc:`localflavor/no`
+   * :doc:`localflavor/nz`
    * :doc:`localflavor/pe`
+   * :doc:`localflavor/pk`
    * :doc:`localflavor/pl`
    * :doc:`localflavor/pt`
    * :doc:`localflavor/py_`
@@ -64,6 +73,7 @@ validate Finnish social security numbers.
    * :doc:`localflavor/se`
    * :doc:`localflavor/si`
    * :doc:`localflavor/sk`
+   * :doc:`localflavor/tn`
    * :doc:`localflavor/tr`
    * :doc:`localflavor/us`
    * :doc:`localflavor/uy`
@@ -81,7 +91,7 @@ French telephone number::
 
 The ``localflavor`` package also includes a :doc:`generic </generic>` subpackage,
 containing useful code that is not specific to one particular country or culture.
-Currently, it defines date, datetime and split datetime input fields based on
+This package defines date, datetime and split datetime input fields based on
 those from the forms, but with non-US default formats. Here's an example of
 how to use them::
 
@@ -90,6 +100,18 @@ how to use them::
 
     class MyForm(forms.Form):
         my_date_field = generic.forms.DateField()
+
+The ``localflavor`` generic package also has IBAN and BIC model and form fields.
+Here's an example of how to use the IBAN and BIC form fields::
+
+    from django import forms
+    from localflavor.generic.forms import BICFormField, IBANFormField
+
+    class MyForm(forms.Form):
+        iban = IBANFormField()
+        bic = BICFormField()
+
+.. _ISO 3166 country codes: http://www.iso.org/iso/country_codes.htm
 
 Installation
 ============
@@ -109,7 +131,14 @@ Then add ``'localflavor'`` to your :setting:`INSTALLED_APPS` setting::
         'localflavor',
     )
 
+.. note::
+
+  Adding ``'localflavor'`` to your ``INSTALLED_APPS`` setting is required
+  for South_ and translations to work. Using django-localflavor without
+  adding it to your ``INSTALLED_APPS`` setting is not recommended.
+
 .. _PyPI: https://pypi.python.org/
+.. _South: http://south.aeracode.org/
 
 Internationalization
 ====================
@@ -130,6 +159,9 @@ any code you'd like to contribute. One thing we ask is that you please use
 Unicode objects (``u'mystring'``) for strings, rather than setting the encoding
 in the file. See any of the existing flavors for examples.
 
+See the `contributing documentation`_ for how to run the tests while working on a
+local flavor.
+
 If you consider adding a new localflavor for country here are some examples
 that you might consider implementing:
 
@@ -148,13 +180,14 @@ that you might consider implementing:
   Transifex: https://www.transifex.com/projects/p/django-localflavor/
 
 .. _create a ticket: https://github.com/django/django-localflavor/issues
+.. _contributing documentation: https://github.com/django/django-localflavor/blob/master/CONTRIBUTING.rst
 
 Releases
 ========
 
 Due to django-localflavor' history as a former contrib app, the app is
 required to be working with the actively maintained Django versions. See
-the documenation about `Django's release process`_ for more information.
+the documentation about `Django's release process`_ for more information.
 
 django-localflavor releases are not tied to the release cycle of Django.
 Version numbers follow the appropriate Python standards, e.g. PEPs 386_ and 440_.
@@ -206,12 +239,12 @@ next release.
 
 When a backwards-incompatible change is made (for example, the removal
 or renaming of a province) the localflavor in question will raise a
-warning when that localflavor is imported. This provides a runtime
+warning when that localflavor is imported. This provides a run-time
 indication that something may require attention.
 
 However, once you have addressed the backwards compatibility (for
 example, auditing your code to see if any data migration is required),
-the warning serves no purpose. The warning can then be supressed.
+the warning serves no purpose. The warning can then be suppressed.
 For example, to suppress the warnings raised by the Indonesian
 localflavor you would use the following code::
 
@@ -224,11 +257,14 @@ localflavor you would use the following code::
 Indices and tables
 ==================
 
+.. toctree::
+
+    authors
+    changelog
+
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-.. _ISO 3166 country codes: http://www.iso.org/iso/country_codes.htm
 
 .. toctree::
    :glob:

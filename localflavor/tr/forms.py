@@ -1,15 +1,14 @@
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select, CharField
-from django.utils.encoding import smart_text
+from django.forms.fields import CharField, Field, RegexField, Select
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .tr_provinces import PROVINCE_CHOICES
-
 
 phone_digits_re = re.compile(r'^(\+90|0)? ?(([1-9]\d{2})|\([1-9]\d{2}\)) ?([2-9]\d{2} ?\d{2} ?\d{2})$')
 
@@ -53,7 +52,7 @@ class TRPhoneNumberField(CharField):
         super(TRPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\(|\)|\s+)', '', smart_text(value))
+        value = re.sub('(\(|\)|\s+)', '', force_text(value))
         m = phone_digits_re.search(value)
         if m:
             return '%s%s' % (m.group(2), m.group(4))

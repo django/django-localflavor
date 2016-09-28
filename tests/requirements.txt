@@ -1,9 +1,4 @@
-# invoke
-# temporary fix for invoke on Python 3.2
-https://github.com/pyinvoke/invoke/archive/771110190ddb729913e8afc67724b84f42e6176d.zip
-coverage==3.6
-flake8==2.0
-django-discover-runner==1.0
-six==1.3.0
-# just to please sphinx
-Django
+invoke==0.11.1
+coverage==3.7.1
+flake8==2.5.4
+six==1.10.0

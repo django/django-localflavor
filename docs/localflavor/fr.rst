@@ -6,6 +6,8 @@ Forms
 
 .. automodule:: localflavor.fr.forms
     :members:
+    :exclude-members: FRSIRENENumberMixin
+
 
 Data
 ----

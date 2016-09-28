@@ -3,11 +3,11 @@
 UY-specific form helpers.
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 from django.core.validators import EMPTY_VALUES
-from django.forms.fields import Select, RegexField
 from django.forms import ValidationError
+from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .util import get_validation_digit

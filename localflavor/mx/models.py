@@ -1,10 +1,12 @@
+from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
-from django.db.models.fields import CharField
 
+from .forms import MXCLABEField as MXCLABEFormField
+from .forms import MXCURPField as MXCURPFormField
+from .forms import MXRFCField as MXRFCFormField
+from .forms import MXSocialSecurityNumberField as MXSocialSecurityNumberFormField
+from .forms import MXZipCodeField as MXZipCodeFormField
 from .mx_states import STATE_CHOICES
-from .forms import (MXRFCField as MXRFCFormField,
-                    MXZipCodeField as MXZipCodeFormField, MXCURPField as MXCURPFormField,
-                    MXSocialSecurityNumberField as MXSocialSecurityNumberFormField)
 
 
 class MXStateField(CharField):
@@ -19,6 +21,12 @@ class MXStateField(CharField):
         kwargs['max_length'] = 3
         super(MXStateField, self).__init__(*args, **kwargs)
 
+    def deconstruct(self):
+        name, path, args, kwargs = super(MXStateField, self).deconstruct()
+        del kwargs['choices']
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
 
 class MXZipCodeField(CharField):
     """
@@ -30,6 +38,11 @@ class MXZipCodeField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
         super(MXZipCodeField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(MXZipCodeField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXZipCodeFormField}
@@ -48,10 +61,39 @@ class MXRFCField(CharField):
         kwargs['max_length'] = 13
         super(MXRFCField, self).__init__(*args, **kwargs)
 
+    def deconstruct(self):
+        name, path, args, kwargs = super(MXRFCField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
     def formfield(self, **kwargs):
         defaults = {'form_class': MXRFCFormField}
         defaults.update(kwargs)
         return super(MXRFCField, self).formfield(**defaults)
+
+
+class MXCLABEField(CharField):
+    """
+    A model field that forms represent as a forms.MXCURPField field and
+    stores the value of a valid Mexican CLABE.
+
+    .. versionadded:: 1.4
+    """
+    description = _("Mexican CLABE")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 18
+        super(MXCLABEField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(MXCLABEField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': MXCLABEFormField}
+        defaults.update(kwargs)
+        return super(MXCLABEField, self).formfield(**defaults)
 
 
 class MXCURPField(CharField):
@@ -64,6 +106,11 @@ class MXCURPField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 18
         super(MXCURPField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(MXCURPField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXCURPFormField}
@@ -81,6 +128,11 @@ class MXSocialSecurityNumberField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
         super(MXSocialSecurityNumberField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(MXSocialSecurityNumberField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXSocialSecurityNumberFormField}

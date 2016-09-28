@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.sk.forms import (SKRegionSelect, SKPostalCodeField,
-                                  SKDistrictSelect)
+from localflavor.sk.forms import SKDistrictSelect, SKPostalCodeField, SKRegionSelect
 
 
 class SKLocalFlavorTests(SimpleTestCase):

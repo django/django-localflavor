@@ -2,13 +2,13 @@
 Czech-specific form helpers
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Select, RegexField, Field
+from django.forms.fields import Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .cz_regions import REGION_CHOICES
@@ -56,7 +56,7 @@ class CZBirthNumberField(Field):
         'invalid': _('Enter a valid birth number.'),
     }
 
-    def clean(self, value, gender=None):
+    def clean(self, value):
         super(CZBirthNumberField, self).clean(value)
 
         if value in EMPTY_VALUES:

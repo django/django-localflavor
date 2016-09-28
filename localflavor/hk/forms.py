@@ -1,16 +1,14 @@
 """
 Hong Kong specific Form helpers
 """
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
-from django.forms import CharField
-from django.forms import ValidationError
-from django.utils.encoding import smart_text
+from django.forms import CharField, ValidationError
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
 
 hk_phone_digits_re = re.compile(r'^(?:852-?)?(\d{4})[-\.]?(\d{4})$')
 hk_special_numbers = ('999', '992', '112')
@@ -53,7 +51,7 @@ class HKPhoneNumberField(CharField):
         if value in EMPTY_VALUES:
             return ''
 
-        value = re.sub('(\(|\)|\s+|\+)', '', smart_text(value))
+        value = re.sub('(\(|\)|\s+|\+)', '', force_text(value))
         m = hk_phone_digits_re.search(value)
         if not m:
             raise ValidationError(self.error_messages['invalid'])

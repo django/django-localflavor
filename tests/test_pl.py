@@ -2,9 +2,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.pl.forms import (PLProvinceSelect, PLCountySelect,
-                                  PLPostalCodeField, PLNIPField, PLPESELField,
-                                  PLNationalIDCardNumberField, PLREGONField)
+from localflavor.pl.forms import (PLCountySelect, PLNationalIDCardNumberField, PLNIPField, PLPESELField,
+                                  PLPostalCodeField, PLProvinceSelect, PLREGONField)
 
 
 class PLLocalFlavorTests(SimpleTestCase):
@@ -83,8 +82,8 @@ class PLLocalFlavorTests(SimpleTestCase):
 <option value="torunski">toru\u0144ski</option>
 <option value="tucholski">tucholski</option>
 <option value="wabrzeski">w\u0105brzeski</option>
-<option value="wloclawski">wroc\u0142awski</option>
-<option value="zninski">\u017ani\u0144ski</option>
+<option value="wloclawski">w\u0142oc\u0142awski</option>
+<option value="zninski">\u017cni\u0144ski</option>
 <option value="lublin">Lublin</option>
 <option value="biala-podlaska">Bia\u0142a Podlaska</option>
 <option value="chelm">Che\u0142m</option>
@@ -214,7 +213,7 @@ class PLLocalFlavorTests(SimpleTestCase):
 <option value="opole">Opole</option>
 <option value="brzeski">brzeski</option>
 <option value="glubczycki">g\u0142ubczyski</option>
-<option value="kedzierzynsko-kozielski">k\u0119dzierzy\u0144ski-kozielski</option>
+<option value="kedzierzynsko-kozielski">k\u0119dzierzy\u0144sko-kozielski</option>
 <option value="kluczborski">kluczborski</option>
 <option value="krapkowicki">krapkowicki</option>
 <option value="namyslowski">namys\u0142owski</option>
@@ -471,11 +470,20 @@ class PLLocalFlavorTests(SimpleTestCase):
         valid = {
             '12345678512347': '12345678512347',
             '590096454': '590096454',
+
+            # A special case where the checksum == 10 and the control
+            # digit == '0'
+            '391023200': '391023200',
         }
         invalid = {
             '123456784': error_checksum,
             '12345678412342': error_checksum,
             '590096453': error_checksum,
+
+            # A special case where the checksum == 10,
+            # but the control digit != '0'
+            '111111111': error_checksum,
+
             '590096': error_format,
         }
         self.assertFieldOutput(PLREGONField, valid, invalid)
