@@ -6,7 +6,8 @@ Changelog
 
 New flavors:
 
-- None
+- Added local flavor for Venezuela
+  (`gh-245 <https://github.com/django/django-localflavor/pull/245>`_)
 
 New fields for existing flavors:
 
