@@ -46,7 +46,7 @@ class PLPESELField(RegexField):
     default_error_messages = {
         'invalid': _('National Identification Number consists of 11 digits.'),
         'checksum': _('Wrong checksum for the National Identification Number.'),
-        'birthdate': _('The number contains invalid birth date.'),
+        'birthdate': _('The National Identification Number contains invalid birth date.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
