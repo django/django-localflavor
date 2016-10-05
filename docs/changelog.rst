@@ -10,6 +10,8 @@ New flavors:
 
 New fields for existing flavors:
 
+- Added MXPhoneNumberField model and form fields.
+
 - Added MXCLABEField model and form fields.
   (`gh-227 <https://github.com/django/django-localflavor/pull/227>`_).
 
