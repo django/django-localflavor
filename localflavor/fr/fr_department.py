@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from localflavor.fr.fr_region import OLD_TO_NEW_REGION_CODE
+
 #: See the "Code officiel géographique" on the INSEE website <www.insee.fr>.
 DEPARTMENT_CHOICES_PER_REGION = (
     # Metropolitan departments
@@ -106,7 +108,7 @@ DEPARTMENT_CHOICES_PER_REGION = (
     ('973', 'Guyane', '03'),
     ('974', 'La Réunion', '04'),
     ('975', 'Saint-Pierre-et-Miquelon', None),
-    ('976', 'Mayotte', '05'),
+    ('976', 'Mayotte', '06'),
     ('977', 'Saint-Barthélemy', None),
     ('978', 'Saint-Martin', None),
     ('984', 'Terres australes et antarctiques françaises', None),
@@ -115,6 +117,11 @@ DEPARTMENT_CHOICES_PER_REGION = (
     ('988', 'Nouvelle-Calédonie', None),
     ('989', 'Île de Clipperton', None),
 )
+
+def transform(old_entry):
+    return (old_entry[0],old_entry[1], OLD_TO_NEW_REGION_CODE[old_entry[2]] if old_entry[2] else None )
+
+DEPARTMENT_CHOICES_PER_NEW_REGION = map(transform, DEPARTMENT_CHOICES_PER_REGION)
 
 #: A list of departments
 DEPARTMENT_CHOICES = tuple([

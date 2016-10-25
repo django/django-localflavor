@@ -17,6 +17,7 @@ New fields for existing flavors:
   (`gh-238 <https://github.com/django/django-localflavor/pull/238>`_)
 
 Modifications to existing flavors:
+- Added new french regions set
 
 - Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
   (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).

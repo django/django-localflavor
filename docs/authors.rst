@@ -66,6 +66,7 @@ Authors
 * Ramiro Morales
 * Rolf Erik Lekang
 * Russell Keith-Magee
+* Screwt
 * Serafeim Papastefanos
 * Sergio Oliveira
 * Simonas Kazlauskas
