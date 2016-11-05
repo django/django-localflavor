@@ -26,6 +26,8 @@ Modifications to existing flavors:
   (`gh-242` <https://github.com/django/django-localflavor/pull/242>`_).
 - Fixed French FRNationalIdentificationNumber bug with corsican people born after 2000.
   (`gh-242` <https://github.com/django/django-localflavor/pull/242>`_).
+- Renamed 'Distrito Federal' to 'Ciudad de México'
+  (`gh-251` <https://github.com/django/django-localflavor/pull/251>`_).
 
 1.3   (2016-05-06)
 ------------------

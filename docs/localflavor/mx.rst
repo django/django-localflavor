@@ -1,6 +1,14 @@
 Mexico (``mx``)
 ===============
 
+Migrations
+----------
+
+Migrate goes here.
+
+Then set `LOCALFLAVOR_MIGRATED_MEXICO_CITY` to True in your `settings.py`
+
+
 Forms
 -----
 

@@ -1,5 +1,6 @@
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
 from .forms import MXCLABEField as MXCLABEFormField
 from .forms import MXCURPField as MXCURPFormField
@@ -7,6 +8,8 @@ from .forms import MXRFCField as MXRFCFormField
 from .forms import MXSocialSecurityNumberField as MXSocialSecurityNumberFormField
 from .forms import MXZipCodeField as MXZipCodeFormField
 from .mx_states import STATE_CHOICES
+
+import warnings
 
 
 class MXStateField(CharField):
@@ -26,6 +29,19 @@ class MXStateField(CharField):
         del kwargs['choices']
         del kwargs['max_length']
         return name, path, args, kwargs
+
+    def clean(self, value, model_instance):
+        value = super(MXStateField, self).clean(value, model_instance)
+
+        if value == 'DIF':
+            warnings.warn(
+                "The key 'DIF' should be migrated to 'CDMX' as soon as possible. "
+                "See https://django-localflavor.readthedocs.io/en/latest/localflavor/mx/#Migrations "
+                "for more information",
+                DeprecationWarning
+            )
+
+        return value
 
 
 class MXZipCodeField(CharField):
