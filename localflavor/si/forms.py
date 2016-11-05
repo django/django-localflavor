@@ -83,6 +83,8 @@ class SITaxNumberField(CharField):
     Slovenian tax number field.
 
     Valid input is SIXXXXXXXX or XXXXXXXX where X is a number.
+
+    http://zylla.wipos.p.lodz.pl/ut/translation.html#PZSI
     """
 
     default_error_messages = {
