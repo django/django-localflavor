@@ -16,8 +16,16 @@ class MXStateField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = STATE_CHOICES
-        kwargs['max_length'] = 3
+        kwargs['max_length'] = 4
         super(MXStateField, self).__init__(*args, **kwargs)
+
+    def clean(self, value, model_instance):
+        value = super(MXStateField, self).clean(value, model_instance)
+
+        if value == "DIF":
+            value = "CDMX"
+
+        return value
 
     def deconstruct(self):
         name, path, args, kwargs = super(MXStateField, self).deconstruct()

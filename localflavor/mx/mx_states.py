@@ -13,7 +13,7 @@ STATE_CHOICES = (
     ('CHP', _('Chiapas')),
     ('COA', _('Coahuila')),
     ('COL', _('Colima')),
-    ('DIF', _('Distrito Federal')),
+    ('MIXS', _('Distrito Federal')),
     ('DUR', _('Durango')),
     ('GRO', _('Guerrero')),
     ('GUA', _('Guanajuato')),
