@@ -35,6 +35,11 @@ def test(country='all'):
 
 
 @task
+def test_project():
+    run('cd tests/test_project/ && python manage.py test')
+
+
+@task
 def compile_translations():
     run('cd localflavor; django-admin.py compilemessages; cd ..')
 
