@@ -8,6 +8,8 @@ from .forms import MXSocialSecurityNumberField as MXSocialSecurityNumberFormFiel
 from .forms import MXZipCodeField as MXZipCodeFormField
 from .mx_states import STATE_CHOICES
 
+import warnings
+
 
 class MXStateField(CharField):
     """A model field that stores the three-letter Mexican state abbreviation in the database."""
@@ -19,10 +21,15 @@ class MXStateField(CharField):
         kwargs['max_length'] = 4
         super(MXStateField, self).__init__(*args, **kwargs)
 
-    def clean(self, value, model_instance):
-        value = super(MXStateField, self).clean(value, model_instance)
+    def to_python(self, value):
+        value = super(MXStateField, self).to_python(value)
 
         if value == "DIF":
+            warnings.warn(
+                "State code DIF has changed to CDMX. Please consult "
+                "https://django-localflavor.readthedocs.io/en/latest/#migrations "
+                "for more information", DeprecationWarning
+            )
             value = "CDMX"
 
         return value

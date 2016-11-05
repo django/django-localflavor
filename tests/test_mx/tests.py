@@ -7,6 +7,7 @@ from localflavor.mx.forms import (MXCLABEField, MXCURPField, MXRFCField, MXSocia
                                   MXZipCodeField)
 
 from .forms import MXPersonProfileForm
+import warnings
 
 
 class MXLocalFlavorTests(TestCase):
@@ -20,6 +21,7 @@ class MXLocalFlavorTests(TestCase):
             'ssn': '53987417457',
             'clabe': '032180000118359719'
         })
+        self.model = self.form.save()
 
     def test_get_display_methods(self):
         """Test that the get_*_display() methods are added to the model instances."""
@@ -282,3 +284,11 @@ class MXLocalFlavorTests(TestCase):
             '037027587179835981': error_checksum,
         }
         self.assertFieldOutput(MXCLABEField, valid, invalid)
+
+    def test_MXStateField_deprecation(self):
+        self.model.state = 'DIF'
+        self.model.save()
+
+        self.model.refresh_from_db()
+
+        self.assertEqual(self.model.state, 'CDMX')

@@ -1,8 +1,10 @@
-from django.test import TestCase
-from .models import MyModel
 from django.core.management import call_command
+from django.test import TestCase
+
 from localflavor.management.commands.run_localflavor_datamigrations import update_field_values
 from localflavor.mx.models import MXStateField
+
+from .models import MyModel
 
 
 class DataMigrationTest(TestCase):

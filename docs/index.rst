@@ -254,6 +254,13 @@ localflavor you would use the following code::
                             module='localflavor.id')
     from localflavor.id import forms as id_forms
 
+
+Migrations
+==========
+
+ToDo: Write this
+
+
 Indices and tables
 ==================
 

@@ -1,7 +1,8 @@
-from django.core.management import BaseCommand
 from django.apps import registry
-from localflavor.mx.models import MXStateField
+from django.core.management import BaseCommand
 from django.db.transaction import atomic
+
+from localflavor.mx.models import MXStateField
 
 
 def find_fields(field_cls):
