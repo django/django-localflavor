@@ -7,7 +7,11 @@ postal service.
 This exists in this standalone file so that it's only imported into memory
 when explicitly needed.
 """
+
+import operator
+
 from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import pgettext_lazy
 
 #: The 48 contiguous states, plus the District of Columbia.
 CONTIGUOUS_STATES = (
@@ -20,7 +24,7 @@ CONTIGUOUS_STATES = (
     ('DE', _('Delaware')),
     ('DC', _('District of Columbia')),
     ('FL', _('Florida')),
-    ('GA', _('Georgia')),
+    ('GA', pgettext_lazy('US state', 'Georgia')),
     ('ID', _('Idaho')),
     ('IL', _('Illinois')),
     ('IN', _('Indiana')),
@@ -62,59 +66,10 @@ CONTIGUOUS_STATES = (
     ('WY', _('Wyoming')),
 )
 
-#: All 50 states, plus the District of Columbia.
-US_STATES = (
-    ('AL', _('Alabama')),
+#: Non contiguous states (Not connected to mainland USA)
+NON_CONTIGUOUS_STATES = (
     ('AK', _('Alaska')),
-    ('AZ', _('Arizona')),
-    ('AR', _('Arkansas')),
-    ('CA', _('California')),
-    ('CO', _('Colorado')),
-    ('CT', _('Connecticut')),
-    ('DE', _('Delaware')),
-    ('DC', _('District of Columbia')),
-    ('FL', _('Florida')),
-    ('GA', _('Georgia')),
     ('HI', _('Hawaii')),
-    ('ID', _('Idaho')),
-    ('IL', _('Illinois')),
-    ('IN', _('Indiana')),
-    ('IA', _('Iowa')),
-    ('KS', _('Kansas')),
-    ('KY', _('Kentucky')),
-    ('LA', _('Louisiana')),
-    ('ME', _('Maine')),
-    ('MD', _('Maryland')),
-    ('MA', _('Massachusetts')),
-    ('MI', _('Michigan')),
-    ('MN', _('Minnesota')),
-    ('MS', _('Mississippi')),
-    ('MO', _('Missouri')),
-    ('MT', _('Montana')),
-    ('NE', _('Nebraska')),
-    ('NV', _('Nevada')),
-    ('NH', _('New Hampshire')),
-    ('NJ', _('New Jersey')),
-    ('NM', _('New Mexico')),
-    ('NY', _('New York')),
-    ('NC', _('North Carolina')),
-    ('ND', _('North Dakota')),
-    ('OH', _('Ohio')),
-    ('OK', _('Oklahoma')),
-    ('OR', _('Oregon')),
-    ('PA', _('Pennsylvania')),
-    ('RI', _('Rhode Island')),
-    ('SC', _('South Carolina')),
-    ('SD', _('South Dakota')),
-    ('TN', _('Tennessee')),
-    ('TX', _('Texas')),
-    ('UT', _('Utah')),
-    ('VT', _('Vermont')),
-    ('VA', _('Virginia')),
-    ('WA', _('Washington')),
-    ('WV', _('West Virginia')),
-    ('WI', _('Wisconsin')),
-    ('WY', _('Wyoming')),
 )
 
 #: Non-state territories.
@@ -146,17 +101,19 @@ COFA_STATES = (
 #: code changed).
 OBSOLETE_STATES = (
     ('CM', _('Commonwealth of the Northern Mariana Islands')),  # Is now 'MP'
-    ('CZ', _('Panama Canal Zone')),                             # Reverted to Panama 1979
-    ('PI', _('Philippine Islands')),                            # Philippine independence 1946
-    ('TT', _('Trust Territory of the Pacific Islands')),        # Became the independent COFA states + Northern Mariana Islands 1979-1994
+    ('CZ', _('Panama Canal Zone')),  # Reverted to Panama 1979
+    ('PI', _('Philippine Islands')),  # Philippine independence 1946
+    # Became the independent COFA states + Northern Mariana Islands 1979-1994
+    ('TT', _('Trust Territory of the Pacific Islands')),
 )
 
+US_STATES = tuple(sorted(CONTIGUOUS_STATES + NON_CONTIGUOUS_STATES, key=operator.itemgetter(0)))
 
 #: All US states and territories plus DC and military mail.
-STATE_CHOICES = tuple(sorted(US_STATES + US_TERRITORIES + ARMED_FORCES_STATES, key=lambda obj: obj[1]))
+STATE_CHOICES = tuple(sorted(US_STATES + US_TERRITORIES + ARMED_FORCES_STATES, key=operator.itemgetter(1)))
 
 #: All US Postal Service locations.
-USPS_CHOICES = tuple(sorted(US_STATES + US_TERRITORIES + ARMED_FORCES_STATES + COFA_STATES, key=lambda obj: obj[1]))
+USPS_CHOICES = tuple(sorted(US_STATES + US_TERRITORIES + ARMED_FORCES_STATES + COFA_STATES, key=operator.itemgetter(1)))
 
 #: Normalized versions of state names
 STATES_NORMALIZED = {

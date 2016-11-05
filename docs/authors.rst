@@ -76,5 +76,6 @@ Authors
 * Tino de Bruijn
 * Trey Hunner
 * Tyler Ball
+* Tom Forbes
 * Venelin Stoykov
 * Vladimir Nani
