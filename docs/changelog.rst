@@ -12,9 +12,10 @@ New fields for existing flavors:
 
 - Added MXCLABEField model and form fields.
   (`gh-227 <https://github.com/django/django-localflavor/pull/227>`_).
-
 - Added AUTaxFileNumberField model and form fields.
   (`gh-238 <https://github.com/django/django-localflavor/pull/238>`_)
+- Added KWGovernorateSelect field to easily select Kuwait governorates.
+  (`gh-231 <https://github.com/django/django-localflavor/pull/231>`_).
 
 Modifications to existing flavors:
 
