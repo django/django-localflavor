@@ -3,8 +3,8 @@ Kuwait-specific Form helpers
 """
 from __future__ import unicode_literals
 
-import textwrap
 import re
+import textwrap
 from datetime import date
 
 from django.core.validators import EMPTY_VALUES
@@ -13,6 +13,7 @@ from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .kw_governorates import GOVERNORATE_CHOICES
+
 
 id_re = re.compile(r'''^(?P<initial>\d)
                        (?P<yy>\d\d)
