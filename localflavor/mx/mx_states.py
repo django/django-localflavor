@@ -2,8 +2,13 @@
 from __future__ import unicode_literals
 
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
-#: All 31 states, plus the `Distrito Federal`.
+
+HAS_MIGRATED_MEXICO_CITY = getattr(settings, 'LOCALFLAVOR_MIGRATED_MEXICO_CITY', False)
+
+
+#: All 31 states, plus the `Ciudad de México`.
 STATE_CHOICES = (
     ('AGU', _('Aguascalientes')),
     ('BCN', _('Baja California')),
@@ -13,7 +18,7 @@ STATE_CHOICES = (
     ('CHP', _('Chiapas')),
     ('COA', _('Coahuila')),
     ('COL', _('Colima')),
-    ('DIF', _('Distrito Federal')),
+    ('CDMX' if HAS_MIGRATED_MEXICO_CITY else 'DIF', _('Ciudad de México')),
     ('DUR', _('Durango')),
     ('GRO', _('Guerrero')),
     ('GUA', _('Guanajuato')),
