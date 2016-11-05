@@ -12,7 +12,7 @@ from django.forms.fields import RegexField
 from django.utils.translation import gettext_lazy as _
 
 
-def has_valid_checksum(value):
+def kw_civil_id_number_has_valid_checksum(value):
     weight = (2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2)
     calculated_checksum = 0
     for i in range(11):
@@ -34,6 +34,8 @@ class KWCivilIDNumberField(RegexField):
         * The number consist of 12 digits.
         * The birthdate of the person is a valid date.
         * The calculated checksum equals to the last digit of the Civil ID.
+
+    .. versionchanged:: 1.4
     """
     default_error_messages = {
         'invalid': _('Enter a valid Kuwaiti Civil ID number'),
@@ -64,7 +66,7 @@ class KWCivilIDNumberField(RegexField):
         except ValueError:
             raise ValidationError(self.error_messages['invalid'])
 
-        if not has_valid_checksum(value):
+        if not kw_civil_id_number_has_valid_checksum(value):
             raise ValidationError(self.error_messages['invalid'])
 
         return value
