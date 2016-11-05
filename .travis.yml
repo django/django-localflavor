@@ -1,9 +1,7 @@
 sudo: no
 language: python
-env:
-  global:
-    - PIP_WHEEL_DIR=$HOME/.wheels
-    - PIP_FIND_LINKS=file://$PIP_WHEEL_DIR
+cache: pip
+
 matrix:
   include:
     - python: 2.7
@@ -53,11 +51,7 @@ matrix:
       env: TOXENV=py34-master
     - python: 3.5
       env: TOXENV=py35-master
-cache:
-  directories:
-    - $HOME/.wheels
 install:
-    - mkdir -p $PIP_WHEEL_DIR
     - pip wheel -r tests/requirements.txt codecov
     # virtualenv>=14.0.0 has dropped Python 3.2 support
     - pip install "virtualenv<14.0.0" codecov tox
