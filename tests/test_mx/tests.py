@@ -63,7 +63,7 @@ class MXLocalFlavorTests(TestCase):
 <option value="CHP">Chiapas</option>
 <option value="COA">Coahuila</option>
 <option value="COL">Colima</option>
-<option value="DIF">Distrito Federal</option>
+<option value="CDMX">Ciudad de México</option>
 <option value="DUR">Durango</option>
 <option value="GRO">Guerrero</option>
 <option value="GUA">Guanajuato</option>
@@ -101,7 +101,7 @@ class MXLocalFlavorTests(TestCase):
 <option value="CHP">Chiapas</option>
 <option value="COA">Coahuila</option>
 <option value="COL">Colima</option>
-<option value="DIF">Distrito Federal</option>
+<option value="CDMX">Ciudad de México</option>
 <option value="DUR">Durango</option>
 <option value="GRO">Guerrero</option>
 <option value="GUA">Guanajuato</option>

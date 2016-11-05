@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.utils.translation import ugettext_lazy as _
 
-#: All 31 states, plus the `Distrito Federal`.
+#: All 31 states, plus the `Ciudad de México`.
 STATE_CHOICES = (
     ('AGU', _('Aguascalientes')),
     ('BCN', _('Baja California')),
@@ -13,7 +13,7 @@ STATE_CHOICES = (
     ('CHP', _('Chiapas')),
     ('COA', _('Coahuila')),
     ('COL', _('Colima')),
-    ('MIXS', _('Distrito Federal')),
+    ('CDMX', _('Ciudad de México')),
     ('DUR', _('Durango')),
     ('GRO', _('Guerrero')),
     ('GUA', _('Guanajuato')),
