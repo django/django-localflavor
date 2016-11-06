@@ -17,11 +17,6 @@ class BGEGNField(models.CharField):
         kwargs['max_length'] = 10
         super(BGEGNField, self).__init__(*args, **kwargs)
 
-    def deconstruct(self):
-        name, path, args, kwargs = super(BGEGNField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
-
 
 class BGEIKField(models.CharField):
     """
@@ -36,8 +31,3 @@ class BGEIKField(models.CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
         super(BGEIKField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(BGEIKField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs

@@ -21,5 +21,4 @@ class ECProvinceField(CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(ECProvinceField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs

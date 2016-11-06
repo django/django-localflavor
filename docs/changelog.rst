@@ -30,6 +30,12 @@ Modifications to existing flavors:
 - Fixed the translation for US state 'Georgia' from colliding with the country 'Georgia'
   (`gh-250` <https://github.com/django/django-localflavor/pull/250>`_).
 
+Other changes:
+
+- Ensure the migration framework generates schema migrations for model fields that change the max_length
+  (`gh-257 <https://github.com/django/django-localflavor/pull/257>`_). Users will need to generate migrations for any
+  model fields they use with 'makemigrations'.
+
 1.3   (2016-05-06)
 ------------------
 

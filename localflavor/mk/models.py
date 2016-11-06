@@ -17,11 +17,6 @@ class MKIdentityCardNumberField(CharField):
         kwargs['max_length'] = 8
         super(MKIdentityCardNumberField, self).__init__(*args, **kwargs)
 
-    def deconstruct(self):
-        name, path, args, kwargs = super(MKIdentityCardNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
-
     def formfield(self, **kwargs):
         defaults = {'form_class': MKIdentityCardNumberFormField}
         defaults.update(kwargs)
@@ -43,7 +38,6 @@ class MKMunicipalityField(CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(MKMunicipalityField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs
 
 
@@ -66,11 +60,6 @@ class UMCNField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
         super(UMCNField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(UMCNField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': UMCNFormField}

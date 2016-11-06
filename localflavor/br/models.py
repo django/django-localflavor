@@ -18,5 +18,4 @@ class BRStateField(CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(BRStateField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs

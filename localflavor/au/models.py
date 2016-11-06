@@ -22,7 +22,6 @@ class AUStateField(CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(AUStateField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs
 
 
@@ -37,11 +36,6 @@ class AUPostCodeField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 4
         super(AUPostCodeField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(AUPostCodeField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.AUPostCodeField}
@@ -59,11 +53,6 @@ class AUPhoneNumberField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 20
         super(AUPhoneNumberField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(AUPhoneNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.AUPhoneNumberField}
@@ -86,11 +75,6 @@ class AUBusinessNumberField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
         super(AUBusinessNumberField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(AUBusinessNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.AUBusinessNumberField}
@@ -127,11 +111,6 @@ class AUTaxFileNumberField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
         super(AUTaxFileNumberField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(AUTaxFileNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.AUTaxFileNumberField}
