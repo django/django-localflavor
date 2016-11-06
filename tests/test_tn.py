@@ -7,13 +7,10 @@ from localflavor.tn.forms import TNGovernorateSelect
 
 
 class TNLocalFlavorTests(SimpleTestCase):
-    """
-    Tunisia Local Flavor Tests class.
-    """
+    """Tunisia Local Flavor Tests class."""
+
     def test_tn_governorate_select(self):
-        """
-        Tests Select Governorate.
-        """
+        """Tests Select Governorate."""
         form = TNGovernorateSelect()
 
         select_governorate_html = '''<select name="governorate">

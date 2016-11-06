@@ -116,11 +116,11 @@ class ROLocalFlavorTests(SimpleTestCase):
 
     def test_ROPhoneNumberField(self):
         error_invalid_length = ['Phone numbers may only have 7 or 10 digits,' +
-            ' except the national short numbers which have 3 to 6 digits']
+                                ' except the national short numbers which have 3 to 6 digits']
         error_invalid_long_format = ['Normal phone numbers (7 or 10 digits)' +
-            ' must begin with "0"']
+                                     ' must begin with "0"']
         error_invalid_short_format = ['National short numbers (3 to 6 digits)' +
-            ' must begin with "1"']
+                                      ' must begin with "1"']
         valid = {
             '112': '112',
             '12 345': '12345',

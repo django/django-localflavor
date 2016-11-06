@@ -129,7 +129,7 @@ NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
 
 @deconstructible
 class IBANValidator(object):
-    """ A validator for International Bank Account Numbers (IBAN - ISO 13616-1:2007). """
+    """A validator for International Bank Account Numbers (IBAN - ISO 13616-1:2007)."""
 
     def __init__(self, use_nordea_extensions=False, include_countries=None):
         self.use_nordea_extensions = use_nordea_extensions
@@ -142,7 +142,8 @@ class IBANValidator(object):
         if self.include_countries:
             for country_code in self.include_countries:
                 if country_code not in self.validation_countries:
-                    msg = 'Explicitly requested country code %s is not part of the configured IBAN validation set.' % country_code
+                    msg = 'Explicitly requested country code %s is not ' \
+                          'part of the configured IBAN validation set.' % country_code
                     raise ImproperlyConfigured(msg)
 
     def __eq__(self, other):
@@ -151,8 +152,11 @@ class IBANValidator(object):
 
     @staticmethod
     def iban_checksum(value):
-        """ Returns check digits for an input IBAN number. Original checksum in input value is ignored. """
+        """
+        Returns check digits for an input IBAN number.
 
+        Original checksum in input value is ignored.
+        """
         # 1. Move the two initial characters to the end of the string, replacing checksum for '00'
         value = value[4:] + value[:2] + '00'
 
@@ -201,8 +205,9 @@ class IBANValidator(object):
 @deconstructible
 class BICValidator(object):
     """
-    A validator for SWIFT Business Identifier Codes (ISO 9362:2009). Validation is based on the BIC structure found on
-    wikipedia.
+    A validator for SWIFT Business Identifier Codes (ISO 9362:2009).
+
+    Validation is based on the BIC structure found on wikipedia.
 
     https://en.wikipedia.org/wiki/ISO_9362#Structure
     """
@@ -241,6 +246,7 @@ class EANValidator(object):
 
     http://en.wikipedia.org/wiki/International_Article_Number_(EAN)
     """
+
     message = _('Not a valid EAN code.')
 
     def __init__(self, strip_nondigits=False, message=None):

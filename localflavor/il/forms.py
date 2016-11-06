@@ -1,6 +1,4 @@
-"""
-Israeli-specific form helpers
-"""
+"""Israeli-specific form helpers."""
 from __future__ import unicode_literals
 
 import re
@@ -19,8 +17,10 @@ mobile_phone_number_re = re.compile(r'^(\()?0?(5[02-9])(?(1)\))-?\d{7}$')  # inc
 class ILPostalCodeField(RegexField):
     """
     A form field that validates its input as an Israeli postal code.
+
     Valid form is XXXXX where X represents integer.
     """
+
     default_error_messages = {
         'invalid': _('Enter a postal code in the format XXXXXXX (or XXXXX) - digits only'),
     }
@@ -37,6 +37,7 @@ class ILPostalCodeField(RegexField):
 class ILIDNumberField(Field):
     """
     A form field that validates its input as an Israeli identification number.
+
     Valid form is per the Israeli ID specification.
 
     Israeli ID numbers consist of up to 8 digits followed by a checksum digit.
@@ -72,9 +73,7 @@ class ILIDNumberField(Field):
 
 
 class ILMobilePhoneNumberField(RegexField):
-    """
-    A form field that validates its input as an Israeli Mobile phone number.
-    """
+    """A form field that validates its input as an Israeli Mobile phone number."""
 
     default_error_messages = {
         'invalid': _('Enter a valid Mobile Number.'),

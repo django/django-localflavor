@@ -1,6 +1,4 @@
-"""
-Pakistani-specific Form helpers
-"""
+"""Pakistani-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -19,10 +17,12 @@ PHONE_DIGITS_RE = re.compile(r'^(\d{9,11})$')
 
 
 class PKPostCodeField(RegexField):
-    """ Pakistani post code field.
+    """
+    Pakistani post code field.
 
     Assumed to be 5 digits.
     """
+
     default_error_messages = {
         'invalid': _('Enter a 5 digit postcode.'),
     }
@@ -37,13 +37,16 @@ class PKPhoneNumberField(CharField):
 
     Valid numbers have nine to eleven digits.
     """
+
     default_error_messages = {
         'invalid': _('Phone numbers must contain 9, 10 or 11 digits.'),
     }
 
     def clean(self, value):
         """
-        Validate a phone number. Strips parentheses, whitespace and hyphens.
+        Validate a phone number.
+
+        Strips parentheses, whitespace and hyphens.
         """
         super(PKPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
@@ -56,9 +59,7 @@ class PKPhoneNumberField(CharField):
 
 
 class PKStateSelect(Select):
-    """
-    A Select widget that uses a list of Pakistani states/territories as its
-    choices.
-    """
+    """A Select widget that uses a list of Pakistani states/territories as its choices."""
+
     def __init__(self, attrs=None):
         super(PKStateSelect, self).__init__(attrs, choices=STATE_CHOICES)

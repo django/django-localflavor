@@ -1,6 +1,4 @@
-"""
-ID-specific Form helpers
-"""
+"""ID-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -26,6 +24,7 @@ class IDPostCodeField(Field):
 
     http://id.wikipedia.org/wiki/Kode_pos
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid post code'),
     }
@@ -50,10 +49,7 @@ class IDPostCodeField(Field):
 
 
 class IDProvinceSelect(Select):
-    """
-    A Select widget that uses a list of provinces of Indonesia as its
-    choices.
-    """
+    """A Select widget that uses a list of provinces of Indonesia as its choices."""
 
     def __init__(self, attrs=None):
         # Load data in memory only when it is required, see also #17275
@@ -67,6 +63,7 @@ class IDPhoneNumberField(Field):
 
     http://id.wikipedia.org/wiki/Daftar_kode_telepon_di_Indonesia
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid phone number'),
     }
@@ -86,8 +83,7 @@ class IDPhoneNumberField(Field):
 
 class IDLicensePlatePrefixSelect(Select):
     """
-    A Select widget that uses a list of vehicle license plate prefix code
-    of Indonesia as its choices.
+    A Select widget that uses a list of vehicle license plate prefix code of Indonesia as its choices.
 
     http://id.wikipedia.org/wiki/Tanda_Nomor_Kendaraan_Bermotor
     """
@@ -107,11 +103,12 @@ class IDLicensePlateField(Field):
 
     Plus: "B 12345 12"
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid vehicle license plate number'),
     }
 
-    def clean(self, value):
+    def clean(self, value):  # noqa
         # Load data in memory only when it is required, see also #17275
         from .id_choices import LICENSE_PLATE_PREFIX_CHOICES
         super(IDLicensePlateField, self).clean(value)
@@ -171,6 +168,7 @@ class IDNationalIdentityNumberField(Field):
 
     xx.xxxx.ddmmyy.xxxx - 16 digits (excl. dots)
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid NIK/KTP number'),
     }
@@ -188,29 +186,30 @@ class IDNationalIdentityNumberField(Field):
         if int(value) == 0:
             raise ValidationError(self.error_messages['invalid'])
 
-        def valid_nik_date(year, month, day):
-            try:
-                t1 = (int(year), int(month), int(day), 0, 0, 0, 0, 0, -1)
-                d = time.mktime(t1)
-                t2 = time.localtime(d)
-                if t1[:3] != t2[:3]:
-                    return False
-                else:
-                    return True
-            except (OverflowError, ValueError):
-                return False
-
         year = int(value[10:12])
         month = int(value[8:10])
         day = int(value[6:8])
         current_year = time.localtime().tm_year
         if year < int(str(current_year)[-2:]):
-            if not valid_nik_date(2000 + int(year), month, day):
+            if not IDNationalIdentityNumberField._valid_nik_date(2000 + int(year), month, day):
                 raise ValidationError(self.error_messages['invalid'])
-        elif not valid_nik_date(1900 + int(year), month, day):
+        elif not IDNationalIdentityNumberField._valid_nik_date(1900 + int(year), month, day):
             raise ValidationError(self.error_messages['invalid'])
 
         if value[:6] == '000000' or value[12:] == '0000':
             raise ValidationError(self.error_messages['invalid'])
 
         return '%s.%s.%s.%s' % (value[:2], value[2:6], value[6:12], value[12:])
+
+    @staticmethod
+    def _valid_nik_date(year, month, day):
+        try:
+            t1 = (int(year), int(month), int(day), 0, 0, 0, 0, 0, -1)
+            d = time.mktime(t1)
+            t2 = time.localtime(d)
+            if t1[:3] != t2[:3]:
+                return False
+            else:
+                return True
+        except (OverflowError, ValueError):
+            return False

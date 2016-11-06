@@ -6,8 +6,6 @@ from django.test import SimpleTestCase
 
 from localflavor.it.forms import (ITPhoneNumberField, ITRegionProvinceSelect, ITRegionSelect,
                                   ITSocialSecurityNumberField, ITVatNumberField, ITZipCodeField)
-from localflavor.it.it_province import *
-from localflavor.it.it_region import *
 
 
 class ITLocalFlavorTests(SimpleTestCase):

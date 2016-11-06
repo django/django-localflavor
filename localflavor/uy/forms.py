@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-UY-specific form helpers.
-"""
+"""UY-specific form helpers."""
 
 from __future__ import unicode_literals
 
@@ -14,18 +12,16 @@ from .util import get_validation_digit
 
 
 class UYDepartmentSelect(Select):
-    """
-    A Select widget that uses a list of Uruguayan departments as its choices.
-    """
+    """A Select widget that uses a list of Uruguayan departments as its choices."""
+
     def __init__(self, attrs=None):
         from .uy_departments import DEPARTMENT_CHOICES
         super(UYDepartmentSelect, self).__init__(attrs, choices=DEPARTMENT_CHOICES)
 
 
 class UYCIField(RegexField):
-    """
-    A field that validates Uruguayan 'Cedula de identidad' (CI) numbers.
-    """
+    """A field that validates Uruguayan 'Cedula de identidad' (CI) numbers."""
+
     default_error_messages = {
         'invalid': _("Enter a valid CI number in X.XXX.XXX-X,"
                      "XXXXXXX-X or XXXXXXXX format."),
@@ -45,7 +41,6 @@ class UYCIField(RegexField):
         the correct place. The three typically used formats are supported:
         [X]XXXXXXX, [X]XXXXXX-X and [X.]XXX.XXX-X.
         """
-
         value = super(UYCIField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
@@ -56,7 +51,7 @@ class UYCIField(RegexField):
         number = int(match.group('num').replace('.', ''))
         validation_digit = int(match.group('val'))
 
-        if not validation_digit == get_validation_digit(number):
+        if validation_digit != get_validation_digit(number):
             raise ValidationError(self.error_messages['invalid_validation_digit'])
 
         return value

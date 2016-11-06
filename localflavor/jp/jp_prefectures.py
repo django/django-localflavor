@@ -1,7 +1,7 @@
 """
-Prefectures ordered to conform with the Japanese entry
-of ISO-3166 as this ordering is widely used in Japan.
+Prefectures ordered to conform with the Japanese entry of ISO-3166.
 
+This ordering is widely used in Japan.
 See:
 http://en.wikipedia.org/wiki/ISO_3166-2:JP
 """

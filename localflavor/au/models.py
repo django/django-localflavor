@@ -8,10 +8,11 @@ from .validators import AUBusinessNumberFieldValidator, AUTaxFileNumberFieldVali
 
 class AUStateField(CharField):
     """
-    A model field that is represented with
-    :data:`~localflavor.au.au_states.STATE_CHOICES`` choices and
-    stores the three-letter Australian state abbreviation in the database.
+    A model field that stores the three-letter Australian state abbreviation in the database.
+
+    It is represented with :data:`~localflavor.au.au_states.STATE_CHOICES`` choices.
     """
+
     description = _("Australian State")
 
     def __init__(self, *args, **kwargs):
@@ -28,10 +29,11 @@ class AUStateField(CharField):
 
 class AUPostCodeField(CharField):
     """
-    A model field that forms represent as a
-    :class:`~localflavor.au.forms.AUPostCodeField` field and stores the
-    four-digit Australian postcode in the database.
+    A model field that stores the four-digit Australian postcode in the database.
+
+    This field is represented by forms as a :class:`~localflavor.au.forms.AUPostCodeField` field.
     """
+
     description = _("Australian Postcode")
 
     def __init__(self, *args, **kwargs):
@@ -50,10 +52,8 @@ class AUPostCodeField(CharField):
 
 
 class AUPhoneNumberField(CharField):
-    """
-    A model field that checks that the value is a valid Australian phone
-    number (ten digits).
-    """
+    """A model field that checks that the value is a valid Australian phone number (ten digits)."""
+
     description = _("Australian Phone number")
 
     def __init__(self, *args, **kwargs):
@@ -73,8 +73,7 @@ class AUPhoneNumberField(CharField):
 
 class AUBusinessNumberField(CharField):
     """
-    A model field that checks that the value is a valid Australian Business
-    Number (ABN).
+    A model field that checks that the value is a valid Australian Business Number (ABN).
 
     .. versionadded:: 1.3
     """
@@ -98,9 +97,7 @@ class AUBusinessNumberField(CharField):
         return super(AUBusinessNumberField, self).formfield(**defaults)
 
     def to_python(self, value):
-        """
-        Ensure the ABN is stored without spaces.
-        """
+        """Ensure the ABN is stored without spaces."""
         value = super(AUBusinessNumberField, self).to_python(value)
 
         if value is not None:
@@ -139,9 +136,7 @@ class AUTaxFileNumberField(CharField):
         return super(AUTaxFileNumberField, self).formfield(**defaults)
 
     def to_python(self, value):
-        """
-        Ensure the TFN is stored without spaces.
-        """
+        """Ensure the TFN is stored without spaces."""
         value = super(AUTaxFileNumberField, self).to_python(value)
 
         if value is not None:

@@ -31,13 +31,13 @@ class AULocalflavorTests(TestCase):
              })
 
     def test_get_display_methods(self):
-        """ Ensure get_*_display() methods are added to model instances. """
+        """Ensure get_*_display() methods are added to model instances."""
         place = self.form.save()
         self.assertEqual(place.get_state_display(), 'Western Australia')
         self.assertEqual(place.get_state_required_display(), 'Queensland')
 
     def test_default_values(self):
-        """ Ensure that default values are selected in forms. """
+        """Ensure that default values are selected in forms."""
         form = AustralianPlaceForm()
         self.assertTrue(re.search(SELECTED_OPTION_PATTERN % 'NSW',
                                   str(form['state_default'])))
@@ -45,7 +45,7 @@ class AULocalflavorTests(TestCase):
                                   str(form['postcode_default'])))
 
     def test_required(self):
-        """ Test that required AUStateFields throw appropriate errors. """
+        """Test that required AUStateFields throw appropriate errors."""
         form = AustralianPlaceForm({'state': 'NSW', 'name': 'Wollongong'})
         self.assertFalse(form.is_valid())
         self.assertEqual(set(form.errors.keys()),
@@ -62,12 +62,12 @@ class AULocalflavorTests(TestCase):
             form.errors['tfn'], ['This field is required.'])
 
     def test_field_blank_option(self):
-        """ Test that the empty option is there. """
+        """Test that the empty option is there."""
         self.assertTrue(re.search(BLANK_OPTION_PATTERN,
                                   str(self.form['state'])))
 
     def test_selected_values(self):
-        """ Ensure selected states match the initial values provided. """
+        """Ensure selected states match the initial values provided."""
         self.assertTrue(re.search(SELECTED_OPTION_PATTERN % 'WA',
                                   str(self.form['state'])))
         self.assertTrue(re.search(SELECTED_OPTION_PATTERN % 'QLD',
@@ -255,14 +255,12 @@ class AULocalFlavourAUBusinessNumberFormFieldTests(TestCase):
 
     def test_abn_with_spaces_remains_unchanged(self):
         """Test that an ABN with the formatting we expect is unchanged."""
-
         field = forms.AUBusinessNumberField()
 
         self.assertEqual('53 004 085 616', field.prepare_value('53 004 085 616'))
 
     def test_spaces_are_reconfigured(self):
         """Test that an ABN with formatting we don't expect is transformed."""
-
         field = forms.AUBusinessNumberField()
 
         self.assertEqual('53 004 085 616', field.prepare_value('53004085616'))
@@ -273,14 +271,12 @@ class AULocalFlavourAUTaxFileNumberFormFieldTests(TestCase):
 
     def test_tfn_with_spaces_remains_unchanged(self):
         """Test that a TFN with the formatting we expect is unchanged."""
-
         field = forms.AUTaxFileNumberField()
 
         self.assertEqual('123 456 782', field.prepare_value('123 456 782'))
 
     def test_spaces_are_reconfigured(self):
         """Test that a TFN with formatting we don't expect is transformed."""
-
         field = forms.AUTaxFileNumberField()
 
         self.assertEqual('123 456 782', field.prepare_value('123456782'))
@@ -291,7 +287,6 @@ class AULocalFlavourAUBusinessNumberModelFieldTests(TestCase):
 
     def test_to_python_strips_whitespace(self):
         """Test the value is stored without whitespace."""
-
         field = models.AUBusinessNumberField()
 
         self.assertEqual('53004085616', field.to_python('53 004 085 616'))
@@ -301,7 +296,6 @@ class AULocalFlavourAUTaxFileNumberModelFieldTests(TestCase):
 
     def test_to_python_strips_whitespace(self):
         """Test the value is stored without whitespace."""
-
         field = models.AUTaxFileNumberField()
 
         self.assertEqual('123456782', field.to_python('123 456 782'))

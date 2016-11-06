@@ -8,7 +8,9 @@ from django.utils.functional import Promise
 
 from sphinx.util.inspect import object_description
 
-list_or_tuple = lambda x: isinstance(x, (tuple, list))
+
+def list_or_tuple(obj):
+    return isinstance(obj, (tuple, list))
 
 
 def lazy_repr(obj):

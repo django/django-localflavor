@@ -10,10 +10,8 @@ from .mx_states import STATE_CHOICES
 
 
 class MXStateField(CharField):
-    """
-    A model field that stores the three-letter Mexican state abbreviation in the
-    database.
-    """
+    """A model field that stores the three-letter Mexican state abbreviation in the database."""
+
     description = _("Mexico state (three uppercase letters)")
 
     def __init__(self, *args, **kwargs):
@@ -29,10 +27,8 @@ class MXStateField(CharField):
 
 
 class MXZipCodeField(CharField):
-    """
-    A model field that forms represent as a forms.MXZipCodeField field and
-    stores the five-digit Mexican zip code.
-    """
+    """A model field that forms represent as a forms.MXZipCodeField field and stores the five-digit Mexican zip code."""
+
     description = _("Mexico zip code")
 
     def __init__(self, *args, **kwargs):
@@ -51,10 +47,8 @@ class MXZipCodeField(CharField):
 
 
 class MXRFCField(CharField):
-    """
-    A model field that forms represent as a forms.MXRFCField field and
-    stores the value of a valid Mexican RFC.
-    """
+    """A model field that forms represent as a forms.MXRFCField field and stores the value of a valid Mexican RFC."""
+
     description = _("Mexican RFC")
 
     def __init__(self, *args, **kwargs):
@@ -74,11 +68,11 @@ class MXRFCField(CharField):
 
 class MXCLABEField(CharField):
     """
-    A model field that forms represent as a forms.MXCURPField field and
-    stores the value of a valid Mexican CLABE.
+    A model field that forms represent as a forms.MXCURPField field and stores the value of a valid Mexican CLABE.
 
     .. versionadded:: 1.4
     """
+
     description = _("Mexican CLABE")
 
     def __init__(self, *args, **kwargs):
@@ -97,10 +91,8 @@ class MXCLABEField(CharField):
 
 
 class MXCURPField(CharField):
-    """
-    A model field that forms represent as a forms.MXCURPField field and
-    stores the value of a valid Mexican CURP.
-    """
+    """A model field that forms represent as a forms.MXCURPField field and stores the value of a valid Mexican CURP."""
+
     description = _("Mexican CURP")
 
     def __init__(self, *args, **kwargs):
@@ -120,9 +112,11 @@ class MXCURPField(CharField):
 
 class MXSocialSecurityNumberField(CharField):
     """
-    A model field that forms represent as a forms.MXSocialSecurityNumberField
-    field and stores the value of a valid Mexican Social Security Number.
+    A model field that forms represent as a forms.MXSocialSecurityNumberField field.
+
+    It stores the value of a valid Mexican Social Security Number.
     """
+
     description = _("Mexican Social Security Number")
 
     def __init__(self, *args, **kwargs):

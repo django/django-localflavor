@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-PE-specific Form helpers.
-"""
+"""PE-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -14,17 +12,15 @@ from .pe_region import REGION_CHOICES
 
 
 class PERegionSelect(Select):
-    """
-    A Select widget that uses a list of Peruvian Regions as its choices.
-    """
+    """A Select widget that uses a list of Peruvian Regions as its choices."""
+
     def __init__(self, attrs=None):
         super(PERegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
 class PEDNIField(CharField):
-    """
-    A field that validates Documento Nacional de Identidad (DNI) numbers.
-    """
+    """A field that validates Documento Nacional de Identidad (DNI) numbers."""
+
     default_error_messages = {
         'invalid': _("This field requires only numbers."),
         'max_digits': _("This field requires 8 digits."),
@@ -35,9 +31,7 @@ class PEDNIField(CharField):
                                          **kwargs)
 
     def clean(self, value):
-        """
-        Value must be a string in the XXXXXXXX formats.
-        """
+        """Value must be a string in the XXXXXXXX formats."""
         value = super(PEDNIField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
@@ -51,9 +45,11 @@ class PEDNIField(CharField):
 
 class PERUCField(CharField):
     """
-    This field validates a RUC (Registro Unico de Contribuyentes). A RUC is of
-    the form XXXXXXXXXXX.
+    This field validates a RUC (Registro Unico de Contribuyentes).
+
+    A RUC is of the form XXXXXXXXXXX.
     """
+
     default_error_messages = {
         'invalid': _("This field requires only numbers."),
         'max_digits': _("This field requires 11 digits."),
@@ -64,9 +60,7 @@ class PERUCField(CharField):
                                          **kwargs)
 
     def clean(self, value):
-        """
-        Value must be an 11-digit number.
-        """
+        """Value must be an 11-digit number."""
         value = super(PERUCField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''

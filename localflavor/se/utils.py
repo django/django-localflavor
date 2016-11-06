@@ -4,10 +4,7 @@ from django.utils import six
 
 
 def id_number_checksum(gd):
-    """
-    Calculates a Swedish ID number checksum, using the
-    "Luhn"-algoritm
-    """
+    """Calculates a Swedish ID number checksum, using the "Luhn"-algoritm."""
     n = s = 0
     for c in (gd['year'] + gd['month'] + gd['day'] + gd['serial']):
         tmp = ((n % 2) and 1 or 2) * int(c)
@@ -26,12 +23,10 @@ def id_number_checksum(gd):
 
 def validate_id_birthday(gd, fix_coordination_number_day=True):
     """
-    Validates the birth_day and returns the datetime.date object for
-    the birth_day.
+    Validates the birth_day and returns the datetime.date object for the birth_day.
 
     If the date is an invalid birth day, a ValueError will be raised.
     """
-
     today = datetime.date.today()
 
     day = int(gd['day'])

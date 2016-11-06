@@ -1,6 +1,4 @@
-"""
-IT-specific Form helpers
-"""
+"""IT-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -21,9 +19,11 @@ phone_digits_re = re.compile(r'^(?:\+?39)?((0\d{1,3})(\d{4,8})|(3\d{2})(\d{6,8})
 
 class ITZipCodeField(RegexField):
     """
-    A form field that validates input as an Italian zip code. Valid codes
-    must have five digits.
+    A form field that validates input as an Italian zip code.
+
+    Valid codes must have five digits.
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid zip code.'),
     }
@@ -34,25 +34,22 @@ class ITZipCodeField(RegexField):
 
 
 class ITRegionSelect(Select):
-    """
-    A Select widget that uses a list of IT regions as its choices.
-    """
+    """A Select widget that uses a list of IT regions as its choices."""
+
     def __init__(self, attrs=None):
         super(ITRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
 class ITRegionProvinceSelect(Select):
-    """
-    A Select widget that uses a named group list of IT regions mapped to regions as its choices.
-    """
+    """A Select widget that uses a named group list of IT regions mapped to regions as its choices."""
+
     def __init__(self, attrs=None):
         super(ITRegionProvinceSelect, self).__init__(attrs, choices=REGION_PROVINCE_CHOICES)
 
 
 class ITProvinceSelect(Select):
-    """
-    A Select widget that uses a list of IT provinces as its choices.
-    """
+    """A Select widget that uses a list of IT provinces as its choices."""
+
     def __init__(self, attrs=None):
         super(ITProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
@@ -71,6 +68,7 @@ class ITSocialSecurityNumberField(RegexField):
     The ``ITSocialSecurityNumberField`` now also accepts SSN values for
     entities (numeric-only form).
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid Tax code.'),
     }
@@ -100,9 +98,8 @@ class ITSocialSecurityNumberField(RegexField):
 
 
 class ITVatNumberField(Field):
-    """
-    A form field that validates Italian VAT numbers (partita IVA).
-    """
+    """A form field that validates Italian VAT numbers (partita IVA)."""
+
     default_error_messages = {
         'invalid': _('Enter a valid VAT number.'),
     }
@@ -119,11 +116,13 @@ class ITVatNumberField(Field):
 
 class ITPhoneNumberField(CharField):
     """
-    A form field that validates input as an Italian phone number. Will strip
-    any +39 country prefix from the number.
+    A form field that validates input as an Italian phone number.
+
+    Will strip any +39 country prefix from the number.
 
     .. versionadded:: 1.1
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid Italian phone number.'),
     }

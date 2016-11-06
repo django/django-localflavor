@@ -4,11 +4,11 @@ from django.utils.translation import ugettext_lazy as _
 
 class FRSIRENField(CharField):
     """
-    A :class:`~django.db.models.CharField` that checks that the value
-    is a valid French SIREN number
+    A :class:`~django.db.models.CharField` that checks that the value is a valid French SIREN number.
 
     .. versionadded:: 1.1
     """
+
     description = _("SIREN Number")
 
     def __init__(self, *args, **kwargs):
@@ -29,11 +29,11 @@ class FRSIRENField(CharField):
 
 class FRSIRETField(CharField):
     """
-    A :class:`~django.db.models.CharField` that checks that the value
-    is a valid French SIRET number
+    A :class:`~django.db.models.CharField` that checks that the value is a valid French SIRET number.
 
     .. versionadded:: 1.1
     """
+
     description = _("SIRET Number")
 
     def __init__(self, *args, **kwargs):

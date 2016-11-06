@@ -141,7 +141,6 @@ class LTLocalFlavorTests(SimpleTestCase):
                    'o 600 00 000': [errors['non-digit']]}
         self.assertFieldOutput(LTPhoneField, {}, invalid)
 
-
     def test_LTPhoneField_emergency(self):
         errors = LTPhoneField().error_messages
 

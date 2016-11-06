@@ -1,6 +1,4 @@
-"""
-AT-specific Form helpers
-"""
+"""AT-specific Form helpers."""
 from __future__ import unicode_literals
 
 import re
@@ -21,6 +19,7 @@ class ATZipCodeField(RegexField):
 
     Accepts 4 digits (first digit must be greater than 0).
     """
+
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXX.'),
     }
@@ -31,17 +30,17 @@ class ATZipCodeField(RegexField):
 
 
 class ATStateSelect(Select):
-    """
-    A ``Select`` widget that uses a list of AT states as its choices.
-    """
+    """A ``Select`` widget that uses a list of AT states as its choices."""
+
     def __init__(self, attrs=None):
         super(ATStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
 
 class ATSocialSecurityNumberField(Field):
     """
-    Austrian Social Security numbers are composed of a 4 digits and 6 digits
-    field. The latter represents in most cases the person's birthdate while
+    Austrian Social Security numbers are composed of a 4 digits and 6 digits field.
+
+    The latter represents in most cases the person's birthdate while
     the first 4 digits represent a 3-digits counter and a one-digit checksum.
 
     The 6-digits field can also differ from the person's birthdate if the
@@ -50,6 +49,7 @@ class ATSocialSecurityNumberField(Field):
     This code is based on information available on
     http://de.wikipedia.org/wiki/Sozialversicherungsnummer#.C3.96sterreich
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid Austrian Social Security Number in XXXX XXXXXX format.'),
     }

@@ -6,7 +6,8 @@ from .utils import get_egn_birth_date
 
 def egn_validator(egn):
     """
-    Check Bulgarian unique citizenship number (EGN) for validity
+    Check Bulgarian unique citizenship number (EGN) for validity.
+
     More details https://en.wikipedia.org/wiki/Unique_citizenship_number
     Full information in Bulgarian about algorithm is available here
     http://www.grao.bg/esgraon.html#section2
@@ -31,8 +32,9 @@ def egn_validator(egn):
 
 def eik_validator(eik):
     """
-    Check Bulgarian EIK/BULSTAT codes for validity
-    full information in Bulgarian about algorithm is available here
+    Check Bulgarian EIK/BULSTAT codes for validity.
+
+    Full information in Bulgarian about algorithm is available here
     http://bulstat.registryagency.bg/About.html
     """
     error_message = _('EIK/BULSTAT is not valid')

@@ -6,9 +6,11 @@ from .in_states import STATE_CHOICES
 
 class INStateField(CharField):
     """
-    A model field that forms represent as a ``forms.INStateField`` field and
-    stores the two-letter Indian state abbreviation in the database.
+    A model field that stores the two-letter Indian state abbreviation in the database.
+
+    Forms represent it as a ``forms.INStateField`` field.
     """
+
     description = _("Indian state (two uppercase letters)")
 
     def __init__(self, *args, **kwargs):

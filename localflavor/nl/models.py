@@ -50,6 +50,7 @@ class NLProvinceField(models.CharField):
 
     .. versionadded:: 1.3
     """
+
     description = _('Dutch province')
 
     def __init__(self, *args, **kwargs):
@@ -68,12 +69,13 @@ class NLProvinceField(models.CharField):
 
 class NLSoFiNumberField(models.CharField):
     """
-    A Dutch social security number (SoFi)
+    A Dutch social security number (SoFi).
 
     This model field uses :class:`validators.NLSoFiNumberFieldValidator` for validation.
 
     .. versionadded:: 1.3
     """
+
     description = _('Dutch social security number (SoFi)')
 
     validators = [NLSoFiNumberFieldValidator()]
@@ -95,12 +97,13 @@ class NLSoFiNumberField(models.CharField):
 
 class NLPhoneNumberField(models.CharField):
     """
-    Dutch phone number model field
+    Dutch phone number model field.
 
     This model field uses :class:`validators.NLPhoneNumberFieldValidator` for validation.
 
     .. versionadded:: 1.3
     """
+
     description = _('Dutch phone number')
 
     validator = [NLPhoneNumberFieldValidator()]
@@ -128,6 +131,7 @@ class NLBankAccountNumberField(models.CharField):
 
     .. versionadded:: 1.1
     """
+
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 10)
         super(NLBankAccountNumberField, self).__init__(*args, **kwargs)

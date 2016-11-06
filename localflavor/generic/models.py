@@ -33,6 +33,7 @@ class IBANField(models.CharField):
 
     .. versionadded:: 1.1
     """
+
     description = _('An International Bank Account Number')
 
     def __init__(self, *args, **kwargs):
@@ -75,6 +76,7 @@ class BICField(models.CharField):
 
     .. versionadded:: 1.1
     """
+
     description = _('Business Identifier Code')
 
     def __init__(self, *args, **kwargs):
