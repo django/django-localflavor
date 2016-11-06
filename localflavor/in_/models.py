@@ -19,5 +19,4 @@ class INStateField(CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(INStateField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs

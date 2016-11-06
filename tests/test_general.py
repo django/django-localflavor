@@ -33,9 +33,8 @@ class GeneralTests(TestCase):
         return model_fields
 
     def test_model_field_deconstruct_methods_with_default_options(self):
-        # This test can only check the choices and max_length options. Specific tests are required for model fields with
-        # options that users can set. See to the IBAN tests for an example.
-        options = ('choices', 'max_length')
+        # This test can only check the choices and max_length options. Specific tests are required for model fields
+        # with options that users can set. See to the IBAN tests for an example.
 
         # Finding the localflavor model fields directly with walk_packages doesn't work with Python 3.2. The workaround
         # is to find the model fields in all of the submodules.
@@ -56,12 +55,17 @@ class GeneralTests(TestCase):
             test_instance = cls()
             name, path, args, kwargs = test_instance.deconstruct()
 
-            # The model fields always set max_length and sometimes set choices. In all cases, max_length and choices
-            # should not be in the kwargs output of deconstruct.
-            for attr in options:
-                self.assertNotIn(attr, kwargs)
+            # 'choices' should not be in the kwargs output of deconstruct because storing choices changes to the
+            # migrations doesn't add value to the migration. Any data changes will use a data migration management
+            # command.
+            self.assertNotIn('choices', kwargs,
+                             '\'choices\' should not be returned by {}.deconstruct().'.format(cls.__name__))
+
+            # 'max_length' should be in the kwargs output of deconstruct so that a schema migration will be generated if
+            # the max_length field changes.
+            self.assertIn('max_length', kwargs, '\'max_length\' not returned by {}.deconstruct().'.format(cls.__name__))
 
             # The attribute values should match an instance created with the args and kwargs output of deconstruct.
             new_instance = cls(*args, **kwargs)
-            for attr in options:
+            for attr in ('choices', 'max_length'):
                 self.assertEqual(getattr(test_instance, attr), getattr(new_instance, attr))

@@ -27,6 +27,12 @@ Modifications to existing flavors:
 - Fixed French FRNationalIdentificationNumber bug with corsican people born after 2000.
   (`gh-242` <https://github.com/django/django-localflavor/pull/242>`_).
 
+Other changes:
+
+- Ensure the migration framework generates schema migrations for model fields that change the max_length
+  (`gh-257 <https://github.com/django/django-localflavor/pull/257>`_). Users will need to generate migrations for any
+  model fields they use with 'makemigrations'.
+
 1.3   (2016-05-06)
 ------------------
 

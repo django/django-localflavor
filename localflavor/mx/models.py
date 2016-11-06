@@ -24,7 +24,6 @@ class MXStateField(CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(MXStateField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs
 
 
@@ -38,11 +37,6 @@ class MXZipCodeField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
         super(MXZipCodeField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXZipCodeField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXZipCodeFormField}
@@ -60,11 +54,6 @@ class MXRFCField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
         super(MXRFCField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXRFCField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXRFCFormField}
@@ -85,11 +74,6 @@ class MXCLABEField(CharField):
         kwargs['max_length'] = 18
         super(MXCLABEField, self).__init__(*args, **kwargs)
 
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXCLABEField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
-
     def formfield(self, **kwargs):
         defaults = {'form_class': MXCLABEFormField}
         defaults.update(kwargs)
@@ -107,11 +91,6 @@ class MXCURPField(CharField):
         kwargs['max_length'] = 18
         super(MXCURPField, self).__init__(*args, **kwargs)
 
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXCURPField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
-
     def formfield(self, **kwargs):
         defaults = {'form_class': MXCURPFormField}
         defaults.update(kwargs)
@@ -128,11 +107,6 @@ class MXSocialSecurityNumberField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
         super(MXSocialSecurityNumberField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXSocialSecurityNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXSocialSecurityNumberFormField}
