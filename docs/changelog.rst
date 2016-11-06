@@ -40,6 +40,10 @@ Other changes:
   (`gh-257 <https://github.com/django/django-localflavor/pull/257>`_). Users will need to generate migrations for any
   model fields they use with 'makemigrations'.
 
+- Deprecated Phone Number fields
+  (`gh-262 <https://github.com/django/django-localflavor/pull/262>`_)
+
+
 1.3   (2016-05-06)
 ------------------
 

@@ -12,6 +12,7 @@ from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.generic.checksums import luhn
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .hr_choices import HR_COUNTY_CHOICES, HR_LICENSE_PLATE_PREFIX_CHOICES, HR_PHONE_NUMBER_PREFIX_CHOICES
 
@@ -204,7 +205,7 @@ class HRPostalCodeField(Field):
         return '%s' % value
 
 
-class HRPhoneNumberField(Field):
+class HRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     """
     Phone number of Croatia field.
 

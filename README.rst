@@ -40,3 +40,4 @@ support for an unsupported version of Django.
 **2014-12-10 - 1.1**: Django 1.5 - 1.7
 
 **2013-07-29 - 1.0**: Django 1.5 - 1.6
+

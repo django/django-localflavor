@@ -3,6 +3,8 @@
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .be_provinces import PROVINCE_CHOICES
 from .be_regions import REGION_CHOICES
 
@@ -28,7 +30,7 @@ class BEPostalCodeField(RegexField):
                                                 max_length, min_length, *args, **kwargs)
 
 
-class BEPhoneNumberField(RegexField):
+class BEPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates its input as a belgium phone number.
 

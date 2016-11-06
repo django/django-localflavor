@@ -19,6 +19,8 @@ from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .pt_regions import REGION_CHOICES
 
 CITIZEN_CARD_NUMBER_REGEX = regex_compile(r'^(\d{8})-?(\d[A-Z0-9]{2}\d)$')
@@ -78,7 +80,7 @@ class PTCitizenCardNumberField(Field):
             return value if value < 10 else value - 9
 
 
-class PTPhoneNumberField(Field):
+class PTPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     """
     A field which validates Portuguese phone numbers.
 

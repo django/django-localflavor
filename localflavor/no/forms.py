@@ -10,6 +10,8 @@ from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .no_municipalities import MUNICIPALITY_CHOICES
 
 
@@ -90,7 +92,7 @@ class NOSocialSecurityNumber(Field):
         return value
 
 
-class NOPhoneNumberField(RegexField):
+class NOPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Field with phonenumber validation.
 

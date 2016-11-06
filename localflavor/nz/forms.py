@@ -10,6 +10,8 @@ from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import smart_str
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .nz_councils import NORTH_ISLAND_COUNCIL_CHOICES, SOUTH_ISLAND_COUNCIL_CHOICES
 from .nz_provinces import PROVINCE_CHOICES
 from .nz_regions import REGION_CHOICES
@@ -61,7 +63,7 @@ class NZPostCodeField(RegexField):
                                               *args, **kwargs)
 
 
-class NZPhoneNumberField(Field):
+class NZPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     """A form field that validates its input as New Zealand phone number."""
 
     default_error_messages = {'invalid': _('Invalid phone number.')}
