@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-FR-specific Form helpers
-"""
+"""FR-specific Form helpers"""
 from __future__ import unicode_literals
 
 import re
@@ -27,8 +25,10 @@ nin_re = re.compile(
 class FRZipCodeField(RegexField):
     """
     Validate local French zip code.
+
     The correct format is 'XXXXX'.
     """
+
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX.'),
     }
@@ -42,11 +42,13 @@ class FRZipCodeField(RegexField):
 
 class FRPhoneNumberField(CharField):
     """
-    Validate local French phone number (not international ones)
+    Validate local French phone number (not international ones).
+
     The correct format is '0X XX XX XX XX'.
     '0X.XX.XX.XX.XX' and '0XXXXXXXXX' validate but are corrected to
     '0X XX XX XX XX'.
     """
+
     phone_digits_re = re.compile(r'^0\d(\s|\.)?(\d{2}(\s|\.)?){3}\d{2}$')
 
     default_error_messages = {
@@ -77,9 +79,8 @@ class FRPhoneNumberField(CharField):
 
 
 class FRDepartmentSelect(Select):
-    """
-    A Select widget that uses a list of FR departments as its choices.
-    """
+    """A Select widget that uses a list of FR departments as its choices."""
+
     def __init__(self, attrs=None):
         choices = [
             (dep[0], '%s - %s' % (dep[0], dep[1]))
@@ -92,9 +93,8 @@ class FRDepartmentSelect(Select):
 
 
 class FRRegionSelect(Select):
-    """
-    A Select widget that uses a list of FR Regions as its choices.
-    """
+    """A Select widget that uses a list of FR Regions as its choices."""
+
     def __init__(self, attrs=None):
         choices = [
             (dep[0], '%s - %s' % (dep[0], dep[1]))
@@ -107,9 +107,8 @@ class FRRegionSelect(Select):
 
 
 class FRDepartmentField(CharField):
-    """
-    A Select Field that uses a FRDepartmentSelect widget.
-    """
+    """A Select Field that uses a FRDepartmentSelect widget."""
+
     widget = FRDepartmentSelect
 
     def __init__(self, *args, **kwargs):
@@ -118,9 +117,8 @@ class FRDepartmentField(CharField):
 
 
 class FRRegionField(CharField):
-    """
-    A Select Field that uses a FRRegionSelect widget.
-    """
+    """A Select Field that uses a FRRegionSelect widget."""
+
     widget = FRRegionSelect
 
     def __init__(self, *args, **kwargs):
@@ -131,10 +129,12 @@ class FRRegionField(CharField):
 class FRNationalIdentificationNumber(CharField):
     """
     Validates input as a French National Identification number.
+
     Validation of the Number, and checksum calculation is detailed at http://en.wikipedia.org/wiki/INSEE_code
 
     .. versionadded:: 1.1
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid French National Identification number.'),
     }
@@ -162,30 +162,9 @@ class FRNationalIdentificationNumber(CharField):
         # Get current year
         current_year = int(str(date.today().year)[2:])
 
-        # Department number 98 is for Monaco
-        if department_of_origin == '98':
-            raise ValidationError(self.error_messages['invalid'])
-
-        # Departments number 20, 2A and 2B represent Corsica
-        if department_of_origin in ['20', '2A', '2B']:
-            # For people born before 1976, Corsica number was 20
-            if current_year < int(year_of_birth) < 76 and department_of_origin != '20':
-                raise ValidationError(self.error_messages['invalid'])
-            # For people born from 1976, Corsica dep number is either 2A or 2B
-            if (int(year_of_birth) > 75 and
-                    department_of_origin not in ['2A', '2B']):
-                raise ValidationError(self.error_messages['invalid'])
-
-        # Overseas department numbers starts with 97 and are 3 digits long
-        if department_of_origin == '97':
-            department_of_origin += commune_of_origin[:1]
-            if int(department_of_origin) not in range(971, 976):
-                raise ValidationError(self.error_messages['invalid'])
-            commune_of_origin = commune_of_origin[1:]
-            if int(commune_of_origin) < 1 or int(commune_of_origin) > 90:
-                raise ValidationError(self.error_messages['invalid'])
-        elif int(commune_of_origin) < 1 or int(commune_of_origin) > 990:
-            raise ValidationError(self.error_messages['invalid'])
+        commune_of_origin, department_of_origin = self._clean_department_and_commune(commune_of_origin, current_year,
+                                                                                     department_of_origin,
+                                                                                     year_of_birth)
 
         if person_unique_number == '000':
             raise ValidationError(self.error_messages['invalid'])
@@ -201,11 +180,36 @@ class FRNationalIdentificationNumber(CharField):
         else:
             raise ValidationError(self.error_messages['invalid'])
 
+    def _clean_department_and_commune(self, commune_of_origin, current_year, department_of_origin, year_of_birth):
+        # Department number 98 is for Monaco
+        if department_of_origin == '98':
+            raise ValidationError(self.error_messages['invalid'])
+
+        # Departments number 20, 2A and 2B represent Corsica
+        if department_of_origin in ['20', '2A', '2B']:
+            # For people born before 1976, Corsica number was 20
+            if current_year < int(year_of_birth) < 76 and department_of_origin != '20':
+                raise ValidationError(self.error_messages['invalid'])
+            # For people born from 1976, Corsica dep number is either 2A or 2B
+            if (int(year_of_birth) > 75 and department_of_origin not in ['2A', '2B']):
+                raise ValidationError(self.error_messages['invalid'])
+
+        # Overseas department numbers starts with 97 and are 3 digits long
+        if department_of_origin == '97':
+            department_of_origin += commune_of_origin[:1]
+            if int(department_of_origin) not in range(971, 976):
+                raise ValidationError(self.error_messages['invalid'])
+            commune_of_origin = commune_of_origin[1:]
+            if int(commune_of_origin) < 1 or int(commune_of_origin) > 90:
+                raise ValidationError(self.error_messages['invalid'])
+        elif int(commune_of_origin) < 1 or int(commune_of_origin) > 990:
+            raise ValidationError(self.error_messages['invalid'])
+        return commune_of_origin, department_of_origin
+
 
 class FRSIRENENumberMixin(object):
-    """
-    Abstract class for SIREN and SIRET numbers, from the SIRENE register
-    """
+    """Abstract class for SIREN and SIRET numbers, from the SIRENE register."""
+
     def clean(self, value):
         super(FRSIRENENumberMixin, self).clean(value)
         if value in EMPTY_VALUES:
@@ -219,12 +223,14 @@ class FRSIRENENumberMixin(object):
 
 class FRSIRENField(FRSIRENENumberMixin, CharField):
     """
-    SIREN stands for "Système d'identification du répertoire des entreprises"
+    SIREN stands for "Système d'identification du répertoire des entreprises".
 
-    It's under authority of the INSEE. See http://fr.wikipedia.org/wiki/Système_d'identification_du_répertoire_des_entreprises for more information.
+    It's under authority of the INSEE.
+    See http://fr.wikipedia.org/wiki/Système_d'identification_du_répertoire_des_entreprises for more information.
 
     .. versionadded:: 1.1
     """
+
     r_valid = re.compile(r'^\d{9}$')
 
     default_error_messages = {
@@ -240,12 +246,14 @@ class FRSIRENField(FRSIRENENumberMixin, CharField):
 
 class FRSIRETField(FRSIRENENumberMixin, CharField):
     """
-    SIRET stands for "Système d'identification du répertoire des établissements"
+    SIRET stands for "Système d'identification du répertoire des établissements".
 
-    It's under authority of the INSEE. See http://fr.wikipedia.org/wiki/Système_d'identification_du_répertoire_des_établissements for more information.
+    It's under authority of the INSEE.
+    See http://fr.wikipedia.org/wiki/Système_d'identification_du_répertoire_des_établissements for more information.
 
     .. versionadded:: 1.1
     """
+
     r_valid = re.compile(r'^\d{14}$')
 
     default_error_messages = {

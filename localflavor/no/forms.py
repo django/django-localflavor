@@ -1,6 +1,4 @@
-"""
-Norwegian-specific Form helpers
-"""
+"""Norwegian-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -17,9 +15,11 @@ from .no_municipalities import MUNICIPALITY_CHOICES
 
 class NOZipCodeField(RegexField):
     """
-    A form field that validates input as a Norwegian zip code. Valid codes
-    have four digits.
+    A form field that validates input as a Norwegian zip code.
+
+    Valid codes have four digits.
     """
+
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXX.'),
     }
@@ -30,23 +30,20 @@ class NOZipCodeField(RegexField):
 
 
 class NOMunicipalitySelect(Select):
-    """
-    A Select widget that uses a list of Norwegian municipalities (fylker)
-    as its choices.
-    """
+    """A Select widget that uses a list of Norwegian municipalities (fylker) as its choices."""
+
     def __init__(self, attrs=None):
         super(NOMunicipalitySelect, self).__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 
 class NOSocialSecurityNumber(Field):
-    """
-    Algorithm is documented at http://no.wikipedia.org/wiki/Personnummer
-    """
+    """Algorithm is documented at http://no.wikipedia.org/wiki/Personnummer."""
+
     default_error_messages = {
         'invalid': _('Enter a valid Norwegian social security number.'),
     }
 
-    def clean(self, value):
+    def clean(self, value):  # noqa
         super(NOSocialSecurityNumber, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
@@ -95,9 +92,11 @@ class NOSocialSecurityNumber(Field):
 
 class NOPhoneNumberField(RegexField):
     """
-    Field with phonenumber validation. Requires a phone number with
-    8 digits and optional country code
+    Field with phonenumber validation.
+
+    Requires a phone number with 8 digits and optional country code
     """
+
     default_error_messages = {
         'invalid': _('A phone number must be 8 digits and may have country code'),
     }

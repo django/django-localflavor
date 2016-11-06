@@ -1,6 +1,4 @@
-"""
-Belgium-specific Form helpers
-"""
+"""Belgium-specific Form helpers."""
 
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
@@ -19,6 +17,7 @@ class BEPostalCodeField(RegexField):
     are shared by the Brussels Capital Region, the western part of
     Flemish Brabant and Walloon Brabant)
     """
+
     default_error_messages = {
         'invalid': _(
             'Enter a valid postal code in the range and format 1XXX - 9XXX.'),
@@ -44,6 +43,7 @@ class BEPhoneNumberField(RegexField):
     04dd ddd dd dd, 04dd/ddd.dd.dd,
     04dd.ddd.dd.dd, 04ddddddddd - dialling a mobile number
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid phone number in one of the formats '
                      '0x xxx xx xx, 0xx xx xx xx, 04xx xx xx xx, '
@@ -53,22 +53,27 @@ class BEPhoneNumberField(RegexField):
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(BEPhoneNumberField, self).__init__(r'^[0]\d{1}[/. ]?\d{3}[. ]\d{2}[. ]?\d{2}$|^[0]\d{2}[/. ]?\d{2}[. ]?\d{2}[. ]?\d{2}$|^[0][4]\d{2}[/. ]?\d{2}[. ]?\d{2}[. ]?\d{2}$',
+        super(BEPhoneNumberField, self).__init__(r'^[0]\d{1}[/. ]?'
+                                                 r'\d{3}[. ]\d{2}[. ]?'
+                                                 r'\d{2}$|^[0]\d{2}[/. ]?'
+                                                 r'\d{2}[. ]?\d{2}[. ]?'
+                                                 r'\d{2}$|^[0][4]\d{2}[/. ]?'
+                                                 r'\d{2}[. ]?'
+                                                 r'\d{2}[. ]?'
+                                                 r'\d{2}$',
                                                  max_length, min_length,
                                                  *args, **kwargs)
 
 
 class BERegionSelect(Select):
-    """
-    A Select widget that uses a list of belgium regions as its choices.
-    """
+    """A Select widget that uses a list of belgium regions as its choices."""
+
     def __init__(self, attrs=None):
         super(BERegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
 class BEProvinceSelect(Select):
-    """
-    A Select widget that uses a list of belgium provinces as its choices.
-    """
+    """A Select widget that uses a list of belgium provinces as its choices."""
+
     def __init__(self, attrs=None):
         super(BEProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)

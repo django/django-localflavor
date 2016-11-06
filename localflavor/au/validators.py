@@ -33,8 +33,8 @@ class AUBusinessNumberFieldValidator(RegexValidator):
         digits[0] -= 1
 
         # 2. Multiply each digit by its weighting factor.
-        WEIGHTING_FACTORS = [10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
-        weighted = [digit * weight for digit, weight in zip(digits, WEIGHTING_FACTORS)]
+        weighting_factors = [10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+        weighted = [digit * weight for digit, weight in zip(digits, weighting_factors)]
 
         # 3. Sum the resulting values.
         total = sum(weighted)
@@ -61,7 +61,7 @@ class AUTaxFileNumberFieldValidator(RegexValidator):
     error_message = _('Enter a valid TFN.')
 
     def __init__(self):
-        """ Regex for 8 to 9 digits """
+        """Regex for 8 to 9 digits."""
         super(AUTaxFileNumberFieldValidator, self).__init__(
             regex='^\d{8,9}$', message=self.error_message)
 
@@ -75,8 +75,8 @@ class AUTaxFileNumberFieldValidator(RegexValidator):
         """
         # 1. Multiply each digit by its weighting factor.
         digits = [int(i) for i in list(value)]
-        WEIGHTING_FACTORS = [1, 4, 3, 7, 5, 8, 6, 9, 10]
-        weighted = [digit * weight for digit, weight in zip(digits, WEIGHTING_FACTORS)]
+        weighting_factors = [1, 4, 3, 7, 5, 8, 6, 9, 10]
+        weighted = [digit * weight for digit, weight in zip(digits, weighting_factors)]
 
         # 2. Sum the resulting values.
         total = sum(weighted)

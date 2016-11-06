@@ -1,4 +1,6 @@
 """
+Misspellings/abbreviations mapping.
+
 A mapping of state misspellings/abbreviations to normalized
 abbreviations, and alphabetical lists of US states, territories,
 military mail regions and non-US states to which the US provides

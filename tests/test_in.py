@@ -84,7 +84,7 @@ class INLocalFlavorTests(SimpleTestCase):
 
     def test_INAadhaarNumberField(self):
         error_format = ['Enter a valid Aadhaar number in XXXX XXXX XXXX or '
-                                                    'XXXX-XXXX-XXXX format.']
+                        'XXXX-XXXX-XXXX format.']
         valid = {
             '3603-1178-8988': '3603 1178 8988',
             '1892 3114 7727': '1892 3114 7727',

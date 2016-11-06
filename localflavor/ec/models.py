@@ -6,11 +6,11 @@ from .ec_provinces import PROVINCE_CHOICES
 
 class ECProvinceField(CharField):
     """
-    A model field that represents an Ecuadorian province and stores its
-    abbreviation.
+    A model field that represents an Ecuadorian province and stores its abbreviation.
 
     .. versionadded:: 1.2
     """
+
     description = _("Ecuadorian province")
 
     def __init__(self, *args, **kwargs):

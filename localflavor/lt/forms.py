@@ -38,6 +38,7 @@ class LTIDCodeField(RegexField):
         * Checksum is correct.
         * ID contains valid date.
     """
+
     default_error_messages = {
         'invalid': _('ID Code consists of exactly 11 decimal digits.'),
         'checksum': _('Wrong ID Code checksum.'),
@@ -76,7 +77,9 @@ class LTIDCodeField(RegexField):
         return True if k == int(value[-1]) else False
 
     def valid_date(self, value):
-        """Check if date in ID code is valid.
+        """
+        Check if date in ID code is valid.
+
         We won't check for dates in future as it would become too restrictive.
         """
         try:
@@ -96,6 +99,7 @@ class LTPostalCodeField(Field):
         * XXXXX
         * LT-XXXXX
     """
+
     default_error_messages = {
         'invalid': _('Enter a postal code in the format XXXXX or LT-XXXXX.'),
     }
@@ -114,7 +118,7 @@ class LTPostalCodeField(Field):
 
 class LTPhoneField(Field):
     """
-    Form field that validates as Lithuanian phone number
+    Form field that validates as Lithuanian phone number.
 
     You can accept any permutation of following phone numbers:
 
@@ -137,10 +141,10 @@ class LTPhoneField(Field):
 
     # Order dependent (shorter codes cannot go before longer ones)
     _area_codes = tuple(map(text_type,
-        [425, 315, 381, 319, 450, 313, 528, 386, 349, 426, 447, 346, 427, 347,
-         445, 459, 318, 343, 443, 383, 469, 421, 460, 451, 448, 319, 422, 428,
-         458, 440, 345, 380, 449, 441, 382, 387, 446, 444, 528, 340, 389, 310,
-         342, 386, 385, 45, 46, 41, 37, 5]))
+                            [425, 315, 381, 319, 450, 313, 528, 386, 349, 426, 447, 346, 427, 347,
+                             445, 459, 318, 343, 443, 383, 469, 421, 460, 451, 448, 319, 422, 428,
+                             458, 440, 345, 380, 449, 441, 382, 387, 446, 444, 528, 340, 389, 310,
+                             342, 386, 385, 45, 46, 41, 37, 5]))
     _stripable = re.compile(r'[\+()~ ]')
     default_error_messages = {
         'non-digit': _('Phone number can only contain digits'),

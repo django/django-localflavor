@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 def ssn_check_digit(value):
-    "Calculate Italian social security number check digit."
+    """Calculate Italian social security number check digit."""
     ssn_even_chars = {
         '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8,
         '9': 9, 'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7,
@@ -61,7 +61,7 @@ def vat_number_validation(vat_number):
 
 
 def vat_number_check_digit(vat_number):
-    "Calculate Italian VAT number check digit."
+    """Calculate Italian VAT number check digit."""
     normalized_vat_number = force_text(vat_number).zfill(10)
     total = 0
     for i in range(0, 10, 2):

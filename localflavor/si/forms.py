@@ -1,6 +1,4 @@
-"""
-Slovenian specific form helpers.
-"""
+"""Slovenian specific form helpers."""
 
 from __future__ import unicode_literals
 
@@ -40,6 +38,9 @@ class SIEMSOField(CharField):
         if m is None:
             raise ValidationError(self.error_messages['invalid'])
 
+        # Extract information in the identification number.
+        day, month, year, nationality, gender, checksum = [int(i) for i in m.groups()]
+
         # Validate EMSO
         s = 0
         int_values = [int(i) for i in value]
@@ -47,22 +48,19 @@ class SIEMSOField(CharField):
             s += a * b
         chk = s % 11
         if chk == 0:
-            K = 0
+            k = 0
         else:
-            K = 11 - chk
+            k = 11 - chk
 
-        if K == 10 or int_values[-1] != K:
+        if k == 10 or checksum != k:
             raise ValidationError(self.error_messages['checksum'])
 
-        # Extract extra info in the identification number
-        day, month, year, nationality, gender, chksum = [int(i) for i in m.groups()]
-
+        # Validate birth date.
         if year < 890:
             year += 2000
         else:
             year += 1000
 
-        # validate birthday
         try:
             birthday = datetime.date(year, month, day)
         except ValueError:
@@ -120,18 +118,16 @@ class SITaxNumberField(CharField):
 
 
 class SIPostalCodeField(ChoiceField):
-    """
-    Slovenian post codes field.
-    """
+    """Slovenian post codes field."""
+
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('choices', SI_POSTALCODES_CHOICES)
         super(SIPostalCodeField, self).__init__(*args, **kwargs)
 
 
 class SIPostalCodeSelect(Select):
-    """
-    A Select widget that uses Slovenian postal codes as its choices.
-    """
+    """A Select widget that uses Slovenian postal codes as its choices."""
+
     def __init__(self, attrs=None):
         super(SIPostalCodeSelect, self).__init__(attrs,
                                                  choices=SI_POSTALCODES_CHOICES)

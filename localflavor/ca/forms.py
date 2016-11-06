@@ -1,6 +1,4 @@
-"""
-Canada-specific Form helpers
-"""
+"""Canada-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -27,6 +25,7 @@ class CAPostalCodeField(CharField):
     For more info see:
     http://www.canadapost.ca/tools/pg/manual/PGaddress-e.asp#1402170
     """
+
     default_error_messages = {
         'invalid': _('Enter a postal code in the format XXX XXX.'),
     }
@@ -47,6 +46,7 @@ class CAPostalCodeField(CharField):
 
 class CAPhoneNumberField(Field):
     """Canadian phone number form field."""
+
     default_error_messages = {
         'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),
     }
@@ -65,9 +65,11 @@ class CAPhoneNumberField(Field):
 class CAProvinceField(Field):
     """
     A form field that validates its input is a Canadian province name or abbreviation.
+
     It normalizes the input to the standard two-leter postal service
     abbreviation for the given province.
     """
+
     default_error_messages = {
         'invalid': _('Enter a Canadian province or territory.'),
     }
@@ -91,10 +93,8 @@ class CAProvinceField(Field):
 
 
 class CAProvinceSelect(Select):
-    """
-    A Select widget that uses a list of Canadian provinces and
-    territories as its choices.
-    """
+    """A Select widget that uses a list of Canadian provinces and territories as its choices."""
+
     def __init__(self, attrs=None):
         # Load data in memory only when it is required, see also #17275
         from .ca_provinces import PROVINCE_CHOICES
@@ -113,6 +113,7 @@ class CASocialInsuranceNumberField(Field):
          See: http://en.wikipedia.org/wiki/Social_Insurance_Number
 
     """
+
     default_error_messages = {
         'invalid': _(
             'Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format.'),

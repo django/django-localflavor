@@ -58,7 +58,6 @@ class DEIdentityCardNumberField(Field):
     def has_valid_checksum(self, number):
         given_number, given_checksum = number[:-1], number[-1]
         calculated_checksum = 0
-        fragment = ""
         parameter = 7
 
         for item in given_number:

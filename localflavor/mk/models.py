@@ -9,8 +9,10 @@ from .mk_choices import MK_MUNICIPALITIES
 class MKIdentityCardNumberField(CharField):
     """
     A form field that validates input as a Macedonian identity card number.
+
     Both old and new identity card numbers are supported.
     """
+
     description = _("Macedonian identity card number")
 
     def __init__(self, *args, **kwargs):
@@ -26,8 +28,10 @@ class MKIdentityCardNumberField(CharField):
 class MKMunicipalityField(CharField):
     """
     A form field that validates input as a Macedonian identity card number.
+
     Both old and new identity card numbers are supported.
     """
+
     description = _("A Macedonian municipality (2 character code)")
 
     def __init__(self, *args, **kwargs):
@@ -55,6 +59,7 @@ class UMCNField(CharField):
     * The first 7 digits represent a valid past date in the format DDMMYYY
     * The last digit of the UMCN passes a checksum test
     """
+
     description = _("Unique master citizen number (13 digits)")
 
     def __init__(self, *args, **kwargs):

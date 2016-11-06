@@ -5,9 +5,8 @@ from .br_states import STATE_CHOICES
 
 
 class BRStateField(CharField):
-    """
-    A model field for states of Brazil
-    """
+    """A model field for states of Brazil."""
+
     description = _("State of Brazil (two uppercase letters)")
 
     def __init__(self, *args, **kwargs):

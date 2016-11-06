@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Maltese-specific Form helpers.
-"""
+"""Maltese-specific Form helpers."""
 from __future__ import unicode_literals
 
 from django.forms.fields import RegexField
@@ -15,6 +13,7 @@ class MTPostalCodeField(RegexField):
     Maltese postal code is a seven digits string, with first three
     being letters and the final four numbers.
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid postal code in format AAA 0000.'),
     }

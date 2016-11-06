@@ -1,4 +1,5 @@
 from django.db import models
+
 from localflavor.au.models import (AUBusinessNumberField, AUPhoneNumberField, AUPostCodeField, AUStateField,
                                    AUTaxFileNumberField)
 

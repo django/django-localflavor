@@ -1,6 +1,4 @@
-"""
-Australian-specific Form helpers
-"""
+"""Australian-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -15,16 +13,17 @@ from django.utils.translation import ugettext_lazy as _
 from .au_states import STATE_CHOICES
 from .validators import AUBusinessNumberFieldValidator, AUTaxFileNumberFieldValidator
 
-
 PHONE_DIGITS_RE = re.compile(r'^(\d{10})$')
 
 
 class AUPostCodeField(RegexField):
-    """ Australian post code field.
+    """
+    Australian post code field.
 
     Assumed to be 4 digits.
     Northern Territory 3-digit postcodes should have leading zero.
     """
+
     default_error_messages = {
         'invalid': _('Enter a 4 digit postcode.'),
     }
@@ -40,14 +39,13 @@ class AUPhoneNumberField(CharField):
 
     Valid numbers have ten digits.
     """
+
     default_error_messages = {
         'invalid': 'Phone numbers must contain 10 digits.',
     }
 
     def clean(self, value):
-        """
-        Validate a phone number. Strips parentheses, whitespace and hyphens.
-        """
+        """Validate a phone number. Strips parentheses, whitespace and hyphens."""
         super(AUPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
@@ -59,17 +57,15 @@ class AUPhoneNumberField(CharField):
 
 
 class AUStateSelect(Select):
-    """
-    A Select widget that uses a list of Australian states/territories as its
-    choices.
-    """
+    """A Select widget that uses a list of Australian states/territories as its choices."""
+
     def __init__(self, attrs=None):
         super(AUStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
 
 class AUBusinessNumberField(CharField):
     """
-    A form field that validates input as an Australian Business Number (ABN)
+    A form field that validates input as an Australian Business Number (ABN).
 
     .. versionadded:: 1.3
     """
@@ -77,9 +73,7 @@ class AUBusinessNumberField(CharField):
     default_validators = [AUBusinessNumberFieldValidator()]
 
     def prepare_value(self, value):
-        """
-        Format the value for display.
-        """
+        """Format the value for display."""
         if value is None:
             return value
 
@@ -89,7 +83,7 @@ class AUBusinessNumberField(CharField):
 
 class AUTaxFileNumberField(CharField):
     """
-    A form field that validates input as an Australian Tax File Number (TFN)
+    A form field that validates input as an Australian Tax File Number (TFN).
 
     .. versionadded:: 1.4
     """
@@ -97,9 +91,7 @@ class AUTaxFileNumberField(CharField):
     default_validators = [AUTaxFileNumberFieldValidator()]
 
     def prepare_value(self, value):
-        """
-        Format the value for display.
-        """
+        """Format the value for display."""
         if value is None:
             return value
 

@@ -1,6 +1,4 @@
-"""
-Hong Kong specific Form helpers
-"""
+"""Hong Kong specific Form helpers."""
 from __future__ import unicode_literals
 
 import re
@@ -31,6 +29,7 @@ class HKPhoneNumberField(CharField):
 
     http://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong
     """
+
     default_error_messages = {
         'disguise': _('Phone number should not start with '
                       'one of the followings: %s.' %
@@ -61,8 +60,7 @@ class HKPhoneNumberField(CharField):
             if value.startswith(special):
                 raise ValidationError(self.error_messages['disguise'])
 
-        prefix_found = map(lambda prefix: value.startswith(prefix),
-                           hk_phone_prefixes)
+        prefix_found = map(value.startswith, hk_phone_prefixes)
         if not any(prefix_found):
             raise ValidationError(self.error_messages['prefix'])
 

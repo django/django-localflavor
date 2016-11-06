@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django import db
 from django.core.exceptions import ValidationError
 from django.test import SimpleTestCase
 
@@ -96,7 +95,6 @@ class NLLocalFlavorModelTests(SimpleTestCase):
         self.assertEqual(field.to_python(None), None)
 
         self.assertIsInstance(field.formfield(), forms.NLZipCodeField)
-
 
     def test_NL_model(self):
         m = NLPlace(**{

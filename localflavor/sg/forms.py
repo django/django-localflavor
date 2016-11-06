@@ -1,6 +1,4 @@
-"""
-Singapore-specific Form helpers
-"""
+"""Singapore-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -26,6 +24,7 @@ class SGPostCodeField(RegexField):
 
     Assumed to be 6 digits.
     """
+
     default_error_messages = {
         'invalid': _('Enter a 6-digit postal code.'),
     }
@@ -40,6 +39,7 @@ class SGPhoneNumberField(CharField):
 
     Valid numbers have 8 digits and start with either 6, 8, or 9
     """
+
     default_error_messages = {
         'invalid': _('Phone numbers must contain 8 digits and start with '
                      'either 6, or 8, or 9.')
@@ -47,9 +47,7 @@ class SGPhoneNumberField(CharField):
     }
 
     def clean(self, value):
-        """
-        Validate a phone number. Strips parentheses, whitespace and hyphens.
-        """
+        """Validate a phone number. Strips parentheses, whitespace and hyphens."""
         super(SGPhoneNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
@@ -60,9 +58,11 @@ class SGPhoneNumberField(CharField):
         raise ValidationError(self.error_messages['invalid'])
 
 
-class SGNRIC_FINField(CharField):
+# TODO change to a pep8 compatible class name
+class SGNRIC_FINField(CharField):  # noqa
     """
-    A form field that validates input as a Singapore National Registration
+    A form field that validates input as a Singapore National Registration.
+
     Identity Card (NRIC) or Foreign Identification Number (FIN)
 
     Based on http://en.wikipedia.org/wiki/National_Registration_Identity_Card
@@ -77,13 +77,16 @@ class SGNRIC_FINField(CharField):
         S or T: 0=J, 1=Z, 2=I, 3=H, 4=G, 5=F, 6=E, 7=D, 8=C, 9=B, 10=A
         F or G: 0=X, 1=W, 2=U, 3=T, 4=R, 5=Q, 6=P, 7=N, 8=M, 9=L, 10=K
     """
+
     default_error_messages = {
         'invalid': _('Invalid NRIC/FIN.')
     }
 
     def clean(self, value):
         """
-        Validate NRIC/FIN. Strips whitespace.
+        Validate NRIC/FIN.
+
+        Strips whitespace.
         """
         super(SGNRIC_FINField, self).clean(value)
         if value in EMPTY_VALUES:

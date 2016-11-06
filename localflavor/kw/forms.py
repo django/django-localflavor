@@ -1,6 +1,4 @@
-"""
-Kuwait-specific Form helpers
-"""
+"""Kuwait-specific Form helpers."""
 from __future__ import unicode_literals
 
 import re
@@ -38,14 +36,14 @@ def is_valid_kw_civilid_checksum(value):
 
 class KWCivilIDNumberField(RegexField):
     """
-    Kuwaiti Civil ID numbers are 12 digits, second to seventh digits
-    represents the person's birthdate.
+    Kuwaiti Civil ID numbers are 12 digits, second to seventh digits represents the person's birthdate.
 
     Checks the following rules to determine the validty of the number:
         * The number consist of 12 digits.
         * The birthdate of the person is a valid date.
         * The calculated checksum equals to the last digit of the Civil ID.
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid Kuwaiti Civil ID number'),
     }

@@ -1,6 +1,4 @@
-"""
-China(mainland)-specific Form helpers
-"""
+"""China(mainland)-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -66,10 +64,8 @@ CN_LOCATION_CODES = (
 
 
 class CNProvinceSelect(Select):
-    """
-    A select widget providing the list of provinces and districts
-    in People's Republic of China as choices.
-    """
+    """A select widget providing the list of provinces and districts in People's Republic of China as choices."""
+
     def __init__(self, attrs=None):
         super(CNProvinceSelect, self).__init__(attrs, choices=CN_PROVINCE_CHOICES)
 
@@ -77,8 +73,10 @@ class CNProvinceSelect(Select):
 class CNPostCodeField(RegexField):
     """
     A form field that validates input as postal codes in mainland China.
+
     Valid codes are in the format of XXXXXX where X is a digit.
     """
+
     default_error_messages = {
         'invalid': _('Enter a post code in the format XXXXXX.'),
     }
@@ -101,6 +99,7 @@ class CNIDCardField(CharField):
     The checksum algorithm is described in GB11643-1999.
     See: http://en.wikipedia.org/wiki/Resident_Identity_Card#Identity_card_number
     """
+
     default_error_messages = {
         'invalid': _('ID Card Number consists of 15 or 18 digits.'),
         'checksum': _('Invalid ID Card Number: Wrong checksum'),
@@ -112,9 +111,7 @@ class CNIDCardField(CharField):
         super(CNIDCardField, self).__init__(max_length, min_length, *args, **kwargs)
 
     def clean(self, value):
-        """
-        Check whether the input is a valid ID Card Number.
-        """
+        """Check whether the input is a valid ID Card Number."""
         # Check the length of the ID card number.
         super(CNIDCardField, self).clean(value)
         if not value:
@@ -135,10 +132,7 @@ class CNIDCardField(CharField):
         return '%s' % value
 
     def has_valid_birthday(self, value):
-        """
-        This method would grab the date of birth from the ID card number and
-        test whether it is a valid date.
-        """
+        """This method grabs the date of birth from the ID card number and test whether it is a valid date."""
         from datetime import datetime
         if len(value) == 15:
             # 1st generation ID card
@@ -156,17 +150,11 @@ class CNIDCardField(CharField):
             return False
 
     def has_valid_location(self, value):
-        """
-        This method checks if the first two digits in the ID Card are
-        valid province code.
-        """
+        """This method checks if the first two digits in the ID Card are valid province code."""
         return int(value[:2]) in CN_LOCATION_CODES
 
     def has_valid_checksum(self, value):
-        """
-        This method checks if the last letter/digit is valid according to
-        GB11643-1999.
-        """
+        """This method checks if the last letter/digit is valid according to GB11643-1999."""
         # If the length of the number is not 18, then the number is a 1st
         # generation ID card number, and there is no checksum to be checked.
         if len(value) != 18:
@@ -182,11 +170,11 @@ class CNIDCardField(CharField):
 class CNPhoneNumberField(RegexField):
     """
     A form field that validates input as a telephone number in mainland China.
-    A valid phone number could be like: 010-12345678.
 
-    Considering there might be extension numbers,
-    this could also be: 010-12345678-35.
+    A valid phone number could be like: 010-12345678.
+    Considering there might be extension numbers, this could also be: 010-12345678-35.
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid phone number.'),
     }
@@ -198,6 +186,7 @@ class CNPhoneNumberField(RegexField):
 class CNCellNumberField(RegexField):
     """
     A form field that validates input as a cellphone number in mainland China.
+
     A valid cellphone number could be like: 13012345678.
 
     A very rough rule is used here: the first digit should be 1, the second
@@ -209,6 +198,7 @@ class CNCellNumberField(RegexField):
        Added 7 as a valid second digit for Chinese virtual mobile ISPs.
 
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid cell number.'),
     }
