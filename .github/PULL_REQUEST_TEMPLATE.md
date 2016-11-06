@@ -1,14 +1,13 @@
+**Please replace these instructions with a description of your change. The
+'New Fields Only' section should be removed if your pull request
+doesn't add any new fields.**
+
 Thanks for your contribution!
 
 A checklist is included below which helps us keep the code contributions
 consistent and helps speed up the review process. You can add additional
 commits to your pull request if you haven't met all of these points on your
-first version. You'll be asked to rebase and squash the commits before the
-final merge.
-
-Please replace these instructions with a description of your change. The
-'New Fields Only' checkboxes should be removed as well if your pull request
-doesn't add any new fields.
+first version.
 
 **All Changes**
 
