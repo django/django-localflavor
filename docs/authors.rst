@@ -9,6 +9,7 @@ Authors
 * Alex Gaynor
 * Alex Hill
 * Alex Zhang
+* Alix Martineau
 * Alonisser
 * Andreas Pelme
 * Andres Torres Marroquin

@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 
 from localflavor.fr.forms import (FRDepartmentField, FRDepartmentSelect, FRNationalIdentificationNumber,
-                                  FRPhoneNumberField, FRRegionField, FRRegionSelect, FRSIRENField, FRSIRETField,
-                                  FRZipCodeField)
+                                  FRNewRegionSelect, FRPhoneNumberField, FRRegionField, FRRegionSelect, FRSIRENField,
+                                  FRSIRETField, FRZipCodeField)
 
 
 DEP_SELECT_OUTPUT = '''
@@ -156,6 +156,29 @@ REG_SELECT_OUTPUT = '''
     </select>
 '''
 
+NEW_REG_SELECT_OUTPUT = '''
+    <select name="reg">
+        <option value="01">01 - Guadeloupe</option>
+        <option value="02">02 - Martinique</option>
+        <option value="03">03 - Guyane</option>
+        <option value="04">04 - La Réunion</option>
+        <option value="06">06 - Mayotte</option>
+        <option value="11">11 - Île-de-France</option>
+        <option value="24">24 - Centre-Val de Loire</option>
+        <option value="27">27 - Bourgogne-Franche-Comté</option>
+        <option value="28">28 - Normandie</option>
+        <option value="32">32 - Nord-Pas-de-Calais-Picardie</option>
+        <option value="44">44 - Alsace-Champagne-Ardenne-Lorraine</option>
+        <option value="52" selected="selected">52 - Pays de la Loire</option>
+        <option value="53">53 - Bretagne</option>
+        <option value="75">75 - Aquitaine-Limousin-Poitou-Charentes</option>
+        <option value="76">76 - Languedoc-Roussillon-Midi-Pyrénées</option>
+        <option value="84">84 - Auvergne-Rhône-Alpes</option>
+        <option value="93">93 - Provence-Alpes-Côte d&#39;Azur</option>
+        <option value="94">94 - Corse</option>
+    </select>
+'''
+
 
 class FRLocalFlavorTests(SimpleTestCase):
     def test_FRZipCodeField(self):
@@ -201,6 +224,11 @@ class FRLocalFlavorTests(SimpleTestCase):
     def test_FRRegionSelect(self):
         f = FRRegionSelect()
         self.assertHTMLEqual(f.render('reg', '25'), REG_SELECT_OUTPUT)
+
+    def test_FRNewRegionSelect(self):
+        self.maxDiff = None
+        f = FRNewRegionSelect()
+        self.assertHTMLEqual(f.render('reg', '52'), NEW_REG_SELECT_OUTPUT)
 
     def test_FRNationalIdentificationNumber(self):
         error_format = ['Enter a valid French National Identification number.']

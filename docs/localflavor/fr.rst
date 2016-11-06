@@ -18,3 +18,4 @@ Data
 
 .. autodata:: localflavor.fr.fr_region.REGION_CHOICES
 
+.. autodata:: localflavor.fr.fr_region.NEW_REGION_CHOICES
