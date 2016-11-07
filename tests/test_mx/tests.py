@@ -289,6 +289,6 @@ class MXLocalFlavorTests(TestCase):
         self.model.state = 'DIF'
         self.model.save()
 
-        self.model.refresh_from_db()
+        new_model = self.model.__class__.objects.get(pk=self.model.pk)
 
-        self.assertEqual(self.model.state, 'CDMX')
+        self.assertEqual(new_model.state, 'CDMX')
