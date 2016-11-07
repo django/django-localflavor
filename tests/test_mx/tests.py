@@ -7,11 +7,9 @@ from localflavor.mx.forms import (MXCLABEField, MXCURPField, MXRFCField, MXSocia
                                   MXZipCodeField)
 
 from .forms import MXPersonProfileForm
-import warnings
 
 
 class MXLocalFlavorTests(TestCase):
-
     def setUp(self):
         self.form = MXPersonProfileForm({
             'state': 'MIC',

@@ -1,3 +1,5 @@
+import warnings
+
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
@@ -7,8 +9,6 @@ from .forms import MXRFCField as MXRFCFormField
 from .forms import MXSocialSecurityNumberField as MXSocialSecurityNumberFormField
 from .forms import MXZipCodeField as MXZipCodeFormField
 from .mx_states import STATE_CHOICES
-
-import warnings
 
 
 class MXStateField(CharField):
