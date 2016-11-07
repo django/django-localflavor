@@ -9,7 +9,7 @@ from .models import MyModel
 
 class DataMigrationTest(TestCase):
     @classmethod
-    def setUpTestData(cls):
+    def setUp(cls):
         cls.models = [
             MyModel.objects.create(state='DIF')
             for _ in range(10)
