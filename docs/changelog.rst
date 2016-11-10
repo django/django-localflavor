@@ -34,6 +34,8 @@ Modifications to existing flavors:
 
 Other changes:
 
+- Drop support for Django 1.7
+  (`gh-218 <https://github.com/django/django-localflavor/pull/218>`_).
 - Ensure the migration framework generates schema migrations for model fields that change the max_length
   (`gh-257 <https://github.com/django/django-localflavor/pull/257>`_). Users will need to generate migrations for any
   model fields they use with 'makemigrations'.
