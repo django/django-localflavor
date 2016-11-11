@@ -143,9 +143,9 @@ Then add ``'localflavor'`` to your :setting:`INSTALLED_APPS` setting::
 Internationalization
 ====================
 
-Localflavor has its own catalog of translations, in the directory
+Local flavor has its own catalog of translations, in the directory
 ``localflavor/locale``, and it's not loaded automatically like Django's
-general catalog in ``django/conf/locale``. If you want localflavor's
+general catalog in ``django/conf/locale``. If you want local flavor's
 texts to be translated, like form fields error messages, you must include
 :mod:`localflavor` in the :setting:`INSTALLED_APPS` setting, so
 the internationalization system can find the catalog, as explained in
@@ -154,10 +154,9 @@ the internationalization system can find the catalog, as explained in
 Adding flavors
 ==============
 
-We'd love to add more of these, so please `create a ticket`_ with
-any code you'd like to contribute. One thing we ask is that you please use
-Unicode objects (``u'mystring'``) for strings, rather than setting the encoding
-in the file. See any of the existing flavors for examples.
+We'd love to add more of these, so please `create an issue or pull request`_
+with any code you'd like to contribute. See any of the existing flavors for
+examples.
 
 See the `contributing documentation`_ for how to run the tests while working on a
 local flavor.
@@ -179,7 +178,7 @@ that you might consider implementing:
 - local translations of English area names. Join your language team at
   Transifex: https://www.transifex.com/projects/p/django-localflavor/
 
-.. _create a ticket: https://github.com/django/django-localflavor/issues
+.. _create an issue or pull request: https://github.com/django/django-localflavor/issues
 .. _contributing documentation: https://github.com/django/django-localflavor/blob/master/CONTRIBUTING.rst
 
 Releases
