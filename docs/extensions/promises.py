@@ -1,9 +1,4 @@
-try:
-    from django.utils.encoding import force_unicode
-except ImportError:
-    # We are on Python 3, force_text is force_unicode.
-    from django.utils.encoding import force_text as force_unicode
-
+from django.utils.encoding import force_text
 from django.utils.functional import Promise
 
 from sphinx.util.inspect import object_description
@@ -28,7 +23,7 @@ def lazy_repr(obj):
         return values
     else:
         if isinstance(obj, Promise):
-            obj = force_unicode(obj)
+            obj = force_text(obj)
         return obj
 
 
