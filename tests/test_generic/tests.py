@@ -134,8 +134,8 @@ class IBANTests(TestCase):
             self.assertRaisesMessage(ValidationError, invalid[iban], IBANValidator(), iban)
 
     def test_iban_validator_deconstruct(self):
-        # Deconstruct method is required for django 1.7+ compatibility.
-        # Call to the deconstruct method to see if it exists and it doesn't throw an error.
+        # Call to the required deconstruct method to see if it exists and
+        # it doesn't throw an error.
         IBANValidator().deconstruct()
 
         test_cases = [
@@ -326,7 +326,6 @@ class BICTests(TestCase):
             self.assertRaisesMessage(ValidationError,  invalid[bic], BICValidator(), bic)
 
     def test_bic_validator_deconstruct(self):
-        # Deconstruct method is required for django 1.7+ compatibility.
         bic1 = BICValidator()
         bic2 = BICValidator()
         self.assertEqual(bic1, bic2, msg="BIC validators are not equal.")
@@ -405,8 +404,8 @@ class EANTests(TestCase):
             self.assertRaisesMessage(ValidationError,  error_message, validator, value)
 
     def test_ean_validator_deconstruct(self):
-        # Deconstruct method is required for django 1.7+ compatibility.
-        # Call to the deconstruct method to see if it exists and it doesn't throw an error.
+        # Call to the required deconstruct method to see if it exists and
+        # it doesn't throw an error.
         EANValidator().deconstruct()
 
         test_cases = [
