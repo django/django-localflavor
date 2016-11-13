@@ -52,6 +52,7 @@ Authors
 * Justin Bronn
 * Karen Tracey
 * László Ratskó
+* Lefteris Nikoltsios
 * Łukasz Langa
 * Luke Benstead
 * luyikei

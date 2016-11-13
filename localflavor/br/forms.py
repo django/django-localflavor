@@ -159,13 +159,15 @@ class BRCNPJField(CharField):
     digits.
 
     If you want to use the long format only, you can specify:
-        brcnpj_field = BRCNPJField(min_length=18)
+        brcnpj_field = BRCNPJField(min_length=16)
+
     If you want to use the short format, you can specify:
         brcnpj_field = BRCNPJField(max_length=14)
+
     Otherwise both formats will be valid.
 
     .. _Brazilian CNPJ: http://en.wikipedia.org/wiki/National_identification_number#Brazil
-
+    .. versionchanged:: 1.4
     """
 
     default_error_messages = {

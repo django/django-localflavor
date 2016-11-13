@@ -20,7 +20,8 @@ New fields for existing flavors:
 Modifications to existing flavors:
 
 - Enhancements of localflavor.br.forms.BRCNPJField
-  (`gh-240 <https://github.com/django/django-localflavor/pull/240>`_).
+  (`gh-240 <https://github.com/django/django-localflavor/pull/240>`_)
+  (`gh-254 <https://github.com/django/django-localflavor/pull/254>`_).
 - Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
   (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).
 - Allow passing field name as first positional argument of IBANField.
