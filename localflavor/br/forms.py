@@ -151,12 +151,18 @@ class BRCPFField(CharField):
         return orig_value
 
 
-class BRCNPJField(Field):
+class BRCNPJField(CharField):
     """
     A form field that validates input as `Brazilian CNPJ`_.
 
     Input can either be of the format XX.XXX.XXX/XXXX-XX or be a group of 14
     digits.
+
+    If you want to use the long format only, you can specify:
+        brcnpj_field = BRCNPJField(min_length=18)
+    If you want to use the short format, you can specify:
+        brcnpj_field = BRCNPJField(max_length=14)
+    Otherwise both formats will be valid.
 
     .. _Brazilian CNPJ: http://en.wikipedia.org/wiki/National_identification_number#Brazil
 
@@ -166,6 +172,9 @@ class BRCNPJField(Field):
         'invalid': _("Invalid CNPJ number."),
         'max_digits': _("This field requires at least 14 digits"),
     }
+
+    def __init__(self, min_length=14, max_length=18, *args, **kwargs):
+        super(BRCNPJField, self).__init__(max_length, min_length, *args, **kwargs)
 
     def clean(self, value):
         """Value can be either a string in the format XX.XXX.XXX/XXXX-XX or a group of 14 characters."""
