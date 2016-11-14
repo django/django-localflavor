@@ -16,7 +16,8 @@ New fields for existing flavors:
   (`gh-238 <https://github.com/django/django-localflavor/pull/238>`_)
 - Added KWGovernorateSelect field to easily select Kuwait governorates.
   (`gh-231 <https://github.com/django/django-localflavor/pull/231>`_).
-- Added FRNewRegionSelect field to stick to current legislation.
+- Added FRNewRegionSelect field to stick to current legislation
+  (`gh-260 <https://github.com/django/django-localflavor/pull/260>`_).
 
 Modifications to existing flavors:
 
