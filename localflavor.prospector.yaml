@@ -11,3 +11,7 @@ pep8:
     max-line-length: 120
   disable:
     - N802
+
+mccabe:
+  options:
+    max-complexity: 9
