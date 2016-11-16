@@ -34,14 +34,39 @@ class SIEMSOField(CharField):
 
         value = value.strip()
 
+        m = self._regex_match(value)
+        day, month, year, nationality, gender, checksum = [int(i) for i in m.groups()]
+
+        self._validate_emso(checksum, value)
+        birthday = self._validate_birthday(day, month, year)
+
+        self.info = {
+            'gender': gender < 500 and 'male' or 'female',
+            'birthdate': birthday,
+            'nationality': nationality,
+        }
+        return value
+
+    def _regex_match(self, value):
         m = self.emso_regex.match(value)
         if m is None:
             raise ValidationError(self.error_messages['invalid'])
+        return m
 
-        # Extract information in the identification number.
-        day, month, year, nationality, gender, checksum = [int(i) for i in m.groups()]
+    def _validate_birthday(self, day, month, year):
+        if year < 890:
+            year += 2000
+        else:
+            year += 1000
+        try:
+            birthday = datetime.date(year, month, day)
+        except ValueError:
+            raise ValidationError(self.error_messages['date'])
+        if datetime.date.today() < birthday:
+            raise ValidationError(self.error_messages['date'])
+        return birthday
 
-        # Validate EMSO
+    def _validate_emso(self, checksum, value):
         s = 0
         int_values = [int(i) for i in value]
         for a, b in zip(int_values, list(range(7, 1, -1)) * 2):
@@ -51,29 +76,8 @@ class SIEMSOField(CharField):
             k = 0
         else:
             k = 11 - chk
-
         if k == 10 or checksum != k:
             raise ValidationError(self.error_messages['checksum'])
-
-        # Validate birth date.
-        if year < 890:
-            year += 2000
-        else:
-            year += 1000
-
-        try:
-            birthday = datetime.date(year, month, day)
-        except ValueError:
-            raise ValidationError(self.error_messages['date'])
-        if datetime.date.today() < birthday:
-            raise ValidationError(self.error_messages['date'])
-
-        self.info = {
-            'gender': gender < 500 and 'male' or 'female',
-            'birthdate': birthday,
-            'nationality': nationality,
-        }
-        return value
 
 
 class SITaxNumberField(CharField):

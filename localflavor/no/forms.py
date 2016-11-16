@@ -43,7 +43,7 @@ class NOSocialSecurityNumber(Field):
         'invalid': _('Enter a valid Norwegian social security number.'),
     }
 
-    def clean(self, value):  # noqa
+    def clean(self, value):
         super(NOSocialSecurityNumber, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
@@ -51,29 +51,8 @@ class NOSocialSecurityNumber(Field):
         if not re.match(r'^\d{11}$', value):
             raise ValidationError(self.error_messages['invalid'])
 
-        day = int(value[:2])
-        month = int(value[2:4])
-        year2 = int(value[4:6])
-
-        inum = int(value[6:9])
-        self.birthday = None
-        try:
-            if 000 <= inum < 500:
-                self.birthday = datetime.date(1900 + year2, month, day)
-            if 500 <= inum < 750 and year2 > 54:
-                self.birthday = datetime.date(1800 + year2, month, day)
-            if 500 <= inum < 1000 and year2 < 40:
-                self.birthday = datetime.date(2000 + year2, month, day)
-            if 900 <= inum < 1000 and year2 > 39:
-                self.birthday = datetime.date(1900 + year2, month, day)
-        except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
-
-        sexnum = int(value[8])
-        if sexnum % 2 == 0:
-            self.gender = 'F'
-        else:
-            self.gender = 'M'
+        self.birthday = self._get_birthday(value)
+        self.gender = self._get_gender(value)
 
         digits = map(int, list(value))
         weight_1 = [3, 7, 6, 1, 8, 9, 4, 5, 2, 1, 0]
@@ -89,6 +68,33 @@ class NOSocialSecurityNumber(Field):
 
         return value
 
+    def _get_gender(self, value):
+        sexnum = int(value[8])
+        if sexnum % 2 == 0:
+            gender = 'F'
+        else:
+            gender = 'M'
+        return gender
+
+    def _get_birthday(self, value):
+        birthday = None
+        day = int(value[:2])
+        month = int(value[2:4])
+        year2 = int(value[4:6])
+        inum = int(value[6:9])
+        try:
+            if 000 <= inum < 500:
+                birthday = datetime.date(1900 + year2, month, day)
+            if 500 <= inum < 750 and year2 > 54:
+                birthday = datetime.date(1800 + year2, month, day)
+            if 500 <= inum < 1000 and year2 < 40:
+                birthday = datetime.date(2000 + year2, month, day)
+            if 900 <= inum < 1000 and year2 > 39:
+                birthday = datetime.date(1900 + year2, month, day)
+        except ValueError:
+            raise ValidationError(self.error_messages['invalid'])
+        return birthday
+
 
 class NOPhoneNumberField(RegexField):
     """
@@ -102,5 +108,6 @@ class NOPhoneNumberField(RegexField):
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(NOPhoneNumberField, self).__init__(r'^(?:\+47)? ?(\d{3}\s?\d{2}\s?\d{3}|\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$',
-                                                 max_length, min_length, *args, **kwargs)
+        super(NOPhoneNumberField, self).__init__(
+            r'^(?:\+47)? ?(\d{3}\s?\d{2}\s?\d{3}|\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$',
+            max_length, min_length, *args, **kwargs)
