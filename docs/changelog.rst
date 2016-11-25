@@ -36,6 +36,9 @@ Modifications to existing flavors:
   (`gh-250 <https://github.com/django/django-localflavor/pull/250>`_).
 - Fixed the styling errors and enabled prospector
   (`gh-259 <https://github.com/django/django-localflavor/pull/259>`_).
+- Allow AU ABN value with spaces to validate
+  (`gh-266 <https://github.com/django/django-localflavor/issues/266>`_
+   `gh-267 <https://github.com/django/django-localflavor/pull/267>`_).
 
 Other changes:
 

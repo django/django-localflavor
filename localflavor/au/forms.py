@@ -68,9 +68,14 @@ class AUBusinessNumberField(CharField):
     A form field that validates input as an Australian Business Number (ABN).
 
     .. versionadded:: 1.3
+    .. versionchanged:: 1.4
     """
 
     default_validators = [AUBusinessNumberFieldValidator()]
+
+    def to_python(self, value):
+        value = super(AUBusinessNumberField, self).to_python(value)
+        return value.upper().replace(' ', '')
 
     def prepare_value(self, value):
         """Format the value for display."""
