@@ -23,7 +23,7 @@ Modifications to existing flavors:
 
 - Enhancements of localflavor.br.forms.BRCNPJField
   (`gh-240 <https://github.com/django/django-localflavor/pull/240>`_
-   `gh-254 <https://github.com/django/django-localflavor/pull/254>`_).
+  `gh-254 <https://github.com/django/django-localflavor/pull/254>`_).
 - Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
   (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).
 - Allow passing field name as first positional argument of IBANField.
@@ -38,7 +38,7 @@ Modifications to existing flavors:
   (`gh-259 <https://github.com/django/django-localflavor/pull/259>`_).
 - Allow AU ABN value with spaces to validate
   (`gh-266 <https://github.com/django/django-localflavor/issues/266>`_
-   `gh-267 <https://github.com/django/django-localflavor/pull/267>`_).
+  `gh-267 <https://github.com/django/django-localflavor/pull/267>`_).
 
 Other changes:
 
@@ -89,7 +89,7 @@ Modifications to existing flavors:
   (`gh-217 <https://github.com/django/django-localflavor/pull/217>`_)
 - Add deconstruct method to all model fields
   (`gh-162 <https://github.com/django/django-localflavor/pull/162>`_
-   `gh-224 <https://github.com/django/django-localflavor/pull/224>`_).
+  `gh-224 <https://github.com/django/django-localflavor/pull/224>`_).
 
 Other changes:
 
