@@ -22,8 +22,8 @@ New fields for existing flavors:
 Modifications to existing flavors:
 
 - Enhancements of localflavor.br.forms.BRCNPJField
-  (`gh-240 <https://github.com/django/django-localflavor/pull/240>`_)
-  (`gh-254 <https://github.com/django/django-localflavor/pull/254>`_).
+  (`gh-240 <https://github.com/django/django-localflavor/pull/240>`_
+   `gh-254 <https://github.com/django/django-localflavor/pull/254>`_).
 - Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
   (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).
 - Allow passing field name as first positional argument of IBANField.
@@ -87,9 +87,9 @@ Modifications to existing flavors:
 - Fix bug in ESIdentityCardNumberField where some valid values for NIE numbers were not
   validating.
   (`gh-217 <https://github.com/django/django-localflavor/pull/217>`_)
-- Add deconstruct method to all model fields.
-  (`gh-162 <https://github.com/django/django-localflavor/pull/162>`_)
-  (`gh-224 <https://github.com/django/django-localflavor/pull/224>`_)
+- Add deconstruct method to all model fields
+  (`gh-162 <https://github.com/django/django-localflavor/pull/162>`_
+   `gh-224 <https://github.com/django/django-localflavor/pull/224>`_).
 
 Other changes:
 
