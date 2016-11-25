@@ -124,9 +124,9 @@ class AULocalflavorTests(TestCase):
         error_format = ['Enter a valid ABN.']
         valid = {
             '53004085616': '53004085616',
+            '53 004 085 616': '53004085616',
         }
         invalid = {
-            '53 004 085 616': error_format,
             '53004085617': error_format,
             '5300A085616': error_format,
         }
