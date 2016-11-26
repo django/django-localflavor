@@ -14,7 +14,7 @@ from django.utils.translation import ugettext_lazy as _
 from localflavor.generic.checksums import luhn
 
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
-from .fr_region import NEW_REGION_CHOICES, REGION_CHOICES
+from .fr_region import REGION_2016_CHOICES, REGION_CHOICES
 
 nin_re = re.compile(
     r'^(?P<gender>[1278])(?P<year_of_birth>\d{2})(?P<month_of_birth>0[1-9]|1[0-2]|20|3[0-9]|4[0-2]|[5-9][0-9])'
@@ -106,16 +106,16 @@ class FRRegionSelect(Select):
         )
 
 
-class FRNewRegionSelect(Select):
+class FRRegion2016Select(Select):
     """
     A Select widget that uses a list of France's New Regions as its choices.
     """
     def __init__(self, attrs=None):
         choices = [
             (reg[0], '%s - %s' % (reg[0], reg[1]))
-            for reg in NEW_REGION_CHOICES
+            for reg in REGION_2016_CHOICES
         ]
-        super(FRNewRegionSelect, self).__init__(attrs, choices=choices)
+        super(FRRegion2016Select, self).__init__(attrs, choices=choices)
 
 
 class FRDepartmentField(CharField):
