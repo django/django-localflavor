@@ -34,8 +34,9 @@ REGION_CHOICES = (
     ('94', 'Corse')
 )
 
-#: France changed its regions in 2016 (see http://www.insee.fr/fr/methodes/nomenclatures/cog/)
-NEW_REGION_CHOICES = (
+#: France changed its regions in 2016, see:
+# http://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Les-noms-des-nouvelles-regions-sont-actes
+REGION_2016_CHOICES = (
     # Overseas regions
     ('01', "Guadeloupe"),
     ('02', "Martinique"),
@@ -47,12 +48,12 @@ NEW_REGION_CHOICES = (
     ('24', "Centre-Val de Loire"),
     ('27', "Bourgogne-Franche-Comté"),
     ('28', "Normandie"),
-    ('32', "Nord-Pas-de-Calais-Picardie"),
-    ('44', "Alsace-Champagne-Ardenne-Lorraine"),
+    ('32', "Hauts-de-France"),
+    ('44', "Grand Est"),
     ('52', "Pays de la Loire"),
     ('53', "Bretagne"),
-    ('75', "Aquitaine-Limousin-Poitou-Charentes"),
-    ('76', "Languedoc-Roussillon-Midi-Pyrénées"),
+    ('75', "Nouvelle-Aquitaine"),
+    ('76', "Occitanie"),
     ('84', "Auvergne-Rhône-Alpes"),
     ('93', "Provence-Alpes-Côte d'Azur"),
     ('94', "Corse"),

@@ -16,6 +16,7 @@ Authors
 * Andrew Godwin
 * Aymeric Augustin
 * baffolobill
+* Baptiste Darthenay
 * Ben Davis
 * Ben Konrath
 * Bruno M. Custódio
