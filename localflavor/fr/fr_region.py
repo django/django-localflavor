@@ -34,7 +34,8 @@ REGION_CHOICES = (
     ('94', 'Corse')
 )
 
-#: France changed its regions in 2016 (see http://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Les-noms-des-nouvelles-regions-sont-actes)
+#: France changed its regions in 2016, see:
+# http://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Les-noms-des-nouvelles-regions-sont-actes
 REGION_2016_CHOICES = (
     # Overseas regions
     ('01', "Guadeloupe"),
