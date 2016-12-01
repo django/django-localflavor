@@ -4,7 +4,8 @@ from .models import AustralianPlace
 
 
 class AustralianPlaceForm(ModelForm):
-    """ Form for storing an Australian place. """
+    """Form for storing an Australian place."""
+
     class Meta:
         model = AustralianPlace
         fields = ('state', 'state_required', 'state_default', 'postcode',

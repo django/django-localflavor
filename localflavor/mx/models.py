@@ -10,10 +10,8 @@ from .mx_states import STATE_CHOICES
 
 
 class MXStateField(CharField):
-    """
-    A model field that stores the three-letter Mexican state abbreviation in the
-    database.
-    """
+    """A model field that stores the three-letter Mexican state abbreviation in the database."""
+
     description = _("Mexico state (three uppercase letters)")
 
     def __init__(self, *args, **kwargs):
@@ -24,25 +22,17 @@ class MXStateField(CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(MXStateField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs
 
 
 class MXZipCodeField(CharField):
-    """
-    A model field that forms represent as a forms.MXZipCodeField field and
-    stores the five-digit Mexican zip code.
-    """
+    """A model field that forms represent as a forms.MXZipCodeField field and stores the five-digit Mexican zip code."""
+
     description = _("Mexico zip code")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
         super(MXZipCodeField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXZipCodeField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXZipCodeFormField}
@@ -51,20 +41,13 @@ class MXZipCodeField(CharField):
 
 
 class MXRFCField(CharField):
-    """
-    A model field that forms represent as a forms.MXRFCField field and
-    stores the value of a valid Mexican RFC.
-    """
+    """A model field that forms represent as a forms.MXRFCField field and stores the value of a valid Mexican RFC."""
+
     description = _("Mexican RFC")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
         super(MXRFCField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXRFCField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXRFCFormField}
@@ -74,21 +57,16 @@ class MXRFCField(CharField):
 
 class MXCLABEField(CharField):
     """
-    A model field that forms represent as a forms.MXCURPField field and
-    stores the value of a valid Mexican CLABE.
+    A model field that forms represent as a forms.MXCURPField field and stores the value of a valid Mexican CLABE.
 
     .. versionadded:: 1.4
     """
+
     description = _("Mexican CLABE")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 18
         super(MXCLABEField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXCLABEField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXCLABEFormField}
@@ -97,20 +75,13 @@ class MXCLABEField(CharField):
 
 
 class MXCURPField(CharField):
-    """
-    A model field that forms represent as a forms.MXCURPField field and
-    stores the value of a valid Mexican CURP.
-    """
+    """A model field that forms represent as a forms.MXCURPField field and stores the value of a valid Mexican CURP."""
+
     description = _("Mexican CURP")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 18
         super(MXCURPField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXCURPField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXCURPFormField}
@@ -120,19 +91,16 @@ class MXCURPField(CharField):
 
 class MXSocialSecurityNumberField(CharField):
     """
-    A model field that forms represent as a forms.MXSocialSecurityNumberField
-    field and stores the value of a valid Mexican Social Security Number.
+    A model field that forms represent as a forms.MXSocialSecurityNumberField field.
+
+    It stores the value of a valid Mexican Social Security Number.
     """
+
     description = _("Mexican Social Security Number")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
         super(MXSocialSecurityNumberField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(MXSocialSecurityNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXSocialSecurityNumberFormField}

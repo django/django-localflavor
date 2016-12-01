@@ -22,6 +22,7 @@ class LVPostalCodeField(Field):
         * XXXX
         * LV-XXXX
     """
+
     default_error_messages = {
         'invalid': _('Enter a postal code in the format XXXX or LV-XXXX.'),
     }
@@ -47,6 +48,7 @@ class LVMunicipalitySelect(Select):
 
 class LVPersonalCodeField(Field):
     """A form field that validates input as a Latvian personal code."""
+
     default_error_messages = {
         'invalid_format': _('Enter a Latvian personal code in format XXXXXX-XXXXX.'),
         'invalid': _('Enter a valid Latvian personal code.'),
@@ -55,7 +57,6 @@ class LVPersonalCodeField(Field):
     @staticmethod
     def lv_checksum(value):
         """Takes a string of 10 digits as input, returns check digit."""
-
         multipliers = (1, 6, 3, 7, 9, 10, 5, 8, 4, 2)
 
         check = sum(mult * int(c) for mult, c in zip(multipliers, value))

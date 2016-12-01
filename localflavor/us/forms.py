@@ -1,6 +1,4 @@
-"""
-USA-specific Form helpers
-"""
+"""USA-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -17,9 +15,10 @@ ssn_re = re.compile(r"^(?P<area>\d{3})[-\ ]?(?P<group>\d{2})[-\ ]?(?P<serial>\d{
 
 
 class USZipCodeField(RegexField):
-    """"
-    A form field that validates input as a U.S. ZIP code. Valid formats are
-    XXXXX or XXXXX-XXXX.
+    """
+    A form field that validates input as a U.S. ZIP code.
+
+    Valid formats are XXXXX or XXXXX-XXXX.
 
     .. note::
 
@@ -30,6 +29,7 @@ class USZipCodeField(RegexField):
 
     Whitespace around the ZIP code is accepted and automatically trimmed.
     """
+
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX or XXXXX-XXXX.'),
     }
@@ -44,9 +44,8 @@ class USZipCodeField(RegexField):
 
 
 class USPhoneNumberField(CharField):
-    """
-    A form field that validates input as a U.S. phone number.
-    """
+    """A form field that validates input as a U.S. phone number."""
+
     default_error_messages = {
         'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),
     }
@@ -79,6 +78,7 @@ class USSocialSecurityNumberField(CharField):
 
     .. versionadded:: 1.1
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid U.S. Social Security number in XXX-XX-XXXX format.'),
     }
@@ -108,9 +108,11 @@ class USSocialSecurityNumberField(CharField):
 class USStateField(Field):
     """
     A form field that validates its input is a U.S. state name or abbreviation.
+
     It normalizes the input to the standard two-leter postal service
     abbreviation for the given state.
     """
+
     default_error_messages = {
         'invalid': _('Enter a U.S. state or territory.'),
     }
@@ -133,9 +135,8 @@ class USStateField(Field):
 
 
 class USStateSelect(Select):
-    """
-    A Select widget that uses a list of U.S. states/territories as its choices.
-    """
+    """A Select widget that uses a list of U.S. states/territories as its choices."""
+
     def __init__(self, attrs=None):
         from .us_states import STATE_CHOICES
         super(USStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
@@ -143,8 +144,7 @@ class USStateSelect(Select):
 
 class USPSSelect(Select):
     """
-    A Select widget that uses a list of US Postal Service codes as its
-    choices.
+    A Select widget that uses a list of US Postal Service codes as its choices.
 
     .. note::
 
@@ -152,6 +152,7 @@ class USPSSelect(Select):
         please use :class:`~localflavor.us.forms.USZipCodeField`.
 
     """
+
     def __init__(self, attrs=None):
         from .us_states import USPS_CHOICES
         super(USPSSelect, self).__init__(attrs, choices=USPS_CHOICES)

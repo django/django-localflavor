@@ -134,8 +134,8 @@ class IBANTests(TestCase):
             self.assertRaisesMessage(ValidationError, invalid[iban], IBANValidator(), iban)
 
     def test_iban_validator_deconstruct(self):
-        # Deconstruct method is required for django 1.7+ compatibility.
-        # Call to the deconstruct method to see if it exists and it doesn't throw an error.
+        # Call to the required deconstruct method to see if it exists and
+        # it doesn't throw an error.
         IBANValidator().deconstruct()
 
         test_cases = [
@@ -151,7 +151,7 @@ class IBANTests(TestCase):
             self.assertEqual(iban1, iban2, msg="IBAN validators with equal parameters are not equal.")
 
     def test_iban_fields(self):
-        """ Test the IBAN model and form field. """
+        """Test the IBAN model and form field."""
         valid = {
             'NL02ABNA0123456789': 'NL02ABNA0123456789',
             'Nl02aBNa0123456789': 'NL02ABNA0123456789',
@@ -208,7 +208,7 @@ class IBANTests(TestCase):
             self.assertEqual(context_manager.exception.messages, errors)
 
     def test_nordea_extensions(self):
-        """ Test a valid IBAN in the Nordea extensions. """
+        """Test a valid IBAN in the Nordea extensions."""
         iban_validator = IBANValidator(use_nordea_extensions=True)
         # Run the validator to ensure there are no ValidationErrors raised.
         iban_validator('Eg1100006001880800100014553')
@@ -230,7 +230,7 @@ class IBANTests(TestCase):
         self.assertEqual(iban_form_field.to_python(None), '')
 
     def test_include_countries(self):
-        """ Test the IBAN model and form include_countries feature. """
+        """Test the IBAN model and form include_countries feature."""
         include_countries = ('NL', 'BE', 'LU')
 
         valid = {
@@ -261,7 +261,7 @@ class IBANTests(TestCase):
             self.assertEqual(context_manager.exception.messages, errors)
 
     def test_misconfigured_include_countries(self):
-        """ Test that an IBAN field or model raises an error when asked to validate a country not part of IBAN. """
+        """Test that an IBAN field or model raises an error when asked to validate a country not part of IBAN."""
         # Test an unassigned ISO 3166-1 country code.
         self.assertRaises(ImproperlyConfigured, IBANValidator, include_countries=('JJ',))
         self.assertRaises(ImproperlyConfigured, IBANValidator, use_nordea_extensions=True, include_countries=('JJ',))
@@ -270,7 +270,7 @@ class IBANTests(TestCase):
         self.assertRaises(ImproperlyConfigured, IBANValidator, include_countries=('AO',))
 
     def test_sepa_countries(self):
-        """ Test include_countries using the SEPA counties. """
+        """Test include_countries using the SEPA counties."""
         # A few SEPA valid IBANs.
         valid = {
             'GI75 NWBK 0000 0000 7099 453': 'GI75NWBK000000007099453',
@@ -326,7 +326,6 @@ class BICTests(TestCase):
             self.assertRaisesMessage(ValidationError,  invalid[bic], BICValidator(), bic)
 
     def test_bic_validator_deconstruct(self):
-        # Deconstruct method is required for django 1.7+ compatibility.
         bic1 = BICValidator()
         bic2 = BICValidator()
         self.assertEqual(bic1, bic2, msg="BIC validators are not equal.")
@@ -405,8 +404,8 @@ class EANTests(TestCase):
             self.assertRaisesMessage(ValidationError,  error_message, validator, value)
 
     def test_ean_validator_deconstruct(self):
-        # Deconstruct method is required for django 1.7+ compatibility.
-        # Call to the deconstruct method to see if it exists and it doesn't throw an error.
+        # Call to the required deconstruct method to see if it exists and
+        # it doesn't throw an error.
         EANValidator().deconstruct()
 
         test_cases = [

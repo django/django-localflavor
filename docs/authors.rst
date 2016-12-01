@@ -9,12 +9,14 @@ Authors
 * Alex Gaynor
 * Alex Hill
 * Alex Zhang
+* Alix Martineau
 * Alonisser
 * Andreas Pelme
 * Andres Torres Marroquin
 * Andrew Godwin
 * Aymeric Augustin
 * baffolobill
+* Baptiste Darthenay
 * Ben Davis
 * Ben Konrath
 * Bruno M. Custódio
@@ -52,6 +54,7 @@ Authors
 * Justin Bronn
 * Karen Tracey
 * László Ratskó
+* Lefteris Nikoltsios
 * Luis Alberto Santana
 * Łukasz Langa
 * Luke Benstead
@@ -63,6 +66,7 @@ Authors
 * Michał Sałaban
 * Mike Lissner
 * Olivier Sels
+* Paulo Poiati
 * Rael Max
 * Ramiro Morales
 * Rolf Erik Lekang
@@ -77,5 +81,6 @@ Authors
 * Tino de Bruijn
 * Trey Hunner
 * Tyler Ball
+* Tom Forbes
 * Venelin Stoykov
 * Vladimir Nani

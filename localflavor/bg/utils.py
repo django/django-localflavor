@@ -3,7 +3,8 @@ import datetime
 
 def get_egn_birth_date(egn):
     """
-    Extract birth date from Bulgarian unique citizenship number (EGN)
+    Extract birth date from Bulgarian unique citizenship number (EGN).
+
     More details https://en.wikipedia.org/wiki/Unique_citizenship_number
     Information in Bulgarian for this can be found here
     http://www.grao.bg/esgraon.html#section2

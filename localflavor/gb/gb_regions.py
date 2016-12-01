@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-This module contains various lists of regions and subdivisions in
-Great Britain. Since subdivisions aren't clear this is supposed to be
+This module contains various lists of regions and subdivisions in Great Britain.
+
+Since subdivisions aren't clear this is supposed to be
 the most pragmatic collection of lists as possible. Your mileage may vary.
 
 See https://github.com/django/django-localflavor/pull/43 for a long discussion
@@ -10,6 +11,7 @@ about it.
 .. versionchanged:: 1.1
 
 """
+
 from django.utils.translation import ugettext_lazy as _
 
 #: Metropolitan and non-metropolitan counties of England

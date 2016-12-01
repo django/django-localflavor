@@ -1,6 +1,4 @@
-"""
-Slovenian specific form helpers.
-"""
+"""Slovenian specific form helpers."""
 
 from __future__ import unicode_literals
 
@@ -36,39 +34,11 @@ class SIEMSOField(CharField):
 
         value = value.strip()
 
-        m = self.emso_regex.match(value)
-        if m is None:
-            raise ValidationError(self.error_messages['invalid'])
+        m = self._regex_match(value)
+        day, month, year, nationality, gender, checksum = [int(i) for i in m.groups()]
 
-        # Validate EMSO
-        s = 0
-        int_values = [int(i) for i in value]
-        for a, b in zip(int_values, list(range(7, 1, -1)) * 2):
-            s += a * b
-        chk = s % 11
-        if chk == 0:
-            K = 0
-        else:
-            K = 11 - chk
-
-        if K == 10 or int_values[-1] != K:
-            raise ValidationError(self.error_messages['checksum'])
-
-        # Extract extra info in the identification number
-        day, month, year, nationality, gender, chksum = [int(i) for i in m.groups()]
-
-        if year < 890:
-            year += 2000
-        else:
-            year += 1000
-
-        # validate birthday
-        try:
-            birthday = datetime.date(year, month, day)
-        except ValueError:
-            raise ValidationError(self.error_messages['date'])
-        if datetime.date.today() < birthday:
-            raise ValidationError(self.error_messages['date'])
+        self._validate_emso(checksum, value)
+        birthday = self._validate_birthday(day, month, year)
 
         self.info = {
             'gender': gender < 500 and 'male' or 'female',
@@ -77,12 +47,46 @@ class SIEMSOField(CharField):
         }
         return value
 
+    def _regex_match(self, value):
+        m = self.emso_regex.match(value)
+        if m is None:
+            raise ValidationError(self.error_messages['invalid'])
+        return m
+
+    def _validate_birthday(self, day, month, year):
+        if year < 890:
+            year += 2000
+        else:
+            year += 1000
+        try:
+            birthday = datetime.date(year, month, day)
+        except ValueError:
+            raise ValidationError(self.error_messages['date'])
+        if datetime.date.today() < birthday:
+            raise ValidationError(self.error_messages['date'])
+        return birthday
+
+    def _validate_emso(self, checksum, value):
+        s = 0
+        int_values = [int(i) for i in value]
+        for a, b in zip(int_values, list(range(7, 1, -1)) * 2):
+            s += a * b
+        chk = s % 11
+        if chk == 0:
+            k = 0
+        else:
+            k = 11 - chk
+        if k == 10 or checksum != k:
+            raise ValidationError(self.error_messages['checksum'])
+
 
 class SITaxNumberField(CharField):
     """
     Slovenian tax number field.
 
     Valid input is SIXXXXXXXX or XXXXXXXX where X is a number.
+
+    http://zylla.wipos.p.lodz.pl/ut/translation.html#PZSI
     """
 
     default_error_messages = {
@@ -118,18 +122,16 @@ class SITaxNumberField(CharField):
 
 
 class SIPostalCodeField(ChoiceField):
-    """
-    Slovenian post codes field.
-    """
+    """Slovenian post codes field."""
+
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('choices', SI_POSTALCODES_CHOICES)
         super(SIPostalCodeField, self).__init__(*args, **kwargs)
 
 
 class SIPostalCodeSelect(Select):
-    """
-    A Select widget that uses Slovenian postal codes as its choices.
-    """
+    """A Select widget that uses Slovenian postal codes as its choices."""
+
     def __init__(self, attrs=None):
         super(SIPostalCodeSelect, self).__init__(attrs,
                                                  choices=SI_POSTALCODES_CHOICES)

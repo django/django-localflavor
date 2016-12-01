@@ -9,18 +9,15 @@ from .mk_choices import MK_MUNICIPALITIES
 class MKIdentityCardNumberField(CharField):
     """
     A form field that validates input as a Macedonian identity card number.
+
     Both old and new identity card numbers are supported.
     """
+
     description = _("Macedonian identity card number")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 8
         super(MKIdentityCardNumberField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(MKIdentityCardNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MKIdentityCardNumberFormField}
@@ -31,8 +28,10 @@ class MKIdentityCardNumberField(CharField):
 class MKMunicipalityField(CharField):
     """
     A form field that validates input as a Macedonian identity card number.
+
     Both old and new identity card numbers are supported.
     """
+
     description = _("A Macedonian municipality (2 character code)")
 
     def __init__(self, *args, **kwargs):
@@ -43,7 +42,6 @@ class MKMunicipalityField(CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(MKMunicipalityField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs
 
 
@@ -61,16 +59,12 @@ class UMCNField(CharField):
     * The first 7 digits represent a valid past date in the format DDMMYYY
     * The last digit of the UMCN passes a checksum test
     """
+
     description = _("Unique master citizen number (13 digits)")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
         super(UMCNField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(UMCNField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': UMCNFormField}

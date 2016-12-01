@@ -33,6 +33,7 @@ class IBANField(models.CharField):
 
     .. versionadded:: 1.1
     """
+
     description = _('An International Bank Account Number')
 
     def __init__(self, *args, **kwargs):
@@ -44,7 +45,6 @@ class IBANField(models.CharField):
 
     def deconstruct(self):
         name, path, args, kwargs = super(IBANField, self).deconstruct()
-        del kwargs['max_length']
         kwargs['use_nordea_extensions'] = self.use_nordea_extensions
         kwargs['include_countries'] = self.include_countries
         return name, path, args, kwargs
@@ -75,17 +75,13 @@ class BICField(models.CharField):
 
     .. versionadded:: 1.1
     """
+
     description = _('Business Identifier Code')
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 11)
         super(BICField, self).__init__(*args, **kwargs)
         self.validators.append(BICValidator())
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(BICField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def to_python(self, value):
         # BIC is always written in upper case.

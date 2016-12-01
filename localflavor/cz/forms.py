@@ -1,6 +1,4 @@
-"""
-Czech-specific form helpers
-"""
+"""Czech-specific form helpers."""
 
 from __future__ import unicode_literals
 
@@ -18,9 +16,8 @@ ic_number = re.compile(r'^(?P<number>\d{7})(?P<check>\d)$')
 
 
 class CZRegionSelect(Select):
-    """
-    A select widget widget with list of Czech regions as choices.
-    """
+    """A select widget widget with list of Czech regions as choices."""
+
     def __init__(self, attrs=None):
         super(CZRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
@@ -28,8 +25,10 @@ class CZRegionSelect(Select):
 class CZPostalCodeField(RegexField):
     """
     A form field that validates its input as Czech postal code.
+
     Valid form is XXXXX or XXX XX, where X represents integer.
     """
+
     default_error_messages = {
         'invalid': _('Enter a postal code in the format XXXXX or XXX XX.'),
     }
@@ -41,6 +40,7 @@ class CZPostalCodeField(RegexField):
     def clean(self, value):
         """
         Validates the input and returns a string that contains only numbers.
+
         Returns an empty string for empty values.
         """
         v = super(CZPostalCodeField, self).clean(value)
@@ -48,9 +48,8 @@ class CZPostalCodeField(RegexField):
 
 
 class CZBirthNumberField(Field):
-    """
-    Czech birth number form field.
-    """
+    """Czech birth number form field."""
+
     default_error_messages = {
         'invalid_format': _('Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX.'),
         'invalid': _('Enter a valid birth number.'),
@@ -99,9 +98,8 @@ class CZBirthNumberField(Field):
 
 
 class CZICNumberField(Field):
-    """
-    Czech IC number form field.
-    """
+    """Czech IC number form field."""
+
     default_error_messages = {
         'invalid': _('Enter a valid IC number.'),
     }
@@ -119,13 +117,13 @@ class CZICNumberField(Field):
         number, check = match.groupdict()[
             'number'], int(match.groupdict()['check'])
 
-        sum = 0
+        weighted_sum = 0
         weight = 8
         for digit in number:
-            sum += int(digit) * weight
+            weighted_sum += int(digit) * weight
             weight -= 1
 
-        remainder = sum % 11
+        remainder = weighted_sum % 11
 
         # remainder is equal:
         #  0 or 10: last digit is 1

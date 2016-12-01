@@ -1,6 +1,4 @@
-"""
-Greek-specific forms helpers
-"""
+"""Greek-specific forms helpers."""
 import re
 
 from django.core.validators import EMPTY_VALUES
@@ -14,8 +12,10 @@ NUMERIC_RE = re.compile('^\d+$')
 class GRPostalCodeField(RegexField):
     """
     Greek Postal code field.
+
     Format: XXXXX, where X is any digit, and first digit is not 0 or 9.
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid 5-digit greek postal code.'),
     }
@@ -28,9 +28,11 @@ class GRPostalCodeField(RegexField):
 class GRTaxNumberCodeField(Field):
     """
     Greek tax number field.
+
     The allow_test_value option can be used to enable the usage of the
     non valid 000000000 value for testing and development
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid greek tax number (9 digits).'),
     }
@@ -65,9 +67,11 @@ class GRTaxNumberCodeField(Field):
 
 class GRPhoneNumberField(Field):
     """
-    Greek general phone field - 10 digits (can also start with +30
-    which is the country-code foor greece)
+    Greek general phone field.
+
+    10 digits (can also start with +30 which is the country-code for greece)
     """
+
     default_error_messages = {
         'invalid': _('Enter a 10-digit greek phone number.'),
     }
@@ -90,9 +94,11 @@ class GRPhoneNumberField(Field):
 
 class GRMobilePhoneNumberField(Field):
     """
-    Greek mobile phone field - 10 digits starting with 69
-    (could also start with +30 which is the country-code foor greece)
+    Greek mobile phone field.
+
+    10 digits starting with 69 (could also start with +30 which is the country-code for greece)
     """
+
     default_error_messages = {
         'invalid': _('Enter a greek mobile phone number starting with 69.'),
     }
@@ -107,7 +113,8 @@ class GRMobilePhoneNumberField(Field):
         if len(phone_nr) == 10 and NUMERIC_RE.search(phone_nr) and phone_nr.startswith('69'):
             return value
 
-        if phone_nr[:3] == '+30' and len(phone_nr) == 13 and NUMERIC_RE.search(phone_nr[3:]) and phone_nr[3:].startswith('69'):
+        if phone_nr[:3] == '+30' and len(phone_nr) == 13 and \
+                NUMERIC_RE.search(phone_nr[3:]) and phone_nr[3:].startswith('69'):
             return value
 
         raise ValidationError(self.error_messages['invalid'])

@@ -1,6 +1,4 @@
-"""
-Denmark specific Form helpers.
-"""
+"""Denmark specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -13,22 +11,19 @@ from .dk_postalcodes import DK_POSTALCODES
 
 
 def postal_code_validator(value):
-    if value not in [zip for zip, city in DK_POSTALCODES]:
+    if value not in [entry[0] for entry in DK_POSTALCODES]:
         raise ValidationError(_('Enter a postal code in the format XXXX.'))
 
 
 class DKPostalCodeField(fields.CharField):
-    """
-    An Input widget that uses a list of Danish postal codes as valid input.
-    """
+    """An Input widget that uses a list of Danish postal codes as valid input."""
+
     default_validators = [postal_code_validator]
 
 
 class DKMunicipalitySelect(widgets.Select):
-    """
-    A Select widget that uses a list of Danish municipalities (kommuner)
-    as its choices.
-    """
+    """A Select widget that uses a list of Danish municipalities (kommuner) as its choices."""
+
     def __init__(self, attrs=None, *args, **kwargs):
         super(DKMunicipalitySelect, self).__init__(
             attrs,
@@ -40,9 +35,11 @@ class DKMunicipalitySelect(widgets.Select):
 
 class DKPhoneNumberField(fields.RegexField):
     """
-    Field with phone number validation. Requires a phone number with
-    8 digits and optional country code
+    Field with phone number validation.
+
+    Requires a phone number with 8 digits and optional country code.
     """
+
     default_error_messages = {
         'invalid': _(
             'A phone number must be 8 digits and may have country code'

@@ -7,10 +7,11 @@ from .pk_states import STATE_CHOICES
 
 class PKStateField(CharField):
     """
-    A model field that is represented with
-    :data:`~localflavor.pk.pk_states.STATE_CHOICES`` choices and
-    stores the five-letter Pakistani state abbreviation in the database.
+    A model field that stores the five-letter Pakistani state abbreviation in the database.
+
+    It is represented with :data:`~localflavor.pk.pk_states.STATE_CHOICES`` choices.
     """
+
     description = _("Pakistani State")
 
     def __init__(self, *args, **kwargs):
@@ -21,26 +22,21 @@ class PKStateField(CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(PKStateField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs
 
 
 class PKPostCodeField(CharField):
     """
-    A model field that forms represent as a
-    :class:`~localflavor.pk.forms.PKPostCodeField` field and stores the
-    five-digit Pakistani postcode in the database.
+    A model field that stores the five-digit Pakistani postcode in the database
+
+    Forms represent it as a :class:`~localflavor.pk.forms.PKPostCodeField` field.
     """
+
     description = _("Pakistani Postcode")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
         super(PKPostCodeField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(PKPostCodeField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.PKPostCodeField}
@@ -49,20 +45,13 @@ class PKPostCodeField(CharField):
 
 
 class PKPhoneNumberField(CharField):
-    """
-    A model field that checks that the value is a valid Pakistani phone
-    number (nine to eleven digits).
-    """
+    """A model field that checks that the value is a valid Pakistani phone number (nine to eleven digits)."""
+
     description = _("Pakistani Phone number")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 20
         super(PKPhoneNumberField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(PKPhoneNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.PKPhoneNumberField}

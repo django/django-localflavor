@@ -26,11 +26,6 @@ class NLZipCodeField(models.CharField):
         kwargs['max_length'] = 7
         super(NLZipCodeField, self).__init__(*args, **kwargs)
 
-    def deconstruct(self):
-        name, path, args, kwargs = super(NLZipCodeField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
-
     def to_python(self, value):
         value = super(NLZipCodeField, self).to_python(value)
         if value is not None:
@@ -50,6 +45,7 @@ class NLProvinceField(models.CharField):
 
     .. versionadded:: 1.3
     """
+
     description = _('Dutch province')
 
     def __init__(self, *args, **kwargs):
@@ -62,18 +58,18 @@ class NLProvinceField(models.CharField):
     def deconstruct(self):
         name, path, args, kwargs = super(NLProvinceField, self).deconstruct()
         del kwargs['choices']
-        del kwargs['max_length']
         return name, path, args, kwargs
 
 
 class NLSoFiNumberField(models.CharField):
     """
-    A Dutch social security number (SoFi)
+    A Dutch social security number (SoFi).
 
     This model field uses :class:`validators.NLSoFiNumberFieldValidator` for validation.
 
     .. versionadded:: 1.3
     """
+
     description = _('Dutch social security number (SoFi)')
 
     validators = [NLSoFiNumberFieldValidator()]
@@ -81,11 +77,6 @@ class NLSoFiNumberField(models.CharField):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 12)
         super(NLSoFiNumberField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(NLSoFiNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.NLSoFiNumberField}
@@ -95,12 +86,13 @@ class NLSoFiNumberField(models.CharField):
 
 class NLPhoneNumberField(models.CharField):
     """
-    Dutch phone number model field
+    Dutch phone number model field.
 
     This model field uses :class:`validators.NLPhoneNumberFieldValidator` for validation.
 
     .. versionadded:: 1.3
     """
+
     description = _('Dutch phone number')
 
     validator = [NLPhoneNumberFieldValidator()]
@@ -108,11 +100,6 @@ class NLPhoneNumberField(models.CharField):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 12)
         super(NLPhoneNumberField, self).__init__(*args, **kwargs)
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(NLPhoneNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.NLPhoneNumberField}
@@ -128,13 +115,9 @@ class NLBankAccountNumberField(models.CharField):
 
     .. versionadded:: 1.1
     """
+
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 10)
         super(NLBankAccountNumberField, self).__init__(*args, **kwargs)
         # Ensure that only the NLBankAccountNumberFieldValidator is set.
         self.validators = [NLBankAccountNumberFieldValidator()]
-
-    def deconstruct(self):
-        name, path, args, kwargs = super(NLBankAccountNumberField, self).deconstruct()
-        del kwargs['max_length']
-        return name, path, args, kwargs

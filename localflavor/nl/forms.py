@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-NL-specific Form helpers
-"""
+"""NL-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -13,9 +11,8 @@ from .validators import NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator,
 
 
 class NLZipCodeField(forms.CharField):
-    """
-    A Dutch zip code field.
-    """
+    """A Dutch zip code field."""
+
     default_validators = [NLZipCodeFieldValidator()]
 
     def clean(self, value):
@@ -29,18 +26,15 @@ class NLZipCodeField(forms.CharField):
 
 
 class NLProvinceSelect(forms.Select):
-    """
-    A Select widget that uses a list of provinces of the Netherlands as it's
-    choices.
-    """
+    """A Select widget that uses a list of provinces of the Netherlands as it's choices."""
+
     def __init__(self, attrs=None):
         super(NLProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
 class NLPhoneNumberField(forms.CharField):
-    """
-    A Dutch telephone number field.
-    """
+    """A Dutch telephone number field."""
+
     default_validators = [NLPhoneNumberFieldValidator()]
 
 
@@ -50,6 +44,7 @@ class NLSoFiNumberField(forms.CharField):
 
     http://nl.wikipedia.org/wiki/Sofinummer
     """
+
     default_validators = [NLSoFiNumberFieldValidator()]
 
     def __init__(self, *args, **kwargs):

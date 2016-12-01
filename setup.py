@@ -120,7 +120,7 @@ setup(
     packages=find_packages(exclude=['tests', 'tests.*']),
     package_data=find_package_data(),
     install_requires=[
-        'django>=1.7'
+        'django>=1.8'
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',

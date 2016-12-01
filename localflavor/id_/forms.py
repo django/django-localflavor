@@ -1,6 +1,4 @@
-"""
-ID-specific Form helpers
-"""
+"""ID-specific Form helpers."""
 
 from __future__ import unicode_literals
 
@@ -26,6 +24,7 @@ class IDPostCodeField(Field):
 
     http://id.wikipedia.org/wiki/Kode_pos
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid post code'),
     }
@@ -50,10 +49,7 @@ class IDPostCodeField(Field):
 
 
 class IDProvinceSelect(Select):
-    """
-    A Select widget that uses a list of provinces of Indonesia as its
-    choices.
-    """
+    """A Select widget that uses a list of provinces of Indonesia as its choices."""
 
     def __init__(self, attrs=None):
         # Load data in memory only when it is required, see also #17275
@@ -67,6 +63,7 @@ class IDPhoneNumberField(Field):
 
     http://id.wikipedia.org/wiki/Daftar_kode_telepon_di_Indonesia
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid phone number'),
     }
@@ -86,8 +83,7 @@ class IDPhoneNumberField(Field):
 
 class IDLicensePlatePrefixSelect(Select):
     """
-    A Select widget that uses a list of vehicle license plate prefix code
-    of Indonesia as its choices.
+    A Select widget that uses a list of vehicle license plate prefix code of Indonesia as its choices.
 
     http://id.wikipedia.org/wiki/Tanda_Nomor_Kendaraan_Bermotor
     """
@@ -107,60 +103,79 @@ class IDLicensePlateField(Field):
 
     Plus: "B 12345 12"
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid vehicle license plate number'),
     }
+    foreign_vehicles_prefixes = ('CD', 'CC')
 
     def clean(self, value):
-        # Load data in memory only when it is required, see also #17275
-        from .id_choices import LICENSE_PLATE_PREFIX_CHOICES
         super(IDLicensePlateField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
+        plate_number = re.sub(r'\s+', ' ', force_text(value.strip())).upper()
 
-        plate_number = re.sub(r'\s+', ' ',
-                              force_text(value.strip())).upper()
+        number, prefix, suffix = self._validate_regex_match(plate_number)
+        self._validate_prefix(prefix)
+        self._validate_jakarta(prefix, suffix)
+        self._validate_ri(prefix, suffix)
+        self._validate_number(number)
 
+        # CD, CC and B 12345 12
+        if len(number) == 5 or prefix in self.foreign_vehicles_prefixes:
+            self._validate_numeric_suffix(suffix)
+            self._validate_known_codes_range(number, prefix, suffix)
+        else:
+            self._validate_non_numeric_suffix(suffix)
+        return plate_number
+
+    def _validate_regex_match(self, plate_number):
         matches = plate_re.search(plate_number)
         if matches is None:
             raise ValidationError(self.error_messages['invalid'])
-
-        # Make sure prefix is in the list of known codes.
         prefix = matches.group('prefix')
+        suffix = matches.group('suffix')
+        number = matches.group('number')
+        return number, prefix, suffix
+
+    def _validate_number(self, number):
+        # Number can't be zero.
+        if number == '0':
+            raise ValidationError(self.error_messages['invalid'])
+
+    def _validate_known_codes_range(self, number, prefix, suffix):
+        # Known codes range is 12-124
+        if prefix in self.foreign_vehicles_prefixes and not (12 <= int(number) <= 124):
+            raise ValidationError(self.error_messages['invalid'])
+        if len(number) == 5 and not (12 <= int(suffix) <= 124):
+            raise ValidationError(self.error_messages['invalid'])
+
+    def _validate_numeric_suffix(self, suffix):
+        # suffix must be numeric and non-empty
+        if re.match(r'^\d+$', suffix) is None:
+            raise ValidationError(self.error_messages['invalid'])
+
+    def _validate_non_numeric_suffix(self, suffix):
+        # suffix must be non-numeric
+        if suffix is not None and re.match(r'^[A-Z]{,3}$', suffix) is None:
+            raise ValidationError(self.error_messages['invalid'])
+
+    def _validate_prefix(self, prefix):
+        # Load data in memory only when it is required, see also #17275
+        from .id_choices import LICENSE_PLATE_PREFIX_CHOICES
+        # Make sure prefix is in the list of known codes.
         if prefix not in [choice[0] for choice in LICENSE_PLATE_PREFIX_CHOICES]:
             raise ValidationError(self.error_messages['invalid'])
 
-        # Only Jakarta (prefix B) can have 3 letter suffix.
-        suffix = matches.group('suffix')
-        if suffix is not None and len(suffix) == 3 and prefix != 'B':
-            raise ValidationError(self.error_messages['invalid'])
-
+    def _validate_ri(self, prefix, suffix):
         # RI plates don't have suffix.
         if prefix == 'RI' and suffix is not None and suffix != '':
             raise ValidationError(self.error_messages['invalid'])
 
-        # Number can't be zero.
-        number = matches.group('number')
-        if number == '0':
+    def _validate_jakarta(self, prefix, suffix):
+        # Only Jakarta (prefix B) can have 3 letter suffix.
+        if suffix is not None and len(suffix) == 3 and prefix != 'B':
             raise ValidationError(self.error_messages['invalid'])
-
-        # CD, CC and B 12345 12
-        if len(number) == 5 or prefix in ('CD', 'CC'):
-            # suffix must be numeric and non-empty
-            if re.match(r'^\d+$', suffix) is None:
-                raise ValidationError(self.error_messages['invalid'])
-
-            # Known codes range is 12-124
-            if prefix in ('CD', 'CC') and not (12 <= int(number) <= 124):
-                raise ValidationError(self.error_messages['invalid'])
-            if len(number) == 5 and not (12 <= int(suffix) <= 124):
-                raise ValidationError(self.error_messages['invalid'])
-        else:
-            # suffix must be non-numeric
-            if suffix is not None and re.match(r'^[A-Z]{,3}$', suffix) is None:
-                raise ValidationError(self.error_messages['invalid'])
-
-        return plate_number
 
 
 class IDNationalIdentityNumberField(Field):
@@ -171,6 +186,7 @@ class IDNationalIdentityNumberField(Field):
 
     xx.xxxx.ddmmyy.xxxx - 16 digits (excl. dots)
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid NIK/KTP number'),
     }
@@ -188,29 +204,30 @@ class IDNationalIdentityNumberField(Field):
         if int(value) == 0:
             raise ValidationError(self.error_messages['invalid'])
 
-        def valid_nik_date(year, month, day):
-            try:
-                t1 = (int(year), int(month), int(day), 0, 0, 0, 0, 0, -1)
-                d = time.mktime(t1)
-                t2 = time.localtime(d)
-                if t1[:3] != t2[:3]:
-                    return False
-                else:
-                    return True
-            except (OverflowError, ValueError):
-                return False
-
         year = int(value[10:12])
         month = int(value[8:10])
         day = int(value[6:8])
         current_year = time.localtime().tm_year
         if year < int(str(current_year)[-2:]):
-            if not valid_nik_date(2000 + int(year), month, day):
+            if not IDNationalIdentityNumberField._valid_nik_date(2000 + int(year), month, day):
                 raise ValidationError(self.error_messages['invalid'])
-        elif not valid_nik_date(1900 + int(year), month, day):
+        elif not IDNationalIdentityNumberField._valid_nik_date(1900 + int(year), month, day):
             raise ValidationError(self.error_messages['invalid'])
 
         if value[:6] == '000000' or value[12:] == '0000':
             raise ValidationError(self.error_messages['invalid'])
 
         return '%s.%s.%s.%s' % (value[:2], value[2:6], value[6:12], value[12:])
+
+    @staticmethod
+    def _valid_nik_date(year, month, day):
+        try:
+            t1 = (int(year), int(month), int(day), 0, 0, 0, 0, 0, -1)
+            d = time.mktime(t1)
+            t2 = time.localtime(d)
+            if t1[:3] != t2[:3]:
+                return False
+            else:
+                return True
+        except (OverflowError, ValueError):
+            return False
