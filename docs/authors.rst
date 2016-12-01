@@ -55,6 +55,7 @@ Authors
 * Karen Tracey
 * László Ratskó
 * Lefteris Nikoltsios
+* Luis Alberto Santana
 * Łukasz Langa
 * Luke Benstead
 * luyikei
