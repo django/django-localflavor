@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.ma.forms import (MAPhoneNumberField, MAProvinceSelect, MARegionSelect,
-                                  MAProvinceField, MARegionField, MAPostalCodeField)
+from localflavor.ma.forms import (MAPhoneNumberField, MAPostalCodeField, MAProvinceField, MAProvinceSelect,
+                                  MARegionField, MARegionSelect)
 
 
 PROVINCE_SELECT_OUTPUT = '''

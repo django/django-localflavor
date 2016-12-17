@@ -6,6 +6,7 @@ from django.test import SimpleTestCase
 
 from localflavor.ve.forms import VERegionSelect, VEStateSelect
 
+
 class VELocalFlavorTests(SimpleTestCase):
 
     def test_VERegionSelect(self):
