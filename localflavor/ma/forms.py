@@ -19,6 +19,8 @@ class MAPostalCodeField(RegexField):
     Validate local Moroccan postal code.
 
     The correct format is 'XXXXX' as defined in http://codepostal.ma/code_postal.aspx .
+
+    .. versionadded:: 1.4
     """
 
     default_error_messages = {
@@ -39,6 +41,8 @@ class MAPhoneNumberField(CharField):
     The correct format is '0X XX XX XX XX'.
     '0X.XX.XX.XX.XX' and '0XXXXXXXXX' validate but are corrected to
     '0X XX XX XX XX'.
+
+    .. versionadded:: 1.4
     """
 
     phone_digits_re = re.compile(r'^0\d(\s|\.)?(\d{2}(\s|\.)?){3}\d{2}$')
@@ -99,7 +103,11 @@ class MARegionSelect(Select):
 
 
 class MAProvinceField(CharField):
-    """A Select Field that uses a MAProvinceSelect widget."""
+    """
+    A Select Field that uses a MAProvinceSelect widget.
+
+    .. versionadded:: 1.4
+    """
 
     widget = MAProvinceSelect
 
@@ -109,7 +117,11 @@ class MAProvinceField(CharField):
 
 
 class MARegionField(CharField):
-    """A Select Field that uses a MARegionSelect widget."""
+    """
+    A Select Field that uses a MARegionSelect widget.
+
+    .. versionadded:: 1.4
+    """
 
     widget = MARegionSelect
 
