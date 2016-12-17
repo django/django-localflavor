@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 
 from localflavor.ma.forms import (MAPhoneNumberField, MAProvinceSelect, MARegionSelect,
-                                  MAProvinceField, MARegionField, MAZipCodeField)
+                                  MAProvinceField, MARegionField, MAPostalCodeField)
 
 
 PROVINCE_SELECT_OUTPUT = '''
@@ -105,8 +105,8 @@ REGION_SELECT_OUTPUT = '''
 '''
 
 class MALocalFlavorTests(SimpleTestCase):
-    def test_MAZipCodeField(self):
-        error_format = ['Enter a zip code in the format XXXXX.']
+    def test_MAPostalCodeField(self):
+        error_format = ['Enter a postal code in the format XXXXX.']
         valid = {
             '11030': '11030',
             '11000': '11000',
@@ -116,7 +116,7 @@ class MALocalFlavorTests(SimpleTestCase):
             '110002': ['Ensure this value has at most '
                        '5 characters (it has 6).'] + error_format,
         }
-        self.assertFieldOutput(MAZipCodeField, valid, invalid)
+        self.assertFieldOutput(MAPostalCodeField, valid, invalid)
 
     def test_MAPhoneNumberField(self):
         error_format = ['Phone numbers must be in 0X XX XX XX XX format.']

@@ -14,22 +14,22 @@ from .ma_provinces import PROVINCE_CHOICES_PER_REGION
 from .ma_regions import REGION_CHOICES
 
 
-class MAZipCodeField(RegexField):
+class MAPostalCodeField(RegexField):
     """
-    Validate local Moroccan zip code.
+    Validate local Moroccan postal code.
 
     The correct format is 'XXXXX' as defined in http://codepostal.ma/code_postal.aspx .
     """
 
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXXX.'),
+        'invalid': _('Enter a postal code in the format XXXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('label', _('Zip code'))
         kwargs['max_length'] = 5
         kwargs['min_length'] = 5
-        super(MAZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
+        super(MAPostalCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
 
 class MAPhoneNumberField(CharField):
