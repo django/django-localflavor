@@ -9,6 +9,8 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, Select, ValidationError
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from ..generic.forms import IBANFormField
 from .ro_counties import COUNTIES_CHOICES
 
@@ -190,7 +192,7 @@ class ROIBANField(IBANFormField):
         super(ROIBANField, self).__init__(*args, **kwargs)
 
 
-class ROPhoneNumberField(RegexField):
+class ROPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Romanian phone number field.
 

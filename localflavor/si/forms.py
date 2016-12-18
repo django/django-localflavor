@@ -10,6 +10,8 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, ChoiceField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .si_postalcodes import SI_POSTALCODES_CHOICES
 
 
@@ -137,7 +139,7 @@ class SIPostalCodeSelect(Select):
                                                  choices=SI_POSTALCODES_CHOICES)
 
 
-class SIPhoneNumberField(CharField):
+class SIPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Slovenian phone number field.
 

@@ -6,6 +6,8 @@ from django.core.exceptions import ValidationError
 from django.forms import fields, widgets
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .dk_municipalities import DK_MUNICIPALITIES
 from .dk_postalcodes import DK_POSTALCODES
 
@@ -33,7 +35,7 @@ class DKMunicipalitySelect(widgets.Select):
         )
 
 
-class DKPhoneNumberField(fields.RegexField):
+class DKPhoneNumberField(fields.RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Field with phone number validation.
 

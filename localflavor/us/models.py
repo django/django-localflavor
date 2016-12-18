@@ -1,6 +1,7 @@
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.models import DeprecatedPhoneNumberField
 from .forms import USPhoneNumberField as USPhoneNumberFormField
 from .forms import USSocialSecurityNumberField as USSocialSecurityNumberFieldFormField
 from .forms import USZipCodeField as USZipCodeFormField
@@ -79,7 +80,7 @@ class USZipCodeField(CharField):
         return super(USZipCodeField, self).formfield(**defaults)
 
 
-class PhoneNumberField(CharField):
+class PhoneNumberField(CharField, DeprecatedPhoneNumberField):
     """
     A :class:`~django.db.models.CharField` that checks that the value is a valid U.S.A.-style phone number.
 

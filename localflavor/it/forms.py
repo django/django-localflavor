@@ -10,6 +10,8 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .it_province import PROVINCE_CHOICES
 from .it_region import REGION_CHOICES, REGION_PROVINCE_CHOICES
 from .util import ssn_validation, vat_number_validation
@@ -114,7 +116,7 @@ class ITVatNumberField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
 
-class ITPhoneNumberField(CharField):
+class ITPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as an Italian phone number.
 

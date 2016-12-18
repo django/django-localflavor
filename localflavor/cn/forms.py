@@ -8,6 +8,8 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .cn_provinces import CN_PROVINCE_CHOICES
 
 __all__ = (
@@ -167,7 +169,7 @@ class CNIDCardField(CharField):
         return '10X98765432'[checksum_index] == value[-1]
 
 
-class CNPhoneNumberField(RegexField):
+class CNPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as a telephone number in mainland China.
 
@@ -183,7 +185,7 @@ class CNPhoneNumberField(RegexField):
         super(CNPhoneNumberField, self).__init__(PHONE_RE, *args, **kwargs)
 
 
-class CNCellNumberField(RegexField):
+class CNCellNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as a cellphone number in mainland China.
 

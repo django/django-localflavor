@@ -195,6 +195,23 @@ Version numbers follow the appropriate Python standards, e.g. PEPs 386_ and 440_
 .. _440: http://www.python.org/dev/peps/pep-0440/
 .. _`Django's release process`: https://docs.djangoproject.com/en/dev/internals/release-process/
 
+Roadmap
+-------
+
+django-localflavor releases follow `semver`_.
+Within one month of django release we would release a new verision.
+We might have an extra release if there are enough features in between django releases.
+
+=========== =========== ===============
+  Version     Django     Date
+=========== =========== ===============
+1.4         1.10         December 2016
+1.x         ...          ...
+2.0         2.0          January 2018
+=========== =========== ===============
+
+.. _semver: http://semver.org/
+
 How to migrate
 ==============
 

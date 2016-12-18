@@ -11,6 +11,7 @@ from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.generic.checksums import luhn
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 sin_re = re.compile(r"^(\d{3})-(\d{3})-(\d{3})$")
@@ -44,7 +45,7 @@ class CAPostalCodeField(CharField):
         return "%s %s" % (m.group(1), m.group(2))
 
 
-class CAPhoneNumberField(Field):
+class CAPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     """Canadian phone number form field."""
 
     default_error_messages = {

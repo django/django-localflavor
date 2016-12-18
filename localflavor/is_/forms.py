@@ -9,6 +9,8 @@ from django.forms.widgets import Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .is_postalcodes import IS_POSTALCODES
 
 
@@ -58,7 +60,7 @@ class ISIdNumberField(RegexField):
         return force_text(value[:6] + '-' + value[6:])
 
 
-class ISPhoneNumberField(RegexField):
+class ISPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Icelandic phone number.
 

@@ -11,6 +11,8 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .br_states import STATE_CHOICES
 
 phone_digits_re = re.compile(r'^(\d{2})[-\.]?(\d{4,5})[-\.]?(\d{4})$')
@@ -35,7 +37,7 @@ class BRZipCodeField(RegexField):
                                              max_length, min_length, *args, **kwargs)
 
 
-class BRPhoneNumberField(Field):
+class BRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as a Brazilian phone number.
 

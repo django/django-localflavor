@@ -3,9 +3,11 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.models import DeprecatedPhoneNumberField
 from . import forms
 from .nl_provinces import PROVINCE_CHOICES
-from .validators import (NLBankAccountNumberFieldValidator, NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator,
+from .validators import (NLBankAccountNumberFieldValidator, NLPhoneNumberFieldValidator,
+                         NLSoFiNumberFieldValidator,
                          NLZipCodeFieldValidator)
 
 
@@ -84,7 +86,7 @@ class NLSoFiNumberField(models.CharField):
         return super(NLSoFiNumberField, self).formfield(**defaults)
 
 
-class NLPhoneNumberField(models.CharField):
+class NLPhoneNumberField(models.CharField, DeprecatedPhoneNumberField):
     """
     Dutch phone number model field.
 

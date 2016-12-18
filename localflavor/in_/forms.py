@@ -10,6 +10,8 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .in_states import STATE_CHOICES, STATES_NORMALIZED
 
 phone_digits_re = re.compile(r"""
@@ -147,7 +149,7 @@ class INStateSelect(Select):
         super(INStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
 
-class INPhoneNumberField(CharField):
+class INPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     INPhoneNumberField validates that the data is a valid Indian phone number, including the STD code.
 

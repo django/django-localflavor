@@ -95,3 +95,11 @@ class BICField(models.CharField):
         defaults = {'form_class': BICFormField}
         defaults.update(kwargs)
         return super(BICField, self).formfield(**defaults)
+
+
+class DeprecatedPhoneNumberField(object):
+    def __init__(self):
+        self.system_check_deprecated_details = {
+            'msg': self.__class__.__name__ + " is deprecated.",
+            'hint': 'Use django-phonenumber-field library instead.'
+        }
