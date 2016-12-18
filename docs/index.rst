@@ -168,7 +168,7 @@ that you might consider implementing:
   - ID verification
   - tax or social security number validator
   - car registration
-  - zip code validation
+  - postal code validation
   - country area selects, e.g. cities, counties, states, provinces
 
 - model fields, e.g. for storing any of the above form fields' values
