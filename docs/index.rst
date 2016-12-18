@@ -81,13 +81,13 @@ validate Finnish social security numbers.
 
 To use one of these localized components, just import the relevant subpackage.
 For example, here's how you can create a form with a field representing a
-French telephone number::
+Greek postal code::
 
     from django import forms
-    from localflavor.fr.forms import FRPhoneNumberField
+    from localflavor.gr.forms import GRPostalCodeField
 
     class MyForm(forms.Form):
-        my_french_phone_no = FRPhoneNumberField()
+        my_greek_postal_code = GRPostalCodeField()
 
 The ``localflavor`` package also includes a :doc:`generic </generic>` subpackage,
 containing useful code that is not specific to one particular country or culture.
@@ -170,7 +170,6 @@ that you might consider implementing:
   - tax or social security number validator
   - car registration
   - zip code validation
-  - phone number validation
   - country area selects, e.g. cities, counties, states, provinces
 
 - model fields, e.g. for storing any of the above form fields' values
@@ -178,6 +177,13 @@ that you might consider implementing:
 - local translations of English area names. Join your language team at
   Transifex: https://www.transifex.com/projects/p/django-localflavor/
 
+.. note::
+
+  django-localflavor does not accept contributions of country specific phone number fields. The
+  `django-phonenumber-field`_ package has excellent support for validating phone numbers in many
+  countries and we recommend this package.
+
+.. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
 .. _create an issue or pull request: https://github.com/django/django-localflavor/issues
 .. _contributing documentation: https://github.com/django/django-localflavor/blob/master/CONTRIBUTING.rst
 
@@ -225,20 +231,20 @@ update your code:
 
    For example, change this::
 
-       from django.contrib.localflavor.fr.forms import FRPhoneNumberField
+       from django.contrib.localflavor.gr.forms import GRPostalCodeField
 
    ...to this::
 
-       from localflavor.fr.forms import FRPhoneNumberField
+       from localflavor.gr.forms import GRPostalCodeField
 
    Or if you used one of the shortlived ``django-localflavor-*`` packages
    change::
 
-       from django_localflavor_fr.forms import FRPhoneNumberField
+       from django_localflavor_gr.forms import GRPostalCodeField
 
    ...to this::
 
-       from localflavor.fr.forms import FRPhoneNumberField
+       from localflavor.gr.forms import GRPostalCodeField
 
 The code in the new package is the same (it was copied directly from Django),
 so you don't have to worry about backwards compatibility in terms of
