@@ -8,6 +8,8 @@ New flavors:
 
 - Added local flavor for Venezuela
   (`gh-245 <https://github.com/django/django-localflavor/pull/245>`_)
+- Added local flavor for Morocco
+  (`gh-270 <https://github.com/django/django-localflavor/pull/270>`_)
 
 New fields for existing flavors:
 
