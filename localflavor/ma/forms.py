@@ -2,12 +2,7 @@
 """MA-specific Form helpers"""
 from __future__ import unicode_literals
 
-import re
-
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from .ma_provinces import PROVINCE_CHOICES_PER_REGION
