@@ -49,6 +49,7 @@ Authors
 * Jocelyn Delalande
 * Johnny Lee Othon
 * Jonas Ghyllebert
+* Jonatan Rodríguez
 * Joseph Kocherhans
 * Josh Crompton
 * Julien Phalip

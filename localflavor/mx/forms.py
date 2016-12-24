@@ -275,6 +275,25 @@ class MXCURPField(RegexField):
         return first_four in CURP_INCONVENIENT_WORDS
 
 
+class MXPhoneNumberField(RegexField):
+    """
+    https://en.wikipedia.org/wiki/Telephone_numbers_in_Mexico
+
+    A form field that validates its input as a Mexican phone number.
+    Information numbers are ommited.
+
+    Phone numbers in Mexico are made of ten digits with either two-digit area
+    codes (for Mexico City, Monterrey, and Guadalajara and their respective
+    metropolitan areas) or three-digit area codes for the rest of the country.
+
+    TODO: accept and strip characters like dot, hyphen... in phone number
+    """
+
+    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
+        super(MXPhoneNumberField, self).__init__(r'^()\d{10}$',
+                                                 max_length, min_length, *args, **kwargs)  # NOQA
+
+
 class MXSocialSecurityNumberField(RegexField):
     """
     A field that validates a Mexican Social Security Number.

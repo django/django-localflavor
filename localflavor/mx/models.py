@@ -89,6 +89,28 @@ class MXCURPField(CharField):
         return super(MXCURPField, self).formfield(**defaults)
 
 
+class MXPhoneNumberField(CharField):
+    """
+    A model field that forms represent as a forms.MXPhoneNumberField
+    field and stores the value of a valid Mexican Phone Number.
+    """
+    description = _("Mexican Phone Number")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 10
+        super(MXPhoneNumberField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(MXPhoneNumberField, self).deconstruct()
+        del kwargs['max_length']
+        return name, path, args, kwargs
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': MXPhoneNumberField}
+        defaults.update(kwargs)
+        return super(MXPhoneNumberField, self).formfield(**defaults)
+
+
 class MXSocialSecurityNumberField(CharField):
     """
     A model field that forms represent as a forms.MXSocialSecurityNumberField field.
