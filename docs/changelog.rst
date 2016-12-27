@@ -1,6 +1,27 @@
 Changelog
 =========
 
+
+1.5   (unreleased)
+------------------
+
+New flavors:
+
+- Added local flavor for Ukraine
+  (`gh-273 <https://github.com/django/django-localflavor/pull/273>`_)
+
+New fields for existing flavors:
+
+- None
+
+Modifications to existing flavors:
+
+- None
+
+Other changes:
+
+- None
+
 1.4   (unreleased)
 ------------------
 
