@@ -210,7 +210,7 @@ We might have an extra release if there are enough features in between django re
 =========== =========== ===============
   Version     Django     Date
 =========== =========== ===============
-1.4         1.10         December 2016
+1.4         1.10         January 2017
 1.x         ...          ...
 2.0         2.0          January 2018
 =========== =========== ===============
