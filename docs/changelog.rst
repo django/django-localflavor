@@ -1,6 +1,26 @@
 Changelog
 =========
 
+
+1.5   (unreleased)
+------------------
+
+New flavors:
+
+- None
+
+New fields for existing flavors:
+
+- None
+
+Modifications to existing flavors:
+
+- None
+
+Other changes:
+
+- None
+
 1.4   (2017-01-03)
 ------------------
 
@@ -58,7 +78,6 @@ Other changes:
   (`gh-262 <https://github.com/django/django-localflavor/pull/262>`_).
 - Bumped versions of requirements for testing
   (`gh-274 <https://github.com/django/django-localflavor/pull/274>`_).
-
 
 1.3   (2016-05-06)
 ------------------
