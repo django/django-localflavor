@@ -12,6 +12,7 @@ when explicitly needed.
 
 import operator
 
+from django.utils.functional import lazy
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import pgettext_lazy
 
@@ -109,13 +110,98 @@ OBSOLETE_STATES = (
     ('TT', _('Trust Territory of the Pacific Islands')),
 )
 
-US_STATES = tuple(sorted(CONTIGUOUS_STATES + NON_CONTIGUOUS_STATES, key=operator.itemgetter(0)))
+US_STATES = lazy(lambda: tuple(sorted(
+    CONTIGUOUS_STATES + NON_CONTIGUOUS_STATES,
+    key=operator.itemgetter(0))), tuple)()
+"""
+This docstring is not read by Sphinx, so it has been copied to
+docs/localflavor/us.rst.
 
-#: All US states and territories plus DC and military mail.
-STATE_CHOICES = tuple(sorted(US_STATES + US_TERRITORIES + ARMED_FORCES_STATES, key=operator.itemgetter(1)))
+All US states.
 
-#: All US Postal Service locations.
-USPS_CHOICES = tuple(sorted(US_STATES + US_TERRITORIES + ARMED_FORCES_STATES + COFA_STATES, key=operator.itemgetter(1)))
+This tuple is lazily generated and may not work as expected in all cases due
+to tuple optimizations in the Python interpreter which do not account for
+lazily generated tuples.  For example::
+
+  US_STATES + ('XX', _('Select a State'))
+
+should work as expected, but::
+
+  ('XX', _('Select a State')) + US_STATES
+
+may throw:
+
+``TypeError: can only concatenate tuple (not "proxy") to tuple``
+
+due to a Python optimization that causes the concatenation to occur before
+US_STATES has been lazily generated.  To work around these issues, you
+can use a slice index (``[:]``) to force the generation of US_STATES
+before any other operations are processed by the Python interpreter::
+
+  ('XX', _('Select a State')) + US_STATES[:]
+"""
+
+STATE_CHOICES = lazy(lambda: tuple(sorted(
+    CONTIGUOUS_STATES + NON_CONTIGUOUS_STATES + US_TERRITORIES + ARMED_FORCES_STATES,
+    key=operator.itemgetter(1))), tuple)()
+"""
+This docstring is not read by Sphinx, so it has been copied to
+docs/localflavor/us.rst.
+
+All US states and territories plus DC and military mail.
+
+This tuple is lazily generated and may not work as expected in all cases due
+to tuple optimizations in the Python interpreter which do not account for
+lazily generated tuples.  For example::
+
+  STATE_CHOICES + ('XX', _('Select a State'))
+
+should work as expected, but::
+
+  ('XX', _('Select a State')) + STATE_CHOICES
+
+may throw:
+
+``TypeError: can only concatenate tuple (not "proxy") to tuple``
+
+due to a Python optimization that causes the concatenation to occur before
+STATE_CHOICES has been lazily generated.  To work around these issues, you
+can use a slice index (``[:]``) to force the generation of STATE_CHOICES
+before any other operations are processed by the Python interpreter::
+
+  ('XX', _('Select a State')) + STATE_CHOICES[:]
+"""
+
+USPS_CHOICES = lazy(lambda: tuple(sorted(
+    CONTIGUOUS_STATES + NON_CONTIGUOUS_STATES + US_TERRITORIES + ARMED_FORCES_STATES + COFA_STATES,
+    key=operator.itemgetter(1))), tuple)()
+"""
+This docstring is not read by Sphinx, so it has been copied to
+docs/localflavor/us.rst.
+
+All US Postal Service locations.
+
+This tuple is lazily generated and may not work as expected in all cases due
+to tuple optimizations in the Python interpreter which do not account for
+lazily generated tuples.  For example::
+
+  USPS_CHOICES + ('XX', _('Select a State'))
+
+should work as expected, but::
+
+  ('XX', _('Select a State')) + USPS_CHOICES
+
+may throw:
+
+``TypeError: can only concatenate tuple (not "proxy") to tuple``
+
+due to a Python optimization that causes the concatenation to occur before
+USPS_CHOICES has been lazily generated.  To work around these issues, you
+can use a slice index (``[:]``) to force the generation of USPS_CHOICES
+before any other operations are processed by the Python interpreter::
+
+  ('XX', _('Select a State')) + USPS_CHOICES[:]
+"""
 
 #: Normalized versions of state names
 STATES_NORMALIZED = {
