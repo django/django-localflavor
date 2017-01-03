@@ -207,7 +207,7 @@ class ROPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
 
     default_error_messages = {
         'invalid_length':
-            _('Phone numbers may only have 7 or 10 digits, except the ' +
+            _('Phone numbers may only have 7 or 10 digits, except the '
               'national short numbers which have 3 to 6 digits'),
         'invalid_long_format':
             _('Normal phone numbers (7 or 10 digits) must begin with "0"'),
