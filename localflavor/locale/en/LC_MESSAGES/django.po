@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-29 10:55+0100\n"
+"POT-Creation-Date: 2017-01-03 18:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8554,7 +8554,9 @@ msgid "Enter a valid CNP."
 msgstr ""
 
 #: ro/forms.py:210
-msgid "Phone numbers may only have 7 or 10 digits, except the "
+msgid ""
+"Phone numbers may only have 7 or 10 digits, except the national short "
+"numbers which have 3 to 6 digits"
 msgstr ""
 
 #: ro/forms.py:213
