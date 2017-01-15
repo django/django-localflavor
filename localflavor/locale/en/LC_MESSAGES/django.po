@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-06 20:44+0100\n"
+"POT-Creation-Date: 2017-01-03 18:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -184,7 +184,7 @@ msgstr ""
 msgid "Vienna"
 msgstr ""
 
-#: at/forms.py:24 no/forms.py:24
+#: at/forms.py:24 no/forms.py:26
 msgid "Enter a zip code in the format XXXX."
 msgstr ""
 
@@ -192,27 +192,27 @@ msgstr ""
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
 msgstr ""
 
-#: au/forms.py:28
+#: au/forms.py:30
 msgid "Enter a 4 digit postcode."
 msgstr ""
 
-#: au/models.py:16
+#: au/models.py:17
 msgid "Australian State"
 msgstr ""
 
-#: au/models.py:36
+#: au/models.py:37
 msgid "Australian Postcode"
 msgstr ""
 
-#: au/models.py:51
+#: au/models.py:52
 msgid "Australian Phone number"
 msgstr ""
 
-#: au/models.py:70
+#: au/models.py:71
 msgid "Australian Business Number"
 msgstr ""
 
-#: au/models.py:104
+#: au/models.py:105
 msgid "Australian Tax File Number"
 msgstr ""
 
@@ -280,52 +280,52 @@ msgstr ""
 msgid "Wallonia"
 msgstr ""
 
-#: be/forms.py:23 ch/forms.py:34
+#: be/forms.py:25 ch/forms.py:36
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr ""
 
-#: be/forms.py:48
+#: be/forms.py:50
 msgid ""
 "Enter a valid phone number in one of the formats 0x xxx xx xx, 0xx xx xx xx, "
 "04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx."
 "xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
 msgstr ""
 
-#: bg/validators.py:30
+#: bg/validators.py:34
 msgid "The EGN is not valid"
 msgstr ""
 
-#: bg/validators.py:40
+#: bg/validators.py:45
 msgid "EIK/BULSTAT is not valid"
 msgstr ""
 
-#: br/forms.py:30
+#: br/forms.py:32
 msgid "Enter a zip code in the format XXXXX-XXX."
 msgstr ""
 
-#: br/forms.py:73
+#: br/forms.py:75
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
 msgstr ""
 
-#: br/forms.py:115
+#: br/forms.py:117
 msgid "Invalid CPF number."
 msgstr ""
 
-#: br/forms.py:116
+#: br/forms.py:118
 msgid "This field requires at most 11 digits or 14 characters."
 msgstr ""
 
-#: br/forms.py:166
+#: br/forms.py:176
 msgid "Invalid CNPJ number."
 msgstr ""
 
-#: br/forms.py:167
+#: br/forms.py:177
 msgid "This field requires at least 14 digits"
 msgstr ""
 
-#: br/forms.py:214
+#: br/forms.py:227
 msgid "Invalid Process number."
 msgstr ""
 
@@ -385,19 +385,19 @@ msgstr ""
 msgid "Yukon"
 msgstr ""
 
-#: ca/forms.py:30
+#: ca/forms.py:31
 msgid "Enter a postal code in the format XXX XXX."
 msgstr ""
 
-#: ca/forms.py:51 us/forms.py:50
+#: ca/forms.py:52 us/forms.py:52
 msgid "Phone numbers must be in XXX-XXX-XXXX format."
 msgstr ""
 
-#: ca/forms.py:74
+#: ca/forms.py:75
 msgid "Enter a Canadian province or territory."
 msgstr ""
 
-#: ca/forms.py:119
+#: ca/forms.py:120
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr ""
 
@@ -505,17 +505,17 @@ msgstr ""
 msgid "Zurich"
 msgstr ""
 
-#: ch/forms.py:51
+#: ch/forms.py:53
 msgid "Phone numbers must be in 0XX XXX XX XX format."
 msgstr ""
 
-#: ch/forms.py:84
+#: ch/forms.py:86
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr ""
 
-#: ch/forms.py:156
+#: ch/forms.py:158
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
 
@@ -531,31 +531,31 @@ msgstr ""
 msgid "The Chilean RUT is not valid."
 msgstr ""
 
-#: cn/forms.py:81
+#: cn/forms.py:83
 msgid "Enter a post code in the format XXXXXX."
 msgstr ""
 
-#: cn/forms.py:104
+#: cn/forms.py:106
 msgid "ID Card Number consists of 15 or 18 digits."
 msgstr ""
 
-#: cn/forms.py:105
+#: cn/forms.py:107
 msgid "Invalid ID Card Number: Wrong checksum"
 msgstr ""
 
-#: cn/forms.py:106
+#: cn/forms.py:108
 msgid "Invalid ID Card Number: Wrong birthdate"
 msgstr ""
 
-#: cn/forms.py:107
+#: cn/forms.py:109
 msgid "Invalid ID Card Number: Wrong location code"
 msgstr ""
 
-#: cn/forms.py:179 nl/validators.py:86
+#: cn/forms.py:181 nl/validators.py:86
 msgid "Enter a valid phone number."
 msgstr ""
 
-#: cn/forms.py:203
+#: cn/forms.py:205
 msgid "Enter a valid cell number."
 msgstr ""
 
@@ -695,7 +695,7 @@ msgstr ""
 msgid "Thuringia"
 msgstr ""
 
-#: de/forms.py:26 ee/forms.py:26 fi/forms.py:23 fr/forms.py:33
+#: de/forms.py:26 ee/forms.py:26 fi/forms.py:23 fr/forms.py:34
 msgid "Enter a zip code in the format XXXXX."
 msgstr ""
 
@@ -4159,11 +4159,11 @@ msgstr ""
 msgid "Sumba"
 msgstr ""
 
-#: dk/forms.py:15
+#: dk/forms.py:17
 msgid "Enter a postal code in the format XXXX."
 msgstr ""
 
-#: dk/forms.py:45 no/forms.py:101
+#: dk/forms.py:47 no/forms.py:109
 msgid "A phone number must be 8 digits and may have country code"
 msgstr ""
 
@@ -4515,42 +4515,42 @@ msgstr ""
 msgid "Autonomous city of Mellila"
 msgstr ""
 
-#: es/forms.py:27
+#: es/forms.py:29
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
 msgstr ""
 
-#: es/forms.py:50
+#: es/forms.py:52
 msgid ""
 "Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or "
 "9XXXXXXXX."
 msgstr ""
 
-#: es/forms.py:84
+#: es/forms.py:86
 msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr ""
 
-#: es/forms.py:85
+#: es/forms.py:87
 msgid "Please enter a valid NIF or NIE."
 msgstr ""
 
-#: es/forms.py:86
+#: es/forms.py:88
 msgid "Invalid checksum for NIF."
 msgstr ""
 
-#: es/forms.py:87
+#: es/forms.py:89
 msgid "Invalid checksum for NIE."
 msgstr ""
 
-#: es/forms.py:88
+#: es/forms.py:90
 msgid "Invalid checksum for CIF."
 msgstr ""
 
-#: es/forms.py:173
+#: es/forms.py:175
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr ""
 
-#: es/forms.py:174
+#: es/forms.py:176
 msgid "Invalid checksum for bank account number."
 msgstr ""
 
@@ -4558,35 +4558,35 @@ msgstr ""
 msgid "Enter a valid Finnish social security number."
 msgstr ""
 
-#: fr/forms.py:37
+#: fr/forms.py:38
 msgid "Zip code"
 msgstr ""
 
-#: fr/forms.py:55
+#: fr/forms.py:56
 msgid "Phone numbers must be in 0X XX XX XX XX format."
 msgstr ""
 
-#: fr/forms.py:59 us/models.py:89
+#: fr/forms.py:60 us/models.py:90
 msgid "Phone number"
 msgstr ""
 
-#: fr/forms.py:115
+#: fr/forms.py:128
 msgid "Select Department"
 msgstr ""
 
-#: fr/forms.py:125
+#: fr/forms.py:138 ma/forms.py:84
 msgid "Select Region"
 msgstr ""
 
-#: fr/forms.py:139
+#: fr/forms.py:152
 msgid "Enter a valid French National Identification number."
 msgstr ""
 
-#: fr/forms.py:237
+#: fr/forms.py:250
 msgid "Enter a valid French SIREN number."
 msgstr ""
 
-#: fr/forms.py:260
+#: fr/forms.py:273
 msgid "Enter a valid French SIRET number."
 msgstr ""
 
@@ -5244,82 +5244,82 @@ msgstr ""
 msgid "Not a valid EAN code."
 msgstr ""
 
-#: gr/forms.py:20
+#: gr/forms.py:22
 msgid "Enter a valid 5-digit greek postal code."
 msgstr ""
 
-#: gr/forms.py:37
+#: gr/forms.py:39
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr ""
 
-#: gr/forms.py:76
+#: gr/forms.py:78
 msgid "Enter a 10-digit greek phone number."
 msgstr ""
 
-#: gr/forms.py:103
+#: gr/forms.py:105
 msgid "Enter a greek mobile phone number starting with 69."
 msgstr ""
 
-#: hk/forms.py:34
+#: hk/forms.py:36
 #, python-format
 msgid "Phone number should not start with one of the followings: %s."
 msgstr ""
 
-#: hk/forms.py:37
+#: hk/forms.py:39
 #, python-format
 msgid "Phone number must be in one of the following formats: %s."
 msgstr ""
 
-#: hk/forms.py:39
+#: hk/forms.py:41
 #, python-format
 msgid "Phone number should start with one of the followings: %s."
 msgstr ""
 
-#: hr/forms.py:69
+#: hr/forms.py:70
 msgid "Enter a valid 13 digit JMBG"
 msgstr ""
 
-#: hr/forms.py:70
+#: hr/forms.py:71
 msgid "Error in date segment"
 msgstr ""
 
-#: hr/forms.py:117
+#: hr/forms.py:118
 msgid "Enter a valid 11 digit OIB"
 msgstr ""
 
-#: hr/forms.py:149 id_/forms.py:108
+#: hr/forms.py:150 id_/forms.py:110
 msgid "Enter a valid vehicle license plate number"
 msgstr ""
 
-#: hr/forms.py:150
+#: hr/forms.py:151
 msgid "Enter a valid location code"
 msgstr ""
 
-#: hr/forms.py:151
+#: hr/forms.py:152
 msgid "Number part cannot be zero"
 msgstr ""
 
-#: hr/forms.py:188
+#: hr/forms.py:189
 msgid "Enter a valid 5 digit postal code"
 msgstr ""
 
-#: hr/forms.py:218 id_/forms.py:68
+#: hr/forms.py:219 id_/forms.py:70
 msgid "Enter a valid phone number"
 msgstr ""
 
-#: hr/forms.py:219
+#: hr/forms.py:220
 msgid "Enter a valid area or mobile network code"
 msgstr ""
 
-#: hr/forms.py:220
+#: hr/forms.py:221
 msgid "The phone number is too long"
 msgstr ""
 
-#: hr/forms.py:260
+#: hr/forms.py:261
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr ""
 
-#: hr/forms.py:261
+#: hr/forms.py:262
 msgid "Card issue number cannot be zero"
 msgstr ""
 
@@ -5483,11 +5483,11 @@ msgstr ""
 msgid "Zala"
 msgstr ""
 
-#: id_/forms.py:29
+#: id_/forms.py:31
 msgid "Enter a valid post code"
 msgstr ""
 
-#: id_/forms.py:173
+#: id_/forms.py:193
 msgid "Enter a valid NIK/KTP number"
 msgstr ""
 
@@ -5859,32 +5859,32 @@ msgstr ""
 msgid "Wicklow"
 msgstr ""
 
-#: il/forms.py:25
+#: il/forms.py:26
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
 msgstr ""
 
-#: il/forms.py:56
+#: il/forms.py:57
 msgid "Enter a valid ID number."
 msgstr ""
 
-#: il/forms.py:79
+#: il/forms.py:80
 msgid "Enter a valid Mobile Number."
 msgstr ""
 
-#: in_/forms.py:43
+#: in_/forms.py:45
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr ""
 
-#: in_/forms.py:74
+#: in_/forms.py:76
 msgid "Enter an Indian state or territory."
 msgstr ""
 
-#: in_/forms.py:114
+#: in_/forms.py:116
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
 msgstr ""
 
-#: in_/forms.py:163
+#: in_/forms.py:165
 msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
 msgstr ""
 
@@ -5892,28 +5892,28 @@ msgstr ""
 msgid "Indian state (two uppercase letters)"
 msgstr ""
 
-#: is_/forms.py:23
+#: is_/forms.py:25
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
 msgstr ""
 
-#: is_/forms.py:24
+#: is_/forms.py:26
 msgid "The Icelandic identification number is not valid."
 msgstr ""
 
-#: it/forms.py:28 nl/validators.py:20
+#: it/forms.py:30 nl/validators.py:20
 msgid "Enter a valid zip code."
 msgstr ""
 
-#: it/forms.py:73
+#: it/forms.py:75
 msgid "Enter a valid Tax code."
 msgstr ""
 
-#: it/forms.py:104
+#: it/forms.py:106
 msgid "Enter a valid VAT number."
 msgstr ""
 
-#: it/forms.py:127
+#: it/forms.py:129
 msgid "Enter a valid Italian phone number."
 msgstr ""
 
@@ -6933,13 +6933,373 @@ msgstr ""
 msgid "Zilupe municipality"
 msgstr ""
 
+#: ma/forms.py:22 tr/forms.py:26
+msgid "Enter a postal code in the format XXXXX."
+msgstr ""
+
+#: ma/forms.py:26
+msgid "Postal code"
+msgstr ""
+
+#: ma/forms.py:70
+msgid "Select Province"
+msgstr ""
+
+#: ma/ma_provinces.py:9
+msgid "Al Hoceima"
+msgstr ""
+
+#: ma/ma_provinces.py:10
+msgid "Larache"
+msgstr ""
+
+#: ma/ma_provinces.py:11
+msgid "M’Diq - Fnideq"
+msgstr ""
+
+#: ma/ma_provinces.py:12
+msgid "Tetouan"
+msgstr ""
+
+#: ma/ma_provinces.py:13
+msgid "Chefchaouene"
+msgstr ""
+
+#: ma/ma_provinces.py:14
+msgid "Tanger - Assilah"
+msgstr ""
+
+#: ma/ma_provinces.py:15
+msgid "Fahs - Anjra"
+msgstr ""
+
+#: ma/ma_provinces.py:16
+msgid "Ouezzane"
+msgstr ""
+
+#: ma/ma_provinces.py:17
+msgid "Driouch"
+msgstr ""
+
+#: ma/ma_provinces.py:18
+msgid "Nador"
+msgstr ""
+
+#: ma/ma_provinces.py:19
+msgid "Berkan"
+msgstr ""
+
+#: ma/ma_provinces.py:20
+msgid "Taourirt"
+msgstr ""
+
+#: ma/ma_provinces.py:21
+msgid "Jerada"
+msgstr ""
+
+#: ma/ma_provinces.py:22
+msgid "Guercif"
+msgstr ""
+
+#: ma/ma_provinces.py:23
+msgid "Feguig"
+msgstr ""
+
+#: ma/ma_provinces.py:24
+msgid "Oujda - Angad"
+msgstr ""
+
+#: ma/ma_provinces.py:25
+msgid "El Hajeb"
+msgstr ""
+
+#: ma/ma_provinces.py:26
+msgid "Ifrane"
+msgstr ""
+
+#: ma/ma_provinces.py:27
+msgid "Boulemane"
+msgstr ""
+
+#: ma/ma_provinces.py:28
+msgid "Taza"
+msgstr ""
+
+#: ma/ma_provinces.py:29
+msgid "Taounate"
+msgstr ""
+
+#: ma/ma_provinces.py:30
+msgid "Sefrou"
+msgstr ""
+
+#: ma/ma_provinces.py:31
+msgid "Fès"
+msgstr ""
+
+#: ma/ma_provinces.py:32
+msgid "Meknès"
+msgstr ""
+
+#: ma/ma_provinces.py:33
+msgid "Moulay Yacoub"
+msgstr ""
+
+#: ma/ma_provinces.py:34
+msgid "Khémisset"
+msgstr ""
+
+#: ma/ma_provinces.py:35
+msgid "Rabat"
+msgstr ""
+
+#: ma/ma_provinces.py:36
+msgid "Skhirate - Temara"
+msgstr ""
+
+#: ma/ma_provinces.py:37
+msgid "Kénitra"
+msgstr ""
+
+#: ma/ma_provinces.py:38
+msgid "Salé"
+msgstr ""
+
+#: ma/ma_provinces.py:39
+msgid "Sidi Slimane"
+msgstr ""
+
+#: ma/ma_provinces.py:40
+msgid "Sidi Kacem"
+msgstr ""
+
+#: ma/ma_provinces.py:41
+msgid "Casablanca"
+msgstr ""
+
+#: ma/ma_provinces.py:42
+msgid "Mohamedia"
+msgstr ""
+
+#: ma/ma_provinces.py:43
+msgid "Nouaceur"
+msgstr ""
+
+#: ma/ma_provinces.py:44
+msgid "Mediouna"
+msgstr ""
+
+#: ma/ma_provinces.py:45
+msgid "Benslimane"
+msgstr ""
+
+#: ma/ma_provinces.py:46
+msgid "Berrachid"
+msgstr ""
+
+#: ma/ma_provinces.py:47
+msgid "El Jadida"
+msgstr ""
+
+#: ma/ma_provinces.py:48
+msgid "Sidi Bennour"
+msgstr ""
+
+#: ma/ma_provinces.py:49
+msgid "Settat"
+msgstr ""
+
+#: ma/ma_provinces.py:50
+msgid "Azilal"
+msgstr ""
+
+#: ma/ma_provinces.py:51
+msgid "Fquih Ben Saleh"
+msgstr ""
+
+#: ma/ma_provinces.py:52
+msgid "Beni Mellal"
+msgstr ""
+
+#: ma/ma_provinces.py:53
+msgid "Khouribga"
+msgstr ""
+
+#: ma/ma_provinces.py:54
+msgid "Khénifra"
+msgstr ""
+
+#: ma/ma_provinces.py:55
+msgid "Safi"
+msgstr ""
+
+#: ma/ma_provinces.py:56
+msgid "Al Haouz"
+msgstr ""
+
+#: ma/ma_provinces.py:57
+msgid "Rhamna"
+msgstr ""
+
+#: ma/ma_provinces.py:58
+msgid "Essaouira"
+msgstr ""
+
+#: ma/ma_provinces.py:59
+msgid "Youssoufia"
+msgstr ""
+
+#: ma/ma_provinces.py:60
+msgid "Marrakech"
+msgstr ""
+
+#: ma/ma_provinces.py:61
+msgid "Chichaoua"
+msgstr ""
+
+#: ma/ma_provinces.py:62
+msgid "El Kelaa Des Sraghna"
+msgstr ""
+
+#: ma/ma_provinces.py:63
+msgid "Agadir - Idda Outanane"
+msgstr ""
+
+#: ma/ma_provinces.py:64
+msgid "Inezgane - Ait Melloul"
+msgstr ""
+
+#: ma/ma_provinces.py:65
+msgid "Chtouka - Ait Baha"
+msgstr ""
+
+#: ma/ma_provinces.py:66
+msgid "Tiznit"
+msgstr ""
+
+#: ma/ma_provinces.py:67
+msgid "Tata"
+msgstr ""
+
+#: ma/ma_provinces.py:68
+msgid "Taroudant"
+msgstr ""
+
+#: ma/ma_provinces.py:69
+msgid "Errachidia"
+msgstr ""
+
+#: ma/ma_provinces.py:70
+msgid "Tinghir"
+msgstr ""
+
+#: ma/ma_provinces.py:71
+msgid "Zagoura"
+msgstr ""
+
+#: ma/ma_provinces.py:72
+msgid "Midelt"
+msgstr ""
+
+#: ma/ma_provinces.py:73
+msgid "Ouarzazate"
+msgstr ""
+
+#: ma/ma_provinces.py:74
+msgid "Es -Semara"
+msgstr ""
+
+#: ma/ma_provinces.py:75
+msgid "Laayoune"
+msgstr ""
+
+#: ma/ma_provinces.py:76
+msgid "Boujdour"
+msgstr ""
+
+#: ma/ma_provinces.py:77
+msgid "Terfaya"
+msgstr ""
+
+#: ma/ma_provinces.py:78
+msgid "Aousserd"
+msgstr ""
+
+#: ma/ma_provinces.py:79
+msgid "Oued Eddahab"
+msgstr ""
+
+#: ma/ma_provinces.py:80
+msgid "Assa - Zag"
+msgstr ""
+
+#: ma/ma_provinces.py:81
+msgid "Sidi Ifni"
+msgstr ""
+
+#: ma/ma_provinces.py:82
+msgid "Tantan"
+msgstr ""
+
+#: ma/ma_provinces.py:83
+msgid "Guelmim"
+msgstr ""
+
+#: ma/ma_regions.py:9
+msgid "Tanger-Tétouan-Al Hoceïma"
+msgstr ""
+
+#: ma/ma_regions.py:10
+msgid "L’Oriental"
+msgstr ""
+
+#: ma/ma_regions.py:11
+msgid "Fès-Meknès"
+msgstr ""
+
+#: ma/ma_regions.py:12
+msgid "Rabat-Salé-Kénitra"
+msgstr ""
+
+#: ma/ma_regions.py:13
+msgid "Béni Mellal-Khénifra"
+msgstr ""
+
+#: ma/ma_regions.py:14
+msgid "Casablanca-Settat"
+msgstr ""
+
+#: ma/ma_regions.py:15
+msgid "Marrakech-Safi"
+msgstr ""
+
+#: ma/ma_regions.py:16
+msgid "Drâa-Tafilalet"
+msgstr ""
+
+#: ma/ma_regions.py:17
+msgid "Souss-Massa"
+msgstr ""
+
+#: ma/ma_regions.py:18
+msgid "Guelmim-Oued Noun"
+msgstr ""
+
+#: ma/ma_regions.py:19
+msgid "Laâyoune-Sakia El Hamra"
+msgstr ""
+
+#: ma/ma_regions.py:20
+msgid "Dakhla-Oued Ed Dahab"
+msgstr ""
+
 #: mk/forms.py:21
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
 msgstr ""
 
-#: mk/forms.py:60 si/forms.py:24
+#: mk/forms.py:60 si/forms.py:26
 msgid "This field should contain exactly 13 digits."
 msgstr ""
 
@@ -7491,19 +7851,19 @@ msgstr ""
 msgid "Zacatecas"
 msgstr ""
 
-#: nl/models.py:21
+#: nl/models.py:23
 msgid "Dutch zipcode"
 msgstr ""
 
-#: nl/models.py:49
+#: nl/models.py:51
 msgid "Dutch province"
 msgstr ""
 
-#: nl/models.py:73
+#: nl/models.py:75
 msgid "Dutch social security number (SoFi)"
 msgstr ""
 
-#: nl/models.py:96
+#: nl/models.py:98
 msgid "Dutch phone number"
 msgstr ""
 
@@ -7563,19 +7923,19 @@ msgstr ""
 msgid "Bank account numbers have 1 - 7, 9 or 10 digits."
 msgstr ""
 
-#: no/forms.py:43
+#: no/forms.py:45
 msgid "Enter a valid Norwegian social security number."
 msgstr ""
 
-#: nz/forms.py:56
+#: nz/forms.py:58
 msgid "Invalid post code."
 msgstr ""
 
-#: nz/forms.py:67
+#: nz/forms.py:69
 msgid "Invalid phone number."
 msgstr ""
 
-#: nz/forms.py:112
+#: nz/forms.py:114
 msgid "Invalid bank account number."
 msgstr ""
 
@@ -7915,23 +8275,23 @@ msgstr ""
 msgid "This field requires 11 digits."
 msgstr ""
 
-#: pk/forms.py:27
+#: pk/forms.py:29
 msgid "Enter a 5 digit postcode."
 msgstr ""
 
-#: pk/forms.py:42
+#: pk/forms.py:44
 msgid "Phone numbers must contain 9, 10 or 11 digits."
 msgstr ""
 
-#: pk/models.py:15
+#: pk/models.py:16
 msgid "Pakistani State"
 msgstr ""
 
-#: pk/models.py:35
+#: pk/models.py:36
 msgid "Pakistani Postcode"
 msgstr ""
 
-#: pk/models.py:50
+#: pk/models.py:51
 msgid "Pakistani Phone number"
 msgstr ""
 
@@ -8073,33 +8433,33 @@ msgstr ""
 msgid "West Pomeranian"
 msgstr ""
 
-#: pt/forms.py:43
+#: pt/forms.py:45
 msgid "The specified value is not a valid Citizen Card number."
 msgstr ""
 
-#: pt/forms.py:44
+#: pt/forms.py:46
 msgid ""
 "Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X "
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
 
-#: pt/forms.py:90
+#: pt/forms.py:92
 msgid ""
 "Phone numbers have at least 3 and at most 9 digits and may optionally be "
 "prefixed with '00351' or '+351'."
 msgstr ""
 
-#: pt/forms.py:129
+#: pt/forms.py:131
 msgid "The specified number is not a valid Social Security number."
 msgstr ""
 
-#: pt/forms.py:130
+#: pt/forms.py:132
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either "
 "1 or 2 and Y is any other digit)."
 msgstr ""
 
-#: pt/forms.py:168
+#: pt/forms.py:170
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9 "
 "and Y is any other digit)."
@@ -8185,29 +8545,29 @@ msgstr ""
 msgid "Região Autónoma dos Açores"
 msgstr ""
 
-#: ro/forms.py:26
+#: ro/forms.py:28
 msgid "Enter a valid CIF."
 msgstr ""
 
-#: ro/forms.py:75
+#: ro/forms.py:77
 msgid "Enter a valid CNP."
 msgstr ""
 
-#: ro/forms.py:208
+#: ro/forms.py:210
 msgid ""
 "Phone numbers may only have 7 or 10 digits, except the national short "
 "numbers which have 3 to 6 digits"
 msgstr ""
 
-#: ro/forms.py:211
+#: ro/forms.py:213
 msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
 msgstr ""
 
-#: ro/forms.py:213
+#: ro/forms.py:215
 msgid "National short numbers (3 to 6 digits) must begin with \"1\""
 msgstr ""
 
-#: ro/forms.py:251
+#: ro/forms.py:253
 msgid "Enter a valid postal code in the format XXXXXX"
 msgstr ""
 
@@ -8687,32 +9047,32 @@ msgstr ""
 msgid "Jämtland"
 msgstr ""
 
-#: sg/forms.py:29
+#: sg/forms.py:31
 msgid "Enter a 6-digit postal code."
 msgstr ""
 
-#: sg/forms.py:44
+#: sg/forms.py:46
 msgid ""
 "Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
 msgstr ""
 
-#: sg/forms.py:82
+#: sg/forms.py:84
 msgid "Invalid NRIC/FIN."
 msgstr ""
 
-#: si/forms.py:25
+#: si/forms.py:27
 msgid "The first 7 digits of the EMSO must represent a valid past date."
 msgstr ""
 
-#: si/forms.py:26
+#: si/forms.py:28
 msgid "The EMSO is not valid."
 msgstr ""
 
-#: si/forms.py:89
+#: si/forms.py:95
 msgid "Enter a valid tax number in form SIXXXXXXXX"
 msgstr ""
 
-#: si/forms.py:154
+#: si/forms.py:160
 msgid "Enter phone number in form +386XXXXXXXX or 0XXXXXXXX."
 msgstr ""
 
@@ -9156,47 +9516,43 @@ msgstr ""
 msgid "Zaghouan"
 msgstr ""
 
-#: tr/forms.py:24
-msgid "Enter a postal code in the format XXXXX."
-msgstr ""
-
-#: tr/forms.py:52
+#: tr/forms.py:54
 msgid "Phone numbers must be in 0XXX XXX XXXX format."
 msgstr ""
 
-#: tr/forms.py:82
+#: tr/forms.py:84
 msgid "Enter a valid Turkish Identification number."
 msgstr ""
 
-#: tr/forms.py:83
+#: tr/forms.py:85
 msgid "Turkish Identification number must be 11 digits."
 msgstr ""
 
-#: us/forms.py:34
+#: us/forms.py:36
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr ""
 
-#: us/forms.py:83
+#: us/forms.py:85
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr ""
 
-#: us/forms.py:117
+#: us/forms.py:119
 msgid "Enter a U.S. state or territory."
 msgstr ""
 
-#: us/models.py:17
+#: us/models.py:18
 msgid "U.S. state (two uppercase letters)"
 msgstr ""
 
-#: us/models.py:42
+#: us/models.py:43
 msgid "U.S. postal code (two uppercase letters)"
 msgstr ""
 
-#: us/models.py:70
+#: us/models.py:71
 msgid "U.S. ZIP code"
 msgstr ""
 
-#: us/models.py:110
+#: us/models.py:111
 msgid "Social security number"
 msgstr ""
 
@@ -9471,6 +9827,146 @@ msgstr ""
 
 #: uy/forms.py:28
 msgid "Enter a valid CI number."
+msgstr ""
+
+#: ve/ve_region.py:9
+msgid "Región Capital"
+msgstr ""
+
+#: ve/ve_region.py:10
+msgid "Región Central"
+msgstr ""
+
+#: ve/ve_region.py:11
+msgid "Región de los Llanos"
+msgstr ""
+
+#: ve/ve_region.py:12
+msgid "Región Centro Occidental"
+msgstr ""
+
+#: ve/ve_region.py:13
+msgid "Región Zuliana"
+msgstr ""
+
+#: ve/ve_region.py:14
+msgid "Región de los Andes"
+msgstr ""
+
+#: ve/ve_region.py:15
+msgid "Región Nor-Oriental"
+msgstr ""
+
+#: ve/ve_region.py:16
+msgid "Región Insular"
+msgstr ""
+
+#: ve/ve_region.py:17
+msgid "Región Guayana"
+msgstr ""
+
+#: ve/ve_region.py:18
+msgid "Región Sur Occidental"
+msgstr ""
+
+#: ve/ve_states.py:9
+msgid "Amazonas"
+msgstr ""
+
+#: ve/ve_states.py:10
+msgid "Anzoátegui"
+msgstr ""
+
+#: ve/ve_states.py:11
+msgid "Apure"
+msgstr ""
+
+#: ve/ve_states.py:12
+msgid "Aragua"
+msgstr ""
+
+#: ve/ve_states.py:13
+msgid "Barinas"
+msgstr ""
+
+#: ve/ve_states.py:14
+msgid "Bolívar"
+msgstr ""
+
+#: ve/ve_states.py:15
+msgid "Carabobo"
+msgstr ""
+
+#: ve/ve_states.py:16
+msgid "Cojedes"
+msgstr ""
+
+#: ve/ve_states.py:17
+msgid "Delta Amacuro"
+msgstr ""
+
+#: ve/ve_states.py:18
+msgid "Dependencias Federales"
+msgstr ""
+
+#: ve/ve_states.py:19
+msgid "Distrito Capital"
+msgstr ""
+
+#: ve/ve_states.py:20
+msgid "Falcón"
+msgstr ""
+
+#: ve/ve_states.py:21
+msgid "Guárico"
+msgstr ""
+
+#: ve/ve_states.py:22
+msgid "Lara"
+msgstr ""
+
+#: ve/ve_states.py:23
+msgid "Mérida"
+msgstr ""
+
+#: ve/ve_states.py:24
+msgid "Miranda"
+msgstr ""
+
+#: ve/ve_states.py:25
+msgid "Monagas"
+msgstr ""
+
+#: ve/ve_states.py:26
+msgid "Nueva Esparta"
+msgstr ""
+
+#: ve/ve_states.py:27
+msgid "Portuguesa"
+msgstr ""
+
+#: ve/ve_states.py:28
+msgid "Sucre"
+msgstr ""
+
+#: ve/ve_states.py:29
+msgid "Táchira"
+msgstr ""
+
+#: ve/ve_states.py:30
+msgid "Trujillo"
+msgstr ""
+
+#: ve/ve_states.py:31
+msgid "Vargas"
+msgstr ""
+
+#: ve/ve_states.py:32
+msgid "Yaracuy"
+msgstr ""
+
+#: ve/ve_states.py:33
+msgid "Zulia"
 msgstr ""
 
 #: za/forms.py:26

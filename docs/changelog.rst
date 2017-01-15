@@ -22,7 +22,7 @@ Other changes:
 
 - None
 
-1.4   (unreleased)
+1.4   (2017-01-03)
 ------------------
 
 New flavors:
@@ -72,10 +72,13 @@ Other changes:
 - Ensure the migration framework generates schema migrations for model fields that change the max_length
   (`gh-257 <https://github.com/django/django-localflavor/pull/257>`_). Users will need to generate migrations for any
   model fields they use with 'makemigrations'.
-
+- Lazily generate US_STATES, STATE_CHOICES, and USPS_CHOICES
+  (`gh-203 <https://github.com/django/django-localflavor/issues/203>`_
+  `gh-272 <https://github.com/django/django-localflavor/pull/272>`_).
 - Deprecated Phone Number fields
-  (`gh-262 <https://github.com/django/django-localflavor/pull/262>`_)
-
+  (`gh-262 <https://github.com/django/django-localflavor/pull/262>`_).
+- Bumped versions of requirements for testing
+  (`gh-274 <https://github.com/django/django-localflavor/pull/274>`_).
 
 1.3   (2016-05-06)
 ------------------
