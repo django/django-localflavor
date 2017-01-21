@@ -153,10 +153,12 @@ class NOBankAccountNumber(CharField):
 
     def to_python(self, value):
         value = super(NOBankAccountNumber, self).to_python(value)
-        return value.replace(".", "").replace(" ", "")
+        return value.replace('.', '').replace(' ', '')
 
     def prepare_value(self, value):
-        return "{}.{}.{}".format(value[0:4], value[4:6], value[6:11])
+        if value in EMPTY_VALUES:
+            return value
+        return '{}.{}.{}'.format(value[0:4], value[4:6], value[6:11])
 
 
 class NOPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
