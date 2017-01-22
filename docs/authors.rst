@@ -80,6 +80,7 @@ Authors
 * Stefan Kjartansson
 * tadeo
 * Thiago Avelino
+* Thor K. Høgås
 * Tino de Bruijn
 * Trey Hunner
 * Tyler Ball

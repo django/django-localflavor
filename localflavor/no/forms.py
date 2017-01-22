@@ -7,11 +7,10 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
-
 from .no_municipalities import MUNICIPALITY_CHOICES
 
 
@@ -96,6 +95,70 @@ class NOSocialSecurityNumber(Field):
         except ValueError:
             raise ValidationError(self.error_messages['invalid'])
         return birthday
+
+
+class NOBankAccountNumber(CharField):
+    """
+    A form field for Norwegian bank account numbers.
+
+    Performs MOD11 with the custom weights for the Norwegian bank account numbers,
+    including a check for a remainder of 0, in which event the checksum is also 0.
+
+    Usually their string representation is along the lines of ZZZZ.YY.XXXXX, where the last X is the check digit.
+    They're always a total of 11 digits long, with 10 out of these 11 being the actual account number itself.
+
+    * Accepts, and strips, account numbers with extra spaces.
+    * Accepts, and strips, account numbers provided in form of XXXX.YY.XXXXX.
+
+    .. note:: No consideration is taking for banking clearing numbers as of yet, seeing as these are only used between
+              banks themselves.
+
+    .. versionadded:: 1.5
+    """
+
+    default_error_messages = {
+        'invalid': _('Enter a valid Norwegian bank account number.'),
+        'invalid_checksum': _('Invalid control digit. Enter a valid Norwegian bank account number.'),
+        'invalid_length': _('Invalid length. Norwegian bank account numbers are 11 digits long.'),
+    }
+
+    def validate(self, value):
+        super(NOBankAccountNumber, self).validate(value)
+
+        if value is '':
+            # It's alright to be empty.
+            return
+        elif not value.isdigit():
+            # You must only contain decimals.
+            raise ValidationError(self.error_messages['invalid'])
+        elif len(value) is not 11:
+            # They only have one length: the number is 10!
+            # That being said, you always store them with the check digit included, so 11.
+            raise ValidationError(self.error_messages['invalid_length'])
+
+        # The control/check digit is the last digit
+        check_digit = int(value[-1])
+        bank_number = value[:-1]
+
+        # These are the weights by which we multiply to get our checksum digit
+        weights = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2]
+        result = sum(w * (int(x)) for w, x in zip(weights, bank_number))
+        remainder = result % 11
+        # The checksum is 0 in the event there's no remainder, seeing as we cannot have a checksum of 11
+        # when 11 is one digit longer than we've got room for
+        checksum = 0 if remainder is 0 else 11 - remainder
+
+        if checksum != check_digit:
+            raise ValidationError(self.error_messages['invalid_checksum'])
+
+    def to_python(self, value):
+        value = super(NOBankAccountNumber, self).to_python(value)
+        return value.replace('.', '').replace(' ', '')
+
+    def prepare_value(self, value):
+        if value in EMPTY_VALUES:
+            return value
+        return '{}.{}.{}'.format(value[0:4], value[4:6], value[6:11])
 
 
 class NOPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):

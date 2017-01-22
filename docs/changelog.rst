@@ -11,7 +11,8 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- Added NOBankAccountNumber form field.
+  (`gh-275 <https://github.com/django/django-localflavor/pull/275>`_)
 
 Modifications to existing flavors:
 
