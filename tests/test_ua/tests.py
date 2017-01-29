@@ -16,7 +16,7 @@ class UALocalFlavorTests(TestCase):
 
     def test_get_display_methods(self):
         flavor = self.form.save()
-        self.assertEqual(flavor.get_region_display(), 'Ivano-Frankivska oblast')
+        self.assertEqual(flavor.get_region_display(), 'Ivano-Frankivsk Oblast')
 
     def test_errors(self):
         form = UAFlavorTestForm({
