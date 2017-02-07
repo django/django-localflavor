@@ -39,6 +39,7 @@ Authors
 * Grzes Furga
 * Honza Král
 * Horst Gutmann
+* Illia Volochii
 * Ivan Fisun
 * Jaap Roes
 * Jacob Kaplan-Moss
