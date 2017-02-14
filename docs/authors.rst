@@ -29,6 +29,7 @@ Authors
 * Daniel Roschka
 * d.merc
 * Douglas Miranda
+* Elliott Fawcett
 * Erik Romijn
 * Flavio Curella
 * Florian Apolloner
