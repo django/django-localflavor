@@ -6,7 +6,8 @@ from django.core.exceptions import ValidationError
 from django.test import TestCase
 
 from localflavor.au import forms, models
-from localflavor.au.validators import AUBusinessNumberFieldValidator, AUTaxFileNumberFieldValidator
+from localflavor.au.validators import (AUBusinessNumberFieldValidator, AUCompanyNumberFieldValidator,
+                                       AUTaxFileNumberFieldValidator)
 
 from .forms import AustralianPlaceForm
 from .models import AustralianPlace
@@ -193,6 +194,56 @@ class AULocalFlavorAUBusinessNumberFieldValidatorTests(TestCase):
         validator = AUBusinessNumberFieldValidator()
 
         self.assertRaises(ValidationError, lambda: validator(invalid_abn))
+
+
+class AULocalFlavorAUCompanyNumberFieldValidatorTests(TestCase):
+
+    def test_no_error_for_a_valid_acn(self):
+        """Test a valid ACN does not cause an error."""
+        valid_acn = '604327504'
+
+        validator = AUCompanyNumberFieldValidator()
+
+        validator(valid_acn)
+
+    def test_raises_error_for_acn_containing_a_letter(self):
+        """Test an ACN containing a letter is invalid."""
+        invalid_acn = '60432750A'
+
+        validator = AUCompanyNumberFieldValidator()
+
+        self.assertRaises(ValidationError, lambda: validator(invalid_acn))
+
+    def test_raises_error_for_too_short_acn(self):
+        """Test an ACN with fewer than nine digits is invalid."""
+        invalid_acn = '60432750'
+
+        validator = AUCompanyNumberFieldValidator()
+
+        self.assertRaises(ValidationError, lambda: validator(invalid_acn))
+
+    def test_raises_error_for_too_long_acn(self):
+        """Test an ACN with more than nine digits is invalid."""
+        invalid_acn = '6043275040'
+        validator = AUCompanyNumberFieldValidator()
+        self.assertRaises(ValidationError, lambda: validator(invalid_acn))
+
+    def test_raises_error_for_whitespace(self):
+        """Test an ACN can be valid when it contains whitespace."""
+        # NB: Form field should strip the whitespace before regex valdation is run.
+        invalid_acn = '604 327 504'
+
+        validator = AUCompanyNumberFieldValidator()
+
+        self.assertRaises(ValidationError, lambda: validator(invalid_acn))
+
+    def test_raises_error_for_invalid_acn(self):
+        """Test that an ACN must pass the ATO's validation algorithm."""
+        invalid_acn = '604327509'
+
+        validator = AUCompanyNumberFieldValidator()
+
+        self.assertRaises(ValidationError, lambda: validator(invalid_acn))
 
 
 class AULocalFlavorAUTaxFileNumberFieldValidatorTests(TestCase):

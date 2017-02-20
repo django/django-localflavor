@@ -10,6 +10,7 @@ Authors
 * Alex Gaynor
 * Alex Hill
 * Alex Zhang
+* Alexey Kotlyarov
 * Alix Martineau
 * Alonisser
 * Andreas Pelme

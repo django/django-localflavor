@@ -13,7 +13,7 @@ from django.utils.translation import ugettext_lazy as _
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .au_states import STATE_CHOICES
-from .validators import AUBusinessNumberFieldValidator, AUTaxFileNumberFieldValidator
+from .validators import AUBusinessNumberFieldValidator, AUCompanyNumberFieldValidator, AUTaxFileNumberFieldValidator
 
 PHONE_DIGITS_RE = re.compile(r'^(\d{10})$')
 
@@ -86,6 +86,28 @@ class AUBusinessNumberField(CharField):
 
         spaceless = ''.join(value.split())
         return '{} {} {} {}'.format(spaceless[:2], spaceless[2:5], spaceless[5:8], spaceless[8:])
+
+
+class AUCompanyNumberField(CharField):
+    """
+    A form field that validates input as an Australian Company Number (ACN).
+
+    .. versionadded:: 1.5
+    """
+
+    default_validators = [AUCompanyNumberFieldValidator()]
+
+    def to_python(self, value):
+        value = super(AUCompanyNumberField, self).to_python(value)
+        return value.upper().replace(' ', '')
+
+    def prepare_value(self, value):
+        """Format the value for display."""
+        if value is None:
+            return value
+
+        spaceless = ''.join(value.split())
+        return '{} {} {}'.format(spaceless[:3], spaceless[3:6], spaceless[6:])
 
 
 class AUTaxFileNumberField(CharField):
