@@ -11,6 +11,7 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+
 from .no_municipalities import MUNICIPALITY_CHOICES
 
 

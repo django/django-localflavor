@@ -4,10 +4,10 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.generic.models import DeprecatedPhoneNumberField
+
 from . import forms
 from .nl_provinces import PROVINCE_CHOICES
-from .validators import (NLBankAccountNumberFieldValidator, NLPhoneNumberFieldValidator,
-                         NLSoFiNumberFieldValidator,
+from .validators import (NLBankAccountNumberFieldValidator, NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator,
                          NLZipCodeFieldValidator)
 
 
