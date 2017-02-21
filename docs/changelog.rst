@@ -17,7 +17,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Added normalized versions of COFA state names for US.
+  (`gh-277 <https://github.com/django/django-localflavor/pull/277>`_)
 
 Other changes:
 

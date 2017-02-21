@@ -109,7 +109,8 @@ class USSocialSecurityNumberField(CharField):
 
 class USStateField(Field):
     """
-    A form field that validates its input is a U.S. state name or abbreviation.
+    A form field that validates its input is a U.S. state, territory, or COFA territory.
+    The input is validated against a dictionary which includes names and abbreviations.
 
     It normalizes the input to the standard two-leter postal service
     abbreviation for the given state.
