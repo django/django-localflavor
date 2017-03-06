@@ -19,6 +19,8 @@ Modifications to existing flavors:
 
 - Added normalized versions of COFA state names for US.
   (`gh-277 <https://github.com/django/django-localflavor/pull/277>`_)
+- Fixed Dutch NLZipCodeField field not to store empty value as a single space.
+  (`gh-280 <https://github.com/django/django-localflavor/pull/280>`_)
 
 Other changes:
 
