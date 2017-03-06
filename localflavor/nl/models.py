@@ -30,9 +30,10 @@ class NLZipCodeField(models.CharField):
 
     def to_python(self, value):
         value = super(NLZipCodeField, self).to_python(value)
-        if value is not None:
+        if value:
             value = value.upper().replace(' ', '')
-            return '%s %s' % (value[:4], value[4:])
+            if len(value) == 6:
+                return '%s %s' % (value[:4], value[4:])
         return value
 
     def formfield(self, **kwargs):

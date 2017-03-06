@@ -92,6 +92,7 @@ class NLLocalFlavorModelTests(SimpleTestCase):
 
         self.assertEqual(field.to_python('1234AB'), '1234 AB')
         self.assertEqual(field.to_python(None), None)
+        self.assertEqual(field.to_python(''), '')
 
         self.assertIsInstance(field.formfield(), forms.NLZipCodeField)
 
