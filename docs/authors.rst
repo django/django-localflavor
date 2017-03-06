@@ -27,6 +27,7 @@ Authors
 * Daniela Ponader
 * Danielle Madeley
 * Daniel Roschka
+* Diederik van der Boor
 * d.merc
 * Douglas Miranda
 * Elliott Fawcett
