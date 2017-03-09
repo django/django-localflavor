@@ -133,6 +133,18 @@ class AULocalflavorTests(TestCase):
         }
         self.assertFieldOutput(forms.AUBusinessNumberField, valid, invalid)
 
+    def test_acn(self):
+        error_format = ['Enter a valid ACN.']
+        valid = {
+            '604327504': '604327504',
+            '604 327 504': '604327504',
+        }
+        invalid = {
+            '604327505': error_format,
+            '60A327504': error_format,
+        }
+        self.assertFieldOutput(forms.AUCompanyNumberField, valid, invalid)
+
     def test_tfn(self):
         error_format = ['Enter a valid TFN.']
         valid = {
