@@ -150,49 +150,45 @@ class AULocalFlavorAUBusinessNumberFieldValidatorTests(TestCase):
 
     def test_no_error_for_a_valid_abn(self):
         """Test a valid ABN does not cause an error."""
+
         valid_abn = '53004085616'
-
         validator = AUBusinessNumberFieldValidator()
-
         validator(valid_abn)
 
     def test_raises_error_for_abn_containing_a_letter(self):
         """Test an ABN containing a letter is invalid."""
+
         invalid_abn = '5300408561A'
-
         validator = AUBusinessNumberFieldValidator()
-
         self.assertRaises(ValidationError, lambda: validator(invalid_abn))
 
     def test_raises_error_for_too_short_abn(self):
         """Test an ABN with fewer than eleven digits is invalid."""
+
         invalid_abn = '5300408561'
-
         validator = AUBusinessNumberFieldValidator()
-
         self.assertRaises(ValidationError, lambda: validator(invalid_abn))
 
     def test_raises_error_for_too_long_abn(self):
         """Test an ABN with more than eleven digits is invalid."""
+
         invalid_abn = '530040856160'
         validator = AUBusinessNumberFieldValidator()
         self.assertRaises(ValidationError, lambda: validator(invalid_abn))
 
     def test_raises_error_for_whitespace(self):
         """Test an ABN can be valid when it contains whitespace."""
-        # NB: Form field should strip the whitespace before regex valdation is run.
+
+        # NB: Form field should strip the whitespace before regex validation is run.
         invalid_abn = '5300 4085 616'
-
         validator = AUBusinessNumberFieldValidator()
-
         self.assertRaises(ValidationError, lambda: validator(invalid_abn))
 
     def test_raises_error_for_invalid_abn(self):
         """Test that an ABN must pass the ATO's validation algorithm."""
+
         invalid_abn = '53004085617'
-
         validator = AUBusinessNumberFieldValidator()
-
         self.assertRaises(ValidationError, lambda: validator(invalid_abn))
 
 
@@ -200,49 +196,45 @@ class AULocalFlavorAUCompanyNumberFieldValidatorTests(TestCase):
 
     def test_no_error_for_a_valid_acn(self):
         """Test a valid ACN does not cause an error."""
+
         valid_acn = '604327504'
-
         validator = AUCompanyNumberFieldValidator()
-
         validator(valid_acn)
 
     def test_raises_error_for_acn_containing_a_letter(self):
         """Test an ACN containing a letter is invalid."""
+
         invalid_acn = '60432750A'
-
         validator = AUCompanyNumberFieldValidator()
-
         self.assertRaises(ValidationError, lambda: validator(invalid_acn))
 
     def test_raises_error_for_too_short_acn(self):
         """Test an ACN with fewer than nine digits is invalid."""
+
         invalid_acn = '60432750'
-
         validator = AUCompanyNumberFieldValidator()
-
         self.assertRaises(ValidationError, lambda: validator(invalid_acn))
 
     def test_raises_error_for_too_long_acn(self):
         """Test an ACN with more than nine digits is invalid."""
+
         invalid_acn = '6043275040'
         validator = AUCompanyNumberFieldValidator()
         self.assertRaises(ValidationError, lambda: validator(invalid_acn))
 
     def test_raises_error_for_whitespace(self):
         """Test an ACN can be valid when it contains whitespace."""
-        # NB: Form field should strip the whitespace before regex valdation is run.
+
+        # NB: Form field should strip the whitespace before regex validation is run.
         invalid_acn = '604 327 504'
-
         validator = AUCompanyNumberFieldValidator()
-
         self.assertRaises(ValidationError, lambda: validator(invalid_acn))
 
     def test_raises_error_for_invalid_acn(self):
         """Test that an ACN must pass the ATO's validation algorithm."""
+
         invalid_acn = '604327509'
-
         validator = AUCompanyNumberFieldValidator()
-
         self.assertRaises(ValidationError, lambda: validator(invalid_acn))
 
 
