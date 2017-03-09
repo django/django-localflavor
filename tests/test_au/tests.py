@@ -233,6 +233,14 @@ class AULocalFlavorAUTaxFileNumberFieldValidatorTests(TestCase):
         validator = AUTaxFileNumberFieldValidator()
         self.assertRaises(ValidationError, lambda: validator(invalid_tfn))
 
+    def test_old_tfn(self):
+        """Test old, 8-digit TFNs."""
+        validator = AUTaxFileNumberFieldValidator()
+        old_valid_tfn = '38593474'
+        validator(old_valid_tfn)
+        old_invalid_tfn = '38593475'
+        self.assertRaises(ValidationError, lambda: validator(old_invalid_tfn))
+
 
 class AULocalFlavorAUBusinessNumberModelTests(TestCase):
 
