@@ -14,6 +14,8 @@ New fields for existing flavors:
 
 - Added NOBankAccountNumber form field.
   (`gh-275 <https://github.com/django/django-localflavor/pull/275>`_)
+- Added AUCompanyNumberField model and form field.
+  (`gh-278 <https://github.com/django/django-localflavor/pull/278>`_)
 
 Modifications to existing flavors:
 

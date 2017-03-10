@@ -51,6 +51,49 @@ class AUBusinessNumberFieldValidator(RegexValidator):
             raise ValidationError(self.error_message)
 
 
+class AUCompanyNumberFieldValidator(RegexValidator):
+    """
+    Validation for Australian Company Numbers.
+
+    .. versionadded:: 1.5
+    """
+
+    error_message = _('Enter a valid ACN.')
+
+    def __init__(self):
+        nine_digits = '^\d{9}$'
+        super(AUCompanyNumberFieldValidator, self).__init__(
+            regex=nine_digits, message=self.error_message)
+
+    def _is_valid(self, value):
+        """
+        Return whether the given value is a valid ACN.
+
+        See http://www.clearwater.com.au/code/acn for a description of the
+        validation algorithm.
+
+        """
+        digits = [int(i) for i in list(value)]
+
+        # 1. Multiply each digit by its weighting factor.
+        weighting_factors = [8, 7, 6, 5, 4, 3, 2, 1]
+        weighted = [digit * weight for digit, weight in zip(digits, weighting_factors)]
+
+        # 3. Sum the resulting values.
+        total = sum(weighted)
+
+        # 4. Calculate the check digit
+        check = (10 - total % 10) % 10
+
+        # 5. Check against the last digit
+        return check == digits[8]
+
+    def __call__(self, value):
+        super(AUCompanyNumberFieldValidator, self).__call__(value)
+        if not self._is_valid(value):
+            raise ValidationError(self.error_message)
+
+
 class AUTaxFileNumberFieldValidator(RegexValidator):
     """
     Validation for Australian Tax File Numbers.
