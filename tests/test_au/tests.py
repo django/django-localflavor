@@ -322,6 +322,22 @@ class AULocalFlavourAUBusinessNumberFormFieldTests(TestCase):
         self.assertEqual('53 004 085 616', field.prepare_value('53 0 04 08561 6'))
 
 
+class AULocalFlavourAUCompanyNumberFormFieldTests(TestCase):
+
+    def test_abn_with_spaces_remains_unchanged(self):
+        """Test that an ACN with the formatting we expect is unchanged."""
+        field = forms.AUCompanyNumberField()
+
+        self.assertEqual('604 327 504', field.prepare_value('604 327 504'))
+
+    def test_spaces_are_reconfigured(self):
+        """Test that an ACN with formatting we don't expect is transformed."""
+        field = forms.AUCompanyNumberField()
+
+        self.assertEqual('604 327 504', field.prepare_value('604327504'))
+        self.assertEqual('604 327 504', field.prepare_value('60 4 32750 4'))
+
+
 class AULocalFlavourAUTaxFileNumberFormFieldTests(TestCase):
 
     def test_tfn_with_spaces_remains_unchanged(self):
