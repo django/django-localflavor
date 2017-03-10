@@ -99,6 +99,7 @@ class AUTaxFileNumberFieldValidator(RegexValidator):
     Validation for Australian Tax File Numbers.
 
     .. versionadded:: 1.4
+    .. versionchanged:: 1.5
     """
 
     error_message = _('Enter a valid TFN.')
@@ -118,7 +119,12 @@ class AUTaxFileNumberFieldValidator(RegexValidator):
         """
         # 1. Multiply each digit by its weighting factor.
         digits = [int(i) for i in list(value)]
-        weighting_factors = [1, 4, 3, 7, 5, 8, 6, 9, 10]
+
+        if len(digits) == 8:
+            weighting_factors = [10, 7, 8, 4, 6, 3, 5, 1]
+        else:
+            weighting_factors = [1, 4, 3, 7, 5, 8, 6, 9, 10]
+
         weighted = [digit * weight for digit, weight in zip(digits, weighting_factors)]
 
         # 2. Sum the resulting values.

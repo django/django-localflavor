@@ -23,6 +23,8 @@ Modifications to existing flavors:
   (`gh-277 <https://github.com/django/django-localflavor/pull/277>`_)
 - Fixed Dutch NLZipCodeField field not to store empty value as a single space.
   (`gh-280 <https://github.com/django/django-localflavor/pull/280>`_)
+- Fixed validation for old Australian tax file numbers.
+  (`gh-284 <https://github.com/django/django-localflavor/pull/284>`_)
 
 Other changes:
 
