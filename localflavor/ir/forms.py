@@ -1,20 +1,14 @@
 # -*- coding: utf-8 -*-
-"""IR-specific Form helpers."""
+"""AR-specific Form helpers."""
 
 from __future__ import unicode_literals
-import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import CharField,Select
-from django.utils.encoding import force_text
+from django.forms.fields import CharField, RegexField, Select
+from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 from .ir_provinces import PROVINCE_CHOICES
-
-PHONE_DIGITS_RE = re.compile(r'^(\d{10})$')
-
-
 
 
 
@@ -28,24 +22,33 @@ class IRProvinceSelect(Select):
 
 
 
-class IRhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class IRPostlCodeField(RegexField):
     """
-    A form field that validates input as an Iranian phone number.
+      A field that accepts a 'classic' XXXXXXXXXX Postal Code o.
 
-    Valid numbers have ten digits.
-    """
+      See:
+          https://en.wikipedia.org/wiki/List_of_postal_codes
+      """
 
     default_error_messages = {
-        'invalid': 'Phone numbers must contain 10 digits.',
+        'invlid': _("Enter a postal code in the format xxxxxxxxxx")
     }
 
+    def __init__(self, max_length=10, min_length=11, *args, **kwargs):
+        super(IRPostlCodeField,self).__init__(r'^\d{4}$|^[A-HJ-NP-Za-hj-np-z]\d{4}\D{3}$',
+        max_length,
+        min_length,
+        *args,
+        **kwargs
+      )
+
     def clean(self, value):
-        """Validate a phone number. Strips parentheses, whitespace and hyphens."""
-        super(IRhoneNumberField, self).clean(value)
+        value = super(IRPostlCodeField,self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
-        phone_match = PHONE_DIGITS_RE.search(value)
-        if phone_match:
-            return '%s' % phone_match.group(1)
-        raise ValidationError(self.error_messages['invalid'])
+        if len(value) != 10 :
+            raise ValidationError(self.error_messages['invalid'])
+        if len(value) == 10:
+            return '%s%s%s' % (value[0].upper(), value[1:5], value[5:].upper())
+        return value
+
