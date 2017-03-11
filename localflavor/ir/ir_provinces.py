@@ -27,7 +27,7 @@ PROVINCE_CHOICES = (
     ('KBA', _('Kohgiluyeh and Boyer-Ahmad')),
     ('KUR', _('Kurdistan')),
     ('LOR', _('Lorestan')),
-    ('Mar', _('Markazi')),
+    ('MAR', _('Markazi')),
     ('MAZ', _('Mazandaran')),
     ('QAZ', _('Qazvin')),
     ('QOM', _('Qom')),
