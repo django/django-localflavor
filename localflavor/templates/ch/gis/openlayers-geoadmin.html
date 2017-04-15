@@ -1,0 +1,22 @@
+{% extends "gis/openlayers.html" %}
+{% load l10n %}
+
+{% block map_options %}
+var map_options = {
+    div: "{{ id }}_map",
+    bgLayer: "ch.swisstopo.pixelkarte-grau",
+    layers: "ch.swisstopo.swissboundaries3d-land-flaeche.fill",
+    zoom: 0
+};
+{% endblock %}
+
+{% block options %}{{ block.super }}
+  options['default_zoom'] = 1;
+  options['point_zoom'] = 6;
+
+  MapWidget.prototype.create_map = function() {
+    geo = new GeoAdmin.API();
+    map = geo.createMap(this.options.map_options);
+    return map
+  };
+{% endblock %}
