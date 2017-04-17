@@ -9,13 +9,19 @@ from localflavor.br.forms import (BRCNPJField, BRCPFField, BRPhoneNumberField, B
 
 class BRLocalFlavorTests(SimpleTestCase):
     def test_BRZipCodeField(self):
-        error_format = ['Enter a zip code in the format XXXXX-XXX.']
+        error_format = ['Enter a zip code in the format XXXXX-XXX, XX.XXX-XXX or XXXXXXXX.']
         valid = {
             '12345-123': '12345-123',
+            '12.345-123': '12.345-123',
+            '12345678': '12345678',
         }
         invalid = {
             '12345_123': error_format,
             '1234-123': error_format,
+            '12.1234-100': error_format,
+            '123121-000': error_format,
+            '123.123-000': error_format,
+            '1235.0-000': error_format,
             'abcde-abc': error_format,
             '12345-': error_format,
             '-123': error_format,

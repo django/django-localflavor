@@ -29,11 +29,11 @@ class BRZipCodeField(RegexField):
     """A form field that validates input as a Brazilian zip code, with the format XXXXX-XXX."""
 
     default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXXX-XXX.'),
+        'invalid': _('Enter a zip code in the format XXXXX-XXX, XX.XXX-XXX or XXXXXXXX.'),
     }
 
     def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(BRZipCodeField, self).__init__(r'^\d{5}-\d{3}$',
+        super(BRZipCodeField, self).__init__(r'^(\d{2}\.\d{3}|\d{5})(-\d{3}|\d{3})$',
                                              max_length, min_length, *args, **kwargs)
 
 
