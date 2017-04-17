@@ -54,6 +54,7 @@ validate Finnish social security numbers.
    * :doc:`localflavor/is_`
    * :doc:`localflavor/it`
    * :doc:`localflavor/jp`
+   * :doc:`localflavor/kz`
    * :doc:`localflavor/kw`
    * :doc:`localflavor/lt`
    * :doc:`localflavor/lv`
