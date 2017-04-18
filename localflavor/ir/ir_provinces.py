@@ -11,8 +11,6 @@ PROVINCE_CHOICES= (
     ('Azerbaijan, East', _('Azerbaijan, East')),
     ('Azerbaijan, West', _('Azerbaijan, West')),
     ('Bushehr', _('Bushehr')),
-    ('Bushehr', _('Bushehr')),
-    ('Chahar Mahaal and Bakhtiari', _('Chahar Mahaal and Bakhtiari')),
     ('Chahar Mahaal and Bakhtiari', _('Chahar Mahaal and Bakhtiari')),
     ('Fars', _('Fars')),
     ('Gilan', _('Gilan')),
@@ -25,7 +23,7 @@ PROVINCE_CHOICES= (
     ('Kermanshah', _('Kermanshah')),
     ('Khorasan, North', _('Khorasan, North')),
     ('Khorasan, Razavi', _('Khorasan, Razavi')),
-    ('Khorasan, Siuth', _('Khorasan, South')),
+    ('Khorasan, South', _('Khorasan, South')),
     ('Khuzestan', _('Khuzestan')),
     ('Kohgiluyeh and Boyer-Ahmad', _('Kohgiluyeh and Boyer-Ahmad')),
     ('Kurdistan', _('Kurdistan')),
@@ -37,6 +35,4 @@ PROVINCE_CHOICES= (
     ('Tehran', _('Tehran')),
     ('Yazd', _('Yazd')),
     ('Zanjan', _('Zanjan')),
-
-
 )
