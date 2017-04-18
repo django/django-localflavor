@@ -41,6 +41,7 @@ Authors
 * Ramiro Morales
 * Rolf Erik Lekang
 * Russell Keith-Magee
+* Sayed Mohammad Hossein Torabi
 * Serafeim Papastefanos
 * Sergio Oliveira
 * Simon Charette
@@ -55,4 +56,3 @@ Authors
 * luyikei
 * tadeo
 * Łukasz Langa
-* Sayed Mohammad Hossein Torabi
