@@ -1,7 +1,6 @@
 inherits:
   - strictness_high
 
-
 pylint:
   options:
     max-line-length: 120
