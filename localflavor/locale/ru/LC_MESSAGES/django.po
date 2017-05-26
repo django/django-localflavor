@@ -10,7 +10,7 @@
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Michael Bashkirov <michael.bashkirov@gmail.com>, 2011
 # Mikhail Zholobov <legal90@gmail.com>, 2013
-# Nikolay Korotkiy <sikmir@gmail.com>, 2016
+# Nikolay Korotkiy <sikmir@gmail.com>, 2016-2017
 # panasoft <cc072aa3@opayq.com>, 2014
 # Taras Semenenko <taras.semenenko@gmail.com>, 2013
 # Алексей Борискин <sun.void@gmail.com>, 2012-2013,2015
@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-03 18:38+0100\n"
-"PO-Revision-Date: 2017-01-04 09:42+0000\n"
+"POT-Creation-Date: 2017-05-19 13:00+0200\n"
+"PO-Revision-Date: 2017-05-19 14:05+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Russian (http://www.transifex.com/django/django-localflavor/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -208,23 +208,27 @@ msgstr "Введите правильный номер социального с
 msgid "Enter a 4 digit postcode."
 msgstr "Введите 4 цифры почтового индекса"
 
-#: au/models.py:17
+#: au/models.py:18
 msgid "Australian State"
 msgstr "Австралийский штат"
 
-#: au/models.py:37
+#: au/models.py:38
 msgid "Australian Postcode"
 msgstr "Австралийский почтовый индекс"
 
-#: au/models.py:52
+#: au/models.py:53
 msgid "Australian Phone number"
 msgstr "Австралийский телефонный номер"
 
-#: au/models.py:71
+#: au/models.py:72
 msgid "Australian Business Number"
 msgstr ""
 
-#: au/models.py:105
+#: au/models.py:102
+msgid "Australian Company Number"
+msgstr ""
+
+#: au/models.py:136
 msgid "Australian Tax File Number"
 msgstr ""
 
@@ -233,6 +237,10 @@ msgid "Enter a valid ABN."
 msgstr ""
 
 #: au/validators.py:61
+msgid "Enter a valid ACN."
+msgstr ""
+
+#: au/validators.py:105
 msgid "Enter a valid TFN."
 msgstr ""
 
@@ -3741,11 +3749,11 @@ msgstr ""
 
 #: dk/dk_postalcodes.py:1338
 msgid "Hoyvík"
-msgstr ""
+msgstr "Хойвуйк"
 
 #: dk/dk_postalcodes.py:1339 dk/dk_postalcodes.py:1340
 msgid "Sandur"
-msgstr ""
+msgstr "Сандур"
 
 #: dk/dk_postalcodes.py:1341
 msgid "Skálavík"
@@ -3753,7 +3761,7 @@ msgstr ""
 
 #: dk/dk_postalcodes.py:1342
 msgid "Húsavík"
-msgstr ""
+msgstr "Хусавик"
 
 #: dk/dk_postalcodes.py:1343
 msgid "Dalur"
@@ -4175,7 +4183,7 @@ msgstr ""
 msgid "Enter a postal code in the format XXXX."
 msgstr ""
 
-#: dk/forms.py:47 no/forms.py:109
+#: dk/forms.py:47 no/forms.py:173
 msgid "A phone number must be 8 digits and may have country code"
 msgstr "Номер телефона должен состоять из 8 цифр и включать в себя код страны"
 
@@ -4578,7 +4586,7 @@ msgstr "Почтовый индекс"
 msgid "Phone numbers must be in 0X XX XX XX XX format."
 msgstr "Телефонные номера должны быть в формате 0X XX XX XX XX."
 
-#: fr/forms.py:60 us/models.py:90
+#: fr/forms.py:60 us/models.py:91
 msgid "Phone number"
 msgstr "Номер телефона"
 
@@ -4840,15 +4848,15 @@ msgstr ""
 
 #: gb/gb_regions.py:77
 msgid "Poole"
-msgstr ""
+msgstr "Пул"
 
 #: gb/gb_regions.py:78
 msgid "Portsmouth"
-msgstr ""
+msgstr "Портсмут"
 
 #: gb/gb_regions.py:79
 msgid "Redcar and Cleveland"
-msgstr ""
+msgstr "Редкар и Кливленд"
 
 #: gb/gb_regions.py:80
 msgid "Rutland"
@@ -4864,7 +4872,7 @@ msgstr "Сомерсет"
 
 #: gb/gb_regions.py:83
 msgid "South Gloucestershire"
-msgstr ""
+msgstr "Южный Глостершир"
 
 #: gb/gb_regions.py:84
 msgid "South Yorkshire"
@@ -4872,11 +4880,11 @@ msgstr "Южный Йоркшир"
 
 #: gb/gb_regions.py:85
 msgid "Southampton"
-msgstr ""
+msgstr "Саутгемптон"
 
 #: gb/gb_regions.py:86
 msgid "Southend-on-Sea"
-msgstr ""
+msgstr "Саутенд-он-Си"
 
 #: gb/gb_regions.py:87
 msgid "Staffordshire"
@@ -4884,11 +4892,11 @@ msgstr "Стаффордшир"
 
 #: gb/gb_regions.py:88
 msgid "Stockton-on-Tees"
-msgstr ""
+msgstr "Стоктон-он-Тис"
 
 #: gb/gb_regions.py:89
 msgid "Stoke-on-Trent"
-msgstr ""
+msgstr "Сток-он-Трент"
 
 #: gb/gb_regions.py:90
 msgid "Suffolk"
@@ -4900,19 +4908,19 @@ msgstr "Сюррей"
 
 #: gb/gb_regions.py:92
 msgid "Swindon"
-msgstr ""
+msgstr "Суиндон"
 
 #: gb/gb_regions.py:93
 msgid "Telford and Wrekin"
-msgstr ""
+msgstr "Телфорд и Рекин"
 
 #: gb/gb_regions.py:94
 msgid "Thurrock"
-msgstr ""
+msgstr "Таррок"
 
 #: gb/gb_regions.py:95
 msgid "Torbay"
-msgstr ""
+msgstr "Торбей"
 
 #: gb/gb_regions.py:96
 msgid "Tyne and Wear"
@@ -4920,7 +4928,7 @@ msgstr "Тайн и Уир"
 
 #: gb/gb_regions.py:97
 msgid "Warrington"
-msgstr ""
+msgstr "Уоррингтон"
 
 #: gb/gb_regions.py:98
 msgid "Warwickshire"
@@ -4948,59 +4956,59 @@ msgstr "Вустершир"
 
 #: gb/gb_regions.py:104
 msgid "York"
-msgstr ""
+msgstr "Йорк"
 
 #: gb/gb_regions.py:112
 msgid "Antrim"
-msgstr ""
+msgstr "Антрим"
 
 #: gb/gb_regions.py:113
 msgid "Armagh"
-msgstr ""
+msgstr "Арма"
 
 #: gb/gb_regions.py:114
 msgid "Down"
-msgstr ""
+msgstr "Даун"
 
 #: gb/gb_regions.py:115
 msgid "Fermanagh"
-msgstr ""
+msgstr "Фермана"
 
 #: gb/gb_regions.py:116
 msgid "Londonderry"
-msgstr ""
+msgstr "Лондондерри"
 
 #: gb/gb_regions.py:117
 msgid "Tyrone"
-msgstr ""
+msgstr "Тирон"
 
 #: gb/gb_regions.py:125
 msgid "Blaenau Gwent"
-msgstr ""
+msgstr "Блайнай-Гвент"
 
 #: gb/gb_regions.py:126
 msgid "Bridgend"
-msgstr ""
+msgstr "Бриджент"
 
 #: gb/gb_regions.py:127
 msgid "Caerphilly"
-msgstr ""
+msgstr "Карфилли"
 
 #: gb/gb_regions.py:128
 msgid "Cardiff"
-msgstr ""
+msgstr "Кардифф"
 
 #: gb/gb_regions.py:129
 msgid "Carmarthenshire"
-msgstr ""
+msgstr "Кармартеншир"
 
 #: gb/gb_regions.py:130
 msgid "Ceredigion"
-msgstr ""
+msgstr "Кередигион"
 
 #: gb/gb_regions.py:131
 msgid "Conwy"
-msgstr ""
+msgstr "Конуи"
 
 #: gb/gb_regions.py:132
 msgid "Denbighshire"
@@ -5080,7 +5088,7 @@ msgstr ""
 
 #: gb/gb_regions.py:157
 msgid "Clackmannanshire"
-msgstr ""
+msgstr "Клакманнаншир"
 
 #: gb/gb_regions.py:158
 msgid "Dumfries and Galloway"
@@ -5112,7 +5120,7 @@ msgstr ""
 
 #: gb/gb_regions.py:165
 msgid "Falkirk"
-msgstr ""
+msgstr "Фолкерк"
 
 #: gb/gb_regions.py:166
 msgid "Fife"
@@ -5120,7 +5128,7 @@ msgstr "Файф"
 
 #: gb/gb_regions.py:167
 msgid "Glasgow City"
-msgstr ""
+msgstr "Глазго"
 
 #: gb/gb_regions.py:168
 msgid "Highland"
@@ -5128,15 +5136,15 @@ msgstr "Хайленд"
 
 #: gb/gb_regions.py:169
 msgid "Inverclyde"
-msgstr ""
+msgstr "Инверклайд"
 
 #: gb/gb_regions.py:170
 msgid "Midlothian"
-msgstr ""
+msgstr "Мидлотиан"
 
 #: gb/gb_regions.py:171
 msgid "Moray"
-msgstr ""
+msgstr "Мори"
 
 #: gb/gb_regions.py:172
 msgid "North Ayrshire"
@@ -5152,7 +5160,7 @@ msgstr ""
 
 #: gb/gb_regions.py:175
 msgid "Renfrewshire"
-msgstr ""
+msgstr "Ренфрушир"
 
 #: gb/gb_regions.py:176
 msgid "Scottish Borders"
@@ -5168,7 +5176,7 @@ msgstr ""
 
 #: gb/gb_regions.py:179
 msgid "Stirling"
-msgstr ""
+msgstr "Стерлинг"
 
 #: gb/gb_regions.py:180
 msgid "West Dunbartonshire"
@@ -5421,79 +5429,79 @@ msgstr "Загребская жупания"
 
 #: hu/hu_counties.py:8
 msgid "Bács-Kiskun"
-msgstr ""
+msgstr "Бач-Кишкун"
 
 #: hu/hu_counties.py:9
 msgid "Baranya"
-msgstr ""
+msgstr "Баранья"
 
 #: hu/hu_counties.py:10
 msgid "Békés"
-msgstr ""
+msgstr "Бекеш"
 
 #: hu/hu_counties.py:11
 msgid "Borsod-Abaúj-Zemplén"
-msgstr ""
+msgstr "Боршод-Абауй-Земплен"
 
 #: hu/hu_counties.py:12
 msgid "Csongrád"
-msgstr ""
+msgstr "Чонград"
 
 #: hu/hu_counties.py:13
 msgid "Fejér"
-msgstr ""
+msgstr "Фейер"
 
 #: hu/hu_counties.py:14
 msgid "Győr-Moson-Sopron"
-msgstr ""
+msgstr "Дьёр-Мошон-Шопрон"
 
 #: hu/hu_counties.py:15
 msgid "Hajdú-Bihar"
-msgstr ""
+msgstr "Хайду-Бихар"
 
 #: hu/hu_counties.py:16
 msgid "Heves"
-msgstr ""
+msgstr "Хевеш"
 
 #: hu/hu_counties.py:17
 msgid "Jász-Nagykun-Szolnok"
-msgstr ""
+msgstr "Яс-Надькун-Сольнок"
 
 #: hu/hu_counties.py:18
 msgid "Komárom-Esztergom"
-msgstr ""
+msgstr "Комаром-Эстергом"
 
 #: hu/hu_counties.py:19
 msgid "Nógrád"
-msgstr ""
+msgstr "Ноград"
 
 #: hu/hu_counties.py:20
 msgid "Pest"
-msgstr ""
+msgstr "Пешт"
 
 #: hu/hu_counties.py:21
 msgid "Somogy"
-msgstr ""
+msgstr "Шомодь"
 
 #: hu/hu_counties.py:22
 msgid "Szabolcs-Szatmár-Bereg"
-msgstr ""
+msgstr "Сабольч-Сатмар-Берег"
 
 #: hu/hu_counties.py:23
 msgid "Tolna"
-msgstr ""
+msgstr "Тольна"
 
 #: hu/hu_counties.py:24
 msgid "Vas"
-msgstr ""
+msgstr "Ваш"
 
 #: hu/hu_counties.py:25
 msgid "Veszprém"
-msgstr ""
+msgstr "Веспрем"
 
 #: hu/hu_counties.py:26
 msgid "Zala"
-msgstr ""
+msgstr "Зала"
 
 #: id_/forms.py:31
 msgid "Enter a valid post code"
@@ -5921,7 +5929,7 @@ msgstr "Введите правильный почтовый индекс."
 msgid "Enter a valid Tax code."
 msgstr "Введите действующий Налоговый кодекс."
 
-#: it/forms.py:106
+#: it/forms.py:106 ua/forms.py:31
 msgid "Enter a valid VAT number."
 msgstr "Введите правильный VAT номер."
 
@@ -7159,11 +7167,11 @@ msgstr ""
 
 #: ma/ma_provinces.py:59
 msgid "Youssoufia"
-msgstr ""
+msgstr "Юсуфия"
 
 #: ma/ma_provinces.py:60
 msgid "Marrakech"
-msgstr ""
+msgstr "Марракеш"
 
 #: ma/ma_provinces.py:61
 msgid "Chichaoua"
@@ -7867,15 +7875,15 @@ msgstr "Сакатекас"
 msgid "Dutch zipcode"
 msgstr ""
 
-#: nl/models.py:51
+#: nl/models.py:52
 msgid "Dutch province"
 msgstr ""
 
-#: nl/models.py:75
+#: nl/models.py:76
 msgid "Dutch social security number (SoFi)"
 msgstr ""
 
-#: nl/models.py:98
+#: nl/models.py:99
 msgid "Dutch phone number"
 msgstr ""
 
@@ -7938,6 +7946,18 @@ msgstr ""
 #: no/forms.py:45
 msgid "Enter a valid Norwegian social security number."
 msgstr "Введите правильный номер социального страхования Норвегии."
+
+#: no/forms.py:121
+msgid "Enter a valid Norwegian bank account number."
+msgstr ""
+
+#: no/forms.py:122
+msgid "Invalid control digit. Enter a valid Norwegian bank account number."
+msgstr ""
+
+#: no/forms.py:123
+msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
+msgstr ""
 
 #: nz/forms.py:58
 msgid "Invalid post code."
@@ -8295,15 +8315,15 @@ msgstr "Введите 5 цифр почтового индекса."
 msgid "Phone numbers must contain 9, 10 or 11 digits."
 msgstr "Номер телефона может содержать 9, 10 или 11 цифр."
 
-#: pk/models.py:16
+#: pk/models.py:17
 msgid "Pakistani State"
 msgstr "Регионы Пакистана"
 
-#: pk/models.py:36
+#: pk/models.py:37
 msgid "Pakistani Postcode"
 msgstr "Пакистанский почтовый индекс"
 
-#: pk/models.py:51
+#: pk/models.py:52
 msgid "Pakistani Phone number"
 msgstr "Пакистанский телефонный номер"
 
@@ -9540,6 +9560,130 @@ msgstr "Введите действительный турецкий Идент�
 msgid "Turkish Identification number must be 11 digits."
 msgstr "У турецкого Идентификационного номера должно быть 11 цифр."
 
+#: ua/forms.py:55
+msgid "Enter a valid postal code."
+msgstr ""
+
+#: ua/models.py:18
+msgid "Ukrainian region"
+msgstr ""
+
+#: ua/models.py:41
+msgid "Ukrainian VAT number"
+msgstr ""
+
+#: ua/models.py:59
+msgid "Ukrainian postal code"
+msgstr ""
+
+#: ua/ua_regions.py:6
+msgid "Cherkasy Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:7
+msgid "Chernihiv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:8
+msgid "Chernivtsi Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:9
+msgid "Dnipropetrovsk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:10
+msgid "Donetsk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:11
+msgid "Ivano-Frankivsk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:12
+msgid "Kharkiv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:13
+msgid "Kherson Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:14
+msgid "Khmelnytskyi Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:15
+msgid "Kirovohrad Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:16
+msgid "Kiev Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:17
+msgid "Luhansk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:18
+msgid "Lviv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:19
+msgid "Mykolaiv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:20
+msgid "Odessa Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:21
+msgid "Poltava Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:22
+msgid "Rivne Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:23
+msgid "Sumy Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:24
+msgid "Ternopil Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:25
+msgid "Vinnytsia Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:26
+msgid "Volyn Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:27
+msgid "Zakarpattia Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:28
+msgid "Zaporizhia Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:29
+msgid "Zhytomyr Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:30
+msgid "Autonomous Republic of Crimea"
+msgstr ""
+
+#: ua/ua_regions.py:31
+msgid "Kiev"
+msgstr ""
+
+#: ua/ua_regions.py:32
+msgid "Sevastopol"
+msgstr ""
+
 #: us/forms.py:36
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr "Введите почтовый индекс в формате XXXXX или XXXXX-XXXX."
@@ -9548,288 +9692,288 @@ msgstr "Введите почтовый индекс в формате XXXXX и�
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr "Введите правильный номер социального страхования США в формате XXX-XX-XXXX."
 
-#: us/forms.py:119
+#: us/forms.py:120
 msgid "Enter a U.S. state or territory."
 msgstr "Введите штат или территорию США"
 
-#: us/models.py:18
+#: us/models.py:19
 msgid "U.S. state (two uppercase letters)"
 msgstr "Штат США (две заглавные буквы)"
 
-#: us/models.py:43
+#: us/models.py:44
 msgid "U.S. postal code (two uppercase letters)"
 msgstr "Американский индекс (две заглавные буквы)"
 
-#: us/models.py:71
+#: us/models.py:72
 msgid "U.S. ZIP code"
 msgstr "почтовый индекс США"
 
-#: us/models.py:111
+#: us/models.py:112
 msgid "Social security number"
 msgstr "Номер социального страхования"
 
-#: us/us_states.py:20
+#: us/us_states.py:21
 msgid "Alabama"
 msgstr "Алабама"
 
-#: us/us_states.py:21
+#: us/us_states.py:22
 msgid "Arizona"
 msgstr "Аризона"
 
-#: us/us_states.py:22
+#: us/us_states.py:23
 msgid "Arkansas"
 msgstr "Арканзас"
 
-#: us/us_states.py:23
+#: us/us_states.py:24
 msgid "California"
 msgstr "Калифорния"
 
-#: us/us_states.py:24
+#: us/us_states.py:25
 msgid "Colorado"
 msgstr "Колорадо"
 
-#: us/us_states.py:25
+#: us/us_states.py:26
 msgid "Connecticut"
 msgstr "Коннектикут"
 
-#: us/us_states.py:26
+#: us/us_states.py:27
 msgid "Delaware"
 msgstr "Делавэр"
 
-#: us/us_states.py:27
+#: us/us_states.py:28
 msgid "District of Columbia"
 msgstr "округ Колумбия"
 
-#: us/us_states.py:28
+#: us/us_states.py:29
 msgid "Florida"
 msgstr "Флорида"
 
-#: us/us_states.py:29
+#: us/us_states.py:30
 msgctxt "US state"
 msgid "Georgia"
 msgstr ""
 
-#: us/us_states.py:30
+#: us/us_states.py:31
 msgid "Idaho"
 msgstr "Айдахо"
 
-#: us/us_states.py:31
+#: us/us_states.py:32
 msgid "Illinois"
 msgstr "Иллинойс"
 
-#: us/us_states.py:32
+#: us/us_states.py:33
 msgid "Indiana"
 msgstr "Индиана"
 
-#: us/us_states.py:33
+#: us/us_states.py:34
 msgid "Iowa"
 msgstr "Айова"
 
-#: us/us_states.py:34
+#: us/us_states.py:35
 msgid "Kansas"
 msgstr "Канзас"
 
-#: us/us_states.py:35
+#: us/us_states.py:36
 msgid "Kentucky"
 msgstr "Кентукки"
 
-#: us/us_states.py:36
+#: us/us_states.py:37
 msgid "Louisiana"
 msgstr "Луизиана"
 
-#: us/us_states.py:37
+#: us/us_states.py:38
 msgid "Maine"
 msgstr "Мэн"
 
-#: us/us_states.py:38
+#: us/us_states.py:39
 msgid "Maryland"
 msgstr "Мэриленд"
 
-#: us/us_states.py:39
+#: us/us_states.py:40
 msgid "Massachusetts"
 msgstr "Массачусетс"
 
-#: us/us_states.py:40
+#: us/us_states.py:41
 msgid "Michigan"
 msgstr "Мичиган"
 
-#: us/us_states.py:41
+#: us/us_states.py:42
 msgid "Minnesota"
 msgstr " Миннесота"
 
-#: us/us_states.py:42
+#: us/us_states.py:43
 msgid "Mississippi"
 msgstr "Миссисипи"
 
-#: us/us_states.py:43
+#: us/us_states.py:44
 msgid "Missouri"
 msgstr "Миссури"
 
-#: us/us_states.py:44
+#: us/us_states.py:45
 msgid "Montana"
 msgstr "Монтана"
 
-#: us/us_states.py:45
+#: us/us_states.py:46
 msgid "Nebraska"
 msgstr "Небраска"
 
-#: us/us_states.py:46
+#: us/us_states.py:47
 msgid "Nevada"
 msgstr "Невада"
 
-#: us/us_states.py:47
+#: us/us_states.py:48
 msgid "New Hampshire"
 msgstr "Нью-Гемпшир"
 
-#: us/us_states.py:48
+#: us/us_states.py:49
 msgid "New Jersey"
 msgstr "Нью-Джерси"
 
-#: us/us_states.py:49
+#: us/us_states.py:50
 msgid "New Mexico"
 msgstr "Нью-Мексико"
 
-#: us/us_states.py:50
+#: us/us_states.py:51
 msgid "New York"
 msgstr "Нью-Йорк"
 
-#: us/us_states.py:51
+#: us/us_states.py:52
 msgid "North Carolina"
 msgstr "Северная Каролина"
 
-#: us/us_states.py:52
+#: us/us_states.py:53
 msgid "North Dakota"
 msgstr "Северная Дакота"
 
-#: us/us_states.py:53
+#: us/us_states.py:54
 msgid "Ohio"
 msgstr "Огайо"
 
-#: us/us_states.py:54
+#: us/us_states.py:55
 msgid "Oklahoma"
 msgstr "Оклахома"
 
-#: us/us_states.py:55
+#: us/us_states.py:56
 msgid "Oregon"
 msgstr "Орегон"
 
-#: us/us_states.py:56
+#: us/us_states.py:57
 msgid "Pennsylvania"
 msgstr "Пенсильвания"
 
-#: us/us_states.py:57
+#: us/us_states.py:58
 msgid "Rhode Island"
 msgstr "Род-Айленд"
 
-#: us/us_states.py:58
+#: us/us_states.py:59
 msgid "South Carolina"
 msgstr "Южная Каролина"
 
-#: us/us_states.py:59
+#: us/us_states.py:60
 msgid "South Dakota"
 msgstr "Южная Дакота"
 
-#: us/us_states.py:60
+#: us/us_states.py:61
 msgid "Tennessee"
 msgstr "Теннесси"
 
-#: us/us_states.py:61
+#: us/us_states.py:62
 msgid "Texas"
 msgstr "Техас"
 
-#: us/us_states.py:62
+#: us/us_states.py:63
 msgid "Utah"
 msgstr "Юта"
 
-#: us/us_states.py:63
+#: us/us_states.py:64
 msgid "Vermont"
 msgstr "Вермонт"
 
-#: us/us_states.py:64
+#: us/us_states.py:65
 msgid "Virginia"
 msgstr "Виргиния"
 
-#: us/us_states.py:65
+#: us/us_states.py:66
 msgid "Washington"
 msgstr "Вашингтон"
 
-#: us/us_states.py:66
+#: us/us_states.py:67
 msgid "West Virginia"
 msgstr "Западная Виргиния"
 
-#: us/us_states.py:67
+#: us/us_states.py:68
 msgid "Wisconsin"
 msgstr "Висконсин"
 
-#: us/us_states.py:68
+#: us/us_states.py:69
 msgid "Wyoming"
 msgstr "Вайоминг"
 
-#: us/us_states.py:73
+#: us/us_states.py:74
 msgid "Alaska"
 msgstr "Аляска"
 
-#: us/us_states.py:74
+#: us/us_states.py:75
 msgid "Hawaii"
 msgstr "Гавайи"
 
-#: us/us_states.py:79
+#: us/us_states.py:80
 msgid "American Samoa"
 msgstr "Американское Самоа"
 
-#: us/us_states.py:80
+#: us/us_states.py:81
 msgid "Guam"
 msgstr "Гуам"
 
-#: us/us_states.py:81
+#: us/us_states.py:82
 msgid "Northern Mariana Islands"
 msgstr "Северные Марианские Острова"
 
-#: us/us_states.py:82
+#: us/us_states.py:83
 msgid "Puerto Rico"
 msgstr "Пуэрто-Рико"
 
-#: us/us_states.py:83
+#: us/us_states.py:84
 msgid "Virgin Islands"
 msgstr "Виргинские острова"
 
-#: us/us_states.py:89
+#: us/us_states.py:90
 msgid "Armed Forces Americas"
 msgstr ""
 
-#: us/us_states.py:90
+#: us/us_states.py:91
 msgid "Armed Forces Europe"
 msgstr ""
 
-#: us/us_states.py:91
+#: us/us_states.py:92
 msgid "Armed Forces Pacific"
 msgstr ""
 
-#: us/us_states.py:97
+#: us/us_states.py:98
 msgid "Federated States of Micronesia"
 msgstr "Федеративные Штаты Микронезии"
 
-#: us/us_states.py:98
+#: us/us_states.py:99
 msgid "Marshall Islands"
 msgstr "Маршалловы Острова"
 
-#: us/us_states.py:99
+#: us/us_states.py:100
 msgid "Palau"
 msgstr "Палау"
 
-#: us/us_states.py:105
+#: us/us_states.py:106
 msgid "Commonwealth of the Northern Mariana Islands"
 msgstr "Содружество Северных Марианских островов"
 
-#: us/us_states.py:106
+#: us/us_states.py:107
 msgid "Panama Canal Zone"
 msgstr "Зона Панамского канала"
 
-#: us/us_states.py:107
+#: us/us_states.py:108
 msgid "Philippine Islands"
 msgstr "Филиппинские острова"
 
-#: us/us_states.py:109
+#: us/us_states.py:110
 msgid "Trust Territory of the Pacific Islands"
 msgstr "Подопечная территория Тихоокеанские острова"
 

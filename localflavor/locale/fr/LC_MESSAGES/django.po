@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-03 18:38+0100\n"
-"PO-Revision-Date: 2017-01-05 11:02+0000\n"
+"POT-Creation-Date: 2017-05-19 13:00+0200\n"
+"PO-Revision-Date: 2017-05-26 09:49+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-localflavor/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -203,23 +203,27 @@ msgstr "Saisissez un numéro de sécurité sociale autrichien valide au format X
 msgid "Enter a 4 digit postcode."
 msgstr "Saisissez un code postal à 4 chiffres."
 
-#: au/models.py:17
+#: au/models.py:18
 msgid "Australian State"
 msgstr "État australien"
 
-#: au/models.py:37
+#: au/models.py:38
 msgid "Australian Postcode"
 msgstr "Code postal australien"
 
-#: au/models.py:52
+#: au/models.py:53
 msgid "Australian Phone number"
 msgstr "Numéro de téléphone australien"
 
-#: au/models.py:71
+#: au/models.py:72
 msgid "Australian Business Number"
 msgstr "Numéro professionnel australien (ABN)"
 
-#: au/models.py:105
+#: au/models.py:102
+msgid "Australian Company Number"
+msgstr "Numéro d'entreprise australien"
+
+#: au/models.py:136
 msgid "Australian Tax File Number"
 msgstr "Numéro de dossier d'impôts australien (TFN)"
 
@@ -228,6 +232,10 @@ msgid "Enter a valid ABN."
 msgstr "Saisissez un numéro ABN valide."
 
 #: au/validators.py:61
+msgid "Enter a valid ACN."
+msgstr "Saisissez un ACN valide."
+
+#: au/validators.py:105
 msgid "Enter a valid TFN."
 msgstr "Saisissez un numéro TFN valide."
 
@@ -4170,7 +4178,7 @@ msgstr "Sumba"
 msgid "Enter a postal code in the format XXXX."
 msgstr "Saisissez un code postal au format XXXX."
 
-#: dk/forms.py:47 no/forms.py:109
+#: dk/forms.py:47 no/forms.py:173
 msgid "A phone number must be 8 digits and may have country code"
 msgstr "Les numéros de téléphone doivent comporter 8 chiffres et peuvent contenir le préfixe national"
 
@@ -4573,7 +4581,7 @@ msgstr "Code postal"
 msgid "Phone numbers must be in 0X XX XX XX XX format."
 msgstr "Les numéros de téléphone doivent être au format 0X XX XX XX XX."
 
-#: fr/forms.py:60 us/models.py:90
+#: fr/forms.py:60 us/models.py:91
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
@@ -5916,7 +5924,7 @@ msgstr "Saisissez un code postal valide."
 msgid "Enter a valid Tax code."
 msgstr "Saisissez un code de taxation valable."
 
-#: it/forms.py:106
+#: it/forms.py:106 ua/forms.py:31
 msgid "Enter a valid VAT number."
 msgstr "Saisissez un numéro de TVA valide."
 
@@ -7862,15 +7870,15 @@ msgstr "Zacatecas"
 msgid "Dutch zipcode"
 msgstr "Numéro postal hollandais"
 
-#: nl/models.py:51
+#: nl/models.py:52
 msgid "Dutch province"
 msgstr "Province des Pays-Bas"
 
-#: nl/models.py:75
+#: nl/models.py:76
 msgid "Dutch social security number (SoFi)"
 msgstr "Numéro de sécurité sociale hollandais (SoFi)"
 
-#: nl/models.py:98
+#: nl/models.py:99
 msgid "Dutch phone number"
 msgstr "Numéro de téléphone hollandais"
 
@@ -7933,6 +7941,18 @@ msgstr "Les numéros de comptes bancaires ont 1-7, 9 ou 10 chiffres."
 #: no/forms.py:45
 msgid "Enter a valid Norwegian social security number."
 msgstr "Saisissez un numéro de sécurité sociale norvégien valide."
+
+#: no/forms.py:121
+msgid "Enter a valid Norwegian bank account number."
+msgstr "Saisissez un numéro de compte bancaire norvégien valide."
+
+#: no/forms.py:122
+msgid "Invalid control digit. Enter a valid Norwegian bank account number."
+msgstr "Chiffre de contrôle non valide. Saisissez un numéro de compte bancaire norvégien valide."
+
+#: no/forms.py:123
+msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
+msgstr "Longueur non valide. Les numéros de compte bancaire norvégiens sont composés de 11 chiffres.."
 
 #: nz/forms.py:58
 msgid "Invalid post code."
@@ -8290,15 +8310,15 @@ msgstr "Saisissez un code postal à 5 chiffres."
 msgid "Phone numbers must contain 9, 10 or 11 digits."
 msgstr "Les numéros de téléphone doivent contenir 9, 10 ou 11 chiffres."
 
-#: pk/models.py:16
+#: pk/models.py:17
 msgid "Pakistani State"
 msgstr "État pakistanais"
 
-#: pk/models.py:36
+#: pk/models.py:37
 msgid "Pakistani Postcode"
 msgstr "Code postal pakistanais"
 
-#: pk/models.py:51
+#: pk/models.py:52
 msgid "Pakistani Phone number"
 msgstr "Numéro de téléphone pakistanais"
 
@@ -9535,6 +9555,130 @@ msgstr "Saisissez un numéro d'identification turc valide."
 msgid "Turkish Identification number must be 11 digits."
 msgstr "Les numéros d'identification turcs sont formés de 11 chiffres."
 
+#: ua/forms.py:55
+msgid "Enter a valid postal code."
+msgstr "Saisissez un code postal valide."
+
+#: ua/models.py:18
+msgid "Ukrainian region"
+msgstr "Région d'Ukraine"
+
+#: ua/models.py:41
+msgid "Ukrainian VAT number"
+msgstr "Numéro de TVA ukrainien"
+
+#: ua/models.py:59
+msgid "Ukrainian postal code"
+msgstr "Code postal ukrainien"
+
+#: ua/ua_regions.py:6
+msgid "Cherkasy Oblast"
+msgstr "Oblast de Tcherkassy"
+
+#: ua/ua_regions.py:7
+msgid "Chernihiv Oblast"
+msgstr "Oblast de Tchernihiv"
+
+#: ua/ua_regions.py:8
+msgid "Chernivtsi Oblast"
+msgstr "Oblast de Tchernivtsi"
+
+#: ua/ua_regions.py:9
+msgid "Dnipropetrovsk Oblast"
+msgstr "Oblast de Dnipropetrovsk"
+
+#: ua/ua_regions.py:10
+msgid "Donetsk Oblast"
+msgstr "Oblast de Donetsk"
+
+#: ua/ua_regions.py:11
+msgid "Ivano-Frankivsk Oblast"
+msgstr "Oblast d'Ivano-Frankivsk‎"
+
+#: ua/ua_regions.py:12
+msgid "Kharkiv Oblast"
+msgstr "Oblast de Kharkiv"
+
+#: ua/ua_regions.py:13
+msgid "Kherson Oblast"
+msgstr "Oblast de Kherson"
+
+#: ua/ua_regions.py:14
+msgid "Khmelnytskyi Oblast"
+msgstr "Oblast de Khmelnitski‎"
+
+#: ua/ua_regions.py:15
+msgid "Kirovohrad Oblast"
+msgstr "Oblast de Kirovohrad‎"
+
+#: ua/ua_regions.py:16
+msgid "Kiev Oblast"
+msgstr "Oblast de Kiev"
+
+#: ua/ua_regions.py:17
+msgid "Luhansk Oblast"
+msgstr "Oblast de Louhansk"
+
+#: ua/ua_regions.py:18
+msgid "Lviv Oblast"
+msgstr "Oblast de Lviv"
+
+#: ua/ua_regions.py:19
+msgid "Mykolaiv Oblast"
+msgstr "Oblast de Mykolaïv‎"
+
+#: ua/ua_regions.py:20
+msgid "Odessa Oblast"
+msgstr "Oblast d'Odessa"
+
+#: ua/ua_regions.py:21
+msgid "Poltava Oblast"
+msgstr "Oblast de Poltava"
+
+#: ua/ua_regions.py:22
+msgid "Rivne Oblast"
+msgstr "Oblast de Rivne"
+
+#: ua/ua_regions.py:23
+msgid "Sumy Oblast"
+msgstr "Oblast de Soumy"
+
+#: ua/ua_regions.py:24
+msgid "Ternopil Oblast"
+msgstr "Oblast de Ternopil"
+
+#: ua/ua_regions.py:25
+msgid "Vinnytsia Oblast"
+msgstr "Oblast de Vinnytsia"
+
+#: ua/ua_regions.py:26
+msgid "Volyn Oblast"
+msgstr "Oblast de Volhynie"
+
+#: ua/ua_regions.py:27
+msgid "Zakarpattia Oblast"
+msgstr "Oblast de Transcarpatie‎"
+
+#: ua/ua_regions.py:28
+msgid "Zaporizhia Oblast"
+msgstr "Oblast de Zaporijia"
+
+#: ua/ua_regions.py:29
+msgid "Zhytomyr Oblast"
+msgstr "Oblast de Jytomyr‎"
+
+#: ua/ua_regions.py:30
+msgid "Autonomous Republic of Crimea"
+msgstr "République autonome de Crimée"
+
+#: ua/ua_regions.py:31
+msgid "Kiev"
+msgstr "Kiev"
+
+#: ua/ua_regions.py:32
+msgid "Sevastopol"
+msgstr "Sébastopol"
+
 #: us/forms.py:36
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr "Saisissez un code postal au format XXXXX ou XXXXX-XXXX."
@@ -9543,288 +9687,288 @@ msgstr "Saisissez un code postal au format XXXXX ou XXXXX-XXXX."
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr "Saisissez un numéro de sécurité sociale américain au format XXX-XX-XXXX."
 
-#: us/forms.py:119
+#: us/forms.py:120
 msgid "Enter a U.S. state or territory."
 msgstr "Saisissez un état ou un territoire américain."
 
-#: us/models.py:18
+#: us/models.py:19
 msgid "U.S. state (two uppercase letters)"
 msgstr "État Américain (deux lettres majuscules)"
 
-#: us/models.py:43
+#: us/models.py:44
 msgid "U.S. postal code (two uppercase letters)"
 msgstr "Code postal des États-Unis (deux lettres majuscules)"
 
-#: us/models.py:71
+#: us/models.py:72
 msgid "U.S. ZIP code"
 msgstr "Code postal U.S invalide"
 
-#: us/models.py:111
+#: us/models.py:112
 msgid "Social security number"
 msgstr "Numéro de sécurité social"
 
-#: us/us_states.py:20
+#: us/us_states.py:21
 msgid "Alabama"
 msgstr "Alabama"
 
-#: us/us_states.py:21
+#: us/us_states.py:22
 msgid "Arizona"
 msgstr "Arizona"
 
-#: us/us_states.py:22
+#: us/us_states.py:23
 msgid "Arkansas"
 msgstr "Arkansas"
 
-#: us/us_states.py:23
+#: us/us_states.py:24
 msgid "California"
 msgstr "Californie"
 
-#: us/us_states.py:24
+#: us/us_states.py:25
 msgid "Colorado"
 msgstr "Colorado"
 
-#: us/us_states.py:25
+#: us/us_states.py:26
 msgid "Connecticut"
 msgstr "Connecticut"
 
-#: us/us_states.py:26
+#: us/us_states.py:27
 msgid "Delaware"
 msgstr "Delaware"
 
-#: us/us_states.py:27
+#: us/us_states.py:28
 msgid "District of Columbia"
 msgstr "District de Columbia"
 
-#: us/us_states.py:28
+#: us/us_states.py:29
 msgid "Florida"
 msgstr "Floride"
 
-#: us/us_states.py:29
+#: us/us_states.py:30
 msgctxt "US state"
 msgid "Georgia"
 msgstr "Géorgie"
 
-#: us/us_states.py:30
+#: us/us_states.py:31
 msgid "Idaho"
 msgstr "Idaho"
 
-#: us/us_states.py:31
+#: us/us_states.py:32
 msgid "Illinois"
 msgstr "Illinois"
 
-#: us/us_states.py:32
+#: us/us_states.py:33
 msgid "Indiana"
 msgstr "Indiana"
 
-#: us/us_states.py:33
+#: us/us_states.py:34
 msgid "Iowa"
 msgstr "Iowa"
 
-#: us/us_states.py:34
+#: us/us_states.py:35
 msgid "Kansas"
 msgstr "Kansas"
 
-#: us/us_states.py:35
+#: us/us_states.py:36
 msgid "Kentucky"
 msgstr "Kentucky"
 
-#: us/us_states.py:36
+#: us/us_states.py:37
 msgid "Louisiana"
 msgstr "Louisiane"
 
-#: us/us_states.py:37
+#: us/us_states.py:38
 msgid "Maine"
 msgstr "Maine"
 
-#: us/us_states.py:38
+#: us/us_states.py:39
 msgid "Maryland"
 msgstr "Maryland"
 
-#: us/us_states.py:39
+#: us/us_states.py:40
 msgid "Massachusetts"
 msgstr "Massachusetts"
 
-#: us/us_states.py:40
+#: us/us_states.py:41
 msgid "Michigan"
 msgstr "Michigan"
 
-#: us/us_states.py:41
+#: us/us_states.py:42
 msgid "Minnesota"
 msgstr "Minnesota"
 
-#: us/us_states.py:42
+#: us/us_states.py:43
 msgid "Mississippi"
 msgstr "Mississippi"
 
-#: us/us_states.py:43
+#: us/us_states.py:44
 msgid "Missouri"
 msgstr "Missouri"
 
-#: us/us_states.py:44
+#: us/us_states.py:45
 msgid "Montana"
 msgstr "Montana"
 
-#: us/us_states.py:45
+#: us/us_states.py:46
 msgid "Nebraska"
 msgstr "Nebraska"
 
-#: us/us_states.py:46
+#: us/us_states.py:47
 msgid "Nevada"
 msgstr "Nevada"
 
-#: us/us_states.py:47
+#: us/us_states.py:48
 msgid "New Hampshire"
 msgstr "New Hampshire"
 
-#: us/us_states.py:48
+#: us/us_states.py:49
 msgid "New Jersey"
 msgstr "New Jersey"
 
-#: us/us_states.py:49
+#: us/us_states.py:50
 msgid "New Mexico"
 msgstr "Nouveau-Mexique"
 
-#: us/us_states.py:50
+#: us/us_states.py:51
 msgid "New York"
 msgstr "New York"
 
-#: us/us_states.py:51
+#: us/us_states.py:52
 msgid "North Carolina"
 msgstr "Caroline du Nord"
 
-#: us/us_states.py:52
+#: us/us_states.py:53
 msgid "North Dakota"
 msgstr "Dakota du Nord"
 
-#: us/us_states.py:53
+#: us/us_states.py:54
 msgid "Ohio"
 msgstr "Ohio"
 
-#: us/us_states.py:54
+#: us/us_states.py:55
 msgid "Oklahoma"
 msgstr "Oklahoma"
 
-#: us/us_states.py:55
+#: us/us_states.py:56
 msgid "Oregon"
 msgstr "Oregon"
 
-#: us/us_states.py:56
+#: us/us_states.py:57
 msgid "Pennsylvania"
 msgstr "Pennsylvanie"
 
-#: us/us_states.py:57
+#: us/us_states.py:58
 msgid "Rhode Island"
 msgstr "Rhode Island"
 
-#: us/us_states.py:58
+#: us/us_states.py:59
 msgid "South Carolina"
 msgstr "Caroline du Sud"
 
-#: us/us_states.py:59
+#: us/us_states.py:60
 msgid "South Dakota"
 msgstr "Dakota du Sud"
 
-#: us/us_states.py:60
+#: us/us_states.py:61
 msgid "Tennessee"
 msgstr "Tennessee"
 
-#: us/us_states.py:61
+#: us/us_states.py:62
 msgid "Texas"
 msgstr "Texas"
 
-#: us/us_states.py:62
+#: us/us_states.py:63
 msgid "Utah"
 msgstr "Utah"
 
-#: us/us_states.py:63
+#: us/us_states.py:64
 msgid "Vermont"
 msgstr "Vermont"
 
-#: us/us_states.py:64
+#: us/us_states.py:65
 msgid "Virginia"
 msgstr "Virginie"
 
-#: us/us_states.py:65
+#: us/us_states.py:66
 msgid "Washington"
 msgstr "Washington"
 
-#: us/us_states.py:66
+#: us/us_states.py:67
 msgid "West Virginia"
 msgstr "Virginie Occidentale"
 
-#: us/us_states.py:67
+#: us/us_states.py:68
 msgid "Wisconsin"
 msgstr "Wisconsin"
 
-#: us/us_states.py:68
+#: us/us_states.py:69
 msgid "Wyoming"
 msgstr "Wyoming"
 
-#: us/us_states.py:73
+#: us/us_states.py:74
 msgid "Alaska"
 msgstr "Alaska"
 
-#: us/us_states.py:74
+#: us/us_states.py:75
 msgid "Hawaii"
 msgstr "Hawaï"
 
-#: us/us_states.py:79
+#: us/us_states.py:80
 msgid "American Samoa"
 msgstr "Samoa américaines"
 
-#: us/us_states.py:80
+#: us/us_states.py:81
 msgid "Guam"
 msgstr "Guam"
 
-#: us/us_states.py:81
+#: us/us_states.py:82
 msgid "Northern Mariana Islands"
 msgstr "Îles Mariannes du Nord"
 
-#: us/us_states.py:82
+#: us/us_states.py:83
 msgid "Puerto Rico"
 msgstr "Porto Rico"
 
-#: us/us_states.py:83
+#: us/us_states.py:84
 msgid "Virgin Islands"
 msgstr "Îles Vierges"
 
-#: us/us_states.py:89
+#: us/us_states.py:90
 msgid "Armed Forces Americas"
 msgstr "Forces armées en Amérique"
 
-#: us/us_states.py:90
+#: us/us_states.py:91
 msgid "Armed Forces Europe"
 msgstr "Forces armées en Europe"
 
-#: us/us_states.py:91
+#: us/us_states.py:92
 msgid "Armed Forces Pacific"
 msgstr "Forces armées dans le Pacifique"
 
-#: us/us_states.py:97
+#: us/us_states.py:98
 msgid "Federated States of Micronesia"
 msgstr "États fédérés de Micronésie"
 
-#: us/us_states.py:98
+#: us/us_states.py:99
 msgid "Marshall Islands"
 msgstr "Îles Marshall"
 
-#: us/us_states.py:99
+#: us/us_states.py:100
 msgid "Palau"
 msgstr "Palaos"
 
-#: us/us_states.py:105
+#: us/us_states.py:106
 msgid "Commonwealth of the Northern Mariana Islands"
 msgstr "Commonwealth des îles Mariannes du Nord"
 
-#: us/us_states.py:106
+#: us/us_states.py:107
 msgid "Panama Canal Zone"
 msgstr "Zone du canal de Panama"
 
-#: us/us_states.py:107
+#: us/us_states.py:108
 msgid "Philippine Islands"
 msgstr "Philippines"
 
-#: us/us_states.py:109
+#: us/us_states.py:110
 msgid "Trust Territory of the Pacific Islands"
 msgstr "Territoire sous tutelle des îles du Pacifique"
 

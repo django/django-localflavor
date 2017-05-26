@@ -3,9 +3,9 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Fery Setiawan <gembelweb@gmail.com>, 2015-2016
+# Fery Setiawan <gembelweb@gmail.com>, 2015-2017
 # Jannis Leidel <jannis@leidel.info>, 2011
-# oon arfiandwi <oon.arfiandwi@gmail.com>, 2016
+# oon arfiandwi (OonID) <oon.arfiandwi@gmail.com>, 2016
 # rodin <romihardiyanto@gmail.com>, 2011
 # rodin <romihardiyanto@gmail.com>, 2012
 # Sakti Dwi Cahyono <54krpl@gmail.com>, 2014
@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-03 18:38+0100\n"
-"PO-Revision-Date: 2017-01-04 09:42+0000\n"
+"POT-Creation-Date: 2017-05-19 13:00+0200\n"
+"PO-Revision-Date: 2017-05-19 14:05+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-localflavor/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -203,23 +203,27 @@ msgstr "Masukkan Nomor Identifikasi Sosial Austria yang valid dalam format XXXX 
 msgid "Enter a 4 digit postcode."
 msgstr "Masukkan 4 angka kode pos"
 
-#: au/models.py:17
+#: au/models.py:18
 msgid "Australian State"
 msgstr "Negara Bagian Australia"
 
-#: au/models.py:37
+#: au/models.py:38
 msgid "Australian Postcode"
 msgstr "Kode pos Australia"
 
-#: au/models.py:52
+#: au/models.py:53
 msgid "Australian Phone number"
 msgstr "Nomor telepon Australia"
 
-#: au/models.py:71
+#: au/models.py:72
 msgid "Australian Business Number"
 msgstr "Nomor Bisnis Australia"
 
-#: au/models.py:105
+#: au/models.py:102
+msgid "Australian Company Number"
+msgstr ""
+
+#: au/models.py:136
 msgid "Australian Tax File Number"
 msgstr "Nomor Berkas Pajak Australia"
 
@@ -228,6 +232,10 @@ msgid "Enter a valid ABN."
 msgstr "Masukkan ABN sah"
 
 #: au/validators.py:61
+msgid "Enter a valid ACN."
+msgstr ""
+
+#: au/validators.py:105
 msgid "Enter a valid TFN."
 msgstr "Masukkan TFN sah."
 
@@ -4170,7 +4178,7 @@ msgstr "Sumba"
 msgid "Enter a postal code in the format XXXX."
 msgstr "Masukkan kode pos dalam bentuk XXXX."
 
-#: dk/forms.py:47 no/forms.py:109
+#: dk/forms.py:47 no/forms.py:173
 msgid "A phone number must be 8 digits and may have country code"
 msgstr "Nomor telepon harus berupa 8 angka dan mungkin memiliki kode negara"
 
@@ -4573,7 +4581,7 @@ msgstr "Kode zip"
 msgid "Phone numbers must be in 0X XX XX XX XX format."
 msgstr "Nomor telepon harus dalam format 0X XX XX XX XX."
 
-#: fr/forms.py:60 us/models.py:90
+#: fr/forms.py:60 us/models.py:91
 msgid "Phone number"
 msgstr "Nomor telepon"
 
@@ -5916,7 +5924,7 @@ msgstr "Masukkan kode pos yang valid."
 msgid "Enter a valid Tax code."
 msgstr "Masukkan kode pajak yang benar."
 
-#: it/forms.py:106
+#: it/forms.py:106 ua/forms.py:31
 msgid "Enter a valid VAT number."
 msgstr "Masukkan nomor VAT yang valid."
 
@@ -6946,359 +6954,359 @@ msgstr "Masukkan kode pos dalam format XXXXX."
 
 #: ma/forms.py:26
 msgid "Postal code"
-msgstr ""
+msgstr "Kode Pos"
 
 #: ma/forms.py:70
 msgid "Select Province"
-msgstr ""
+msgstr "Pilih Propinsi"
 
 #: ma/ma_provinces.py:9
 msgid "Al Hoceima"
-msgstr ""
+msgstr "Al Hoceima"
 
 #: ma/ma_provinces.py:10
 msgid "Larache"
-msgstr ""
+msgstr "Larache"
 
 #: ma/ma_provinces.py:11
 msgid "M’Diq - Fnideq"
-msgstr ""
+msgstr "M’Diq - Fnideq"
 
 #: ma/ma_provinces.py:12
 msgid "Tetouan"
-msgstr ""
+msgstr "Tetouan"
 
 #: ma/ma_provinces.py:13
 msgid "Chefchaouene"
-msgstr ""
+msgstr "Chefchaouene"
 
 #: ma/ma_provinces.py:14
 msgid "Tanger - Assilah"
-msgstr ""
+msgstr "Tanger - Assilah"
 
 #: ma/ma_provinces.py:15
 msgid "Fahs - Anjra"
-msgstr ""
+msgstr "Fahs - Anjra"
 
 #: ma/ma_provinces.py:16
 msgid "Ouezzane"
-msgstr ""
+msgstr "Ouezzane"
 
 #: ma/ma_provinces.py:17
 msgid "Driouch"
-msgstr ""
+msgstr "Driouch"
 
 #: ma/ma_provinces.py:18
 msgid "Nador"
-msgstr ""
+msgstr "Nador"
 
 #: ma/ma_provinces.py:19
 msgid "Berkan"
-msgstr ""
+msgstr "Berkan"
 
 #: ma/ma_provinces.py:20
 msgid "Taourirt"
-msgstr ""
+msgstr "Taourirt"
 
 #: ma/ma_provinces.py:21
 msgid "Jerada"
-msgstr ""
+msgstr "Jerada"
 
 #: ma/ma_provinces.py:22
 msgid "Guercif"
-msgstr ""
+msgstr "Guercif"
 
 #: ma/ma_provinces.py:23
 msgid "Feguig"
-msgstr ""
+msgstr "Feguig"
 
 #: ma/ma_provinces.py:24
 msgid "Oujda - Angad"
-msgstr ""
+msgstr "Oujda - Angad"
 
 #: ma/ma_provinces.py:25
 msgid "El Hajeb"
-msgstr ""
+msgstr "El Hajeb"
 
 #: ma/ma_provinces.py:26
 msgid "Ifrane"
-msgstr ""
+msgstr "Ifrane"
 
 #: ma/ma_provinces.py:27
 msgid "Boulemane"
-msgstr ""
+msgstr "Boulemane"
 
 #: ma/ma_provinces.py:28
 msgid "Taza"
-msgstr ""
+msgstr "Taza"
 
 #: ma/ma_provinces.py:29
 msgid "Taounate"
-msgstr ""
+msgstr "Taounate"
 
 #: ma/ma_provinces.py:30
 msgid "Sefrou"
-msgstr ""
+msgstr "Sefrou"
 
 #: ma/ma_provinces.py:31
 msgid "Fès"
-msgstr ""
+msgstr "Fès"
 
 #: ma/ma_provinces.py:32
 msgid "Meknès"
-msgstr ""
+msgstr "Meknès"
 
 #: ma/ma_provinces.py:33
 msgid "Moulay Yacoub"
-msgstr ""
+msgstr "Moulay Yacoub"
 
 #: ma/ma_provinces.py:34
 msgid "Khémisset"
-msgstr ""
+msgstr "Khémisset"
 
 #: ma/ma_provinces.py:35
 msgid "Rabat"
-msgstr ""
+msgstr "Rabat"
 
 #: ma/ma_provinces.py:36
 msgid "Skhirate - Temara"
-msgstr ""
+msgstr "Skhirate - Temara"
 
 #: ma/ma_provinces.py:37
 msgid "Kénitra"
-msgstr ""
+msgstr "Kénitra"
 
 #: ma/ma_provinces.py:38
 msgid "Salé"
-msgstr ""
+msgstr "Salé"
 
 #: ma/ma_provinces.py:39
 msgid "Sidi Slimane"
-msgstr ""
+msgstr "Sidi Slimane"
 
 #: ma/ma_provinces.py:40
 msgid "Sidi Kacem"
-msgstr ""
+msgstr "Sidi Kacem"
 
 #: ma/ma_provinces.py:41
 msgid "Casablanca"
-msgstr ""
+msgstr "Casablanca"
 
 #: ma/ma_provinces.py:42
 msgid "Mohamedia"
-msgstr ""
+msgstr "Mohamedia"
 
 #: ma/ma_provinces.py:43
 msgid "Nouaceur"
-msgstr ""
+msgstr "Nouaceur"
 
 #: ma/ma_provinces.py:44
 msgid "Mediouna"
-msgstr ""
+msgstr "Mediouna"
 
 #: ma/ma_provinces.py:45
 msgid "Benslimane"
-msgstr ""
+msgstr "Benslimane"
 
 #: ma/ma_provinces.py:46
 msgid "Berrachid"
-msgstr ""
+msgstr "Berrachid"
 
 #: ma/ma_provinces.py:47
 msgid "El Jadida"
-msgstr ""
+msgstr "El Jadida"
 
 #: ma/ma_provinces.py:48
 msgid "Sidi Bennour"
-msgstr ""
+msgstr "Sidi Bennour"
 
 #: ma/ma_provinces.py:49
 msgid "Settat"
-msgstr ""
+msgstr "Settat"
 
 #: ma/ma_provinces.py:50
 msgid "Azilal"
-msgstr ""
+msgstr "Azilal"
 
 #: ma/ma_provinces.py:51
 msgid "Fquih Ben Saleh"
-msgstr ""
+msgstr "Fquih Ben Saleh"
 
 #: ma/ma_provinces.py:52
 msgid "Beni Mellal"
-msgstr ""
+msgstr "Beni Mellal"
 
 #: ma/ma_provinces.py:53
 msgid "Khouribga"
-msgstr ""
+msgstr "Khouribga"
 
 #: ma/ma_provinces.py:54
 msgid "Khénifra"
-msgstr ""
+msgstr "Khénifra"
 
 #: ma/ma_provinces.py:55
 msgid "Safi"
-msgstr ""
+msgstr "Safi"
 
 #: ma/ma_provinces.py:56
 msgid "Al Haouz"
-msgstr ""
+msgstr "Al Haouz"
 
 #: ma/ma_provinces.py:57
 msgid "Rhamna"
-msgstr ""
+msgstr "Rhamna"
 
 #: ma/ma_provinces.py:58
 msgid "Essaouira"
-msgstr ""
+msgstr "Essaouira"
 
 #: ma/ma_provinces.py:59
 msgid "Youssoufia"
-msgstr ""
+msgstr "Youssoufia"
 
 #: ma/ma_provinces.py:60
 msgid "Marrakech"
-msgstr ""
+msgstr "Marrakech"
 
 #: ma/ma_provinces.py:61
 msgid "Chichaoua"
-msgstr ""
+msgstr "Chichaoua"
 
 #: ma/ma_provinces.py:62
 msgid "El Kelaa Des Sraghna"
-msgstr ""
+msgstr "El Kelaa Des Sraghna"
 
 #: ma/ma_provinces.py:63
 msgid "Agadir - Idda Outanane"
-msgstr ""
+msgstr "Agadir - Idda Outanane"
 
 #: ma/ma_provinces.py:64
 msgid "Inezgane - Ait Melloul"
-msgstr ""
+msgstr "Inezgane - Ait Melloul"
 
 #: ma/ma_provinces.py:65
 msgid "Chtouka - Ait Baha"
-msgstr ""
+msgstr "Chtouka - Ait Baha"
 
 #: ma/ma_provinces.py:66
 msgid "Tiznit"
-msgstr ""
+msgstr "Tiznit"
 
 #: ma/ma_provinces.py:67
 msgid "Tata"
-msgstr ""
+msgstr "Tata"
 
 #: ma/ma_provinces.py:68
 msgid "Taroudant"
-msgstr ""
+msgstr "Taroudant"
 
 #: ma/ma_provinces.py:69
 msgid "Errachidia"
-msgstr ""
+msgstr "Errachidia"
 
 #: ma/ma_provinces.py:70
 msgid "Tinghir"
-msgstr ""
+msgstr "Tinghir"
 
 #: ma/ma_provinces.py:71
 msgid "Zagoura"
-msgstr ""
+msgstr "Zagoura"
 
 #: ma/ma_provinces.py:72
 msgid "Midelt"
-msgstr ""
+msgstr "Midelt"
 
 #: ma/ma_provinces.py:73
 msgid "Ouarzazate"
-msgstr ""
+msgstr "Ouarzazate"
 
 #: ma/ma_provinces.py:74
 msgid "Es -Semara"
-msgstr ""
+msgstr "Es -Semara"
 
 #: ma/ma_provinces.py:75
 msgid "Laayoune"
-msgstr ""
+msgstr "Laayoune"
 
 #: ma/ma_provinces.py:76
 msgid "Boujdour"
-msgstr ""
+msgstr "Boujdour"
 
 #: ma/ma_provinces.py:77
 msgid "Terfaya"
-msgstr ""
+msgstr "Terfaya"
 
 #: ma/ma_provinces.py:78
 msgid "Aousserd"
-msgstr ""
+msgstr "Aousserd"
 
 #: ma/ma_provinces.py:79
 msgid "Oued Eddahab"
-msgstr ""
+msgstr "Oued Eddahab"
 
 #: ma/ma_provinces.py:80
 msgid "Assa - Zag"
-msgstr ""
+msgstr "Assa - Zag"
 
 #: ma/ma_provinces.py:81
 msgid "Sidi Ifni"
-msgstr ""
+msgstr "Sidi Ifni"
 
 #: ma/ma_provinces.py:82
 msgid "Tantan"
-msgstr ""
+msgstr "Tantan"
 
 #: ma/ma_provinces.py:83
 msgid "Guelmim"
-msgstr ""
+msgstr "Guelmim"
 
 #: ma/ma_regions.py:9
 msgid "Tanger-Tétouan-Al Hoceïma"
-msgstr ""
+msgstr "Tanger-Tétouan-Al Hoceïma"
 
 #: ma/ma_regions.py:10
 msgid "L’Oriental"
-msgstr ""
+msgstr "L’Oriental"
 
 #: ma/ma_regions.py:11
 msgid "Fès-Meknès"
-msgstr ""
+msgstr "Fès-Meknès"
 
 #: ma/ma_regions.py:12
 msgid "Rabat-Salé-Kénitra"
-msgstr ""
+msgstr "Rabat-Salé-Kénitra"
 
 #: ma/ma_regions.py:13
 msgid "Béni Mellal-Khénifra"
-msgstr ""
+msgstr "Béni Mellal-Khénifra"
 
 #: ma/ma_regions.py:14
 msgid "Casablanca-Settat"
-msgstr ""
+msgstr "Casablanca-Settat"
 
 #: ma/ma_regions.py:15
 msgid "Marrakech-Safi"
-msgstr ""
+msgstr "Marrakech-Safi"
 
 #: ma/ma_regions.py:16
 msgid "Drâa-Tafilalet"
-msgstr ""
+msgstr "Drâa-Tafilalet"
 
 #: ma/ma_regions.py:17
 msgid "Souss-Massa"
-msgstr ""
+msgstr "Souss-Massa"
 
 #: ma/ma_regions.py:18
 msgid "Guelmim-Oued Noun"
-msgstr ""
+msgstr "Guelmim-Oued Noun"
 
 #: ma/ma_regions.py:19
 msgid "Laâyoune-Sakia El Hamra"
-msgstr ""
+msgstr "Laâyoune-Sakia El Hamra"
 
 #: ma/ma_regions.py:20
 msgid "Dakhla-Oued Ed Dahab"
-msgstr ""
+msgstr "Dakhla-Oued Ed Dahab"
 
 #: mk/forms.py:21
 msgid ""
@@ -7862,15 +7870,15 @@ msgstr "Zacatecas"
 msgid "Dutch zipcode"
 msgstr "Kode zip Belanda"
 
-#: nl/models.py:51
+#: nl/models.py:52
 msgid "Dutch province"
 msgstr "Propinsi Belanda"
 
-#: nl/models.py:75
+#: nl/models.py:76
 msgid "Dutch social security number (SoFi)"
 msgstr "Nomor keamanan sosial Belanda (SoFI)"
 
-#: nl/models.py:98
+#: nl/models.py:99
 msgid "Dutch phone number"
 msgstr "Nomor telepon belanda"
 
@@ -7933,6 +7941,18 @@ msgstr "Nomor akun bank mempunyai 1 - 7, 9 atau 10 angka."
 #: no/forms.py:45
 msgid "Enter a valid Norwegian social security number."
 msgstr "Masukkan nomor jaminan sosial Norwegia yang sah."
+
+#: no/forms.py:121
+msgid "Enter a valid Norwegian bank account number."
+msgstr ""
+
+#: no/forms.py:122
+msgid "Invalid control digit. Enter a valid Norwegian bank account number."
+msgstr ""
+
+#: no/forms.py:123
+msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
+msgstr ""
 
 #: nz/forms.py:58
 msgid "Invalid post code."
@@ -8290,15 +8310,15 @@ msgstr "Masukkan 5 angka kode pos."
 msgid "Phone numbers must contain 9, 10 or 11 digits."
 msgstr "Nomor telepon harus mengandung 9, 10 atau 11 angka."
 
-#: pk/models.py:16
+#: pk/models.py:17
 msgid "Pakistani State"
 msgstr "Negara Bagian Pakistan"
 
-#: pk/models.py:36
+#: pk/models.py:37
 msgid "Pakistani Postcode"
 msgstr "Kode pos Pakistan"
 
-#: pk/models.py:51
+#: pk/models.py:52
 msgid "Pakistani Phone number"
 msgstr "Nomor telepon Pakistan"
 
@@ -8564,7 +8584,7 @@ msgstr "Masukkan CNP yang valid."
 msgid ""
 "Phone numbers may only have 7 or 10 digits, except the national short "
 "numbers which have 3 to 6 digits"
-msgstr ""
+msgstr "Nomor telepon hanya mempunyai 7 atau 10 angka, kecuali nomor pendek nasional yang mempunyai 3 sampai 6 angka."
 
 #: ro/forms.py:213
 msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
@@ -9535,6 +9555,130 @@ msgstr "Masukkan nomor Identifikasi Turki yang valid."
 msgid "Turkish Identification number must be 11 digits."
 msgstr "Jumlah angka pada Nomor Identifikasi Turki harus sebanyak 11 angka."
 
+#: ua/forms.py:55
+msgid "Enter a valid postal code."
+msgstr ""
+
+#: ua/models.py:18
+msgid "Ukrainian region"
+msgstr ""
+
+#: ua/models.py:41
+msgid "Ukrainian VAT number"
+msgstr ""
+
+#: ua/models.py:59
+msgid "Ukrainian postal code"
+msgstr ""
+
+#: ua/ua_regions.py:6
+msgid "Cherkasy Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:7
+msgid "Chernihiv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:8
+msgid "Chernivtsi Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:9
+msgid "Dnipropetrovsk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:10
+msgid "Donetsk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:11
+msgid "Ivano-Frankivsk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:12
+msgid "Kharkiv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:13
+msgid "Kherson Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:14
+msgid "Khmelnytskyi Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:15
+msgid "Kirovohrad Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:16
+msgid "Kiev Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:17
+msgid "Luhansk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:18
+msgid "Lviv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:19
+msgid "Mykolaiv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:20
+msgid "Odessa Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:21
+msgid "Poltava Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:22
+msgid "Rivne Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:23
+msgid "Sumy Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:24
+msgid "Ternopil Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:25
+msgid "Vinnytsia Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:26
+msgid "Volyn Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:27
+msgid "Zakarpattia Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:28
+msgid "Zaporizhia Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:29
+msgid "Zhytomyr Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:30
+msgid "Autonomous Republic of Crimea"
+msgstr ""
+
+#: ua/ua_regions.py:31
+msgid "Kiev"
+msgstr ""
+
+#: ua/ua_regions.py:32
+msgid "Sevastopol"
+msgstr ""
+
 #: us/forms.py:36
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr "Masukkan kode pos dalam format XXXXX atau XXXXX-XXXX."
@@ -9543,288 +9687,288 @@ msgstr "Masukkan kode pos dalam format XXXXX atau XXXXX-XXXX."
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr "Masukkan nomor Jaminan Sosial A.S. yang valid dalam format XXX-XX-XXXX."
 
-#: us/forms.py:119
+#: us/forms.py:120
 msgid "Enter a U.S. state or territory."
 msgstr "Masukkan negara bagian atau teritori A.S."
 
-#: us/models.py:18
+#: us/models.py:19
 msgid "U.S. state (two uppercase letters)"
 msgstr "Negara bagian A.S. (dua huruf besar)"
 
-#: us/models.py:43
+#: us/models.py:44
 msgid "U.S. postal code (two uppercase letters)"
 msgstr "Kode pos A.S. (dua huruf besar)"
 
-#: us/models.py:71
+#: us/models.py:72
 msgid "U.S. ZIP code"
 msgstr "Kode Pos U.S"
 
-#: us/models.py:111
+#: us/models.py:112
 msgid "Social security number"
 msgstr "Nomor keamanan sosial"
 
-#: us/us_states.py:20
+#: us/us_states.py:21
 msgid "Alabama"
 msgstr "Alabama"
 
-#: us/us_states.py:21
+#: us/us_states.py:22
 msgid "Arizona"
 msgstr "Arizona"
 
-#: us/us_states.py:22
+#: us/us_states.py:23
 msgid "Arkansas"
 msgstr "Arkansas"
 
-#: us/us_states.py:23
+#: us/us_states.py:24
 msgid "California"
 msgstr "California"
 
-#: us/us_states.py:24
+#: us/us_states.py:25
 msgid "Colorado"
 msgstr "Colorado"
 
-#: us/us_states.py:25
+#: us/us_states.py:26
 msgid "Connecticut"
 msgstr "Connecticut"
 
-#: us/us_states.py:26
+#: us/us_states.py:27
 msgid "Delaware"
 msgstr "Delaware"
 
-#: us/us_states.py:27
+#: us/us_states.py:28
 msgid "District of Columbia"
 msgstr "Distrik Columbia"
 
-#: us/us_states.py:28
+#: us/us_states.py:29
 msgid "Florida"
 msgstr "Florida"
 
-#: us/us_states.py:29
+#: us/us_states.py:30
 msgctxt "US state"
 msgid "Georgia"
 msgstr "Georgia"
 
-#: us/us_states.py:30
+#: us/us_states.py:31
 msgid "Idaho"
 msgstr "Idaho"
 
-#: us/us_states.py:31
+#: us/us_states.py:32
 msgid "Illinois"
 msgstr "Illinois"
 
-#: us/us_states.py:32
+#: us/us_states.py:33
 msgid "Indiana"
 msgstr "Indiana"
 
-#: us/us_states.py:33
+#: us/us_states.py:34
 msgid "Iowa"
 msgstr "Iowa"
 
-#: us/us_states.py:34
+#: us/us_states.py:35
 msgid "Kansas"
 msgstr "Kansas"
 
-#: us/us_states.py:35
+#: us/us_states.py:36
 msgid "Kentucky"
 msgstr "Kentucky"
 
-#: us/us_states.py:36
+#: us/us_states.py:37
 msgid "Louisiana"
 msgstr "Louisiana"
 
-#: us/us_states.py:37
+#: us/us_states.py:38
 msgid "Maine"
 msgstr "Maine"
 
-#: us/us_states.py:38
+#: us/us_states.py:39
 msgid "Maryland"
 msgstr "Maryland"
 
-#: us/us_states.py:39
+#: us/us_states.py:40
 msgid "Massachusetts"
 msgstr "Massachusetts"
 
-#: us/us_states.py:40
+#: us/us_states.py:41
 msgid "Michigan"
 msgstr "Michigan"
 
-#: us/us_states.py:41
+#: us/us_states.py:42
 msgid "Minnesota"
 msgstr "Minnesota"
 
-#: us/us_states.py:42
+#: us/us_states.py:43
 msgid "Mississippi"
 msgstr "Mississippi"
 
-#: us/us_states.py:43
+#: us/us_states.py:44
 msgid "Missouri"
 msgstr "Missouri"
 
-#: us/us_states.py:44
+#: us/us_states.py:45
 msgid "Montana"
 msgstr "Montana"
 
-#: us/us_states.py:45
+#: us/us_states.py:46
 msgid "Nebraska"
 msgstr "Nebraska"
 
-#: us/us_states.py:46
+#: us/us_states.py:47
 msgid "Nevada"
 msgstr "Nevada"
 
-#: us/us_states.py:47
+#: us/us_states.py:48
 msgid "New Hampshire"
 msgstr "New Hampshire"
 
-#: us/us_states.py:48
+#: us/us_states.py:49
 msgid "New Jersey"
 msgstr "New Jersey"
 
-#: us/us_states.py:49
+#: us/us_states.py:50
 msgid "New Mexico"
 msgstr "New Mexico"
 
-#: us/us_states.py:50
+#: us/us_states.py:51
 msgid "New York"
 msgstr "New York"
 
-#: us/us_states.py:51
+#: us/us_states.py:52
 msgid "North Carolina"
 msgstr "North Carolina"
 
-#: us/us_states.py:52
+#: us/us_states.py:53
 msgid "North Dakota"
 msgstr "North Dakota"
 
-#: us/us_states.py:53
+#: us/us_states.py:54
 msgid "Ohio"
 msgstr "Ohio"
 
-#: us/us_states.py:54
+#: us/us_states.py:55
 msgid "Oklahoma"
 msgstr "Oklahoma"
 
-#: us/us_states.py:55
+#: us/us_states.py:56
 msgid "Oregon"
 msgstr "Oregon"
 
-#: us/us_states.py:56
+#: us/us_states.py:57
 msgid "Pennsylvania"
 msgstr "Pennsylvania"
 
-#: us/us_states.py:57
+#: us/us_states.py:58
 msgid "Rhode Island"
 msgstr "Rhode Island"
 
-#: us/us_states.py:58
+#: us/us_states.py:59
 msgid "South Carolina"
 msgstr "South Carolina"
 
-#: us/us_states.py:59
+#: us/us_states.py:60
 msgid "South Dakota"
 msgstr "South Dakota"
 
-#: us/us_states.py:60
+#: us/us_states.py:61
 msgid "Tennessee"
 msgstr "Tennessee"
 
-#: us/us_states.py:61
+#: us/us_states.py:62
 msgid "Texas"
 msgstr "Texas"
 
-#: us/us_states.py:62
+#: us/us_states.py:63
 msgid "Utah"
 msgstr "Utah"
 
-#: us/us_states.py:63
+#: us/us_states.py:64
 msgid "Vermont"
 msgstr "Vermont"
 
-#: us/us_states.py:64
+#: us/us_states.py:65
 msgid "Virginia"
 msgstr "Virginia"
 
-#: us/us_states.py:65
+#: us/us_states.py:66
 msgid "Washington"
 msgstr "Washington"
 
-#: us/us_states.py:66
+#: us/us_states.py:67
 msgid "West Virginia"
 msgstr "West Virginia"
 
-#: us/us_states.py:67
+#: us/us_states.py:68
 msgid "Wisconsin"
 msgstr "Wisconsin"
 
-#: us/us_states.py:68
+#: us/us_states.py:69
 msgid "Wyoming"
 msgstr "Wyoming"
 
-#: us/us_states.py:73
+#: us/us_states.py:74
 msgid "Alaska"
 msgstr "Alaska"
 
-#: us/us_states.py:74
+#: us/us_states.py:75
 msgid "Hawaii"
 msgstr "Hawaii"
 
-#: us/us_states.py:79
+#: us/us_states.py:80
 msgid "American Samoa"
 msgstr "American Samoa"
 
-#: us/us_states.py:80
+#: us/us_states.py:81
 msgid "Guam"
 msgstr "Guam"
 
-#: us/us_states.py:81
+#: us/us_states.py:82
 msgid "Northern Mariana Islands"
 msgstr "Northern Mariana Islands"
 
-#: us/us_states.py:82
+#: us/us_states.py:83
 msgid "Puerto Rico"
 msgstr "Puerto Rico"
 
-#: us/us_states.py:83
+#: us/us_states.py:84
 msgid "Virgin Islands"
 msgstr "Virgin Islands"
 
-#: us/us_states.py:89
+#: us/us_states.py:90
 msgid "Armed Forces Americas"
 msgstr "Armed Forces Americas"
 
-#: us/us_states.py:90
+#: us/us_states.py:91
 msgid "Armed Forces Europe"
 msgstr "Armed Forces Europe"
 
-#: us/us_states.py:91
+#: us/us_states.py:92
 msgid "Armed Forces Pacific"
 msgstr "Armed Forces Pacific"
 
-#: us/us_states.py:97
+#: us/us_states.py:98
 msgid "Federated States of Micronesia"
 msgstr "Federasi Mikronesia"
 
-#: us/us_states.py:98
+#: us/us_states.py:99
 msgid "Marshall Islands"
 msgstr "Kepulauan Marshall"
 
-#: us/us_states.py:99
+#: us/us_states.py:100
 msgid "Palau"
 msgstr "Palau"
 
-#: us/us_states.py:105
+#: us/us_states.py:106
 msgid "Commonwealth of the Northern Mariana Islands"
 msgstr "Commonwealth of the Northern Mariana Islands"
 
-#: us/us_states.py:106
+#: us/us_states.py:107
 msgid "Panama Canal Zone"
 msgstr "Panama Canal Zone"
 
-#: us/us_states.py:107
+#: us/us_states.py:108
 msgid "Philippine Islands"
 msgstr "Philippine Islands"
 
-#: us/us_states.py:109
+#: us/us_states.py:110
 msgid "Trust Territory of the Pacific Islands"
 msgstr "Trust Territory of the Pacific Islands"
 
@@ -9838,143 +9982,143 @@ msgstr "Masukkan nomor CI yang valid."
 
 #: ve/ve_region.py:9
 msgid "Región Capital"
-msgstr ""
+msgstr "Región Capital"
 
 #: ve/ve_region.py:10
 msgid "Región Central"
-msgstr ""
+msgstr "Región Central"
 
 #: ve/ve_region.py:11
 msgid "Región de los Llanos"
-msgstr ""
+msgstr "Región de los Llanos"
 
 #: ve/ve_region.py:12
 msgid "Región Centro Occidental"
-msgstr ""
+msgstr "Región Centro Occidental"
 
 #: ve/ve_region.py:13
 msgid "Región Zuliana"
-msgstr ""
+msgstr "Región Zuliana"
 
 #: ve/ve_region.py:14
 msgid "Región de los Andes"
-msgstr ""
+msgstr "Región de los Andes"
 
 #: ve/ve_region.py:15
 msgid "Región Nor-Oriental"
-msgstr ""
+msgstr "Región Nor-Oriental"
 
 #: ve/ve_region.py:16
 msgid "Región Insular"
-msgstr ""
+msgstr "Región Insular"
 
 #: ve/ve_region.py:17
 msgid "Región Guayana"
-msgstr ""
+msgstr "Región Guayana"
 
 #: ve/ve_region.py:18
 msgid "Región Sur Occidental"
-msgstr ""
+msgstr "Región Sur Occidental"
 
 #: ve/ve_states.py:9
 msgid "Amazonas"
-msgstr ""
+msgstr "Amazonas"
 
 #: ve/ve_states.py:10
 msgid "Anzoátegui"
-msgstr ""
+msgstr "Anzoátegui"
 
 #: ve/ve_states.py:11
 msgid "Apure"
-msgstr ""
+msgstr "Apure"
 
 #: ve/ve_states.py:12
 msgid "Aragua"
-msgstr ""
+msgstr "Aragua"
 
 #: ve/ve_states.py:13
 msgid "Barinas"
-msgstr ""
+msgstr "Barinas"
 
 #: ve/ve_states.py:14
 msgid "Bolívar"
-msgstr ""
+msgstr "Bolívar"
 
 #: ve/ve_states.py:15
 msgid "Carabobo"
-msgstr ""
+msgstr "Carabobo"
 
 #: ve/ve_states.py:16
 msgid "Cojedes"
-msgstr ""
+msgstr "Cojedes"
 
 #: ve/ve_states.py:17
 msgid "Delta Amacuro"
-msgstr ""
+msgstr "Delta Amacuro"
 
 #: ve/ve_states.py:18
 msgid "Dependencias Federales"
-msgstr ""
+msgstr "Dependencias Federales"
 
 #: ve/ve_states.py:19
 msgid "Distrito Capital"
-msgstr ""
+msgstr "Distrito Capital"
 
 #: ve/ve_states.py:20
 msgid "Falcón"
-msgstr ""
+msgstr "Falcón"
 
 #: ve/ve_states.py:21
 msgid "Guárico"
-msgstr ""
+msgstr "Guárico"
 
 #: ve/ve_states.py:22
 msgid "Lara"
-msgstr ""
+msgstr "Lara"
 
 #: ve/ve_states.py:23
 msgid "Mérida"
-msgstr ""
+msgstr "Mérida"
 
 #: ve/ve_states.py:24
 msgid "Miranda"
-msgstr ""
+msgstr "Miranda"
 
 #: ve/ve_states.py:25
 msgid "Monagas"
-msgstr ""
+msgstr "Monagas"
 
 #: ve/ve_states.py:26
 msgid "Nueva Esparta"
-msgstr ""
+msgstr "Nueva Esparta"
 
 #: ve/ve_states.py:27
 msgid "Portuguesa"
-msgstr ""
+msgstr "Portuguesa"
 
 #: ve/ve_states.py:28
 msgid "Sucre"
-msgstr ""
+msgstr "Sucre"
 
 #: ve/ve_states.py:29
 msgid "Táchira"
-msgstr ""
+msgstr "Táchira"
 
 #: ve/ve_states.py:30
 msgid "Trujillo"
-msgstr ""
+msgstr "Trujillo"
 
 #: ve/ve_states.py:31
 msgid "Vargas"
-msgstr ""
+msgstr "Vargas"
 
 #: ve/ve_states.py:32
 msgid "Yaracuy"
-msgstr ""
+msgstr "Yaracuy"
 
 #: ve/ve_states.py:33
 msgid "Zulia"
-msgstr ""
+msgstr "Zulia"
 
 #: za/forms.py:26
 msgid "Enter a valid South African ID number"

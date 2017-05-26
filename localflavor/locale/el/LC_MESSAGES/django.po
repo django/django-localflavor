@@ -8,12 +8,14 @@
 # Nick Mavrakis <mavrakis.n@gmail.com>, 2016
 # Pãnoș <panos.laganakos@gmail.com>, 2016
 # Yorgos Pagles <y.pagles@gmail.com>, 2011
+# Γιώργος Μηντζιλώνης, 2017
+# Γιώργος Μηντζιλώνης, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-03 18:38+0100\n"
-"PO-Revision-Date: 2017-01-04 09:42+0000\n"
+"POT-Creation-Date: 2017-05-19 13:00+0200\n"
+"PO-Revision-Date: 2017-05-19 14:05+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Greek (http://www.transifex.com/django/django-localflavor/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -144,15 +146,15 @@ msgstr "Μη έγκυρος νόμιμος τύπος. Ο τύπος πρέπε�
 
 #: ar/forms.py:149
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
-msgstr ""
+msgstr "Εισάγετε ένα έγκυρο CBU σε XXXXXXXXXXXXXXXXXXXXXX μορφή."
 
 #: ar/forms.py:150 ar/forms.py:151
 msgid "CBU must be exactly 22 digits long."
-msgstr ""
+msgstr "Το CBU πρέπει να είναι ακριβώς 22 ψηφία."
 
 #: ar/forms.py:152
 msgid "Invalid CBU."
-msgstr ""
+msgstr "Μη έγκυρο CBU."
 
 #: at/at_states.py:6
 msgid "Burgenland"
@@ -202,33 +204,41 @@ msgstr "Εισάγετε έναν έγκυρο αυστριακό Αριθμό �
 msgid "Enter a 4 digit postcode."
 msgstr "Εισάγετε έναν 4-ψήφιο ταχυδρομικό κώδικα."
 
-#: au/models.py:17
+#: au/models.py:18
 msgid "Australian State"
 msgstr "Αυστραλιανή Περιφέρεια"
 
-#: au/models.py:37
+#: au/models.py:38
 msgid "Australian Postcode"
 msgstr "Αυστραλιανός Ταχυδρομικός Κώδικας"
 
-#: au/models.py:52
+#: au/models.py:53
 msgid "Australian Phone number"
 msgstr "Αυστραλιανός Τηλεφωνικός αριθμός"
 
-#: au/models.py:71
+#: au/models.py:72
 msgid "Australian Business Number"
+msgstr "Αυστραλιανός Αριθμός Επιχείρησης "
+
+#: au/models.py:102
+msgid "Australian Company Number"
 msgstr ""
 
-#: au/models.py:105
+#: au/models.py:136
 msgid "Australian Tax File Number"
-msgstr ""
+msgstr "Αυστραλιανός Αριθμός Φορολογικού Αρχείου"
 
 #: au/validators.py:16
 msgid "Enter a valid ABN."
-msgstr ""
+msgstr "Εισάγετε ένα έγκυρο ABN."
 
 #: au/validators.py:61
-msgid "Enter a valid TFN."
+msgid "Enter a valid ACN."
 msgstr ""
+
+#: au/validators.py:105
+msgid "Enter a valid TFN."
+msgstr "Εισάγετε ένα έγκυρο TFN."
 
 #: be/be_provinces.py:5
 msgid "Antwerp"
@@ -299,11 +309,11 @@ msgstr "Εισάγετε έναν έγκυρο αριθμό τηλεφώνου �
 
 #: bg/validators.py:34
 msgid "The EGN is not valid"
-msgstr ""
+msgstr "Το EGN δεν είναι έγκυρο"
 
 #: bg/validators.py:45
 msgid "EIK/BULSTAT is not valid"
-msgstr ""
+msgstr "Το EIK/BULSTAT δεν είναι έγκυρο"
 
 #: br/forms.py:32
 msgid "Enter a zip code in the format XXXXX-XXX."
@@ -801,7 +811,7 @@ msgstr "Χόρσολμ"
 
 #: dk/dk_municipalities.py:31 dk/dk_postalcodes.py:692
 msgid "Ishøj"
-msgstr ""
+msgstr "Ishøj"
 
 #: dk/dk_municipalities.py:32
 msgid "København"
@@ -858,7 +868,7 @@ msgstr "Λέμβιγκ"
 
 #: dk/dk_municipalities.py:50
 msgid "Norddjurs"
-msgstr ""
+msgstr "Norddjurs"
 
 #: dk/dk_municipalities.py:51 dk/dk_postalcodes.py:1141
 msgid "Odder"
@@ -894,7 +904,7 @@ msgstr "Στρούερ"
 
 #: dk/dk_municipalities.py:59
 msgid "Syddjurs"
-msgstr ""
+msgstr "Syddjurs"
 
 #: dk/dk_municipalities.py:60 dk/dk_postalcodes.py:1201
 msgid "Viborg"
@@ -910,11 +920,11 @@ msgstr "Μπρόντερσλεβ"
 
 #: dk/dk_municipalities.py:68 dk/dk_postalcodes.py:1282
 msgid "Frederikshavn"
-msgstr ""
+msgstr "Frederikshavn"
 
 #: dk/dk_municipalities.py:69 dk/dk_postalcodes.py:1277
 msgid "Hjørring"
-msgstr ""
+msgstr "Hjørring"
 
 #: dk/dk_municipalities.py:70
 msgid "Jammerbugt"
@@ -938,7 +948,7 @@ msgstr "Ρεμπίλντ"
 
 #: dk/dk_municipalities.py:75 dk/dk_postalcodes.py:1101
 msgid "Thisted"
-msgstr ""
+msgstr "Thisted"
 
 #: dk/dk_municipalities.py:76
 msgid "Vesthimmerland"
@@ -951,7 +961,7 @@ msgstr "Ώλμποργκ"
 
 #: dk/dk_municipalities.py:83 dk/dk_postalcodes.py:837
 msgid "Faxe"
-msgstr ""
+msgstr "Faxe"
 
 #: dk/dk_municipalities.py:84 dk/dk_postalcodes.py:697
 msgid "Greve"
@@ -975,7 +985,7 @@ msgstr "Κόγκε"
 
 #: dk/dk_municipalities.py:89 dk/dk_postalcodes.py:802
 msgid "Lejre"
-msgstr ""
+msgstr "Lejre"
 
 #: dk/dk_municipalities.py:90
 msgid "Lolland"
@@ -987,7 +997,7 @@ msgstr "Νέστβεντ"
 
 #: dk/dk_municipalities.py:92
 msgid "Odsherred"
-msgstr ""
+msgstr "Odsherred"
 
 #: dk/dk_municipalities.py:93 dk/dk_postalcodes.py:776
 #: dk/dk_postalcodes.py:777
@@ -1004,7 +1014,7 @@ msgstr "Σλάγκελσε"
 
 #: dk/dk_municipalities.py:96
 msgid "Solrød"
-msgstr ""
+msgstr "Solrød"
 
 #: dk/dk_municipalities.py:97 dk/dk_postalcodes.py:784
 msgid "Sorø"
@@ -1024,12 +1034,12 @@ msgstr "Άσενς"
 
 #: dk/dk_municipalities.py:106 dk/dk_postalcodes.py:1069
 msgid "Billund"
-msgstr ""
+msgstr "Billund"
 
 #: dk/dk_municipalities.py:107 dk/dk_postalcodes.py:1013
 #: dk/dk_postalcodes.py:1014
 msgid "Esbjerg"
-msgstr ""
+msgstr "Esbjerg"
 
 #: dk/dk_municipalities.py:108 dk/dk_postalcodes.py:1018
 msgid "Fanø"
@@ -1038,11 +1048,11 @@ msgstr "Φάνο"
 #: dk/dk_municipalities.py:109 dk/dk_postalcodes.py:1052
 #: dk/dk_postalcodes.py:1053 dk/dk_postalcodes.py:1056
 msgid "Fredericia"
-msgstr ""
+msgstr "Fredericia"
 
 #: dk/dk_municipalities.py:110
 msgid "Faaborg-Midtfyn"
-msgstr ""
+msgstr "Faaborg-Midtfyn"
 
 #: dk/dk_municipalities.py:111 dk/dk_postalcodes.py:974
 msgid "Haderslev"
@@ -1094,11 +1104,11 @@ msgstr "Βάρντε"
 
 #: dk/dk_municipalities.py:123 dk/dk_postalcodes.py:1001
 msgid "Vejen"
-msgstr ""
+msgstr "Vejen"
 
 #: dk/dk_municipalities.py:124 dk/dk_postalcodes.py:1058
 msgid "Vejle"
-msgstr ""
+msgstr "Vejle"
 
 #: dk/dk_municipalities.py:125
 msgid "Ærø"
@@ -1134,7 +1144,7 @@ msgstr "Σκάνινκγ"
 
 #: dk/dk_postalcodes.py:9
 msgid "Høje Taastrup"
-msgstr ""
+msgstr "Høje Taastrup"
 
 #: dk/dk_postalcodes.py:10 dk/dk_postalcodes.py:16 dk/dk_postalcodes.py:17
 #: dk/dk_postalcodes.py:21 dk/dk_postalcodes.py:23
@@ -1163,19 +1173,19 @@ msgstr "Δήμος"
 
 #: dk/dk_postalcodes.py:18
 msgid "Københavns Pakkecenter"
-msgstr ""
+msgstr "Københavns Pakkecenter"
 
 #: dk/dk_postalcodes.py:19
 msgid "Københavns Pakke BRC"
-msgstr ""
+msgstr "Københavns Pakke BRC"
 
 #: dk/dk_postalcodes.py:20
 msgid "Returprint BRC"
-msgstr ""
+msgstr "Returprint BRC"
 
 #: dk/dk_postalcodes.py:22
 msgid "Internationalt Postcenter"
-msgstr ""
+msgstr "Internationalt Postcenter"
 
 #: dk/dk_postalcodes.py:24 dk/dk_postalcodes.py:25 dk/dk_postalcodes.py:26
 #: dk/dk_postalcodes.py:27 dk/dk_postalcodes.py:28 dk/dk_postalcodes.py:29
@@ -1368,11 +1378,11 @@ msgstr "Κοπεγχάγη V"
 
 #: dk/dk_postalcodes.py:384
 msgid "Returpost"
-msgstr ""
+msgstr "Returpost"
 
 #: dk/dk_postalcodes.py:385
 msgid "Centraltastning"
-msgstr ""
+msgstr "Centraltastning"
 
 #: dk/dk_postalcodes.py:571 dk/dk_postalcodes.py:572 dk/dk_postalcodes.py:573
 #: dk/dk_postalcodes.py:574 dk/dk_postalcodes.py:575 dk/dk_postalcodes.py:576
@@ -1419,7 +1429,7 @@ msgstr "Κοπεγχάγη Ø"
 
 #: dk/dk_postalcodes.py:680
 msgid "Nordhavn"
-msgstr ""
+msgstr "Nordhavn"
 
 #: dk/dk_postalcodes.py:681
 msgid "København N"
@@ -1427,7 +1437,7 @@ msgstr "Κοπεγχάγη N"
 
 #: dk/dk_postalcodes.py:682
 msgid "København S"
-msgstr ""
+msgstr "København S"
 
 #: dk/dk_postalcodes.py:683
 msgid "København NV"
@@ -1447,7 +1457,7 @@ msgstr "Τάαστρουπ"
 
 #: dk/dk_postalcodes.py:693
 msgid "Hedehusene"
-msgstr ""
+msgstr "Hedehusene"
 
 #: dk/dk_postalcodes.py:695
 msgid "Brøndby Strand"
@@ -1467,11 +1477,11 @@ msgstr "Κάρλσλουντ"
 
 #: dk/dk_postalcodes.py:700
 msgid "Brønshøj"
-msgstr ""
+msgstr "Brønshøj"
 
 #: dk/dk_postalcodes.py:701
 msgid "Vanløse"
-msgstr ""
+msgstr "Vanløse"
 
 #: dk/dk_postalcodes.py:703
 msgid "Skovlunde"
@@ -1519,11 +1529,11 @@ msgstr "Μπάγκσβερντ"
 
 #: dk/dk_postalcodes.py:717
 msgid "Hellerup"
-msgstr ""
+msgstr "Hellerup"
 
 #: dk/dk_postalcodes.py:718
 msgid "Charlottenlund"
-msgstr ""
+msgstr "Charlottenlund"
 
 #: dk/dk_postalcodes.py:719
 msgid "Klampenborg"
@@ -1583,15 +1593,15 @@ msgstr "Χέλεμπεκ"
 
 #: dk/dk_postalcodes.py:735
 msgid "Helsinge"
-msgstr ""
+msgstr "Helsinge"
 
 #: dk/dk_postalcodes.py:736
 msgid "Vejby"
-msgstr ""
+msgstr "Vejby"
 
 #: dk/dk_postalcodes.py:737
 msgid "Tisvildeleje"
-msgstr ""
+msgstr "Tisvildeleje"
 
 #: dk/dk_postalcodes.py:738
 msgid "Græsted"
@@ -1599,7 +1609,7 @@ msgstr "Γκρέστεντ"
 
 #: dk/dk_postalcodes.py:739
 msgid "Gilleleje"
-msgstr ""
+msgstr "Gilleleje"
 
 #: dk/dk_postalcodes.py:740
 msgid "Frederiksværk"
@@ -1611,15 +1621,15 @@ msgstr "Όλστεντ"
 
 #: dk/dk_postalcodes.py:742
 msgid "Skævinge"
-msgstr ""
+msgstr "Skævinge"
 
 #: dk/dk_postalcodes.py:743
 msgid "Gørløse"
-msgstr ""
+msgstr "Gørløse"
 
 #: dk/dk_postalcodes.py:744
 msgid "Liseleje"
-msgstr ""
+msgstr "Liseleje"
 
 #: dk/dk_postalcodes.py:745
 msgid "Melby"
@@ -1639,7 +1649,7 @@ msgstr "Κβίστγκαρντ"
 
 #: dk/dk_postalcodes.py:752
 msgid "Værløse"
-msgstr ""
+msgstr "Værløse"
 
 #: dk/dk_postalcodes.py:753
 msgid "Farum"
@@ -1659,19 +1669,19 @@ msgstr "Τζέγκερσπρις"
 
 #: dk/dk_postalcodes.py:758
 msgid "Ølstykke"
-msgstr ""
+msgstr "Ølstykke"
 
 #: dk/dk_postalcodes.py:759
 msgid "Stenløse"
-msgstr ""
+msgstr "Stenløse"
 
 #: dk/dk_postalcodes.py:760
 msgid "Veksø Sjælland"
-msgstr ""
+msgstr "Veksø Sjælland"
 
 #: dk/dk_postalcodes.py:761
 msgid "Rønne"
-msgstr ""
+msgstr "Rønne"
 
 #: dk/dk_postalcodes.py:762
 msgid "Aakirkeby"
@@ -1679,23 +1689,23 @@ msgstr "Ωκίρκεμπι"
 
 #: dk/dk_postalcodes.py:763
 msgid "Nexø"
-msgstr ""
+msgstr "Nexø"
 
 #: dk/dk_postalcodes.py:764
 msgid "Svaneke"
-msgstr ""
+msgstr "Svaneke"
 
 #: dk/dk_postalcodes.py:765
 msgid "Østermarie"
-msgstr ""
+msgstr "Østermarie"
 
 #: dk/dk_postalcodes.py:766
 msgid "Gudhjem"
-msgstr ""
+msgstr "Gudhjem"
 
 #: dk/dk_postalcodes.py:767
 msgid "Allinge"
-msgstr ""
+msgstr "Allinge"
 
 #: dk/dk_postalcodes.py:768
 msgid "Klemensker"
@@ -1703,187 +1713,187 @@ msgstr "Κλεμένσκερ"
 
 #: dk/dk_postalcodes.py:769
 msgid "Hasle"
-msgstr ""
+msgstr "Hasle"
 
 #: dk/dk_postalcodes.py:771
 msgid "Tune"
-msgstr ""
+msgstr "Tune"
 
 #: dk/dk_postalcodes.py:772
 msgid "Jyllinge"
-msgstr ""
+msgstr "Jyllinge"
 
 #: dk/dk_postalcodes.py:773
 msgid "Skibby"
-msgstr ""
+msgstr "Skibby"
 
 #: dk/dk_postalcodes.py:774
 msgid "Kirke Såby"
-msgstr ""
+msgstr "Kirke Såby"
 
 #: dk/dk_postalcodes.py:775
 msgid "Kirke Hyllinge"
-msgstr ""
+msgstr "Kirke Hyllinge"
 
 #: dk/dk_postalcodes.py:778
 msgid "Viby Sjælland"
-msgstr ""
+msgstr "Viby Sjælland"
 
 #: dk/dk_postalcodes.py:779
 msgid "Borup"
-msgstr ""
+msgstr "Borup"
 
 #: dk/dk_postalcodes.py:780
 msgid "Herlufmagle"
-msgstr ""
+msgstr "Herlufmagle"
 
 #: dk/dk_postalcodes.py:781
 msgid "Glumsø"
-msgstr ""
+msgstr "Glumsø"
 
 #: dk/dk_postalcodes.py:782
 msgid "Fjenneslev"
-msgstr ""
+msgstr "Fjenneslev"
 
 #: dk/dk_postalcodes.py:783
 msgid "Jystrup Midtsj"
-msgstr ""
+msgstr "Jystrup Midtsj"
 
 #: dk/dk_postalcodes.py:785
 msgid "Munke Bjergby"
-msgstr ""
+msgstr "Munke Bjergby"
 
 #: dk/dk_postalcodes.py:787
 msgid "Korsør"
-msgstr ""
+msgstr "Korsør"
 
 #: dk/dk_postalcodes.py:788
 msgid "Skælskør"
-msgstr ""
+msgstr "Skælskør"
 
 #: dk/dk_postalcodes.py:789
 msgid "Vemmelev"
-msgstr ""
+msgstr "Vemmelev"
 
 #: dk/dk_postalcodes.py:790
 msgid "Boeslunde"
-msgstr ""
+msgstr "Boeslunde"
 
 #: dk/dk_postalcodes.py:791
 msgid "Rude"
-msgstr ""
+msgstr "Rude"
 
 #: dk/dk_postalcodes.py:792
 msgid "Fuglebjerg"
-msgstr ""
+msgstr "Fuglebjerg"
 
 #: dk/dk_postalcodes.py:793
 msgid "Dalmose"
-msgstr ""
+msgstr "Dalmose"
 
 #: dk/dk_postalcodes.py:794
 msgid "Sandved"
-msgstr ""
+msgstr "Sandved"
 
 #: dk/dk_postalcodes.py:795
 msgid "Høng"
-msgstr ""
+msgstr "Høng"
 
 #: dk/dk_postalcodes.py:796
 msgid "Gørlev"
-msgstr ""
+msgstr "Gørlev"
 
 #: dk/dk_postalcodes.py:797
 msgid "Ruds Vedby"
-msgstr ""
+msgstr "Ruds Vedby"
 
 #: dk/dk_postalcodes.py:798
 msgid "Dianalund"
-msgstr ""
+msgstr "Dianalund"
 
 #: dk/dk_postalcodes.py:799
 msgid "Stenlille"
-msgstr ""
+msgstr "Stenlille"
 
 #: dk/dk_postalcodes.py:800
 msgid "Nyrup"
-msgstr ""
+msgstr "Nyrup"
 
 #: dk/dk_postalcodes.py:803
 msgid "Hvalsø"
-msgstr ""
+msgstr "Hvalsø"
 
 #: dk/dk_postalcodes.py:804
 msgid "Tølløse"
-msgstr ""
+msgstr "Tølløse"
 
 #: dk/dk_postalcodes.py:805
 msgid "Ugerløse"
-msgstr ""
+msgstr "Ugerløse"
 
 #: dk/dk_postalcodes.py:806
 msgid "Kirke Eskilstrup"
-msgstr ""
+msgstr "Kirke Eskilstrup"
 
 #: dk/dk_postalcodes.py:807
 msgid "Store Merløse"
-msgstr ""
+msgstr "Store Merløse"
 
 #: dk/dk_postalcodes.py:808
 msgid "Vipperød"
-msgstr ""
+msgstr "Vipperød"
 
 #: dk/dk_postalcodes.py:810
 msgid "Regstrup"
-msgstr ""
+msgstr "Regstrup"
 
 #: dk/dk_postalcodes.py:811
 msgid "Mørkøv"
-msgstr ""
+msgstr "Mørkøv"
 
 #: dk/dk_postalcodes.py:812
 msgid "Jyderup"
-msgstr ""
+msgstr "Jyderup"
 
 #: dk/dk_postalcodes.py:813
 msgid "Snertinge"
-msgstr ""
+msgstr "Snertinge"
 
 #: dk/dk_postalcodes.py:814
 msgid "Svebølle"
-msgstr ""
+msgstr "Svebølle"
 
 #: dk/dk_postalcodes.py:815
 msgid "Store Fuglede"
-msgstr ""
+msgstr "Store Fuglede"
 
 #: dk/dk_postalcodes.py:816
 msgid "Jerslev Sjælland"
-msgstr ""
+msgstr "Jerslev Sjællan"
 
 #: dk/dk_postalcodes.py:817
 msgid "Nykøbing Sj"
-msgstr ""
+msgstr "Nykøbing Sj"
 
 #: dk/dk_postalcodes.py:818
 msgid "Svinninge"
-msgstr ""
+msgstr "Svinninge"
 
 #: dk/dk_postalcodes.py:819
 msgid "Gislinge"
-msgstr ""
+msgstr "Gislinge"
 
 #: dk/dk_postalcodes.py:820
 msgid "Hørve"
-msgstr ""
+msgstr "Hørve"
 
 #: dk/dk_postalcodes.py:821
 msgid "Fårevejle"
-msgstr ""
+msgstr "Fårevejle"
 
 #: dk/dk_postalcodes.py:822
 msgid "Asnæs"
-msgstr ""
+msgstr "Asnæs"
 
 #: dk/dk_postalcodes.py:823
 msgid "Vig"
@@ -4167,11 +4177,11 @@ msgstr ""
 
 #: dk/forms.py:17
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
+msgstr "Εισάγετε έναν έγκυρο ταχυδρομικό κώδικα της μορφής XXXX."
 
-#: dk/forms.py:47 no/forms.py:109
+#: dk/forms.py:47 no/forms.py:173
 msgid "A phone number must be 8 digits and may have country code"
-msgstr ""
+msgstr "Ένας τηλεφωνικός αριθμός πρέπει να είναι 8 ψηφία και ενδέχεται να έχει τον κωδικό χώρας"
 
 #: ec/models.py:14
 msgid "Ecuadorian province"
@@ -4239,19 +4249,19 @@ msgstr ""
 
 #: ee/forms.py:47
 msgid "Enter an 11-digit Estonian personal identification code."
-msgstr ""
+msgstr "Εισάγετε έναν 11-ψήφιο Εσθονικό προσωπικό κωδικό αναγνώρισης."
 
 #: ee/forms.py:48
 msgid "Enter a valid Estonian personal identification code."
-msgstr ""
+msgstr "Εισάγετε έναν έγκυρο Εσθονικό προσωπικό κωδικό αναγνώρισης."
 
 #: ee/forms.py:101
 msgid "Enter an 8-digit Estonian business registry code."
-msgstr ""
+msgstr "Εισάγετε έναν 8-ψήφιο Εσθονικό εμπορικό κωδικό μητρώου."
 
 #: ee/forms.py:102
 msgid "Enter a valid Estonian business registry code."
-msgstr ""
+msgstr "Εισάγετε έναν έγκυρο Εσθονικό εμπορικό κωδικό μητρώου."
 
 #: es/es_provinces.py:6
 msgid "Araba"
@@ -4572,7 +4582,7 @@ msgstr "Ταχυδρομικός κώδικας"
 msgid "Phone numbers must be in 0X XX XX XX XX format."
 msgstr "Οι αριθμοί τηλεφώνου πρέπει να είναι σε μορφή 0X XX XX XX XX."
 
-#: fr/forms.py:60 us/models.py:90
+#: fr/forms.py:60 us/models.py:91
 msgid "Phone number"
 msgstr "Αριθμός τηλεφώνου"
 
@@ -5915,7 +5925,7 @@ msgstr "Εισάγετε έναν έγκυρο ταχυδρομικό κώδικ
 msgid "Enter a valid Tax code."
 msgstr "Εισάγετε έναν έγκυρο κωδικό Φόρου."
 
-#: it/forms.py:106
+#: it/forms.py:106 ua/forms.py:31
 msgid "Enter a valid VAT number."
 msgstr "Πληκτρολογήστε έναν έγκυρο αριθμό ΦΠΑ."
 
@@ -7683,11 +7693,11 @@ msgstr "Μη έγκυρο άθροισμα ελέγχου για το RFC."
 
 #: mx/forms.py:182
 msgid "Enter a valid CLABE."
-msgstr ""
+msgstr "Εισάγετε ένα έγκυρο CLABE."
 
 #: mx/forms.py:183
 msgid "Invalid checksum for CLABE."
-msgstr ""
+msgstr "Μη έγκυρο άθροισμα ελέγχου για το CLABE."
 
 #: mx/forms.py:238
 msgid "Enter a valid CURP."
@@ -7719,7 +7729,7 @@ msgstr "Μεξικάνικο RFC"
 
 #: mx/models.py:65
 msgid "Mexican CLABE"
-msgstr ""
+msgstr "Μεξικανικό CLABE"
 
 #: mx/models.py:80
 msgid "Mexican CURP"
@@ -7859,19 +7869,19 @@ msgstr "Σακατέκας"
 
 #: nl/models.py:23
 msgid "Dutch zipcode"
-msgstr ""
+msgstr "Ολλανδικός ταχυδρομικός κώδικας"
 
-#: nl/models.py:51
+#: nl/models.py:52
 msgid "Dutch province"
-msgstr ""
+msgstr "Ολλανδέζικη επαρχία"
 
-#: nl/models.py:75
+#: nl/models.py:76
 msgid "Dutch social security number (SoFi)"
-msgstr ""
+msgstr "Ολλανδέζικο αριθμός κοινωνικής ασφάλισης (SoFi)"
 
-#: nl/models.py:98
+#: nl/models.py:99
 msgid "Dutch phone number"
-msgstr ""
+msgstr "Ολλανδέζικος τηλεφωνικός αριθμός"
 
 #: nl/nl_provinces.py:8
 msgid "Drenthe"
@@ -7919,19 +7929,31 @@ msgstr "Νότια Ολλανδία"
 
 #: nl/validators.py:40
 msgid "Enter a valid SoFi number."
-msgstr ""
+msgstr "Εισάγετε έναν έγκυρο SoFi αριθμό."
 
 #: nl/validators.py:101
 msgid "Enter a valid bank account number."
-msgstr ""
+msgstr "Εισάγετε έναν έγκυρο αριθμό τράπεζα."
 
 #: nl/validators.py:102
 msgid "Bank account numbers have 1 - 7, 9 or 10 digits."
-msgstr ""
+msgstr "Αριθμοί λογαριασμών τραπέζης έχουν ψηφία 1-7, 9 ή 10."
 
 #: no/forms.py:45
 msgid "Enter a valid Norwegian social security number."
 msgstr "Εισάγετε έναν έγκυρο νορβηγικό αριθμό κοινωνικής ασφάλισης."
+
+#: no/forms.py:121
+msgid "Enter a valid Norwegian bank account number."
+msgstr ""
+
+#: no/forms.py:122
+msgid "Invalid control digit. Enter a valid Norwegian bank account number."
+msgstr ""
+
+#: no/forms.py:123
+msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
+msgstr ""
 
 #: nz/forms.py:58
 msgid "Invalid post code."
@@ -7947,15 +7969,15 @@ msgstr "Μη έγκυρος αριθμός τραπεζικού λογαριασ
 
 #: nz/nz_councils.py:31
 msgid "Far North District"
-msgstr ""
+msgstr "Βόρεια Περιφέρεια Άπω"
 
 #: nz/nz_councils.py:32
 msgid "Whangarei District"
-msgstr ""
+msgstr "Περιφέρεια  Whangarei"
 
 #: nz/nz_councils.py:33
 msgid "Kaipara District"
-msgstr ""
+msgstr "Περιφέρεια Kaipara"
 
 #: nz/nz_councils.py:34 nz/nz_provinces.py:20 nz/nz_regions.py:16
 msgid "Auckland"
@@ -7963,7 +7985,7 @@ msgstr "Ώκλαντ"
 
 #: nz/nz_councils.py:35
 msgid "Thames-Coromandel District"
-msgstr ""
+msgstr "Περιφέρεια Thames-Coromandel"
 
 #: nz/nz_councils.py:36
 msgid "Hauraki District"
@@ -8289,15 +8311,15 @@ msgstr "Εισάγετε έναν 5-ψήφιο ταχυδρομικό κώδικ
 msgid "Phone numbers must contain 9, 10 or 11 digits."
 msgstr "Οι τηλεφωνικοί αριθμοί πρέπει να περιέχουν 9, 10 ή 11 ψηφία."
 
-#: pk/models.py:16
+#: pk/models.py:17
 msgid "Pakistani State"
 msgstr "Πακιστάν"
 
-#: pk/models.py:36
+#: pk/models.py:37
 msgid "Pakistani Postcode"
 msgstr "Πακιστανικός Ταχυδρομικός Κώδικας"
 
-#: pk/models.py:51
+#: pk/models.py:52
 msgid "Pakistani Phone number"
 msgstr "Πακιστανικός Τηλεφωνικός αριθμός"
 
@@ -8563,7 +8585,7 @@ msgstr "Εισάγετε έναν έγκυρο αριθμό CNP."
 msgid ""
 "Phone numbers may only have 7 or 10 digits, except the national short "
 "numbers which have 3 to 6 digits"
-msgstr ""
+msgstr "Οι τηλεφωνικοί αριθμοί μπορούν να έχουν μόνο 7 ή 10 ψηφία, έκτος του εθνικού σύντομου αριθμού που έχει 3 έως 6 ψηφία"
 
 #: ro/forms.py:213
 msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
@@ -8591,27 +8613,27 @@ msgstr "Εισάγετε έναν αριθμό διαβατηρίου στη μ�
 
 #: ru/ru_regions.py:6
 msgid "Central Federal County"
-msgstr ""
+msgstr "Κεντρική Ομοσπονδιακή Κομητεία."
 
 #: ru/ru_regions.py:7
 msgid "South Federal County"
-msgstr ""
+msgstr "Νότια Ομοσπονδιακή Κομητεία"
 
 #: ru/ru_regions.py:8
 msgid "North-West Federal County"
-msgstr ""
+msgstr "Βορειοδυτική Ομοσπονδιακή Κομητεία"
 
 #: ru/ru_regions.py:9
 msgid "Far-East Federal County"
-msgstr ""
+msgstr "Άπω Ανατολή Ομοσπονδιακή Κομητεία"
 
 #: ru/ru_regions.py:10
 msgid "Siberian Federal County"
-msgstr ""
+msgstr "Σιβηρική Ομοσπονδιακή Κομητεία"
 
 #: ru/ru_regions.py:11
 msgid "Ural Federal County"
-msgstr ""
+msgstr "Ουαλική Ομοσπονδιακή Κομητεία "
 
 #: ru/ru_regions.py:12
 msgid "Privolzhsky Federal County"
@@ -8619,7 +8641,7 @@ msgstr ""
 
 #: ru/ru_regions.py:13
 msgid "North-Caucasian Federal County"
-msgstr ""
+msgstr "Βόρειο-Καύκασος Ομοσπονδιακή Κομητεία"
 
 #: ru/ru_regions.py:18
 msgid "Moskva"
@@ -9055,32 +9077,32 @@ msgstr ""
 
 #: sg/forms.py:31
 msgid "Enter a 6-digit postal code."
-msgstr ""
+msgstr "Εισάγετε τον 6-ψήφιο ταχυδρομικό κώδικα "
 
 #: sg/forms.py:46
 msgid ""
 "Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
+msgstr "Ο αριθμός τηλεφώνου πρέπει να περιέχει 8 ψηφία και να ξεκινάει με ή 6, ή 8, ή 9"
 
 #: sg/forms.py:84
 msgid "Invalid NRIC/FIN."
-msgstr ""
+msgstr "Μη έγκυρο NRIC/FIN."
 
 #: si/forms.py:27
 msgid "The first 7 digits of the EMSO must represent a valid past date."
-msgstr ""
+msgstr "Τα πρώτα 7 ψηφία του EMSO πρέπει να παρουσιάζουν μία έγκυρη περασμένη ημερομηνία."
 
 #: si/forms.py:28
 msgid "The EMSO is not valid."
-msgstr ""
+msgstr "Το EMSO δεν είναι έγκυρο."
 
 #: si/forms.py:95
 msgid "Enter a valid tax number in form SIXXXXXXXX"
-msgstr ""
+msgstr "Εισάγετε έναν έγκυρο φορολογικό αριθμό της μορφής SIXXXXXXXX"
 
 #: si/forms.py:160
 msgid "Enter phone number in form +386XXXXXXXX or 0XXXXXXXX."
-msgstr ""
+msgstr "Εισάγετε ένα τηλεφωνικό αριθμό της μορφής +386XXXXXXXX ή 0XXXXXXXX."
 
 #: sk/sk_districts.py:5
 msgid "Banska Bystrica"
@@ -9534,6 +9556,130 @@ msgstr "Εισάγετε ένα έγκυρο τουρκικό αριθμός τ�
 msgid "Turkish Identification number must be 11 digits."
 msgstr "Ο Τουρκικός αριθμός ταυτότητας είναι 11 ψηφία."
 
+#: ua/forms.py:55
+msgid "Enter a valid postal code."
+msgstr ""
+
+#: ua/models.py:18
+msgid "Ukrainian region"
+msgstr ""
+
+#: ua/models.py:41
+msgid "Ukrainian VAT number"
+msgstr ""
+
+#: ua/models.py:59
+msgid "Ukrainian postal code"
+msgstr ""
+
+#: ua/ua_regions.py:6
+msgid "Cherkasy Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:7
+msgid "Chernihiv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:8
+msgid "Chernivtsi Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:9
+msgid "Dnipropetrovsk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:10
+msgid "Donetsk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:11
+msgid "Ivano-Frankivsk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:12
+msgid "Kharkiv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:13
+msgid "Kherson Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:14
+msgid "Khmelnytskyi Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:15
+msgid "Kirovohrad Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:16
+msgid "Kiev Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:17
+msgid "Luhansk Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:18
+msgid "Lviv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:19
+msgid "Mykolaiv Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:20
+msgid "Odessa Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:21
+msgid "Poltava Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:22
+msgid "Rivne Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:23
+msgid "Sumy Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:24
+msgid "Ternopil Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:25
+msgid "Vinnytsia Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:26
+msgid "Volyn Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:27
+msgid "Zakarpattia Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:28
+msgid "Zaporizhia Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:29
+msgid "Zhytomyr Oblast"
+msgstr ""
+
+#: ua/ua_regions.py:30
+msgid "Autonomous Republic of Crimea"
+msgstr ""
+
+#: ua/ua_regions.py:31
+msgid "Kiev"
+msgstr ""
+
+#: ua/ua_regions.py:32
+msgid "Sevastopol"
+msgstr ""
+
 #: us/forms.py:36
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr "Πληκτρολογήστε έναν ταχυδρομικό κώδικα σε μορφή XXXXX ή XXXXX-XXXX."
@@ -9542,290 +9688,290 @@ msgstr "Πληκτρολογήστε έναν ταχυδρομικό κώδικ�
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr "Εισάγετε έναν έγκυρο αριθμό Κοινωνικής Ασφάλισης Η.Π.Α με μορφή XXX-XX-XXXX."
 
-#: us/forms.py:119
+#: us/forms.py:120
 msgid "Enter a U.S. state or territory."
 msgstr "Εισάγετε μια πολιτεία των Η.Π.Α. ή επικράτεια."
 
-#: us/models.py:18
+#: us/models.py:19
 msgid "U.S. state (two uppercase letters)"
 msgstr "Πολιτεία ΗΠΑ. (δύο κεφαλαία γράμματα)"
 
-#: us/models.py:43
+#: us/models.py:44
 msgid "U.S. postal code (two uppercase letters)"
 msgstr "Ταχυδρομικός κώδικας Η.Π.Α. (δύο κεφαλαία γράμματα)"
 
-#: us/models.py:71
+#: us/models.py:72
 msgid "U.S. ZIP code"
 msgstr ""
 
-#: us/models.py:111
+#: us/models.py:112
 msgid "Social security number"
 msgstr ""
 
-#: us/us_states.py:20
+#: us/us_states.py:21
 msgid "Alabama"
 msgstr ""
 
-#: us/us_states.py:21
+#: us/us_states.py:22
 msgid "Arizona"
 msgstr ""
 
-#: us/us_states.py:22
+#: us/us_states.py:23
 msgid "Arkansas"
 msgstr ""
 
-#: us/us_states.py:23
+#: us/us_states.py:24
 msgid "California"
 msgstr ""
 
-#: us/us_states.py:24
+#: us/us_states.py:25
 msgid "Colorado"
 msgstr ""
 
-#: us/us_states.py:25
+#: us/us_states.py:26
 msgid "Connecticut"
 msgstr ""
 
-#: us/us_states.py:26
+#: us/us_states.py:27
 msgid "Delaware"
 msgstr ""
 
-#: us/us_states.py:27
+#: us/us_states.py:28
 msgid "District of Columbia"
 msgstr ""
 
-#: us/us_states.py:28
+#: us/us_states.py:29
 msgid "Florida"
 msgstr ""
 
-#: us/us_states.py:29
+#: us/us_states.py:30
 msgctxt "US state"
 msgid "Georgia"
 msgstr ""
 
-#: us/us_states.py:30
+#: us/us_states.py:31
 msgid "Idaho"
 msgstr ""
 
-#: us/us_states.py:31
+#: us/us_states.py:32
 msgid "Illinois"
 msgstr ""
 
-#: us/us_states.py:32
+#: us/us_states.py:33
 msgid "Indiana"
 msgstr ""
 
-#: us/us_states.py:33
+#: us/us_states.py:34
 msgid "Iowa"
 msgstr ""
 
-#: us/us_states.py:34
+#: us/us_states.py:35
 msgid "Kansas"
 msgstr ""
 
-#: us/us_states.py:35
+#: us/us_states.py:36
 msgid "Kentucky"
 msgstr ""
 
-#: us/us_states.py:36
+#: us/us_states.py:37
 msgid "Louisiana"
 msgstr ""
 
-#: us/us_states.py:37
+#: us/us_states.py:38
 msgid "Maine"
 msgstr ""
 
-#: us/us_states.py:38
+#: us/us_states.py:39
 msgid "Maryland"
 msgstr ""
 
-#: us/us_states.py:39
+#: us/us_states.py:40
 msgid "Massachusetts"
 msgstr ""
 
-#: us/us_states.py:40
+#: us/us_states.py:41
 msgid "Michigan"
 msgstr ""
 
-#: us/us_states.py:41
+#: us/us_states.py:42
 msgid "Minnesota"
 msgstr ""
 
-#: us/us_states.py:42
+#: us/us_states.py:43
 msgid "Mississippi"
 msgstr ""
 
-#: us/us_states.py:43
+#: us/us_states.py:44
 msgid "Missouri"
 msgstr ""
 
-#: us/us_states.py:44
+#: us/us_states.py:45
 msgid "Montana"
 msgstr ""
 
-#: us/us_states.py:45
+#: us/us_states.py:46
 msgid "Nebraska"
 msgstr ""
 
-#: us/us_states.py:46
+#: us/us_states.py:47
 msgid "Nevada"
 msgstr ""
 
-#: us/us_states.py:47
+#: us/us_states.py:48
 msgid "New Hampshire"
 msgstr ""
 
-#: us/us_states.py:48
+#: us/us_states.py:49
 msgid "New Jersey"
 msgstr ""
 
-#: us/us_states.py:49
+#: us/us_states.py:50
 msgid "New Mexico"
 msgstr ""
 
-#: us/us_states.py:50
+#: us/us_states.py:51
 msgid "New York"
 msgstr ""
 
-#: us/us_states.py:51
+#: us/us_states.py:52
 msgid "North Carolina"
 msgstr ""
 
-#: us/us_states.py:52
+#: us/us_states.py:53
 msgid "North Dakota"
 msgstr ""
 
-#: us/us_states.py:53
+#: us/us_states.py:54
 msgid "Ohio"
 msgstr ""
 
-#: us/us_states.py:54
+#: us/us_states.py:55
 msgid "Oklahoma"
 msgstr ""
 
-#: us/us_states.py:55
+#: us/us_states.py:56
 msgid "Oregon"
 msgstr ""
 
-#: us/us_states.py:56
+#: us/us_states.py:57
 msgid "Pennsylvania"
 msgstr ""
 
-#: us/us_states.py:57
+#: us/us_states.py:58
 msgid "Rhode Island"
 msgstr ""
 
-#: us/us_states.py:58
+#: us/us_states.py:59
 msgid "South Carolina"
 msgstr ""
 
-#: us/us_states.py:59
+#: us/us_states.py:60
 msgid "South Dakota"
 msgstr ""
 
-#: us/us_states.py:60
+#: us/us_states.py:61
 msgid "Tennessee"
 msgstr ""
 
-#: us/us_states.py:61
+#: us/us_states.py:62
 msgid "Texas"
 msgstr "Τέξας"
 
-#: us/us_states.py:62
+#: us/us_states.py:63
 msgid "Utah"
 msgstr ""
 
-#: us/us_states.py:63
+#: us/us_states.py:64
 msgid "Vermont"
 msgstr ""
 
-#: us/us_states.py:64
+#: us/us_states.py:65
 msgid "Virginia"
 msgstr ""
 
-#: us/us_states.py:65
+#: us/us_states.py:66
 msgid "Washington"
 msgstr ""
 
-#: us/us_states.py:66
+#: us/us_states.py:67
 msgid "West Virginia"
 msgstr ""
 
-#: us/us_states.py:67
+#: us/us_states.py:68
 msgid "Wisconsin"
 msgstr ""
 
-#: us/us_states.py:68
+#: us/us_states.py:69
 msgid "Wyoming"
 msgstr ""
 
-#: us/us_states.py:73
+#: us/us_states.py:74
 msgid "Alaska"
 msgstr "Αλάσκα"
 
-#: us/us_states.py:74
+#: us/us_states.py:75
 msgid "Hawaii"
 msgstr "Χαβάη"
 
-#: us/us_states.py:79
+#: us/us_states.py:80
 msgid "American Samoa"
 msgstr ""
 
-#: us/us_states.py:80
+#: us/us_states.py:81
 msgid "Guam"
 msgstr ""
 
-#: us/us_states.py:81
+#: us/us_states.py:82
 msgid "Northern Mariana Islands"
 msgstr ""
 
-#: us/us_states.py:82
+#: us/us_states.py:83
 msgid "Puerto Rico"
 msgstr ""
 
-#: us/us_states.py:83
+#: us/us_states.py:84
 msgid "Virgin Islands"
 msgstr ""
 
-#: us/us_states.py:89
-msgid "Armed Forces Americas"
-msgstr ""
-
 #: us/us_states.py:90
-msgid "Armed Forces Europe"
-msgstr ""
+msgid "Armed Forces Americas"
+msgstr "Ένοπλες Δυνάμεις Αμερική"
 
 #: us/us_states.py:91
-msgid "Armed Forces Pacific"
-msgstr ""
+msgid "Armed Forces Europe"
+msgstr "Ένοπλες Δυνάμεις Ευρώπης"
 
-#: us/us_states.py:97
-msgid "Federated States of Micronesia"
-msgstr ""
+#: us/us_states.py:92
+msgid "Armed Forces Pacific"
+msgstr "Ένοπλες Δυνάμεις Ειρηνικού"
 
 #: us/us_states.py:98
-msgid "Marshall Islands"
-msgstr ""
+msgid "Federated States of Micronesia"
+msgstr "Ομόσπονδες Πολιτείες της Μικρονησίας"
 
 #: us/us_states.py:99
-msgid "Palau"
-msgstr ""
+msgid "Marshall Islands"
+msgstr "Νήσοι Μάρσαλ"
 
-#: us/us_states.py:105
-msgid "Commonwealth of the Northern Mariana Islands"
-msgstr ""
+#: us/us_states.py:100
+msgid "Palau"
+msgstr "Παλάου"
 
 #: us/us_states.py:106
-msgid "Panama Canal Zone"
-msgstr ""
+msgid "Commonwealth of the Northern Mariana Islands"
+msgstr "Κοινοπολιτεία των Νήσων Βόρειες Μαριάννες"
 
 #: us/us_states.py:107
-msgid "Philippine Islands"
-msgstr ""
+msgid "Panama Canal Zone"
+msgstr "Ζώνη καναλιών του Παναμά"
 
-#: us/us_states.py:109
+#: us/us_states.py:108
+msgid "Philippine Islands"
+msgstr "Νησιά των Φιλιππίνων"
+
+#: us/us_states.py:110
 msgid "Trust Territory of the Pacific Islands"
-msgstr ""
+msgstr "Έδαφος εμπιστοσύνης των Νήσων του Ειρηνικού"
 
 #: uy/forms.py:26
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
@@ -9857,7 +10003,7 @@ msgstr ""
 
 #: ve/ve_region.py:14
 msgid "Región de los Andes"
-msgstr ""
+msgstr "Región de los Andes"
 
 #: ve/ve_region.py:15
 msgid "Región Nor-Oriental"
