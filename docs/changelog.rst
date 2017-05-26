@@ -1,8 +1,7 @@
 Changelog
 =========
 
-
-1.5   (unreleased)
+1.5   (2017-05-26)
 ------------------
 
 New flavors:
