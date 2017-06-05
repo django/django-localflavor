@@ -7,7 +7,7 @@ from django.utils.translation import ugettext as _
 from .choices import PROVINCE_CHOICES, REGION_CHOICES
 from .forms import CUIdentityCardNumberField as CUIdentityCardNumberFormField
 from .forms import CUPhoneNumberField as CUPhoneNumberFormField
-from .forms import CUZipCodeField as CUZipCodeFormField
+from .forms import CUPostalCodeField as CUZipCodeFormField
 
 
 class CURegionField(CharField):
@@ -58,7 +58,7 @@ class CUZipCodeField(CharField):
     """
     A model field for the cuban ZIP code.
 
-    Forms represent it as a ``forms.CUZipCodeField``.
+    Forms represent it as a ``forms.CUPostalCodeField``.
 
     .. versionadded:: 1.6
     """

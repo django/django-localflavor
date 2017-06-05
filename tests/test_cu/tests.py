@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.test import TestCase
 from localflavor.cu.forms import (CUIdentityCardNumberField, CUPhoneNumberField, CUProvinceField, CURegionField,
-                                  CUZipCodeField)
+                                  CUPostalCodeField)
 
 from .forms import CUSomewhereForm
 
@@ -78,7 +78,7 @@ class CULocalFlavorTests(TestCase):
             '200': invalid_format,
             '102003': invalid_format,
         }
-        self.assertFieldOutput(CUZipCodeField, valid, invalid)
+        self.assertFieldOutput(CUPostalCodeField, valid, invalid)
 
     def test_CUIdentityCardNumberField(self):
         invalid_format = ['Enter a valid identity card number in the format XXXXXXXXXXX.']

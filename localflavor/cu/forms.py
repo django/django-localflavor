@@ -95,7 +95,7 @@ class CUProvinceSelect(Select):
         super(CUProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class CUZipCodeField(RegexField):
+class CUPostalCodeField(RegexField):
     """
     A form field for a cuban Zip Code.
 
@@ -111,10 +111,10 @@ class CUZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(CUZipCodeField, self).__init__(r'^[1-9]\d{4}$', *args, **kwargs)
+        super(CUPostalCodeField, self).__init__(r'^[1-9]\d{4}$', *args, **kwargs)
 
     def to_python(self, value):
-        value = super(CUZipCodeField, self).to_python(value)
+        value = super(CUPostalCodeField, self).to_python(value)
         return value.strip()
 
 
