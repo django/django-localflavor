@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.test import TestCase
+
 from localflavor.cu.forms import (CUIdentityCardNumberField, CUPhoneNumberField, CUPostalCodeField, CUProvinceField,
                                   CURegionField)
 
