@@ -5,11 +5,9 @@ from django.db.models import CharField
 from django.utils.translation import ugettext as _
 
 from .choices import PROVINCE_CHOICES, REGION_CHOICES
-from .forms import (
-    CUZipCodeField as CUZipCodeFormField,
-    CUIdentityCardNumberField as CUIdentityCardNumberFormField,
-    CUPhoneNumberField as CUPhoneNumberFormField
-)
+from .forms import CUIdentityCardNumberField as CUIdentityCardNumberFormField
+from .forms import CUPhoneNumberField as CUPhoneNumberFormField
+from .forms import CUZipCodeField as CUZipCodeFormField
 
 
 class CURegionField(CharField):

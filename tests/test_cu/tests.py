@@ -2,10 +2,8 @@
 from __future__ import unicode_literals
 
 from django.test import TestCase
-
-from localflavor.cu.forms import (
-    CURegionField, CUProvinceField, CUZipCodeField, CUIdentityCardNumberField, CUPhoneNumberField
-)
+from localflavor.cu.forms import (CUIdentityCardNumberField, CUPhoneNumberField, CUProvinceField, CURegionField,
+                                  CUZipCodeField)
 
 from .forms import CUSomewhereForm
 

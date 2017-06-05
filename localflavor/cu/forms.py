@@ -5,7 +5,7 @@ import re
 
 from django.core.exceptions import ValidationError
 from django.core.validators import EMPTY_VALUES
-from django.forms import Field, Select, RegexField
+from django.forms import Field, RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext as _
 

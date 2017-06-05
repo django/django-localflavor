@@ -2,10 +2,8 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
-from localflavor.cu.models import (
-    CUProvinceField, CURegionField, CUZipCodeField, CUIdentityCardNumberField, CUPhoneNumberField
-)
+from localflavor.cu.models import (CUIdentityCardNumberField, CUPhoneNumberField, CUProvinceField, CURegionField,
+                                   CUZipCodeField)
 
 
 class CUSomebody(models.Model):

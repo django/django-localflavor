@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django.utils.translation import ugettext_lazy as _
 
-
 #: List of regions, from west to east
 REGION_CHOICES = (
     ('OCC', _('Occidental')),
