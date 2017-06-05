@@ -17,6 +17,8 @@ class CURegionField(CharField):
     A model field for the three-letter of the cuban region abbreviation.
 
     Forms represent it as a ``forms.CURegionField``.
+
+    .. versionadded:: 1.6
     """
 
     description = _("Cuban regions (three uppercase letters)")
@@ -37,6 +39,8 @@ class CUProvinceField(CharField):
     A model field for the three-letter of the cuban province abbreviation in the database.
 
     Forms represent it as a ``forms.CUProvinceField``.
+
+    .. versionadded:: 1.6
     """
 
     description = _("Cuban provinces (three uppercase letters)")
@@ -57,6 +61,8 @@ class CUZipCodeField(CharField):
     A model field for the cuban ZIP code.
 
     Forms represent it as a ``forms.CUZipCodeField``.
+
+    .. versionadded:: 1.6
     """
 
     description = _("Cuban ZIP code")
@@ -76,6 +82,8 @@ class CUIdentityCardNumberField(CharField):
     A model field for the cuban identity card number.
 
     Forms represent it as a ``forms.CUIdentityCardNumberField``.
+
+    .. versionadded:: 1.6
     """
 
     description = _("Cuban identity card number")
@@ -95,6 +103,8 @@ class CUPhoneNumberField(CharField):
     A model field for the cuban phone number.
 
     Forms represent it as a ``forms.CUIdentityCardNumberField``.
+
+    .. versionadded:: 1.6
     """
 
     description = _("Cuban phone number")

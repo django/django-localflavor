@@ -19,6 +19,8 @@ class CURegionField(Field):
     The input is validated against a dictionary which includes names and abbreviations.
 
     It normalizes the input to the standard abbreviation for the given region.
+
+    .. versionadded:: 1.6
     """
 
     default_error_messages = {
@@ -42,7 +44,11 @@ class CURegionField(Field):
 
 
 class CURegionSelect(Select):
-    """A Select widget that uses a list of cuban regions as its choices."""
+    """
+    A Select widget that uses a list of cuban regions as its choices.
+
+    .. versionadded:: 1.6
+    """
 
     def __init__(self, attrs=None):
         super(CURegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
@@ -54,6 +60,8 @@ class CUProvinceField(Field):
     The input is validated against a dictionary which includes names and abbreviations.
 
     It normalizes the input to the standard abbreviation for the given province.
+
+    .. versionadded:: 1.6
     """
 
     default_error_messages = {
@@ -77,7 +85,11 @@ class CUProvinceField(Field):
 
 
 class CUProvinceSelect(Select):
-    """A Select widget that uses a list of cuban provinces as its choices."""
+    """
+    A Select widget that uses a list of cuban provinces as its choices.
+
+    .. versionadded:: 1.6
+    """
 
     def __init__(self, attrs=None):
         super(CUProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
@@ -90,6 +102,8 @@ class CUZipCodeField(RegexField):
     Taken from : http://mapanet.eu/Postal_Codes/?C=CU
 
     The cuban ZIP code is a combination of 5 digits non begin with 0.
+
+    .. versionadded:: 1.6
     """
 
     default_error_messages = {
@@ -120,6 +134,8 @@ class CUIdentityCardNumberField(RegexField):
         -> 6, 7 and 8 for XXI
     - 8th, 9th and 11th aleatory.
     - 10th represent the sex of the owner. Male for the even numbers and Female for odd numbers.
+
+    .. versionadded:: 1.6
     """
 
     default_error_messages = {
@@ -156,6 +172,8 @@ class CUPhoneNumberField(RegexField):
     Isla de la Juventud
     - 3 for Ciego de Avila, Camaguey and Las Tunas
     - 2 for Holguín, Granma, Santiago de Cuba and Guantánamo
+
+    .. versionadded:: 1.6
     """
 
     default_error_messages = {
