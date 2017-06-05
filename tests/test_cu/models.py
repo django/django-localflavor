@@ -8,9 +8,9 @@ from localflavor.cu.models import (CUIdentityCardNumberField, CUPhoneNumberField
 
 class CUSomebody(models.Model):
     province_1 = CUProvinceField()
-    province_2 = CUProvinceField()
+    province_2 = CUProvinceField(blank=True)
     region_1 = CURegionField()
-    region_2 = CURegionField()
+    region_2 = CURegionField(blank=True)
     zip_code = CUZipCodeField()
     id_number = CUIdentityCardNumberField()
     phone_number = CUPhoneNumberField()

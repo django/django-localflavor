@@ -82,7 +82,7 @@ class CULocalFlavorTests(TestCase):
 
     def test_CUIdentityCardNumberField(self):
         invalid_format = ['Enter a valid identity card number in the format XXXXXXXXXXX.']
-        invalid_birthday = ['Enter a valid date (yymmdd) for the first 6 digits.']
+        invalid_birthday = ['Enter a valid date (yymmdd) for the first 6 digits of the Identity Card Number.']
         valid = {
             '09021527832': '09021527832',
             '45121201568': '45121201568',
