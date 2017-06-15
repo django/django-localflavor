@@ -11,6 +11,7 @@ from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .kw_governorates import GOVERNORATE_CHOICES
+from .kw_areas import AREA_CHOICES
 
 
 id_re = re.compile(r'''^(?P<initial>\d)
@@ -88,3 +89,14 @@ class KWGovernorateSelect(Select):
     def __init__(self, attrs=None):
         super(KWGovernorateSelect, self).__init__(attrs,
                                                   choices=GOVERNORATE_CHOICES)
+
+
+class KWAreaSelect(Select):
+    """
+    A Select widget that uses a list of Kuwait areas
+    as its choices.
+    """
+
+    def __init__(self, attrs=None):
+        super(KWAreaSelect, self).__init__(attrs,
+                                           choices=AREA_CHOICES)
