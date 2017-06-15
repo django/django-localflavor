@@ -1,5 +1,4 @@
 from django.test import SimpleTestCase
-
 from localflavor.hk.forms import HKPhoneNumberField
 
 

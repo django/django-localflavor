@@ -1,5 +1,4 @@
 from django.db import models
-
 from localflavor.mk.models import MKIdentityCardNumberField, MKMunicipalityField, UMCNField
 
 

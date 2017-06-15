@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
-
 from localflavor.cn.forms import CNCellNumberField, CNIDCardField, CNPhoneNumberField, CNPostCodeField, CNProvinceSelect
 
 

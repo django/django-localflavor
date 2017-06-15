@@ -10,7 +10,7 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- Added KWAreaSelect form field.
 
 Modifications to existing flavors:
 

@@ -40,6 +40,7 @@ Authors
 * Gerardo Orozco
 * Ghassen Telmoudi
 * Grzes Furga
+* Hamad AlGhanim
 * Honza Král
 * Horst Gutmann
 * Illia Volochii

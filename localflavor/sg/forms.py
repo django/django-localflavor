@@ -9,7 +9,6 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 PHONE_DIGITS_RE = re.compile(r'^[689](\d{7})$')

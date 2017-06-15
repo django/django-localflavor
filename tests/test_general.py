@@ -5,11 +5,10 @@ import importlib
 import pkgutil
 import sys
 
+import localflavor
 from django.db.models import Field
 from django.test.testcases import TestCase
 from django.utils import six
-
-import localflavor
 
 
 class GeneralTests(TestCase):
