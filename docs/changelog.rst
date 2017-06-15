@@ -11,7 +11,8 @@ New flavors:
 New fields for existing flavors:
 
 - Added KWAreaSelect form field.
-
+  (`gh-296 <https://github.com/django/django-localflavor/pull/296>`_)
+  
 Modifications to existing flavors:
 
 - None
