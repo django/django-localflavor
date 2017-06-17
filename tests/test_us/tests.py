@@ -265,6 +265,15 @@ class USLocalFlavorTests(TestCase):
         }
         self.assertFieldOutput(forms.USZipCodeField, valid, invalid)
 
+    def test_USZipCodeField_null(self):
+        # Django < 1.11 doesn't support empty_value
+        try:
+            field = forms.USZipCodeField(required=False, empty_value=None)
+            self.assertIsNone(field.clean(None))
+        except TypeError:
+            field = forms.USZipCodeField(required=False)
+            self.assertEqual('', field.clean(None))
+
     def test_USZipCodeField_formfield(self):
         """Test that the full US ZIP code field is really the full list."""
         self.assertHTMLEqual(str(self.form['zip_code']),

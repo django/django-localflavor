@@ -18,7 +18,8 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Fixed crash with USZipCodeField form validation when null=True is allowed
+  (`gh-295 <https://github.com/django/django-localflavor/pull/295>`_)
 
 1.5   (2017-05-26)
 ------------------
