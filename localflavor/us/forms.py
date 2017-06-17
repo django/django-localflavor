@@ -42,7 +42,10 @@ class USZipCodeField(RegexField):
 
     def to_python(self, value):
         value = super(USZipCodeField, self).to_python(value)
-        return value.strip()
+        if value:
+            return value.strip()
+        else:
+            return value
 
 
 class USPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
