@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
+
 from localflavor.br.forms import (BRCNPJField, BRCPFField, BRPhoneNumberField, BRProcessoField, BRStateChoiceField,
                                   BRStateSelect, BRZipCodeField)
 

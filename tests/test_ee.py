@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
+
 from localflavor.ee.forms import EEBusinessRegistryCode, EECountySelect, EEPersonalIdentificationCode, EEZipCodeField
 
 
