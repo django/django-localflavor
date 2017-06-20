@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 import re
 
 from django.test import TestCase
+
 from localflavor.pk.forms import PKPhoneNumberField, PKPostCodeField, PKStateSelect
 
 from .forms import PakistaniPlaceForm

@@ -1,4 +1,5 @@
 from django.db import models
+
 from localflavor.ua.models import UAPostalCodeField, UARegionField, UAVatNumberField
 
 
