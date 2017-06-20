@@ -5,6 +5,7 @@ from localflavor.kw.forms import KWAreaSelect, KWCivilIDNumberField, KWGovernora
 
 
 class KWLocalFlavorTests(SimpleTestCase):
+    maxDiff = None
     def test_KWCivilIDNumberField(self):
         error_invalid = ['Enter a valid Kuwaiti Civil ID number']
         valid = {
@@ -37,7 +38,7 @@ class KWLocalFlavorTests(SimpleTestCase):
         result = \
             '''<select name="areas">
 <optgroup label="Kuwait City">
-<option value="AS">Abdullah al-Salem</option>
+<option value="AS">Abdullah Al-Salem</option>
 <option value="AD">Adailiya</option>
 <option value="BQ">Bneid Al Qar</option>
 <option value="DY">Daiya</option>
