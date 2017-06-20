@@ -7,6 +7,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import CharField, ValidationError
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
+
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 hk_phone_digits_re = re.compile(r'^(?:852-?)?(\d{4})[-\.]?(\d{4})$')

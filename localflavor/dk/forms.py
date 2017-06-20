@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 from django.core.exceptions import ValidationError
 from django.forms import fields, widgets
 from django.utils.translation import ugettext_lazy as _
+
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .dk_municipalities import DK_MUNICIPALITIES

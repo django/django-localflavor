@@ -10,8 +10,8 @@ from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
-from .kw_areas import AREA_CHOICES
 from .kw_governorates import GOVERNORATE_CHOICES
+from .kw_areas import AREA_CHOICES
 
 
 id_re = re.compile(r'''^(?P<initial>\d)
