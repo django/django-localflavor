@@ -95,6 +95,8 @@ class KWAreaSelect(Select):
     """
     A Select widget that uses a list of Kuwait areas
     as its choices.
+    
+    .. versionadded:: 1.6
     """
 
     def __init__(self, attrs=None):
