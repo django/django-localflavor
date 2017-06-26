@@ -93,6 +93,8 @@ class IBANFormField(forms.CharField):
 
     def to_python(self, value):
         value = super(IBANFormField, self).to_python(value)
+        if value is None:
+            return value
         return value.upper().replace(' ', '').replace('-', '')
 
     def prepare_value(self, value):
