@@ -10,6 +10,7 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .in_states import STATE_CHOICES, STATES_NORMALIZED
@@ -38,7 +39,7 @@ phone_digits_re = re.compile(r"""
 aadhaar_re = re.compile(r"^(?P<part1>\d{4})[-\ ]?(?P<part2>\d{4})[-\ ]?(?P<part3>\d{4})$")
 
 
-class INZipCodeField(RegexField):
+class INZipCodeField(EmptyValueCompatMixin, RegexField):
     """A form field that validates input as an Indian zip code, with the format XXXXXXX."""
 
     default_error_messages = {
@@ -51,8 +52,8 @@ class INZipCodeField(RegexField):
 
     def clean(self, value):
         value = super(INZipCodeField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         # Convert to "NNNNNN" if "NNN NNN" given
         value = re.sub(r'^(\d{3})\s(\d{3})$', r'\1\2', value)
         return value
@@ -149,7 +150,7 @@ class INStateSelect(Select):
         super(INStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
 
-class INPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class INPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     INPhoneNumberField validates that the data is a valid Indian phone number, including the STD code.
 
@@ -167,8 +168,8 @@ class INPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
 
     def clean(self, value):
         value = super(INPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = force_text(value)
         m = phone_digits_re.match(value)
         if m:

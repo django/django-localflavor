@@ -11,6 +11,7 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .br_states import STATE_CHOICES
@@ -103,7 +104,7 @@ def DV_maker(v):  # noqa
     return dv_maker(v)
 
 
-class BRCPFField(CharField):
+class BRCPFField(EmptyValueCompatMixin, CharField):
     """
     A form field that validates a CPF number or a CPF string.
 
@@ -124,8 +125,8 @@ class BRCPFField(CharField):
     def clean(self, value):
         """Value can be either a string in the format XXX.XXX.XXX-XX or an 11-digit number."""
         value = super(BRCPFField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         orig_value = value[:]
         if not value.isdigit():
             cpf = cpf_digits_re.search(value)
@@ -153,7 +154,7 @@ class BRCPFField(CharField):
         return orig_value
 
 
-class BRCNPJField(CharField):
+class BRCNPJField(EmptyValueCompatMixin, CharField):
     """
     A form field that validates input as `Brazilian CNPJ`_.
 
@@ -183,8 +184,8 @@ class BRCNPJField(CharField):
     def clean(self, value):
         """Value can be either a string in the format XX.XXX.XXX/XXXX-XX or a group of 14 characters."""
         value = super(BRCNPJField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         orig_value = value[:]
         if not value.isdigit():
             cnpj = cnpj_digits_re.search(value)
@@ -213,7 +214,7 @@ def mod_97_base10(value):
     return 98 - ((value * 100 % 97) % 97)
 
 
-class BRProcessoField(CharField):
+class BRProcessoField(EmptyValueCompatMixin, CharField):
     """
     A form field that validates a Legal Process(Processo) number or a Legal Process string.
 
@@ -232,8 +233,8 @@ class BRProcessoField(CharField):
     def clean(self, value):
         """Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or an 20-digit number."""
         value = super(BRProcessoField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         orig_value = value[:]
         if not value.isdigit():

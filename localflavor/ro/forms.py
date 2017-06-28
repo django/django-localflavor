@@ -9,6 +9,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, Select, ValidationError
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from ..generic.forms import IBANFormField
@@ -17,7 +18,7 @@ from .ro_counties import COUNTIES_CHOICES
 phone_digits_re = re.compile(r'^[0-9\-\.\(\)\s]{3,20}$')
 
 
-class ROCIFField(RegexField):
+class ROCIFField(EmptyValueCompatMixin, RegexField):
     """
     A Romanian fiscal identity code (CIF) field.
 
@@ -39,9 +40,12 @@ class ROCIFField(RegexField):
         Args:
             value: the CIF code
         """
-        value = super(ROCIFField, self).clean(value).strip()
-        if value in EMPTY_VALUES:
-            return ''
+        value = super(ROCIFField, self).clean(value)
+        if value in self.empty_values:
+            return self.empty_value
+
+        # This can be removed when support for Django <= 1.8 is dropped.
+        value = value.strip()
 
         # strip RO part
         if value[0:2] == 'RO':
@@ -66,7 +70,7 @@ class ROCIFField(RegexField):
         return value[::-1]
 
 
-class ROCNPField(RegexField):
+class ROCNPField(EmptyValueCompatMixin, RegexField):
     """
     A Romanian personal identity code (CNP) field.
 
@@ -89,8 +93,8 @@ class ROCNPField(RegexField):
             value: the CNP code
         """
         value = super(ROCNPField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         # check birthdate digits
         try:
@@ -192,7 +196,7 @@ class ROIBANField(IBANFormField):
         super(ROIBANField, self).__init__(*args, **kwargs)
 
 
-class ROPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
+class ROPhoneNumberField(EmptyValueCompatMixin, RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Romanian phone number field.
 
@@ -227,8 +231,8 @@ class ROPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
             value: the phone number
         """
         value = super(ROPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         value = re.sub('[()-. ]', '', value)
         length = len(value)

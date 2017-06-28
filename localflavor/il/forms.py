@@ -30,8 +30,8 @@ class ILPostalCodeField(RegexField):
         super(ILPostalCodeField, self).__init__(r'^\d{5}$|^\d{7}$', *args, **kwargs)
 
     def clean(self, value):
-        if value not in EMPTY_VALUES:
-            value = value.replace(" ", "")
+        if value not in self.empty_values:
+            value = value.replace(' ', '')
         return super(ILPostalCodeField, self).clean(value)
 
 
