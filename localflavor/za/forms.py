@@ -4,17 +4,17 @@ from __future__ import unicode_literals
 import re
 from datetime import date
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.checksums import luhn
 
 id_re = re.compile(r'^(?P<yy>\d\d)(?P<mm>\d\d)(?P<dd>\d\d)(?P<mid>\d{4})(?P<end>\d{3})')
 
 
-class ZAIDField(CharField):
+class ZAIDField(EmptyValueCompatMixin, CharField):
     """
     A form field for South African ID numbers.
 
@@ -29,8 +29,8 @@ class ZAIDField(CharField):
     def clean(self, value):
         super(ZAIDField, self).clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         # strip spaces and dashes
         value = value.strip().replace(' ', '').replace('-', '')

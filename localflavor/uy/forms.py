@@ -3,10 +3,11 @@
 
 from __future__ import unicode_literals
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor.compat import EmptyValueCompatMixin
 
 from .util import get_validation_digit
 
@@ -19,7 +20,7 @@ class UYDepartmentSelect(Select):
         super(UYDepartmentSelect, self).__init__(attrs, choices=DEPARTMENT_CHOICES)
 
 
-class UYCIField(RegexField):
+class UYCIField(EmptyValueCompatMixin, RegexField):
     """A field that validates Uruguayan 'Cedula de identidad' (CI) numbers."""
 
     default_error_messages = {
@@ -42,8 +43,8 @@ class UYCIField(RegexField):
         [X]XXXXXXX, [X]XXXXXX-X and [X.]XXX.XXX-X.
         """
         value = super(UYCIField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         match = self.regex.match(value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])

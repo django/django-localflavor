@@ -5,12 +5,12 @@ from __future__ import unicode_literals
 
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .es_provinces import PROVINCE_CHOICES
@@ -57,7 +57,7 @@ class ESPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
                                                  max_length, min_length, *args, **kwargs)
 
 
-class ESIdentityCardNumberField(RegexField):
+class ESIdentityCardNumberField(EmptyValueCompatMixin, RegexField):
     """
     Spanish NIF/NIE/CIF (Fiscal Identification Number) code.
 
@@ -110,8 +110,8 @@ class ESIdentityCardNumberField(RegexField):
 
     def clean(self, value):
         super(ESIdentityCardNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         value = value.upper().replace(' ', '').replace('-', '')
         m = re.match(self.id_card_pattern %
@@ -148,7 +148,7 @@ class ESIdentityCardNumberField(RegexField):
         return self.nif_control[int(d) % 23]
 
 
-class ESCCCField(RegexField):
+class ESCCCField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates its input as a Spanish bank account or CCC (Codigo Cuenta Cliente).
 
@@ -182,8 +182,8 @@ class ESCCCField(RegexField):
 
     def clean(self, value):
         super(ESCCCField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         m = re.match(r'^(\d{4})[ -]?(\d{4})[ -]?(\d{2})[ -]?(\d{10})$', value)
         entity, office, checksum, account = m.groups()
         if get_checksum('00' + entity + office) + get_checksum(account) == checksum:

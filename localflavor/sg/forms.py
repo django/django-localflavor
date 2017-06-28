@@ -4,12 +4,12 @@ from __future__ import unicode_literals
 
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 PHONE_DIGITS_RE = re.compile(r'^[689](\d{7})$')
@@ -35,7 +35,7 @@ class SGPostCodeField(RegexField):
         super(SGPostCodeField, self).__init__(r'^\d{6}$', *args, **kwargs)
 
 
-class SGPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class SGPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as a Singapore phone number.
 
@@ -51,8 +51,8 @@ class SGPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     def clean(self, value):
         """Validate a phone number. Strips parentheses, whitespace and hyphens."""
         super(SGPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
         phone_match = PHONE_DIGITS_RE.search(value)
         if phone_match:
@@ -61,7 +61,7 @@ class SGPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
 
 
 # TODO change to a pep8 compatible class name
-class SGNRIC_FINField(CharField):  # noqa
+class SGNRIC_FINField(EmptyValueCompatMixin, CharField):  # noqa
     """
     A form field that validates input as a Singapore National Registration.
 
@@ -91,8 +91,8 @@ class SGNRIC_FINField(CharField):  # noqa
         Strips whitespace.
         """
         super(SGNRIC_FINField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub('(\s+)', '', force_text(value.upper()))
         match = NRIC_FIN_RE.search(value)
         if not match:

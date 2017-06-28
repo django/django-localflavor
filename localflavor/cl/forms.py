@@ -2,11 +2,12 @@
 
 from __future__ import unicode_literals
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor.compat import EmptyValueCompatMixin
 
 from .cl_regions import REGION_CHOICES
 
@@ -18,7 +19,7 @@ class CLRegionSelect(Select):
         super(CLRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
-class CLRutField(RegexField):
+class CLRutField(EmptyValueCompatMixin, RegexField):
     """
     Chilean "Rol Unico Tributario" (RUT) field.
 
@@ -48,8 +49,8 @@ class CLRutField(RegexField):
     def clean(self, value):
         """Check and clean the Chilean RUT."""
         super(CLRutField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         rut, verificador = self._canonify(value)
         if self._algorithm(rut) == verificador:
             return self._format(rut, verificador)

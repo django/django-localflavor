@@ -5,10 +5,11 @@ from __future__ import unicode_literals
 import datetime
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor.compat import EmptyValueCompatMixin
 
 from .pl_administrativeunits import ADMINISTRATIVE_UNIT_CHOICES
 from .pl_voivodeships import VOIVODESHIP_CHOICES
@@ -28,7 +29,7 @@ class PLCountySelect(Select):
         super(PLCountySelect, self).__init__(attrs, choices=ADMINISTRATIVE_UNIT_CHOICES)
 
 
-class PLPESELField(RegexField):
+class PLPESELField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates as Polish Identification Number (PESEL).
 
@@ -54,8 +55,8 @@ class PLPESELField(RegexField):
 
     def clean(self, value):
         super(PLPESELField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         if not self.has_valid_checksum(value):
             raise ValidationError(self.error_messages['checksum'])
         if not self.has_valid_birth_date(value):
@@ -90,7 +91,7 @@ class PLPESELField(RegexField):
             return False
 
 
-class PLNationalIDCardNumberField(RegexField):
+class PLNationalIDCardNumberField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates as Polish National ID Card Number.
 
@@ -113,8 +114,8 @@ class PLNationalIDCardNumberField(RegexField):
 
     def clean(self, value):
         super(PLNationalIDCardNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         value = value.upper()
 
@@ -144,7 +145,7 @@ class PLNationalIDCardNumberField(RegexField):
         return result % 10 == 0
 
 
-class PLNIPField(RegexField):
+class PLNIPField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates as Polish Tax Number (NIP).
 
@@ -165,8 +166,8 @@ class PLNIPField(RegexField):
 
     def clean(self, value):
         super(PLNIPField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub("[-]", "", value)
         if not self.has_valid_checksum(value):
             raise ValidationError(self.error_messages['checksum'])
@@ -183,7 +184,7 @@ class PLNIPField(RegexField):
         return result == int(number[-1])
 
 
-class PLREGONField(RegexField):
+class PLREGONField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates its input is a REGON number.
 
@@ -202,8 +203,8 @@ class PLREGONField(RegexField):
 
     def clean(self, value):
         super(PLREGONField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         if not self.has_valid_checksum(value):
             raise ValidationError(self.error_messages['checksum'])
         return '%s' % value
