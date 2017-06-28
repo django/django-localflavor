@@ -5,8 +5,9 @@ from __future__ import unicode_literals
 import re
 
 from django import forms
-from django.core.validators import EMPTY_VALUES
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor.compat import EmptyValueCompatMixin
 
 from .se_counties import COUNTY_CHOICES
 from .utils import (format_organisation_number, format_personal_id_number, id_number_checksum, valid_organisation,
@@ -33,7 +34,7 @@ class SECountySelect(forms.Select):
                                              choices=COUNTY_CHOICES)
 
 
-class SEOrganisationNumberField(forms.CharField):
+class SEOrganisationNumberField(EmptyValueCompatMixin, forms.CharField):
     """
     A form field that validates input as a Swedish organisation number (organisationsnummer).
 
@@ -55,8 +56,8 @@ class SEOrganisationNumberField(forms.CharField):
     def clean(self, value):
         value = super(SEOrganisationNumberField, self).clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         match = SWEDISH_ID_NUMBER.match(value)
         if not match:
@@ -80,7 +81,7 @@ class SEOrganisationNumberField(forms.CharField):
             raise forms.ValidationError(self.error_messages['invalid'])
 
 
-class SEPersonalIdentityNumberField(forms.CharField):
+class SEPersonalIdentityNumberField(EmptyValueCompatMixin, forms.CharField):
     """
     A form field that validates input as a Swedish personal identity number (personnummer).
 
@@ -112,8 +113,8 @@ class SEPersonalIdentityNumberField(forms.CharField):
     def clean(self, value):
         value = super(SEPersonalIdentityNumberField, self).clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         match = SWEDISH_ID_NUMBER.match(value)
         if match is None:
@@ -138,7 +139,7 @@ class SEPersonalIdentityNumberField(forms.CharField):
         return format_personal_id_number(birth_day, gd)
 
 
-class SEPostalCodeField(forms.RegexField):
+class SEPostalCodeField(EmptyValueCompatMixin, forms.RegexField):
     """
     A form field that validates input as a Swedish postal code (postnummer).
 
@@ -156,4 +157,7 @@ class SEPostalCodeField(forms.RegexField):
         super(SEPostalCodeField, self).__init__(SE_POSTAL_CODE, *args, **kwargs)
 
     def clean(self, value):
-        return super(SEPostalCodeField, self).clean(value).replace(' ', '')
+        value = super(SEPostalCodeField, self).clean(value)
+        if value in self.empty_values:
+            return self.empty_value
+        return value.replace(' ', '')

@@ -2,10 +2,11 @@ from __future__ import unicode_literals
 
 import datetime
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor.compat import EmptyValueCompatMixin
 
 from .mk_choices import MK_MUNICIPALITIES
 
@@ -40,7 +41,7 @@ class MKMunicipalitySelect(Select):
         super(MKMunicipalitySelect, self).__init__(attrs, choices=MK_MUNICIPALITIES)
 
 
-class UMCNField(RegexField):
+class UMCNField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates input as a unique master citizen number.
 
@@ -70,8 +71,8 @@ class UMCNField(RegexField):
     def clean(self, value):
         value = super(UMCNField, self).clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         if not self._validate_date_part(value):
             raise ValidationError(self.error_messages['date'])

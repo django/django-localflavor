@@ -3,10 +3,11 @@
 
 from __future__ import unicode_literals
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, Select
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor.compat import EmptyValueCompatMixin
 
 from .pe_region import REGION_CHOICES
 
@@ -18,7 +19,7 @@ class PERegionSelect(Select):
         super(PERegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
-class PEDNIField(CharField):
+class PEDNIField(EmptyValueCompatMixin, CharField):
     """A field that validates Documento Nacional de Identidad (DNI) numbers."""
 
     default_error_messages = {
@@ -33,8 +34,8 @@ class PEDNIField(CharField):
     def clean(self, value):
         """Value must be a string in the XXXXXXXX formats."""
         value = super(PEDNIField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         if not value.isdigit():
             raise ValidationError(self.error_messages['invalid'])
         if len(value) != 8:
@@ -43,7 +44,7 @@ class PEDNIField(CharField):
         return value
 
 
-class PERUCField(CharField):
+class PERUCField(EmptyValueCompatMixin, CharField):
     """
     This field validates a RUC (Registro Unico de Contribuyentes).
 
@@ -62,8 +63,8 @@ class PERUCField(CharField):
     def clean(self, value):
         """Value must be an 11-digit number."""
         value = super(PERUCField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         if not value.isdigit():
             raise ValidationError(self.error_messages['invalid'])
         if len(value) != 11:
