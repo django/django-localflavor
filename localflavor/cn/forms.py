@@ -8,6 +8,7 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .cn_provinces import CN_PROVINCE_CHOICES
@@ -87,7 +88,7 @@ class CNPostCodeField(RegexField):
         super(CNPostCodeField, self).__init__(POST_CODE_RE, *args, **kwargs)
 
 
-class CNIDCardField(CharField):
+class CNIDCardField(EmptyValueCompatMixin, CharField):
     """
     A form field that validates input as a Resident Identity Card (PRC) number.
 
@@ -116,8 +117,8 @@ class CNIDCardField(CharField):
         """Check whether the input is a valid ID Card Number."""
         # Check the length of the ID card number.
         super(CNIDCardField, self).clean(value)
-        if not value:
-            return ""
+        if value in self.empty_values:
+            return self.empty_value
         # Check whether this ID card number has valid format
         if not re.match(ID_CARD_RE, value):
             raise ValidationError(self.error_messages['invalid'])

@@ -5,10 +5,11 @@ import re
 import textwrap
 from datetime import date
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
+
+from localflavor.compat import EmptyValueCompatMixin
 
 from .kw_areas import AREA_CHOICES
 from .kw_governorates import GOVERNORATE_CHOICES
@@ -35,7 +36,7 @@ def is_valid_kw_civilid_checksum(value):
     return True
 
 
-class KWCivilIDNumberField(RegexField):
+class KWCivilIDNumberField(EmptyValueCompatMixin, RegexField):
     """
     Kuwaiti Civil ID numbers are 12 digits, second to seventh digits represents the person's birthdate.
 
@@ -56,8 +57,8 @@ class KWCivilIDNumberField(RegexField):
 
     def clean(self, value):
         super(KWCivilIDNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         cc = value[0]  # Century value
         yy, mm, dd = textwrap.wrap(value[1:7], 2)  # Date parts

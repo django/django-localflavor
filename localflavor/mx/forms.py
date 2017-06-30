@@ -4,11 +4,12 @@ from __future__ import unicode_literals
 
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor.compat import EmptyValueCompatMixin
 
 from .mx_states import STATE_CHOICES
 
@@ -69,7 +70,7 @@ class MXZipCodeField(RegexField):
         super(MXZipCodeField, self).__init__(zip_code_re, *args, **kwargs)
 
 
-class MXRFCField(RegexField):
+class MXRFCField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates a Mexican *Registro Federal de Contribuyentes*.
 
@@ -117,8 +118,8 @@ class MXRFCField(RegexField):
 
     def clean(self, value):
         value = super(MXRFCField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = value.upper()
         if self._has_homoclave(value):
             if not value[-1] == self._checksum(value[:-1]):
@@ -165,7 +166,7 @@ class MXRFCField(RegexField):
         return first_four in RFC_INCONVENIENT_WORDS
 
 
-class MXCLABEField(RegexField):
+class MXCLABEField(EmptyValueCompatMixin, RegexField):
     """
     This field validates a CLABE (Clave Bancaria Estandarizada).
 
@@ -199,8 +200,8 @@ class MXCLABEField(RegexField):
 
     def clean(self, value):
         value = super(MXCLABEField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         if not value.isdigit():
             raise ValidationError(self.error_messages['invalid'])
         if not self._checksum(value):
@@ -209,7 +210,7 @@ class MXCLABEField(RegexField):
         return value
 
 
-class MXCURPField(RegexField):
+class MXCURPField(EmptyValueCompatMixin, RegexField):
     """
     A field that validates a Mexican Clave Única de Registro de Población.
 
@@ -251,8 +252,8 @@ class MXCURPField(RegexField):
 
     def clean(self, value):
         value = super(MXCURPField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = value.upper()
         if value[-1] != self._checksum(value[:-1]):
             raise ValidationError(self.error_messages['invalid_checksum'])
@@ -275,7 +276,7 @@ class MXCURPField(RegexField):
         return first_four in CURP_INCONVENIENT_WORDS
 
 
-class MXSocialSecurityNumberField(RegexField):
+class MXSocialSecurityNumberField(EmptyValueCompatMixin, RegexField):
     """
     A field that validates a Mexican Social Security Number.
 
@@ -312,8 +313,8 @@ class MXSocialSecurityNumberField(RegexField):
 
     def clean(self, value):
         value = super(MXSocialSecurityNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         if value[-1] != self.__checksum(value[:-1]):
             raise ValidationError(self.error_messages['invalid_checksum'])
         return value

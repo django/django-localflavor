@@ -11,6 +11,7 @@ from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.checksums import luhn
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
@@ -41,7 +42,7 @@ class FRZipCodeField(RegexField):
         super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
 
-class FRPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class FRPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Validate local French phone number (not international ones).
 
@@ -64,8 +65,8 @@ class FRPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
 
     def clean(self, value):
         value = super(FRPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub('(\.|\s)', '', force_text(value))
         m = self.phone_digits_re.search(value)
         if m:
@@ -139,7 +140,7 @@ class FRRegionField(CharField):
         super(FRRegionField, self).__init__(*args, **kwargs)
 
 
-class FRNationalIdentificationNumber(CharField):
+class FRNationalIdentificationNumber(EmptyValueCompatMixin, CharField):
     """
     Validates input as a French National Identification number.
 
@@ -154,8 +155,8 @@ class FRNationalIdentificationNumber(CharField):
 
     def clean(self, value):
         super(FRNationalIdentificationNumber, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         value = value.replace(' ', '').replace('-', '')
 
@@ -225,8 +226,8 @@ class FRSIRENENumberMixin(object):
 
     def clean(self, value):
         super(FRSIRENENumberMixin, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         value = value.replace(' ', '').replace('-', '')
         if not self.r_valid.match(value) or not luhn(value):
@@ -234,7 +235,7 @@ class FRSIRENENumberMixin(object):
         return value
 
 
-class FRSIRENField(FRSIRENENumberMixin, CharField):
+class FRSIRENField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
     """
     SIREN stands for "Système d'identification du répertoire des entreprises".
 
@@ -257,7 +258,7 @@ class FRSIRENField(FRSIRENENumberMixin, CharField):
         return ' '.join((value[:3], value[3:6], value[6:]))
 
 
-class FRSIRETField(FRSIRENENumberMixin, CharField):
+class FRSIRETField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
     """
     SIRET stands for "Système d'identification du répertoire des établissements".
 

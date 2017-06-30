@@ -74,6 +74,7 @@ Authors
 * Olivier Sels
 * Paul Donohue
 * Paulo Poiati
+* Peter J. Farrell
 * Rael Max
 * Ramiro Morales
 * Rolf Erik Lekang

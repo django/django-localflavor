@@ -8,10 +8,12 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
+
 from .gb_regions import GB_NATIONS_CHOICES, GB_REGION_CHOICES
 
 
-class GBPostcodeField(CharField):
+class GBPostcodeField(EmptyValueCompatMixin, CharField):
     """
     A form field that validates its input is a UK postcode.
 
@@ -31,8 +33,8 @@ class GBPostcodeField(CharField):
 
     def clean(self, value):
         value = super(GBPostcodeField, self).clean(value)
-        if value == '':
-            return value
+        if value in self.empty_values:
+            return self.empty_value
         postcode = value.upper().strip()
         # Put a single space before the incode (second part).
         postcode = self.space_regex.sub(r' \1', postcode)

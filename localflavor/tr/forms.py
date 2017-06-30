@@ -8,6 +8,7 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .tr_provinces import PROVINCE_CHOICES
@@ -15,7 +16,7 @@ from .tr_provinces import PROVINCE_CHOICES
 phone_digits_re = re.compile(r'^(\+90|0)? ?(([1-9]\d{2})|\([1-9]\d{2}\)) ?([2-9]\d{2} ?\d{2} ?\d{2})$')
 
 
-class TRPostalCodeField(RegexField):
+class TRPostalCodeField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates input as a Turkish zip code.
 
@@ -32,8 +33,8 @@ class TRPostalCodeField(RegexField):
 
     def clean(self, value):
         value = super(TRPostalCodeField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         if len(value) != 5:
             raise ValidationError(self.error_messages['invalid'])
         province_code = int(value[:2])
@@ -42,7 +43,7 @@ class TRPostalCodeField(RegexField):
         return value
 
 
-class TRPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class TRPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as a Turkish phone number.
 
@@ -56,8 +57,8 @@ class TRPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
 
     def clean(self, value):
         super(TRPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub('(\(|\)|\s+)', '', force_text(value))
         m = phone_digits_re.search(value)
         if m:

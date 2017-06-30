@@ -10,13 +10,14 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 ssn_re = re.compile(r"^(?P<area>\d{3})[-\ ]?(?P<group>\d{2})[-\ ]?(?P<serial>\d{4})$")
 
 
-class USZipCodeField(RegexField):
+class USZipCodeField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates input as a U.S. ZIP code.
 
@@ -42,10 +43,12 @@ class USZipCodeField(RegexField):
 
     def to_python(self, value):
         value = super(USZipCodeField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.strip()
 
 
-class USPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class USPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
     """A form field that validates input as a U.S. phone number."""
 
     default_error_messages = {
@@ -54,8 +57,8 @@ class USPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
 
     def clean(self, value):
         super(USPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub('(\(|\)|\s+)', '', force_text(value))
         m = phone_digits_re.search(value)
         if m:
@@ -63,7 +66,7 @@ class USPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
         raise ValidationError(self.error_messages['invalid'])
 
 
-class USSocialSecurityNumberField(CharField):
+class USSocialSecurityNumberField(EmptyValueCompatMixin, CharField):
     """
     A United States Social Security number.
 
@@ -87,8 +90,8 @@ class USSocialSecurityNumberField(CharField):
 
     def clean(self, value):
         super(USSocialSecurityNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         match = re.match(ssn_re, value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])

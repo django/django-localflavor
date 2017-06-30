@@ -4,12 +4,12 @@ from __future__ import unicode_literals
 
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .pk_states import STATE_CHOICES
@@ -33,7 +33,7 @@ class PKPostCodeField(RegexField):
         super(PKPostCodeField, self).__init__(POSTCODE_DIGITS_RE, *args, **kwargs)
 
 
-class PKPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class PKPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as an Pakistani phone number.
 
@@ -51,8 +51,8 @@ class PKPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
         Strips parentheses, whitespace and hyphens.
         """
         super(PKPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
         phone_match = PHONE_DIGITS_RE.search(value)
         if phone_match:
