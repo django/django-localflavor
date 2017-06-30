@@ -11,6 +11,7 @@ from django.utils.translation import gettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
 
+from .kw_areas import AREA_CHOICES
 from .kw_governorates import GOVERNORATE_CHOICES
 
 
@@ -89,3 +90,16 @@ class KWGovernorateSelect(Select):
     def __init__(self, attrs=None):
         super(KWGovernorateSelect, self).__init__(attrs,
                                                   choices=GOVERNORATE_CHOICES)
+
+
+class KWAreaSelect(Select):
+    """
+    A Select widget that uses a list of Kuwait areas
+    as its choices.
+
+    .. versionadded:: 1.6
+    """
+
+    def __init__(self, attrs=None):
+        super(KWAreaSelect, self).__init__(attrs,
+                                           choices=AREA_CHOICES)
