@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 import importlib
 import pkgutil
-import sys
 
 from django import forms
 from django.db import models
@@ -16,9 +15,9 @@ import localflavor
 class GeneralTests(TestCase):
 
     @staticmethod
-    def _find_subclasses_for_package(base_class, package):
+    def _find_localflavor_subclasses(base_class):
         classes = []
-        for importer, modname, ispkg in pkgutil.walk_packages(path=package.__path__, prefix=package.__name__ + '.',
+        for importer, modname, ispkg in pkgutil.walk_packages(path=localflavor.__path__, prefix=localflavor.__name__ + '.',
                                                               onerror=lambda x: None):
             if ispkg:
                 continue
@@ -27,7 +26,7 @@ class GeneralTests(TestCase):
                 if f.startswith('_'):
                     continue
                 item = getattr(module, f)
-                if package.__name__ in six.text_type(item):
+                if localflavor.__name__ in six.text_type(item):
                     try:
                         if issubclass(item, base_class):
                             classes.append(item)
@@ -40,7 +39,7 @@ class GeneralTests(TestCase):
         # This test can only check the choices and max_length options. Specific tests are required for model fields
         # with options that users can set. See to the IBAN tests for an example.
 
-        model_classes = self._find_subclasses_for_package(models.Field, localflavor)
+        model_classes = self._find_localflavor_subclasses(models.Field)
         self.assertTrue(len(model_classes) > 0, 'No localflavor models.Field classes were found.')
 
         for cls in model_classes:
@@ -63,7 +62,7 @@ class GeneralTests(TestCase):
                 self.assertEqual(getattr(test_instance, attr), getattr(new_instance, attr))
 
     def test_forms_char_field_empty_value_allows_none(self):
-        form_classes = self._find_subclasses_for_package(forms.CharField, localflavor)
+        form_classes = self._find_localflavor_subclasses(forms.CharField)
         self.assertTrue(len(form_classes) > 0, 'No localflavor forms.CharField classes were found.')
 
         for cls in form_classes:
