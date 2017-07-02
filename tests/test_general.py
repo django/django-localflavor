@@ -16,25 +16,20 @@ import localflavor
 class GeneralTests(TestCase):
 
     @classmethod
-    def _find_subclasses_for_package_py32(cls, base_class, package):
+    def _find_localflavor_subclasses_py32(cls, base_class):
         classes = []
         for attr in dir(localflavor):
             if attr.startswith('_'):
                 continue
-            sub_module = importlib.import_module(package.__name__ + '.' + attr)
-            sub_module_fields = cls._find_subclasses_for_package(base_class, sub_module)
-            if len(sub_module_fields) > 0:
-                classes.extend(sub_module_fields)
-
+            sub_module = importlib.import_module(localflavor.__name__ + '.' + attr)
+            if hasattr(sub_module, '__path__'):
+                sub_module_fields = cls._find_subclasses_for_package(base_class, sub_module)
+                if len(sub_module_fields) > 0:
+                    classes.extend(sub_module_fields)
         return classes
 
     @classmethod
     def _find_subclasses_for_package(cls, base_class, package):
-        # Finding the localflavor model classes directly with walk_packages doesn't work with Python 3.2. The workaround
-        # is to find the classes in all of the submodules.
-        if sys.version_info[:2] == (3, 2):
-            return cls._find_subclasses_for_package_py32(base_class, package)
-
         classes = []
         for importer, modname, ispkg in pkgutil.walk_packages(path=package.__path__, prefix=package.__name__ + '.',
                                                               onerror=lambda x: None):
@@ -58,7 +53,12 @@ class GeneralTests(TestCase):
         # This test can only check the choices and max_length options. Specific tests are required for model fields
         # with options that users can set. See to the IBAN tests for an example.
 
-        model_classes = self._find_subclasses_for_package(models.Field, localflavor)
+        # Finding the localflavor model classes directly with walk_packages doesn't work with Python 3.2. The workaround
+        # is to find the classes in all of the submodules.
+        if sys.version_info[:2] == (3, 2):
+            model_classes = self._find_localflavor_subclasses_py32(models.Field)
+        else:
+            model_classes = self._find_subclasses_for_package(models.Field, localflavor)
         self.assertTrue(len(model_classes) > 0, 'No localflavor models.Field classes were found.')
 
         for cls in model_classes:
@@ -81,7 +81,12 @@ class GeneralTests(TestCase):
                 self.assertEqual(getattr(test_instance, attr), getattr(new_instance, attr))
 
     def test_forms_char_field_empty_value_allows_none(self):
-        form_classes = self._find_subclasses_for_package(forms.CharField, localflavor)
+        # Finding the localflavor model classes directly with walk_packages doesn't work with Python 3.2. The workaround
+        # is to find the classes in all of the submodules.
+        if sys.version_info[:2] == (3, 2):
+            form_classes = self._find_localflavor_subclasses_py32(forms.CharField)
+        else:
+            form_classes = self._find_subclasses_for_package(forms.CharField, localflavor)
         self.assertTrue(len(form_classes) > 0, 'No localflavor forms.CharField classes were found.')
 
         for cls in form_classes:
