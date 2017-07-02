@@ -6,7 +6,8 @@ Changelog
 
 Other changes:
 
-- None
+- Added support for empty_value kwarg in Django >= 1.11
+  (`gh-298 <https://github.com/django/django-localflavor/pull/298>`_).
 
 1.5.1   (2017-06-17)
 --------------------
