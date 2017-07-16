@@ -19,10 +19,10 @@ Modifications to existing flavors:
 
 Other changes:
 
-- Added support for empty_value kwarg in Django >= 1.11
-  (`gh-298 <https://github.com/django/django-localflavor/pull/298>`_).
 - Fixed crash with USZipCodeField form validation when null=True is allowed
   (`gh-295 <https://github.com/django/django-localflavor/pull/295>`_)
+- Added support for empty_value kwarg in Django >= 1.11
+  (`gh-298 <https://github.com/django/django-localflavor/pull/298>`_).
 
 1.5   (2017-05-26)
 ------------------
