@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 
 PROVINCE_CHOICES = (
     ('Alborz', _('Alborz')),
-    ('Ardabil' _('Ardabil')),
+    ('Ardabil', _('Ardabil')),
     ('Azerbaijan, East', _('Azerbaijan, East')),
     ('Azerbaijan, West', _('Azerbaijan, West')),
     ('Bushehr', _('Bushehr')),

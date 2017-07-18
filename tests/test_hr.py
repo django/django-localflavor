@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
+
 from localflavor.hr.forms import (HRCountySelect, HRJMBAGField, HRJMBGField, HRLicensePlateField,
                                   HRLicensePlatePrefixSelect, HROIBField, HRPhoneNumberField, HRPhoneNumberPrefixSelect,
                                   HRPostalCodeField)

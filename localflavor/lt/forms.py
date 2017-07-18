@@ -8,6 +8,7 @@ from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.six import text_type
 from django.utils.translation import ugettext_lazy as _
+
 from localflavor.compat import EmptyValueCompatMixin
 
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES

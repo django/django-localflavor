@@ -1,4 +1,5 @@
 from django.db import models
+
 from localflavor.mx.models import (MXCLABEField, MXCURPField, MXRFCField, MXSocialSecurityNumberField, MXStateField,
                                    MXZipCodeField)
 

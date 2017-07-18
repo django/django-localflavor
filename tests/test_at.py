@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
+
 from localflavor.at.forms import ATSocialSecurityNumberField, ATStateSelect, ATZipCodeField
 
 

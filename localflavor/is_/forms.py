@@ -7,6 +7,7 @@ from django.forms.fields import RegexField
 from django.forms.widgets import Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
+
 from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 

@@ -4,11 +4,12 @@ from __future__ import unicode_literals
 import importlib
 import pkgutil
 
-import localflavor
 from django import forms
 from django.db import models
 from django.test.testcases import TestCase
 from django.utils import six
+
+import localflavor
 
 
 class GeneralTests(TestCase):

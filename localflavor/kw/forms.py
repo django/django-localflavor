@@ -8,6 +8,7 @@ from datetime import date
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
+
 from localflavor.compat import EmptyValueCompatMixin
 
 from .kw_areas import AREA_CHOICES
