@@ -1,4 +1,4 @@
-sudo: no
+sudo: yes
 language: python
 cache: pip
 
@@ -47,7 +47,8 @@ matrix:
       env: TOXENV=py36-master
 install:
     - pip wheel -r tests/requirements.txt codecov
-    - pip install virtualenv codecov tox
+    # virtualenv>=14.0.0 has dropped Python 3.2 support
+    - pip install "virtualenv<14.0.0" codecov tox
 script:
   - tox
 after_success: codecov
