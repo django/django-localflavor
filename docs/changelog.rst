@@ -15,7 +15,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Fix COFA validation for USStateField
+  (`gh-303 <https://github.com/django/django-localflavor/pull/303>`_)
 
 Other changes:
 
