@@ -1,7 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 from django.utils import six
-
 from localflavor.tr.forms import TRIdentificationNumberField, TRPhoneNumberField, TRPostalCodeField
 
 if six.PY3:

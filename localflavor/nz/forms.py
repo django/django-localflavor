@@ -9,7 +9,6 @@ from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import smart_str
 from django.utils.translation import ugettext_lazy as _
-
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .nz_councils import NORTH_ISLAND_COUNCIL_CHOICES, SOUTH_ISLAND_COUNCIL_CHOICES

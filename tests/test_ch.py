@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 from django.utils.translation import ugettext as _
 from django.utils.translation import override
-
 from localflavor.ch.forms import (CHIdentityCardNumberField, CHPhoneNumberField, CHSocialSecurityNumberField,
                                   CHStateSelect, CHZipCodeField)
 

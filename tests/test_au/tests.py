@@ -4,7 +4,6 @@ import re
 
 from django.core.exceptions import ValidationError
 from django.test import TestCase
-
 from localflavor.au import forms, models
 from localflavor.au.validators import (AUBusinessNumberFieldValidator, AUCompanyNumberFieldValidator,
                                        AUTaxFileNumberFieldValidator)

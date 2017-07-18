@@ -6,7 +6,6 @@ import re
 
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-
 from localflavor.compat import EmptyValueCompatMixin
 
 from .se_counties import COUNTY_CHOICES

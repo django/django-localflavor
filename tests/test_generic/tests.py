@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.test import SimpleTestCase, TestCase
 from django.utils import formats
-
 from localflavor.generic.countries.sepa import IBAN_SEPA_COUNTRIES
 from localflavor.generic.forms import BICFormField, DateField, DateTimeField, IBANFormField, SplitDateTimeField
 from localflavor.generic.models import BICField, IBANField

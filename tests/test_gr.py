@@ -1,5 +1,4 @@
 from django.test import SimpleTestCase
-
 from localflavor.gr.forms import GRMobilePhoneNumberField, GRPhoneNumberField, GRPostalCodeField, GRTaxNumberCodeField
 
 

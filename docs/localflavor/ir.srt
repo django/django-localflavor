@@ -1,0 +1,13 @@
++IRAN (``ir``)
+ +===============
+ +
+ +Forms
+ +-----
+ +
+ +.. automodule:: localflavor.ir.forms
+ +    :members:
+ +
+ +Data
+ +----
+ +
+ +.. autodata:: localflavor.ir.ir_provinces.PROVINCE_CHOICES
