@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 
 from django.test.testcases import SimpleTestCase
 from django.utils.translation import activate, deactivate, get_language
-
 from localflavor.ca.forms import (CAPhoneNumberField, CAPostalCodeField, CAProvinceField, CAProvinceSelect,
                                   CASocialInsuranceNumberField)
 

@@ -1,5 +1,4 @@
 from django.db import models
-
 from localflavor.pk.models import PKPhoneNumberField, PKPostCodeField, PKStateField
 
 

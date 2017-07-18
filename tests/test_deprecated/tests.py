@@ -4,7 +4,6 @@ import warnings
 
 from django.db.models import Model
 from django.test import SimpleTestCase, override_settings
-
 from localflavor.au import models as au_models
 from localflavor.au.forms import AUPhoneNumberField
 from localflavor.be.forms import BEPhoneNumberField

@@ -10,6 +10,8 @@ New flavors:
 
 New fields for existing flavors:
 
+- Added local flavor for Iran
+
 - Added KWAreaSelect form field.
   (`gh-296 <https://github.com/django/django-localflavor/pull/296>`_)
 

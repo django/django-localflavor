@@ -1,5 +1,4 @@
 from django.test import TestCase
-
 from localflavor.ua.forms import UAPostalCodeField, UARegionSelect, UAVatNumberField
 from localflavor.ua.ua_regions import UA_REGION_CHOICES
 
