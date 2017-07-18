@@ -1,6 +1,5 @@
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
-
 from localflavor.generic.models import DeprecatedPhoneNumberField
 
 from .forms import USPhoneNumberField as USPhoneNumberFormField

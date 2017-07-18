@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
-
 from localflavor.ro.forms import (ROCIFField, ROCNPField, ROCountyField, ROCountySelect, ROIBANField,
                                   ROPhoneNumberField, ROPostalCodeField)
 

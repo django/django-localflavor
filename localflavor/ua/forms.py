@@ -1,6 +1,5 @@
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
-
 from localflavor.compat import EmptyValueCompatMixin
 
 from .ua_regions import UA_REGION_CHOICES

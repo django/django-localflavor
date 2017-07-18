@@ -7,7 +7,6 @@ import re
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
-
 from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 

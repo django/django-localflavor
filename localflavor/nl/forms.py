@@ -5,7 +5,6 @@ from __future__ import unicode_literals
 
 from django import forms
 from django.utils import six
-
 from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .nl_provinces import PROVINCE_CHOICES

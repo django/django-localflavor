@@ -1,5 +1,4 @@
 from django.db import models
-
 from localflavor.ec.models import ECProvinceField
 
 

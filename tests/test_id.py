@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
-
 from localflavor.id_.forms import (IDLicensePlateField, IDLicensePlatePrefixSelect, IDNationalIdentityNumberField,
                                    IDPhoneNumberField, IDPostCodeField, IDProvinceSelect)
 
