@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.utils.translation import ugettext_lazy as _
 
-#: A list of Iranian as `choices` in a
+#: A list of Iranian Provinces as `choices` in a
 #: formfield. From https://en.wikipedia.org/wiki/Provinces_of_Iran
 
 PROVINCE_CHOICES = (
