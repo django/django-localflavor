@@ -4,6 +4,7 @@
 from __future__ import unicode_literals
 
 import re
+import warnings
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -12,7 +13,7 @@ from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
 
 from .br_states import STATE_CHOICES
 
@@ -99,8 +100,8 @@ def dv_maker(v):
     return 0
 
 
-# TODO deprecate function because it's name is not PEP8 compliant, issue #258
 def DV_maker(v):  # noqa
+    warnings.warn('DV_maker is deprecated. Please use dv_maker instead.', RemovedInLocalflavor20Warning)
     return dv_maker(v)
 
 

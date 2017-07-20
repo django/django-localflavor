@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 import re
+import warnings
 
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField
@@ -10,7 +11,7 @@ from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
 
 PHONE_DIGITS_RE = re.compile(r'^[689](\d{7})$')
 
@@ -60,8 +61,7 @@ class SGPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
         raise ValidationError(self.error_messages['invalid'])
 
 
-# TODO change to a pep8 compatible class name
-class SGNRIC_FINField(EmptyValueCompatMixin, CharField):  # noqa
+class SGNRICFINField(EmptyValueCompatMixin, CharField):
     """
     A form field that validates input as a Singapore National Registration.
 
@@ -90,7 +90,7 @@ class SGNRIC_FINField(EmptyValueCompatMixin, CharField):  # noqa
 
         Strips whitespace.
         """
-        super(SGNRIC_FINField, self).clean(value)
+        super(SGNRICFINField, self).clean(value)
         if value in self.empty_values:
             return self.empty_value
         value = re.sub('(\s+)', '', force_text(value.upper()))
@@ -112,3 +112,10 @@ class SGNRIC_FINField(EmptyValueCompatMixin, CharField):  # noqa
             return value
 
         raise ValidationError(self.error_messages['invalid'])
+
+
+class SGNRIC_FINField(SGNRICFINField):  # noqa
+    def __init__(self, *args, **kwargs):
+        warnings.warn('SGNRIC_FINField is deprecated. Please use SGNRICFINField instead.',
+                      RemovedInLocalflavor20Warning)
+        super(SGNRIC_FINField, self).__init__(*args, **kwargs)

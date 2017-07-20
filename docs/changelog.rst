@@ -15,12 +15,14 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Fixed crash with USZipCodeField form validation when null=True is allowed
+  (`gh-295 <https://github.com/django/django-localflavor/pull/295>`_).
+- Deprecated br.forms.DV_maker, sg.forms.SGNRIC_FINField, lt.forms.LTPhoneField
+  and ro.forms.ROIBANField
+  (`gh-305 <https://github.com/django/django-localflavor/pull/305>`_).
 
 Other changes:
 
-- Fixed crash with USZipCodeField form validation when null=True is allowed
-  (`gh-295 <https://github.com/django/django-localflavor/pull/295>`_)
 - Added support for empty_value kwarg in Django >= 1.11
   (`gh-298 <https://github.com/django/django-localflavor/pull/298>`_).
 - Dropped support for Python 3.2.

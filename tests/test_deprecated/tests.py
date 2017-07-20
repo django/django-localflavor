@@ -24,6 +24,7 @@ from localflavor.il.forms import ILMobilePhoneNumberField
 from localflavor.in_.forms import INPhoneNumberField
 from localflavor.is_.forms import ISPhoneNumberField
 from localflavor.it.forms import ITPhoneNumberField
+from localflavor.lt.forms import LTPhoneField
 from localflavor.nl import models as nl_models
 from localflavor.nl.forms import NLPhoneNumberField
 from localflavor.no.forms import NOPhoneNumberField
@@ -31,8 +32,8 @@ from localflavor.nz.forms import NZPhoneNumberField
 from localflavor.pk import models as pk_models
 from localflavor.pk.forms import PKPhoneNumberField
 from localflavor.pt.forms import PTPhoneNumberField
-from localflavor.ro.forms import ROPhoneNumberField
-from localflavor.sg.forms import SGPhoneNumberField
+from localflavor.ro.forms import ROIBANField, ROPhoneNumberField
+from localflavor.sg.forms import SGNRIC_FINField, SGPhoneNumberField
 from localflavor.si.forms import SIPhoneNumberField
 from localflavor.tr.forms import TRPhoneNumberField
 from localflavor.us import models as us_models
@@ -74,6 +75,7 @@ class DeprecatedFieldsTests(SimpleTestCase):
             INPhoneNumberField()
             ISPhoneNumberField()
             ITPhoneNumberField()
+            LTPhoneField()
             NLPhoneNumberField()
             NOPhoneNumberField()
             NZPhoneNumberField()
@@ -84,5 +86,19 @@ class DeprecatedFieldsTests(SimpleTestCase):
             SIPhoneNumberField()
             TRPhoneNumberField()
             USPhoneNumberField()
+
+        self.assertTrue(all(w.category is RemovedInLocalflavor20Warning for w in recorded))
+
+    def test_SGNRIC_FINField_deprecated(self):
+        with warnings.catch_warnings(record=True) as recorded:
+            warnings.simplefilter('always')
+            SGNRIC_FINField()
+
+        self.assertTrue(all(w.category is RemovedInLocalflavor20Warning for w in recorded))
+
+    def test_ROIBANField_deprecated(self):
+        with warnings.catch_warnings(record=True) as recorded:
+            warnings.simplefilter('always')
+            ROIBANField()
 
         self.assertTrue(all(w.category is RemovedInLocalflavor20Warning for w in recorded))

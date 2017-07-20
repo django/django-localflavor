@@ -119,7 +119,7 @@ class LTPostalCodeField(Field):
         return 'LT-' + match.group('code')
 
 
-class LTPhoneField(Field):
+class LTPhoneField(Field, DeprecatedPhoneNumberFormFieldMixin):
     """
     Form field that validates as Lithuanian phone number.
 
