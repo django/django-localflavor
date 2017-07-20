@@ -12,8 +12,8 @@ from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 from localflavor.generic.checksums import luhn
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
 from .fr_region import REGION_2016_CHOICES, REGION_CHOICES

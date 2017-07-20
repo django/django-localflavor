@@ -11,7 +11,7 @@ from django.utils import six
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .es_provinces import PROVINCE_CHOICES
 from .es_regions import REGION_CHOICES

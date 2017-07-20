@@ -1,11 +1,8 @@
 from __future__ import unicode_literals
 
-import warnings
-
 from django import forms
 
 from localflavor.compat import EmptyValueCompatMixin
-from localflavor.generic.deprecation import RemovedInLocalflavor20Warning
 
 from .validators import IBAN_COUNTRY_CODE_LENGTH, BICValidator, IBANValidator
 
@@ -138,14 +135,3 @@ class BICFormField(EmptyValueCompatMixin, forms.CharField):
         if value is not None:
             return value.upper()
         return value
-
-
-class DeprecatedPhoneNumberFormFieldMixin(object):
-    def __init__(self):
-        super(DeprecatedPhoneNumberFormFieldMixin, self).__init__()
-        warnings.warn(
-            "{} is deprecated in favor of the django-phonenumber-field library.".format(
-                self.__class__.__name__
-            ),
-            RemovedInLocalflavor20Warning,
-        )
