@@ -8,7 +8,7 @@ from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 hk_phone_digits_re = re.compile(r'^(?:852-?)?(\d{4})[-\.]?(\d{4})$')
 hk_special_numbers = ('999', '992', '112')

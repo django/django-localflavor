@@ -10,7 +10,7 @@ from django.forms import Field, RegexField, Select, ValidationError
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from ..generic.forms import IBANFormField
 from .ro_counties import COUNTIES_CHOICES

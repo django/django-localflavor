@@ -10,6 +10,7 @@ from django.utils.six import text_type
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
 

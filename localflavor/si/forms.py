@@ -10,7 +10,7 @@ from django.forms.fields import CharField, ChoiceField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .si_postalcodes import SI_POSTALCODES_CHOICES
 
