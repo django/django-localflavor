@@ -4,13 +4,14 @@ from __future__ import unicode_literals
 
 import datetime
 import re
+import warnings
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, Select, ValidationError
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.compat import EmptyValueCompatMixin
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
 
 from ..generic.forms import IBANFormField
 from .ro_counties import COUNTIES_CHOICES
@@ -191,6 +192,8 @@ class ROIBANField(IBANFormField):
     """
 
     def __init__(self, *args, **kwargs):
+        warnings.warn('ROIBANField is deprecated. Use `IBANFormField` with `included_countries=(\'RO\',)` option '
+                      'instead.', RemovedInLocalflavor20Warning)
         kwargs['use_nordea_extensions'] = False
         kwargs['include_countries'] = ('RO',)
         super(ROIBANField, self).__init__(*args, **kwargs)
