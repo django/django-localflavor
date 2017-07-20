@@ -292,6 +292,14 @@ class IBANTests(TestCase):
         iban_model_field = IBANField()
         self.assertEqual(type(iban_model_field.formfield()), type(IBANFormField()))
 
+    def test_model_field_deconstruct(self):
+        # test_instance must be created with the non-default options.
+        test_instance = IBANField(include_countries=('NL', 'BE'), use_nordea_extensions=True)
+        name, path, args, kwargs = test_instance.deconstruct()
+        new_instance = IBANField(*args, **kwargs)
+        for attr in ('include_countries', 'use_nordea_extensions'):
+            self.assertEqual(getattr(test_instance, attr), getattr(new_instance, attr))
+
 
 class BICTests(TestCase):
     def test_bic_validator(self):
@@ -450,11 +458,3 @@ class EANTests(TestCase):
 
         for value in invalid:
             self.assertRaisesMessage(ValidationError,  error_message, validator, value)
-
-    def test_deconstruct_methods(self):
-        # test_instance must be created with the non-default options.
-        test_instance = IBANField(include_countries=('NL', 'BE'), use_nordea_extensions=True)
-        name, path, args, kwargs = test_instance.deconstruct()
-        new_instance = IBANField(*args, **kwargs)
-        for attr in ('include_countries', 'use_nordea_extensions'):
-            self.assertEqual(getattr(test_instance, attr), getattr(new_instance, attr))
