@@ -1,4 +1,5 @@
 sudo: no
+dist: trusty
 language: python
 cache: pip
 
