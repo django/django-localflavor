@@ -23,6 +23,8 @@ Modifications to existing flavors:
   (`gh-305 <https://github.com/django/django-localflavor/pull/305>`_).
 - Added support for Swedish interim personal identity numbers
   (`gh-308 <https://github.com/django/django-localflavor/pull/308>`_).
+- Deprecated `nl.models.NLBankAccountNumberField`.
+  (`gh-307 <https://github.com/django/django-localflavor/pull/307>`_).
 
 Other changes:
 
