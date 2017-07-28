@@ -1,9 +1,11 @@
 from __future__ import unicode_literals
 
+import warnings
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberField
+from localflavor.deprecation import DeprecatedPhoneNumberField, RemovedInLocalflavor20Warning
 
 from . import forms
 from .nl_provinces import PROVINCE_CHOICES
@@ -121,9 +123,15 @@ class NLBankAccountNumberField(models.CharField):
     This model field uses :class:`validators.NLBankAccountNumberFieldValidator` for validation.
 
     .. versionadded:: 1.1
+
+    .. deprecated:: 1.6
+        Use `localflavor.generic.models.IBANField` with included_countries=('nl') option instead.
     """
 
     def __init__(self, *args, **kwargs):
+        warnings.warn("NLBankAccountNumberField is deprecated. Use `localflavor.generic.models.IBANField` "
+                      "with included_countries=('nl') option instead.", RemovedInLocalflavor20Warning)
+
         kwargs.setdefault('max_length', 10)
         super(NLBankAccountNumberField, self).__init__(*args, **kwargs)
         # Ensure that only the NLBankAccountNumberFieldValidator is set.
