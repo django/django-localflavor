@@ -69,7 +69,7 @@ class NOLocalFlavorTests(SimpleTestCase):
         self.assertEqual(form.prepare_value('76940512057'), '7694.05.12057')
         # In the event there's already empty/blank/null values present.
         # Any invalid data should be stopped by form.validate, which the above test should take care of.
-        self.assertEqual(form.prepare_value(None), None)
+        self.assertEqual(form.prepare_value(None), '')
         self.assertEqual(form.prepare_value(''), '')
 
     def test_NOSocialSecurityNumber(self):

@@ -9,6 +9,9 @@ from django.forms.fields import Field, RegexField, Select
 from django.utils.six import text_type
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
+
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
 
 postalcode = re.compile(r'^(LT\s?-\s?)?(?P<code>\d{5})$', re.IGNORECASE)
@@ -29,7 +32,7 @@ class LTMunicipalitySelect(Select):
                                                    choices=MUNICIPALITY_CHOICES)
 
 
-class LTIDCodeField(RegexField):
+class LTIDCodeField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates as Lithuanian ID Code.
 
@@ -51,8 +54,8 @@ class LTIDCodeField(RegexField):
     def clean(self, value):
         super(LTIDCodeField, self).clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         if not self.valid_date(value):
             raise ValidationError(self.error_messages['date'])
@@ -116,7 +119,7 @@ class LTPostalCodeField(Field):
         return 'LT-' + match.group('code')
 
 
-class LTPhoneField(Field):
+class LTPhoneField(Field, DeprecatedPhoneNumberFormFieldMixin):
     """
     Form field that validates as Lithuanian phone number.
 

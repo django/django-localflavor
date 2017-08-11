@@ -10,7 +10,7 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from ..generic import validators
 from .ch_states import STATE_CHOICES

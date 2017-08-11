@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.sg.forms import SGNRIC_FINField, SGPhoneNumberField, SGPostCodeField
+from localflavor.sg.forms import SGNRIC_FINField, SGNRICFINField, SGPhoneNumberField, SGPostCodeField
 
 
 class SGLocalFlavorTests(SimpleTestCase):
@@ -37,7 +37,7 @@ class SGLocalFlavorTests(SimpleTestCase):
         }
         self.assertFieldOutput(SGPhoneNumberField, valid, invalid)
 
-    def test_SGNRIC_FINField(self):
+    def test_SGNRICFINField(self):
         error_format = ['Invalid NRIC/FIN.']
         valid = {
             's8675985c': 'S8675985C',
@@ -53,4 +53,5 @@ class SGLocalFlavorTests(SimpleTestCase):
             'F8155379N': error_format,
             'G1087200K': error_format,
         }
+        self.assertFieldOutput(SGNRICFINField, valid, invalid)
         self.assertFieldOutput(SGNRIC_FINField, valid, invalid)

@@ -10,14 +10,15 @@ from django.forms.fields import CharField, Field, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 from localflavor.generic.checksums import luhn
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 sin_re = re.compile(r"^(\d{3})-(\d{3})-(\d{3})$")
 
 
-class CAPostalCodeField(CharField):
+class CAPostalCodeField(EmptyValueCompatMixin, CharField):
     """
     Canadian postal code form field.
 
@@ -36,8 +37,8 @@ class CAPostalCodeField(CharField):
 
     def clean(self, value):
         value = super(CAPostalCodeField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         postcode = value.upper().strip()
         m = self.postcode_regex.match(postcode)
         if not m:

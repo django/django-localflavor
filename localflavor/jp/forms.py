@@ -3,10 +3,12 @@
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
+
 from .jp_prefectures import JP_PREFECTURE_CODES, JP_PREFECTURES
 
 
-class JPPostalCodeField(RegexField):
+class JPPostalCodeField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates its input is a Japanese postcode.
 
@@ -24,10 +26,10 @@ class JPPostalCodeField(RegexField):
     def clean(self, value):
         """
         Validates the input and returns a string that contains only numbers.
-
-        Returns an empty string for empty values.
         """
         value = super(JPPostalCodeField, self).clean(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.replace('-', '')
 
 

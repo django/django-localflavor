@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.models import DeprecatedPhoneNumberField
+from localflavor.deprecation import DeprecatedPhoneNumberField
 
 from . import forms
 from .nl_provinces import PROVINCE_CHOICES

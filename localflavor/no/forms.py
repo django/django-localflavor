@@ -10,7 +10,8 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .no_municipalities import MUNICIPALITY_CHOICES
 
@@ -98,7 +99,7 @@ class NOSocialSecurityNumber(Field):
         return birthday
 
 
-class NOBankAccountNumber(CharField):
+class NOBankAccountNumber(EmptyValueCompatMixin, CharField):
     """
     A form field for Norwegian bank account numbers.
 
@@ -126,7 +127,7 @@ class NOBankAccountNumber(CharField):
     def validate(self, value):
         super(NOBankAccountNumber, self).validate(value)
 
-        if value is '':
+        if value in self.empty_values:
             # It's alright to be empty.
             return
         elif not value.isdigit():
@@ -154,11 +155,13 @@ class NOBankAccountNumber(CharField):
 
     def to_python(self, value):
         value = super(NOBankAccountNumber, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.replace('.', '').replace(' ', '')
 
     def prepare_value(self, value):
-        if value in EMPTY_VALUES:
-            return value
+        if value in self.empty_values:
+            return self.empty_value
         return '{}.{}.{}'.format(value[0:4], value[4:6], value[6:11])
 
 

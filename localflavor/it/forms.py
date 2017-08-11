@@ -10,7 +10,8 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .it_province import PROVINCE_CHOICES
 from .it_region import REGION_CHOICES, REGION_PROVINCE_CHOICES
@@ -56,7 +57,7 @@ class ITProvinceSelect(Select):
         super(ITProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class ITSocialSecurityNumberField(RegexField):
+class ITSocialSecurityNumberField(EmptyValueCompatMixin, RegexField):
     """
     A form field that validates Italian Tax code (codice fiscale) for both persons and entities.
 
@@ -82,8 +83,8 @@ class ITSocialSecurityNumberField(RegexField):
 
     def clean(self, value):
         value = super(ITSocialSecurityNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub('\s', '', value).upper()
         # Entities SSN are numeric-only
         if value.isdigit():
@@ -116,7 +117,7 @@ class ITVatNumberField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
 
-class ITPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class ITPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as an Italian phone number.
 
@@ -131,8 +132,8 @@ class ITPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
 
     def clean(self, value):
         super(ITPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub(r'[^\+\d]', '', force_text(value))
         m = phone_digits_re.match(value)
         if m:

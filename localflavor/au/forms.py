@@ -4,13 +4,13 @@ from __future__ import unicode_literals
 
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .au_states import STATE_CHOICES
 from .validators import AUBusinessNumberFieldValidator, AUCompanyNumberFieldValidator, AUTaxFileNumberFieldValidator
@@ -35,7 +35,7 @@ class AUPostCodeField(RegexField):
                                               max_length, min_length, *args, **kwargs)
 
 
-class AUPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class AUPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as an Australian phone number.
 
@@ -49,8 +49,8 @@ class AUPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     def clean(self, value):
         """Validate a phone number. Strips parentheses, whitespace and hyphens."""
         super(AUPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
         phone_match = PHONE_DIGITS_RE.search(value)
         if phone_match:
@@ -65,7 +65,7 @@ class AUStateSelect(Select):
         super(AUStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
 
-class AUBusinessNumberField(CharField):
+class AUBusinessNumberField(EmptyValueCompatMixin, CharField):
     """
     A form field that validates input as an Australian Business Number (ABN).
 
@@ -77,6 +77,8 @@ class AUBusinessNumberField(CharField):
 
     def to_python(self, value):
         value = super(AUBusinessNumberField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.upper().replace(' ', '')
 
     def prepare_value(self, value):
@@ -88,7 +90,7 @@ class AUBusinessNumberField(CharField):
         return '{} {} {} {}'.format(spaceless[:2], spaceless[2:5], spaceless[5:8], spaceless[8:])
 
 
-class AUCompanyNumberField(CharField):
+class AUCompanyNumberField(EmptyValueCompatMixin, CharField):
     """
     A form field that validates input as an Australian Company Number (ACN).
 
@@ -99,6 +101,8 @@ class AUCompanyNumberField(CharField):
 
     def to_python(self, value):
         value = super(AUCompanyNumberField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.upper().replace(' ', '')
 
     def prepare_value(self, value):

@@ -1,10 +1,8 @@
 from __future__ import unicode_literals
 
-import warnings
-
 from django import forms
 
-from localflavor.generic.deprecation import RemovedInLocalflavor20Warning
+from localflavor.compat import EmptyValueCompatMixin
 
 from .validators import IBAN_COUNTRY_CODE_LENGTH, BICValidator, IBANValidator
 
@@ -56,7 +54,7 @@ class SplitDateTimeField(forms.SplitDateTimeField):
                                                  input_time_formats=input_time_formats, *args, **kwargs)
 
 
-class IBANFormField(forms.CharField):
+class IBANFormField(EmptyValueCompatMixin, forms.CharField):
     """
     An IBAN consists of up to 34 alphanumeric characters.
 
@@ -93,6 +91,8 @@ class IBANFormField(forms.CharField):
 
     def to_python(self, value):
         value = super(IBANFormField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.upper().replace(' ', '').replace('-', '')
 
     def prepare_value(self, value):
@@ -104,7 +104,7 @@ class IBANFormField(forms.CharField):
         return ' '.join(value[i:i + grouping] for i in range(0, len(value), grouping))
 
 
-class BICFormField(forms.CharField):
+class BICFormField(EmptyValueCompatMixin, forms.CharField):
     """
     A BIC consists of 8 (BIC8) or 11 (BIC11) alphanumeric characters.
 
@@ -125,6 +125,8 @@ class BICFormField(forms.CharField):
         # BIC is always written in upper case.
         # https://www2.swift.com/uhbonline/books/public/en_uk/bic_policy/bic_policy.pdf
         value = super(BICFormField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.upper()
 
     def prepare_value(self, value):
@@ -133,14 +135,3 @@ class BICFormField(forms.CharField):
         if value is not None:
             return value.upper()
         return value
-
-
-class DeprecatedPhoneNumberFormFieldMixin(object):
-    def __init__(self):
-        super(DeprecatedPhoneNumberFormFieldMixin, self).__init__()
-        warnings.warn(
-            "{} is deprecated in favor of the django-phonenumber-field library.".format(
-                self.__class__.__name__
-            ),
-            RemovedInLocalflavor20Warning,
-        )

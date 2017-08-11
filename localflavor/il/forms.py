@@ -8,8 +8,8 @@ from django.core.validators import EMPTY_VALUES
 from django.forms.fields import Field, RegexField
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 from localflavor.generic.checksums import luhn
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 id_number_re = re.compile(r'^(?P<number>\d{1,8})-?(?P<check>\d)$')
 mobile_phone_number_re = re.compile(r'^(\()?0?(5[02-9])(?(1)\))-?\d{7}$')  # including palestinian mobile carriers
@@ -30,8 +30,8 @@ class ILPostalCodeField(RegexField):
         super(ILPostalCodeField, self).__init__(r'^\d{5}$|^\d{7}$', *args, **kwargs)
 
     def clean(self, value):
-        if value not in EMPTY_VALUES:
-            value = value.replace(" ", "")
+        if value not in self.empty_values:
+            value = value.replace(' ', '')
         return super(ILPostalCodeField, self).clean(value)
 
 

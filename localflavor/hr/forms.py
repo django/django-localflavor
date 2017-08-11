@@ -11,8 +11,9 @@ from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
+from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 from localflavor.generic.checksums import luhn
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .hr_choices import HR_COUNTY_CHOICES, HR_LICENSE_PLATE_PREFIX_CHOICES, HR_PHONE_NUMBER_PREFIX_CHOICES
 
@@ -107,7 +108,7 @@ class HRJMBGField(Field):
         return '%s' % (value, )
 
 
-class HROIBField(RegexField):
+class HROIBField(EmptyValueCompatMixin, RegexField):
     """
     Personal Identification Number of Croatia (OIB) field.
 
@@ -124,8 +125,8 @@ class HROIBField(RegexField):
 
     def clean(self, value):
         super(HROIBField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         return '%s' % (value, )
 

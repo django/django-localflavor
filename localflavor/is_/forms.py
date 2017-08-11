@@ -2,19 +2,19 @@
 
 from __future__ import unicode_literals
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import RegexField
 from django.forms.widgets import Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .is_postalcodes import IS_POSTALCODES
 
 
-class ISIdNumberField(RegexField):
+class ISIdNumberField(EmptyValueCompatMixin, RegexField):
     """
     Icelandic identification number (kennitala).
 
@@ -33,8 +33,8 @@ class ISIdNumberField(RegexField):
     def clean(self, value):
         value = super(ISIdNumberField, self).clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         value = self._canonify(value)
         if self._validate(value):
@@ -60,7 +60,7 @@ class ISIdNumberField(RegexField):
         return force_text(value[:6] + '-' + value[6:])
 
 
-class ISPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
+class ISPhoneNumberField(EmptyValueCompatMixin, RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Icelandic phone number.
 
@@ -74,8 +74,8 @@ class ISPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     def clean(self, value):
         value = super(ISPhoneNumberField, self).clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         return value.replace('-', '').replace(' ', '')
 

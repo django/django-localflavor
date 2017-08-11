@@ -5,17 +5,17 @@ from __future__ import unicode_literals
 import datetime
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, ChoiceField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.compat import EmptyValueCompatMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .si_postalcodes import SI_POSTALCODES_CHOICES
 
 
-class SIEMSOField(CharField):
+class SIEMSOField(EmptyValueCompatMixin, CharField):
     """
     A form for validating Slovenian personal identification number.
 
@@ -31,8 +31,8 @@ class SIEMSOField(CharField):
 
     def clean(self, value):
         super(SIEMSOField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         value = value.strip()
 
@@ -82,7 +82,7 @@ class SIEMSOField(CharField):
             raise ValidationError(self.error_messages['checksum'])
 
 
-class SITaxNumberField(CharField):
+class SITaxNumberField(EmptyValueCompatMixin, CharField):
     """
     Slovenian tax number field.
 
@@ -98,8 +98,8 @@ class SITaxNumberField(CharField):
 
     def clean(self, value):
         super(SITaxNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         value = value.strip()
 
@@ -139,7 +139,7 @@ class SIPostalCodeSelect(Select):
                                                  choices=SI_POSTALCODES_CHOICES)
 
 
-class SIPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
+class SIPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Slovenian phone number field.
 
@@ -163,8 +163,8 @@ class SIPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
 
     def clean(self, value):
         super(SIPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         value = value.replace(' ', '').replace('-', '').replace('/', '')
         m = self.phone_regex.match(value)

@@ -41,6 +41,7 @@ Authors
 * Gerardo Orozco
 * Ghassen Telmoudi
 * Grzes Furga
+* Hamad AlGhanim
 * Honza Král
 * Horst Gutmann
 * Illia Volochii
@@ -74,6 +75,7 @@ Authors
 * Olivier Sels
 * Paul Donohue
 * Paulo Poiati
+* Peter J. Farrell
 * Rael Max
 * Ramiro Morales
 * Rolf Erik Lekang

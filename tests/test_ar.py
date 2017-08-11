@@ -46,7 +46,6 @@ class ARLocalFlavorTests(SimpleTestCase):
             'c1064AAB': 'C1064AAB',
             'C1064aab': 'C1064AAB',
             '4400': '4400',
-            'C1064AAB': 'C1064AAB',
         }
         invalid = {
             'C1064AABB': error_atmost + error_format,
@@ -62,8 +61,6 @@ class ARLocalFlavorTests(SimpleTestCase):
         error_length = ['This field requires 7 or 8 digits.']
         error_digitsonly = ['This field requires only numbers.']
         valid = {
-            '20123456': '20123456',
-            '20.123.456': '20123456',
             '20123456': '20123456',
             '20.123.456': '20123456',
             '20.123456': '20123456',
@@ -83,7 +80,6 @@ class ARLocalFlavorTests(SimpleTestCase):
         error_legal_type = ['Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33.']
         valid = {
             '20-10123456-9': '20-10123456-9',
-            '20-10123456-9': '20-10123456-9',
             '27-10345678-4': '27-10345678-4',
             '20101234569': '20-10123456-9',
             '27103456784': '27-10345678-4',
@@ -98,7 +94,6 @@ class ARLocalFlavorTests(SimpleTestCase):
             '20-10123456': error_format,
             '20-10123456-': error_format,
             '20-10123456-5': error_invalid,
-            '27-10345678-1': error_invalid,
             '27-10345678-1': error_invalid,
             '11211111110': error_legal_type,
         }
