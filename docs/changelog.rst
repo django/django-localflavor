@@ -6,7 +6,7 @@ Changelog
 
 New flavors:
 
-- Added local flavor for Ukraine
+- Added local flavor for Cuba
   (`gh-292 <https://github.com/django/django-localflavor/pull/292>`_)
 
 New fields for existing flavors:

@@ -14,4 +14,4 @@ class CUSomewhereForm(forms.ModelForm):
 
     class Meta:
         model = CUSomebody
-        fields = ('province_1', 'province_2', 'region_1', 'region_2', 'zip_code', 'id_number', 'phone_number')
+        fields = ('province_1', 'province_2', 'region_1', 'region_2', 'postal_code', 'id_number')

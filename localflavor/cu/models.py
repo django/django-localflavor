@@ -6,8 +6,7 @@ from django.utils.translation import ugettext as _
 
 from .choices import PROVINCE_CHOICES, REGION_CHOICES
 from .forms import CUIdentityCardNumberField as CUIdentityCardNumberFormField
-from .forms import CUPhoneNumberField as CUPhoneNumberFormField
-from .forms import CUPostalCodeField as CUZipCodeFormField
+from .forms import CUPostalCodeField as CUPostalCodeFormField
 
 
 class CURegionField(CharField):
@@ -54,25 +53,25 @@ class CUProvinceField(CharField):
         return name, path, args, kwargs
 
 
-class CUZipCodeField(CharField):
+class CUPostalCodeField(CharField):
     """
-    A model field for the cuban ZIP code.
+    A model field for the cuban postal code.
 
     Forms represent it as a ``forms.CUPostalCodeField``.
 
     .. versionadded:: 1.6
     """
 
-    description = _("Cuban ZIP code")
+    description = _("Cuban postal code")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
-        super(CUZipCodeField, self).__init__(*args, **kwargs)
+        super(CUPostalCodeField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
-        defaults = {'form_class': CUZipCodeFormField}
+        defaults = {'form_class': CUPostalCodeFormField}
         defaults.update(kwargs)
-        return super(CUZipCodeField, self).formfield(**defaults)
+        return super(CUPostalCodeField, self).formfield(**defaults)
 
 
 class CUIdentityCardNumberField(CharField):
@@ -94,24 +93,3 @@ class CUIdentityCardNumberField(CharField):
         defaults = {'form_class': CUIdentityCardNumberFormField}
         defaults.update(kwargs)
         return super(CUIdentityCardNumberField, self).formfield(**defaults)
-
-
-class CUPhoneNumberField(CharField):
-    """
-    A model field for the cuban phone number.
-
-    Forms represent it as a ``forms.CUIdentityCardNumberField``.
-
-    .. versionadded:: 1.6
-    """
-
-    description = _("Cuban phone number")
-
-    def __init__(self, *args, **kwargs):
-        kwargs['max_length'] = 8
-        super(CUPhoneNumberField, self).__init__(*args, **kwargs)
-
-    def formfield(self, **kwargs):
-        defaults = {'form_class': CUPhoneNumberFormField}
-        defaults.update(kwargs)
-        return super(CUPhoneNumberField, self).formfield(**defaults)

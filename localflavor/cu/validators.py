@@ -4,25 +4,28 @@ from __future__ import unicode_literals
 import datetime
 
 from django.core.exceptions import ValidationError
-from django.core.validators import RegexValidator
 from django.utils.translation import ugettext_lazy as _
 
 
-class CUIdentityCardNumberValidator(RegexValidator):
+class CUIdentityCardNumberBirthdayValidator(object):
     """
-    Validator for the cuban identity card number.
+    Validator for the cuban identity card number birthday.
 
     Checks that the first 6 digits build a valid date.
 
     .. versionadded:: 1.6
     """
-    birthday_message = _("Enter a valid date (yymmdd) for the first 6 digits of the Identity Card Number.")
-    birthday_code = 'invalid_birthday'
+    message = _("Enter a valid date (yymmdd) for the first 6 digits of the Identity Card Number.")
+    code = 'invalid_birthday'
+
+    def __init__(self, message=None, code=None):
+        if message is not None:
+            self.message = message
+        if code is not None:
+            self.code = code
 
     def __call__(self, value):
-        super(CUIdentityCardNumberValidator, self).__call__(value)
-
         try:
             datetime.datetime.strptime(value[:6], '%y%m%d')
         except ValueError:
-            raise ValidationError(self.birthday_message, code=self.birthday_code)
+            raise ValidationError(self.message, code=self.code)

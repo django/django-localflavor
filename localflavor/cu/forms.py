@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import re
-
 from django.core.exceptions import ValidationError
-from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, Select
-from django.utils import six
 from django.utils.translation import ugettext as _
 
+from localflavor.compat import EmptyValueCompatMixin
+
 from .choices import PROVINCE_CHOICES, PROVINCE_NORMALIZED, REGION_CHOICES, REGION_NORMALIZED
-from .validators import CUIdentityCardNumberValidator
+from .validators import CUIdentityCardNumberBirthdayValidator
 
 
 class CURegionField(Field):
@@ -29,17 +27,12 @@ class CURegionField(Field):
 
     def clean(self, value):
         super(CURegionField, self).clean(value)
-        if value in EMPTY_VALUES:
+        if value in self.empty_values:
             return ''
         try:
-            value = value.strip().lower()
-        except AttributeError:
+            return REGION_NORMALIZED[value.strip().lower()]
+        except KeyError:
             pass
-        else:
-            try:
-                return REGION_NORMALIZED[value.strip().lower()]
-            except KeyError:
-                pass
         raise ValidationError(self.error_messages['invalid'])
 
 
@@ -70,17 +63,12 @@ class CUProvinceField(Field):
 
     def clean(self, value):
         super(CUProvinceField, self).clean(value)
-        if value in EMPTY_VALUES:
+        if value in self.empty_values:
             return ''
         try:
-            value = value.strip().lower()
-        except AttributeError:
+            return PROVINCE_NORMALIZED[value.strip().lower()]
+        except KeyError:
             pass
-        else:
-            try:
-                return PROVINCE_NORMALIZED[value.strip().lower()]
-            except KeyError:
-                pass
         raise ValidationError(self.error_messages['invalid'])
 
 
@@ -95,19 +83,19 @@ class CUProvinceSelect(Select):
         super(CUProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class CUPostalCodeField(RegexField):
+class CUPostalCodeField(EmptyValueCompatMixin, RegexField):
     """
-    A form field for a cuban Zip Code.
+    A form field for a cuban postal Code.
 
     Taken from : http://mapanet.eu/Postal_Codes/?C=CU
 
-    The cuban ZIP code is a combination of 5 digits non begin with 0.
+    The cuban postal code is a combination of 5 digits non begin with 0.
 
     .. versionadded:: 1.6
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid zip code in the format XXXXX.'),
+        'invalid': _('Enter a valid postal code in the format XXXXX.'),
     }
 
     def __init__(self, *args, **kwargs):
@@ -115,10 +103,12 @@ class CUPostalCodeField(RegexField):
 
     def to_python(self, value):
         value = super(CUPostalCodeField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.strip()
 
 
-class CUIdentityCardNumberField(RegexField):
+class CUIdentityCardNumberField(EmptyValueCompatMixin, RegexField):
     """
     A form field for a cuban identity card number.
 
@@ -144,45 +134,10 @@ class CUIdentityCardNumberField(RegexField):
 
     def __init__(self, *args, **kwargs):
         super(CUIdentityCardNumberField, self).__init__(r'^\d{11}$', *args, **kwargs)
-
-    def _set_regex(self, regex):
-        if isinstance(regex, six.string_types):
-            regex = re.compile(regex, re.UNICODE)
-        self._regex = regex
-        if hasattr(self, '_regex_validator') and self._regex_validator in self.validators:
-            self.validators.remove(self._regex_validator)
-        self._regex_validator = CUIdentityCardNumberValidator(regex=regex)
-        self.validators.append(self._regex_validator)
+        self.validators.append(CUIdentityCardNumberBirthdayValidator())
 
     def to_python(self, value):
         value = super(CUIdentityCardNumberField, self).to_python(value)
-        return value.strip()
-
-
-class CUPhoneNumberField(RegexField):
-    """
-    A form field for a cuban phone number.
-
-    Taken from : https://www.directoriocubano.info/
-
-    The cuban phone number is a combination of 8 digits non begin with:
-    - 5 for the cell phone numbers.
-    - 7 for the capital phone numbers.
-    - 4 for Pinar del Río, Artemisa, Mayabeque, Matanzas, Villa Clara, Cienfuegos, Sancti Spiritus and
-    Isla de la Juventud
-    - 3 for Ciego de Avila, Camaguey and Las Tunas
-    - 2 for Holguín, Granma, Santiago de Cuba and Guantánamo
-
-    .. versionadded:: 1.6
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a valid phone number in the format XXXXXXXX.'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        super(CUPhoneNumberField, self).__init__(r'^[23457]\d{7}$', *args, **kwargs)
-
-    def to_python(self, value):
-        value = super(CUPhoneNumberField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.strip()

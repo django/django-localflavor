@@ -3,8 +3,7 @@ from __future__ import unicode_literals
 
 from django.test import TestCase
 
-from localflavor.cu.forms import (CUIdentityCardNumberField, CUPhoneNumberField, CUPostalCodeField, CUProvinceField,
-                                  CURegionField)
+from localflavor.cu.forms import CUIdentityCardNumberField, CUPostalCodeField, CUProvinceField, CURegionField
 
 from .forms import CUSomewhereForm
 
@@ -17,9 +16,8 @@ class CULocalFlavorTests(TestCase):
             'province_2': 'HAB',
             'region_1': 'OCC',
             'region_2': 'CTL',
-            'zip_code': '20100',
+            'postal_code': '20100',
             'id_number': '91021527832',
-            'phone_number': '76895689',
         }
 
     def _get_form(self):
@@ -64,8 +62,8 @@ class CULocalFlavorTests(TestCase):
         }
         self.assertFieldOutput(CUProvinceField, valid, invalid)
 
-    def test_CUZipCodeField(self):
-        invalid_format = ['Enter a valid zip code in the format XXXXX.']
+    def test_CUPostalCodeField(self):
+        invalid_format = ['Enter a valid postal code in the format XXXXX.']
         valid = {
             '20100': '20100',
             '10400': '10400',
@@ -84,39 +82,24 @@ class CULocalFlavorTests(TestCase):
     def test_CUIdentityCardNumberField(self):
         invalid_format = ['Enter a valid identity card number in the format XXXXXXXXXXX.']
         invalid_birthday = ['Enter a valid date (yymmdd) for the first 6 digits of the Identity Card Number.']
+        both_invalid = [
+            'Enter a valid identity card number in the format XXXXXXXXXXX.',
+            'Enter a valid date (yymmdd) for the first 6 digits of the Identity Card Number.'
+        ]
         valid = {
             '09021527832': '09021527832',
             '45121201568': '45121201568',
             '85051802457': '85051802457',
         }
         invalid = {
-            'AHSJKSJHSKS': invalid_format,
-            '78SJKS458KS': invalid_format,
+            'AHSJKSJHSKS': both_invalid,
+            '78SJKS458KS': both_invalid,
             '0902152783': invalid_format,
             '090215278324': invalid_format,
             '09023027832': invalid_birthday,
             '09043127832': invalid_birthday,
         }
         self.assertFieldOutput(CUIdentityCardNumberField, valid, invalid)
-
-    def test_CUPhoneNumberField(self):
-        invalid_format = ['Enter a valid phone number in the format XXXXXXXX.']
-        valid = {
-            '48759658': '48759658',
-            '76648978': '76648978',
-            '34568978': '34568978',
-            '22568978': '22568978',
-        }
-        invalid = {
-            'ASTESDJK': invalid_format,
-            '45TE89J5': invalid_format,
-            '4875965': invalid_format,
-            '487596580': invalid_format,
-            '08759658': invalid_format,
-            '98759658': invalid_format,
-            '88759658': invalid_format,
-        }
-        self.assertFieldOutput(CUPhoneNumberField, valid, invalid)
 
     def test_get_display_methods(self):
         somewhere = self._get_model()
@@ -164,9 +147,8 @@ class CULocalFlavorTests(TestCase):
             'province_2': '!!!',
             'region_1': '!!!',
             'region_2': '!!!',
-            'zip_code': '!!!',
+            'postal_code': '!!!',
             'id_number': '!!!',
-            'phone_number': '!!!',
         })
 
         form = self._get_form()
@@ -177,6 +159,8 @@ class CULocalFlavorTests(TestCase):
         self.assertEqual(form.errors['province_2'], choice_messages)
         self.assertEqual(form.errors['region_1'], ['Enter a cuban region.'])
         self.assertEqual(form.errors['region_2'], choice_messages)
-        self.assertEqual(form.errors['zip_code'], ["Enter a valid zip code in the format XXXXX."])
-        self.assertEqual(form.errors['id_number'], ["Enter a valid identity card number in the format XXXXXXXXXXX."])
-        self.assertEqual(form.errors['phone_number'], ["Enter a valid phone number in the format XXXXXXXX."])
+        self.assertEqual(form.errors['postal_code'], ["Enter a valid postal code in the format XXXXX."])
+        self.assertEqual(form.errors['id_number'], [
+            "Enter a valid identity card number in the format XXXXXXXXXXX.",
+            "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card Number.",
+        ])
