@@ -44,6 +44,11 @@ class BRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     A form field that validates input as a Brazilian phone number.
 
     The phone number must be in either of the following formats: XX-XXXX-XXXX or XX-XXXXX-XXXX.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {
@@ -101,6 +106,10 @@ def dv_maker(v):
 
 
 def DV_maker(v):  # noqa
+    """
+    .. deprecated:: 1.6
+        Use `dv_maker` instead.
+    """
     warnings.warn('DV_maker is deprecated. Please use dv_maker instead.', RemovedInLocalflavor20Warning)
     return dv_maker(v)
 

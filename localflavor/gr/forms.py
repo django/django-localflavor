@@ -72,6 +72,11 @@ class GRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     Greek general phone field.
 
     10 digits (can also start with +30 which is the country-code for greece)
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {
@@ -99,6 +104,11 @@ class GRMobilePhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     Greek mobile phone field.
 
     10 digits starting with 69 (could also start with +30 which is the country-code for greece)
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

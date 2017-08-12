@@ -210,6 +210,10 @@ class ROPhoneNumberField(EmptyValueCompatMixin, RegexField, DeprecatedPhoneNumbe
         | Official documentation (in English): http://www.ancom.org.ro/en/pnn_1300
         | Official documentation (in Romanian): http://www.ancom.org.ro/pnn_1300
 
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

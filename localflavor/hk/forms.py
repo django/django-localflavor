@@ -30,6 +30,11 @@ class HKPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
           And, it should start with either 2, 3, 5, 6, 8, or 9.
 
     http://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

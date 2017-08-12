@@ -214,6 +214,11 @@ class HRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     digit number.
     Validates fixed, mobile and FGSM numbers. Normalizes to a full number with
     country code (+385 prefix).
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

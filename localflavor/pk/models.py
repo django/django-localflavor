@@ -47,7 +47,14 @@ class PKPostCodeField(CharField):
 
 
 class PKPhoneNumberField(CharField, DeprecatedPhoneNumberField):
-    """A model field that checks that the value is a valid Pakistani phone number (nine to eleven digits)."""
+    """
+    A model field that checks that the value is a valid Pakistani phone number (nine to eleven digits).
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
+    """
 
     description = _("Pakistani Phone number")
 

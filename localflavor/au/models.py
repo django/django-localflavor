@@ -48,7 +48,14 @@ class AUPostCodeField(CharField):
 
 
 class AUPhoneNumberField(CharField, DeprecatedPhoneNumberField):
-    """A model field that checks that the value is a valid Australian phone number (ten digits)."""
+    """
+    A model field that checks that the value is a valid Australian phone number (ten digits).
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
+    """
 
     description = _("Australian Phone number")
 

@@ -38,6 +38,11 @@ class PKPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
     A form field that validates input as an Pakistani phone number.
 
     Valid numbers have nine to eleven digits.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

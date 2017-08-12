@@ -53,39 +53,48 @@ class DeprecatedFieldsTests(SimpleTestCase):
 
         self.assertTrue(all('is deprecated.' in warn.msg[0] for warn in model.check()))
 
+        for field in [f for f in PhoneNumberModel._meta.get_fields() if f.name != 'id']:
+            self.assertIn('deprecated::', field.__class__.__doc__)
+
     def test_PhoneNumberFormField_deprecated(self):
+        deprecated_form_fields = (
+            AUPhoneNumberField,
+            BEPhoneNumberField,
+            BRPhoneNumberField,
+            CAPhoneNumberField,
+            CHPhoneNumberField,
+            CNPhoneNumberField,
+            CNCellNumberField,
+            DKPhoneNumberField,
+            ESPhoneNumberField,
+            FRPhoneNumberField,
+            GRPhoneNumberField,
+            GRMobilePhoneNumberField,
+            HKPhoneNumberField,
+            HRPhoneNumberField,
+            IDPhoneNumberField,
+            ILMobilePhoneNumberField,
+            INPhoneNumberField,
+            ISPhoneNumberField,
+            ITPhoneNumberField,
+            LTPhoneField,
+            NLPhoneNumberField,
+            NOPhoneNumberField,
+            NZPhoneNumberField,
+            PKPhoneNumberField,
+            PTPhoneNumberField,
+            ROPhoneNumberField,
+            SGPhoneNumberField,
+            SIPhoneNumberField,
+            TRPhoneNumberField,
+            USPhoneNumberField,
+        )
+
         with warnings.catch_warnings(record=True) as recorded:
             warnings.simplefilter("always")
-            AUPhoneNumberField()
-            BEPhoneNumberField()
-            BRPhoneNumberField()
-            CAPhoneNumberField()
-            CHPhoneNumberField()
-            CNPhoneNumberField()
-            CNCellNumberField()
-            DKPhoneNumberField()
-            ESPhoneNumberField()
-            FRPhoneNumberField()
-            GRPhoneNumberField()
-            GRMobilePhoneNumberField()
-            HKPhoneNumberField()
-            HRPhoneNumberField()
-            IDPhoneNumberField()
-            ILMobilePhoneNumberField()
-            INPhoneNumberField()
-            ISPhoneNumberField()
-            ITPhoneNumberField()
-            LTPhoneField()
-            NLPhoneNumberField()
-            NOPhoneNumberField()
-            NZPhoneNumberField()
-            PKPhoneNumberField()
-            PTPhoneNumberField()
-            ROPhoneNumberField()
-            SGPhoneNumberField()
-            SIPhoneNumberField()
-            TRPhoneNumberField()
-            USPhoneNumberField()
+            for form_field in deprecated_form_fields:
+                self.assertIn('deprecated::', form_field.__doc__)
+                form_field()
 
         self.assertTrue(all(w.category is RemovedInLocalflavor20Warning for w in recorded))
 

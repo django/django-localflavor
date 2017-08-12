@@ -65,6 +65,11 @@ class ISPhoneNumberField(EmptyValueCompatMixin, RegexField, DeprecatedPhoneNumbe
     Icelandic phone number.
 
     Seven digits with an optional hyphen or space after the first three digits.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     def __init__(self, max_length=8, min_length=7, *args, **kwargs):

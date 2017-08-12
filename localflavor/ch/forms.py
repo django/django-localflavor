@@ -47,6 +47,11 @@ class CHPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     The correct format is '0XX XXX XX XX'.
     '0XX.XXX.XX.XX' and '0XXXXXXXXX' validate but are corrected to
     '0XX XXX XX XX'.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

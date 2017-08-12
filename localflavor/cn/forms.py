@@ -176,6 +176,11 @@ class CNPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
 
     A valid phone number could be like: 010-12345678.
     Considering there might be extension numbers, this could also be: 010-12345678-35.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {
@@ -197,9 +202,12 @@ class CNCellNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     The total length of a cellphone number should be 11.
 
     .. versionchanged:: 1.1
-
        Added 7 as a valid second digit for Chinese virtual mobile ISPs.
 
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

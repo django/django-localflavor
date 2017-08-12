@@ -49,6 +49,11 @@ class FRPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
     The correct format is '0X XX XX XX XX'.
     '0X.XX.XX.XX.XX' and '0XXXXXXXXX' validate but are corrected to
     '0X XX XX XX XX'.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     phone_digits_re = re.compile(r'^0\d(\s|\.)?(\d{2}(\s|\.)?){3}\d{2}$')

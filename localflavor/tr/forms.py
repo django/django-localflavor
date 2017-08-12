@@ -49,6 +49,11 @@ class TRPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
 
     The correct format is 0xxx xxx xxxx. +90xxx xxx xxxx and inputs without spaces also
     validates. The result is normalized to xxx xxx xxxx format.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

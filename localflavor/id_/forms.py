@@ -64,6 +64,11 @@ class IDPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
     An Indonesian telephone number field.
 
     http://id.wikipedia.org/wiki/Daftar_kode_telepon_di_Indonesia
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

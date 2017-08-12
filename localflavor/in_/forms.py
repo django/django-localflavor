@@ -160,6 +160,11 @@ class INPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
     digits if the STD code is 4 digits and 6 digits if the STD code is 5
     digits. The second string will start with numbers between 1 and 6. The
     separator is either a space or a hyphen.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

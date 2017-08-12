@@ -124,6 +124,11 @@ class ITPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
     Will strip any +39 country prefix from the number.
 
     .. versionadded:: 1.1
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

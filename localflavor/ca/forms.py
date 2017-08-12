@@ -47,7 +47,14 @@ class CAPostalCodeField(EmptyValueCompatMixin, CharField):
 
 
 class CAPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """Canadian phone number form field."""
+    """
+    Canadian phone number form field.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
+    """
 
     default_error_messages = {
         'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),

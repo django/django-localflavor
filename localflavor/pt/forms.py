@@ -86,6 +86,11 @@ class PTPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
 
     - Phone numbers have at least 3 and at most 9 digits and may optionally be prefixed with '00351' or '+351'.
     - The input string is allowed to contain spaces (though they will be stripped).
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

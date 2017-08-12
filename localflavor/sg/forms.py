@@ -41,6 +41,11 @@ class SGPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
     A form field that validates input as a Singapore phone number.
 
     Valid numbers have 8 digits and start with either 6, 8, or 9
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {
@@ -115,6 +120,10 @@ class SGNRICFINField(EmptyValueCompatMixin, CharField):
 
 
 class SGNRIC_FINField(SGNRICFINField):  # noqa
+    """
+    .. deprecated:: 1.6
+        Use `SGNRICFINField` instead.
+    """
     def __init__(self, *args, **kwargs):
         warnings.warn('SGNRIC_FINField is deprecated. Please use SGNRICFINField instead.',
                       RemovedInLocalflavor20Warning)

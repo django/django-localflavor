@@ -140,6 +140,11 @@ class LTPhoneField(Field, DeprecatedPhoneNumberFormFieldMixin):
     not converted.
 
     .. versionadded:: 1.1
+
+    .. deprecated:: 1.6
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     # Order dependent (shorter codes cannot go before longer ones)

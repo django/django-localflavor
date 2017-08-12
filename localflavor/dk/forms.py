@@ -40,6 +40,11 @@ class DKPhoneNumberField(fields.RegexField, DeprecatedPhoneNumberFormFieldMixin)
     Field with phone number validation.
 
     Requires a phone number with 8 digits and optional country code.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

@@ -49,7 +49,14 @@ class USZipCodeField(EmptyValueCompatMixin, RegexField):
 
 
 class USPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
-    """A form field that validates input as a U.S. phone number."""
+    """
+    A form field that validates input as a U.S. phone number.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
+    """
 
     default_error_messages = {
         'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),

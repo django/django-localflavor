@@ -94,6 +94,10 @@ class NLPhoneNumberField(models.CharField, DeprecatedPhoneNumberField):
     This model field uses :class:`validators.NLPhoneNumberFieldValidator` for validation.
 
     .. versionadded:: 1.3
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     description = _('Dutch phone number')

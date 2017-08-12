@@ -46,6 +46,11 @@ class ESPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     phones)
 
     TODO: accept and strip characters like dot, hyphen... in phone number
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

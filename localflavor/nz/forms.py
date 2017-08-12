@@ -64,7 +64,14 @@ class NZPostCodeField(RegexField):
 
 
 class NZPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """A form field that validates its input as New Zealand phone number."""
+    """
+    A form field that validates its input as New Zealand phone number.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
+    """
 
     default_error_messages = {'invalid': _('Invalid phone number.')}
 

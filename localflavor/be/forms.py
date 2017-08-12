@@ -44,6 +44,11 @@ class BEPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     0dddddddd - dialling a smaller city
     04dd ddd dd dd, 04dd/ddd.dd.dd,
     04dd.ddd.dd.dd, 04ddddddddd - dialling a mobile number
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {

@@ -35,7 +35,14 @@ class NLProvinceSelect(forms.Select):
 
 
 class NLPhoneNumberField(forms.CharField, DeprecatedPhoneNumberFormFieldMixin):
-    """A Dutch telephone number field."""
+    """
+    A Dutch telephone number field.
+
+    .. deprecated:: 1.4
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
+    """
 
     default_validators = [NLPhoneNumberFieldValidator()]
 
