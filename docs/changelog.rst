@@ -21,6 +21,8 @@ Modifications to existing flavors:
 - Deprecated br.forms.DV_maker, sg.forms.SGNRIC_FINField, lt.forms.LTPhoneField
   and ro.forms.ROIBANField
   (`gh-305 <https://github.com/django/django-localflavor/pull/305>`_).
+- Added support for Swedish interim personal identity numbers
+  (`gh-308 <https://github.com/django/django-localflavor/pull/308>`_).
 
 Other changes:
 

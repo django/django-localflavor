@@ -7,6 +7,12 @@ def id_number_checksum(gd):
     """Calculates a Swedish ID number checksum, using the "Luhn"-algoritm."""
     n = s = 0
     for c in (gd['year'] + gd['month'] + gd['day'] + gd['serial']):
+        # When validating interim ID numbers, the letter is considered
+        # equivalent to 1. Source:
+        # https://wiki.swami.se/display/Inkubator/norEduPersonNIN+och+Svenska+Personnummer
+        if c.isalpha():
+            c = 1
+
         tmp = ((n % 2) and 1 or 2) * int(c)
 
         if tmp > 9:
@@ -64,7 +70,10 @@ def validate_id_birthday(gd, fix_coordination_number_day=True):
 
 def format_personal_id_number(birth_day, gd):
     # birth_day.strftime cannot be used, since it does not support dates < 1900
-    return six.text_type(str(birth_day.year) + gd['month'] + gd['day'] + gd['serial'] + gd['checksum'])
+    # If the ID number is an interim number, the letter in the serial part
+    # should be normalized to upper case. Source:
+    # https://wiki.swami.se/display/Inkubator/norEduPersonNIN+och+Svenska+Personnummer
+    return six.text_type(str(birth_day.year) + gd['month'] + gd['day'] + gd['serial'].upper() + gd['checksum'])
 
 
 def format_organisation_number(gd):
