@@ -11,7 +11,7 @@ from .forms import CUPostalCodeField as CUPostalCodeFormField
 
 class CURegionField(CharField):
     """
-    A model field for the three-letter of the cuban region abbreviation.
+    A model field for the three-letter of the Cuban region abbreviation.
 
     Forms represent it as a ``forms.CURegionField``.
 
@@ -33,7 +33,7 @@ class CURegionField(CharField):
 
 class CUProvinceField(CharField):
     """
-    A model field for the three-letter of the cuban province abbreviation in the database.
+    A model field for the three-letter of the Cuban province abbreviation in the database.
 
     Forms represent it as a ``forms.CUProvinceField``.
 
@@ -55,7 +55,7 @@ class CUProvinceField(CharField):
 
 class CUPostalCodeField(CharField):
     """
-    A model field for the cuban postal code.
+    A model field for the Cuban postal code.
 
     Forms represent it as a ``forms.CUPostalCodeField``.
 
@@ -76,7 +76,7 @@ class CUPostalCodeField(CharField):
 
 class CUIdentityCardNumberField(CharField):
     """
-    A model field for the cuban identity card number.
+    A model field for the Cuban identity card number.
 
     Forms represent it as a ``forms.CUIdentityCardNumberField``.
 

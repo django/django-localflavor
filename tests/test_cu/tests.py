@@ -27,7 +27,7 @@ class CULocalFlavorTests(TestCase):
         return self._get_form().save()
 
     def test_CURegionField(self):
-        error_format = ['Enter a cuban region.']
+        error_format = ['Enter a Cuban region.']
         valid = {
             'occidental': 'OCC',
             'central': 'CTL',
@@ -44,7 +44,7 @@ class CULocalFlavorTests(TestCase):
         self.assertFieldOutput(CURegionField, valid, invalid)
 
     def test_CUProvinceField(self):
-        error_format = ['Enter a cuban province.']
+        error_format = ['Enter a Cuban province.']
         valid = {
             'pinar del río': 'PRI',
             'villa clara': 'VCL',
@@ -155,9 +155,9 @@ class CULocalFlavorTests(TestCase):
         self.assertFalse(form.is_valid())
 
         choice_messages = ['Select a valid choice. !!! is not one of the available choices.']
-        self.assertEqual(form.errors['province_1'], ['Enter a cuban province.'])
+        self.assertEqual(form.errors['province_1'], ['Enter a Cuban province.'])
         self.assertEqual(form.errors['province_2'], choice_messages)
-        self.assertEqual(form.errors['region_1'], ['Enter a cuban region.'])
+        self.assertEqual(form.errors['region_1'], ['Enter a Cuban region.'])
         self.assertEqual(form.errors['region_2'], choice_messages)
         self.assertEqual(form.errors['postal_code'], ["Enter a valid postal code in the format XXXXX."])
         self.assertEqual(form.errors['id_number'], [

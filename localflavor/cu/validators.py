@@ -9,7 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class CUIdentityCardNumberBirthdayValidator(object):
     """
-    Validator for the cuban identity card number birthday.
+    Validator for the Cuban identity card number birthday.
 
     Checks that the first 6 digits build a valid date.
 
