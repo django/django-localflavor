@@ -72,6 +72,7 @@ Authors
 * Michał Sałaban
 * Mike Lissner
 * Olivier Sels
+* Olle Vidner
 * Paul Donohue
 * Paulo Poiati
 * Peter J. Farrell
