@@ -4,6 +4,7 @@ Authors
 * Aaron Boman
 * Adam Taylor
 * Adnane Belmadiaf
+* Adonys Alea Boffill
 * Adrian Holovaty
 * Agustín Scaramuzza
 * Alex Butum
