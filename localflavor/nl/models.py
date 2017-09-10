@@ -126,6 +126,9 @@ class NLBankAccountNumberField(models.CharField):
 
     .. deprecated:: 1.6
         Use `localflavor.generic.models.IBANField` with included_countries=('nl') option instead.
+        Note that a data migration is required to move the data from this field to a new IBANField:
+        it needs to calculate check digits, add the bank identifier and zero-pad the bank number
+        into a proper IBAN.
     """
 
     def __init__(self, *args, **kwargs):
