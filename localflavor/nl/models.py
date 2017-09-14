@@ -1,7 +1,5 @@
 from __future__ import unicode_literals
 
-import warnings
-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -132,8 +130,10 @@ class NLBankAccountNumberField(models.CharField):
     """
 
     def __init__(self, *args, **kwargs):
-        warnings.warn("NLBankAccountNumberField is deprecated. Use `localflavor.generic.models.IBANField` "
-                      "with included_countries=('nl') option instead.", RemovedInLocalflavor20Warning)
+        self.system_check_deprecated_details = {
+            'msg': self.__class__.__name__ + ' is deprecated.',
+            'hint': "Use `localflavor.generic.models.IBANField` with included_countries=('nl') option instead."
+        }
 
         kwargs.setdefault('max_length', 10)
         super(NLBankAccountNumberField, self).__init__(*args, **kwargs)
