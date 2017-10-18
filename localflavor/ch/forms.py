@@ -36,8 +36,8 @@ class CHZipCodeField(RegexField):
         'invalid': _('Enter a valid postal code in the range and format 1XXX - 9XXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(CHZipCodeField, self).__init__(zip_re, max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(CHZipCodeField, self).__init__(zip_re, *args, **kwargs)
 
 
 class CHPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):

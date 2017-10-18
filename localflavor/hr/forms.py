@@ -119,8 +119,10 @@ class HROIBField(RegexField):
     }
 
     def __init__(self, min_length=11, max_length=11, *args, **kwargs):
-        super(HROIBField, self).__init__(r'^\d{11}$',
-                                         min_length, max_length, *args, **kwargs)
+        super(HROIBField, self).__init__(
+            r'^\d{11}$', max_length=max_length, min_length=min_length,
+            *args, **kwargs
+        )
 
     def clean(self, value):
         super(HROIBField, self).clean(value)

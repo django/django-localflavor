@@ -26,8 +26,8 @@ class EEZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(EEZipCodeField, self).__init__(zipcode, max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(EEZipCodeField, self).__init__(zipcode, *args, **kwargs)
 
 
 class EECountySelect(Select):

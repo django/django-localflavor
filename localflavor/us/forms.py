@@ -36,9 +36,8 @@ class USZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXXX or XXXXX-XXXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(USZipCodeField, self).__init__(r'^\d{5}(?:-\d{4})?$',
-                                             max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(USZipCodeField, self).__init__(r'^\d{5}(?:-\d{4})?$', *args, **kwargs)
 
     def to_python(self, value):
         value = super(USZipCodeField, self).to_python(value)

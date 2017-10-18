@@ -26,8 +26,10 @@ class ISIdNumberField(RegexField):
     }
 
     def __init__(self, max_length=11, min_length=10, *args, **kwargs):
-        super(ISIdNumberField, self).__init__(r'^\d{6}(-| )?\d{4}$',
-                                              max_length, min_length, *args, **kwargs)
+        super(ISIdNumberField, self).__init__(
+            r'^\d{6}(-| )?\d{4}$', max_length=max_length, min_length=min_length,
+            *args, **kwargs
+        )
 
     def clean(self, value):
         value = super(ISIdNumberField, self).clean(value)
@@ -72,8 +74,10 @@ class ISPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
 
     def __init__(self, max_length=8, min_length=7, *args, **kwargs):
-        super(ISPhoneNumberField, self).__init__(r'^\d{3}(-| )?\d{4}$',
-                                                 max_length, min_length, *args, **kwargs)
+        super(ISPhoneNumberField, self).__init__(
+            r'^\d{3}(-| )?\d{4}$', max_length=max_length, min_length=min_length,
+            *args, **kwargs
+        )
 
     def clean(self, value):
         value = super(ISPhoneNumberField, self).clean(value)

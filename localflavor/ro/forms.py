@@ -30,8 +30,10 @@ class ROCIFField(RegexField):
     }
 
     def __init__(self, max_length=10, min_length=2, *args, **kwargs):
-        super(ROCIFField, self).__init__(r'^(RO)?[0-9]{2,10}', max_length,
-                                         min_length, *args, **kwargs)
+        super(ROCIFField, self).__init__(
+            r'^(RO)?[0-9]{2,10}', max_length=max_length, min_length=min_length,
+            *args, **kwargs
+        )
 
     def clean(self, value):
         """
@@ -81,8 +83,10 @@ class ROCNPField(RegexField):
     }
 
     def __init__(self, max_length=13, min_length=13, *args, **kwargs):
-        super(ROCNPField, self).__init__(r'^[1-9][0-9]{12}', max_length,
-                                         min_length, *args, **kwargs)
+        super(ROCNPField, self).__init__(
+            r'^[1-9][0-9]{12}', max_length=max_length, min_length=min_length,
+            *args, **kwargs
+        )
 
     def clean(self, value):
         """
@@ -225,8 +229,10 @@ class ROPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     }
 
     def __init__(self, max_length=20, min_length=3, *args, **kwargs):
-        super(ROPhoneNumberField, self).__init__(phone_digits_re,
-                                                 max_length, min_length, *args, **kwargs)
+        super(ROPhoneNumberField, self).__init__(
+            phone_digits_re, max_length=max_length, min_length=min_length,
+            *args, **kwargs
+        )
 
     def clean(self, value):
         """
@@ -263,5 +269,7 @@ class ROPostalCodeField(RegexField):
     }
 
     def __init__(self, max_length=6, min_length=6, *args, **kwargs):
-        super(ROPostalCodeField, self).__init__(r'^[0-9][0-8][0-9]{4}$',
-                                                max_length, min_length, *args, **kwargs)
+        super(ROPostalCodeField, self).__init__(
+            r'^[0-9][0-8][0-9]{4}$', max_length=max_length,
+            min_length=min_length, *args, **kwargs
+        )

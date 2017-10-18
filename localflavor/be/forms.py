@@ -25,9 +25,8 @@ class BEPostalCodeField(RegexField):
             'Enter a valid postal code in the range and format 1XXX - 9XXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(BEPostalCodeField, self).__init__(r'^[1-9]\d{3}$',
-                                                max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(BEPostalCodeField, self).__init__(r'^[1-9]\d{3}$', *args, **kwargs)
 
 
 class BEPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
@@ -59,7 +58,7 @@ class BEPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
                      '0xxxxxxxx or 04xxxxxxxx.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(BEPhoneNumberField, self).__init__(r'^[0]\d{1}[/. ]?'
                                                  r'\d{3}[. ]\d{2}[. ]?'
                                                  r'\d{2}$|^[0]\d{2}[/. ]?'
@@ -68,7 +67,6 @@ class BEPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
                                                  r'\d{2}[. ]?'
                                                  r'\d{2}[. ]?'
                                                  r'\d{2}$',
-                                                 max_length, min_length,
                                                  *args, **kwargs)
 
 

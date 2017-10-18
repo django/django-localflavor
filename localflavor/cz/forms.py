@@ -33,9 +33,8 @@ class CZPostalCodeField(RegexField):
         'invalid': _('Enter a postal code in the format XXXXX or XXX XX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(CZPostalCodeField, self).__init__(r'^\d{5}$|^\d{3} \d{2}$',
-                                                max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(CZPostalCodeField, self).__init__(r'^\d{5}$|^\d{3} \d{2}$', *args, **kwargs)
 
     def clean(self, value):
         """

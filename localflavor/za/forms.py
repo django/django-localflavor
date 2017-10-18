@@ -66,9 +66,8 @@ class ZAPostCodeField(RegexField):
         'invalid': _('Enter a valid South African postal code'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ZAPostCodeField, self).__init__(r'^\d{4}$',
-                                              max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(ZAPostCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
 
 
 class ZAProvinceSelect(Select):

@@ -110,7 +110,7 @@ class CNIDCardField(CharField):
     }
 
     def __init__(self, max_length=18, min_length=15, *args, **kwargs):
-        super(CNIDCardField, self).__init__(max_length, min_length, *args, **kwargs)
+        super(CNIDCardField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         """Check whether the input is a valid ID Card Number."""

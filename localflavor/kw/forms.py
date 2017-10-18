@@ -49,9 +49,10 @@ class KWCivilIDNumberField(RegexField):
     }
 
     def __init__(self, max_length=12, min_length=12, *args, **kwargs):
-        super(KWCivilIDNumberField, self).__init__(r'\d{12}',
-                                                   max_length,
-                                                   min_length, *args, **kwargs)
+        super(KWCivilIDNumberField, self).__init__(
+            r'\d{12}', max_length=max_length, min_length=min_length,
+            *args, **kwargs
+        )
 
     def clean(self, value):
         super(KWCivilIDNumberField, self).clean(value)

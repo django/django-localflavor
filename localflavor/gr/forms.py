@@ -22,9 +22,8 @@ class GRPostalCodeField(RegexField):
         'invalid': _('Enter a valid 5-digit greek postal code.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(GRPostalCodeField, self).__init__(r'^[12345678]\d{4}$',
-                                                max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(GRPostalCodeField, self).__init__(r'^[12345678]\d{4}$', *args, **kwargs)
 
 
 class GRTaxNumberCodeField(Field):

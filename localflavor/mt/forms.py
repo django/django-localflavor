@@ -18,7 +18,5 @@ class MTPostalCodeField(RegexField):
         'invalid': _('Enter a valid postal code in format AAA 0000.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(MTPostalCodeField, self).__init__(
-            r'^[A-Z]{3}\ \d{4}$',
-            max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(MTPostalCodeField, self).__init__(r'^[A-Z]{3}\ \d{4}$', *args, **kwargs)

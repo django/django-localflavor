@@ -33,9 +33,8 @@ class BRZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXXX-XXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(BRZipCodeField, self).__init__(r'^\d{5}-\d{3}$',
-                                             max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(BRZipCodeField, self).__init__(r'^\d{5}-\d{3}$', *args, **kwargs)
 
 
 class BRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
@@ -81,8 +80,8 @@ class BRStateChoiceField(Field):
         'invalid': _('Select a valid brazilian state. That state is not one of the available states.'),
     }
 
-    def __init__(self, required=True, widget=None, label=None, initial=None, help_text=None):
-        super(BRStateChoiceField, self).__init__(required, widget, label, initial, help_text)
+    def __init__(self, **kwargs):
+        super(BRStateChoiceField, self).__init__(**kwargs)
         self.widget.choices = STATE_CHOICES
 
     def clean(self, value):
@@ -129,7 +128,7 @@ class BRCPFField(CharField):
     }
 
     def __init__(self, max_length=14, min_length=11, *args, **kwargs):
-        super(BRCPFField, self).__init__(max_length, min_length, *args, **kwargs)
+        super(BRCPFField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         """Value can be either a string in the format XXX.XXX.XXX-XX or an 11-digit number."""
@@ -188,7 +187,7 @@ class BRCNPJField(CharField):
     }
 
     def __init__(self, min_length=14, max_length=18, *args, **kwargs):
-        super(BRCNPJField, self).__init__(max_length, min_length, *args, **kwargs)
+        super(BRCNPJField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         """Value can be either a string in the format XX.XXX.XXX/XXXX-XX or a group of 14 characters."""
@@ -237,7 +236,7 @@ class BRProcessoField(CharField):
     default_error_messages = {'invalid': _("Invalid Process number.")}
 
     def __init__(self, max_length=25, min_length=20, *args, **kwargs):
-        super(BRProcessoField, self).__init__(max_length, min_length, *args, **kwargs)
+        super(BRProcessoField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         """Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or an 20-digit number."""

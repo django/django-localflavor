@@ -53,11 +53,8 @@ class DKPhoneNumberField(fields.RegexField, DeprecatedPhoneNumberFormFieldMixin)
         ),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(DKPhoneNumberField, self).__init__(
             r'^(?:\+45)? ?(\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$',
-            max_length,
-            min_length,
-            *args,
-            **kwargs
+            *args, **kwargs
         )

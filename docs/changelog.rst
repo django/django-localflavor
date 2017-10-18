@@ -20,7 +20,7 @@ Modifications to existing flavors:
 
 Other changes:
 
-- Dropped support for Django < 1.11.
+- Added support for Django 2.0 and dropped support for Django < 1.11.
 
 1.6   (2017-11-22)
 ------------------

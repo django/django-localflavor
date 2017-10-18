@@ -26,9 +26,8 @@ class NOZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(NOZipCodeField, self).__init__(r'^\d{4}$',
-                                             max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(NOZipCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
 
 
 class NOMunicipalitySelect(Select):
@@ -181,7 +180,8 @@ class NOPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
         'invalid': _('A phone number must be 8 digits and may have country code'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(NOPhoneNumberField, self).__init__(
             r'^(?:\+47)? ?(\d{3}\s?\d{2}\s?\d{3}|\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$',
-            max_length, min_length, *args, **kwargs)
+            *args, **kwargs
+        )

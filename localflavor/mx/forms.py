@@ -184,7 +184,7 @@ class MXCLABEField(RegexField):
 
     def __init__(self, min_length=18, max_length=18, *args, **kwargs):
         clabe_re = r'^\d{18}$'
-        super(MXCLABEField, self).__init__(clabe_re, min_length, max_length, *args, **kwargs)
+        super(MXCLABEField, self).__init__(clabe_re, min_length=min_length, max_length=max_length, *args, **kwargs)
 
     def _checksum(self, value):
         verification_digit = int(value[-1])
