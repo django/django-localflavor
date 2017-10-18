@@ -9,13 +9,12 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, ChoiceField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .si_postalcodes import SI_POSTALCODES_CHOICES
 
 
-class SIEMSOField(EmptyValueCompatMixin, CharField):
+class SIEMSOField(CharField):
     """
     A form for validating Slovenian personal identification number.
 
@@ -82,7 +81,7 @@ class SIEMSOField(EmptyValueCompatMixin, CharField):
             raise ValidationError(self.error_messages['checksum'])
 
 
-class SITaxNumberField(EmptyValueCompatMixin, CharField):
+class SITaxNumberField(CharField):
     """
     Slovenian tax number field.
 
@@ -139,7 +138,7 @@ class SIPostalCodeSelect(Select):
                                                  choices=SI_POSTALCODES_CHOICES)
 
 
-class SIPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
+class SIPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Slovenian phone number field.
 

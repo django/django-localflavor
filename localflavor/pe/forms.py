@@ -7,8 +7,6 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .pe_region import REGION_CHOICES
 
 
@@ -19,7 +17,7 @@ class PERegionSelect(Select):
         super(PERegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
-class PEDNIField(EmptyValueCompatMixin, CharField):
+class PEDNIField(CharField):
     """A field that validates Documento Nacional de Identidad (DNI) numbers."""
 
     default_error_messages = {
@@ -44,7 +42,7 @@ class PEDNIField(EmptyValueCompatMixin, CharField):
         return value
 
 
-class PERUCField(EmptyValueCompatMixin, CharField):
+class PERUCField(CharField):
     """
     This field validates a RUC (Registro Unico de Contribuyentes).
 

@@ -9,8 +9,6 @@ from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .cz_regions import REGION_CHOICES
 
 birth_number = re.compile(r'^(?P<birth>\d{6})/?(?P<id>\d{3,4})$')
@@ -24,7 +22,7 @@ class CZRegionSelect(Select):
         super(CZRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
-class CZPostalCodeField(EmptyValueCompatMixin, RegexField):
+class CZPostalCodeField(RegexField):
     """
     A form field that validates its input as Czech postal code.
 

@@ -10,7 +10,6 @@ from django.forms.fields import CharField, RegexField
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
 
 PHONE_DIGITS_RE = re.compile(r'^[689](\d{7})$')
@@ -36,7 +35,7 @@ class SGPostCodeField(RegexField):
         super(SGPostCodeField, self).__init__(r'^\d{6}$', *args, **kwargs)
 
 
-class SGPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
+class SGPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as a Singapore phone number.
 
@@ -66,7 +65,7 @@ class SGPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
         raise ValidationError(self.error_messages['invalid'])
 
 
-class SGNRICFINField(EmptyValueCompatMixin, CharField):
+class SGNRICFINField(CharField):
     """
     A form field that validates input as a Singapore National Registration.
 

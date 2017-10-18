@@ -9,8 +9,6 @@ from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .pl_administrativeunits import ADMINISTRATIVE_UNIT_CHOICES
 from .pl_voivodeships import VOIVODESHIP_CHOICES
 
@@ -29,7 +27,7 @@ class PLCountySelect(Select):
         super(PLCountySelect, self).__init__(attrs, choices=ADMINISTRATIVE_UNIT_CHOICES)
 
 
-class PLPESELField(EmptyValueCompatMixin, RegexField):
+class PLPESELField(RegexField):
     """
     A form field that validates as Polish Identification Number (PESEL).
 
@@ -91,7 +89,7 @@ class PLPESELField(EmptyValueCompatMixin, RegexField):
             return False
 
 
-class PLNationalIDCardNumberField(EmptyValueCompatMixin, RegexField):
+class PLNationalIDCardNumberField(RegexField):
     """
     A form field that validates as Polish National ID Card Number.
 
@@ -145,7 +143,7 @@ class PLNationalIDCardNumberField(EmptyValueCompatMixin, RegexField):
         return result % 10 == 0
 
 
-class PLNIPField(EmptyValueCompatMixin, RegexField):
+class PLNIPField(RegexField):
     """
     A form field that validates as Polish Tax Number (NIP).
 
@@ -184,7 +182,7 @@ class PLNIPField(EmptyValueCompatMixin, RegexField):
         return result == int(number[-1])
 
 
-class PLREGONField(EmptyValueCompatMixin, RegexField):
+class PLREGONField(RegexField):
     """
     A form field that validates its input is a REGON number.
 

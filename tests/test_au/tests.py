@@ -12,8 +12,7 @@ from localflavor.au.validators import (AUBusinessNumberFieldValidator, AUCompany
 from .forms import AustralianPlaceForm
 from .models import AustralianPlace
 
-# From Django 1.11, HTML5 syntax is used (selected)
-SELECTED_OPTION_PATTERN = r'<option value="%s" selected(="selected")?>'
+SELECTED_OPTION_PATTERN = r'<option value="%s" selected>'
 BLANK_OPTION_PATTERN = r'<option value="">'
 INPUT_VALUE_PATTERN = r'<input[^>]*value="%s"[^>]*>'
 

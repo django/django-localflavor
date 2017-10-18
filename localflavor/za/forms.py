@@ -8,13 +8,12 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.checksums import luhn
 
 id_re = re.compile(r'^(?P<yy>\d\d)(?P<mm>\d\d)(?P<dd>\d\d)(?P<mid>\d{4})(?P<end>\d{3})')
 
 
-class ZAIDField(EmptyValueCompatMixin, CharField):
+class ZAIDField(CharField):
     """
     A form field for South African ID numbers.
 

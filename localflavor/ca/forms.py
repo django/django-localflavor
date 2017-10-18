@@ -10,7 +10,6 @@ from django.forms.fields import CharField, Field, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 from localflavor.generic.checksums import luhn
 
@@ -18,7 +17,7 @@ phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 sin_re = re.compile(r"^(\d{3})-(\d{3})-(\d{3})$")
 
 
-class CAPostalCodeField(EmptyValueCompatMixin, CharField):
+class CAPostalCodeField(CharField):
     """
     Canadian postal code form field.
 

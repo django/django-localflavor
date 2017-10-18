@@ -67,10 +67,5 @@ class GeneralTests(TestCase):
 
         for cls in form_classes:
             failure_message = '{} does not handle does not properly handle values that are None.'.format(cls.__name__)
-            # Django < 1.11 doesn't support empty_value
-            try:
-                field = cls(required=False, empty_value=None)
-                self.assertIsNone(field.clean(None), failure_message)
-            except TypeError:
-                field = cls(required=False)
-                self.assertEqual('', field.clean(None), failure_message)
+            field = cls(required=False, empty_value=None)
+            self.assertIsNone(field.clean(None), failure_message)

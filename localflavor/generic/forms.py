@@ -2,8 +2,6 @@ from __future__ import unicode_literals
 
 from django import forms
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .validators import IBAN_COUNTRY_CODE_LENGTH, BICValidator, IBANValidator
 
 DEFAULT_DATE_INPUT_FORMATS = (
@@ -54,7 +52,7 @@ class SplitDateTimeField(forms.SplitDateTimeField):
                                                  input_time_formats=input_time_formats, *args, **kwargs)
 
 
-class IBANFormField(EmptyValueCompatMixin, forms.CharField):
+class IBANFormField(forms.CharField):
     """
     An IBAN consists of up to 34 alphanumeric characters.
 
@@ -104,7 +102,7 @@ class IBANFormField(EmptyValueCompatMixin, forms.CharField):
         return ' '.join(value[i:i + grouping] for i in range(0, len(value), grouping))
 
 
-class BICFormField(EmptyValueCompatMixin, forms.CharField):
+class BICFormField(forms.CharField):
     """
     A BIC consists of 8 (BIC8) or 11 (BIC11) alphanumeric characters.
 

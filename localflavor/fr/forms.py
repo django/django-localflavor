@@ -11,7 +11,6 @@ from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 from localflavor.generic.checksums import luhn
 
@@ -42,7 +41,7 @@ class FRZipCodeField(RegexField):
         super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
 
 
-class FRPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
+class FRPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Validate local French phone number (not international ones).
 
@@ -145,7 +144,7 @@ class FRRegionField(CharField):
         super(FRRegionField, self).__init__(*args, **kwargs)
 
 
-class FRNationalIdentificationNumber(EmptyValueCompatMixin, CharField):
+class FRNationalIdentificationNumber(CharField):
     """
     Validates input as a French National Identification number.
 
@@ -240,7 +239,7 @@ class FRSIRENENumberMixin(object):
         return value
 
 
-class FRSIRENField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
+class FRSIRENField(FRSIRENENumberMixin, CharField):
     """
     SIREN stands for "Système d'identification du répertoire des entreprises".
 
@@ -263,7 +262,7 @@ class FRSIRENField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
         return ' '.join((value[:3], value[3:6], value[6:]))
 
 
-class FRSIRETField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
+class FRSIRETField(FRSIRENENumberMixin, CharField):
     """
     SIRET stands for "Système d'identification du répertoire des établissements".
 
@@ -285,7 +284,7 @@ class FRSIRETField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
 
         ret = super(FRSIRETField, self).clean(value)
 
-        if not luhn(ret[:9]):
+        if ret is not None and not luhn(ret[:9]):
             raise ValidationError(self.error_messages['invalid'])
         return ret
 

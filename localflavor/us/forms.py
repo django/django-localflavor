@@ -10,14 +10,13 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 ssn_re = re.compile(r"^(?P<area>\d{3})[-\ ]?(?P<group>\d{2})[-\ ]?(?P<serial>\d{4})$")
 
 
-class USZipCodeField(EmptyValueCompatMixin, RegexField):
+class USZipCodeField(RegexField):
     """
     A form field that validates input as a U.S. ZIP code.
 
@@ -48,7 +47,7 @@ class USZipCodeField(EmptyValueCompatMixin, RegexField):
         return value.strip()
 
 
-class USPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
+class USPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as a U.S. phone number.
 
@@ -73,7 +72,7 @@ class USPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumber
         raise ValidationError(self.error_messages['invalid'])
 
 
-class USSocialSecurityNumberField(EmptyValueCompatMixin, CharField):
+class USSocialSecurityNumberField(CharField):
     """
     A United States Social Security number.
 

@@ -10,7 +10,6 @@ from django.forms.fields import RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .es_provinces import PROVINCE_CHOICES
@@ -62,7 +61,7 @@ class ESPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
                                                  max_length, min_length, *args, **kwargs)
 
 
-class ESIdentityCardNumberField(EmptyValueCompatMixin, RegexField):
+class ESIdentityCardNumberField(RegexField):
     """
     Spanish NIF/NIE/CIF (Fiscal Identification Number) code.
 
@@ -153,7 +152,7 @@ class ESIdentityCardNumberField(EmptyValueCompatMixin, RegexField):
         return self.nif_control[int(d) % 23]
 
 
-class ESCCCField(EmptyValueCompatMixin, RegexField):
+class ESCCCField(RegexField):
     """
     A form field that validates its input as a Spanish bank account or CCC (Codigo Cuenta Cliente).
 

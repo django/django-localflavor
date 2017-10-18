@@ -7,8 +7,6 @@ from django.forms.fields import RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .cl_regions import REGION_CHOICES
 
 
@@ -19,7 +17,7 @@ class CLRegionSelect(Select):
         super(CLRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
-class CLRutField(EmptyValueCompatMixin, RegexField):
+class CLRutField(RegexField):
     """
     Chilean "Rol Unico Tributario" (RUT) field.
 

@@ -7,7 +7,6 @@ from django.forms import CharField, ValidationError
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 hk_phone_digits_re = re.compile(r'^(?:852-?)?(\d{4})[-\.]?(\d{4})$')
@@ -17,7 +16,7 @@ hk_formats = ['XXXX-XXXX', '852-XXXX-XXXX', '(+852) XXXX-XXXX',
               'XXXX XXXX', 'XXXXXXXX']
 
 
-class HKPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
+class HKPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates Hong Kong phone numbers.
 

@@ -9,7 +9,6 @@ from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .au_states import STATE_CHOICES
@@ -35,7 +34,7 @@ class AUPostCodeField(RegexField):
                                               max_length, min_length, *args, **kwargs)
 
 
-class AUPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
+class AUPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as an Australian phone number.
 
@@ -70,7 +69,7 @@ class AUStateSelect(Select):
         super(AUStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
 
-class AUBusinessNumberField(EmptyValueCompatMixin, CharField):
+class AUBusinessNumberField(CharField):
     """
     A form field that validates input as an Australian Business Number (ABN).
 
@@ -95,7 +94,7 @@ class AUBusinessNumberField(EmptyValueCompatMixin, CharField):
         return '{} {} {} {}'.format(spaceless[:2], spaceless[2:5], spaceless[5:8], spaceless[8:])
 
 
-class AUCompanyNumberField(EmptyValueCompatMixin, CharField):
+class AUCompanyNumberField(CharField):
     """
     A form field that validates input as an Australian Company Number (ACN).
 

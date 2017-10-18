@@ -10,7 +10,6 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, Select, ValidationError
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
 
 from ..generic.forms import IBANFormField
@@ -19,7 +18,7 @@ from .ro_counties import COUNTIES_CHOICES
 phone_digits_re = re.compile(r'^[0-9\-\.\(\)\s]{3,20}$')
 
 
-class ROCIFField(EmptyValueCompatMixin, RegexField):
+class ROCIFField(RegexField):
     """
     A Romanian fiscal identity code (CIF) field.
 
@@ -45,7 +44,6 @@ class ROCIFField(EmptyValueCompatMixin, RegexField):
         if value in self.empty_values:
             return self.empty_value
 
-        # This can be removed when support for Django <= 1.8 is dropped.
         value = value.strip()
 
         # strip RO part
@@ -71,7 +69,7 @@ class ROCIFField(EmptyValueCompatMixin, RegexField):
         return value[::-1]
 
 
-class ROCNPField(EmptyValueCompatMixin, RegexField):
+class ROCNPField(RegexField):
     """
     A Romanian personal identity code (CNP) field.
 
@@ -199,7 +197,7 @@ class ROIBANField(IBANFormField):
         super(ROIBANField, self).__init__(*args, **kwargs)
 
 
-class ROPhoneNumberField(EmptyValueCompatMixin, RegexField, DeprecatedPhoneNumberFormFieldMixin):
+class ROPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
     """
     Romanian phone number field.
 

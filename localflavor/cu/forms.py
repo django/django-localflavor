@@ -5,8 +5,6 @@ from django.core.exceptions import ValidationError
 from django.forms import Field, RegexField, Select
 from django.utils.translation import ugettext as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .choices import PROVINCE_CHOICES, PROVINCE_NORMALIZED, REGION_CHOICES, REGION_NORMALIZED
 from .validators import CUIdentityCardNumberBirthdayValidator
 
@@ -83,7 +81,7 @@ class CUProvinceSelect(Select):
         super(CUProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class CUPostalCodeField(EmptyValueCompatMixin, RegexField):
+class CUPostalCodeField(RegexField):
     """
     A form field for a Cuban postal Code.
 
@@ -108,7 +106,7 @@ class CUPostalCodeField(EmptyValueCompatMixin, RegexField):
         return value.strip()
 
 
-class CUIdentityCardNumberField(EmptyValueCompatMixin, RegexField):
+class CUIdentityCardNumberField(RegexField):
     """
     A form field for a Cuban identity card number.
 

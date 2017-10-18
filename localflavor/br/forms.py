@@ -12,7 +12,6 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
 
 from .br_states import STATE_CHOICES
@@ -114,7 +113,7 @@ def DV_maker(v):  # noqa
     return dv_maker(v)
 
 
-class BRCPFField(EmptyValueCompatMixin, CharField):
+class BRCPFField(CharField):
     """
     A form field that validates a CPF number or a CPF string.
 
@@ -164,7 +163,7 @@ class BRCPFField(EmptyValueCompatMixin, CharField):
         return orig_value
 
 
-class BRCNPJField(EmptyValueCompatMixin, CharField):
+class BRCNPJField(CharField):
     """
     A form field that validates input as `Brazilian CNPJ`_.
 
@@ -224,7 +223,7 @@ def mod_97_base10(value):
     return 98 - ((value * 100 % 97) % 97)
 
 
-class BRProcessoField(EmptyValueCompatMixin, CharField):
+class BRProcessoField(CharField):
     """
     A form field that validates a Legal Process(Processo) number or a Legal Process string.
 

@@ -10,7 +10,6 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .it_province import PROVINCE_CHOICES
@@ -57,7 +56,7 @@ class ITProvinceSelect(Select):
         super(ITProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class ITSocialSecurityNumberField(EmptyValueCompatMixin, RegexField):
+class ITSocialSecurityNumberField(RegexField):
     """
     A form field that validates Italian Tax code (codice fiscale) for both persons and entities.
 
@@ -117,7 +116,7 @@ class ITVatNumberField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
 
-class ITPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
+class ITPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as an Italian phone number.
 

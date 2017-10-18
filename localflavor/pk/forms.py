@@ -9,7 +9,6 @@ from django.forms.fields import CharField, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .pk_states import STATE_CHOICES
@@ -33,7 +32,7 @@ class PKPostCodeField(RegexField):
         super(PKPostCodeField, self).__init__(POSTCODE_DIGITS_RE, *args, **kwargs)
 
 
-class PKPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
+class PKPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
     """
     A form field that validates input as an Pakistani phone number.
 

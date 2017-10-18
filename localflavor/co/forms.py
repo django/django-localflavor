@@ -4,8 +4,6 @@ from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .co_departments import DEPARTMENT_CHOICES
 
 
@@ -16,7 +14,7 @@ class CODepartmentSelect(Select):
         super(CODepartmentSelect, self).__init__(attrs, choices=DEPARTMENT_CHOICES)
 
 
-class CONITField(EmptyValueCompatMixin, RegexField):
+class CONITField(RegexField):
     """
     This field validates a NIT (NUmero de IdentificaciOn Tributaria). A
     NIT is of the form XXXXXXXXXX-V. The last digit is a check digit. This

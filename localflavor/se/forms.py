@@ -7,8 +7,6 @@ import re
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .se_counties import COUNTY_CHOICES
 from .utils import (format_organisation_number, format_personal_id_number, id_number_checksum, valid_organisation,
                     validate_id_birthday)
@@ -34,7 +32,7 @@ class SECountySelect(forms.Select):
                                              choices=COUNTY_CHOICES)
 
 
-class SEOrganisationNumberField(EmptyValueCompatMixin, forms.CharField):
+class SEOrganisationNumberField(forms.CharField):
     """
     A form field that validates input as a Swedish organisation number (organisationsnummer).
 
@@ -81,7 +79,7 @@ class SEOrganisationNumberField(EmptyValueCompatMixin, forms.CharField):
             raise forms.ValidationError(self.error_messages['invalid'])
 
 
-class SEPersonalIdentityNumberField(EmptyValueCompatMixin, forms.CharField):
+class SEPersonalIdentityNumberField(forms.CharField):
     """
     A form field that validates input as a Swedish personal identity number (personnummer).
 
@@ -159,7 +157,7 @@ class SEPersonalIdentityNumberField(EmptyValueCompatMixin, forms.CharField):
         return format_personal_id_number(birth_day, gd)
 
 
-class SEPostalCodeField(EmptyValueCompatMixin, forms.RegexField):
+class SEPostalCodeField(forms.RegexField):
     """
     A form field that validates input as a Swedish postal code (postnummer).
 
