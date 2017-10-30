@@ -160,6 +160,7 @@ class NOBankAccountNumber(EmptyValueCompatMixin, CharField):
         return value.replace('.', '').replace(' ', '')
 
     def prepare_value(self, value):
+        value = self.to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return '{}.{}.{}'.format(value[0:4], value[4:6], value[6:11])

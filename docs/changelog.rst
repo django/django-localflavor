@@ -4,6 +4,11 @@ Changelog
 1.5.3   (unreleased)
 --------------------
 
+Modifications to existing flavors:
+
+- Fixes issue with `no.forms.NOBankAccountNumber` unclean data.
+  (`gh-311 <https://github.com/django/django-localflavor/pull/311>`_).
+
 Other changes:
 
 - None

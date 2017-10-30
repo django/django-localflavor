@@ -67,6 +67,9 @@ class NOLocalFlavorTests(SimpleTestCase):
     def test_NOBankAccountNumber_formatting(self):
         form = NOBankAccountNumber()
         self.assertEqual(form.prepare_value('76940512057'), '7694.05.12057')
+        self.assertEqual(form.prepare_value(' 7694 05 12057 '), '7694.05.12057')
+        self.assertEqual(form.prepare_value('7694. 05.1205'), '7694.05.1205')
+        self.assertEqual(form.prepare_value('7694.05.120.5'), '7694.05.1205')
         # In the event there's already empty/blank/null values present.
         # Any invalid data should be stopped by form.validate, which the above test should take care of.
         self.assertEqual(form.prepare_value(None), '')
