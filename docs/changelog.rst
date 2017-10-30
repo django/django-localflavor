@@ -31,6 +31,8 @@ Other changes:
 - Added support for empty_value kwarg in Django >= 1.11
   (`gh-298 <https://github.com/django/django-localflavor/pull/298>`_).
 - Dropped support for Python 3.2.
+- Fixes issue with `no.forms.NOBankAccountNumber` unclean data.
+  (`gh-311 <https://github.com/django/django-localflavor/pull/311>`_).
 
 1.5   (2017-05-26)
 ------------------
