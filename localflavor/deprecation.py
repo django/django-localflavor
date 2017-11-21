@@ -1,7 +1,7 @@
 import warnings
 
 
-class RemovedInLocalflavor20Warning(PendingDeprecationWarning):
+class RemovedInLocalflavor20Warning(DeprecationWarning):
     pass
 
 
