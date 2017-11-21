@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-19 13:00+0200\n"
-"PO-Revision-Date: 2017-05-19 14:05+0000\n"
+"POT-Creation-Date: 2017-09-08 08:46+0200\n"
+"PO-Revision-Date: 2017-09-19 17:17+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-"
 "localflavor/language/id/)\n"
@@ -174,7 +174,7 @@ msgid "Australian Business Number"
 msgstr "Nomor Bisnis Australia"
 
 msgid "Australian Company Number"
-msgstr ""
+msgstr "Australian Company Number"
 
 msgid "Australian Tax File Number"
 msgstr "Nomor Berkas Pajak Australia"
@@ -183,7 +183,7 @@ msgid "Enter a valid ABN."
 msgstr "Masukkan ABN sah"
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "Masukkan ACN yang sah."
 
 msgid "Enter a valid TFN."
 msgstr "Masukkan TFN sah."
@@ -451,6 +451,92 @@ msgstr "Masukkan nomor telepon yang valid."
 
 msgid "Enter a valid cell number."
 msgstr "Masukkan nomor ponsel yang valid."
+
+msgid "Occidental"
+msgstr ""
+
+msgid "Central"
+msgstr ""
+
+msgid "Oriental"
+msgstr ""
+
+msgid "Pinar del Río"
+msgstr ""
+
+msgid "Artemisa"
+msgstr ""
+
+msgid "Mayabeque"
+msgstr ""
+
+msgid "La Habana"
+msgstr ""
+
+msgid "Matanzas"
+msgstr ""
+
+msgid "Cienfuegos"
+msgstr ""
+
+msgid "Villa Clara"
+msgstr ""
+
+msgid "Sancti Spíritus"
+msgstr ""
+
+msgid "Ciego de Ávila"
+msgstr ""
+
+msgid "Camagüey"
+msgstr ""
+
+msgid "Las Tunas"
+msgstr ""
+
+msgid "Holguín"
+msgstr ""
+
+msgid "Granma"
+msgstr ""
+
+msgid "Santiago de Cuba"
+msgstr ""
+
+msgid "Guantánamo"
+msgstr ""
+
+msgid "Isla de la Juventud"
+msgstr ""
+
+msgid "Enter a Cuban region."
+msgstr ""
+
+msgid "Enter a Cuban province."
+msgstr ""
+
+msgid "Enter a valid postal code in the format XXXXX."
+msgstr ""
+
+msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
+msgstr ""
+
+msgid "Cuban regions (three uppercase letters)"
+msgstr ""
+
+msgid "Cuban provinces (three uppercase letters)"
+msgstr ""
+
+msgid "Cuban postal code"
+msgstr ""
+
+msgid "Cuban identity card number"
+msgstr ""
+
+msgid ""
+"Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
+"Number."
+msgstr ""
 
 msgid "Prague"
 msgstr "Praha"
@@ -4467,23 +4553,377 @@ msgstr "Okinawa"
 msgid "Enter a valid Kuwaiti Civil ID number"
 msgstr "Masukkan nomor ID Warga Kuwait yang valid"
 
+msgid "Kuwait City"
+msgstr ""
+
+msgid "Abdullah Al-Salem"
+msgstr ""
+
+msgid "Adailiya"
+msgstr ""
+
+msgid "Bneid Al Qar"
+msgstr ""
+
+msgid "Daiya"
+msgstr ""
+
+msgid "Dasma"
+msgstr ""
+
+msgid "Dasman"
+msgstr ""
+
+msgid "Doha"
+msgstr ""
+
+msgid "Faiha"
+msgstr ""
+
+msgid "Jaber Al Ahmad"
+msgstr ""
+
+msgid "Jibla"
+msgstr ""
+
+msgid "Kaifan"
+msgstr ""
+
+msgid "Khaldiya"
+msgstr ""
+
+msgid "Kuwait Free Trade Zone"
+msgstr ""
+
+msgid "Mansouriya"
+msgstr ""
+
+msgid "Mirqab"
+msgstr ""
+
+msgid "Mubarekiya Camps"
+msgstr ""
+
+msgid "Nahdha"
+msgstr ""
+
+msgid "North West Al-Sulaibikhat"
+msgstr ""
+
+msgid "Nuzha"
+msgstr ""
+
+msgid "Qadsiya"
+msgstr ""
+
+msgid "Qairawan"
+msgstr ""
+
+msgid "Qortuba"
+msgstr ""
+
+msgid "Rawda"
+msgstr ""
+
+msgid "Salhiya"
+msgstr ""
+
+msgid "Shamiya"
+msgstr ""
+
+msgid "Sharq"
+msgstr ""
+
+msgid "Shuwaikh Administrative"
+msgstr ""
+
+msgid "Shuwaikh Industrial"
+msgstr ""
+
+msgid "Shuwaikh Residential"
+msgstr ""
+
+msgid "Sulaibikhat"
+msgstr ""
+
+msgid "Surra"
+msgstr ""
+
+msgid "Yarmouk"
+msgstr ""
+
+msgid "Farwaniya"
+msgstr ""
+
+msgid "Abbasiya"
+msgstr ""
+
+msgid "Abdullah Al Mubarak Al Sabah"
+msgstr ""
+
+msgid "Abraq Khaitan"
+msgstr ""
+
+msgid "Al-Dajeej"
+msgstr ""
+
+msgid "Al-Shadadiya"
+msgstr ""
+
+msgid "Andalous"
+msgstr ""
+
+msgid "Ardiya"
+msgstr ""
+
+msgid "Ardiya Small Industrial"
+msgstr ""
+
+msgid "Ardiya Storage Zone"
+msgstr ""
+
+msgid "Firdous"
+msgstr ""
+
+msgid "Ishbiliya"
+msgstr ""
+
+msgid "Jeleeb Al-Shuyoukh"
+msgstr ""
+
+msgid "Khaitan"
+msgstr ""
+
+msgid "Omariya"
+msgstr ""
+
+msgid "Rabia"
+msgstr ""
+
+msgid "Rai"
+msgstr ""
+
+msgid "Rehab"
+msgstr ""
+
+msgid "Rigai"
+msgstr ""
+
+msgid "Sabah Al Nasser"
+msgstr ""
+
+msgid "South Khaitan - Exhibits"
+msgstr ""
+
+msgid "Mubarak Al Kabir"
+msgstr "Mubarak Al Kabir"
+
+msgid "Abu Al Hasaniya"
+msgstr ""
+
+msgid "Abu Fatira"
+msgstr ""
+
+msgid "Adan"
+msgstr ""
+
+msgid "Al-Masayel"
+msgstr ""
+
+msgid "Coast Strip B"
+msgstr ""
+
+msgid "Fnaitees"
+msgstr ""
+
+msgid "Messila"
+msgstr ""
+
+msgid "Mubarak Al Kabeer"
+msgstr ""
+
+msgid "Qurain"
+msgstr ""
+
+msgid "Qusor"
+msgstr ""
+
+msgid "Sabah Al Salem"
+msgstr ""
+
+msgid "Sabhan Industrial Area"
+msgstr ""
+
+msgid "South Wista"
+msgstr ""
+
+msgid "West Abu Fatira Small Industrial"
+msgstr ""
+
+msgid "Hawally"
+msgstr ""
+
+msgid "Al-Siddeeq"
+msgstr ""
+
+msgid "Anjafa"
+msgstr ""
+
+msgid "Bayan"
+msgstr ""
+
+msgid "Hateen"
+msgstr ""
+
+msgid "Jabriya"
+msgstr ""
+
+msgid "Maidan Hawally"
+msgstr ""
+
+msgid "Mishref"
+msgstr ""
+
+msgid "Mubarak Al-Abdullah"
+msgstr ""
+
+msgid "Rumaithiya"
+msgstr ""
+
+msgid "Al-Salam"
+msgstr ""
+
+msgid "Salmiya"
+msgstr ""
+
+msgid "Salwa"
+msgstr ""
+
+msgid "Shaab"
+msgstr ""
+
+msgid "Shuhada"
+msgstr ""
+
+msgid "Zahra"
+msgstr ""
+
 msgid "Ahmadi"
 msgstr "Ahmadi"
 
-msgid "Farwaniyah"
-msgstr "Farwaniyah"
+msgid "Abu Halifa"
+msgstr ""
+
+msgid "Al Khiran"
+msgstr ""
+
+msgid "Al Wafrah"
+msgstr ""
+
+msgid "Al-Nuwaiseeb"
+msgstr ""
+
+msgid "Al-Riqqa"
+msgstr ""
+
+msgid "Ali Sabah Al Salem"
+msgstr ""
+
+msgid "Assabahiyah"
+msgstr ""
+
+msgid "Bnaider"
+msgstr ""
+
+msgid "Dahar"
+msgstr ""
+
+msgid "Eqaila"
+msgstr ""
+
+msgid "Fahad Al Ahmad"
+msgstr ""
+
+msgid "Fahaheel"
+msgstr ""
+
+msgid "Fintas"
+msgstr ""
+
+msgid "Hadiya"
+msgstr ""
+
+msgid "Jaber Al Ali"
+msgstr ""
+
+msgid "Mahboula"
+msgstr ""
+
+msgid "Mangaf"
+msgstr ""
+
+msgid "Sabah Al Ahmad"
+msgstr ""
+
+msgid "Al Dubaiya"
+msgstr ""
+
+msgid "Mina Abdullah"
+msgstr ""
+
+msgid "Shuaiba Block 1"
+msgstr ""
+
+msgid "West Industrial Shuaiba"
+msgstr ""
+
+msgid "Zour"
+msgstr ""
 
 msgid "Jahra"
 msgstr "Jahra"
+
+msgid "Al Sulaibiya Industrial 1"
+msgstr ""
+
+msgid "Al Sulaibiya Industrial 2"
+msgstr ""
+
+msgid "Amgarah Industrial Area"
+msgstr ""
+
+msgid "Naeem"
+msgstr ""
+
+msgid "Naseem"
+msgstr ""
+
+msgid "Oyoun"
+msgstr ""
+
+msgid "Qasr"
+msgstr ""
+
+msgid "Saad Al Abdullah"
+msgstr ""
+
+msgid "Sulaibiya"
+msgstr ""
+
+msgid "Taima'"
+msgstr ""
+
+msgid "Waha"
+msgstr ""
+
+msgid "Farwaniyah"
+msgstr "Farwaniyah"
 
 msgid "Capital"
 msgstr "Capital"
 
 msgid "Hawalli"
 msgstr "Hawalli"
-
-msgid "Mubarak Al Kabir"
-msgstr "Mubarak Al Kabir"
 
 msgid "ID Code consists of exactly 11 decimal digits."
 msgstr "Kode ID terdiri tepatnya 11 angka desimal"
@@ -5828,13 +6268,14 @@ msgid "Enter a valid Norwegian social security number."
 msgstr "Masukkan nomor jaminan sosial Norwegia yang sah."
 
 msgid "Enter a valid Norwegian bank account number."
-msgstr ""
+msgstr "Masukkan nomor akun bank Norwegia yang sah."
 
 msgid "Invalid control digit. Enter a valid Norwegian bank account number."
-msgstr ""
+msgstr "Angka kendali tidak sah. Masukkan nomor akun bank Norwegia yang sah."
 
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr ""
+"Panjang tidak sah. Nomor akun bank Norwegia adalah panjangnya 11 angka."
 
 msgid "Invalid post code."
 msgstr "Kode pos tidak sah."
@@ -7054,97 +7495,97 @@ msgid "Turkish Identification number must be 11 digits."
 msgstr "Jumlah angka pada Nomor Identifikasi Turki harus sebanyak 11 angka."
 
 msgid "Enter a valid postal code."
-msgstr ""
+msgstr "Masukkan kode pos yang sah."
 
 msgid "Ukrainian region"
-msgstr ""
+msgstr "Kawasan Ukrania"
 
 msgid "Ukrainian VAT number"
-msgstr ""
+msgstr "Nomor VAT Ukraina"
 
 msgid "Ukrainian postal code"
-msgstr ""
+msgstr "Kode pos Ukraina"
 
 msgid "Cherkasy Oblast"
-msgstr ""
+msgstr "Oblast Cherkas"
 
 msgid "Chernihiv Oblast"
-msgstr ""
+msgstr "Oblast Chernihiv"
 
 msgid "Chernivtsi Oblast"
-msgstr ""
+msgstr "Oblast Chernivts"
 
 msgid "Dnipropetrovsk Oblast"
-msgstr ""
+msgstr "Oblast Dnipropetrovs"
 
 msgid "Donetsk Oblast"
-msgstr ""
+msgstr "Oblast Donetsk"
 
 msgid "Ivano-Frankivsk Oblast"
-msgstr ""
+msgstr "Oblast Ivano-Frankivsk"
 
 msgid "Kharkiv Oblast"
-msgstr ""
+msgstr "Oblast Kharkiv"
 
 msgid "Kherson Oblast"
-msgstr ""
+msgstr "Oblast  Kherso"
 
 msgid "Khmelnytskyi Oblast"
-msgstr ""
+msgstr "Oblast Khmelnytskyi"
 
 msgid "Kirovohrad Oblast"
-msgstr ""
+msgstr "Oblast Kirovohrad"
 
 msgid "Kiev Oblast"
-msgstr ""
+msgstr "Oblast Kiev"
 
 msgid "Luhansk Oblast"
-msgstr ""
+msgstr "Oblast Luhansk"
 
 msgid "Lviv Oblast"
-msgstr ""
+msgstr "Oblast Lviv"
 
 msgid "Mykolaiv Oblast"
-msgstr ""
+msgstr "Oblast Mykolaiv"
 
 msgid "Odessa Oblast"
-msgstr ""
+msgstr "Oblast Odessa"
 
 msgid "Poltava Oblast"
-msgstr ""
+msgstr "Oblast Poltava"
 
 msgid "Rivne Oblast"
-msgstr ""
+msgstr "Oblast Rivne"
 
 msgid "Sumy Oblast"
-msgstr ""
+msgstr "Oblast Sumy"
 
 msgid "Ternopil Oblast"
-msgstr ""
+msgstr "Oblast Ternopil"
 
 msgid "Vinnytsia Oblast"
-msgstr ""
+msgstr "Oblast Vinnytsia"
 
 msgid "Volyn Oblast"
-msgstr ""
+msgstr "Oblast Volyn"
 
 msgid "Zakarpattia Oblast"
-msgstr ""
+msgstr "Oblast Zakarpattia"
 
 msgid "Zaporizhia Oblast"
-msgstr ""
+msgstr "Oblast Zaporizhia"
 
 msgid "Zhytomyr Oblast"
-msgstr ""
+msgstr "Oblast Zhytomyr"
 
 msgid "Autonomous Republic of Crimea"
-msgstr ""
+msgstr "Republik Otonomi Krimea"
 
 msgid "Kiev"
-msgstr ""
+msgstr "Kiev"
 
 msgid "Sevastopol"
-msgstr ""
+msgstr "Sevastopol"
 
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr "Masukkan kode pos dalam format XXXXX atau XXXXX-XXXX."
