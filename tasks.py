@@ -1,3 +1,4 @@
+import glob
 import os
 import os.path
 import sys
@@ -40,8 +41,15 @@ def compile_translations():
 def pull_translations(locale=None):
     if locale:
         run('tx pull -f -l {0}'.format(locale))
+        po_files = ['localflavor/locale/{0}/LC_MESSAGES/django.po'.format(locale)]
     else:
         run('tx pull --minimum-perc=1 -f -a')
+        po_files = glob.glob('localflavor/locale/*/LC_MESSAGES/django.po')
+        po_files.remove('localflavor/locale/en/LC_MESSAGES/django.po')
+
+    # Remove source lines from po files
+    for po_file in po_files:
+        run('msgcat --no-location -o {0} {0}'.format(po_file))
 
 
 @task(post=[compile_translations])
