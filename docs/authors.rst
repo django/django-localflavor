@@ -91,6 +91,7 @@ Authors
 * Thiago Avelino
 * Thor K. Høgås
 * Tino de Bruijn
+* Tom Forbes
 * Trey Hunner
 * Tyler Ball
 * Tom Forbes
