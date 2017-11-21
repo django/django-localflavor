@@ -281,7 +281,7 @@ class IBANTests(TestCase):
         # A few non-SEPA valid IBANs.
         invalid = {
             'SA03 8000 0000 6080 1016 7519': ['SA IBANs are not allowed in this field.'],
-            'CR05 1520 2001 0262 8406 6': ['CR IBANs are not allowed in this field.'],
+            'CR05 0152 0200 1026 2840 66': ['CR IBANs are not allowed in this field.'],
             'XK05 1212 0123 4567 8906': ['XK IBANs are not allowed in this field.']
         }
 

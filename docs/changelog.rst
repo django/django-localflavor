@@ -27,6 +27,7 @@ Modifications to existing flavors:
   (`gh-308 <https://github.com/django/django-localflavor/pull/308>`_).
 - Deprecated `nl.models.NLBankAccountNumberField`
   (`gh-307 <https://github.com/django/django-localflavor/pull/307>`_).
+- Updated IBANField to support the latest additions to the IBAN Registry (version 78 / August 2017).
 
 Other changes:
 

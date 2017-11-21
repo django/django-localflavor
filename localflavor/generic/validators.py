@@ -18,8 +18,8 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 #
 # https://www.swift.com/standards/data-standards/iban
 #
-# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 64 of the IBAN Registry document which was published
-# in March 2016.
+# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 78 of the IBAN Registry document which was published
+# in August 2017.
 #
 # Other Resources:
 #
@@ -28,9 +28,9 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 # https://www.nordea.com/V%C3%A5ra+tj%C3%A4nster/Internationella+produkter+och+tj%C3%A4nster/Cash+Management/IBAN+countries/908472.html
 
 
-IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
-                            'AD': 24,  # Andorra
+IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'AE': 23,  # United Arab Emirates
+                            'AL': 28,  # Albania
                             'AT': 20,  # Austria
                             'AZ': 28,  # Azerbaijan
                             'BA': 20,  # Bosnia and Herzegovina
@@ -38,8 +38,9 @@ IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
                             'BG': 22,  # Bulgaria
                             'BH': 22,  # Bahrain
                             'BR': 29,  # Brazil
+                            'BY': 28,  # Republic of Belarus
                             'CH': 21,  # Switzerland
-                            'CR': 21,  # Costa Rica
+                            'CR': 22,  # Costa Rica
                             'CY': 28,  # Cyprus
                             'CZ': 24,  # Czech Republic
                             'DE': 22,  # Germany
@@ -49,10 +50,12 @@ IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
                             'ES': 24,  # Spain
                             'FI': 18,  # Finland
                             'FO': 18,  # Faroe Islands
-                            'FR': 27,  # France + Central African Republic, French Guiana, French Polynesia, Guadeloupe,
-                                       #          Martinique, Réunion, Saint-Pierre and Miquelon, New Caledonia,
-                                       #          Wallis and Futuna
-                            'GB': 22,  # United Kingdom + Guernsey, Isle of Man, Jersey
+                            'FR': 27,  # France + French Guiana (GF), Guadeloupe (GP), Martinique (MQ), Réunion (RE),
+                                       #          French Polynesia (PF), French Southern Territories (TF), Mayotte (YT),
+                                       #          New Caledonia (NC), Saint Barthélemy (BL),
+                                       #          Saint Martin - French part (MF), Saint-Pierre and Miquelon (PM),
+                                       #          Wallis and Futuna (WF)
+                            'GB': 22,  # United Kingdom + Guernsey (GG), Isle of Man (IM), Jersey (JE)
                             'GE': 22,  # Georgia
                             'GI': 23,  # Gibraltar
                             'GL': 18,  # Greenland
@@ -62,11 +65,12 @@ IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
                             'HU': 28,  # Hungary
                             'IE': 22,  # Ireland
                             'IL': 23,  # Israel
+                            'IQ': 23,  # Iraq
                             'IS': 26,  # Iceland
                             'IT': 27,  # Italy
                             'JO': 30,  # Jordan
-                            'KZ': 20,  # Kazakhstan
                             'KW': 30,  # Kuwait
+                            'KZ': 20,  # Kazakhstan
                             'LB': 28,  # Lebanon
                             'LC': 32,  # Saint Lucia
                             'LI': 21,  # Liechtenstein
@@ -77,15 +81,15 @@ IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
                             'MD': 24,  # Moldova
                             'ME': 22,  # Montenegro
                             'MK': 19,  # Macedonia
-                            'MT': 31,  # Malta
                             'MR': 27,  # Mauritania
+                            'MT': 31,  # Malta
                             'MU': 30,  # Mauritius
                             'NL': 18,  # Netherlands
                             'NO': 15,  # Norway
-                            'PS': 29,  # Palestine
                             'PK': 24,  # Pakistan
                             'PL': 28,  # Poland
-                            'PT': 25,  # Portugal + Sao Tome and Principe
+                            'PS': 29,  # Palestine
+                            'PT': 25,  # Portugal
                             'QA': 29,  # Qatar
                             'RO': 24,  # Romania
                             'RS': 22,  # Serbia
@@ -95,13 +99,14 @@ IBAN_COUNTRY_CODE_LENGTH = {'AL': 28,  # Albania
                             'SI': 19,  # Slovenia
                             'SK': 24,  # Slovakia
                             'SM': 27,  # San Marino
-                            'ST': 25,  # Sao Tome And Principe
+                            'ST': 25,  # Sao Tome and Principe
+                            'SV': 28,  # El Salvador
                             'TL': 23,  # Timor-Leste
                             'TN': 24,  # Tunisia
                             'TR': 26,  # Turkey
                             'UA': 29,  # Ukraine
                             'VG': 24,  # British Virgin Islands
-                            'XK': 20}  # Republic of Kosovo (user-assigned country code)
+                            'XK': 20}  # Kosovo (user-assigned country code)
 
 
 # Nordea has catalogued IBANs for some additional countries but they are not part of the office IBAN network yet.
