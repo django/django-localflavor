@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.co.forms import CODepartmentSelect
-from localflavor.co.forms import RUTField
+from localflavor.co.forms import CODepartmentSelect, CONITField
 
 
 class COLocalFlavorTests(SimpleTestCase):
@@ -46,7 +45,7 @@ class COLocalFlavorTests(SimpleTestCase):
 </select>"""
         self.assertHTMLEqual(d.render('department', 'COR'), out)
 
-    def test_ARCUITField(self):
+    def test_CONITField(self):
         error_format = ['Enter a valid RUT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format.']
         error_invalid = ['Invalid RUT.']
         valid = {
@@ -66,4 +65,4 @@ class COLocalFlavorTests(SimpleTestCase):
             '37547837-2': error_invalid,
             '9002271401': error_invalid,
         }
-        self.assertFieldOutput(RUTField, valid, invalid)
+        self.assertFieldOutput(CONITField, valid, invalid)

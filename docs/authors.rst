@@ -44,6 +44,7 @@ Authors
 * Hamad AlGhanim
 * Honza Král
 * Horst Gutmann
+* Igor Támara
 * Illia Volochii
 * Ivan Fisun
 * Jaap Roes

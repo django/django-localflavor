@@ -13,6 +13,8 @@ New fields for existing flavors:
 
 - Added KWAreaSelect form field.
   (`gh-296 <https://github.com/django/django-localflavor/pull/296>`_)
+- Added CONITField form field
+  (`gh-145 <https://github.com/django/django-localflavor/pull/145>`_).
 
 Modifications to existing flavors:
 
