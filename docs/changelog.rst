@@ -7,12 +7,12 @@ Changelog
 New flavors:
 
 - Added local flavor for Cuba
-  (`gh-292 <https://github.com/django/django-localflavor/pull/292>`_)
+  (`gh-292 <https://github.com/django/django-localflavor/pull/292>`_).
 
 New fields for existing flavors:
 
-- Added KWAreaSelect form field.
-  (`gh-296 <https://github.com/django/django-localflavor/pull/296>`_)
+- Added KWAreaSelect form field
+  (`gh-296 <https://github.com/django/django-localflavor/pull/296>`_).
 - Added CONITField form field
   (`gh-145 <https://github.com/django/django-localflavor/pull/145>`_).
 
@@ -25,7 +25,7 @@ Modifications to existing flavors:
   (`gh-305 <https://github.com/django/django-localflavor/pull/305>`_).
 - Added support for Swedish interim personal identity numbers
   (`gh-308 <https://github.com/django/django-localflavor/pull/308>`_).
-- Deprecated `nl.models.NLBankAccountNumberField`.
+- Deprecated `nl.models.NLBankAccountNumberField`
   (`gh-307 <https://github.com/django/django-localflavor/pull/307>`_).
 
 Other changes:
@@ -33,7 +33,7 @@ Other changes:
 - Added support for empty_value kwarg in Django >= 1.11
   (`gh-298 <https://github.com/django/django-localflavor/pull/298>`_).
 - Dropped support for Python 3.2.
-- Fixes issue with `no.forms.NOBankAccountNumber` unclean data.
+- Fixes issue with `no.forms.NOBankAccountNumber` unclean data
   (`gh-311 <https://github.com/django/django-localflavor/pull/311>`_).
 
 1.5   (2017-05-26)
@@ -42,23 +42,23 @@ Other changes:
 New flavors:
 
 - Added local flavor for Ukraine
-  (`gh-273 <https://github.com/django/django-localflavor/pull/273>`_)
+  (`gh-273 <https://github.com/django/django-localflavor/pull/273>`_).
 
 New fields for existing flavors:
 
-- Added NOBankAccountNumber form field.
-  (`gh-275 <https://github.com/django/django-localflavor/pull/275>`_)
-- Added AUCompanyNumberField model and form field.
-  (`gh-278 <https://github.com/django/django-localflavor/pull/278>`_)
+- Added NOBankAccountNumber form field
+  (`gh-275 <https://github.com/django/django-localflavor/pull/275>`_).
+- Added AUCompanyNumberField model and form field
+  (`gh-278 <https://github.com/django/django-localflavor/pull/278>`_).
 
 Modifications to existing flavors:
 
-- Added normalized versions of COFA state names for US.
-  (`gh-277 <https://github.com/django/django-localflavor/pull/277>`_)
-- Fixed Dutch NLZipCodeField field not to store empty value as a single space.
-  (`gh-280 <https://github.com/django/django-localflavor/pull/280>`_)
-- Fixed validation for old Australian tax file numbers.
-  (`gh-284 <https://github.com/django/django-localflavor/pull/284>`_)
+- Added normalized versions of COFA state names for US
+  (`gh-277 <https://github.com/django/django-localflavor/pull/277>`_).
+- Fixed Dutch NLZipCodeField field not to store empty value as a single space
+  (`gh-280 <https://github.com/django/django-localflavor/pull/280>`_).
+- Fixed validation for old Australian tax file numbers
+  (`gh-284 <https://github.com/django/django-localflavor/pull/284>`_).
 
 Other changes:
 
@@ -70,20 +70,20 @@ Other changes:
 New flavors:
 
 - Added local flavor for Venezuela
-  (`gh-245 <https://github.com/django/django-localflavor/pull/245>`_)
+  (`gh-245 <https://github.com/django/django-localflavor/pull/245>`_).
 - Added local flavor for Morocco
-  (`gh-270 <https://github.com/django/django-localflavor/pull/270>`_)
+  (`gh-270 <https://github.com/django/django-localflavor/pull/270>`_).
 
 New fields for existing flavors:
 
-- Added MXCLABEField model and form fields.
+- Added MXCLABEField model and form fields
   (`gh-227 <https://github.com/django/django-localflavor/pull/227>`_).
-- Added AUTaxFileNumberField model and form fields.
-  (`gh-238 <https://github.com/django/django-localflavor/pull/238>`_)
+- Added AUTaxFileNumberField model and form fields
+  (`gh-238 <https://github.com/django/django-localflavor/pull/238>`_).
 - Added KWGovernorateSelect field to easily select Kuwait governorates.
   (`gh-231 <https://github.com/django/django-localflavor/pull/231>`_).
 - Added FRRegion2016Select field to stick to current legislation
-  (`gh-260 <https://github.com/django/django-localflavor/pull/260>`_)
+  (`gh-260 <https://github.com/django/django-localflavor/pull/260>`_).
   and (`gh-268 <https://github.com/django/django-localflavor/pull/268>`_).
 
 Modifications to existing flavors:
@@ -93,11 +93,11 @@ Modifications to existing flavors:
   `gh-254 <https://github.com/django/django-localflavor/pull/254>`_).
 - Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
   (`gh-195 <https://github.com/django/django-localflavor/pull/195>`_).
-- Allow passing field name as first positional argument of IBANField.
+- Allow passing field name as first positional argument of IBANField
   (`gh-236 <https://github.com/django/django-localflavor/pull/236>`_).
-- Fixed French FRNationalIdentificationNumber bug with imaginary birth month values.
+- Fixed French FRNationalIdentificationNumber bug with imaginary birth month values
   (`gh-242 <https://github.com/django/django-localflavor/pull/242>`_).
-- Fixed French FRNationalIdentificationNumber bug with corsican people born after 2000.
+- Fixed French FRNationalIdentificationNumber bug with corsican people born after 2000
   (`gh-242 <https://github.com/django/django-localflavor/pull/242>`_).
 - Fixed the translation for US state 'Georgia' from colliding with the country 'Georgia'
   (`gh-250 <https://github.com/django/django-localflavor/pull/250>`_).
@@ -128,20 +128,20 @@ Other changes:
 New flavors:
 
 - Added local flavor for Bulgaria
-  (`gh-191 <https://github.com/django/django-localflavor/pull/191>`_)
+  (`gh-191 <https://github.com/django/django-localflavor/pull/191>`_).
 - Added local flavor for Tunisia
-  (`gh-141 <https://github.com/django/django-localflavor/pull/141>`_)
+  (`gh-141 <https://github.com/django/django-localflavor/pull/141>`_).
 - Added local flavor for Hungary
-  (`gh-213 <https://github.com/django/django-localflavor/pull/213>`_)
+  (`gh-213 <https://github.com/django/django-localflavor/pull/213>`_).
 
 New fields for existing flavors:
 
 - Added ARCBUField form field.
   (`gh-151 <https://github.com/django/django-localflavor/pull/151>`_).
-- Added NLZipCodeField, NLProvinceField, NLSoFiNumberField, NLPhoneNumberField model fields.
+- Added NLZipCodeField, NLProvinceField, NLSoFiNumberField, NLPhoneNumberField model fields
   (`gh-152 <https://github.com/django/django-localflavor/pull/152>`_).
-- Added AUBusinessNumberField model and form fields.
-  (`gh-63 <https://github.com/django/django-localflavor/pull/63>`_)
+- Added AUBusinessNumberField model and form fields
+  (`gh-63 <https://github.com/django/django-localflavor/pull/63>`_).
 
 Modifications to existing flavors:
 
@@ -159,8 +159,8 @@ Modifications to existing flavors:
 - Added deconstructor methods to validators.
   (`gh-220 <https://github.com/django/django-localflavor/pull/220>`_).
 - Fix bug in ESIdentityCardNumberField where some valid values for NIE numbers were not
-  validating.
-  (`gh-217 <https://github.com/django/django-localflavor/pull/217>`_)
+  validating
+  (`gh-217 <https://github.com/django/django-localflavor/pull/217>`_).
 - Add deconstruct method to all model fields
   (`gh-162 <https://github.com/django/django-localflavor/pull/162>`_
   `gh-224 <https://github.com/django/django-localflavor/pull/224>`_).
