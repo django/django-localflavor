@@ -30,6 +30,7 @@ Authors
 * Danielle Madeley
 * Daniel Roschka
 * Diederik van der Boor
+* Dmitry Dygalo
 * d.merc
 * Douglas Miranda
 * Elliott Fawcett

@@ -18,7 +18,8 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Fixed validation of Czech birth numbers for birth dates after 1st January 1954
+  (`gh-315 <https://github.com/django/django-localflavor/issues/315>`_).
 
 1.6   (2017-11-22)
 ------------------
