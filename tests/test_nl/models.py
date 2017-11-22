@@ -1,7 +1,7 @@
 from django.db import models
 
-from localflavor.nl.models import (NLBankAccountNumberField, NLPhoneNumberField, NLProvinceField, NLSoFiNumberField,
-                                   NLZipCodeField)
+from localflavor.nl.models import (NLBankAccountNumberField, NLBSNField, NLPhoneNumberField, NLProvinceField,
+                                   NLSoFiNumberField, NLZipCodeField)
 
 
 class NLPlace(models.Model):
@@ -10,6 +10,7 @@ class NLPlace(models.Model):
     province = NLProvinceField(default='ZH')
 
     sofinr = NLSoFiNumberField()
+    bsn = NLBSNField()
     phone = NLPhoneNumberField()
     bankaccount = NLBankAccountNumberField()
 
