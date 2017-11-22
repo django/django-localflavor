@@ -1,14 +1,16 @@
 from __future__ import unicode_literals
 
+import warnings
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberField
+from localflavor.deprecation import DeprecatedPhoneNumberField, RemovedInLocalflavor20Warning
 
 from . import forms
 from .nl_provinces import PROVINCE_CHOICES
-from .validators import (NLBankAccountNumberFieldValidator, NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator,
-                         NLZipCodeFieldValidator)
+from .validators import (NLBankAccountNumberFieldValidator, NLBSNFieldValidator, NLPhoneNumberFieldValidator,
+                         NLSoFiNumberFieldValidator, NLZipCodeFieldValidator)
 
 
 class NLZipCodeField(models.CharField):
@@ -64,13 +66,38 @@ class NLProvinceField(models.CharField):
         return name, path, args, kwargs
 
 
-class NLSoFiNumberField(models.CharField):
+class NLBSNField(models.CharField):
+    """
+    A Dutch social security number (BSN).
+
+    This model field uses :class:`validators.NLBSNFieldValidator` for validation.
+
+    .. versionadded:: 1.6
+    """
+
+    description = _('Dutch social security number (BSN)')
+
+    validators = [NLBSNFieldValidator()]
+
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('max_length', 12)
+        super(NLBSNField, self).__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': forms.NLBSNFormField}
+        defaults.update(kwargs)
+        return super(NLBSNField, self).formfield(**defaults)
+
+
+class NLSoFiNumberField(NLBSNField):
     """
     A Dutch social security number (SoFi).
 
     This model field uses :class:`validators.NLSoFiNumberFieldValidator` for validation.
 
     .. versionadded:: 1.3
+    .. deprecated:: 1.6
+        Use `NLBSNField` instead.
     """
 
     description = _('Dutch social security number (SoFi)')
@@ -78,7 +105,8 @@ class NLSoFiNumberField(models.CharField):
     validators = [NLSoFiNumberFieldValidator()]
 
     def __init__(self, *args, **kwargs):
-        kwargs.setdefault('max_length', 12)
+        warnings.warn('NLSoFiNumberField is deprecated. Please use NLBSNField instead.',
+                      RemovedInLocalflavor20Warning)
         super(NLSoFiNumberField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):

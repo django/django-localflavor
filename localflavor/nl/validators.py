@@ -2,12 +2,15 @@
 from __future__ import unicode_literals
 
 import re
+import warnings
 
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
 from django.utils.deconstruct import deconstructible
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
+
+from localflavor.deprecation import RemovedInLocalflavor20Warning
 
 
 class NLZipCodeFieldValidator(RegexValidator):
@@ -30,20 +33,19 @@ class NLZipCodeFieldValidator(RegexValidator):
             raise ValidationError(self.error_message)
 
 
-class NLSoFiNumberFieldValidator(RegexValidator):
+class NLBSNFieldValidator(RegexValidator):
     """
-    Validation for Dutch SoFinummers.
+    Validation for Dutch social security numbers (BSN).
 
-    .. versionadded:: 1.3
+    .. versionadded:: 1.6
     """
 
-    error_message = _('Enter a valid SoFi number.')
+    error_message = _('Enter a valid BSN.')
 
     def __init__(self):
-        super(NLSoFiNumberFieldValidator, self).__init__(regex='^\d{9}$',
-                                                         message=self.error_message)
+        super(NLBSNFieldValidator, self).__init__(regex='^\d{9}$', message=self.error_message)
 
-    def sofi_checksum_ok(self, value):
+    def bsn_checksum_ok(self, value):
         checksum = 0
         for i in range(9, 1, -1):
             checksum += int(value[9 - i]) * i
@@ -52,13 +54,32 @@ class NLSoFiNumberFieldValidator(RegexValidator):
         return checksum % 11 == 0
 
     def __call__(self, value):
-        super(NLSoFiNumberFieldValidator, self).__call__(value)
+        super(NLBSNFieldValidator, self).__call__(value)
 
         if int(value) == 0:
             raise ValidationError(self.error_message)
 
-        if not self.sofi_checksum_ok(value):
+        if not self.bsn_checksum_ok(value):
             raise ValidationError(self.error_message)
+
+
+class NLSoFiNumberFieldValidator(NLBSNFieldValidator):
+    """
+    Validation for Dutch SoFinummers.
+
+    .. versionadded:: 1.3
+    .. deprecated:: 1.6
+        Use `NLBSNFieldValidator` instead.
+    """
+    error_message = _('Enter a valid SoFi number.')
+
+    def __init__(self):
+        warnings.warn('NLSoFiNumberFieldValidator is deprecated. Please use NLBSNFieldValidator instead.',
+                      RemovedInLocalflavor20Warning)
+        super(NLSoFiNumberFieldValidator, self).__init__()
+
+    def sofi_checksum_ok(self, value):
+        return self.bsn_checksum_ok(value)
 
 
 @deconstructible

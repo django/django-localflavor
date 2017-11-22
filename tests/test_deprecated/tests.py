@@ -26,7 +26,10 @@ from localflavor.is_.forms import ISPhoneNumberField
 from localflavor.it.forms import ITPhoneNumberField
 from localflavor.lt.forms import LTPhoneField
 from localflavor.nl import models as nl_models
+from localflavor.nl.forms import NLSoFiNumberField as NLSoFiNumberFormField
 from localflavor.nl.forms import NLPhoneNumberField
+from localflavor.nl.models import NLSoFiNumberField
+from localflavor.nl.validators import NLSoFiNumberFieldValidator
 from localflavor.no.forms import NOPhoneNumberField
 from localflavor.nz.forms import NZPhoneNumberField
 from localflavor.pk import models as pk_models
@@ -109,5 +112,14 @@ class DeprecatedFieldsTests(SimpleTestCase):
         with warnings.catch_warnings(record=True) as recorded:
             warnings.simplefilter('always')
             ROIBANField()
+
+        self.assertTrue(all(w.category is RemovedInLocalflavor20Warning for w in recorded))
+
+    def test_NLSoFiNumberField_deprecated(self):
+        with warnings.catch_warnings(record=True) as recorded:
+            warnings.simplefilter('always')
+            NLSoFiNumberField()
+            NLSoFiNumberFormField()
+            NLSoFiNumberFieldValidator()
 
         self.assertTrue(all(w.category is RemovedInLocalflavor20Warning for w in recorded))

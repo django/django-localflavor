@@ -22,6 +22,8 @@ New fields for existing flavors:
   (`gh-296 <https://github.com/django/django-localflavor/pull/296>`_).
 - Added CONITField form field
   (`gh-145 <https://github.com/django/django-localflavor/pull/145>`_).
+- Added `nl.models.NLBSNField`, `nl.forms.NLBSNFormField` and `nl.validators.NLBSNFieldValidator`
+  (`gh-314 <https://github.com/django/django-localflavor/pull/314>`_).
 
 Modifications to existing flavors:
 
@@ -35,6 +37,8 @@ Modifications to existing flavors:
 - Deprecated `nl.models.NLBankAccountNumberField`
   (`gh-307 <https://github.com/django/django-localflavor/pull/307>`_).
 - Updated IBANField to support the latest additions to the IBAN Registry (version 78 / August 2017).
+- Deprecated `nl.models.NLSoFiNumberField`, `nl.forms.NLSoFiNumberField` and `nl.validators.NLSoFiNumberFieldValidator`
+  (`gh-314 <https://github.com/django/django-localflavor/pull/314>`_).
 
 Other changes:
 

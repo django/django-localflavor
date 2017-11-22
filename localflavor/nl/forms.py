@@ -3,13 +3,16 @@
 
 from __future__ import unicode_literals
 
+import warnings
+
 from django import forms
 from django.utils import six
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
+from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
 
 from .nl_provinces import PROVINCE_CHOICES
-from .validators import NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator, NLZipCodeFieldValidator
+from .validators import (NLBSNFieldValidator, NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator,
+                         NLZipCodeFieldValidator)
 
 
 class NLZipCodeField(forms.CharField):
@@ -47,15 +50,35 @@ class NLPhoneNumberField(forms.CharField, DeprecatedPhoneNumberFormFieldMixin):
     default_validators = [NLPhoneNumberFieldValidator()]
 
 
-class NLSoFiNumberField(forms.CharField):
+class NLBSNFormField(forms.CharField):
+    """
+    A Dutch social security number (BSN) field.
+
+    http://nl.wikipedia.org/wiki/Sofinummer
+
+    .. versionadded:: 1.6
+    """
+
+    default_validators = [NLBSNFieldValidator()]
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 9
+        super(NLBSNFormField, self).__init__(*args, **kwargs)
+
+
+class NLSoFiNumberField(NLBSNFormField):
     """
     A Dutch social security number (SoFi/BSN) field.
 
     http://nl.wikipedia.org/wiki/Sofinummer
-    """
 
+    .. versionadded:: 1.3
+    .. deprecated:: 1.6
+        Use `NLBSNFormField` instead.
+    """
     default_validators = [NLSoFiNumberFieldValidator()]
 
     def __init__(self, *args, **kwargs):
-        kwargs['max_length'] = 9
+        warnings.warn('NLSoFiNumberField is deprecated. Please use NLBSNFormField instead.',
+                      RemovedInLocalflavor20Warning)
         super(NLSoFiNumberField, self).__init__(*args, **kwargs)
