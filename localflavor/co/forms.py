@@ -26,8 +26,8 @@ class CONITField(EmptyValueCompatMixin, RegexField):
     http://es.wikipedia.org/wiki/N%C3%BAmero_de_Identificaci%C3%B3n_Tributaria
     """
     default_error_messages = {
-        'invalid': _('Enter a valid RUT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format.'),
-        'checksum': _('Invalid RUT.'),
+        'invalid': _('Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format.'),
+        'checksum': _('Invalid NIT.'),
     }
 
     PRIME_PLACES = [3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71]

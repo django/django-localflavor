@@ -46,8 +46,8 @@ class COLocalFlavorTests(SimpleTestCase):
         self.assertHTMLEqual(d.render('department', 'COR'), out)
 
     def test_CONITField(self):
-        error_format = ['Enter a valid RUT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format.']
-        error_invalid = ['Invalid RUT.']
+        error_format = ['Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format.']
+        error_invalid = ['Invalid NIT.']
         valid = {
             '37547837-0': '37547837-0',
             '900227140-3': '900227140-3',
