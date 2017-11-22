@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-08 08:46+0200\n"
+"POT-Creation-Date: 2017-11-22 15:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -559,12 +559,20 @@ msgstr ""
 msgid "Invalid ID Card Number: Wrong location code"
 msgstr ""
 
-#: cn/forms.py:187 nl/validators.py:86
+#: cn/forms.py:187 nl/validators.py:107
 msgid "Enter a valid phone number."
 msgstr ""
 
 #: cn/forms.py:214
 msgid "Enter a valid cell number."
+msgstr ""
+
+#: co/forms.py:29
+msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
+msgstr ""
+
+#: co/forms.py:30
+msgid "Invalid NIT."
 msgstr ""
 
 #: cu/choices.py:8
@@ -1105,8 +1113,7 @@ msgstr ""
 msgid "Odsherred"
 msgstr ""
 
-#: dk/dk_municipalities.py:93 dk/dk_postalcodes.py:776
-#: dk/dk_postalcodes.py:777
+#: dk/dk_municipalities.py:93 dk/dk_postalcodes.py:776 dk/dk_postalcodes.py:777
 msgid "Ringsted"
 msgstr ""
 
@@ -4285,7 +4292,7 @@ msgstr ""
 msgid "Enter a postal code in the format XXXX."
 msgstr ""
 
-#: dk/forms.py:52 no/forms.py:181
+#: dk/forms.py:52 no/forms.py:182
 msgid "A phone number must be 8 digits and may have country code"
 msgstr ""
 
@@ -5324,45 +5331,45 @@ msgstr ""
 msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:172
+#: generic/validators.py:177
 #, python-format
 msgid "%s is not a valid character for IBAN."
 msgstr ""
 
-#: generic/validators.py:194
+#: generic/validators.py:199
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
-#: generic/validators.py:197
+#: generic/validators.py:202
 #, python-format
 msgid "%s is not a valid country code for IBAN."
 msgstr ""
 
-#: generic/validators.py:199
+#: generic/validators.py:204
 #, python-format
 msgid "%s IBANs are not allowed in this field."
 msgstr ""
 
-#: generic/validators.py:202
+#: generic/validators.py:207
 msgid "Not a valid IBAN."
 msgstr ""
 
-#: generic/validators.py:228
+#: generic/validators.py:233
 msgid "BIC codes have either 8 or 11 characters."
-msgstr ""
-
-#: generic/validators.py:234
-#, python-format
-msgid "%s is not a valid institution code."
 msgstr ""
 
 #: generic/validators.py:239
 #, python-format
+msgid "%s is not a valid institution code."
+msgstr ""
+
+#: generic/validators.py:244
+#, python-format
 msgid "%s is not a valid country code."
 msgstr ""
 
-#: generic/validators.py:250
+#: generic/validators.py:255
 msgid "Not a valid EAN code."
 msgstr ""
 
@@ -6023,7 +6030,7 @@ msgstr ""
 msgid "The Icelandic identification number is not valid."
 msgstr ""
 
-#: it/forms.py:31 nl/validators.py:20
+#: it/forms.py:31 nl/validators.py:23
 msgid "Enter a valid zip code."
 msgstr ""
 
@@ -8445,19 +8452,23 @@ msgstr ""
 msgid "Zacatecas"
 msgstr ""
 
-#: nl/models.py:23
+#: nl/models.py:25
 msgid "Dutch zipcode"
 msgstr ""
 
-#: nl/models.py:52
+#: nl/models.py:54
 msgid "Dutch province"
 msgstr ""
 
-#: nl/models.py:76
-msgid "Dutch social security number (SoFi)"
+#: nl/models.py:78
+msgid "Dutch social security number (BSN)"
 msgstr ""
 
 #: nl/models.py:103
+msgid "Dutch social security number (SoFi)"
+msgstr ""
+
+#: nl/models.py:131
 msgid "Dutch phone number"
 msgstr ""
 
@@ -8505,15 +8516,19 @@ msgstr ""
 msgid "Zuid-Holland"
 msgstr ""
 
-#: nl/validators.py:40
+#: nl/validators.py:43
+msgid "Enter a valid BSN."
+msgstr ""
+
+#: nl/validators.py:74
 msgid "Enter a valid SoFi number."
 msgstr ""
 
-#: nl/validators.py:101
+#: nl/validators.py:122
 msgid "Enter a valid bank account number."
 msgstr ""
 
-#: nl/validators.py:102
+#: nl/validators.py:123
 msgid "Bank account numbers have 1 - 7, 9 or 10 digits."
 msgstr ""
 
