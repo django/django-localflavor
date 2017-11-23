@@ -59,14 +59,14 @@ Modifications to existing flavors:
 - Updated IBANField to support the latest additions to the IBAN Registry (version 78 / August 2017).
 - Deprecated `nl.models.NLSoFiNumberField`, `nl.forms.NLSoFiNumberField` and `nl.validators.NLSoFiNumberFieldValidator`
   (`gh-314 <https://github.com/django/django-localflavor/pull/314>`_).
+- Fixes issue with `no.forms.NOBankAccountNumber` unclean data
+  (`gh-311 <https://github.com/django/django-localflavor/pull/311>`_).
 
 Other changes:
 
 - Added support for empty_value kwarg in Django >= 1.11
   (`gh-298 <https://github.com/django/django-localflavor/pull/298>`_).
 - Dropped support for Python 3.2.
-- Fixes issue with `no.forms.NOBankAccountNumber` unclean data
-  (`gh-311 <https://github.com/django/django-localflavor/pull/311>`_).
 
 1.5   (2017-05-26)
 ------------------
