@@ -35,6 +35,13 @@ support for an unsupported version of Django.
 
 **2017-11-22 - 1.6**: Django 1.8 - 1.11
 
+All deprecated code will be removed in the next release. Please run you project's tests using `python -Wd` so that
+deprecation warnings appear and can be addressed.
+
+This is last version of django-localflavor to support Django 1.8.x - 1.11.x which means this is the last version of
+django-localflavor that will support Python 2. Backwards-compatible bug fixes will be released as PATCH updates
+(e.g. 1.6.x) when needed.
+
 **2017-05-26 - 1.5**: Django 1.8 - 1.11
 
 **2017-01-03 - 1.4**: Django 1.8 - 1.10
