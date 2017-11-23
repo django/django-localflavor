@@ -72,7 +72,7 @@ class CZBirthNumberField(Field):
         birth, id = match.groupdict()['birth'], match.groupdict()['id']
 
         # Three digits for verification number were used until 1. january 1954
-        if len(id) == 3:
+        if len(id) == 3 and int(birth[:2]) < 54:
             return '%s' % value
 
         # Birth number is in format YYMMDD. Females have month value raised by 50.
