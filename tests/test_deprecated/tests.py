@@ -29,7 +29,8 @@ from localflavor.nl import models as nl_models
 from localflavor.nl.forms import NLSoFiNumberField as NLSoFiNumberFormField
 from localflavor.nl.forms import NLPhoneNumberField
 from localflavor.nl.models import NLSoFiNumberField
-from localflavor.nl.validators import NLSoFiNumberFieldValidator
+from localflavor.nl.validators import (NLBankAccountNumberFieldValidator, NLPhoneNumberFieldValidator,
+                                       NLSoFiNumberFieldValidator)
 from localflavor.no.forms import NOPhoneNumberField
 from localflavor.nz.forms import NZPhoneNumberField
 from localflavor.pk import models as pk_models
@@ -60,7 +61,7 @@ class DeprecatedFieldsTests(SimpleTestCase):
             self.assertIn('deprecated::', field.__class__.__doc__)
 
     def test_PhoneNumberFormField_deprecated(self):
-        deprecated_form_fields = (
+        deprecated_classes = (
             AUPhoneNumberField,
             BEPhoneNumberField,
             BRPhoneNumberField,
@@ -82,6 +83,7 @@ class DeprecatedFieldsTests(SimpleTestCase):
             ITPhoneNumberField,
             LTPhoneField,
             NLPhoneNumberField,
+            NLPhoneNumberFieldValidator,
             NOPhoneNumberField,
             NZPhoneNumberField,
             PKPhoneNumberField,
@@ -95,7 +97,7 @@ class DeprecatedFieldsTests(SimpleTestCase):
 
         with warnings.catch_warnings(record=True) as recorded:
             warnings.simplefilter("always")
-            for form_field in deprecated_form_fields:
+            for form_field in deprecated_classes:
                 self.assertIn('deprecated::', form_field.__doc__)
                 form_field()
 
@@ -134,3 +136,9 @@ class DeprecatedFieldsTests(SimpleTestCase):
 
         nl_bank_account_field = BankAccountModel._meta.get_field('nl_bank_account')
         self.assertIn('deprecated::', nl_bank_account_field.__class__.__doc__)
+
+        with warnings.catch_warnings(record=True) as recorded:
+            warnings.simplefilter('always')
+            NLBankAccountNumberFieldValidator()
+
+        self.assertTrue(all(w.category is RemovedInLocalflavor20Warning for w in recorded))

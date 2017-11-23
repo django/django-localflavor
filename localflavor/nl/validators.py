@@ -88,7 +88,16 @@ class NLPhoneNumberFieldValidator(object):
     Validation for Dutch phone numbers.
 
     .. versionadded:: 1.3
+    .. deprecated:: 1.6.1
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
+
+    def __init__(self):
+        warnings.warn('NLPhoneNumberFieldValidator is deprecated in favor of the django-phonenumber-field library.',
+                      RemovedInLocalflavor20Warning)
+        super(NLPhoneNumberFieldValidator, self).__init__()
 
     def __eq__(self, other):
         # The is no outside modification of properties so this should always be true by default.
@@ -116,6 +125,10 @@ class NLBankAccountNumberFieldValidator(RegexValidator):
     http://www.credit-card.be/BankAccount/ValidationRules.htm#NL_Validation
 
     .. versionadded:: 1.1
+    .. deprecated:: 1.6.1
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
     """
 
     default_error_messages = {
@@ -124,6 +137,8 @@ class NLBankAccountNumberFieldValidator(RegexValidator):
     }
 
     def __init__(self, regex=None, message=None, code=None):
+        warnings.warn('NLBankAccountNumberFieldValidator is deprecated in favor of the django-phonenumber-field '
+                      'library.', RemovedInLocalflavor20Warning)
         super(NLBankAccountNumberFieldValidator, self).__init__(regex='^[0-9]+$',
                                                                 message=self.default_error_messages['invalid'])
         self.no_leading_zeros_regex = re.compile('[1-9]+')
