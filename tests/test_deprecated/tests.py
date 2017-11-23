@@ -123,3 +123,14 @@ class DeprecatedFieldsTests(SimpleTestCase):
             NLSoFiNumberFieldValidator()
 
         self.assertTrue(all(w.category is RemovedInLocalflavor20Warning for w in recorded))
+
+    @override_settings(SILENCED_SYSTEM_CHECKS=[])
+    def test_NLBankAccountField_deprecated(self):
+        class BankAccountModel(Model):
+            nl_bank_account = nl_models.NLBankAccountNumberField()
+
+        model = BankAccountModel()
+        self.assertTrue('is deprecated.' in model.check()[0].msg)
+
+        nl_bank_account_field = BankAccountModel._meta.get_field('nl_bank_account')
+        self.assertIn('deprecated::', nl_bank_account_field.__class__.__doc__)
