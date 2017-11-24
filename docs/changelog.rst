@@ -20,7 +20,8 @@ Modifications to existing flavors:
 
 Other changes:
 
-- Added support for Django 2.0 and dropped support for Django < 1.11.
+- Added support for Django 2.0 and dropped support for Django < 1.11
+  (`gh-310 <https://github.com/django/django-localflavor/pull/310>`_).
 
 1.6   (2017-11-22)
 ------------------
