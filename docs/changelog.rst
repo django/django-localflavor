@@ -22,16 +22,14 @@ Other changes:
 
 - Added support for Django 2.0 and dropped support for Django < 1.11
   (`gh-310 <https://github.com/django/django-localflavor/pull/310>`_).
+- Fixed README and changelog documentation about dropping Python 2 and Django 1.11.
+
 
 1.6   (2017-11-22)
 ------------------
 
 All deprecated code will be removed in the next release. Please run you project's tests using `python -Wd` so that
 deprecation warnings appear and can be addressed.
-
-This is last version of django-localflavor to support Django 1.8.x - 1.11.x which means this is the last version of
-django-localflavor that will support Python 2. Backwards-compatible bug fixes will be released as PATCH updates
-(e.g. 1.6.x) when needed.
 
 New flavors:
 
