@@ -11,15 +11,15 @@ Modifications to existing flavors:
   (`gh-315 <https://github.com/django/django-localflavor/issues/315>`_).
 - Deprecated `nl.validators.NLBankAccountNumberFieldValidator` and `nl.validators.NLPhoneNumberFieldValidator`.
 
+Other changes:
+
+- Fixed README and changelog documentation about dropping Python 2 and Django 1.11.
+
 1.6   (2017-11-22)
 ------------------
 
 All deprecated code will be removed in the next release. Please run you project's tests using `python -Wd` so that
 deprecation warnings appear and can be addressed.
-
-This is last version of django-localflavor to support Django 1.8.x - 1.11.x which means this is the last version of
-django-localflavor that will support Python 2. Backwards-compatible bug fixes will be released as PATCH updates
-(e.g. 1.6.x) when needed.
 
 New flavors:
 
