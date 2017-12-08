@@ -126,9 +126,9 @@ class NLBankAccountNumberFieldValidator(RegexValidator):
 
     .. versionadded:: 1.1
     .. deprecated:: 1.6.1
-        Use the django-phonenumber-field_ library instead.
 
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
+    NLBankAccountNumberFieldValidator is deprecated. Non-IBAN bank account numbers are no longer used in the
+    Netherlands. Use the IBAN field and validator instead.
     """
 
     default_error_messages = {
@@ -137,8 +137,9 @@ class NLBankAccountNumberFieldValidator(RegexValidator):
     }
 
     def __init__(self, regex=None, message=None, code=None):
-        warnings.warn('NLBankAccountNumberFieldValidator is deprecated in favor of the django-phonenumber-field '
-                      'library.', RemovedInLocalflavor20Warning)
+        warnings.warn('NLBankAccountNumberFieldValidator is deprecated. Non-IBAN bank account numbers are no longer '
+                      'used in the Netherlands. Use the IBAN field and validator instead.',
+                      RemovedInLocalflavor20Warning)
         super(NLBankAccountNumberFieldValidator, self).__init__(regex='^[0-9]+$',
                                                                 message=self.default_error_messages['invalid'])
         self.no_leading_zeros_regex = re.compile('[1-9]+')

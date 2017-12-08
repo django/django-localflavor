@@ -6,7 +6,7 @@ Changelog
 
 Modifications to existing flavors:
 
-- None
+- Fixed deprecation message for `nl.validators.NLBankAccountNumberFieldValidator`.
 
 1.6.1   (2017-11-24)
 --------------------
