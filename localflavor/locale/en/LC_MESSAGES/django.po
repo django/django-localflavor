@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-22 15:29+0100\n"
+"POT-Creation-Date: 2017-12-11 12:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,39 +112,39 @@ msgstr ""
 msgid "Tucumán"
 msgstr ""
 
-#: ar/forms.py:32
+#: ar/forms.py:30
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
 msgstr ""
 
-#: ar/forms.py:55 pe/forms.py:26 pe/forms.py:55
+#: ar/forms.py:54 pe/forms.py:24 pe/forms.py:52
 msgid "This field requires only numbers."
 msgstr ""
 
-#: ar/forms.py:56
+#: ar/forms.py:55
 msgid "This field requires 7 or 8 digits."
 msgstr ""
 
-#: ar/forms.py:92
+#: ar/forms.py:90
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
 msgstr ""
 
-#: ar/forms.py:93
+#: ar/forms.py:91
 msgid "Invalid CUIT."
 msgstr ""
 
-#: ar/forms.py:94
+#: ar/forms.py:92
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
 msgstr ""
 
-#: ar/forms.py:150
+#: ar/forms.py:147
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
 msgstr ""
 
-#: ar/forms.py:151 ar/forms.py:152
+#: ar/forms.py:148 ar/forms.py:149
 msgid "CBU must be exactly 22 digits long."
 msgstr ""
 
-#: ar/forms.py:153
+#: ar/forms.py:150
 msgid "Invalid CBU."
 msgstr ""
 
@@ -184,39 +184,35 @@ msgstr ""
 msgid "Vienna"
 msgstr ""
 
-#: at/forms.py:24 no/forms.py:27
+#: at/forms.py:24 no/forms.py:24
 msgid "Enter a zip code in the format XXXX."
 msgstr ""
 
-#: at/forms.py:54
+#: at/forms.py:53
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
 msgstr ""
 
-#: au/forms.py:30
+#: au/forms.py:21
 msgid "Enter a 4 digit postcode."
 msgstr ""
 
-#: au/models.py:18
+#: au/models.py:16
 msgid "Australian State"
 msgstr ""
 
-#: au/models.py:38
+#: au/models.py:36
 msgid "Australian Postcode"
 msgstr ""
 
-#: au/models.py:60
-msgid "Australian Phone number"
-msgstr ""
-
-#: au/models.py:79
+#: au/models.py:55
 msgid "Australian Business Number"
 msgstr ""
 
-#: au/models.py:109
+#: au/models.py:85
 msgid "Australian Company Number"
 msgstr ""
 
-#: au/models.py:143
+#: au/models.py:119
 msgid "Australian Tax File Number"
 msgstr ""
 
@@ -288,15 +284,8 @@ msgstr ""
 msgid "Wallonia"
 msgstr ""
 
-#: be/forms.py:25 ch/forms.py:36
+#: be/forms.py:23 ch/forms.py:31
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
-msgstr ""
-
-#: be/forms.py:55
-msgid ""
-"Enter a valid phone number in one of the formats 0x xxx xx xx, 0xx xx xx xx, "
-"04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx."
-"xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
 msgstr ""
 
 #: bg/validators.py:34
@@ -307,33 +296,33 @@ msgstr ""
 msgid "EIK/BULSTAT is not valid"
 msgstr ""
 
-#: br/forms.py:34
+#: br/forms.py:29
 msgid "Enter a zip code in the format XXXXX-XXX."
 msgstr ""
 
-#: br/forms.py:82
+#: br/forms.py:48
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
 msgstr ""
 
-#: br/forms.py:128
+#: br/forms.py:85
 msgid "Invalid CPF number."
 msgstr ""
 
-#: br/forms.py:129
+#: br/forms.py:86
 msgid "This field requires at most 11 digits or 14 characters."
 msgstr ""
 
-#: br/forms.py:187
+#: br/forms.py:144
 msgid "Invalid CNPJ number."
 msgstr ""
 
-#: br/forms.py:188
+#: br/forms.py:145
 msgid "This field requires at least 14 digits"
 msgstr ""
 
-#: br/forms.py:238
+#: br/forms.py:195
 msgid "Invalid Process number."
 msgstr ""
 
@@ -393,19 +382,15 @@ msgstr ""
 msgid "Yukon"
 msgstr ""
 
-#: ca/forms.py:32
+#: ca/forms.py:28
 msgid "Enter a postal code in the format XXX XXX."
 msgstr ""
 
-#: ca/forms.py:60 us/forms.py:62
-msgid "Phone numbers must be in XXX-XXX-XXXX format."
-msgstr ""
-
-#: ca/forms.py:83
+#: ca/forms.py:54
 msgid "Enter a Canadian province or territory."
 msgstr ""
 
-#: ca/forms.py:128
+#: ca/forms.py:99
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr ""
 
@@ -513,65 +498,53 @@ msgstr ""
 msgid "Zurich"
 msgstr ""
 
-#: ch/forms.py:58
-msgid "Phone numbers must be in 0XX XXX XX XX format."
-msgstr ""
-
-#: ch/forms.py:91
+#: ch/forms.py:57
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr ""
 
-#: ch/forms.py:163
+#: ch/forms.py:129
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
 
-#: cl/forms.py:33
+#: cl/forms.py:31
 msgid "Enter a valid Chilean RUT."
 msgstr ""
 
-#: cl/forms.py:34
+#: cl/forms.py:32
 msgid "Enter a valid Chilean RUT. The format is XX.XXX.XXX-X."
 msgstr ""
 
-#: cl/forms.py:35
+#: cl/forms.py:33
 msgid "The Chilean RUT is not valid."
 msgstr ""
 
-#: cn/forms.py:84
+#: cn/forms.py:77
 msgid "Enter a post code in the format XXXXXX."
 msgstr ""
 
-#: cn/forms.py:107
+#: cn/forms.py:100
 msgid "ID Card Number consists of 15 or 18 digits."
 msgstr ""
 
-#: cn/forms.py:108
+#: cn/forms.py:101
 msgid "Invalid ID Card Number: Wrong checksum"
 msgstr ""
 
-#: cn/forms.py:109
+#: cn/forms.py:102
 msgid "Invalid ID Card Number: Wrong birthdate"
 msgstr ""
 
-#: cn/forms.py:110
+#: cn/forms.py:103
 msgid "Invalid ID Card Number: Wrong location code"
 msgstr ""
 
-#: cn/forms.py:187 nl/validators.py:107
-msgid "Enter a valid phone number."
-msgstr ""
-
-#: cn/forms.py:214
-msgid "Enter a valid cell number."
-msgstr ""
-
-#: co/forms.py:29
+#: co/forms.py:27
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
 msgstr ""
 
-#: co/forms.py:30
+#: co/forms.py:28
 msgid "Invalid NIT."
 msgstr ""
 
@@ -651,19 +624,19 @@ msgstr ""
 msgid "Isla de la Juventud"
 msgstr ""
 
-#: cu/forms.py:25
+#: cu/forms.py:23
 msgid "Enter a Cuban region."
 msgstr ""
 
-#: cu/forms.py:61
+#: cu/forms.py:59
 msgid "Enter a Cuban province."
 msgstr ""
 
-#: cu/forms.py:98
+#: cu/forms.py:96
 msgid "Enter a valid postal code in the format XXXXX."
 msgstr ""
 
-#: cu/forms.py:132
+#: cu/forms.py:130
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
 msgstr ""
 
@@ -745,19 +718,19 @@ msgstr ""
 msgid "Moravian-Silesian Region"
 msgstr ""
 
-#: cz/forms.py:35 sk/forms.py:36
+#: cz/forms.py:33 sk/forms.py:34
 msgid "Enter a postal code in the format XXXXX or XXX XX."
 msgstr ""
 
-#: cz/forms.py:58
+#: cz/forms.py:55
 msgid "Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX."
 msgstr ""
 
-#: cz/forms.py:59
+#: cz/forms.py:56
 msgid "Enter a valid birth number."
 msgstr ""
 
-#: cz/forms.py:108
+#: cz/forms.py:105
 msgid "Enter a valid IC number."
 msgstr ""
 
@@ -825,11 +798,11 @@ msgstr ""
 msgid "Thuringia"
 msgstr ""
 
-#: de/forms.py:26 ee/forms.py:26 fi/forms.py:23 fr/forms.py:35
+#: de/forms.py:26 ee/forms.py:26 fi/forms.py:23 fr/forms.py:32
 msgid "Enter a zip code in the format XXXXX."
 msgstr ""
 
-#: de/forms.py:54
+#: de/forms.py:53
 msgid ""
 "Enter a valid German identity card number in XXXXXXXXXXX-XXXXXXX-XXXXXXX-X "
 "format."
@@ -4288,12 +4261,8 @@ msgstr ""
 msgid "Sumba"
 msgstr ""
 
-#: dk/forms.py:17
+#: dk/forms.py:15
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
-
-#: dk/forms.py:52 no/forms.py:182
-msgid "A phone number must be 8 digits and may have country code"
 msgstr ""
 
 #: ec/models.py:14
@@ -4644,78 +4613,64 @@ msgstr ""
 msgid "Autonomous city of Mellila"
 msgstr ""
 
-#: es/forms.py:29
+#: es/forms.py:26
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
 msgstr ""
 
-#: es/forms.py:57
-msgid ""
-"Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or "
-"9XXXXXXXX."
-msgstr ""
-
-#: es/forms.py:91
+#: es/forms.py:59
 msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr ""
 
-#: es/forms.py:92
+#: es/forms.py:60
 msgid "Please enter a valid NIF or NIE."
 msgstr ""
 
-#: es/forms.py:93
+#: es/forms.py:61
 msgid "Invalid checksum for NIF."
 msgstr ""
 
-#: es/forms.py:94
+#: es/forms.py:62
 msgid "Invalid checksum for NIE."
 msgstr ""
 
-#: es/forms.py:95
+#: es/forms.py:63
 msgid "Invalid checksum for CIF."
 msgstr ""
 
-#: es/forms.py:180
+#: es/forms.py:148
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr ""
 
-#: es/forms.py:181
+#: es/forms.py:149
 msgid "Invalid checksum for bank account number."
 msgstr ""
 
-#: fi/forms.py:42
+#: fi/forms.py:41
 msgid "Enter a valid Finnish social security number."
 msgstr ""
 
-#: fr/forms.py:39
+#: fr/forms.py:36
 msgid "Zip code"
 msgstr ""
 
-#: fr/forms.py:62
-msgid "Phone numbers must be in 0X XX XX XX XX format."
-msgstr ""
-
-#: fr/forms.py:66 us/models.py:96
-msgid "Phone number"
-msgstr ""
-
-#: fr/forms.py:134
+#: fr/forms.py:88
 msgid "Select Department"
 msgstr ""
 
-#: fr/forms.py:144 ma/forms.py:84
+#: fr/forms.py:98 ma/forms.py:84
 msgid "Select Region"
 msgstr ""
 
-#: fr/forms.py:158
+#: fr/forms.py:112
 msgid "Enter a valid French National Identification number."
 msgstr ""
 
-#: fr/forms.py:256
+#: fr/forms.py:210
 msgid "Enter a valid French SIREN number."
 msgstr ""
 
-#: fr/forms.py:279
+#: fr/forms.py:233
 msgid "Enter a valid French SIRET number."
 msgstr ""
 
@@ -4727,7 +4682,7 @@ msgstr ""
 msgid "SIRET Number"
 msgstr ""
 
-#: gb/forms.py:27
+#: gb/forms.py:25
 msgid "Enter a valid postcode."
 msgstr ""
 
@@ -5373,82 +5328,47 @@ msgstr ""
 msgid "Not a valid EAN code."
 msgstr ""
 
-#: gr/forms.py:22
+#: gr/forms.py:18
 msgid "Enter a valid 5-digit greek postal code."
 msgstr ""
 
-#: gr/forms.py:39
+#: gr/forms.py:34
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr ""
 
-#: gr/forms.py:83
-msgid "Enter a 10-digit greek phone number."
-msgstr ""
-
-#: gr/forms.py:115
-msgid "Enter a greek mobile phone number starting with 69."
-msgstr ""
-
-#: hk/forms.py:41
-#, python-format
-msgid "Phone number should not start with one of the followings: %s."
-msgstr ""
-
-#: hk/forms.py:44
-#, python-format
-msgid "Phone number must be in one of the following formats: %s."
-msgstr ""
-
-#: hk/forms.py:46
-#, python-format
-msgid "Phone number should start with one of the followings: %s."
-msgstr ""
-
-#: hr/forms.py:71
+#: hr/forms.py:60
 msgid "Enter a valid 13 digit JMBG"
 msgstr ""
 
-#: hr/forms.py:72
+#: hr/forms.py:61
 msgid "Error in date segment"
 msgstr ""
 
-#: hr/forms.py:119
+#: hr/forms.py:108
 msgid "Enter a valid 11 digit OIB"
 msgstr ""
 
-#: hr/forms.py:151 id_/forms.py:115
+#: hr/forms.py:142 id_/forms.py:83
 msgid "Enter a valid vehicle license plate number"
 msgstr ""
 
-#: hr/forms.py:152
+#: hr/forms.py:143
 msgid "Enter a valid location code"
 msgstr ""
 
-#: hr/forms.py:153
+#: hr/forms.py:144
 msgid "Number part cannot be zero"
 msgstr ""
 
-#: hr/forms.py:190
+#: hr/forms.py:181
 msgid "Enter a valid 5 digit postal code"
 msgstr ""
 
-#: hr/forms.py:225 id_/forms.py:75
-msgid "Enter a valid phone number"
-msgstr ""
-
-#: hr/forms.py:226
-msgid "Enter a valid area or mobile network code"
-msgstr ""
-
-#: hr/forms.py:227
-msgid "The phone number is too long"
-msgstr ""
-
-#: hr/forms.py:267
+#: hr/forms.py:210
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr ""
 
-#: hr/forms.py:268
+#: hr/forms.py:211
 msgid "Card issue number cannot be zero"
 msgstr ""
 
@@ -5612,11 +5532,11 @@ msgstr ""
 msgid "Zala"
 msgstr ""
 
-#: id_/forms.py:31
+#: id_/forms.py:28
 msgid "Enter a valid post code"
 msgstr ""
 
-#: id_/forms.py:198
+#: id_/forms.py:166
 msgid "Enter a valid NIK/KTP number"
 msgstr ""
 
@@ -5988,69 +5908,57 @@ msgstr ""
 msgid "Wicklow"
 msgstr ""
 
-#: il/forms.py:26
+#: il/forms.py:24
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
 msgstr ""
 
-#: il/forms.py:57
+#: il/forms.py:55
 msgid "Enter a valid ID number."
 msgstr ""
 
-#: il/forms.py:87
-msgid "Enter a valid Mobile Number."
-msgstr ""
-
-#: in_/forms.py:46
+#: in_/forms.py:22
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr ""
 
-#: in_/forms.py:77
+#: in_/forms.py:52
 msgid "Enter an Indian state or territory."
 msgstr ""
 
-#: in_/forms.py:117
+#: in_/forms.py:92
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
-msgstr ""
-
-#: in_/forms.py:171
-msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
 msgstr ""
 
 #: in_/models.py:14
 msgid "Indian state (two uppercase letters)"
 msgstr ""
 
-#: is_/forms.py:25
+#: is_/forms.py:22
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
 msgstr ""
 
-#: is_/forms.py:26
+#: is_/forms.py:23
 msgid "The Icelandic identification number is not valid."
 msgstr ""
 
-#: it/forms.py:31 nl/validators.py:23
+#: it/forms.py:25 nl/validators.py:16
 msgid "Enter a valid zip code."
 msgstr ""
 
-#: it/forms.py:76
+#: it/forms.py:69
 msgid "Enter a valid Tax code."
 msgstr ""
 
-#: it/forms.py:107 ua/forms.py:33
+#: it/forms.py:100 ua/forms.py:31
 msgid "Enter a valid VAT number."
-msgstr ""
-
-#: it/forms.py:135
-msgid "Enter a valid Italian phone number."
 msgstr ""
 
 #: it/util.py:46 it/util.py:59
 msgid "Check digit does not match."
 msgstr ""
 
-#: jp/forms.py:19
+#: jp/forms.py:17
 msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
 msgstr ""
 
@@ -6242,7 +6150,7 @@ msgstr ""
 msgid "Okinawa"
 msgstr ""
 
-#: kw/forms.py:50
+#: kw/forms.py:48
 msgid "Enter a valid Kuwaiti Civil ID number"
 msgstr ""
 
@@ -6742,28 +6650,20 @@ msgstr ""
 msgid "Hawalli"
 msgstr ""
 
-#: lt/forms.py:46
+#: lt/forms.py:42
 msgid "ID Code consists of exactly 11 decimal digits."
 msgstr ""
 
-#: lt/forms.py:47
+#: lt/forms.py:43
 msgid "Wrong ID Code checksum."
 msgstr ""
 
-#: lt/forms.py:48
+#: lt/forms.py:44
 msgid "ID Code contains invalid date."
 msgstr ""
 
-#: lt/forms.py:107
+#: lt/forms.py:103
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr ""
-
-#: lt/forms.py:158
-msgid "Phone number can only contain digits"
-msgstr ""
-
-#: lt/forms.py:159
-msgid "Could not validate the phone number"
 msgstr ""
 
 #: lt/lt_choices.py:8
@@ -7534,7 +7434,7 @@ msgstr ""
 msgid "Zilupe municipality"
 msgstr ""
 
-#: ma/forms.py:22 tr/forms.py:27
+#: ma/forms.py:22 tr/forms.py:21
 msgid "Enter a postal code in the format XXXXX."
 msgstr ""
 
@@ -7894,21 +7794,21 @@ msgstr ""
 msgid "Dakhla-Oued Ed Dahab"
 msgstr ""
 
-#: mk/forms.py:22
+#: mk/forms.py:20
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
 msgstr ""
 
-#: mk/forms.py:61 si/forms.py:26
+#: mk/forms.py:59 si/forms.py:23
 msgid "This field should contain exactly 13 digits."
 msgstr ""
 
-#: mk/forms.py:62
+#: mk/forms.py:60
 msgid "The first 7 digits of the UMCN must represent a valid past date."
 msgstr ""
 
-#: mk/forms.py:63
+#: mk/forms.py:61
 msgid "The UMCN is not valid."
 msgstr ""
 
@@ -8264,39 +8164,39 @@ msgstr ""
 msgid "Enter a valid postal code in format AAA 0000."
 msgstr ""
 
-#: mx/forms.py:65
+#: mx/forms.py:63
 msgid "Enter a valid zip code in the format XXXXX."
 msgstr ""
 
-#: mx/forms.py:109
+#: mx/forms.py:107
 msgid "Enter a valid RFC."
 msgstr ""
 
-#: mx/forms.py:110
+#: mx/forms.py:108
 msgid "Invalid checksum for RFC."
 msgstr ""
 
-#: mx/forms.py:183
+#: mx/forms.py:181
 msgid "Enter a valid CLABE."
 msgstr ""
 
-#: mx/forms.py:184
+#: mx/forms.py:182
 msgid "Invalid checksum for CLABE."
 msgstr ""
 
-#: mx/forms.py:239
+#: mx/forms.py:237
 msgid "Enter a valid CURP."
 msgstr ""
 
-#: mx/forms.py:240
+#: mx/forms.py:238
 msgid "Invalid checksum for CURP."
 msgstr ""
 
-#: mx/forms.py:302
+#: mx/forms.py:300
 msgid "Enter a valid Social Security Number."
 msgstr ""
 
-#: mx/forms.py:303
+#: mx/forms.py:301
 msgid "Invalid checksum for Social Security Number."
 msgstr ""
 
@@ -8452,24 +8352,16 @@ msgstr ""
 msgid "Zacatecas"
 msgstr ""
 
-#: nl/models.py:25
+#: nl/models.py:20
 msgid "Dutch zipcode"
 msgstr ""
 
-#: nl/models.py:54
+#: nl/models.py:49
 msgid "Dutch province"
 msgstr ""
 
-#: nl/models.py:78
+#: nl/models.py:73
 msgid "Dutch social security number (BSN)"
-msgstr ""
-
-#: nl/models.py:103
-msgid "Dutch social security number (SoFi)"
-msgstr ""
-
-#: nl/models.py:131
-msgid "Dutch phone number"
 msgstr ""
 
 #: nl/nl_provinces.py:8
@@ -8516,47 +8408,31 @@ msgstr ""
 msgid "Zuid-Holland"
 msgstr ""
 
-#: nl/validators.py:43
+#: nl/validators.py:36
 msgid "Enter a valid BSN."
 msgstr ""
 
-#: nl/validators.py:74
-msgid "Enter a valid SoFi number."
-msgstr ""
-
-#: nl/validators.py:122
-msgid "Enter a valid bank account number."
-msgstr ""
-
-#: nl/validators.py:123
-msgid "Bank account numbers have 1 - 7, 9 or 10 digits."
-msgstr ""
-
-#: no/forms.py:46
+#: no/forms.py:42
 msgid "Enter a valid Norwegian social security number."
 msgstr ""
 
-#: no/forms.py:122
+#: no/forms.py:118
 msgid "Enter a valid Norwegian bank account number."
 msgstr ""
 
-#: no/forms.py:123
+#: no/forms.py:119
 msgid "Invalid control digit. Enter a valid Norwegian bank account number."
 msgstr ""
 
-#: no/forms.py:124
+#: no/forms.py:120
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr ""
 
-#: nz/forms.py:58
+#: nz/forms.py:52
 msgid "Invalid post code."
 msgstr ""
 
-#: nz/forms.py:76
-msgid "Invalid phone number."
-msgstr ""
-
-#: nz/forms.py:121
+#: nz/forms.py:84
 msgid "Invalid bank account number."
 msgstr ""
 
@@ -8888,32 +8764,24 @@ msgstr ""
 msgid "West Coast"
 msgstr ""
 
-#: pe/forms.py:27
+#: pe/forms.py:25
 msgid "This field requires 8 digits."
 msgstr ""
 
-#: pe/forms.py:56
+#: pe/forms.py:53
 msgid "This field requires 11 digits."
 msgstr ""
 
-#: pk/forms.py:29
+#: pk/forms.py:23
 msgid "Enter a 5 digit postcode."
 msgstr ""
 
-#: pk/forms.py:49
-msgid "Phone numbers must contain 9, 10 or 11 digits."
-msgstr ""
-
-#: pk/models.py:17
+#: pk/models.py:15
 msgid "Pakistani State"
 msgstr ""
 
-#: pk/models.py:37
+#: pk/models.py:35
 msgid "Pakistani Postcode"
-msgstr ""
-
-#: pk/models.py:59
-msgid "Pakistani Phone number"
 msgstr ""
 
 #: pk/pk_states.py:6
@@ -8948,45 +8816,45 @@ msgstr ""
 msgid "Sindh"
 msgstr ""
 
-#: pl/forms.py:47
+#: pl/forms.py:45
 msgid "National Identification Number consists of 11 digits."
 msgstr ""
 
-#: pl/forms.py:48
+#: pl/forms.py:46
 msgid "Wrong checksum for the National Identification Number."
 msgstr ""
 
-#: pl/forms.py:49
+#: pl/forms.py:47
 msgid "The National Identification Number contains an invalid birth date."
 msgstr ""
 
-#: pl/forms.py:106
+#: pl/forms.py:103
 msgid "National ID Card Number consists of 3 letters and 6 digits."
 msgstr ""
 
-#: pl/forms.py:107
+#: pl/forms.py:104
 msgid "Wrong checksum for the National ID Card Number."
 msgstr ""
 
-#: pl/forms.py:158
+#: pl/forms.py:153
 msgid ""
 "Enter a tax number field (NIP) in the format XXX-XXX-XX-XX, XXX-XX-XX-XXX or "
 "XXXXXXXXXX."
 msgstr ""
 
-#: pl/forms.py:159
+#: pl/forms.py:154
 msgid "Wrong checksum for the Tax Number (NIP)."
 msgstr ""
 
-#: pl/forms.py:196
+#: pl/forms.py:192
 msgid "National Business Register Number (REGON) consists of 9 or 14 digits."
 msgstr ""
 
-#: pl/forms.py:197
+#: pl/forms.py:193
 msgid "Wrong checksum for the National Business Register Number (REGON)."
 msgstr ""
 
-#: pl/forms.py:244
+#: pl/forms.py:239
 msgid "Enter a postal code in the format XX-XXX."
 msgstr ""
 
@@ -9054,33 +8922,27 @@ msgstr ""
 msgid "West Pomeranian"
 msgstr ""
 
-#: pt/forms.py:45
+#: pt/forms.py:40
 msgid "The specified value is not a valid Citizen Card number."
 msgstr ""
 
-#: pt/forms.py:46
+#: pt/forms.py:41
 msgid ""
 "Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X "
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
 
-#: pt/forms.py:97
-msgid ""
-"Phone numbers have at least 3 and at most 9 digits and may optionally be "
-"prefixed with '00351' or '+351'."
-msgstr ""
-
-#: pt/forms.py:136
+#: pt/forms.py:98
 msgid "The specified number is not a valid Social Security number."
 msgstr ""
 
-#: pt/forms.py:137
+#: pt/forms.py:99
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either "
 "1 or 2 and Y is any other digit)."
 msgstr ""
 
-#: pt/forms.py:175
+#: pt/forms.py:137
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9 "
 "and Y is any other digit)."
@@ -9166,41 +9028,27 @@ msgstr ""
 msgid "Região Autónoma dos Açores"
 msgstr ""
 
-#: ro/forms.py:30
+#: ro/forms.py:22
 msgid "Enter a valid CIF."
 msgstr ""
 
-#: ro/forms.py:82
+#: ro/forms.py:75
 msgid "Enter a valid CNP."
 msgstr ""
 
-#: ro/forms.py:221
-msgid ""
-"Phone numbers may only have 7 or 10 digits, except the national short "
-"numbers which have 3 to 6 digits"
-msgstr ""
-
-#: ro/forms.py:224
-msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr ""
-
-#: ro/forms.py:226
-msgid "National short numbers (3 to 6 digits) must begin with \"1\""
-msgstr ""
-
-#: ro/forms.py:264
+#: ro/forms.py:182
 msgid "Enter a valid postal code in the format XXXXXX"
 msgstr ""
 
-#: ru/forms.py:36
+#: ru/forms.py:32
 msgid "Enter a postal code in the format XXXXXX."
 msgstr ""
 
-#: ru/forms.py:52
+#: ru/forms.py:47
 msgid "Enter a passport number in the format XXXX XXXXXX."
 msgstr ""
 
-#: ru/forms.py:68
+#: ru/forms.py:62
 msgid "Enter a passport number in the format XX XXXXXXX."
 msgstr ""
 
@@ -9568,19 +9416,19 @@ msgstr ""
 msgid "Yamalo-Neneckiy avtonomnyy okrug"
 msgstr ""
 
-#: se/forms.py:53
+#: se/forms.py:51
 msgid "Enter a valid Swedish organisation number."
 msgstr ""
 
-#: se/forms.py:117
+#: se/forms.py:115
 msgid "Enter a valid Swedish personal identity number."
 msgstr ""
 
-#: se/forms.py:118
+#: se/forms.py:116
 msgid "Co-ordination numbers are not allowed."
 msgstr ""
 
-#: se/forms.py:173
+#: se/forms.py:171
 msgid "Enter a Swedish postal code in the format XXXXX."
 msgstr ""
 
@@ -9668,33 +9516,24 @@ msgstr ""
 msgid "Jämtland"
 msgstr ""
 
-#: sg/forms.py:32
+#: sg/forms.py:26
 msgid "Enter a 6-digit postal code."
 msgstr ""
 
-#: sg/forms.py:52
-msgid ""
-"Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
-
-#: sg/forms.py:89
+#: sg/forms.py:53
 msgid "Invalid NRIC/FIN."
 msgstr ""
 
-#: si/forms.py:27
+#: si/forms.py:24
 msgid "The first 7 digits of the EMSO must represent a valid past date."
 msgstr ""
 
-#: si/forms.py:28
+#: si/forms.py:25
 msgid "The EMSO is not valid."
 msgstr ""
 
-#: si/forms.py:95
+#: si/forms.py:92
 msgid "Enter a valid tax number in form SIXXXXXXXX"
-msgstr ""
-
-#: si/forms.py:164
-msgid "Enter phone number in form +386XXXXXXXX or 0XXXXXXXX."
 msgstr ""
 
 #: sk/sk_districts.py:5
@@ -10137,19 +9976,15 @@ msgstr ""
 msgid "Zaghouan"
 msgstr ""
 
-#: tr/forms.py:60
-msgid "Phone numbers must be in 0XXX XXX XXXX format."
-msgstr ""
-
-#: tr/forms.py:90
+#: tr/forms.py:58
 msgid "Enter a valid Turkish Identification number."
 msgstr ""
 
-#: tr/forms.py:91
+#: tr/forms.py:59
 msgid "Turkish Identification number must be 11 digits."
 msgstr ""
 
-#: ua/forms.py:59
+#: ua/forms.py:57
 msgid "Enter a valid postal code."
 msgstr ""
 
@@ -10273,31 +10108,31 @@ msgstr ""
 msgid "Sevastopol"
 msgstr ""
 
-#: us/forms.py:37
+#: us/forms.py:32
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr ""
 
-#: us/forms.py:95
+#: us/forms.py:64
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr ""
 
-#: us/forms.py:130
+#: us/forms.py:99
 msgid "Enter a U.S. state or territory."
 msgstr ""
 
-#: us/models.py:19
+#: us/models.py:16
 msgid "U.S. state (two uppercase letters)"
 msgstr ""
 
-#: us/models.py:44
+#: us/models.py:41
 msgid "U.S. postal code (two uppercase letters)"
 msgstr ""
 
-#: us/models.py:72
+#: us/models.py:69
 msgid "U.S. ZIP code"
 msgstr ""
 
-#: us/models.py:117
+#: us/models.py:90
 msgid "Social security number"
 msgstr ""
 
@@ -10566,11 +10401,11 @@ msgstr ""
 msgid "Trust Territory of the Pacific Islands"
 msgstr ""
 
-#: uy/forms.py:27
+#: uy/forms.py:25
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
 msgstr ""
 
-#: uy/forms.py:29
+#: uy/forms.py:27
 msgid "Enter a valid CI number."
 msgstr ""
 
@@ -10714,11 +10549,11 @@ msgstr ""
 msgid "Zulia"
 msgstr ""
 
-#: za/forms.py:26
+#: za/forms.py:25
 msgid "Enter a valid South African ID number"
 msgstr ""
 
-#: za/forms.py:67
+#: za/forms.py:66
 msgid "Enter a valid South African postal code"
 msgstr ""
 
