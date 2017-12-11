@@ -8,10 +8,8 @@ from datetime import date
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 from localflavor.generic.checksums import luhn
 
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
@@ -39,49 +37,6 @@ class FRZipCodeField(RegexField):
         kwargs['max_length'] = 5
         kwargs['min_length'] = 5
         super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
-
-
-class FRPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Validate local French phone number (not international ones).
-
-    The correct format is '0X XX XX XX XX'.
-    '0X.XX.XX.XX.XX' and '0XXXXXXXXX' validate but are corrected to
-    '0X XX XX XX XX'.
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    phone_digits_re = re.compile(r'^0\d(\s|\.)?(\d{2}(\s|\.)?){3}\d{2}$')
-
-    default_error_messages = {
-        'invalid': _('Phone numbers must be in 0X XX XX XX XX format.'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        kwargs.setdefault('label', _('Phone number'))
-        kwargs['max_length'] = 14
-        kwargs['min_length'] = 10
-        super(FRPhoneNumberField, self).__init__(*args, **kwargs)
-
-    def clean(self, value):
-        value = super(FRPhoneNumberField, self).clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        value = re.sub('(\.|\s)', '', force_text(value))
-        m = self.phone_digits_re.search(value)
-        if m:
-            return '%s %s %s %s %s' % (
-                value[0:2],
-                value[2:4],
-                value[4:6],
-                value[6:8],
-                value[8:10]
-            )
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class FRDepartmentSelect(Select):

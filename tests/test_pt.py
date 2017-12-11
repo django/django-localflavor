@@ -4,8 +4,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.pt.forms import (PTCitizenCardNumberField, PTPhoneNumberField, PTRegionSelect,
-                                  PTSocialSecurityNumberField, PTZipCodeField)
+from localflavor.pt.forms import PTCitizenCardNumberField, PTRegionSelect, PTSocialSecurityNumberField, PTZipCodeField
 
 
 class PTLocalFlavorTests(SimpleTestCase):
@@ -41,28 +40,6 @@ class PTLocalFlavorTests(SimpleTestCase):
             '12946383-3ZZ7': error_badchecksum,
         }
         self.assertFieldOutput(PTCitizenCardNumberField, valid, invalid)
-
-    def test_PTPhoneNumberField(self):
-        error_invalid = ['Phone numbers have at least 3 and at most 9 digits '
-                         'and may optionally be prefixed with \'00351\' or \'+351\'.']
-        valid = {
-            '117': '117',
-            '4800': '4800',
-            '16912': '16912',
-            '917845189': '917845189',
-            '+351 16912': '+35116912',
-            '91 784 5189': '917845189',
-            '+351 91 111': '+35191111',
-            '00351 917 845 189': '00351917845189',
-            '+351 917 845 189': '+351917845189',
-        }
-        invalid = {
-            '1': error_invalid,
-            '21': error_invalid,
-            '091 456 987 1': error_invalid,
-            '00+351917845189': error_invalid,
-        }
-        self.assertFieldOutput(PTPhoneNumberField, valid, invalid)
 
     def test_PTRegionSelect(self):
         field = PTRegionSelect()

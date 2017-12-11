@@ -4,8 +4,7 @@ from django.test import SimpleTestCase
 from django.utils.translation import ugettext as _
 from django.utils.translation import override
 
-from localflavor.ch.forms import (CHIdentityCardNumberField, CHPhoneNumberField, CHSocialSecurityNumberField,
-                                  CHStateSelect, CHZipCodeField)
+from localflavor.ch.forms import CHIdentityCardNumberField, CHSocialSecurityNumberField, CHStateSelect, CHZipCodeField
 
 
 class CHLocalFlavorTests(SimpleTestCase):
@@ -56,18 +55,6 @@ class CHLocalFlavorTests(SimpleTestCase):
             '99990': error_format,
         }
         self.assertFieldOutput(CHZipCodeField, valid, invalid)
-
-    def test_CHPhoneNumberField(self):
-        error_format = [_('Phone numbers must be in 0XX XXX XX XX format.')]
-        valid = {
-            '012 345 67 89': '012 345 67 89',
-            '0123456789': '012 345 67 89',
-        }
-        invalid = {
-            '01234567890': error_format,
-            '1234567890': error_format,
-        }
-        self.assertFieldOutput(CHPhoneNumberField, valid, invalid)
 
     def test_CHIdentityCardNumberField(self):
         error_format = [_('Enter a valid Swiss identity or passport card number in X1234567<0 or 1234567890 format.')]

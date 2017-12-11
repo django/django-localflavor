@@ -4,6 +4,8 @@ Changelog
 2.0   (unreleased)
 ------------------
 
+All deprecated code has been removed in this release. See details below.
+
 New flavors:
 
 - None
@@ -23,7 +25,54 @@ Other changes:
 - Added support for Django 2.0 and dropped support for Django < 1.11
   (`gh-310 <https://github.com/django/django-localflavor/pull/310>`_).
 - Fixed README and changelog documentation about dropping Python 2 and Django 1.11.
+- Removed all deprecated classes, functions and associated data / regular expressions.
+  These are the classes and functions that have been removed
+  (`gh-321 <https://github.com/django/django-localflavor/pull/321>`_):
 
+  - `au.forms.AUPhoneNumberField`
+  - `au.models.AUPhoneNumberField`
+  - `be.forms.BEPhoneNumberField`
+  - `br.forms.BRPhoneNumberField`
+  - `br.forms.DV_maker`
+  - `ca.forms.CAPhoneNumberField`
+  - `ch.forms.CHPhoneNumberField`
+  - `cn.forms.CNPhoneNumberField`
+  - `cn.forms.CNCellNumberField`
+  - `dk.forms.DKPhoneNumberField`
+  - `es.forms.ESPhoneNumberField`
+  - `fr.forms.FRPhoneNumberField`
+  - `gr.forms.GRPhoneNumberField`
+  - `gr.forms.GRMobilePhoneNumberField`
+  - `hk.forms.HKPhoneNumberField` (`localflavor.hk` has been removed because it only contained this field)
+  - `hr.forms.HRPhoneNumberField`
+  - `hr.forms.HRPhoneNumberPrefixSelect`
+  - `id_.forms.IDPhoneNumberField`
+  - `il.forms.ILMobilePhoneNumberField`
+  - `in.forms.INPhoneNumberField`
+  - `is_.forms.ISPhoneNumberField`
+  - `it.forms.ITPhoneNumberField`
+  - `lt.forms.LTPhoneField`
+  - `nl.forms.NLPhoneNumberField`
+  - `nl.forms.NLSoFiNumberField`
+  - `nl.models.NLBankAccountNumberField`
+  - `nl.models.NLPhoneNumberField`
+  - `nl.models.NLSoFiNumberField`
+  - `nl.validators.NLBankAccountNumberFieldValidator`
+  - `nl.validators.NLPhoneNumberFieldValidator`
+  - `nl.validators.NLSoFiNumberFieldValidator`
+  - `no.forms.NOPhoneNumberField`
+  - `nz.forms.NZPhoneNumberField`
+  - `pk.forms.PKPhoneNumberField`
+  - `pk.models.PKPhoneNumberField`
+  - `pt.forms.PTPhoneNumberField`
+  - `ro.forms.ROIBANField`
+  - `ro.forms.ROPhoneNumberField`
+  - `sg.forms.SGPhoneNumberField`
+  - `sg.forms.SGNRIC_FINField`
+  - `si.forms.SIPhoneNumberField`
+  - `tr.forms.TRPhoneNumberField`
+  - `us.forms.USPhoneNumberField`
+  - `us.models.PhoneNumberField`
 
 1.6   (2017-11-22)
 ------------------

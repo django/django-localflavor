@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.cn.forms import CNCellNumberField, CNIDCardField, CNPhoneNumberField, CNPostCodeField, CNProvinceSelect
+from localflavor.cn.forms import CNIDCardField, CNPostCodeField, CNProvinceSelect
 
 
 class CNLocalFlavorTests(SimpleTestCase):
@@ -83,35 +83,3 @@ class CNLocalFlavorTests(SimpleTestCase):
             '910101194910010014': wrong_checksum  # 2nd gen
         }
         self.assertFieldOutput(CNIDCardField, valid, invalid)
-
-    def test_CNPhoneNumberField(self):
-        error_format = ['Enter a valid phone number.']
-        valid = {
-            '010-12345678': '010-12345678',
-            '010-1234567': '010-1234567',
-            '0101-12345678': '0101-12345678',
-            '0101-1234567': '0101-1234567',
-            '010-12345678-020': '010-12345678-020'
-        }
-        invalid = {
-            '01x-12345678': error_format,
-            '12345678': error_format,
-            '01123-12345678': error_format,
-            '010-123456789': error_format,
-            '010-12345678-': error_format
-        }
-        self.assertFieldOutput(CNPhoneNumberField, valid, invalid)
-
-    def test_CNCellNumberField(self):
-        error_format = ['Enter a valid cell number.']
-        valid = {
-            '13012345678': '13012345678',
-            '14700010002': '14700010002',
-            '17098765432': '17098765432',
-            '18911223344': '18911223344',
-        }
-        invalid = {
-            '130123456789': error_format,
-            '16012345678': error_format
-        }
-        self.assertFieldOutput(CNCellNumberField, valid, invalid)

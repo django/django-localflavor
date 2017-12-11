@@ -7,4 +7,4 @@ class NLPlaceForm(ModelForm):
 
     class Meta:
         model = NLPlace
-        fields = ('zipcode', 'province', 'sofinr', 'bsn', 'phone', 'bankaccount')
+        fields = ('zipcode', 'province', 'bsn')

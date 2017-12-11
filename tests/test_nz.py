@@ -2,8 +2,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.nz.forms import (NZBankAccountNumberField, NZNorthIslandCouncilSelect, NZPhoneNumberField,
-                                  NZPostCodeField, NZProvinceSelect, NZRegionSelect, NZSouthIslandCouncilSelect)
+from localflavor.nz.forms import (NZBankAccountNumberField, NZNorthIslandCouncilSelect, NZPostCodeField,
+                                  NZProvinceSelect, NZRegionSelect, NZSouthIslandCouncilSelect)
 
 
 class NZLocalFlavorTests(SimpleTestCase):
@@ -137,30 +137,6 @@ class NZLocalFlavorTests(SimpleTestCase):
             'tbas': error_format,
         }
         self.assertFieldOutput(NZPostCodeField, valid, invalid)
-
-    def test_NZPhoneNumberField(self):
-        error_format = ['Invalid phone number.']
-        valid = {
-            '0800 DJANGO': '0800DJANGO',
-            '0800 123456': '0800123456',
-            '(0800) 123456': '0800123456',
-            '0800 - 123456': '0800123456',
-            '0800_DJANGO': '0800DJANGO',
-            '021 123 4567': '0211234567',
-            '021 123 45678': '02112345678',
-            '021 - 123567': '021123567',
-            '+64 21 123 4567': '0064211234567',
-            '++64 21 123 4567': '0064211234567',
-            '0064 21 123 4567': '0064211234567',
-            '03 123 4567': '031234567',
-            '+ 64 3 123 4567': '006431234567',
-            '++ 64 3 123 4567': '006431234567',
-        }
-        invalid = {
-            '+64 800 DJANGO': error_format,
-            '03 123 456': error_format,
-        }
-        self.assertFieldOutput(NZPhoneNumberField, valid, invalid)
 
     def test_NZBankAccountNumberField(self):
         error_format = ['Invalid bank account number.']

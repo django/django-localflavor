@@ -9,4 +9,4 @@ class PakistaniPlaceForm(ModelForm):
     class Meta:
         model = PakistaniPlace
         fields = ('state', 'state_required', 'state_default', 'postcode', 'postcode_required', 'postcode_default',
-                  'phone', 'name')
+                  'name')

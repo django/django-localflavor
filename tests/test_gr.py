@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 
-from localflavor.gr.forms import GRMobilePhoneNumberField, GRPhoneNumberField, GRPostalCodeField, GRTaxNumberCodeField
+from localflavor.gr.forms import GRPostalCodeField, GRTaxNumberCodeField
 
 
 class GRLocalFlavorTests(SimpleTestCase):
@@ -53,38 +53,3 @@ class GRLocalFlavorTests(SimpleTestCase):
             'b231a': error,
         }
         self.assertFieldOutput(GRPostalCodeField, valid, invalid)
-
-    def test_GRPhoneNumberField(self):
-        error = ['Enter a 10-digit greek phone number.']
-        valid = {
-            '2109292921': '2109292921',
-            '+301109292921': '+301109292921',
-
-        }
-        invalid = {
-            '12 34': error,
-            '124567': error,
-            '21092929211': error,
-            '661232123': error,
-            '694555555a': error,
-
-        }
-        self.assertFieldOutput(GRPhoneNumberField, valid, invalid)
-
-    def test_GRMobilePhoneNumberField(self):
-        error = ['Enter a greek mobile phone number starting with 69.']
-        valid = {
-            '6945555555': '6945555555',
-            '6931234567': '6931234567',
-            '+306971234567': '+306971234567',
-
-        }
-        invalid = {
-            '12 34': error,
-            '124567': error,
-            '21092929211': error,
-            '2102233444': error,
-            '2111234567': error,
-
-        }
-        self.assertFieldOutput(GRMobilePhoneNumberField, valid, invalid)

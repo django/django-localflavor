@@ -3,8 +3,7 @@ from django.test import SimpleTestCase
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import override
 
-from localflavor.no.forms import (NOBankAccountNumber, NOMunicipalitySelect, NOPhoneNumberField, NOSocialSecurityNumber,
-                                  NOZipCodeField)
+from localflavor.no.forms import NOBankAccountNumber, NOMunicipalitySelect, NOSocialSecurityNumber, NOZipCodeField
 
 
 class NOLocalFlavorTests(SimpleTestCase):
@@ -19,25 +18,6 @@ class NOLocalFlavorTests(SimpleTestCase):
             '12345': error_format,  # to many digits
         }
         self.assertFieldOutput(NOZipCodeField, valid, invalid)
-
-    def test_NOPhoneNumberField(self):
-        error_format = [_('A phone number must be 8 digits and may have country code')]
-        valid = {
-            '12345678': '12345678',
-            '12 34 56 78': '12 34 56 78',
-            '123 45 678': '123 45 678',
-            '+4712345678': '+4712345678',
-            '+47 12345678': '+47 12345678',
-            '+47 12 34 56 78': '+47 12 34 56 78',
-            '+47 123 45 678': '+47 123 45 678',
-        }
-        invalid = {
-            '12': error_format,  # to few digits
-            'abcdefgh': error_format,  # illegal characters
-            '1234567890': error_format,  # to many digits
-            '+4512345678': error_format,  # wrong country code
-        }
-        self.assertFieldOutput(NOPhoneNumberField, valid, invalid)
 
     def test_NOBankAccountNumber(self):
         error_format = [_('Enter a valid Norwegian bank account number.')]

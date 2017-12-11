@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.br.forms import (BRCNPJField, BRCPFField, BRPhoneNumberField, BRProcessoField, BRStateChoiceField,
-                                  BRStateSelect, BRZipCodeField)
+from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
+                                  BRZipCodeField)
 
 
 class BRLocalFlavorTests(SimpleTestCase):
@@ -85,32 +85,6 @@ class BRLocalFlavorTests(SimpleTestCase):
             '123456789555': error_atmost,
         }
         self.assertFieldOutput(BRCPFField, valid, invalid)
-
-    def test_BRPhoneNumberField(self):
-        error_format = [('Phone numbers must be in either of the following '
-                         'formats: XX-XXXX-XXXX or XX-XXXXX-XXXX.')]
-        valid = {
-            '41-3562-3464': '41-3562-3464',
-            '4135623464': '41-3562-3464',
-            '41 3562-3464': '41-3562-3464',
-            '41 3562 3464': '41-3562-3464',
-            '(41) 3562 3464': '41-3562-3464',
-            '41.3562.3464': '41-3562-3464',
-            '41.93562.3464': '41-93562-3464',
-            '41.3562-3464': '41-3562-3464',
-            ' (41) 3562.3464': '41-3562-3464',
-            ' (41) 98765.3464': '41-98765-3464',
-            '(16) 91342-4325': '16-91342-4325',
-        }
-        invalid = {
-            '11-914-925': error_format,
-            '11-9144-43925': error_format,
-            '11-91342-94325': error_format,
-            '411-9134-9435': error_format,
-            '+55-41-3562-3464': error_format,
-            '41 3562–3464': error_format,
-        }
-        self.assertFieldOutput(BRPhoneNumberField, valid, invalid)
 
     def test_BRProcessoField(self):
         error_format = ['Invalid Process number.']
