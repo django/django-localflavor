@@ -43,8 +43,15 @@ class HRLicensePlatePrefixSelect(Select):
                                                          choices=HR_LICENSE_PLATE_PREFIX_CHOICES)
 
 
-class HRPhoneNumberPrefixSelect(Select):
-    """A Select widget that uses a list of phone number prefixes of Croatia as its choices."""
+class HRPhoneNumberPrefixSelect(Select, DeprecatedPhoneNumberFormFieldMixin):
+    """
+    A Select widget that uses a list of phone number prefixes of Croatia as its choices.
+
+    .. deprecated:: 1.6.2
+        Use the django-phonenumber-field_ library instead.
+
+    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
+    """
 
     def __init__(self, attrs=None):
         super(HRPhoneNumberPrefixSelect, self).__init__(attrs,

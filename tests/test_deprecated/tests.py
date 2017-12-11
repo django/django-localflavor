@@ -18,7 +18,7 @@ from localflavor.es.forms import ESPhoneNumberField
 from localflavor.fr.forms import FRPhoneNumberField
 from localflavor.gr.forms import GRMobilePhoneNumberField, GRPhoneNumberField
 from localflavor.hk.forms import HKPhoneNumberField
-from localflavor.hr.forms import HRPhoneNumberField
+from localflavor.hr.forms import HRPhoneNumberField, HRPhoneNumberPrefixSelect
 from localflavor.id_.forms import IDPhoneNumberField
 from localflavor.il.forms import ILMobilePhoneNumberField
 from localflavor.in_.forms import INPhoneNumberField
@@ -76,6 +76,7 @@ class DeprecatedFieldsTests(SimpleTestCase):
             GRMobilePhoneNumberField,
             HKPhoneNumberField,
             HRPhoneNumberField,
+            HRPhoneNumberPrefixSelect,
             IDPhoneNumberField,
             ILMobilePhoneNumberField,
             INPhoneNumberField,
