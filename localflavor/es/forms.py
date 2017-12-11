@@ -168,8 +168,6 @@ class ESCCCField(RegexField):
         string 1, 2, 4, 8, 5, 10, 9, 7, 3, 6. Sum resulting numbers and extract
         it from 11.  Result is checksum except when 10 then is 1, or when 11
         then is 0.
-
-        TODO: allow IBAN validation too
     """
 
     default_error_messages = {
