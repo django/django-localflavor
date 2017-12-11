@@ -2,19 +2,11 @@
 
 from __future__ import unicode_literals
 
-import re
-
-from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .au_states import STATE_CHOICES
 from .validators import AUBusinessNumberFieldValidator, AUCompanyNumberFieldValidator, AUTaxFileNumberFieldValidator
-
-PHONE_DIGITS_RE = re.compile(r'^(\d{10})$')
 
 
 class AUPostCodeField(RegexField):
@@ -31,34 +23,6 @@ class AUPostCodeField(RegexField):
 
     def __init__(self, max_length=4, *args, **kwargs):
         super(AUPostCodeField, self).__init__(r'^\d{4}$', max_length=max_length, *args, **kwargs)
-
-
-class AUPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    A form field that validates input as an Australian phone number.
-
-    Valid numbers have ten digits.
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': 'Phone numbers must contain 10 digits.',
-    }
-
-    def clean(self, value):
-        """Validate a phone number. Strips parentheses, whitespace and hyphens."""
-        super(AUPhoneNumberField, self).clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
-        phone_match = PHONE_DIGITS_RE.search(value)
-        if phone_match:
-            return '%s' % phone_match.group(1)
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class AUStateSelect(Select):

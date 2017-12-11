@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 from django.test import SimpleTestCase
 
 from localflavor.fr.forms import (FRDepartmentField, FRDepartmentSelect, FRNationalIdentificationNumber,
-                                  FRPhoneNumberField, FRRegion2016Select, FRRegionField, FRRegionSelect, FRSIRENField,
-                                  FRSIRETField, FRZipCodeField)
+                                  FRRegion2016Select, FRRegionField, FRRegionSelect, FRSIRENField, FRSIRETField,
+                                  FRZipCodeField)
 
 
 DEP_SELECT_OUTPUT = '''
@@ -193,21 +193,6 @@ class FRLocalFlavorTests(SimpleTestCase):
                        '5 characters (it has 6).'] + error_format,
         }
         self.assertFieldOutput(FRZipCodeField, valid, invalid)
-
-    def test_FRPhoneNumberField(self):
-        error_format = ['Phone numbers must be in 0X XX XX XX XX format.']
-        valid = {
-            '01 55 44 58 64': '01 55 44 58 64',
-            '0155445864': '01 55 44 58 64',
-            '01 5544 5864': '01 55 44 58 64',
-            '01 55.44.58.64': '01 55 44 58 64',
-            '01.55.44.58.64': '01 55 44 58 64',
-        }
-        invalid = {
-            '01,55,44,58,64': error_format,
-            '555 015 544': error_format,
-        }
-        self.assertFieldOutput(FRPhoneNumberField, valid, invalid)
 
     def test_FRDepartmentfield(self):
         f = FRDepartmentField()

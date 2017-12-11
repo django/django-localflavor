@@ -10,8 +10,6 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
-
 from .no_municipalities import MUNICIPALITY_CHOICES
 
 
@@ -162,26 +160,3 @@ class NOBankAccountNumber(CharField):
         if value in self.empty_values:
             return self.empty_value
         return '{}.{}.{}'.format(value[0:4], value[4:6], value[6:11])
-
-
-class NOPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Field with phonenumber validation.
-
-    Requires a phone number with 8 digits and optional country code
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('A phone number must be 8 digits and may have country code'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        super(NOPhoneNumberField, self).__init__(
-            r'^(?:\+47)? ?(\d{3}\s?\d{2}\s?\d{3}|\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$',
-            *args, **kwargs
-        )

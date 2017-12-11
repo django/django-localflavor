@@ -8,8 +8,6 @@ from django.forms.widgets import Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
-
 from .is_postalcodes import IS_POSTALCODES
 
 
@@ -59,33 +57,6 @@ class ISIdNumberField(RegexField):
     def _format(self, value):
         """Takes in the value in canonical form and returns it in the common display format."""
         return force_text(value[:6] + '-' + value[6:])
-
-
-class ISPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Icelandic phone number.
-
-    Seven digits with an optional hyphen or space after the first three digits.
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    def __init__(self, max_length=8, min_length=7, *args, **kwargs):
-        super(ISPhoneNumberField, self).__init__(
-            r'^\d{3}(-| )?\d{4}$', max_length=max_length, min_length=min_length,
-            *args, **kwargs
-        )
-
-    def clean(self, value):
-        value = super(ISPhoneNumberField, self).clean(value)
-
-        if value in self.empty_values:
-            return self.empty_value
-
-        return value.replace('-', '').replace(' ', '')
 
 
 class ISPostalCodeSelect(Select):

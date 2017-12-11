@@ -10,8 +10,6 @@ from django.forms.fields import RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
-
 from .es_provinces import PROVINCE_CHOICES
 from .es_regions import REGION_CHOICES
 
@@ -30,32 +28,6 @@ class ESPostalCodeField(RegexField):
 
     def __init__(self, *args, **kwargs):
         super(ESPostalCodeField, self).__init__(r'^(0[1-9]|[1-4][0-9]|5[0-2])\d{3}$', *args, **kwargs)
-
-
-class ESPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    A form field that validates its input as a Spanish phone number.
-
-    Information numbers are ommited.
-
-    Spanish phone numbers are nine digit numbers, where first digit is 6 (for
-    cell phones), 8 (for special phones), or 9 (for landlines and special
-    phones)
-
-    TODO: accept and strip characters like dot, hyphen... in phone number
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or 9XXXXXXXX.'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        super(ESPhoneNumberField, self).__init__(r'^(6|7|8|9)\d{8}$', *args, **kwargs)
 
 
 class ESIdentityCardNumberField(RegexField):

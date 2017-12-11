@@ -11,7 +11,7 @@ from .models import NLPlace
 
 
 class NLLocalFlavorValidatorTests(SimpleTestCase):
-    def assert_validator(self, validator, valid=[], invalid=[]):
+    def assert_validator(self, validator, valid=(), invalid=()):
         for item in valid:
             validator(item)
 
@@ -45,46 +45,6 @@ class NLLocalFlavorValidatorTests(SimpleTestCase):
             'foo',
         ]
         self.assert_validator(validators.NLBSNFieldValidator(), valid, invalid)
-        self.assert_validator(validators.NLSoFiNumberFieldValidator(), valid, invalid)
-
-    def test_NLPhoneNumberValidator(self):
-        valid = [
-            '0123456789',
-            '012-3456789',
-            '+31-12-3456789',
-            '(0123) 456789',
-        ]
-        invalid = [
-            '(010) 12345678',
-            '06-123456789',
-            '+31 6123456789',
-            'foo',
-        ]
-        self.assert_validator(validators.NLPhoneNumberFieldValidator(), valid, invalid)
-
-    def test_NLPhoneNumberValidator_deconstruct(self):
-        nlphone1 = validators.NLPhoneNumberFieldValidator()
-        nlphone2 = validators.NLPhoneNumberFieldValidator()
-        self.assertEqual(nlphone1, nlphone2, msg="NLPhoneNumberFieldValidator are not equal.")
-
-        # Call to the required deconstruct method to see if it exists.
-        nlphone1.deconstruct()
-
-    def test_NLBankAccountNumberFieldValidator(self):
-        valid = [
-            '0417164300',
-            '755490975',
-            '12345',
-        ]
-        invalid = [
-            '7584955151',
-            'foo',
-            '0',
-            '75849551519',
-            '00417164300',
-            '75849551',
-        ]
-        self.assert_validator(validators.NLBankAccountNumberFieldValidator(), valid, invalid)
 
 
 class NLLocalFlavorModelTests(SimpleTestCase):
@@ -101,19 +61,13 @@ class NLLocalFlavorModelTests(SimpleTestCase):
         m = NLPlace(**{
             'zipcode': '2403BW',
             'province': 'OV',
-            'sofinr': '123456782',
             'bsn': '123456782',
-            'phone': '012-3456789',
-            'bankaccount': '0417164300'
         })
 
         self.assertEqual(str(m.zipcode), '2403BW')
         self.assertEqual(str(m.province), 'OV')
 
-        self.assertEqual(str(m.sofinr), '123456782')
         self.assertEqual(str(m.bsn), '123456782')
-        self.assertEqual(str(m.phone), '012-3456789')
-        self.assertEqual(str(m.bankaccount), '0417164300')
 
         m.clean_fields()
 
@@ -121,10 +75,7 @@ class NLLocalFlavorModelTests(SimpleTestCase):
         m = NLPlace(**{
             'zipcode': '2403 bwa',
             'province': 'OV',
-            'sofinr': '123456782',
             'bsn': '123456782',
-            'phone': '012-3456789',
-            'bankaccount': '0417164300'
         })
         # zipcode is not quite right, so it should raise an error
         self.assertRaises(ValidationError, lambda: m.clean_fields())
@@ -172,24 +123,6 @@ class NLLocalFlavorFormTests(SimpleTestCase):
 </select>'''
         self.assertHTMLEqual(f.render('provinces', 'OV'), out)
 
-    def test_NLPhoneNumberField(self):
-        error_invalid = ['Enter a valid phone number.']
-        valid = {
-            '012-3456789': '012-3456789',
-            '0123456789': '0123456789',
-            '+31-12-3456789': '+31-12-3456789',
-            '(0123) 456789': '(0123) 456789',
-            '0623456789': '0623456789',
-
-        }
-        invalid = {
-            '(010) 12345678': error_invalid,
-            '06-123456789': error_invalid,
-            '+31 6123456789': error_invalid,
-            'foo': error_invalid,
-        }
-        self.assertFieldOutput(forms.NLPhoneNumberField, valid, invalid)
-
     def test_NLBSNFormField(self):
         error_invalid = ['Enter a valid BSN.']
         valid = {
@@ -202,22 +135,11 @@ class NLLocalFlavorFormTests(SimpleTestCase):
         }
         self.assertFieldOutput(forms.NLBSNFormField, valid, invalid)
 
-        sofinr_error_invalid = ['Enter a valid SoFi number.']
-        sofinr_invalid = {
-            '000000000': sofinr_error_invalid,
-            '123456789': sofinr_error_invalid,
-            'foo': sofinr_error_invalid,
-        }
-        self.assertFieldOutput(forms.NLSoFiNumberField, valid, sofinr_invalid)
-
     def test_NL_ModelForm_errors(self):
         form = NLPlaceForm({
             'zipcode': 'invalid',
             'province': 'invalid',
-            'sofinr': 'invalid',
             'bsn': 'invalid',
-            'phone': 'invalid',
-            'bankaccount': 'invalid',
         })
 
         self.assertFalse(form.is_valid())
@@ -225,18 +147,12 @@ class NLLocalFlavorFormTests(SimpleTestCase):
         invalid_choice = 'Select a valid choice. invalid is not one of the available choices.'
         self.assertEqual(form.errors['zipcode'], ['Enter a valid zip code.'])
         self.assertEqual(form.errors['province'], [invalid_choice])
-        self.assertEqual(form.errors['sofinr'], ['Enter a valid SoFi number.'])
         self.assertEqual(form.errors['bsn'], ['Enter a valid BSN.'])
-        self.assertEqual(form.errors['phone'], ['Enter a valid phone number.'])
-        self.assertEqual(form.errors['bankaccount'], ['Enter a valid bank account number.'])
 
     def test_NL_ModelForm_valid(self):
         form = NLPlaceForm({
             'zipcode': '2233 AB',
             'province': 'OV',
-            'sofinr': '123456782',
             'bsn': '123456782',
-            'phone': '0623456789',
-            'bankaccount': '0417164300'
         })
         self.assertTrue(form.is_valid())

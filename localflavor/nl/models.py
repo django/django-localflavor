@@ -1,16 +1,11 @@
 from __future__ import unicode_literals
 
-import warnings
-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberField, RemovedInLocalflavor20Warning
-
 from . import forms
 from .nl_provinces import PROVINCE_CHOICES
-from .validators import (NLBankAccountNumberFieldValidator, NLBSNFieldValidator, NLPhoneNumberFieldValidator,
-                         NLSoFiNumberFieldValidator, NLZipCodeFieldValidator)
+from .validators import NLBSNFieldValidator, NLZipCodeFieldValidator
 
 
 class NLZipCodeField(models.CharField):
@@ -87,83 +82,3 @@ class NLBSNField(models.CharField):
         defaults = {'form_class': forms.NLBSNFormField}
         defaults.update(kwargs)
         return super(NLBSNField, self).formfield(**defaults)
-
-
-class NLSoFiNumberField(NLBSNField):
-    """
-    A Dutch social security number (SoFi).
-
-    This model field uses :class:`validators.NLSoFiNumberFieldValidator` for validation.
-
-    .. versionadded:: 1.3
-    .. deprecated:: 1.6
-        Use `NLBSNField` instead.
-    """
-
-    description = _('Dutch social security number (SoFi)')
-
-    validators = [NLSoFiNumberFieldValidator()]
-
-    def __init__(self, *args, **kwargs):
-        warnings.warn('NLSoFiNumberField is deprecated. Please use NLBSNField instead.',
-                      RemovedInLocalflavor20Warning)
-        super(NLSoFiNumberField, self).__init__(*args, **kwargs)
-
-    def formfield(self, **kwargs):
-        defaults = {'form_class': forms.NLSoFiNumberField}
-        defaults.update(kwargs)
-        return super(NLSoFiNumberField, self).formfield(**defaults)
-
-
-class NLPhoneNumberField(models.CharField, DeprecatedPhoneNumberField):
-    """
-    Dutch phone number model field.
-
-    This model field uses :class:`validators.NLPhoneNumberFieldValidator` for validation.
-
-    .. versionadded:: 1.3
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    description = _('Dutch phone number')
-
-    validator = [NLPhoneNumberFieldValidator()]
-
-    def __init__(self, *args, **kwargs):
-        kwargs.setdefault('max_length', 12)
-        super(NLPhoneNumberField, self).__init__(*args, **kwargs)
-
-    def formfield(self, **kwargs):
-        defaults = {'form_class': forms.NLPhoneNumberField}
-        defaults.update(kwargs)
-        return super(NLPhoneNumberField, self).formfield(**defaults)
-
-
-class NLBankAccountNumberField(models.CharField):
-    """
-    A Dutch bank account model field.
-
-    This model field uses :class:`validators.NLBankAccountNumberFieldValidator` for validation.
-
-    .. versionadded:: 1.1
-
-    .. deprecated:: 1.6
-        Use `localflavor.generic.models.IBANField` with included_countries=('nl') option instead.
-        Note that a data migration is required to move the data from this field to a new IBANField:
-        it needs to calculate check digits, add the bank identifier and zero-pad the bank number
-        into a proper IBAN.
-    """
-
-    def __init__(self, *args, **kwargs):
-        self.system_check_deprecated_details = {
-            'msg': self.__class__.__name__ + ' is deprecated.',
-            'hint': "Use `localflavor.generic.models.IBANField` with included_countries=('nl') option instead."
-        }
-
-        kwargs.setdefault('max_length', 10)
-        super(NLBankAccountNumberField, self).__init__(*args, **kwargs)
-        # Ensure that only the NLBankAccountNumberFieldValidator is set.
-        self.validators = [NLBankAccountNumberFieldValidator()]

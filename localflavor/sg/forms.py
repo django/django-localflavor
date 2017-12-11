@@ -3,16 +3,11 @@
 from __future__ import unicode_literals
 
 import re
-import warnings
 
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
-
-PHONE_DIGITS_RE = re.compile(r'^[689](\d{7})$')
 
 NRIC_FIN_RE = re.compile(r'^[SFTG](\d{7})[A-Z]$')
 NRIC_FIN_DIGIT_WEIGHT = [2, 7, 6, 5, 4, 3, 2]
@@ -33,36 +28,6 @@ class SGPostCodeField(RegexField):
 
     def __init__(self, *args, **kwargs):
         super(SGPostCodeField, self).__init__(r'^\d{6}$', *args, **kwargs)
-
-
-class SGPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    A form field that validates input as a Singapore phone number.
-
-    Valid numbers have 8 digits and start with either 6, 8, or 9
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('Phone numbers must contain 8 digits and start with '
-                     'either 6, or 8, or 9.')
-
-    }
-
-    def clean(self, value):
-        """Validate a phone number. Strips parentheses, whitespace and hyphens."""
-        super(SGPhoneNumberField, self).clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
-        phone_match = PHONE_DIGITS_RE.search(value)
-        if phone_match:
-            return '%s' % phone_match.group()
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class SGNRICFINField(CharField):
@@ -116,14 +81,3 @@ class SGNRICFINField(CharField):
             return value
 
         raise ValidationError(self.error_messages['invalid'])
-
-
-class SGNRIC_FINField(SGNRICFINField):  # noqa
-    """
-    .. deprecated:: 1.6
-        Use `SGNRICFINField` instead.
-    """
-    def __init__(self, *args, **kwargs):
-        warnings.warn('SGNRIC_FINField is deprecated. Please use SGNRICFINField instead.',
-                      RemovedInLocalflavor20Warning)
-        super(SGNRIC_FINField, self).__init__(*args, **kwargs)

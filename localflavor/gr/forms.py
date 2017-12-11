@@ -6,10 +6,6 @@ from django.forms import Field, RegexField, ValidationError
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
-
-NUMERIC_RE = re.compile('^\d+$')
-
 
 class GRPostalCodeField(RegexField):
     """
@@ -64,68 +60,3 @@ class GRTaxNumberCodeField(Field):
         if mod != check:
             raise ValidationError(self.error_messages['invalid'])
         return val
-
-
-class GRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Greek general phone field.
-
-    10 digits (can also start with +30 which is the country-code for greece)
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a 10-digit greek phone number.'),
-    }
-
-    def clean(self, value):
-        super(GRPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        phone_nr = re.sub('[\-\s\(\)]', '', force_text(value))
-
-        if len(phone_nr) == 10 and NUMERIC_RE.search(phone_nr):
-            return value
-
-        if phone_nr[:3] == '+30' and len(phone_nr) == 13 and NUMERIC_RE.search(phone_nr[3:]):
-            return value
-
-        raise ValidationError(self.error_messages['invalid'])
-
-
-class GRMobilePhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Greek mobile phone field.
-
-    10 digits starting with 69 (could also start with +30 which is the country-code for greece)
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a greek mobile phone number starting with 69.'),
-    }
-
-    def clean(self, value):
-        super(GRMobilePhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        phone_nr = re.sub('[\-\s\(\)]', '', force_text(value))
-
-        if len(phone_nr) == 10 and NUMERIC_RE.search(phone_nr) and phone_nr.startswith('69'):
-            return value
-
-        if phone_nr[:3] == '+30' and len(phone_nr) == 13 and \
-                NUMERIC_RE.search(phone_nr[3:]) and phone_nr[3:].startswith('69'):
-            return value
-
-        raise ValidationError(self.error_messages['invalid'])

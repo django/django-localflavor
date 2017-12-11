@@ -4,7 +4,6 @@
 from __future__ import unicode_literals
 
 import re
-import warnings
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -12,11 +11,8 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
-
 from .br_states import STATE_CHOICES
 
-phone_digits_re = re.compile(r'^(\d{2})[-\.]?(\d{4,5})[-\.]?(\d{4})$')
 cpf_digits_re = re.compile(r'^(\d{3})\.(\d{3})\.(\d{3})-(\d{2})$')
 cnpj_digits_re = re.compile(
     r'^(\d{2})[.-]?(\d{3})[.-]?(\d{3})/(\d{4})-(\d{2})$'
@@ -35,34 +31,6 @@ class BRZipCodeField(RegexField):
 
     def __init__(self, *args, **kwargs):
         super(BRZipCodeField, self).__init__(r'^\d{5}-\d{3}$', *args, **kwargs)
-
-
-class BRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    A form field that validates input as a Brazilian phone number.
-
-    The phone number must be in either of the following formats: XX-XXXX-XXXX or XX-XXXXX-XXXX.
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _(('Phone numbers must be in either of the following '
-                      'formats: XX-XXXX-XXXX or XX-XXXXX-XXXX.')),
-    }
-
-    def clean(self, value):
-        super(BRPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub('(\(|\)|\s+)', '', force_text(value))
-        m = phone_digits_re.search(value)
-        if m:
-            return '%s-%s-%s' % (m.group(1), m.group(2), m.group(3))
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class BRStateSelect(Select):
@@ -101,15 +69,6 @@ def dv_maker(v):
     if v >= 2:
         return 11 - v
     return 0
-
-
-def DV_maker(v):  # noqa
-    """
-    .. deprecated:: 1.6
-        Use `dv_maker` instead.
-    """
-    warnings.warn('DV_maker is deprecated. Please use dv_maker instead.', RemovedInLocalflavor20Warning)
-    return dv_maker(v)
 
 
 class BRCPFField(CharField):

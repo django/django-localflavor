@@ -8,23 +8,17 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
-
 from .cn_provinces import CN_PROVINCE_CHOICES
 
 __all__ = (
     'CNProvinceSelect',
     'CNPostCodeField',
     'CNIDCardField',
-    'CNPhoneNumberField',
-    'CNCellNumberField',
 )
 
 
 ID_CARD_RE = r'^\d{15}(\d{2}[0-9xX])?$'
 POST_CODE_RE = r'^\d{6}$'
-PHONE_RE = r'^\d{3,4}-\d{7,8}(-\d+)?$'
-CELL_RE = r'^1[34578]\d{9}$'
 
 # Valid location code used in id card checking algorithm
 CN_LOCATION_CODES = (
@@ -167,51 +161,3 @@ class CNIDCardField(CharField):
                 value[:17],),
         ) % 11
         return '10X98765432'[checksum_index] == value[-1]
-
-
-class CNPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    A form field that validates input as a telephone number in mainland China.
-
-    A valid phone number could be like: 010-12345678.
-    Considering there might be extension numbers, this could also be: 010-12345678-35.
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a valid phone number.'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        super(CNPhoneNumberField, self).__init__(PHONE_RE, *args, **kwargs)
-
-
-class CNCellNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    A form field that validates input as a cellphone number in mainland China.
-
-    A valid cellphone number could be like: 13012345678.
-
-    A very rough rule is used here: the first digit should be 1, the second
-    should be 3, 4, 5, 7 or 8, followed by 9 more digits.
-    The total length of a cellphone number should be 11.
-
-    .. versionchanged:: 1.1
-       Added 7 as a valid second digit for Chinese virtual mobile ISPs.
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a valid cell number.'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        super(CNCellNumberField, self).__init__(CELL_RE, *args, **kwargs)

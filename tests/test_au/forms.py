@@ -8,6 +8,5 @@ class AustralianPlaceForm(ModelForm):
 
     class Meta:
         model = AustralianPlace
-        fields = ('state', 'state_required', 'state_default', 'postcode',
-                  'postcode_required', 'postcode_default',
-                  'phone', 'name', 'abn', 'tfn')
+        fields = ('state', 'state_required', 'state_default', 'postcode', 'postcode_required', 'postcode_default',
+                  'name', 'abn', 'tfn')

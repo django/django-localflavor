@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.it.forms import (ITPhoneNumberField, ITRegionProvinceSelect, ITRegionSelect,
-                                  ITSocialSecurityNumberField, ITVatNumberField, ITZipCodeField)
+from localflavor.it.forms import (ITRegionProvinceSelect, ITRegionSelect, ITSocialSecurityNumberField, ITVatNumberField,
+                                  ITZipCodeField)
 
 
 class ITLocalFlavorTests(SimpleTestCase):
@@ -240,31 +240,3 @@ class ITLocalFlavorTests(SimpleTestCase):
             'A7973780013': error_invalid,
         }
         self.assertFieldOutput(ITVatNumberField, valid, invalid)
-
-    def test_ITPhoneNumberField(self):
-        error_format = ['Enter a valid Italian phone number.']
-        valid = {
-            '+39 347 1234567': '347 1234567',
-            '39 347 123 4567': '347 1234567',
-            '347-1234567': '347 1234567',
-            '3471234567': '347 1234567',
-            '+39 347 12345678': '347 12345678',
-            '39 347 123 45678': '347 12345678',
-            '347-12345678': '347 12345678',
-            '34712345678': '347 12345678',
-            '+39 347 123456': '347 123456',
-            '39 347 123 456': '347 123456',
-            '347-123456': '347 123456',
-            '347123456': '347 123456',
-            '+39 0861 12345678': '0861 12345678',
-            '39 0861 1234 5678': '0861 12345678',
-            '0861-12345678': '0861 12345678',
-            '0861 12345': '0861 12345',
-        }
-        invalid = {
-            '+44 347 1234567': error_format,
-            '14471234567': error_format,
-            '0861 123456789': error_format,
-            '08661234567890': error_format,
-        }
-        self.assertFieldOutput(ITPhoneNumberField, valid, invalid)

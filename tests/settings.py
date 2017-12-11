@@ -18,7 +18,6 @@ INSTALLED_APPS = [
     'tests.test_pk',
     'tests.test_cu',
     'tests.test_generic',
-    'tests.test_deprecated',
 ]
 
 SECRET_KEY = 'spam-spam-spam-spam'

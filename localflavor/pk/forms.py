@@ -4,17 +4,12 @@ from __future__ import unicode_literals
 
 import re
 
-from django.forms import ValidationError
-from django.forms.fields import CharField, RegexField, Select
-from django.utils.encoding import force_text
+from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
-
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 
 from .pk_states import STATE_CHOICES
 
 POSTCODE_DIGITS_RE = re.compile(r'^(\d{5})$')
-PHONE_DIGITS_RE = re.compile(r'^(\d{9,11})$')
 
 
 class PKPostCodeField(RegexField):
@@ -30,38 +25,6 @@ class PKPostCodeField(RegexField):
 
     def __init__(self, *args, **kwargs):
         super(PKPostCodeField, self).__init__(POSTCODE_DIGITS_RE, *args, **kwargs)
-
-
-class PKPhoneNumberField(CharField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    A form field that validates input as an Pakistani phone number.
-
-    Valid numbers have nine to eleven digits.
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('Phone numbers must contain 9, 10 or 11 digits.'),
-    }
-
-    def clean(self, value):
-        """
-        Validate a phone number.
-
-        Strips parentheses, whitespace and hyphens.
-        """
-        super(PKPhoneNumberField, self).clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
-        phone_match = PHONE_DIGITS_RE.search(value)
-        if phone_match:
-            return '%s' % phone_match.group(1)
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class PKStateSelect(Select):

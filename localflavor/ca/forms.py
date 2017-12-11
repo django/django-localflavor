@@ -7,13 +7,10 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, Field, Select
-from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 from localflavor.generic.checksums import luhn
 
-phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 sin_re = re.compile(r"^(\d{3})-(\d{3})-(\d{3})$")
 
 
@@ -43,31 +40,6 @@ class CAPostalCodeField(CharField):
         if not m:
             raise ValidationError(self.error_messages['invalid'])
         return "%s %s" % (m.group(1), m.group(2))
-
-
-class CAPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Canadian phone number form field.
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),
-    }
-
-    def clean(self, value):
-        super(CAPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub('(\(|\)|\s+)', '', force_text(value))
-        m = phone_digits_re.search(value)
-        if m:
-            return '%s-%s-%s' % (m.group(1), m.group(2), m.group(3))
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class CAProvinceField(Field):

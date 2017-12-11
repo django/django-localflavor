@@ -2,8 +2,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.es.forms import (ESCCCField, ESIdentityCardNumberField, ESPhoneNumberField, ESPostalCodeField,
-                                  ESProvinceSelect, ESRegionSelect)
+from localflavor.es.forms import (ESCCCField, ESIdentityCardNumberField, ESPostalCodeField, ESProvinceSelect,
+                                  ESRegionSelect)
 
 
 class ESLocalFlavorTests(SimpleTestCase):
@@ -105,22 +105,6 @@ class ESLocalFlavorTests(SimpleTestCase):
             '08A01': error_invalid,
         }
         self.assertFieldOutput(ESPostalCodeField, valid, invalid)
-
-    def test_ESPhoneNumberField(self):
-        error_invalid = ['Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or 9XXXXXXXX.']
-        valid = {
-            '650010101': '650010101',
-            '931234567': '931234567',
-            '800123123': '800123123',
-            '789789789': '789789789',
-        }
-        invalid = {
-            '555555555': error_invalid,
-            '489489489': error_invalid,
-            '99123123': error_invalid,
-            '9999123123': error_invalid,
-        }
-        self.assertFieldOutput(ESPhoneNumberField, valid, invalid)
 
     def test_ESIdentityCardNumberField(self):
         error_invalid = ['Please enter a valid NIF, NIE, or CIF.']

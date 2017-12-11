@@ -11,10 +11,9 @@ from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin
 from localflavor.generic.checksums import luhn
 
-from .hr_choices import HR_COUNTY_CHOICES, HR_LICENSE_PLATE_PREFIX_CHOICES, HR_PHONE_NUMBER_PREFIX_CHOICES
+from .hr_choices import HR_COUNTY_CHOICES, HR_LICENSE_PLATE_PREFIX_CHOICES
 
 jmbg_re = re.compile(r'^(?P<dd>\d{2})(?P<mm>\d{2})(?P<yyy>\d{3})' +
                      r'(?P<rr>\d{2})(?P<bbb>\d{3})(?P<k>\d{1})$')
@@ -23,7 +22,6 @@ plate_re = re.compile(r'^(?P<prefix>[A-ZČŠŽ]{2})' +
                       r'(?P<number>\d{3,4})' +
                       r'(?P<suffix>[ABCDEFGHIJKLMNOPRSTUVZ]{1,2})$')
 postal_code_re = re.compile(r'^\d{5}$')
-phone_re = re.compile(r'^(\+385|00385|0)(?P<prefix>\d{2})(?P<number>\d{6,7})$')
 jmbag_re = re.compile(r'^601983(?P<copy>\d{1})1(?P<jmbag>\d{10})(?P<k>\d{1})$')
 
 
@@ -40,14 +38,6 @@ class HRLicensePlatePrefixSelect(Select):
     def __init__(self, attrs=None):
         super(HRLicensePlatePrefixSelect, self).__init__(attrs,
                                                          choices=HR_LICENSE_PLATE_PREFIX_CHOICES)
-
-
-class HRPhoneNumberPrefixSelect(Select):
-    """A Select widget that uses a list of phone number prefixes of Croatia as its choices."""
-
-    def __init__(self, attrs=None):
-        super(HRPhoneNumberPrefixSelect, self).__init__(attrs,
-                                                        choices=HR_PHONE_NUMBER_PREFIX_CHOICES)
 
 
 class HRJMBGField(Field):
@@ -205,54 +195,6 @@ class HRPostalCodeField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
         return '%s' % value
-
-
-class HRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Phone number of Croatia field.
-
-    Format: Complete country code or leading zero, area code prefix, 6 or 7
-    digit number.
-    Validates fixed, mobile and FGSM numbers. Normalizes to a full number with
-    country code (+385 prefix).
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a valid phone number'),
-        'area': _('Enter a valid area or mobile network code'),
-        'number': _('The phone number is too long'),
-    }
-
-    def clean(self, value):
-        super(HRPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        value = re.sub(r'[\-\s\(\)]', '', force_text(value))
-
-        matches = phone_re.search(value)
-        if matches is None:
-            raise ValidationError(self.error_messages['invalid'])
-
-        # Make sure the prefix is in the list of known codes.
-        prefix = matches.group('prefix')
-        number = matches.group('number')
-        if prefix[0] == '1':
-            number = prefix[1] + number
-            prefix = prefix[0]
-        if prefix not in [choice[0] for choice in HR_PHONE_NUMBER_PREFIX_CHOICES]:
-            raise ValidationError(self.error_messages['area'])
-
-        # Make sure the number is of adequate length.
-        if prefix == '1' and len(number) != 7:
-            raise ValidationError(self.error_messages['number'])
-
-        return '%s%s%s' % ('+385', prefix, number)
 
 
 class HRJMBAGField(Field):

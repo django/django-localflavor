@@ -3,19 +3,12 @@
 from __future__ import unicode_literals
 
 import datetime
-import re
-import warnings
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, Select, ValidationError
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.deprecation import DeprecatedPhoneNumberFormFieldMixin, RemovedInLocalflavor20Warning
-
-from ..generic.forms import IBANFormField
 from .ro_counties import COUNTIES_CHOICES
-
-phone_digits_re = re.compile(r'^[0-9\-\.\(\)\s]{3,20}$')
 
 
 class ROCIFField(RegexField):
@@ -180,85 +173,6 @@ class ROCountySelect(Select):
 
     def __init__(self, attrs=None):
         super(ROCountySelect, self).__init__(attrs, choices=COUNTIES_CHOICES)
-
-
-class ROIBANField(IBANFormField):
-    """
-    Romanian International Bank Account Number (IBAN) field.
-
-    .. versionchanged:: 1.1
-        Validation error messages changed to the messages used in :class:`.IBANFormField`
-
-    .. deprecated:: 1.1
-        Use `IBANFormField` with `included_countries=('RO',)` option instead.
-    """
-
-    def __init__(self, *args, **kwargs):
-        warnings.warn('ROIBANField is deprecated. Use `IBANFormField` with `included_countries=(\'RO\',)` option '
-                      'instead.', RemovedInLocalflavor20Warning)
-        kwargs['use_nordea_extensions'] = False
-        kwargs['include_countries'] = ('RO',)
-        super(ROIBANField, self).__init__(*args, **kwargs)
-
-
-class ROPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Romanian phone number field.
-
-    .. versionchanged:: 1.1
-
-        | Made the field also accept national short phone numbers and 7-digit
-          regional phone numbers besides the regular ones.
-        | Official documentation (in English): http://www.ancom.org.ro/en/pnn_1300
-        | Official documentation (in Romanian): http://www.ancom.org.ro/pnn_1300
-
-    .. deprecated:: 1.4
-        Use the django-phonenumber-field_ library instead.
-
-    .. _django-phonenumber-field: https://github.com/stefanfoulis/django-phonenumber-field
-    """
-
-    default_error_messages = {
-        'invalid_length':
-            _('Phone numbers may only have 7 or 10 digits, except the '
-              'national short numbers which have 3 to 6 digits'),
-        'invalid_long_format':
-            _('Normal phone numbers (7 or 10 digits) must begin with "0"'),
-        'invalid_short_format':
-            _('National short numbers (3 to 6 digits) must begin with "1"'),
-    }
-
-    def __init__(self, max_length=20, min_length=3, *args, **kwargs):
-        super(ROPhoneNumberField, self).__init__(
-            phone_digits_re, max_length=max_length, min_length=min_length,
-            *args, **kwargs
-        )
-
-    def clean(self, value):
-        """
-        Strips braces, dashes, dots and spaces. Checks the final length.
-
-        Args:
-            value: the phone number
-        """
-        value = super(ROPhoneNumberField, self).clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-
-        value = re.sub('[()-. ]', '', value)
-        length = len(value)
-
-        if length in (3, 4, 5, 6, 7, 10):
-            if (length == 7 or length == 10) and value[0] != '0':
-                raise ValidationError(
-                    self.error_messages['invalid_long_format'])
-            elif (3 <= length <= 6) and value[0] != '1':
-                raise ValidationError(
-                    self.error_messages['invalid_short_format'])
-        else:
-            raise ValidationError(self.error_messages['invalid_length'])
-
-        return value
 
 
 class ROPostalCodeField(RegexField):
