@@ -47,7 +47,6 @@ class GRLocalFlavorTests(SimpleTestCase):
             '124567': error,
             '04567': error,
             '94567': error,
-            '124567': error,
             '1345': error,
             '134115': error,
             'b231a': error,
