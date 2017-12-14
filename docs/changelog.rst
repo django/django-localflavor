@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.6.2   (unreleased)
+1.6.2   (2017-12-14)
 --------------------
 
 All deprecated code will be removed in the next major release. Please run you project's tests using `python -Wd` so that
