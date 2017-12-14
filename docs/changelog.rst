@@ -7,6 +7,7 @@ Changelog
 Modifications to existing flavors:
 
 - Fixed deprecation message for `nl.validators.NLBankAccountNumberFieldValidator`.
+- Deprecated `hr.forms.HRPhoneNumberPrefixSelect`.
 
 1.6.1   (2017-11-24)
 --------------------
