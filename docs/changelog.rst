@@ -4,6 +4,9 @@ Changelog
 1.6.2   (unreleased)
 --------------------
 
+All deprecated code will be removed in the next major release. Please run you project's tests using `python -Wd` so that
+deprecation warnings appear and can be addressed.
+
 Modifications to existing flavors:
 
 - Fixed deprecation message for `nl.validators.NLBankAccountNumberFieldValidator`.
@@ -11,6 +14,9 @@ Modifications to existing flavors:
 
 1.6.1   (2017-11-24)
 --------------------
+
+All deprecated code will be removed in the next major release. Please run you project's tests using `python -Wd` so that
+deprecation warnings appear and can be addressed.
 
 Modifications to existing flavors:
 
@@ -26,7 +32,7 @@ Other changes:
 1.6   (2017-11-22)
 ------------------
 
-All deprecated code will be removed in the next release. Please run you project's tests using `python -Wd` so that
+All deprecated code will be removed in the next major release. Please run you project's tests using `python -Wd` so that
 deprecation warnings appear and can be addressed.
 
 New flavors:
