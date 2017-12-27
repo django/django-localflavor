@@ -3,8 +3,9 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# aljosa <aljosa.mohorovic@gmail.com>, 2011
-# Jannis Leidel <jannis@leidel.info>, 2011
+# GunChleoc, 2016
+# GunChleoc, 2016
+# GunChleoc, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
@@ -12,104 +13,107 @@ msgstr ""
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
 "PO-Revision-Date: 2017-12-12 02:51+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
-"Language-Team: Croatian (http://www.transifex.com/django/django-localflavor/"
-"language/hr/)\n"
+"Language-Team: Gaelic, Scottish (http://www.transifex.com/django/django-"
+"localflavor/language/gd/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: gd\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
 
 msgid "Buenos Aires"
-msgstr ""
+msgstr "Buenos Aires"
 
 msgid "Catamarca"
-msgstr ""
+msgstr "Catamarca"
 
 msgid "Chaco"
-msgstr ""
+msgstr "Chaco"
 
 msgid "Chubut"
-msgstr ""
+msgstr "Chubut"
 
 msgid "Ciudad Autónoma de Buenos Aires"
-msgstr ""
+msgstr "Ciudad Autónoma de Buenos Aires"
 
 msgid "Córdoba"
-msgstr ""
+msgstr "Córdoba"
 
 msgid "Corrientes"
-msgstr ""
+msgstr "Corrientes"
 
 msgid "Entre Ríos"
-msgstr ""
+msgstr "Entre Ríos"
 
 msgid "Formosa"
-msgstr ""
+msgstr "Formosa"
 
 msgid "Jujuy"
-msgstr ""
+msgstr "Jujuy"
 
 msgid "La Pampa"
-msgstr ""
+msgstr "La Pampa"
 
 msgid "La Rioja"
-msgstr ""
+msgstr "La Rioja"
 
 msgid "Mendoza"
-msgstr ""
+msgstr "Mendoza"
 
 msgid "Misiones"
-msgstr ""
+msgstr "Misiones"
 
 msgid "Neuquén"
-msgstr ""
+msgstr "Neuquén"
 
 msgid "Río Negro"
-msgstr ""
+msgstr "Río Negro"
 
 msgid "Salta"
-msgstr ""
+msgstr "Salta"
 
 msgid "San Juan"
-msgstr ""
+msgstr "San Juan"
 
 msgid "San Luis"
-msgstr ""
+msgstr "San Luis"
 
 msgid "Santa Cruz"
-msgstr ""
+msgstr "Santa Cruz"
 
 msgid "Santa Fe"
-msgstr ""
+msgstr "Santa Fe"
 
 msgid "Santiago del Estero"
-msgstr ""
+msgstr "Santiago del Estero"
 
 msgid "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
-msgstr ""
+msgstr "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
 
 msgid "Tucumán"
-msgstr ""
+msgstr "Tucumán"
 
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
-msgstr "Unesite ispravan poštanski broj formata NNNN ili ANNNNAAA."
+msgstr "Cuir a-steach còd-puist sa chruth ÀÀÀÀ no LÀÀÀÀLLL."
 
 msgid "This field requires only numbers."
-msgstr "Ovo polje zahtjeva samo brojeve."
+msgstr "Chan iarr an raon seo ach àireamhan."
 
 msgid "This field requires 7 or 8 digits."
-msgstr "Ovo polje zahtjeva 7 ili 8 numeričkih znakova."
+msgstr "Tha an raon seo ag iarraidh 7 no 8 àireamhan."
 
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
-msgstr "Unesite ispravan CUIT formata XX-XXXXXXXX-X ili XXXXXXXXXXXX."
+msgstr ""
+"Cuid a-steach CUIT dligheadh san fhòrmat XX-XXXXXXXX-X no XXXXXXXXXXXX."
 
 msgid "Invalid CUIT."
-msgstr "Neispravan CUIT."
+msgstr "CUIT mì-dhligheach."
 
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
 msgstr ""
+"Seòrsa mì-dhligheach. Feumaidh an seòrsa a bhith 'na 27, 20, 30, 23, 24 no "
+"33."
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
 msgstr ""
@@ -121,38 +125,37 @@ msgid "Invalid CBU."
 msgstr ""
 
 msgid "Burgenland"
-msgstr ""
+msgstr "Burgenland"
 
 msgid "Carinthia"
-msgstr ""
+msgstr "Carinthia"
 
 msgid "Lower Austria"
-msgstr "Donja Austrija"
+msgstr "An Òstair Ìochdarach"
 
 msgid "Upper Austria"
-msgstr "Gornja Austrija"
+msgstr "An Òstair Uachdarach"
 
 msgid "Salzburg"
-msgstr ""
+msgstr "Salzburg"
 
 msgid "Styria"
-msgstr "Štajerska"
+msgstr "Styria"
 
 msgid "Tyrol"
-msgstr "Tirol"
+msgstr "Tyrol"
 
 msgid "Vorarlberg"
-msgstr "Tirol"
+msgstr "Vorarlberg"
 
 msgid "Vienna"
-msgstr "Beč"
+msgstr "Wien"
 
 msgid "Enter a zip code in the format XXXX."
-msgstr "Unesite zip kod formata XXXX."
+msgstr "Cuir a-steach còd-puist san fòrmat XXXX."
 
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
 msgstr ""
-"Unesite ispravan broj socijalnog osiguranja Austrije formata XXXX XXXXXX."
 
 msgid "Enter a 4 digit postcode."
 msgstr ""
@@ -182,16 +185,16 @@ msgid "Enter a valid TFN."
 msgstr ""
 
 msgid "Antwerp"
-msgstr "Antwerpen"
+msgstr ""
 
 msgid "Brussels"
-msgstr "Brisel"
+msgstr ""
 
 msgid "East Flanders"
-msgstr "Istočna Flandrija"
+msgstr ""
 
 msgid "Flemish Brabant"
-msgstr "Flamanski Brabant"
+msgstr ""
 
 msgid "Hainaut"
 msgstr ""
@@ -203,28 +206,28 @@ msgid "Limburg"
 msgstr ""
 
 msgid "Luxembourg"
-msgstr "Luksemburg"
+msgstr ""
 
 msgid "Namur"
 msgstr ""
 
 msgid "Walloon Brabant"
-msgstr "Valonski Brabant"
+msgstr ""
 
 msgid "West Flanders"
-msgstr "Zapadna Flandrija"
+msgstr ""
 
 msgid "Brussels Capital Region"
 msgstr ""
 
 msgid "Flemish Region"
-msgstr "Flamanska regija"
+msgstr ""
 
 msgid "Wallonia"
-msgstr "Valonija"
+msgstr ""
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
-msgstr "Unesite važeći poštanski broj u rasponu i formatu 1xxx - 9XXX."
+msgstr ""
 
 msgid "The EGN is not valid"
 msgstr ""
@@ -233,25 +236,24 @@ msgid "EIK/BULSTAT is not valid"
 msgstr ""
 
 msgid "Enter a zip code in the format XXXXX-XXX."
-msgstr "Unesite zip kod formata XXXXX-XXX."
+msgstr ""
 
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
 msgstr ""
-"Izaberite ispravnu brazilsku državu. Država nije jedna od dostupnih država."
 
 msgid "Invalid CPF number."
-msgstr "Neispravan CPF broj."
+msgstr ""
 
 msgid "This field requires at most 11 digits or 14 characters."
-msgstr "Ovo polje zahtjeva najviše 11 numeričkih znakova ili 14 slova."
+msgstr ""
 
 msgid "Invalid CNPJ number."
-msgstr "Neispravan CNPJ broj."
+msgstr ""
 
 msgid "This field requires at least 14 digits"
-msgstr "Ovo polje zahtjeva bar 14 numeričkih znakova"
+msgstr ""
 
 msgid "Invalid Process number."
 msgstr ""
@@ -299,14 +301,13 @@ msgid "Yukon"
 msgstr ""
 
 msgid "Enter a postal code in the format XXX XXX."
-msgstr "Unesite poštanski broj formata XXX XXX."
+msgstr ""
 
 msgid "Enter a Canadian province or territory."
 msgstr ""
 
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr ""
-"Unesite valjani kanadski broj socijalnog osiguranja formata XXX-XXX-XXX."
 
 msgid "Aargau"
 msgstr ""
@@ -395,13 +396,13 @@ msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
 
 msgid "Enter a valid Chilean RUT."
-msgstr "Unesite ispravan čileanski RUT"
+msgstr ""
 
 msgid "Enter a valid Chilean RUT. The format is XX.XXX.XXX-X."
-msgstr "Unesite ispravan čileanski RUT formata XX.XXX.XXX-X."
+msgstr ""
 
 msgid "The Chilean RUT is not valid."
-msgstr "Čileanski RUT nije ispravan."
+msgstr ""
 
 msgid "Enter a post code in the format XXXXXX."
 msgstr ""
@@ -511,58 +512,58 @@ msgid ""
 msgstr ""
 
 msgid "Prague"
-msgstr "Prag"
+msgstr ""
 
 msgid "Central Bohemian Region"
-msgstr "Središnja Češka"
+msgstr ""
 
 msgid "South Bohemian Region"
-msgstr "Južna Češka"
+msgstr ""
 
 msgid "Pilsen Region"
-msgstr "Plzeňski kraj"
+msgstr ""
 
 msgid "Carlsbad Region"
-msgstr "Karlovarski kraj"
+msgstr ""
 
 msgid "Usti Region"
-msgstr "Ústečki kraj"
+msgstr ""
 
 msgid "Liberec Region"
-msgstr "Liberečki kraj"
+msgstr ""
 
 msgid "Hradec Region"
-msgstr "Královéhradečki kraj"
+msgstr ""
 
 msgid "Pardubice Region"
-msgstr "Pardubički kraj"
+msgstr ""
 
 msgid "Vysocina Region"
-msgstr "Vysočina"
+msgstr ""
 
 msgid "South Moravian Region"
-msgstr "Južna Moravska"
+msgstr ""
 
 msgid "Olomouc Region"
-msgstr "Olomoučki kraj"
+msgstr ""
 
 msgid "Zlin Region"
-msgstr "Zlínski kraj"
+msgstr ""
 
 msgid "Moravian-Silesian Region"
-msgstr "Moravsko-šleski kraj"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXX or XXX XX."
-msgstr "Unesi ispravan poštanski broj formata XXXXX ili XXX XX."
+msgstr ""
 
 msgid "Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX."
-msgstr "Unesite datum rođenja formata XXXXXX/XXXX ili XXXXXXXXXX."
+msgstr ""
 
 msgid "Enter a valid birth number."
-msgstr "Unesite ispravan datum rodenja."
+msgstr ""
 
 msgid "Enter a valid IC number."
-msgstr "Unesite ispravan IC broj."
+msgstr ""
 
 msgid "Baden-Wuerttemberg"
 msgstr ""
@@ -589,10 +590,10 @@ msgid "Mecklenburg-Western Pomerania"
 msgstr ""
 
 msgid "Lower Saxony"
-msgstr "Donja Saska"
+msgstr ""
 
 msgid "North Rhine-Westphalia"
-msgstr "Sjeverno Porajnje-Zapadna Falačka"
+msgstr ""
 
 msgid "Rhineland-Palatinate"
 msgstr ""
@@ -601,7 +602,7 @@ msgid "Saarland"
 msgstr ""
 
 msgid "Saxony"
-msgstr "Saska"
+msgstr ""
 
 msgid "Saxony-Anhalt"
 msgstr ""
@@ -613,14 +614,12 @@ msgid "Thuringia"
 msgstr ""
 
 msgid "Enter a zip code in the format XXXXX."
-msgstr "Unesite zip kod formata XXXXX."
+msgstr ""
 
 msgid ""
 "Enter a valid German identity card number in XXXXXXXXXXX-XXXXXXX-XXXXXXX-X "
 "format."
 msgstr ""
-"Unesite broj njemačke identifikacijske kartice formata XXXXXXXXXXX-XXXXXXX-"
-"XXXXXXX-X."
 
 msgid "Albertslund"
 msgstr ""
@@ -3269,25 +3268,25 @@ msgid "Aragon"
 msgstr ""
 
 msgid "Principality of Asturias"
-msgstr "Kneževina Asturija"
+msgstr ""
 
 msgid "Balearic Islands"
-msgstr "Balearsko otočje"
+msgstr ""
 
 msgid "Basque Country"
-msgstr "Baskija"
+msgstr ""
 
 msgid "Canary Islands"
-msgstr "Kanarski Otoci"
+msgstr ""
 
 msgid "Castile-La Mancha"
-msgstr "Kastilja-La Mancha"
+msgstr ""
 
 msgid "Castile and Leon"
-msgstr "Kastilja i Leon"
+msgstr ""
 
 msgid "Catalonia"
-msgstr "Katalonija"
+msgstr ""
 
 msgid "Extremadura"
 msgstr ""
@@ -3296,7 +3295,7 @@ msgid "Galicia"
 msgstr ""
 
 msgid "Region of Murcia"
-msgstr "Regija Murcia"
+msgstr ""
 
 msgid "Foral Community of Navarre"
 msgstr ""
@@ -3311,33 +3310,32 @@ msgid "Autonomous city of Mellila"
 msgstr ""
 
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
-msgstr "Unesite ispravan poštanski broj u rasponu i formatu od 01XXX - 52XXX."
+msgstr ""
 
 msgid "Please enter a valid NIF, NIE, or CIF."
-msgstr "Unesite ispravan NIF, NIE ili CIF."
+msgstr ""
 
 msgid "Please enter a valid NIF or NIE."
-msgstr "Molim unesite ispravan NIF ili NIE."
+msgstr ""
 
 msgid "Invalid checksum for NIF."
-msgstr "Neispravan checksum za NIF"
+msgstr ""
 
 msgid "Invalid checksum for NIE."
-msgstr "Neispravan checksum za NIF"
+msgstr ""
 
 msgid "Invalid checksum for CIF."
-msgstr "Neispravan checksum za CIF."
+msgstr ""
 
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr ""
-"Molim unesite ispravan broj bankovnog računa formata XXXX-XXXX-XX-XXXXXXXXXX."
 
 msgid "Invalid checksum for bank account number."
-msgstr "Neispravan checksum za broj bankovnog računa."
+msgstr ""
 
 msgid "Enter a valid Finnish social security number."
-msgstr "Unesite ispravan broj finskog socijalnog osiguranja."
+msgstr ""
 
 msgid "Zip code"
 msgstr ""
@@ -3364,7 +3362,7 @@ msgid "SIRET Number"
 msgstr ""
 
 msgid "Enter a valid postcode."
-msgstr "Unesite ispravan poštanski broj."
+msgstr ""
 
 msgid "Bath and North East Somerset"
 msgstr ""
@@ -3703,112 +3701,112 @@ msgid "Wrexham"
 msgstr ""
 
 msgid "Aberdeen City"
-msgstr ""
+msgstr "Obar Dheathain"
 
 msgid "Aberdeenshire"
-msgstr ""
+msgstr "Siorrachd Obar Dheathain"
 
 msgid "Angus"
-msgstr ""
+msgstr "Aonghas"
 
 msgid "Argyll and Bute"
-msgstr ""
+msgstr "Earra Ghàidheal is Bòd"
 
 msgid "Clackmannanshire"
-msgstr ""
+msgstr "Siorrachd Chlach Mhanann"
 
 msgid "Dumfries and Galloway"
-msgstr ""
+msgstr "Dùn Phrìs is Gall-Ghàidhealaibh"
 
 msgid "Dundee City"
-msgstr ""
+msgstr "Dùn Dè"
 
 msgid "East Ayrshire"
-msgstr ""
+msgstr "Siorrachd Àir an Ear"
 
 msgid "East Dunbartonshire"
-msgstr ""
+msgstr "Siorrachd Dhùn Breatann an Ear"
 
 msgid "East Lothian"
-msgstr ""
+msgstr "Lodainn an Ear"
 
 msgid "East Renfrewshire"
-msgstr ""
+msgstr "Siorrachd Rinn Friù an Ear"
 
 msgid "Edinburgh, City of"
-msgstr ""
+msgstr "Dùn Èideann"
 
 msgid "Falkirk"
-msgstr ""
+msgstr "An Eaglais Bhreac"
 
 msgid "Fife"
-msgstr ""
+msgstr "Fìobha"
 
 msgid "Glasgow City"
-msgstr ""
+msgstr "Glaschu"
 
 msgid "Highland"
-msgstr ""
+msgstr "A’ Ghàidhealtachd"
 
 msgid "Inverclyde"
-msgstr ""
+msgstr "Inbhir Chluaidh"
 
 msgid "Midlothian"
-msgstr ""
+msgstr "Meadhan Lodainn"
 
 msgid "Moray"
-msgstr ""
+msgstr "Moireibh"
 
 msgid "North Ayrshire"
-msgstr ""
+msgstr "Siorrachd Àir a Tuath"
 
 msgid "North Lanarkshire"
-msgstr ""
+msgstr "Siorrachd Lannraig a Tuath"
 
 msgid "Perth and Kinross"
-msgstr ""
+msgstr "Peairt is Ceann Rois"
 
 msgid "Renfrewshire"
-msgstr ""
+msgstr "Siorrachd Rinn Friù"
 
 msgid "Scottish Borders"
-msgstr ""
+msgstr "Crìochan na h-Alba"
 
 msgid "South Ayrshire"
-msgstr ""
+msgstr "Siorrachd Àir a Deas"
 
 msgid "South Lanarkshire"
-msgstr ""
+msgstr "Siorrachd Lannraig a Deas"
 
 msgid "Stirling"
-msgstr ""
+msgstr "Sruighlea"
 
 msgid "West Dunbartonshire"
-msgstr ""
+msgstr "Siorrachd Dhùn Breatann an Iar"
 
 msgid "West Lothian"
-msgstr ""
+msgstr "Lodainn an Iar"
 
 msgid "Na h-Eileanan Siar"
-msgstr ""
+msgstr "Na h-Eileanan Siar"
 
 msgid "Orkney Islands"
-msgstr ""
+msgstr "Arcaibh"
 
 msgid "Shetland Islands"
-msgstr ""
+msgstr "Sealtainn"
 
 msgid "England"
-msgstr "Engleska"
+msgstr "Sasainn"
 
 msgid "Northern Ireland"
-msgstr "Sjeverna irska"
+msgstr "Èirinn a Tuath"
 
 msgid "Wales"
-msgstr "Škotska"
+msgstr "A' Chuimrigh"
 
 msgid "Scotland"
-msgstr "Škotska"
+msgstr "Alba"
 
 msgid "An International Bank Account Number"
 msgstr ""
@@ -3865,7 +3863,7 @@ msgid "Enter a valid 11 digit OIB"
 msgstr ""
 
 msgid "Enter a valid vehicle license plate number"
-msgstr "Unesite ispravanu registraciju za vozilo"
+msgstr ""
 
 msgid "Enter a valid location code"
 msgstr ""
@@ -4003,10 +4001,10 @@ msgid "Zala"
 msgstr ""
 
 msgid "Enter a valid post code"
-msgstr "Unesite ispravan poštanski broj"
+msgstr ""
 
 msgid "Enter a valid NIK/KTP number"
-msgstr "Unesite ispravan NIK/KTP broj."
+msgstr ""
 
 msgid "Aceh"
 msgstr ""
@@ -4024,7 +4022,7 @@ msgid "Yogyakarta"
 msgstr ""
 
 msgid "Jakarta"
-msgstr "Džakarta"
+msgstr ""
 
 msgid "Gorontalo"
 msgstr ""
@@ -4192,7 +4190,7 @@ msgid "Banyumas"
 msgstr ""
 
 msgid "Federal Government"
-msgstr "Federalna vlada"
+msgstr ""
 
 msgid "Bojonegoro"
 msgstr ""
@@ -4282,13 +4280,13 @@ msgid "Wexford"
 msgstr ""
 
 msgid "Wicklow"
-msgstr "Wexford"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
 msgstr ""
 
 msgid "Enter a valid ID number."
-msgstr "Unesite valjani ID broj."
+msgstr ""
 
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr ""
@@ -4305,25 +4303,25 @@ msgstr ""
 
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
-msgstr "Unesite ispravan islandski identifikacijski broj formata XXXXXX-XXXX."
+msgstr ""
 
 msgid "The Icelandic identification number is not valid."
-msgstr "Islandski identifikacijski broj nije ispravan."
+msgstr ""
 
 msgid "Enter a valid zip code."
-msgstr "Unesite ispravan zip kod."
+msgstr ""
 
 msgid "Enter a valid Tax code."
 msgstr ""
 
 msgid "Enter a valid VAT number."
-msgstr "Unesite ispravan VAT broj."
+msgstr ""
 
 msgid "Check digit does not match."
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
-msgstr "Unesite poštanski broj formata XXXXXXX or XXX-XXXX."
+msgstr ""
 
 msgid "Hokkaido"
 msgstr ""
@@ -4362,7 +4360,7 @@ msgid "Chiba"
 msgstr ""
 
 msgid "Tokyo"
-msgstr "Tokio"
+msgstr ""
 
 msgid "Kanagawa"
 msgstr ""
@@ -4467,7 +4465,7 @@ msgid "Okinawa"
 msgstr ""
 
 msgid "Enter a valid Kuwaiti Civil ID number"
-msgstr "Unesi ispravan kuvajtski Civil ID broj."
+msgstr ""
 
 msgid "Kuwait City"
 msgstr ""
@@ -5430,7 +5428,7 @@ msgid "Zilupe municipality"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXX."
-msgstr "Unesite poštanski broj u formatu XXXXX."
+msgstr ""
 
 msgid "Postal code"
 msgstr ""
@@ -6065,7 +6063,7 @@ msgid "Jalisco"
 msgstr ""
 
 msgid "Estado de México"
-msgstr "Država Meksiko"
+msgstr ""
 
 msgid "Michoacán"
 msgstr ""
@@ -6164,7 +6162,7 @@ msgid "Enter a valid BSN."
 msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
-msgstr "Unesite ispravan broj norveškog socijalnog osiguranja."
+msgstr ""
 
 msgid "Enter a valid Norwegian bank account number."
 msgstr ""
@@ -6428,10 +6426,10 @@ msgid "West Coast"
 msgstr ""
 
 msgid "This field requires 8 digits."
-msgstr "Ovo polje zahtjeva 8 numeričkih znakova."
+msgstr ""
 
 msgid "This field requires 11 digits."
-msgstr "Ovo polje zahtjeva 11 numeričkih znakova."
+msgstr ""
 
 msgid "Enter a 5 digit postcode."
 msgstr ""
@@ -6467,10 +6465,10 @@ msgid "Sindh"
 msgstr ""
 
 msgid "National Identification Number consists of 11 digits."
-msgstr "Nacionalni identifikacijski broj sadrži 11 numeričkih znakova."
+msgstr ""
 
 msgid "Wrong checksum for the National Identification Number."
-msgstr "Neispravan checksum za Nacionalni identifikacijski broj."
+msgstr ""
 
 msgid "The National Identification Number contains an invalid birth date."
 msgstr ""
@@ -6487,21 +6485,19 @@ msgid ""
 msgstr ""
 
 msgid "Wrong checksum for the Tax Number (NIP)."
-msgstr "Neispravan checksum za porezni broj (NIP)."
+msgstr ""
 
 msgid "National Business Register Number (REGON) consists of 9 or 14 digits."
 msgstr ""
-"National Business Register Number (REGON) sastoji se od 9 ili 14 numeričkih "
-"znakova."
 
 msgid "Wrong checksum for the National Business Register Number (REGON)."
-msgstr "Neispravan checked za National Business Register Number (REGON)."
+msgstr ""
 
 msgid "Enter a postal code in the format XX-XXX."
-msgstr "Unesi poštanski broj formata XX-XXX."
+msgstr ""
 
 msgid "Lower Silesian"
-msgstr "Donja Šleska"
+msgstr ""
 
 msgid "Kuyavian-Pomeranian"
 msgstr ""
@@ -6516,7 +6512,7 @@ msgid "Lodz"
 msgstr ""
 
 msgid "Lesser Poland"
-msgstr "Mala Poljska"
+msgstr ""
 
 msgid "Masovian"
 msgstr ""
@@ -6534,7 +6530,7 @@ msgid "Pomeranian"
 msgstr ""
 
 msgid "Silesian"
-msgstr "Šleska"
+msgstr ""
 
 msgid "Swietokrzyskie"
 msgstr ""
@@ -6630,13 +6626,13 @@ msgid "Região Autónoma dos Açores"
 msgstr ""
 
 msgid "Enter a valid CIF."
-msgstr "Unesite ispravan CIF."
+msgstr ""
 
 msgid "Enter a valid CNP."
-msgstr "Unesite ispravan CNP."
+msgstr ""
 
 msgid "Enter a valid postal code in the format XXXXXX"
-msgstr "Unesite ispravan poštanski broj formata XXXXXX"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXXX."
 msgstr ""
@@ -6921,16 +6917,16 @@ msgid "Yamalo-Neneckiy avtonomnyy okrug"
 msgstr ""
 
 msgid "Enter a valid Swedish organisation number."
-msgstr "Unesite valjani broj švedske organizacije."
+msgstr ""
 
 msgid "Enter a valid Swedish personal identity number."
-msgstr "Unesite ispravan švedski osobni identifikacijski broj."
+msgstr ""
 
 msgid "Co-ordination numbers are not allowed."
-msgstr "Koordinacijski brojevi nisu dozvoljeni."
+msgstr ""
 
 msgid "Enter a Swedish postal code in the format XXXXX."
-msgstr "Unesite švedski poštanski broj formata XXXXX."
+msgstr ""
 
 msgid "Stockholm"
 msgstr ""
@@ -7248,28 +7244,28 @@ msgid "Zilina"
 msgstr ""
 
 msgid "Banska Bystrica region"
-msgstr "Regija Banska Bystrica"
+msgstr ""
 
 msgid "Bratislava region"
-msgstr "Regija Bratislava"
+msgstr ""
 
 msgid "Kosice region"
-msgstr "Regija Kosice"
+msgstr ""
 
 msgid "Nitra region"
-msgstr "Regija Nitra"
+msgstr ""
 
 msgid "Presov region"
-msgstr "Regija Presov"
+msgstr ""
 
 msgid "Trencin region"
-msgstr "Regija Trencin"
+msgstr ""
 
 msgid "Trnava region"
-msgstr "Regija Trnava"
+msgstr ""
 
 msgid "Zilina region"
-msgstr "Regija Zilina"
+msgstr ""
 
 msgid "Ariana"
 msgstr ""
@@ -7341,10 +7337,10 @@ msgid "Zaghouan"
 msgstr ""
 
 msgid "Enter a valid Turkish Identification number."
-msgstr "Unesite valjani turski identifikacijski broj."
+msgstr ""
 
 msgid "Turkish Identification number must be 11 digits."
-msgstr "Turski Identifikacioni broj mora biti 11 znamenki."
+msgstr ""
 
 msgid "Enter a valid postal code."
 msgstr ""
@@ -7440,20 +7436,19 @@ msgid "Sevastopol"
 msgstr ""
 
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
-msgstr "Unesite zip kod formata XXXXX or XXXXX-XXXX."
+msgstr ""
 
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr ""
-"Unesi ispravan broj socijalnog osiguranja S.A.D.-a formata XXX-XX-XXXX."
 
 msgid "Enter a U.S. state or territory."
-msgstr "Unesite državu ili teritorij u SAD-u."
+msgstr ""
 
 msgid "U.S. state (two uppercase letters)"
-msgstr "Država S.A.D.-a (dva velika slova)"
+msgstr ""
 
 msgid "U.S. postal code (two uppercase letters)"
-msgstr "Američki poštanski broj (dva velika slova)"
+msgstr ""
 
 msgid "U.S. ZIP code"
 msgstr ""
@@ -7661,10 +7656,10 @@ msgid "Trust Territory of the Pacific Islands"
 msgstr ""
 
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
-msgstr "Unesite valjani CI broj u X.XXX.XXX-X, XXXXXXX-X ili XXXXXXXX formatu."
+msgstr ""
 
 msgid "Enter a valid CI number."
-msgstr "Unesite ispravan CI broj."
+msgstr ""
 
 msgid "Región Capital"
 msgstr ""
@@ -7772,10 +7767,10 @@ msgid "Zulia"
 msgstr ""
 
 msgid "Enter a valid South African ID number"
-msgstr "Unesi ispravan južnoafrički ID broj."
+msgstr ""
 
 msgid "Enter a valid South African postal code"
-msgstr "Unesite ispravan južnoafrički poštanski broj."
+msgstr ""
 
 msgid "Eastern Cape"
 msgstr ""

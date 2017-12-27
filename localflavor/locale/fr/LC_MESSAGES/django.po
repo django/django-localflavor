@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-08 08:46+0200\n"
-"PO-Revision-Date: 2017-11-17 13:31+0000\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2017-12-11 12:41+0100\n"
+"PO-Revision-Date: 2017-12-12 02:51+0000\n"
+"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: French (http://www.transifex.com/django/django-localflavor/"
 "language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -168,9 +168,6 @@ msgstr "État australien"
 msgid "Australian Postcode"
 msgstr "Code postal australien"
 
-msgid "Australian Phone number"
-msgstr "Numéro de téléphone australien"
-
 msgid "Australian Business Number"
 msgstr "Numéro professionnel australien (ABN)"
 
@@ -234,15 +231,6 @@ msgstr "Wallonie"
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr ""
 "Saisissez un code postal valide au format et dans l'intervalle 1XXX-9XXX."
-
-msgid ""
-"Enter a valid phone number in one of the formats 0x xxx xx xx, 0xx xx xx xx, "
-"04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx."
-"xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
-msgstr ""
-"Saisissez un numéro de téléphone valide dans l'un des formats 0x xxx xx xx, "
-"0xx xx xx xx, 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x."
-"xxx.xx.xx, 0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx ou 04xxxxxxxx."
 
 msgid "The EGN is not valid"
 msgstr "Le numéro EGN n'est pas valable"
@@ -319,9 +307,6 @@ msgstr "Yukon"
 
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "Saisissez un code postal au format XXX XXX."
-
-msgid "Phone numbers must be in XXX-XXX-XXXX format."
-msgstr "Les numéros de téléphone doivent être au format XXX-XXX-XXXX."
 
 msgid "Enter a Canadian province or territory."
 msgstr "Saisissez une province ou un territoire canadien."
@@ -408,9 +393,6 @@ msgstr "Zoug"
 msgid "Zurich"
 msgstr "Zurich"
 
-msgid "Phone numbers must be in 0XX XXX XX XX format."
-msgstr "Les numéros de téléphone doivent être au format 0XX XXX XX XX."
-
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
@@ -445,11 +427,11 @@ msgstr "Numéro de carte d'identité non valide : mauvaise date de naissance"
 msgid "Invalid ID Card Number: Wrong location code"
 msgstr "Numéro de carte d'identité non valide : mauvais code d'emplacement"
 
-msgid "Enter a valid phone number."
-msgstr "Saisissez un numéro de téléphone valide."
+msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
+msgstr ""
 
-msgid "Enter a valid cell number."
-msgstr "Saisissez un numéro de portable valide."
+msgid "Invalid NIT."
+msgstr ""
 
 msgid "Occidental"
 msgstr "Occidental"
@@ -3078,11 +3060,6 @@ msgstr "Sumba"
 msgid "Enter a postal code in the format XXXX."
 msgstr "Saisissez un code postal au format XXXX."
 
-msgid "A phone number must be 8 digits and may have country code"
-msgstr ""
-"Les numéros de téléphone doivent comporter 8 chiffres et peuvent contenir le "
-"préfixe national"
-
 msgid "Ecuadorian province"
 msgstr "Province équatorienne"
 
@@ -3347,12 +3324,6 @@ msgstr "Ville autonome de Mellila"
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
 msgstr "Saisissez un code postal dans l'intervalle et au format 01XXX - 52XXX."
 
-msgid ""
-"Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or "
-"9XXXXXXXX."
-msgstr ""
-"Saisissez un numéro de téléphone au format 6XXXXXXXX, 8XXXXXXXX ou 9XXXXXXXX."
-
 msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr "Saisissez une adresse NIF, NIE ou CIF valide."
 
@@ -3382,12 +3353,6 @@ msgstr "Saisissez un numéro de sécurité sociale finlandais."
 
 msgid "Zip code"
 msgstr "Code postal"
-
-msgid "Phone numbers must be in 0X XX XX XX XX format."
-msgstr "Les numéros de téléphone doivent être au format 0X XX XX XX XX."
-
-msgid "Phone number"
-msgstr "Numéro de téléphone"
 
 msgid "Select Department"
 msgstr "Choisissez un département"
@@ -3902,28 +3867,6 @@ msgstr "Saisissez un code postal grec à 5 chiffres valide."
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr "Saisissez un code fiscal grec valide (9 chiffres)."
 
-msgid "Enter a 10-digit greek phone number."
-msgstr "Saisissez un numéro de téléphone grec valide (10 chiffres)."
-
-msgid "Enter a greek mobile phone number starting with 69."
-msgstr "Saisissez un numéro de téléphone mobile grec commençant par 69."
-
-#, python-format
-msgid "Phone number should not start with one of the followings: %s."
-msgstr ""
-"Le numéro de téléphone ne doit pas commencer par l'un des nombres suivants : "
-"%s."
-
-#, python-format
-msgid "Phone number must be in one of the following formats: %s."
-msgstr ""
-"Le numéro de téléphone doit correspondre à l'un des formats suivants : %s."
-
-#, python-format
-msgid "Phone number should start with one of the followings: %s."
-msgstr ""
-"Le numéro de téléphone doit commencer par l'un des chiffres suivants : %s."
-
 msgid "Enter a valid 13 digit JMBG"
 msgstr "Saisissez un JMBG à 13 chiffres valide"
 
@@ -3944,15 +3887,6 @@ msgstr "La partie nombre ne peut pas être à zéro"
 
 msgid "Enter a valid 5 digit postal code"
 msgstr "Saisissez un code postal à 5 chiffres valide"
-
-msgid "Enter a valid phone number"
-msgstr "Saisissez un numéro de téléphone valide"
-
-msgid "Enter a valid area or mobile network code"
-msgstr "Saisissez un code de zone ou de réseau mobile valide"
-
-msgid "The phone number is too long"
-msgstr "Le numéro de téléphone est trop long"
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr "Saisissez un JMBAG à 19 chiffres valide, en commençant par 601983"
@@ -4370,9 +4304,6 @@ msgstr ""
 msgid "Enter a valid ID number."
 msgstr "Saisissez un numéro d'identification valide."
 
-msgid "Enter a valid Mobile Number."
-msgstr "Saisissez un numéro de téléphone mobile valide."
-
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr "Saisisset un code postal au format XXXXXX ou XXX XXX."
 
@@ -4384,10 +4315,6 @@ msgid ""
 msgstr ""
 "Saisissez un numéro Aadhaar valide au format XXXX XXXX XXXX ou XXXX-XXXX-"
 "XXXX."
-
-msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
-msgstr ""
-"Les numéros de téléphone doivent être au format 02X-8X, 03X-7X ou 04X-6X."
 
 msgid "Indian state (two uppercase letters)"
 msgstr "État indien (deux lettres majuscules)"
@@ -4407,9 +4334,6 @@ msgstr "Saisissez un code de taxation valable."
 
 msgid "Enter a valid VAT number."
 msgstr "Saisissez un numéro de TVA valide."
-
-msgid "Enter a valid Italian phone number."
-msgstr "Entrez un numéro de téléphone italien valide."
 
 msgid "Check digit does not match."
 msgstr "Le chiffre de contrôle ne correspond pas."
@@ -4944,12 +4868,6 @@ msgstr "Le code ID contient une date non valable."
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
 msgstr "Saisissez un code postal au format XXXXX ou LT-XXXXX."
-
-msgid "Phone number can only contain digits"
-msgstr "Le numéro de téléphone ne peut contenir que des chiffres."
-
-msgid "Could not validate the phone number"
-msgstr "Ce numéro de téléphone n'est pas valide."
 
 msgid "Alytus"
 msgstr "Alytus"
@@ -6225,11 +6143,8 @@ msgstr "Numéro postal hollandais"
 msgid "Dutch province"
 msgstr "Province des Pays-Bas"
 
-msgid "Dutch social security number (SoFi)"
-msgstr "Numéro de sécurité sociale hollandais (SoFi)"
-
-msgid "Dutch phone number"
-msgstr "Numéro de téléphone hollandais"
+msgid "Dutch social security number (BSN)"
+msgstr ""
 
 msgid "Drenthe"
 msgstr "Drenthe"
@@ -6264,14 +6179,8 @@ msgstr "Zeeland"
 msgid "Zuid-Holland"
 msgstr "Hollande-Méridionale"
 
-msgid "Enter a valid SoFi number."
-msgstr "Saisissez un numéro SoFi valide."
-
-msgid "Enter a valid bank account number."
-msgstr "Saisissez un numéro de compte bancaire valide."
-
-msgid "Bank account numbers have 1 - 7, 9 or 10 digits."
-msgstr "Les numéros de comptes bancaires ont 1-7, 9 ou 10 chiffres."
+msgid "Enter a valid BSN."
+msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
 msgstr "Saisissez un numéro de sécurité sociale norvégien valide."
@@ -6291,9 +6200,6 @@ msgstr ""
 
 msgid "Invalid post code."
 msgstr "Code postal invalide."
-
-msgid "Invalid phone number."
-msgstr "Numéro de téléphone invalide."
 
 msgid "Invalid bank account number."
 msgstr "Numéro de compte bancaire invalide."
@@ -6553,17 +6459,11 @@ msgstr "Ce champ requiert 11 chiffres."
 msgid "Enter a 5 digit postcode."
 msgstr "Saisissez un code postal à 5 chiffres."
 
-msgid "Phone numbers must contain 9, 10 or 11 digits."
-msgstr "Les numéros de téléphone doivent contenir 9, 10 ou 11 chiffres."
-
 msgid "Pakistani State"
 msgstr "État pakistanais"
 
 msgid "Pakistani Postcode"
 msgstr "Code postal pakistanais"
-
-msgid "Pakistani Phone number"
-msgstr "Numéro de téléphone pakistanais"
 
 msgid "Azad Jammu & Kashmir"
 msgstr "Azad Jammu-et-Cachemire"
@@ -6687,13 +6587,6 @@ msgstr ""
 "Le format des numéros de cartes d'identité est XXXXXXXXXYYX ou XXXXXXXX-XYYX "
 "(où X est un chiffre et Y un caractère alphanumérique)."
 
-msgid ""
-"Phone numbers have at least 3 and at most 9 digits and may optionally be "
-"prefixed with '00351' or '+351'."
-msgstr ""
-"Les numéros de téléphone comportent entre 3 et 9 chiffres et peuvent être "
-"précédés du préfixe « 00351 » ou « +351 »."
-
 msgid "The specified number is not a valid Social Security number."
 msgstr "Le nombre fourni n'est pas un numéro de sécurité sociale valable."
 
@@ -6776,23 +6669,6 @@ msgstr "Saisissez une CIF valide."
 
 msgid "Enter a valid CNP."
 msgstr "Saisissez une CNP valide."
-
-msgid ""
-"Phone numbers may only have 7 or 10 digits, except the national short "
-"numbers which have 3 to 6 digits"
-msgstr ""
-"Les numéros de téléphone doivent avoir 7 ou 10 chiffres, exceptés les "
-"numéros de téléphones courts nationaux qui ont de 3 à 6 chiffres."
-
-msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr ""
-"Les numéros de téléphone classiques (7 ou 10 chiffres) doivent commencer par "
-"\"0\""
-
-msgid "National short numbers (3 to 6 digits) must begin with \"1\""
-msgstr ""
-"Les numéros de téléphone courts nationaux (3 ou 6 chiffres) doivent "
-"commencer par \"1\""
 
 msgid "Enter a valid postal code in the format XXXXXX"
 msgstr "Saisissez un code postal valide au format XXXXXX"
@@ -7157,12 +7033,6 @@ msgstr "Jämtland"
 msgid "Enter a 6-digit postal code."
 msgstr "Saisissez un code postal à 6 chiffres."
 
-msgid ""
-"Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
-"Les numéros de téléphone doivent comporter 8 chiffres et peuvent contenir le "
-"préfixe national"
-
 msgid "Invalid NRIC/FIN."
 msgstr "NRIC/FIN invalide."
 
@@ -7176,9 +7046,6 @@ msgstr "Le EMSO n'est pas valide."
 
 msgid "Enter a valid tax number in form SIXXXXXXXX"
 msgstr "Saisissez un code fiscal valide au format SIXXXXXXXX"
-
-msgid "Enter phone number in form +386XXXXXXXX or 0XXXXXXXX."
-msgstr "Saisissez un numéro de téléphone au format +386XXXXXXXX ou 0XXXXXXXX."
 
 msgid "Banska Bystrica"
 msgstr "Banská Bystrica"
@@ -7509,9 +7376,6 @@ msgstr "Tunis"
 
 msgid "Zaghouan"
 msgstr "Zaghouan"
-
-msgid "Phone numbers must be in 0XXX XXX XXXX format."
-msgstr "Les numéros de téléphone doivent correspondre au format 0XXX XXX XXXX."
 
 msgid "Enter a valid Turkish Identification number."
 msgstr "Saisissez un numéro d'identification turc valide."

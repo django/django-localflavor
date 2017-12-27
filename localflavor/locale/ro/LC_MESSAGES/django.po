@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-08 08:46+0200\n"
-"PO-Revision-Date: 2017-09-19 17:17+0000\n"
+"POT-Creation-Date: 2017-12-11 12:41+0100\n"
+"PO-Revision-Date: 2017-12-12 02:51+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Romanian (http://www.transifex.com/django/django-localflavor/"
 "language/ro/)\n"
@@ -165,9 +165,6 @@ msgstr ""
 msgid "Australian Postcode"
 msgstr "Cod Poștal Australian"
 
-msgid "Australian Phone number"
-msgstr "Număr de telefon Australian"
-
 msgid "Australian Business Number"
 msgstr ""
 
@@ -230,15 +227,6 @@ msgstr "Valonia"
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Introduceți un cod poștal valid în intervalul și formatul 1XXX - 9XXX."
-
-msgid ""
-"Enter a valid phone number in one of the formats 0x xxx xx xx, 0xx xx xx xx, "
-"04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx."
-"xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
-msgstr ""
-"Introduceți un număr de telefon valabil în unul din următoarele formate: 0x "
-"xxx xx xx, 0xx xx xx xx, 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx."
-"xx.xx, 0x.xxx.xx.xx, 0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
 
 msgid "The EGN is not valid"
 msgstr ""
@@ -315,9 +303,6 @@ msgstr "Yukon"
 
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "Introduceți un cod poștal de forma XXX XXX."
-
-msgid "Phone numbers must be in XXX-XXX-XXXX format."
-msgstr "Numărul de telefon trebuie să fie în formatul XXX-XXX-XXXX."
 
 msgid "Enter a Canadian province or territory."
 msgstr "Introduceți o provincie sau un teritoriu din Canada."
@@ -405,9 +390,6 @@ msgstr ""
 msgid "Zurich"
 msgstr "Zurich"
 
-msgid "Phone numbers must be in 0XX XXX XX XX format."
-msgstr "Numerele de telefon trebuie să fie în formatul 0XX XXX XX XX."
-
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
@@ -440,11 +422,11 @@ msgstr ""
 msgid "Invalid ID Card Number: Wrong location code"
 msgstr ""
 
-msgid "Enter a valid phone number."
-msgstr "Introduceţi un număr de telefon valid"
+msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
+msgstr ""
 
-msgid "Enter a valid cell number."
-msgstr "Introduceți un număr de telefon mobil valid."
+msgid "Invalid NIT."
+msgstr ""
 
 msgid "Occidental"
 msgstr ""
@@ -3071,9 +3053,6 @@ msgstr ""
 msgid "Enter a postal code in the format XXXX."
 msgstr ""
 
-msgid "A phone number must be 8 digits and may have country code"
-msgstr ""
-
 msgid "Ecuadorian province"
 msgstr ""
 
@@ -3339,13 +3318,6 @@ msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
 msgstr ""
 "Introduceți un cod poștal valid în intervalul și de forma 01XXX - 52XXX."
 
-msgid ""
-"Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or "
-"9XXXXXXXX."
-msgstr ""
-"Introduceți un număr de telefon valid într-unul dintre formatele 6XXXXXXXX, "
-"8XXXXXXXX sau 9XXXXXXXX."
-
 msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr "Introduceţi vă rog un NIF, NIE sau CIF valid."
 
@@ -3374,12 +3346,6 @@ msgstr "Introduceți un număr finlandez de securitate socială valid."
 
 msgid "Zip code"
 msgstr ""
-
-msgid "Phone numbers must be in 0X XX XX XX XX format."
-msgstr "Numerele de telefon trebuie să fie în formatul 0X XX XX XX XX."
-
-msgid "Phone number"
-msgstr "Număr de telefon"
 
 msgid "Select Department"
 msgstr ""
@@ -3894,24 +3860,6 @@ msgstr ""
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr ""
 
-msgid "Enter a 10-digit greek phone number."
-msgstr ""
-
-msgid "Enter a greek mobile phone number starting with 69."
-msgstr ""
-
-#, python-format
-msgid "Phone number should not start with one of the followings: %s."
-msgstr ""
-
-#, python-format
-msgid "Phone number must be in one of the following formats: %s."
-msgstr ""
-
-#, python-format
-msgid "Phone number should start with one of the followings: %s."
-msgstr ""
-
 msgid "Enter a valid 13 digit JMBG"
 msgstr ""
 
@@ -3931,15 +3879,6 @@ msgid "Number part cannot be zero"
 msgstr ""
 
 msgid "Enter a valid 5 digit postal code"
-msgstr ""
-
-msgid "Enter a valid phone number"
-msgstr "Introduceţi un număr de telefon valid"
-
-msgid "Enter a valid area or mobile network code"
-msgstr ""
-
-msgid "The phone number is too long"
 msgstr ""
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
@@ -4356,9 +4295,6 @@ msgstr ""
 msgid "Enter a valid ID number."
 msgstr ""
 
-msgid "Enter a valid Mobile Number."
-msgstr ""
-
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr ""
 
@@ -4367,9 +4303,6 @@ msgstr ""
 
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
-msgstr ""
-
-msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
 msgstr ""
 
 msgid "Indian state (two uppercase letters)"
@@ -4392,9 +4325,6 @@ msgstr ""
 
 msgid "Enter a valid VAT number."
 msgstr "Introduceți un număr TVA valid."
-
-msgid "Enter a valid Italian phone number."
-msgstr ""
 
 msgid "Check digit does not match."
 msgstr ""
@@ -4928,12 +4858,6 @@ msgid "ID Code contains invalid date."
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr ""
-
-msgid "Phone number can only contain digits"
-msgstr ""
-
-msgid "Could not validate the phone number"
 msgstr ""
 
 msgid "Alytus"
@@ -6207,10 +6131,7 @@ msgstr ""
 msgid "Dutch province"
 msgstr ""
 
-msgid "Dutch social security number (SoFi)"
-msgstr ""
-
-msgid "Dutch phone number"
+msgid "Dutch social security number (BSN)"
 msgstr ""
 
 msgid "Drenthe"
@@ -6246,13 +6167,7 @@ msgstr "Zeelanda"
 msgid "Zuid-Holland"
 msgstr "Olanda de Sud"
 
-msgid "Enter a valid SoFi number."
-msgstr ""
-
-msgid "Enter a valid bank account number."
-msgstr ""
-
-msgid "Bank account numbers have 1 - 7, 9 or 10 digits."
+msgid "Enter a valid BSN."
 msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
@@ -6268,9 +6183,6 @@ msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr ""
 
 msgid "Invalid post code."
-msgstr ""
-
-msgid "Invalid phone number."
 msgstr ""
 
 msgid "Invalid bank account number."
@@ -6531,16 +6443,10 @@ msgstr "Acest câmp are nevoie de 11 cifre."
 msgid "Enter a 5 digit postcode."
 msgstr ""
 
-msgid "Phone numbers must contain 9, 10 or 11 digits."
-msgstr ""
-
 msgid "Pakistani State"
 msgstr ""
 
 msgid "Pakistani Postcode"
-msgstr ""
-
-msgid "Pakistani Phone number"
 msgstr ""
 
 msgid "Azad Jammu & Kashmir"
@@ -6657,11 +6563,6 @@ msgid ""
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
 
-msgid ""
-"Phone numbers have at least 3 and at most 9 digits and may optionally be "
-"prefixed with '00351' or '+351'."
-msgstr ""
-
 msgid "The specified number is not a valid Social Security number."
 msgstr ""
 
@@ -6739,19 +6640,6 @@ msgid "Enter a valid CIF."
 msgstr ""
 
 msgid "Enter a valid CNP."
-msgstr ""
-
-msgid ""
-"Phone numbers may only have 7 or 10 digits, except the national short "
-"numbers which have 3 to 6 digits"
-msgstr ""
-"Numerele de telefon pot avea între 7 și 10 cifre, cu excepția numerelor "
-"naționale scurte, care pot avea între 3 și 6 cifre"
-
-msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr ""
-
-msgid "National short numbers (3 to 6 digits) must begin with \"1\""
 msgstr ""
 
 msgid "Enter a valid postal code in the format XXXXXX"
@@ -7117,10 +7005,6 @@ msgstr ""
 msgid "Enter a 6-digit postal code."
 msgstr ""
 
-msgid ""
-"Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
-
 msgid "Invalid NRIC/FIN."
 msgstr ""
 
@@ -7131,9 +7015,6 @@ msgid "The EMSO is not valid."
 msgstr ""
 
 msgid "Enter a valid tax number in form SIXXXXXXXX"
-msgstr ""
-
-msgid "Enter phone number in form +386XXXXXXXX or 0XXXXXXXX."
 msgstr ""
 
 msgid "Banska Bystrica"
@@ -7465,9 +7346,6 @@ msgstr ""
 
 msgid "Zaghouan"
 msgstr ""
-
-msgid "Phone numbers must be in 0XXX XXX XXXX format."
-msgstr "Numărul de telefon trebuie să fie în formatul 0XXX XXX XXXX."
 
 msgid "Enter a valid Turkish Identification number."
 msgstr ""

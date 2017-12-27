@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-19 13:00+0200\n"
-"PO-Revision-Date: 2017-05-19 14:05+0000\n"
+"POT-Creation-Date: 2017-12-11 12:41+0100\n"
+"PO-Revision-Date: 2017-12-12 02:51+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Czech (http://www.transifex.com/django/django-localflavor/"
 "language/cs/)\n"
@@ -164,9 +164,6 @@ msgstr "Australský stát"
 msgid "Australian Postcode"
 msgstr "Australské poštovní číslo"
 
-msgid "Australian Phone number"
-msgstr "Australské telefonní číslo"
-
 msgid "Australian Business Number"
 msgstr ""
 
@@ -229,15 +226,6 @@ msgstr "Valonsko"
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Vložte platné poštovní směrovací číslo v rozsahu a tvaru 1XXX - 9XXX."
-
-msgid ""
-"Enter a valid phone number in one of the formats 0x xxx xx xx, 0xx xx xx xx, "
-"04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx."
-"xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
-msgstr ""
-"Vložte platné telefonní číslo v jednom z tvarů 0x xxx xx xx, 0xx xx xx xx, "
-"04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx."
-"xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
 
 msgid "The EGN is not valid"
 msgstr ""
@@ -312,9 +300,6 @@ msgstr "Yukon"
 
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "Zadejte poštovní směrovací číslo ve tvaru XXX XXX."
-
-msgid "Phone numbers must be in XXX-XXX-XXXX format."
-msgstr "Telefonní číslo musí být ve tvaru XXX-XXX-XXXX."
 
 msgid "Enter a Canadian province or territory."
 msgstr "Zadejte kanadskou provincii nebo teritorium"
@@ -401,9 +386,6 @@ msgstr "Zug"
 msgid "Zurich"
 msgstr "Zurich"
 
-msgid "Phone numbers must be in 0XX XXX XX XX format."
-msgstr "Telefonní čísla musí být ve tvaru 0XX XXX XX XX."
-
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
@@ -438,11 +420,97 @@ msgstr "Neplatné číslo identifikačního průkazu: Špatné datum narození"
 msgid "Invalid ID Card Number: Wrong location code"
 msgstr "Neplatné číslo identifikačního průkazu: Špatný kód oblasti"
 
-msgid "Enter a valid phone number."
-msgstr "Zadejte platné telefonní číslo."
+msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
+msgstr ""
 
-msgid "Enter a valid cell number."
-msgstr "Zadejte platné číslo buňky."
+msgid "Invalid NIT."
+msgstr ""
+
+msgid "Occidental"
+msgstr ""
+
+msgid "Central"
+msgstr ""
+
+msgid "Oriental"
+msgstr ""
+
+msgid "Pinar del Río"
+msgstr ""
+
+msgid "Artemisa"
+msgstr ""
+
+msgid "Mayabeque"
+msgstr ""
+
+msgid "La Habana"
+msgstr ""
+
+msgid "Matanzas"
+msgstr ""
+
+msgid "Cienfuegos"
+msgstr ""
+
+msgid "Villa Clara"
+msgstr ""
+
+msgid "Sancti Spíritus"
+msgstr ""
+
+msgid "Ciego de Ávila"
+msgstr ""
+
+msgid "Camagüey"
+msgstr ""
+
+msgid "Las Tunas"
+msgstr ""
+
+msgid "Holguín"
+msgstr ""
+
+msgid "Granma"
+msgstr ""
+
+msgid "Santiago de Cuba"
+msgstr ""
+
+msgid "Guantánamo"
+msgstr ""
+
+msgid "Isla de la Juventud"
+msgstr ""
+
+msgid "Enter a Cuban region."
+msgstr ""
+
+msgid "Enter a Cuban province."
+msgstr ""
+
+msgid "Enter a valid postal code in the format XXXXX."
+msgstr ""
+
+msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
+msgstr ""
+
+msgid "Cuban regions (three uppercase letters)"
+msgstr ""
+
+msgid "Cuban provinces (three uppercase letters)"
+msgstr ""
+
+msgid "Cuban postal code"
+msgstr ""
+
+msgid "Cuban identity card number"
+msgstr ""
+
+msgid ""
+"Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
+"Number."
+msgstr ""
 
 msgid "Prague"
 msgstr "Praha"
@@ -2983,9 +3051,6 @@ msgstr ""
 msgid "Enter a postal code in the format XXXX."
 msgstr ""
 
-msgid "A phone number must be 8 digits and may have country code"
-msgstr "Telefonní číslo musí mít 8 číslic a může mít kód země."
-
 msgid "Ecuadorian province"
 msgstr ""
 
@@ -3250,13 +3315,6 @@ msgstr "Autonomní město Mellila"
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
 msgstr "Zadejte platné poštovní směrovací číslo ve tvaru 01XXX - 52XXX."
 
-msgid ""
-"Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or "
-"9XXXXXXXX."
-msgstr ""
-"Zadejte platné telefonní číslo v jednom ze tvarů 6XXXXXXXX, 8XXXXXXXX nebo "
-"9XXXXXXXX."
-
 msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr "Zadejte platné hodnoty NIF, NIE nebo CIF."
 
@@ -3284,12 +3342,6 @@ msgstr "Zadejte platné finské rodné číslo."
 
 msgid "Zip code"
 msgstr "PSČ"
-
-msgid "Phone numbers must be in 0X XX XX XX XX format."
-msgstr "Telefonní číslo musí být ve tvaru 0X XX XX XX XX."
-
-msgid "Phone number"
-msgstr "Telefonní číslo"
 
 msgid "Select Department"
 msgstr "Vyberte department"
@@ -3804,24 +3856,6 @@ msgstr "Zadejte platné pětimístné řecké směrovací číslo."
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr "Zadejte platné řecké daňové číslo (9 číslic)."
 
-msgid "Enter a 10-digit greek phone number."
-msgstr "Zadejte platné desetimístné řecké telefonní číslo."
-
-msgid "Enter a greek mobile phone number starting with 69."
-msgstr "Zadejte platné řecké mobilní telefonní číslo začínající 69."
-
-#, python-format
-msgid "Phone number should not start with one of the followings: %s."
-msgstr "Telefonní číslo by nemělo začínat těmito možnostmi: %s."
-
-#, python-format
-msgid "Phone number must be in one of the following formats: %s."
-msgstr "Telefonní číslo musí být v jednom z následujících tvarů: %s."
-
-#, python-format
-msgid "Phone number should start with one of the followings: %s."
-msgstr "Telefonní číslo by mělo začínat jednou z těchto možnostmi: %s."
-
 msgid "Enter a valid 13 digit JMBG"
 msgstr "Zadejte platné JMBG o 13 číslicích."
 
@@ -3842,15 +3876,6 @@ msgstr "Číselná část nesmí být nulová."
 
 msgid "Enter a valid 5 digit postal code"
 msgstr "Zadejte platné pětimístné poštovní směrovací číslo."
-
-msgid "Enter a valid phone number"
-msgstr "Zadejte platné telefonní číslo"
-
-msgid "Enter a valid area or mobile network code"
-msgstr "Zadejte platnou oblast nebo kód mobilní sítě."
-
-msgid "The phone number is too long"
-msgstr "Telefonní číslo je příliš dlouhé."
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr "Zadejte platné 19imístné JMBAG začínající na 601983."
@@ -4267,9 +4292,6 @@ msgstr ""
 msgid "Enter a valid ID number."
 msgstr "Vložte platné číslo ID"
 
-msgid "Enter a valid Mobile Number."
-msgstr "Zadejte platné mobilní číslo."
-
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr "Zadejte kód ZIP ve tvaru XXXXXX nebo XXX XXX."
 
@@ -4279,9 +4301,6 @@ msgstr "Zadejte indický stát nebo teritorium."
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
 msgstr ""
-
-msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
-msgstr "Telefonní čísla musí být ve tvaru 02X-8X, 03X-7X nebo 04X-6X."
 
 msgid "Indian state (two uppercase letters)"
 msgstr ""
@@ -4301,9 +4320,6 @@ msgstr ""
 
 msgid "Enter a valid VAT number."
 msgstr "Zadejte platné daňové identifikační číslo."
-
-msgid "Enter a valid Italian phone number."
-msgstr ""
 
 msgid "Check digit does not match."
 msgstr ""
@@ -4455,22 +4471,376 @@ msgstr "Okinawa"
 msgid "Enter a valid Kuwaiti Civil ID number"
 msgstr "Vložte platné kuvajtské občanské identifikační číslo"
 
+msgid "Kuwait City"
+msgstr ""
+
+msgid "Abdullah Al-Salem"
+msgstr ""
+
+msgid "Adailiya"
+msgstr ""
+
+msgid "Bneid Al Qar"
+msgstr ""
+
+msgid "Daiya"
+msgstr ""
+
+msgid "Dasma"
+msgstr ""
+
+msgid "Dasman"
+msgstr ""
+
+msgid "Doha"
+msgstr ""
+
+msgid "Faiha"
+msgstr ""
+
+msgid "Jaber Al Ahmad"
+msgstr ""
+
+msgid "Jibla"
+msgstr ""
+
+msgid "Kaifan"
+msgstr ""
+
+msgid "Khaldiya"
+msgstr ""
+
+msgid "Kuwait Free Trade Zone"
+msgstr ""
+
+msgid "Mansouriya"
+msgstr ""
+
+msgid "Mirqab"
+msgstr ""
+
+msgid "Mubarekiya Camps"
+msgstr ""
+
+msgid "Nahdha"
+msgstr ""
+
+msgid "North West Al-Sulaibikhat"
+msgstr ""
+
+msgid "Nuzha"
+msgstr ""
+
+msgid "Qadsiya"
+msgstr ""
+
+msgid "Qairawan"
+msgstr ""
+
+msgid "Qortuba"
+msgstr ""
+
+msgid "Rawda"
+msgstr ""
+
+msgid "Salhiya"
+msgstr ""
+
+msgid "Shamiya"
+msgstr ""
+
+msgid "Sharq"
+msgstr ""
+
+msgid "Shuwaikh Administrative"
+msgstr ""
+
+msgid "Shuwaikh Industrial"
+msgstr ""
+
+msgid "Shuwaikh Residential"
+msgstr ""
+
+msgid "Sulaibikhat"
+msgstr ""
+
+msgid "Surra"
+msgstr ""
+
+msgid "Yarmouk"
+msgstr ""
+
+msgid "Farwaniya"
+msgstr ""
+
+msgid "Abbasiya"
+msgstr ""
+
+msgid "Abdullah Al Mubarak Al Sabah"
+msgstr ""
+
+msgid "Abraq Khaitan"
+msgstr ""
+
+msgid "Al-Dajeej"
+msgstr ""
+
+msgid "Al-Shadadiya"
+msgstr ""
+
+msgid "Andalous"
+msgstr ""
+
+msgid "Ardiya"
+msgstr ""
+
+msgid "Ardiya Small Industrial"
+msgstr ""
+
+msgid "Ardiya Storage Zone"
+msgstr ""
+
+msgid "Firdous"
+msgstr ""
+
+msgid "Ishbiliya"
+msgstr ""
+
+msgid "Jeleeb Al-Shuyoukh"
+msgstr ""
+
+msgid "Khaitan"
+msgstr ""
+
+msgid "Omariya"
+msgstr ""
+
+msgid "Rabia"
+msgstr ""
+
+msgid "Rai"
+msgstr ""
+
+msgid "Rehab"
+msgstr ""
+
+msgid "Rigai"
+msgstr ""
+
+msgid "Sabah Al Nasser"
+msgstr ""
+
+msgid "South Khaitan - Exhibits"
+msgstr ""
+
+msgid "Mubarak Al Kabir"
+msgstr ""
+
+msgid "Abu Al Hasaniya"
+msgstr ""
+
+msgid "Abu Fatira"
+msgstr ""
+
+msgid "Adan"
+msgstr ""
+
+msgid "Al-Masayel"
+msgstr ""
+
+msgid "Coast Strip B"
+msgstr ""
+
+msgid "Fnaitees"
+msgstr ""
+
+msgid "Messila"
+msgstr ""
+
+msgid "Mubarak Al Kabeer"
+msgstr ""
+
+msgid "Qurain"
+msgstr ""
+
+msgid "Qusor"
+msgstr ""
+
+msgid "Sabah Al Salem"
+msgstr ""
+
+msgid "Sabhan Industrial Area"
+msgstr ""
+
+msgid "South Wista"
+msgstr ""
+
+msgid "West Abu Fatira Small Industrial"
+msgstr ""
+
+msgid "Hawally"
+msgstr ""
+
+msgid "Al-Siddeeq"
+msgstr ""
+
+msgid "Anjafa"
+msgstr ""
+
+msgid "Bayan"
+msgstr ""
+
+msgid "Hateen"
+msgstr ""
+
+msgid "Jabriya"
+msgstr ""
+
+msgid "Maidan Hawally"
+msgstr ""
+
+msgid "Mishref"
+msgstr ""
+
+msgid "Mubarak Al-Abdullah"
+msgstr ""
+
+msgid "Rumaithiya"
+msgstr ""
+
+msgid "Al-Salam"
+msgstr ""
+
+msgid "Salmiya"
+msgstr ""
+
+msgid "Salwa"
+msgstr ""
+
+msgid "Shaab"
+msgstr ""
+
+msgid "Shuhada"
+msgstr ""
+
+msgid "Zahra"
+msgstr ""
+
 msgid "Ahmadi"
 msgstr ""
 
-msgid "Farwaniyah"
+msgid "Abu Halifa"
+msgstr ""
+
+msgid "Al Khiran"
+msgstr ""
+
+msgid "Al Wafrah"
+msgstr ""
+
+msgid "Al-Nuwaiseeb"
+msgstr ""
+
+msgid "Al-Riqqa"
+msgstr ""
+
+msgid "Ali Sabah Al Salem"
+msgstr ""
+
+msgid "Assabahiyah"
+msgstr ""
+
+msgid "Bnaider"
+msgstr ""
+
+msgid "Dahar"
+msgstr ""
+
+msgid "Eqaila"
+msgstr ""
+
+msgid "Fahad Al Ahmad"
+msgstr ""
+
+msgid "Fahaheel"
+msgstr ""
+
+msgid "Fintas"
+msgstr ""
+
+msgid "Hadiya"
+msgstr ""
+
+msgid "Jaber Al Ali"
+msgstr ""
+
+msgid "Mahboula"
+msgstr ""
+
+msgid "Mangaf"
+msgstr ""
+
+msgid "Sabah Al Ahmad"
+msgstr ""
+
+msgid "Al Dubaiya"
+msgstr ""
+
+msgid "Mina Abdullah"
+msgstr ""
+
+msgid "Shuaiba Block 1"
+msgstr ""
+
+msgid "West Industrial Shuaiba"
+msgstr ""
+
+msgid "Zour"
 msgstr ""
 
 msgid "Jahra"
+msgstr ""
+
+msgid "Al Sulaibiya Industrial 1"
+msgstr ""
+
+msgid "Al Sulaibiya Industrial 2"
+msgstr ""
+
+msgid "Amgarah Industrial Area"
+msgstr ""
+
+msgid "Naeem"
+msgstr ""
+
+msgid "Naseem"
+msgstr ""
+
+msgid "Oyoun"
+msgstr ""
+
+msgid "Qasr"
+msgstr ""
+
+msgid "Saad Al Abdullah"
+msgstr ""
+
+msgid "Sulaibiya"
+msgstr ""
+
+msgid "Taima'"
+msgstr ""
+
+msgid "Waha"
+msgstr ""
+
+msgid "Farwaniyah"
 msgstr ""
 
 msgid "Capital"
 msgstr ""
 
 msgid "Hawalli"
-msgstr ""
-
-msgid "Mubarak Al Kabir"
 msgstr ""
 
 msgid "ID Code consists of exactly 11 decimal digits."
@@ -4484,12 +4854,6 @@ msgstr "ID kód obsahuje neplatné datum."
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
 msgstr "Zadejte poštovní směrovací číslo ve tvaru XXXXX nebo LT-XXXXX."
-
-msgid "Phone number can only contain digits"
-msgstr ""
-
-msgid "Could not validate the phone number"
-msgstr ""
 
 msgid "Alytus"
 msgstr "Alytus"
@@ -5764,10 +6128,7 @@ msgstr ""
 msgid "Dutch province"
 msgstr ""
 
-msgid "Dutch social security number (SoFi)"
-msgstr ""
-
-msgid "Dutch phone number"
+msgid "Dutch social security number (BSN)"
 msgstr ""
 
 msgid "Drenthe"
@@ -5803,13 +6164,7 @@ msgstr "Zeeland"
 msgid "Zuid-Holland"
 msgstr "Jižní Holandsko"
 
-msgid "Enter a valid SoFi number."
-msgstr ""
-
-msgid "Enter a valid bank account number."
-msgstr ""
-
-msgid "Bank account numbers have 1 - 7, 9 or 10 digits."
+msgid "Enter a valid BSN."
 msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
@@ -5825,9 +6180,6 @@ msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr ""
 
 msgid "Invalid post code."
-msgstr ""
-
-msgid "Invalid phone number."
 msgstr ""
 
 msgid "Invalid bank account number."
@@ -6088,16 +6440,10 @@ msgstr "Pole musí obsahovat 11 číslic."
 msgid "Enter a 5 digit postcode."
 msgstr ""
 
-msgid "Phone numbers must contain 9, 10 or 11 digits."
-msgstr ""
-
 msgid "Pakistani State"
 msgstr ""
 
 msgid "Pakistani Postcode"
-msgstr ""
-
-msgid "Pakistani Phone number"
 msgstr ""
 
 msgid "Azad Jammu & Kashmir"
@@ -6216,13 +6562,6 @@ msgstr ""
 "Čísla občanských karet mají tvar XXXXXXXXXYYX nebo XXXXXXXX-XYYX (kde X je "
 "číslice a Y je písmeno nebo číslo)."
 
-msgid ""
-"Phone numbers have at least 3 and at most 9 digits and may optionally be "
-"prefixed with '00351' or '+351'."
-msgstr ""
-"Telefonní čísla mají nejméně 3 a nejvýše 9 číslic a mohou mít předčíslí "
-"'00351' nebo '+351'."
-
 msgid "The specified number is not a valid Social Security number."
 msgstr "Zadané číslo není platné číslo sociálního pojištění."
 
@@ -6305,17 +6644,6 @@ msgstr "Zadejte platné CIF."
 
 msgid "Enter a valid CNP."
 msgstr "Zadejte platné CNP."
-
-msgid ""
-"Phone numbers may only have 7 or 10 digits, except the national short "
-"numbers which have 3 to 6 digits"
-msgstr ""
-
-msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr ""
-
-msgid "National short numbers (3 to 6 digits) must begin with \"1\""
-msgstr ""
 
 msgid "Enter a valid postal code in the format XXXXXX"
 msgstr "Zadejte platné poštovní směrovací číslo ve tvaru XXXXXX."
@@ -6680,10 +7008,6 @@ msgstr "Jämtland"
 msgid "Enter a 6-digit postal code."
 msgstr ""
 
-msgid ""
-"Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
-
 msgid "Invalid NRIC/FIN."
 msgstr ""
 
@@ -6695,9 +7019,6 @@ msgstr "EMSO je neplatné."
 
 msgid "Enter a valid tax number in form SIXXXXXXXX"
 msgstr "Zadejte platné daňové číslo ve tvaru SIXXXXXXXX."
-
-msgid "Enter phone number in form +386XXXXXXXX or 0XXXXXXXX."
-msgstr "Zadejte telefonní číslo ve tvaru +386XXXXXXXX nebo 0XXXXXXXX."
 
 msgid "Banska Bystrica"
 msgstr "Banská Bystrica"
@@ -7028,9 +7349,6 @@ msgstr ""
 
 msgid "Zaghouan"
 msgstr ""
-
-msgid "Phone numbers must be in 0XXX XXX XXXX format."
-msgstr "Telefonní čísla musí být ve tvaru 0XXX XXX XXXX."
 
 msgid "Enter a valid Turkish Identification number."
 msgstr "Vložte platné Turecké Identifikační číslo."

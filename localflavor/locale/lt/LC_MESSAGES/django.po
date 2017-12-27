@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-19 13:00+0200\n"
-"PO-Revision-Date: 2017-05-19 14:05+0000\n"
+"POT-Creation-Date: 2017-12-11 12:41+0100\n"
+"PO-Revision-Date: 2017-12-12 02:51+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Lithuanian (http://www.transifex.com/django/django-"
 "localflavor/language/lt/)\n"
@@ -169,9 +169,6 @@ msgstr "Australijos valstija"
 msgid "Australian Postcode"
 msgstr "Australijos pašto kodas"
 
-msgid "Australian Phone number"
-msgstr "Australijos telefono numeris"
-
 msgid "Australian Business Number"
 msgstr ""
 
@@ -234,15 +231,6 @@ msgstr "Valonija"
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Įveskite pašto kodą 1XXX - 9XXX formatu."
-
-msgid ""
-"Enter a valid phone number in one of the formats 0x xxx xx xx, 0xx xx xx xx, "
-"04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx."
-"xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
-msgstr ""
-"Įveskite teisingą telefono numerį vienu iš šių formatu: 0x xxx xx xx, 0xx xx "
-"xx xx, 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx."
-"xx, 0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
 
 msgid "The EGN is not valid"
 msgstr ""
@@ -319,9 +307,6 @@ msgstr "Jukonas"
 
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "Įveskite pašto kodą XXX XXX formatu."
-
-msgid "Phone numbers must be in XXX-XXX-XXXX format."
-msgstr "Telefono numeriai turi būti XXX-XXX-XXXX formatu."
 
 msgid "Enter a Canadian province or territory."
 msgstr "Įveskite Kanados provinciją arba teritoriją."
@@ -408,9 +393,6 @@ msgstr "Cugas"
 msgid "Zurich"
 msgstr "Ciurichas"
 
-msgid "Phone numbers must be in 0XX XXX XX XX format."
-msgstr "Telefono numeriai turi būti 0XX XXX XX XX formatu."
-
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
@@ -449,11 +431,97 @@ msgid "Invalid ID Card Number: Wrong location code"
 msgstr ""
 "Neteisingas identifikacinės kortelės numeris: Neteisingas vietovės kodas"
 
-msgid "Enter a valid phone number."
-msgstr "Įveskite tinkamą telefono numerį."
+msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
+msgstr ""
 
-msgid "Enter a valid cell number."
-msgstr "Įveskite teisingą mobiliojo telefono numerį."
+msgid "Invalid NIT."
+msgstr ""
+
+msgid "Occidental"
+msgstr ""
+
+msgid "Central"
+msgstr ""
+
+msgid "Oriental"
+msgstr ""
+
+msgid "Pinar del Río"
+msgstr ""
+
+msgid "Artemisa"
+msgstr ""
+
+msgid "Mayabeque"
+msgstr ""
+
+msgid "La Habana"
+msgstr ""
+
+msgid "Matanzas"
+msgstr ""
+
+msgid "Cienfuegos"
+msgstr ""
+
+msgid "Villa Clara"
+msgstr ""
+
+msgid "Sancti Spíritus"
+msgstr ""
+
+msgid "Ciego de Ávila"
+msgstr ""
+
+msgid "Camagüey"
+msgstr ""
+
+msgid "Las Tunas"
+msgstr ""
+
+msgid "Holguín"
+msgstr ""
+
+msgid "Granma"
+msgstr ""
+
+msgid "Santiago de Cuba"
+msgstr ""
+
+msgid "Guantánamo"
+msgstr ""
+
+msgid "Isla de la Juventud"
+msgstr ""
+
+msgid "Enter a Cuban region."
+msgstr ""
+
+msgid "Enter a Cuban province."
+msgstr ""
+
+msgid "Enter a valid postal code in the format XXXXX."
+msgstr ""
+
+msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
+msgstr ""
+
+msgid "Cuban regions (three uppercase letters)"
+msgstr ""
+
+msgid "Cuban provinces (three uppercase letters)"
+msgstr ""
+
+msgid "Cuban postal code"
+msgstr ""
+
+msgid "Cuban identity card number"
+msgstr ""
+
+msgid ""
+"Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
+"Number."
+msgstr ""
 
 msgid "Prague"
 msgstr "Praha"
@@ -2994,9 +3062,6 @@ msgstr ""
 msgid "Enter a postal code in the format XXXX."
 msgstr ""
 
-msgid "A phone number must be 8 digits and may have country code"
-msgstr "Telefono numeris turi būti 8 skaitmenų ir gali turėti šalies kodą."
-
 msgid "Ecuadorian province"
 msgstr ""
 
@@ -3261,12 +3326,6 @@ msgstr ""
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
 msgstr "Įveskite galiojantį pašto kodą 01XXX - 52XXX formatu."
 
-msgid ""
-"Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or "
-"9XXXXXXXX."
-msgstr ""
-"Įveskite teisingą telefono numerį 6XXXXXXXX, 8XXXXXXXX ar 9XXXXXXXX formatu."
-
 msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr "Prašome įvesti teisingą NIF, NIE ar CIF."
 
@@ -3296,12 +3355,6 @@ msgstr "Įveskite tinkamą suomišką socialinio draudimo numerį."
 
 msgid "Zip code"
 msgstr "Pašto kodas"
-
-msgid "Phone numbers must be in 0X XX XX XX XX format."
-msgstr "Telefono numeris turi būti 0X XX XX XX XX formatu."
-
-msgid "Phone number"
-msgstr "Telefono numeris"
 
 msgid "Select Department"
 msgstr "Pasirinkite departamentą"
@@ -3816,24 +3869,6 @@ msgstr "Įveskite validų 5 skaitmenų graikijos pašto kodą."
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr "Įveskite validų graikijos mokesčių numerį (9 skaitmenys)."
 
-msgid "Enter a 10-digit greek phone number."
-msgstr "Įveskite 10-ies skaitmenų Graikijos telefono numerį."
-
-msgid "Enter a greek mobile phone number starting with 69."
-msgstr "Įveskite Graikijos telefono numerį prasidedantį 69."
-
-#, python-format
-msgid "Phone number should not start with one of the followings: %s."
-msgstr "Telefono numeris neturėtų prasidėti vienu iš: %s."
-
-#, python-format
-msgid "Phone number must be in one of the following formats: %s."
-msgstr "Telefono numeris turi būti vienu iš %s formatų."
-
-#, python-format
-msgid "Phone number should start with one of the followings: %s."
-msgstr "Telefono numeris turėtų prasidėti vienu iš %s."
-
 msgid "Enter a valid 13 digit JMBG"
 msgstr "Įveskite teisingą 13-os skaitmenų JMBG"
 
@@ -3854,15 +3889,6 @@ msgstr "Skaitinė dalis negali būti nulis"
 
 msgid "Enter a valid 5 digit postal code"
 msgstr "Įveskite teisingą 5-ių ženklų pašto kodą"
-
-msgid "Enter a valid phone number"
-msgstr "Įveskite teisingą telefono numerį"
-
-msgid "Enter a valid area or mobile network code"
-msgstr "Įveskite teisingą vietovės arba mobiliojo ryšio tiekėjo kodą"
-
-msgid "The phone number is too long"
-msgstr "Telefono numeris per ilgas."
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr "Įveskite teisingą 19-os skaičių JMBAG prasidedantį 601983"
@@ -4278,9 +4304,6 @@ msgstr "Įveskite pašto kodą formatu XXXXXXX (arba XXXXX) sudarytą iš skaitm
 msgid "Enter a valid ID number."
 msgstr "Įveskite teisingą ID numerį."
 
-msgid "Enter a valid Mobile Number."
-msgstr "Įveskite validų mobiliojo telefono numerį."
-
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr "Įveskite ZIP pašto kodą XXXXXX arba XXX XXX formatu."
 
@@ -4290,9 +4313,6 @@ msgstr "Įveskite Indijos valstiją arba teritoriją."
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
 msgstr ""
-
-msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
-msgstr "Telefono numeriai turi būti 02X-8X, 03X-7X arba 04X-6X formatu."
 
 msgid "Indian state (two uppercase letters)"
 msgstr ""
@@ -4312,9 +4332,6 @@ msgstr ""
 
 msgid "Enter a valid VAT number."
 msgstr "Įveskite tinkamą PVM numerį"
-
-msgid "Enter a valid Italian phone number."
-msgstr ""
 
 msgid "Check digit does not match."
 msgstr ""
@@ -4466,22 +4483,376 @@ msgstr "Okinava"
 msgid "Enter a valid Kuwaiti Civil ID number"
 msgstr "Įveskite teisingą Kuveito tapatybės kortelės numerį."
 
+msgid "Kuwait City"
+msgstr ""
+
+msgid "Abdullah Al-Salem"
+msgstr ""
+
+msgid "Adailiya"
+msgstr ""
+
+msgid "Bneid Al Qar"
+msgstr ""
+
+msgid "Daiya"
+msgstr ""
+
+msgid "Dasma"
+msgstr ""
+
+msgid "Dasman"
+msgstr ""
+
+msgid "Doha"
+msgstr ""
+
+msgid "Faiha"
+msgstr ""
+
+msgid "Jaber Al Ahmad"
+msgstr ""
+
+msgid "Jibla"
+msgstr ""
+
+msgid "Kaifan"
+msgstr ""
+
+msgid "Khaldiya"
+msgstr ""
+
+msgid "Kuwait Free Trade Zone"
+msgstr ""
+
+msgid "Mansouriya"
+msgstr ""
+
+msgid "Mirqab"
+msgstr ""
+
+msgid "Mubarekiya Camps"
+msgstr ""
+
+msgid "Nahdha"
+msgstr ""
+
+msgid "North West Al-Sulaibikhat"
+msgstr ""
+
+msgid "Nuzha"
+msgstr ""
+
+msgid "Qadsiya"
+msgstr ""
+
+msgid "Qairawan"
+msgstr ""
+
+msgid "Qortuba"
+msgstr ""
+
+msgid "Rawda"
+msgstr ""
+
+msgid "Salhiya"
+msgstr ""
+
+msgid "Shamiya"
+msgstr ""
+
+msgid "Sharq"
+msgstr ""
+
+msgid "Shuwaikh Administrative"
+msgstr ""
+
+msgid "Shuwaikh Industrial"
+msgstr ""
+
+msgid "Shuwaikh Residential"
+msgstr ""
+
+msgid "Sulaibikhat"
+msgstr ""
+
+msgid "Surra"
+msgstr ""
+
+msgid "Yarmouk"
+msgstr ""
+
+msgid "Farwaniya"
+msgstr ""
+
+msgid "Abbasiya"
+msgstr ""
+
+msgid "Abdullah Al Mubarak Al Sabah"
+msgstr ""
+
+msgid "Abraq Khaitan"
+msgstr ""
+
+msgid "Al-Dajeej"
+msgstr ""
+
+msgid "Al-Shadadiya"
+msgstr ""
+
+msgid "Andalous"
+msgstr ""
+
+msgid "Ardiya"
+msgstr ""
+
+msgid "Ardiya Small Industrial"
+msgstr ""
+
+msgid "Ardiya Storage Zone"
+msgstr ""
+
+msgid "Firdous"
+msgstr ""
+
+msgid "Ishbiliya"
+msgstr ""
+
+msgid "Jeleeb Al-Shuyoukh"
+msgstr ""
+
+msgid "Khaitan"
+msgstr ""
+
+msgid "Omariya"
+msgstr ""
+
+msgid "Rabia"
+msgstr ""
+
+msgid "Rai"
+msgstr ""
+
+msgid "Rehab"
+msgstr ""
+
+msgid "Rigai"
+msgstr ""
+
+msgid "Sabah Al Nasser"
+msgstr ""
+
+msgid "South Khaitan - Exhibits"
+msgstr ""
+
+msgid "Mubarak Al Kabir"
+msgstr ""
+
+msgid "Abu Al Hasaniya"
+msgstr ""
+
+msgid "Abu Fatira"
+msgstr ""
+
+msgid "Adan"
+msgstr ""
+
+msgid "Al-Masayel"
+msgstr ""
+
+msgid "Coast Strip B"
+msgstr ""
+
+msgid "Fnaitees"
+msgstr ""
+
+msgid "Messila"
+msgstr ""
+
+msgid "Mubarak Al Kabeer"
+msgstr ""
+
+msgid "Qurain"
+msgstr ""
+
+msgid "Qusor"
+msgstr ""
+
+msgid "Sabah Al Salem"
+msgstr ""
+
+msgid "Sabhan Industrial Area"
+msgstr ""
+
+msgid "South Wista"
+msgstr ""
+
+msgid "West Abu Fatira Small Industrial"
+msgstr ""
+
+msgid "Hawally"
+msgstr ""
+
+msgid "Al-Siddeeq"
+msgstr ""
+
+msgid "Anjafa"
+msgstr ""
+
+msgid "Bayan"
+msgstr ""
+
+msgid "Hateen"
+msgstr ""
+
+msgid "Jabriya"
+msgstr ""
+
+msgid "Maidan Hawally"
+msgstr ""
+
+msgid "Mishref"
+msgstr ""
+
+msgid "Mubarak Al-Abdullah"
+msgstr ""
+
+msgid "Rumaithiya"
+msgstr ""
+
+msgid "Al-Salam"
+msgstr ""
+
+msgid "Salmiya"
+msgstr ""
+
+msgid "Salwa"
+msgstr ""
+
+msgid "Shaab"
+msgstr ""
+
+msgid "Shuhada"
+msgstr ""
+
+msgid "Zahra"
+msgstr ""
+
 msgid "Ahmadi"
 msgstr ""
 
-msgid "Farwaniyah"
+msgid "Abu Halifa"
+msgstr ""
+
+msgid "Al Khiran"
+msgstr ""
+
+msgid "Al Wafrah"
+msgstr ""
+
+msgid "Al-Nuwaiseeb"
+msgstr ""
+
+msgid "Al-Riqqa"
+msgstr ""
+
+msgid "Ali Sabah Al Salem"
+msgstr ""
+
+msgid "Assabahiyah"
+msgstr ""
+
+msgid "Bnaider"
+msgstr ""
+
+msgid "Dahar"
+msgstr ""
+
+msgid "Eqaila"
+msgstr ""
+
+msgid "Fahad Al Ahmad"
+msgstr ""
+
+msgid "Fahaheel"
+msgstr ""
+
+msgid "Fintas"
+msgstr ""
+
+msgid "Hadiya"
+msgstr ""
+
+msgid "Jaber Al Ali"
+msgstr ""
+
+msgid "Mahboula"
+msgstr ""
+
+msgid "Mangaf"
+msgstr ""
+
+msgid "Sabah Al Ahmad"
+msgstr ""
+
+msgid "Al Dubaiya"
+msgstr ""
+
+msgid "Mina Abdullah"
+msgstr ""
+
+msgid "Shuaiba Block 1"
+msgstr ""
+
+msgid "West Industrial Shuaiba"
+msgstr ""
+
+msgid "Zour"
 msgstr ""
 
 msgid "Jahra"
+msgstr ""
+
+msgid "Al Sulaibiya Industrial 1"
+msgstr ""
+
+msgid "Al Sulaibiya Industrial 2"
+msgstr ""
+
+msgid "Amgarah Industrial Area"
+msgstr ""
+
+msgid "Naeem"
+msgstr ""
+
+msgid "Naseem"
+msgstr ""
+
+msgid "Oyoun"
+msgstr ""
+
+msgid "Qasr"
+msgstr ""
+
+msgid "Saad Al Abdullah"
+msgstr ""
+
+msgid "Sulaibiya"
+msgstr ""
+
+msgid "Taima'"
+msgstr ""
+
+msgid "Waha"
+msgstr ""
+
+msgid "Farwaniyah"
 msgstr ""
 
 msgid "Capital"
 msgstr ""
 
 msgid "Hawalli"
-msgstr ""
-
-msgid "Mubarak Al Kabir"
 msgstr ""
 
 msgid "ID Code consists of exactly 11 decimal digits."
@@ -4495,12 +4866,6 @@ msgstr "Asmens kodą sudaro neteisinga data."
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
 msgstr "Įveskite pašto kodą XXXXX arba LT-XXXXX formatu."
-
-msgid "Phone number can only contain digits"
-msgstr ""
-
-msgid "Could not validate the phone number"
-msgstr ""
 
 msgid "Alytus"
 msgstr "Alytaus"
@@ -5775,10 +6140,7 @@ msgstr ""
 msgid "Dutch province"
 msgstr ""
 
-msgid "Dutch social security number (SoFi)"
-msgstr ""
-
-msgid "Dutch phone number"
+msgid "Dutch social security number (BSN)"
 msgstr ""
 
 msgid "Drenthe"
@@ -5814,13 +6176,7 @@ msgstr ""
 msgid "Zuid-Holland"
 msgstr ""
 
-msgid "Enter a valid SoFi number."
-msgstr ""
-
-msgid "Enter a valid bank account number."
-msgstr ""
-
-msgid "Bank account numbers have 1 - 7, 9 or 10 digits."
+msgid "Enter a valid BSN."
 msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
@@ -5836,9 +6192,6 @@ msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr ""
 
 msgid "Invalid post code."
-msgstr ""
-
-msgid "Invalid phone number."
 msgstr ""
 
 msgid "Invalid bank account number."
@@ -6099,16 +6452,10 @@ msgstr "Šis laukas priima 11 skaičių."
 msgid "Enter a 5 digit postcode."
 msgstr ""
 
-msgid "Phone numbers must contain 9, 10 or 11 digits."
-msgstr ""
-
 msgid "Pakistani State"
 msgstr ""
 
 msgid "Pakistani Postcode"
-msgstr ""
-
-msgid "Pakistani Phone number"
 msgstr ""
 
 msgid "Azad Jammu & Kashmir"
@@ -6233,13 +6580,6 @@ msgstr ""
 "Piliečio kortelės numeriai yra XXXXXXXXXYYX arba XXXXXXXX-XYYX formato (kur "
 "X yra skaitmuo ir Y – raidė)."
 
-msgid ""
-"Phone numbers have at least 3 and at most 9 digits and may optionally be "
-"prefixed with '00351' or '+351'."
-msgstr ""
-"Telefono numeriai turi bent 3 ir daugiausiai 9 skaitmenis ir gali prasidėti "
-"00351 arba +351."
-
 msgid "The specified number is not a valid Social Security number."
 msgstr "Nurodytas numeris nėra tinkamas socialinio draudimo numeris."
 
@@ -6322,17 +6662,6 @@ msgstr "Įveskite teisingą CIF numerį."
 
 msgid "Enter a valid CNP."
 msgstr "Įveskite teisingą CNP numerį."
-
-msgid ""
-"Phone numbers may only have 7 or 10 digits, except the national short "
-"numbers which have 3 to 6 digits"
-msgstr ""
-
-msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr ""
-
-msgid "National short numbers (3 to 6 digits) must begin with \"1\""
-msgstr ""
 
 msgid "Enter a valid postal code in the format XXXXXX"
 msgstr "Įveskite teisingą pašto kodą XXXXXX formatu"
@@ -6697,10 +7026,6 @@ msgstr "Jamtland"
 msgid "Enter a 6-digit postal code."
 msgstr ""
 
-msgid ""
-"Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
-
 msgid "Invalid NRIC/FIN."
 msgstr ""
 
@@ -6712,9 +7037,6 @@ msgstr "EMSO nėra teisingas."
 
 msgid "Enter a valid tax number in form SIXXXXXXXX"
 msgstr "Įveskite teisingą mokesčių numerį SIXXXXXXXX formatu."
-
-msgid "Enter phone number in form +386XXXXXXXX or 0XXXXXXXX."
-msgstr "Įveskite telefono numerį +386XXXXXXXX arba 0XXXXXXXX formatu."
 
 msgid "Banska Bystrica"
 msgstr ""
@@ -7045,9 +7367,6 @@ msgstr ""
 
 msgid "Zaghouan"
 msgstr ""
-
-msgid "Phone numbers must be in 0XXX XXX XXXX format."
-msgstr "Telefono numeriai turi būti 0XXX XXX XXXX formatu."
 
 msgid "Enter a valid Turkish Identification number."
 msgstr "Įveskite teisingą Turkijos identifikacinį numerį."

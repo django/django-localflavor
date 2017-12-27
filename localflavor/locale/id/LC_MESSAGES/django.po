@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-08 08:46+0200\n"
-"PO-Revision-Date: 2017-09-19 17:17+0000\n"
+"POT-Creation-Date: 2017-12-11 12:41+0100\n"
+"PO-Revision-Date: 2017-12-12 02:51+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-"
 "localflavor/language/id/)\n"
@@ -167,9 +167,6 @@ msgstr "Negara Bagian Australia"
 msgid "Australian Postcode"
 msgstr "Kode pos Australia"
 
-msgid "Australian Phone number"
-msgstr "Nomor telepon Australia"
-
 msgid "Australian Business Number"
 msgstr "Nomor Bisnis Australia"
 
@@ -232,16 +229,6 @@ msgstr "Wallonia"
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Masukkan kode pos yang valid dalam rentang dan format 1XXX - 9XXX."
-
-msgid ""
-"Enter a valid phone number in one of the formats 0x xxx xx xx, 0xx xx xx xx, "
-"04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx."
-"xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx or 04xxxxxxxx."
-msgstr ""
-"Masukkan nomor telepon yang valid dalam salah satu format sebagai berikut: "
-"0x xxx xx xx, 0xx xx xx xx, 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, 04xx/"
-"xx.xx.xx, 0x.xxx.xx.xx, 0xx.xx.xx.xx, 04xx.xx.xx.xx, 0xxxxxxxx, atau "
-"04xxxxxxxx."
 
 msgid "The EGN is not valid"
 msgstr "EGN tidak sah"
@@ -319,9 +306,6 @@ msgstr "Yukon"
 
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "Masukkan kode pos dalam format XXX XXX."
-
-msgid "Phone numbers must be in XXX-XXX-XXXX format."
-msgstr "Nomor telepon harus dalam format XXX-XXX-XXXX."
 
 msgid "Enter a Canadian province or territory."
 msgstr "Masukkan satu provinsi atau teritori di Kanada."
@@ -408,9 +392,6 @@ msgstr "Zug"
 msgid "Zurich"
 msgstr "Zurich"
 
-msgid "Phone numbers must be in 0XX XXX XX XX format."
-msgstr "Nomor telepon harus dalam format 0XX XXX XX XX"
-
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
@@ -446,11 +427,11 @@ msgstr "Nomor Kartu ID tidak valid: Tanggal lahir salah"
 msgid "Invalid ID Card Number: Wrong location code"
 msgstr "Nomor Kartu ID tidak valid: Kode lokasi salah"
 
-msgid "Enter a valid phone number."
-msgstr "Masukkan nomor telepon yang valid."
+msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
+msgstr ""
 
-msgid "Enter a valid cell number."
-msgstr "Masukkan nomor ponsel yang valid."
+msgid "Invalid NIT."
+msgstr ""
 
 msgid "Occidental"
 msgstr ""
@@ -3077,9 +3058,6 @@ msgstr "Sumba"
 msgid "Enter a postal code in the format XXXX."
 msgstr "Masukkan kode pos dalam bentuk XXXX."
 
-msgid "A phone number must be 8 digits and may have country code"
-msgstr "Nomor telepon harus berupa 8 angka dan mungkin memiliki kode negara"
-
 msgid "Ecuadorian province"
 msgstr "Propinsi Ecuadorian"
 
@@ -3344,13 +3322,6 @@ msgstr "Mellila"
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
 msgstr "Masukkan kode pos yang valid dalam format 01XXX - 52XXX"
 
-msgid ""
-"Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or "
-"9XXXXXXXX."
-msgstr ""
-"Masukkan nomor telepon yang valid dalam format 6XXXXXXXX, 8XXXXXXXX atau "
-"9XXXXXXXX."
-
 msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr "Mohon masukkan NIF, NIE atau CIF yang valid."
 
@@ -3379,12 +3350,6 @@ msgstr "Masukkan nomor identitas Finlandia yang valid."
 
 msgid "Zip code"
 msgstr "Kode zip"
-
-msgid "Phone numbers must be in 0X XX XX XX XX format."
-msgstr "Nomor telepon harus dalam format 0X XX XX XX XX."
-
-msgid "Phone number"
-msgstr "Nomor telepon"
 
 msgid "Select Department"
 msgstr "Pilih Departemen"
@@ -3901,24 +3866,6 @@ msgstr "Masukkan 5-angka sah kode pos yunani."
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr "Masukkan angka sah pajak yunani (9 angka)."
 
-msgid "Enter a 10-digit greek phone number."
-msgstr "Masukkan 10-angka nomor telepon yunani."
-
-msgid "Enter a greek mobile phone number starting with 69."
-msgstr "Masukkan nomor telepon bergerak yunani dimulai dengan 69."
-
-#, python-format
-msgid "Phone number should not start with one of the followings: %s."
-msgstr "Nomor telepon harus tidak dimulai dengan satu dari berikut: %s."
-
-#, python-format
-msgid "Phone number must be in one of the following formats: %s."
-msgstr "Nomor telepon harus berada di satu dari bentuk berikut: %s."
-
-#, python-format
-msgid "Phone number should start with one of the followings: %s."
-msgstr "Nomor telepon harus dimulai dengan satu dari berikut: %s."
-
 msgid "Enter a valid 13 digit JMBG"
 msgstr "Masukkan 13 angka JMBG"
 
@@ -3939,15 +3886,6 @@ msgstr "Bagian nomor tidak boleh nol"
 
 msgid "Enter a valid 5 digit postal code"
 msgstr "Masukkan 5 angka kode pos yang valid"
-
-msgid "Enter a valid phone number"
-msgstr "Masukkan nomor telepon yang valid"
-
-msgid "Enter a valid area or mobile network code"
-msgstr "Masukkan kode area atau jaringan ponsel yang valid"
-
-msgid "The phone number is too long"
-msgstr "Nomor telepon terlalu panjang"
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr "Masukkan 5 angka JMBAG valid diawali dengan 601983"
@@ -4363,9 +4301,6 @@ msgstr "Masukkan kode pos dalam bentuk XXXXXXX (atau XXXXX) - hanya angka"
 msgid "Enter a valid ID number."
 msgstr "Masukkan nomor ID yang valid."
 
-msgid "Enter a valid Mobile Number."
-msgstr "Masukkan nomor HP yang benar."
-
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr "Masukkan kode pos dalam format XXXXXX atau XXX XXX."
 
@@ -4376,9 +4311,6 @@ msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
 msgstr ""
 "Masukkan nomor sah Aadhaar dalam bentuk XXXX XXXX XXXX or XXXX-XXXX-XXXX."
-
-msgid "Phone numbers must be in 02X-8X or 03X-7X or 04X-6X format."
-msgstr "Format nomor telepon yang benar adalah 02X-8X atau 03X-7X atau 04X-6X"
 
 msgid "Indian state (two uppercase letters)"
 msgstr "Negara bagian Indian (dua huruf besar)"
@@ -4399,9 +4331,6 @@ msgstr "Masukkan kode pajak yang benar."
 
 msgid "Enter a valid VAT number."
 msgstr "Masukkan nomor VAT yang valid."
-
-msgid "Enter a valid Italian phone number."
-msgstr "Masukkan nomor telepon Italia yang sah."
 
 msgid "Check digit does not match."
 msgstr "Pemeriksaan angka tidak cocok."
@@ -4936,12 +4865,6 @@ msgstr "Kode ID mengandung tanggal tidak sah"
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
 msgstr "Masukkan kode pos dalam bentuk XXXXX atau LT-XXXXX."
-
-msgid "Phone number can only contain digits"
-msgstr "Nomor telepon hanya menganding angka"
-
-msgid "Could not validate the phone number"
-msgstr "Tidak dapat mengecek nomor telepon"
 
 msgid "Alytus"
 msgstr "Alytus"
@@ -6216,11 +6139,8 @@ msgstr "Kode zip Belanda"
 msgid "Dutch province"
 msgstr "Propinsi Belanda"
 
-msgid "Dutch social security number (SoFi)"
-msgstr "Nomor keamanan sosial Belanda (SoFI)"
-
-msgid "Dutch phone number"
-msgstr "Nomor telepon belanda"
+msgid "Dutch social security number (BSN)"
+msgstr ""
 
 msgid "Drenthe"
 msgstr "Drenthe"
@@ -6255,14 +6175,8 @@ msgstr "Zeeland"
 msgid "Zuid-Holland"
 msgstr "Zuid-Holland"
 
-msgid "Enter a valid SoFi number."
-msgstr "Masukkan nomor SoFI yang sah."
-
-msgid "Enter a valid bank account number."
-msgstr "Masukkan nomor akun bank yang sah."
-
-msgid "Bank account numbers have 1 - 7, 9 or 10 digits."
-msgstr "Nomor akun bank mempunyai 1 - 7, 9 atau 10 angka."
+msgid "Enter a valid BSN."
+msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
 msgstr "Masukkan nomor jaminan sosial Norwegia yang sah."
@@ -6279,9 +6193,6 @@ msgstr ""
 
 msgid "Invalid post code."
 msgstr "Kode pos tidak sah."
-
-msgid "Invalid phone number."
-msgstr "Nomor telepon tidak sah."
 
 msgid "Invalid bank account number."
 msgstr "Nomor akun bank tidak sah"
@@ -6541,17 +6452,11 @@ msgstr "Bidang ini membutuhkan isian 11 angka."
 msgid "Enter a 5 digit postcode."
 msgstr "Masukkan 5 angka kode pos."
 
-msgid "Phone numbers must contain 9, 10 or 11 digits."
-msgstr "Nomor telepon harus mengandung 9, 10 atau 11 angka."
-
 msgid "Pakistani State"
 msgstr "Negara Bagian Pakistan"
 
 msgid "Pakistani Postcode"
 msgstr "Kode pos Pakistan"
-
-msgid "Pakistani Phone number"
-msgstr "Nomor telepon Pakistan"
 
 msgid "Azad Jammu & Kashmir"
 msgstr "Azad Jammu & Kashmir"
@@ -6669,13 +6574,6 @@ msgstr ""
 "Nomor Kartu Penduduk mempunyai bentuk XXXXXXXXXYYX atau XXXXXXXX-XYYX "
 "(dimana X adalah sebuah angka dan Y adalah sebuah karakter alpanunerik)."
 
-msgid ""
-"Phone numbers have at least 3 and at most 9 digits and may optionally be "
-"prefixed with '00351' or '+351'."
-msgstr ""
-"Nomor telepon mempunyai setidaknya 3 dan terbesar 9 angka dan boleh pilihan "
-"diawali dengan '00351' atau '+351'."
-
 msgid "The specified number is not a valid Social Security number."
 msgstr "Nomor yang ditentukan nomor Kemanan Sosial yang tidak sah."
 
@@ -6758,19 +6656,6 @@ msgstr "Masukkan CIF yang valid."
 
 msgid "Enter a valid CNP."
 msgstr "Masukkan CNP yang valid."
-
-msgid ""
-"Phone numbers may only have 7 or 10 digits, except the national short "
-"numbers which have 3 to 6 digits"
-msgstr ""
-"Nomor telepon hanya mempunyai 7 atau 10 angka, kecuali nomor pendek nasional "
-"yang mempunyai 3 sampai 6 angka."
-
-msgid "Normal phone numbers (7 or 10 digits) must begin with \"0\""
-msgstr "Nomor telepon biasa (7 atau 10 angka) harus dimulai dengan \"0\" "
-
-msgid "National short numbers (3 to 6 digits) must begin with \"1\""
-msgstr "Nomor pendek (3 sampai 6 digit) harus dimulai dengan \"1\""
 
 msgid "Enter a valid postal code in the format XXXXXX"
 msgstr "Masukkan kode pos yang valid dalam format XXXXXX"
@@ -7135,11 +7020,6 @@ msgstr "Jämtland"
 msgid "Enter a 6-digit postal code."
 msgstr "Masukkan 6 angka kode pos."
 
-msgid ""
-"Phone numbers must contain 8 digits and start with either 6, or 8, or 9."
-msgstr ""
-"Nomor telpon harus terdiri dari 8 digit atau dimulai dengan 6 atau 8 atau 9."
-
 msgid "Invalid NRIC/FIN."
 msgstr "NRIC/FIN tidak sah."
 
@@ -7151,9 +7031,6 @@ msgstr "EMSO tidak valid."
 
 msgid "Enter a valid tax number in form SIXXXXXXXX"
 msgstr "Masukkan nomor pajak yang valid dalam format SIXXXXXXXX"
-
-msgid "Enter phone number in form +386XXXXXXXX or 0XXXXXXXX."
-msgstr "Masukkan nomor telepon dalam format +386XXXXXXXX atau 0XXXXXXXX."
 
 msgid "Banska Bystrica"
 msgstr "Banska Bystrica"
@@ -7484,9 +7361,6 @@ msgstr "Tunis"
 
 msgid "Zaghouan"
 msgstr "Zaghouan"
-
-msgid "Phone numbers must be in 0XXX XXX XXXX format."
-msgstr "Nomor telepon harus dalam format 0XXX XXX XXXX."
 
 msgid "Enter a valid Turkish Identification number."
 msgstr "Masukkan nomor Identifikasi Turki yang valid."
