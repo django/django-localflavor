@@ -1,6 +1,25 @@
 Changelog
 =========
 
+2.1   (unreleased)
+------------------
+
+New flavors:
+
+- None
+
+New fields for existing flavors:
+
+- None
+
+Modifications to existing flavors:
+
+- None
+
+Other changes:
+
+- None
+
 2.0   (2017-12-30)
 ------------------
 
