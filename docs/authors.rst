@@ -55,6 +55,7 @@ Authors
 * Jan Pieter Waagmeester
 * Jérémie Ferry
 * Jocelyn Delalande
+* Johannes Hoppe
 * Johnny Lee Othon
 * Jonas Ghyllebert
 * Joseph Kocherhans

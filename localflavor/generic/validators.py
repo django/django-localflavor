@@ -270,3 +270,84 @@ class EANValidator(object):
             value = re.compile(r'[^\d]+').sub('', value)
         if not checksums.ean(value):
             raise ValidationError(self.message, code='invalid')
+
+
+VATIN_PATTERN_MAP = {
+    'AT': r'^ATU\d{8}$',
+    'BE': r'^BE0?\d{9}$',
+    'BG': r'^BG\d{9,10}$',
+    'HR': r'^HR\d{11}$',
+    'CY': r'^CY\d{8}[A-Z]$',
+    'CZ': r'^CZ\d{8,10}$',
+    'DE': r'^DE\d{9}$',
+    'DK': r'^DK\d{8}$',
+    'EE': r'^EE\d{9}$',
+    'EL': r'^EL\d{9}$',
+    'ES': r'^ES[A-Z0-9]\d{7}[A-Z0-9]$',
+    'FI': r'^FI\d{8}$',
+    'FR': r'^FR[A-HJ-NP-Z0-9][A-HJ-NP-Z0-9]\d{9}$',
+    'GB': r'^(GB(GD|HA)\d{3}|GB\d{9}|GB\d{12})$',
+    'HU': r'^HU\d{8}$',
+    'IE': r'^IE\d[A-Z0-9\+\*]\d{5}[A-Z]{1,2}$',
+    'IT': r'^IT\d{11}$',
+    'LT': r'^LT(\d{9}|\d{12})$',
+    'LU': r'^LU\d{8}$',
+    'LV': r'^LV\d{11}$',
+    'MT': r'^MT\d{8}$',
+    'NL': r'^NL\d{9}B\d{2}$',
+    'PL': r'^PL\d{10}$',
+    'PT': r'^PT\d{9}$',
+    'RO': r'^RO\d{2,10}$',
+    'SE': r'^SE\d{10}01$',
+    'SI': r'^SI\d{8}$',
+    'SK': r'^SK\d{10}$',
+}
+"""
+Map of country codes and regular expressions.
+
+See https://en.wikipedia.org/wiki/VAT_identification_number
+"""
+
+VATIN_COUNTRY_CODE_LENGTH = 2
+"""
+Length of the country code prefix of a VAT identification number.
+
+Codes are two letter ISO 3166-1 alpha-2 codes except for Greece that uses
+ISO 639-1. 
+"""
+
+
+class VATINValidator:
+    """
+    A validator for VAT identification numbers.
+
+    Currently only supports European VIES VAT identification numbers.
+
+    See See https://en.wikipedia.org/wiki/VAT_identification_number
+    """
+    messages = {
+        'country_code': _('%(country_code)s is not a valid country code.'),
+        'vatin': _('%(vatin)s is not a valid VAT identification number.'),
+    }
+
+    def __call__(self, value):
+        country_code, number = self.clean(value)
+        try:
+            match = re.match(VATIN_PATTERN_MAP[country_code], value)
+            if not match:
+                raise ValidationError(
+                    self.messages['vatin'],
+                    code='vatin',
+                    params={'vatin': value}
+                )
+
+        except KeyError:
+            raise ValidationError(
+                self.messages['country_code'],
+                code='country_code',
+                params={'country_code': country_code}
+            )
+
+    def clean(self, value):
+        """Return tuple of country code and number."""
+        return value[:VATIN_COUNTRY_CODE_LENGTH], value[VATIN_COUNTRY_CODE_LENGTH:]
