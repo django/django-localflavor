@@ -18,7 +18,7 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Added VAT identifcation number validator for all EU locales.
 
 2.0   (2017-12-30)
 ------------------
