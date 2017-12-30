@@ -4,7 +4,13 @@ Changelog
 2.0   (unreleased)
 ------------------
 
-All deprecated code has been removed in this release. See details below.
+All deprecated code has been removed in this release. Specifically, all of the phone number fields have been removed
+and we recommend that you use `django-phonenumber-field <https://github.com/stefanfoulis/django-phonenumber-field>`_
+instead. If you need to use django-phonenumber-field with Django 2.0, you will need to use the version from the
+`Django 2.0 support pull request <https://github.com/stefanfoulis/django-phonenumber-field/pull/196>`_ until this pull
+request is merged.
+
+A full list of the removed classes and functions is the "Other changes" section below.
 
 New flavors:
 
