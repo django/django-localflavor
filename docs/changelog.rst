@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0   (unreleased)
+2.0   (2017-12-30)
 ------------------
 
 All deprecated code has been removed in this release. Specifically, all of the phone number fields have been removed
