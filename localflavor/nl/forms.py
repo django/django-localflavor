@@ -36,7 +36,9 @@ class NLBSNFormField(forms.CharField):
     """
     A Dutch social security number (BSN) field.
 
-    http://nl.wikipedia.org/wiki/Sofinummer
+    https://nl.wikipedia.org/wiki/Burgerservicenummer
+
+    Note that you may only process the BSN if you have a legal basis to do so!
 
     .. versionadded:: 1.6
     """
