@@ -53,6 +53,7 @@ Authors
 * James Bennett
 * Jannis Leidel
 * Jan Pieter Waagmeester
+* Jarmo van Lenthe
 * Jérémie Ferry
 * Jocelyn Delalande
 * Johannes Hoppe

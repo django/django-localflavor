@@ -6,8 +6,8 @@ from django.test import SimpleTestCase
 
 from localflavor.nl import forms, models, validators
 
-from .forms import NLPlaceForm
-from .models import NLPlace
+from .forms import NLCarForm, NLPlaceForm
+from .models import NLCar, NLPlace
 
 
 class NLLocalFlavorValidatorTests(SimpleTestCase):
@@ -45,6 +45,19 @@ class NLLocalFlavorValidatorTests(SimpleTestCase):
             'foo',
         ]
         self.assert_validator(validators.NLBSNFieldValidator(), valid, invalid)
+
+    def test_NLLicensePlateValidator(self):
+        valid = [
+            '12-AA-13',
+            'CDJ-123',
+            'AA-01',
+        ]
+        invalid = [
+            'ZZZ-123',
+            'AA-AAA-1',
+            '11-123-A',
+        ]
+        self.assert_validator(validators.NLLicensePlateFieldValidator(), valid, invalid)
 
 
 class NLLocalFlavorModelTests(SimpleTestCase):
@@ -84,6 +97,27 @@ class NLLocalFlavorModelTests(SimpleTestCase):
         m.zipcode = '2403 bw'
         m.clean_fields()
         self.assertEquals(str(m.zipcode), '2403 BW')
+
+    def test_NL_car(self):
+        m = NLCar(**{
+            'license_plate': 'AB-12-CD'
+        })
+
+        m.clean_fields()
+        self.assertEqual(str(m.license_plate), 'AB-12-CD')
+
+    def test_NL_car_cleanup(self):
+        m = NLCar(**{
+            'license_plate': 'AA11AA'
+        })
+
+        # incorrect license plate number, should raise an error
+        self.assertRaises(ValidationError, lambda: m.clean_fields())
+
+        # correct license plate number, should be clean now
+        m.license_plate = 'AA-11-AA'
+        m.clean_fields()
+        self.assertEquals(str(m.license_plate), 'AA-11-AA')
 
 
 class NLLocalFlavorFormTests(SimpleTestCase):
@@ -156,3 +190,31 @@ class NLLocalFlavorFormTests(SimpleTestCase):
             'bsn': '123456782',
         })
         self.assertTrue(form.is_valid())
+
+    def test_NLLicensePlateFormField(self):
+        error_invalid = ['Enter a valid license plate']
+        valid = {
+            '12-AAA-1': '12-AAA-1',
+            '12-AAA-1': '12-AAA-1',
+            'CDJ-123': 'CDJ-123',
+        }
+        invalid = {
+            'AAA-AA-1': error_invalid,
+            'CDA-111': error_invalid,
+            'a1s2d3': error_invalid,
+        }
+        self.assertFieldOutput(forms.NLLicensePlateFormField, valid, invalid)
+
+    def test_NL_car_ModelForm_valid(self):
+        form = NLCarForm({
+            'license_plate': 'AA-11-AA',
+        })
+
+        self.assertTrue(form.is_valid())
+
+    def test_NL_car_ModelForm_invalid(self):
+        form = NLCarForm({
+            'license_plate': 'AA-AAA-1',
+        })
+
+        self.assertFalse(form.is_valid())

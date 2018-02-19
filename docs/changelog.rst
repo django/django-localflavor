@@ -10,11 +10,11 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- `NLLicensePlateField` in NL flavor.
 
 Modifications to existing flavors:
 
-- None
+- Added `NLLicensePlateField` to NL flavor.
 
 Other changes:
 
