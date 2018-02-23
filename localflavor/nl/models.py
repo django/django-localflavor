@@ -86,7 +86,7 @@ class NLBSNField(models.CharField):
 
 class NLLicensePlateField(models.CharField):
     """
-    A Dutch car license plate.
+    A Dutch license plate.
 
     This model field uses :class:`validators.NLLicensePlateFieldValidator` for validation.
 
