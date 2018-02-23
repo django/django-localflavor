@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 12:41+0100\n"
+"POT-Creation-Date: 2018-02-23 12:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4637,12 +4637,12 @@ msgstr ""
 msgid "Invalid checksum for CIF."
 msgstr ""
 
-#: es/forms.py:148
+#: es/forms.py:146
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr ""
 
-#: es/forms.py:149
+#: es/forms.py:147
 msgid "Invalid checksum for bank account number."
 msgstr ""
 
@@ -5326,6 +5326,16 @@ msgstr ""
 
 #: generic/validators.py:255
 msgid "Not a valid EAN code."
+msgstr ""
+
+#: generic/validators.py:329
+#, python-format
+msgid "%(country_code)s is not a valid country code."
+msgstr ""
+
+#: generic/validators.py:330
+#, python-format
+msgid "%(vatin)s is not a valid VAT identification number."
 msgstr ""
 
 #: gr/forms.py:18
@@ -8364,6 +8374,10 @@ msgstr ""
 msgid "Dutch social security number (BSN)"
 msgstr ""
 
+#: nl/models.py:96
+msgid "Dutch license plate"
+msgstr ""
+
 #: nl/nl_provinces.py:8
 msgid "Drenthe"
 msgstr ""
@@ -8410,6 +8424,10 @@ msgstr ""
 
 #: nl/validators.py:36
 msgid "Enter a valid BSN."
+msgstr ""
+
+#: nl/validators.py:66
+msgid "Enter a valid license plate"
 msgstr ""
 
 #: no/forms.py:42
