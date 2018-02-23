@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from . import forms
 from .nl_provinces import PROVINCE_CHOICES
-from .validators import NLBSNFieldValidator, NLZipCodeFieldValidator
+from .validators import NLBSNFieldValidator, NLLicensePlateFieldValidator, NLZipCodeFieldValidator
 
 
 class NLZipCodeField(models.CharField):
@@ -82,3 +82,28 @@ class NLBSNField(models.CharField):
         defaults = {'form_class': forms.NLBSNFormField}
         defaults.update(kwargs)
         return super(NLBSNField, self).formfield(**defaults)
+
+
+class NLLicensePlateField(models.CharField):
+    """
+    A Dutch license plate.
+
+    This model field uses :class:`validators.NLLicensePlateFieldValidator` for validation.
+
+    .. versionadded:: 2.1
+    """
+
+    description = _('Dutch license plate')
+
+    default_form_field = forms.NLLicensePlateFormField
+
+    validators = [NLLicensePlateFieldValidator()]
+
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('max_length', 8)
+        super(NLLicensePlateField, self).__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': forms.NLLicensePlateFormField}
+        defaults.update(kwargs)
+        return super(NLLicensePlateField, self).formfield(**defaults)
