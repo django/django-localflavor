@@ -70,6 +70,7 @@ Authors
 * Łukasz Langa
 * Luke Benstead
 * luyikei
+* Nicola Valentini
 * Malcolm Tredinnick
 * Martin Ogden
 * Marti Raudsepp
