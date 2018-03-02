@@ -3843,15 +3843,15 @@ msgid "Not a valid IBAN."
 msgstr "Ungültige IBAN."
 
 msgid "BIC codes have either 8 or 11 characters."
-msgstr ""
+msgstr "BIC-Codes haben entweder 8 oder 11 Stellen."
 
 #, python-format
 msgid "%s is not a valid institution code."
-msgstr ""
+msgstr "%s ist kein gültiger Institutions-Code."
 
 #, python-format
 msgid "%s is not a valid country code."
-msgstr ""
+msgstr "%s ist kein gültiger Länder-Code."
 
 msgid "Not a valid EAN code."
 msgstr ""
