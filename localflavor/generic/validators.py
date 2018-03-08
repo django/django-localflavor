@@ -317,6 +317,7 @@ ISO 639-1.
 """
 
 
+@deconstructible
 class VATINValidator:
     """
     A validator for VAT identification numbers.
