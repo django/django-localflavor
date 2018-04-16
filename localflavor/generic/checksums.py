@@ -40,7 +40,7 @@ def ean(candidate):
     try:
         calculated_checksum = sum(
             int(digit) * EAN_LOOKUP[i % 2] for i, digit in enumerate(reversed(given_number)))
-        calculated_checksum = 10 - (calculated_checksum % 10)
+        calculated_checksum = 9 - ((calculated_checksum - 1) % 10)
         return str(calculated_checksum) == given_checksum
     except ValueError:  # Raised if an int conversion fails
         return False

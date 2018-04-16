@@ -19,6 +19,9 @@ Modifications to existing flavors:
 Other changes:
 
 - Added VAT identifcation number validator for all EU locales.
+- Fix EAN validation when intermediate checksum is 10
+  (`gh-331 <https://github.com/django/django-localflavor/issues/331>`_).
+
 
 2.0   (2017-12-30)
 ------------------

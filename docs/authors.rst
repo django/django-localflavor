@@ -29,6 +29,7 @@ Authors
 * Daniela Ponader
 * Danielle Madeley
 * Daniel Roschka
+* Didier 'OdyX' Raboud
 * Diederik van der Boor
 * Dmitry Dygalo
 * d.merc
