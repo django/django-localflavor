@@ -43,6 +43,8 @@ class TestUtilsChecksums(unittest.TestCase):
             (73513538, False),
             ('4006381333931', True),
             (4006381333931, True),
+            (7567554394380, True),
+            ('7567554394380', True),
             ('abc', False),
             (None, False),
             (object(), False),
