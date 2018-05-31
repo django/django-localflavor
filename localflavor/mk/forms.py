@@ -80,13 +80,11 @@ class UMCNField(RegexField):
             raise ValidationError(self.error_messages['checksum'])
 
     def _validate_checksum(self, value):
-        a, b, c, d, e, f, g, h, i, j, k, l, K = [
-            int(digit) for digit in value]
-        m = 11 - ((7 * (a + g) + 6 * (b + h) + 5 * (
-            c + i) + 4 * (d + j) + 3 * (e + k) + 2 * (f + l)) % 11)
-        if 1 <= m <= 9 and K == m:
+        a, b, c, d, e, f, g, h, i, j, k, l, checksum = [int(digit) for digit in value]
+        m = 11 - ((7 * (a + g) + 6 * (b + h) + 5 * (c + i) + 4 * (d + j) + 3 * (e + k) + 2 * (f + l)) % 11)
+        if 1 <= m <= 9 and checksum == m:
             return True
-        elif m == 11 and K == 0:
+        elif m == 11 and checksum == 0:
             return True
         else:
             return False
