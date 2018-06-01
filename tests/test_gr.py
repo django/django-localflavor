@@ -66,8 +66,11 @@ class GRLocalFlavorTests(SimpleTestCase):
         invalid = {
             '20207201920': error,
             '12345678901': error,
+            'ab345678901': error,
+            '00000000000': error,
             '1': error,
             '123': error,
             'aaa': error,
         }
         self.assertFieldOutput(GRSocialSecurityNumberCodeField, valid, invalid)
+        self.assertFieldOutput(GRSocialSecurityNumberCodeField, {'00000000000': '00000000000',}, {}, field_kwargs={'allow_test_value': True})

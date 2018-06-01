@@ -105,9 +105,9 @@ class GRSocialSecurityNumberCodeField(Field):
         val = re.sub('[\-\s\(\)]', '', force_text(value))
         if(len(val) < 11):
             raise ValidationError(self.error_messages['invalid'])
+        if self.allow_test_value and val == '00000000000':
+            return val
         if not all(char.isdigit() for char in val):
-            raise ValidationError(self.error_messages['invalid'])
-        if not self.allow_test_value and val == '00000000000':
             raise ValidationError(self.error_messages['invalid'])
 
         self.check_date(val)
