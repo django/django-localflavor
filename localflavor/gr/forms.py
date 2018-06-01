@@ -1,5 +1,5 @@
 """Greek-specific forms helpers."""
-import re
+import re, datetime
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, ValidationError
@@ -59,4 +59,53 @@ class GRTaxNumberCodeField(Field):
             mod = 0
         if mod != check:
             raise ValidationError(self.error_messages['invalid'])
+        return val
+
+
+class GRSocialSecurityNumberCodeField(Field):
+    """
+    Greek social security number (AMKA) field.
+
+    The allow_test_value option can be used to enable the usage of the
+    non valid 00000000000 (11 zeros) value for testing and development
+    """
+
+    default_error_messages = {
+        'invalid': _('Enter a valid greek social security number (AMKA - 11 digits).'),
+    }
+
+    def __init__(self, allow_test_value=False, *args, **kwargs):
+        self.allow_test_value = allow_test_value
+        super(GRSocialSecurityNumberCodeField, self).__init__(*args, **kwargs)
+
+    def clean(self, value):
+        super(GRSocialSecurityNumberCodeField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return ''
+
+        val = re.sub('[\-\s\(\)]', '', force_text(value))
+        if(len(val) < 11):
+            raise ValidationError(self.error_messages['invalid'])
+        if not all(char.isdigit() for char in val):
+            raise ValidationError(self.error_messages['invalid'])
+        if not self.allow_test_value and val == '00000000000':
+            raise ValidationError(self.error_messages['invalid'])
+
+        # Uses the Luhn algorithm: https://en.wikipedia.org/wiki/Luhn_algorithm
+        digits = list(map(int, val))
+        s = 0
+        for idx, d in enumerate(reversed(digits)):
+            v = d
+            if (idx+1) % 2 == 0:
+                d *= 2
+            if d > 9:
+                d -= 9
+            s+=d
+        if s % 10 != 0:
+            raise ValidationError(self.error_messages['invalid'])
+        try:
+            datetime.datetime.strptime(val[:6], '%d%m%y')
+        except:
+            raise ValidationError(self.error_messages['invalid'])
+
         return val

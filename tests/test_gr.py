@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 
-from localflavor.gr.forms import GRPostalCodeField, GRTaxNumberCodeField
+from localflavor.gr.forms import GRPostalCodeField, GRTaxNumberCodeField, GRSocialSecurityNumberCodeField
 
 
 class GRLocalFlavorTests(SimpleTestCase):
@@ -52,3 +52,22 @@ class GRLocalFlavorTests(SimpleTestCase):
             'b231a': error,
         }
         self.assertFieldOutput(GRPostalCodeField, valid, invalid)
+
+    def test_GRSocialSecurityNumberCodeField(self):
+        """It's not easy finding valid AMKAs in the internet, these were created by hand"""
+        error = ['Enter a valid greek social security number (AMKA - 11 digits).']
+
+        valid = {
+            '20107201921': '20107201921',
+            '14059202672': '14059202672',
+            '03059302467': '03059302467',
+        }
+
+        invalid = {
+            '20207201920': error,
+            '12345678901': error,
+            '1': error,
+            '123': error,
+            'aaa': error,
+        }
+        self.assertFieldOutput(GRSocialSecurityNumberCodeField, valid, invalid)
