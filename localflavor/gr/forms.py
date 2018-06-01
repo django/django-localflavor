@@ -1,5 +1,6 @@
 """Greek-specific forms helpers."""
-import re, datetime
+import datetime
+import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, ValidationError
