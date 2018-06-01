@@ -79,6 +79,24 @@ class GRSocialSecurityNumberCodeField(Field):
         self.allow_test_value = allow_test_value
         super(GRSocialSecurityNumberCodeField, self).__init__(*args, **kwargs)
 
+    def check_date(self, val):
+        try:
+            datetime.datetime.strptime(val[:6], '%d%m%y')
+        except:
+            raise ValidationError(self.error_messages['invalid'])
+
+    def check_lunh(self, val):
+        # Uses the Luhn algorithm: https://en.wikipedia.org/wiki/Luhn_algorithm
+        s = 0
+        for idx, d in enumerate(reversed(list(map(int, val)))):
+            if (idx + 1) % 2 == 0:
+                d *= 2
+            if d > 9:
+                d -= 9
+            s += d
+        if s % 10 != 0:
+            raise ValidationError(self.error_messages['invalid'])
+
     def clean(self, value):
         super(GRSocialSecurityNumberCodeField, self).clean(value)
         if value in EMPTY_VALUES:
@@ -92,21 +110,7 @@ class GRSocialSecurityNumberCodeField(Field):
         if not self.allow_test_value and val == '00000000000':
             raise ValidationError(self.error_messages['invalid'])
 
-        # Uses the Luhn algorithm: https://en.wikipedia.org/wiki/Luhn_algorithm
-        digits = list(map(int, val))
-        s = 0
-        for idx, d in enumerate(reversed(digits)):
-            v = d
-            if (idx+1) % 2 == 0:
-                d *= 2
-            if d > 9:
-                d -= 9
-            s+=d
-        if s % 10 != 0:
-            raise ValidationError(self.error_messages['invalid'])
-        try:
-            datetime.datetime.strptime(val[:6], '%d%m%y')
-        except:
-            raise ValidationError(self.error_messages['invalid'])
+        self.check_date(val)
+        self.check_lunh(val)
 
         return val
