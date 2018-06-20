@@ -75,8 +75,10 @@ class ESIdentityCardNumberField(RegexField):
                                  self.nif_control + self.cif_control),
                                 re.IGNORECASE)
 
-        error_messages = kwargs.get('error_messages') or {}
-        error_messages['invalid'] = self.default_error_messages['invalid%s' % (self.only_nif and '_only_nif' or '')]
+        error_messages = {
+            'invalid': self.default_error_messages['invalid%s' % (self.only_nif and '_only_nif' or '')]
+        }
+        error_messages.update(kwargs.get('error_messages', {}))
         kwargs['error_messages'] = error_messages
 
         super(ESIdentityCardNumberField, self).__init__(id_card_re, *args, **kwargs)
