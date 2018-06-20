@@ -14,7 +14,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Allowed invalid message to be overridden in ESIdentityCardNumberField
+  (`gh-339 <https://github.com/django/django-localflavor/issues/339>`_).
 
 Other changes:
 
