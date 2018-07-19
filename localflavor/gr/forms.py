@@ -6,6 +6,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, ValidationError
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
+from localflavor.generic.checksums import luhn
 
 
 class GRPostalCodeField(RegexField):
@@ -63,7 +64,7 @@ class GRTaxNumberCodeField(Field):
         return val
 
 
-class GRSocialSecurityNumberCodeField(Field):
+class GRSocialSecurityNumberCodeField(RegexField):
     """
     Greek social security number (AMKA) field.
 
@@ -77,7 +78,7 @@ class GRSocialSecurityNumberCodeField(Field):
 
     def __init__(self, allow_test_value=False, *args, **kwargs):
         self.allow_test_value = allow_test_value
-        super(GRSocialSecurityNumberCodeField, self).__init__(*args, **kwargs)
+        super(GRSocialSecurityNumberCodeField, self).__init__(r'^[0-9\s\-]+$', *args, **kwargs)
 
     def check_date(self, val):
         try:
@@ -85,25 +86,12 @@ class GRSocialSecurityNumberCodeField(Field):
         except:
             raise ValidationError(self.error_messages['invalid'])
 
-    def check_lunh(self, val):
-        # Uses the Luhn algorithm: https://en.wikipedia.org/wiki/Luhn_algorithm
-        s = 0
-        for idx, d in enumerate(reversed(list(map(int, val)))):
-            if (idx + 1) % 2 == 0:
-                d *= 2
-            if d > 9:
-                d -= 9
-            s += d
-        if s % 10 != 0:
-            raise ValidationError(self.error_messages['invalid'])
-
     def clean(self, value):
         super(GRSocialSecurityNumberCodeField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        val = re.sub('[\-\s\(\)]', '', force_text(value))
-        if(len(val) < 11):
+        if value in self.empty_values:
+            return self.empty_value
+        val = re.sub('[\-\s]', '', force_text(value))
+        if not val or len(val) < 11:
             raise ValidationError(self.error_messages['invalid'])
         if self.allow_test_value and val == '00000000000':
             return val
@@ -111,6 +99,7 @@ class GRSocialSecurityNumberCodeField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
         self.check_date(val)
-        self.check_lunh(val)
+        if not luhn(val):
+            raise ValidationError(self.error_messages['invalid'])
 
         return val
