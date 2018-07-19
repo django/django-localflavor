@@ -6,6 +6,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, ValidationError
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
+
 from localflavor.generic.checksums import luhn
 
 
