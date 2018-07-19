@@ -1,0 +1,16 @@
+inherits:
+  - strictness_high
+
+pylint:
+  options:
+    max-line-length: 120
+
+pep8:
+  options:
+    max-line-length: 120
+  disable:
+    - N802
+
+mccabe:
+  options:
+    max-complexity: 9

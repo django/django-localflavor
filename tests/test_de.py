@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.de.forms import (DEZipCodeField, DEStateSelect,
-                                  DEIdentityCardNumberField)
+from localflavor.de.forms import DEIdentityCardNumberField, DEStateSelect, DEZipCodeField
 
 
 class DELocalFlavorTests(SimpleTestCase):
@@ -35,6 +34,7 @@ class DELocalFlavorTests(SimpleTestCase):
             '99423': '99423',
         }
         invalid = {
+            '00000': error_format,
             ' 99423': error_format,
         }
         self.assertFieldOutput(DEZipCodeField, valid, invalid)

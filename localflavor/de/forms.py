@@ -1,8 +1,6 @@
-"""
-DE-specific Form helpers
-"""
+"""DE-specific Form helpers."""
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
@@ -13,35 +11,34 @@ from django.utils.translation import ugettext_lazy as _
 
 from .de_states import STATE_CHOICES
 
-
-id_re = re.compile(r"^(?P<residence>\d{10})(?P<origin>\w{1,3})[-\ ]?(?P<birthday>\d{7})[-\ ]?(?P<validity>\d{7})[-\ ]?(?P<checksum>\d{1})$")
+ID_RE = re.compile(r"^(?P<residence>\d{10})(?P<origin>\w{1,3})"
+                   r"[-\ ]?(?P<birthday>\d{7})[-\ ]?(?P<validity>\d{7})"
+                   r"[-\ ]?(?P<checksum>\d{1})$")
 
 
 class DEZipCodeField(RegexField):
+    """A form field that validates input as a German zip code.
+
+    Valid zip codes consist of five digits.
     """
-    A form field that validates input as a German zip code. Valid codes
-    consist of five digits.
-    """
+
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(DEZipCodeField, self).__init__(r'^\d{5}$',
-                                             max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(DEZipCodeField, self).__init__(r'^([0]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{3}$', *args, **kwargs)
 
 
 class DEStateSelect(Select):
-    """
-    A Select widget that uses a list of DE states as its choices.
-    """
+    """A Select widget that uses a list of DE states as its choices."""
+
     def __init__(self, attrs=None):
         super(DEStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
 
 class DEIdentityCardNumberField(Field):
-    """
-    A German identity card number.
+    """A German identity card number.
 
     Checks the following rules to determine whether the number is valid:
 
@@ -51,18 +48,19 @@ class DEIdentityCardNumberField(Field):
 
     Algorithm is documented at http://de.wikipedia.org/wiki/Personalausweis
     """
+
     default_error_messages = {
-        'invalid': _('Enter a valid German identity card number in XXXXXXXXXXX-XXXXXXX-XXXXXXX-X format.'),
+        'invalid': _('Enter a valid German identity card number in '
+                     'XXXXXXXXXXX-XXXXXXX-XXXXXXX-X format.'),
     }
 
     def has_valid_checksum(self, number):
         given_number, given_checksum = number[:-1], number[-1]
         calculated_checksum = 0
-        fragment = ""
         parameter = 7
 
-        for i in range(len(given_number)):
-            fragment = str(int(given_number[i]) * parameter)
+        for item in given_number:
+            fragment = str(int(item) * parameter)
             if fragment.isalnum():
                 calculated_checksum += int(fragment[-1])
             if parameter == 1:
@@ -78,15 +76,20 @@ class DEIdentityCardNumberField(Field):
         super(DEIdentityCardNumberField, self).clean(value)
         if value in EMPTY_VALUES:
             return ''
-        match = re.match(id_re, value)
+        match = re.match(ID_RE, value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])
 
-        gd = match.groupdict()
-        residence, origin = gd['residence'], gd['origin']
-        birthday, validity, checksum = gd['birthday'], gd['validity'], gd['checksum']
+        id_parts = match.groupdict()
+        residence = id_parts['residence']
+        origin = id_parts['origin']
+        birthday = id_parts['birthday']
+        validity = id_parts['validity']
+        checksum = id_parts['checksum']
 
-        if residence == '0000000000' or birthday == '0000000' or validity == '0000000':
+        if (residence == '0000000000' or
+                birthday == '0000000' or
+                validity == '0000000'):
             raise ValidationError(self.error_messages['invalid'])
 
         all_digits = "%s%s%s%s" % (residence, birthday, validity, checksum)
@@ -96,4 +99,8 @@ class DEIdentityCardNumberField(Field):
                 not self.has_valid_checksum(all_digits)):
             raise ValidationError(self.error_messages['invalid'])
 
-        return '%s%s-%s-%s-%s' % (residence, origin, birthday, validity, checksum)
+        return '%s%s-%s-%s-%s' % (residence,
+                                  origin,
+                                  birthday,
+                                  validity,
+                                  checksum)

@@ -1,9 +1,9 @@
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 
 def ssn_check_digit(value):
-    "Calculate Italian social security number check digit."
+    """Calculate Italian social security number check digit."""
     ssn_even_chars = {
         '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8,
         '9': 9, 'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7,
@@ -57,16 +57,16 @@ def vat_number_validation(vat_number):
     check_digit = vat_number_check_digit(vat_number[0:10])
     if vat_number[10] != check_digit:
         raise ValueError(_('Check digit does not match.'))
-    return smart_text(vat_number)
+    return force_text(vat_number)
 
 
 def vat_number_check_digit(vat_number):
-    "Calculate Italian VAT number check digit."
-    normalized_vat_number = smart_text(vat_number).zfill(10)
+    """Calculate Italian VAT number check digit."""
+    normalized_vat_number = force_text(vat_number).zfill(10)
     total = 0
     for i in range(0, 10, 2):
         total += int(normalized_vat_number[i])
     for i in range(1, 11, 2):
         quotient, remainder = divmod(int(normalized_vat_number[i]) * 2, 10)
         total += quotient + remainder
-    return smart_text((10 - total % 10) % 10)
+    return force_text((10 - total % 10) % 10)

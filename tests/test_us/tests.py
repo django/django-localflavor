@@ -1,10 +1,8 @@
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 from django.test import TestCase
 
-from localflavor.us.forms import (USZipCodeField, USPhoneNumberField,
-                                  USStateField, USStateSelect,
-                                  USSocialSecurityNumberField)
+from localflavor.us import forms
 
 from .forms import USPlaceForm
 
@@ -187,7 +185,7 @@ class USLocalFlavorTests(TestCase):
         self.assertHTMLEqual(str(self.form['postal_code']), usps_select_html)
 
     def test_USStateSelect(self):
-        f = USStateSelect()
+        f = forms.USStateSelect()
         out = '''<select name="state">
 <option value="AL">Alabama</option>
 <option value="AK">Alaska</option>
@@ -265,30 +263,12 @@ class USLocalFlavorTests(TestCase):
             '6060-1234': error_format,
             '60606-': error_format,
         }
-        self.assertFieldOutput(USZipCodeField, valid, invalid)
+        self.assertFieldOutput(forms.USZipCodeField, valid, invalid)
 
     def test_USZipCodeField_formfield(self):
         """Test that the full US ZIP code field is really the full list."""
         self.assertHTMLEqual(str(self.form['zip_code']),
                              '<input id="id_zip_code" maxlength="10" name="zip_code" type="text" value="12345" />')
-
-    def test_USPhoneNumberField(self):
-        error_format = ['Phone numbers must be in XXX-XXX-XXXX format.']
-        valid = {
-            '312-555-1212': '312-555-1212',
-            '3125551212': '312-555-1212',
-            '312 555-1212': '312-555-1212',
-            '(312) 555-1212': '312-555-1212',
-            '312 555 1212': '312-555-1212',
-            '312.555.1212': '312-555-1212',
-            '312.555-1212': '312-555-1212',
-            ' (312) 555.1212 ': '312-555-1212',
-        }
-        invalid = {
-            '555-1212': error_format,
-            '312-55-1212': error_format,
-        }
-        self.assertFieldOutput(USPhoneNumberField, valid, invalid)
 
     def test_USStateField(self):
         error_invalid = ['Enter a U.S. state or territory.']
@@ -301,7 +281,7 @@ class USLocalFlavorTests(TestCase):
         invalid = {
             60606: error_invalid,
         }
-        self.assertFieldOutput(USStateField, valid, invalid)
+        self.assertFieldOutput(forms.USStateField, valid, invalid)
 
     def test_USSocialSecurityNumberField(self):
         error_invalid = ['Enter a valid U.S. Social Security number in XXX-XX-XXXX format.']
@@ -312,7 +292,10 @@ class USLocalFlavorTests(TestCase):
         }
         invalid = {
             '078-05-1120': error_invalid,
+            '078051120': error_invalid,
             '900-12-3456': error_invalid,
+            '900123456': error_invalid,
             '999-98-7652': error_invalid,
+            '999987652': error_invalid,
         }
-        self.assertFieldOutput(USSocialSecurityNumberField, valid, invalid)
+        self.assertFieldOutput(forms.USSocialSecurityNumberField, valid, invalid)

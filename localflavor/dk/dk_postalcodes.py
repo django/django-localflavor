@@ -1,7 +1,7 @@
 # coding: utf-8
 from __future__ import unicode_literals
-from django.utils.translation import ugettext_lazy as _
 
+from django.utils.translation import ugettext_lazy as _
 
 #: A list of Danish postal codes as `choices` in a formfield.
 DK_POSTALCODES = (

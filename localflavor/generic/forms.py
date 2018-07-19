@@ -1,7 +1,8 @@
+from __future__ import unicode_literals
+
 from django import forms
 
-from .validators import IBANValidator, BICValidator, IBAN_COUNTRY_CODE_LENGTH
-
+from .validators import IBAN_COUNTRY_CODE_LENGTH, BICValidator, IBANValidator
 
 DEFAULT_DATE_INPUT_FORMATS = (
     '%Y-%m-%d', '%d/%m/%Y', '%d/%m/%y',  # '2006-10-25', '25/10/2006', '25/10/06'
@@ -27,29 +28,24 @@ IBAN_MIN_LENGTH = min(IBAN_COUNTRY_CODE_LENGTH.values())
 
 
 class DateField(forms.DateField):
-    """
-    A date input field which uses non-US date input formats by default.
-    """
+    """A date input field which uses non-US date input formats by default."""
+
     def __init__(self, input_formats=None, *args, **kwargs):
         input_formats = input_formats or DEFAULT_DATE_INPUT_FORMATS
         super(DateField, self).__init__(input_formats=input_formats, *args, **kwargs)
 
 
 class DateTimeField(forms.DateTimeField):
-    """
-    A date and time input field which uses non-US date and time input formats
-    by default.
-    """
+    """A date and time input field which uses non-US date and time input formats by default."""
+
     def __init__(self, input_formats=None, *args, **kwargs):
         input_formats = input_formats or DEFAULT_DATETIME_INPUT_FORMATS
         super(DateTimeField, self).__init__(input_formats=input_formats, *args, **kwargs)
 
 
 class SplitDateTimeField(forms.SplitDateTimeField):
-    """
-    Split date and time input fields which use non-US date and time input
-    formats by default.
-    """
+    """Split date and time input fields which use non-US date and time input formats by default."""
+
     def __init__(self, input_date_formats=None, input_time_formats=None, *args, **kwargs):
         input_date_formats = input_date_formats or DEFAULT_DATE_INPUT_FORMATS
         super(SplitDateTimeField, self).__init__(input_date_formats=input_date_formats,
@@ -84,6 +80,7 @@ class IBANFormField(forms.CharField):
 
     .. versionadded:: 1.1
     """
+
     def __init__(self, use_nordea_extensions=False, include_countries=None, *args, **kwargs):
         kwargs.setdefault('min_length', IBAN_MIN_LENGTH)
         kwargs.setdefault('max_length', 34)
@@ -92,10 +89,12 @@ class IBANFormField(forms.CharField):
 
     def to_python(self, value):
         value = super(IBANFormField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.upper().replace(' ', '').replace('-', '')
 
     def prepare_value(self, value):
-        """ The display format for IBAN has a space every 4 characters. """
+        """The display format for IBAN has a space every 4 characters."""
         if value is None:
             return value
         grouping = 4
@@ -113,6 +112,7 @@ class BICFormField(forms.CharField):
 
     .. versionadded:: 1.1
     """
+
     default_validators = [BICValidator()]
 
     def __init__(self, *args, **kwargs):
@@ -123,6 +123,8 @@ class BICFormField(forms.CharField):
         # BIC is always written in upper case.
         # https://www2.swift.com/uhbonline/books/public/en_uk/bic_policy/bic_policy.pdf
         value = super(BICFormField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.upper()
 
     def prepare_value(self, value):

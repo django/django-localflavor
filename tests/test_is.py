@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.is_.forms import (ISIdNumberField, ISPhoneNumberField,
-                                   ISPostalCodeSelect)
+from localflavor.is_.forms import ISIdNumberField, ISPostalCodeSelect
 
 
 class ISLocalFlavorTests(SimpleTestCase):
@@ -182,22 +181,3 @@ class ISLocalFlavorTests(SimpleTestCase):
 
         }
         self.assertFieldOutput(ISIdNumberField, valid, invalid)
-
-    def test_ISPhoneNumberField(self):
-        error_invalid = ['Enter a valid value.']
-        error_atleast = ['Ensure this value has at least 7 characters (it has 6).']
-        error_atmost = ['Ensure this value has at most 8 characters (it has 9).']
-        valid = {
-            '1234567': '1234567',
-            '123 4567': '1234567',
-            '123-4567': '1234567',
-        }
-        invalid = {
-            '123-456': error_invalid,
-            '123456': error_atleast + error_invalid,
-            '123456555': error_atmost + error_invalid,
-            'abcdefg': error_invalid,
-            ' 1234567 ': error_atmost + error_invalid,
-            ' 12367  ': error_invalid
-        }
-        self.assertFieldOutput(ISPhoneNumberField, valid, invalid)

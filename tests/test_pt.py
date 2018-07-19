@@ -1,20 +1,17 @@
 # -*- coding: utf-8 -*-
-"""
-Contains a set of tests which can be used to validate the current implementation.
-"""
+"""Contains a set of tests which can be used to validate the current implementation."""
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.pt.forms import (PTCitizenCardNumberField, PTPhoneNumberField,
-                                  PTRegionSelect, PTSocialSecurityNumberField,
-                                  PTZipCodeField)
+from localflavor.pt.forms import PTCitizenCardNumberField, PTRegionSelect, PTSocialSecurityNumberField, PTZipCodeField
 
 
 class PTLocalFlavorTests(SimpleTestCase):
     def test_PTCitizenCardNumberField(self):
         error_badchecksum = ['The specified value is not a valid Citizen Card number.']
-        error_invalid = ['Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X is a digit and Y is an alphanumeric character).']
+        error_invalid = ['Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX '
+                         '(where X is a digit and Y is an alphanumeric character).']
         valid = {
             '132011441ZZ8': '13201144-1ZZ8',
             '129463833ZY7': '12946383-3ZY7',
@@ -44,27 +41,6 @@ class PTLocalFlavorTests(SimpleTestCase):
         }
         self.assertFieldOutput(PTCitizenCardNumberField, valid, invalid)
 
-    def test_PTPhoneNumberField(self):
-        error_invalid = ['Phone numbers have at least 3 and at most 9 digits and may optionally be prefixed with \'00351\' or \'+351\'.']
-        valid = {
-            '117': '117',
-            '4800': '4800',
-            '16912': '16912',
-            '917845189': '917845189',
-            '+351 16912': '+35116912',
-            '91 784 5189': '917845189',
-            '+351 91 111': '+35191111',
-            '00351 917 845 189': '00351917845189',
-            '+351 917 845 189': '+351917845189',
-        }
-        invalid = {
-            '1': error_invalid,
-            '21': error_invalid,
-            '091 456 987 1': error_invalid,
-            '00+351917845189': error_invalid,
-        }
-        self.assertFieldOutput(PTPhoneNumberField, valid, invalid)
-
     def test_PTRegionSelect(self):
         field = PTRegionSelect()
         output = '''<select name="regions">
@@ -93,7 +69,8 @@ class PTLocalFlavorTests(SimpleTestCase):
 
     def test_PTSocialSecurityNumberField(self):
         error_badchecksum = ['The specified number is not a valid Social Security number.']
-        error_invalid = ['Social Security numbers must be in the format XYYYYYYYYYY (where X is either 1 or 2 and Y is any other digit).']
+        error_invalid = ['Social Security numbers must be in the format XYYYYYYYYYY '
+                         '(where X is either 1 or 2 and Y is any other digit).']
         valid = {
             '12347312896': 12347312896,
             '21865241240': 21865241240,
@@ -116,7 +93,8 @@ class PTLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(PTSocialSecurityNumberField, valid, invalid)
 
     def test_PTZipCodeField(self):
-        error_invalid = ['Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9 and Y is any other digit).']
+        error_invalid = ['Zip codes must be in the format XYYY-YYY '
+                         '(where X is a digit between 1 and 9 and Y is any other digit).']
         valid = {
             '3030-034': '3030-034',
             '3800-011': '3800-011',

@@ -1,19 +1,13 @@
-"""
-Singapore-specific Form helpers
-"""
+"""Singapore-specific Form helpers."""
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField
-from django.utils.encoding import smart_text
+from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
-
-PHONE_DIGITS_RE = re.compile(r'^[689](\d{7})$')
 
 NRIC_FIN_RE = re.compile(r'^[SFTG](\d{7})[A-Z]$')
 NRIC_FIN_DIGIT_WEIGHT = [2, 7, 6, 5, 4, 3, 2]
@@ -27,6 +21,7 @@ class SGPostCodeField(RegexField):
 
     Assumed to be 6 digits.
     """
+
     default_error_messages = {
         'invalid': _('Enter a 6-digit postal code.'),
     }
@@ -35,35 +30,10 @@ class SGPostCodeField(RegexField):
         super(SGPostCodeField, self).__init__(r'^\d{6}$', *args, **kwargs)
 
 
-class SGPhoneNumberField(CharField):
+class SGNRICFINField(CharField):
     """
-    A form field that validates input as a Singapore phone number.
+    A form field that validates input as a Singapore National Registration.
 
-    Valid numbers have 8 digits and start with either 6, 8, or 9
-    """
-    default_error_messages = {
-        'invalid': _('Phone numbers must contain 8 digits and start with '
-                     'either 6, or 8, or 9.')
-
-    }
-
-    def clean(self, value):
-        """
-        Validate a phone number. Strips parentheses, whitespace and hyphens.
-        """
-        super(SGPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub('(\(|\)|\s+|-)', '', smart_text(value))
-        phone_match = PHONE_DIGITS_RE.search(value)
-        if phone_match:
-            return '%s' % phone_match.group()
-        raise ValidationError(self.error_messages['invalid'])
-
-
-class SGNRIC_FINField(CharField):
-    """
-    A form field that validates input as a Singapore National Registration
     Identity Card (NRIC) or Foreign Identification Number (FIN)
 
     Based on http://en.wikipedia.org/wiki/National_Registration_Identity_Card
@@ -78,18 +48,21 @@ class SGNRIC_FINField(CharField):
         S or T: 0=J, 1=Z, 2=I, 3=H, 4=G, 5=F, 6=E, 7=D, 8=C, 9=B, 10=A
         F or G: 0=X, 1=W, 2=U, 3=T, 4=R, 5=Q, 6=P, 7=N, 8=M, 9=L, 10=K
     """
+
     default_error_messages = {
         'invalid': _('Invalid NRIC/FIN.')
     }
 
     def clean(self, value):
         """
-        Validate NRIC/FIN. Strips whitespace.
+        Validate NRIC/FIN.
+
+        Strips whitespace.
         """
-        super(SGNRIC_FINField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub('(\s+)', '', smart_text(value.upper()))
+        super(SGNRICFINField, self).clean(value)
+        if value in self.empty_values:
+            return self.empty_value
+        value = re.sub('(\s+)', '', force_text(value.upper()))
         match = NRIC_FIN_RE.search(value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])

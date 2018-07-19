@@ -2,9 +2,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.br.forms import (BRZipCodeField, BRCNPJField, BRCPFField,
-                                  BRPhoneNumberField, BRStateSelect,
-                                  BRStateChoiceField, BRProcessoField)
+from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
+                                  BRZipCodeField)
 
 from localflavor.br import models
 
@@ -24,20 +23,41 @@ class BRLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(BRZipCodeField, valid, invalid)
 
     def test_BRCNPJField(self):
-        error_format = ['Invalid CNPJ number.']
-        valid = {
+        error_format = {
+            'invalid': ['Invalid CNPJ number.'],
+            'only_long_version': ['Ensure this value has at least 16 characters (it has 14).'],
+            # The long version can be 16 or 18 characters long so actual error message is set dynamically when the
+            # invalid_long dict is generated.
+            'only_short_version': ['Ensure this value has at most 14 characters (it has %s).'],
+        }
+
+        long_version_valid = {
             '64.132.916/0001-88': '64.132.916/0001-88',
             '64-132-916/0001-88': '64-132-916/0001-88',
             '64132916/0001-88': '64132916/0001-88',
         }
+        short_version_valid = {
+            '64132916000188': '64132916000188',
+        }
+        valid = long_version_valid.copy()
+        valid.update(short_version_valid)
+
         invalid = {
-            '../-12345678901210': error_format,
-            '12-345-678/9012-10': error_format,
-            '12.345.678/9012-10': error_format,
-            '12345678/9012-10': error_format,
-            '64.132.916/0001-XX': error_format,
+            '../-12345678901210': error_format['invalid'],
+            '12-345-678/9012-10': error_format['invalid'],
+            '12.345.678/9012-10': error_format['invalid'],
+            '12345678/9012-10': error_format['invalid'],
+            '64.132.916/0001-XX': error_format['invalid'],
         }
         self.assertFieldOutput(BRCNPJField, valid, invalid)
+
+        # The short versions should be invalid when 'min_length=16' passed to the field.
+        invalid_short = dict([(k, error_format['only_long_version']) for k in short_version_valid.keys()])
+        self.assertFieldOutput(BRCNPJField, long_version_valid, invalid_short, field_kwargs={'min_length': 16})
+
+        # The long versions should be invalid when 'max_length=14' passed to the field.
+        invalid_long = dict([(k, [error_format['only_short_version'][0] % len(k)]) for k in long_version_valid.keys()])
+        self.assertFieldOutput(BRCNPJField, short_version_valid, invalid_long, field_kwargs={'max_length': 14})
 
     def test_BRCPFField(self):
         error_format = ['Invalid CPF number.']
@@ -65,32 +85,6 @@ class BRLocalFlavorTests(SimpleTestCase):
             '123456789555': error_atmost,
         }
         self.assertFieldOutput(BRCPFField, valid, invalid)
-
-    def test_BRPhoneNumberField(self):
-        error_format = [('Phone numbers must be in either of the following '
-                         'formats: XX-XXXX-XXXX or XX-XXXXX-XXXX.')]
-        valid = {
-            '41-3562-3464': '41-3562-3464',
-            '4135623464': '41-3562-3464',
-            '41 3562-3464': '41-3562-3464',
-            '41 3562 3464': '41-3562-3464',
-            '(41) 3562 3464': '41-3562-3464',
-            '41.3562.3464': '41-3562-3464',
-            '41.93562.3464': '41-93562-3464',
-            '41.3562-3464': '41-3562-3464',
-            ' (41) 3562.3464': '41-3562-3464',
-            ' (41) 98765.3464': '41-98765-3464',
-            '(16) 91342-4325': '16-91342-4325',
-        }
-        invalid = {
-            '11-914-925': error_format,
-            '11-9144-43925': error_format,
-            '11-91342-94325': error_format,
-            '411-9134-9435': error_format,
-            '+55-41-3562-3464': error_format,
-            '41 3562–3464': error_format,
-        }
-        self.assertFieldOutput(BRPhoneNumberField, valid, invalid)
 
     def test_BRProcessoField(self):
         error_format = ['Invalid Process number.']

@@ -2,13 +2,11 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
-from localflavor.fr.forms import (
-    FRZipCodeField, FRPhoneNumberField,
-    FRDepartmentField, FRRegionField,
-    FRRegionSelect, FRDepartmentSelect,
-    FRNationalIdentificationNumber,
-    FRSIRENField, FRSIRETField
-)
+
+from localflavor.fr.forms import (FRDepartmentField, FRDepartmentSelect, FRNationalIdentificationNumber,
+                                  FRRegion2016Select, FRRegionField, FRRegionSelect, FRSIRENField, FRSIRETField,
+                                  FRZipCodeField)
+
 
 DEP_SELECT_OUTPUT = '''
     <select name="dep">
@@ -158,6 +156,29 @@ REG_SELECT_OUTPUT = '''
     </select>
 '''
 
+REG_2016_SELECT_OUTPUT = '''
+    <select name="reg">
+        <option value="01">01 - Guadeloupe</option>
+        <option value="02">02 - Martinique</option>
+        <option value="03">03 - Guyane</option>
+        <option value="04">04 - La Réunion</option>
+        <option value="06">06 - Mayotte</option>
+        <option value="11">11 - Île-de-France</option>
+        <option value="24">24 - Centre-Val de Loire</option>
+        <option value="27">27 - Bourgogne-Franche-Comté</option>
+        <option value="28">28 - Normandie</option>
+        <option value="32">32 - Hauts-de-France</option>
+        <option value="44">44 - Grand Est</option>
+        <option value="52" selected="selected">52 - Pays de la Loire</option>
+        <option value="53">53 - Bretagne</option>
+        <option value="75">75 - Nouvelle-Aquitaine</option>
+        <option value="76">76 - Occitanie</option>
+        <option value="84">84 - Auvergne-Rhône-Alpes</option>
+        <option value="93">93 - Provence-Alpes-Côte d&#39;Azur</option>
+        <option value="94">94 - Corse</option>
+    </select>
+'''
+
 
 class FRLocalFlavorTests(SimpleTestCase):
     def test_FRZipCodeField(self):
@@ -172,21 +193,6 @@ class FRLocalFlavorTests(SimpleTestCase):
                        '5 characters (it has 6).'] + error_format,
         }
         self.assertFieldOutput(FRZipCodeField, valid, invalid)
-
-    def test_FRPhoneNumberField(self):
-        error_format = ['Phone numbers must be in 0X XX XX XX XX format.']
-        valid = {
-            '01 55 44 58 64': '01 55 44 58 64',
-            '0155445864': '01 55 44 58 64',
-            '01 5544 5864': '01 55 44 58 64',
-            '01 55.44.58.64': '01 55 44 58 64',
-            '01.55.44.58.64': '01 55 44 58 64',
-        }
-        invalid = {
-            '01,55,44,58,64': error_format,
-            '555 015 544': error_format,
-        }
-        self.assertFieldOutput(FRPhoneNumberField, valid, invalid)
 
     def test_FRDepartmentfield(self):
         f = FRDepartmentField()
@@ -204,6 +210,11 @@ class FRLocalFlavorTests(SimpleTestCase):
         f = FRRegionSelect()
         self.assertHTMLEqual(f.render('reg', '25'), REG_SELECT_OUTPUT)
 
+    def test_FRRegion2016Select(self):
+        self.maxDiff = None
+        f = FRRegion2016Select()
+        self.assertHTMLEqual(f.render('reg', '52'), REG_2016_SELECT_OUTPUT)
+
     def test_FRNationalIdentificationNumber(self):
         error_format = ['Enter a valid French National Identification number.']
         valid = {
@@ -216,6 +227,15 @@ class FRLocalFlavorTests(SimpleTestCase):
             '882062A09002279': '882062A09002279',
             # Good, new Corsica department number (2B) with birthdate >= 1976
             '882062B09002279': '882062B09002279',
+            # Good, new Corsica department number (2B) with birthdate >= 1976 (2005)
+            '105062B09002231': '105062B09002231',
+            # Good, new Corsica department number (20) with birthdate < 1976 (1905)
+            '105062009002231': '105062009002231',
+            # Good, birth month not known (then, can be 20, [30-42] or [50-99])
+            '140200109002223': '140200109002223',
+            '141330109002285': '141330109002285',
+            '142580109002248': '142580109002248',
+            '143990109002273': '143990109002273',
         }
         invalid = {
             # Gender mismatch

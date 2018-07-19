@@ -1,16 +1,12 @@
-from __future__ import absolute_import
-
 from django.test import SimpleTestCase
 
-from localflavor.gr.forms import (GRPhoneNumberField, GRMobilePhoneNumberField,
-                                  GRTaxNumberCodeField, GRPostalCodeField)
+from localflavor.gr.forms import GRPostalCodeField, GRTaxNumberCodeField
 
 
 class GRLocalFlavorTests(SimpleTestCase):
 
     def test_GRTaxNumberField(self):
-        """ The valid tests are from greek tax numbers (AFMs) found on the internet
-        with a google search. """
+        """The valid tests are from greek tax numbers (AFMs) found on the internet with a google search."""
         error = ['Enter a valid greek tax number (9 digits).']
         valid = {
             '090051291': '090051291',
@@ -51,44 +47,8 @@ class GRLocalFlavorTests(SimpleTestCase):
             '124567': error,
             '04567': error,
             '94567': error,
-            '124567': error,
             '1345': error,
             '134115': error,
             'b231a': error,
         }
         self.assertFieldOutput(GRPostalCodeField, valid, invalid)
-
-    def test_GRPhoneNumberField(self):
-        error = ['Enter a 10-digit greek phone number.']
-        valid = {
-            '2109292921': '2109292921',
-            '+301109292921': '+301109292921',
-
-        }
-        invalid = {
-            '12 34': error,
-            '124567': error,
-            '21092929211': error,
-            '661232123': error,
-            '694555555a': error,
-
-        }
-        self.assertFieldOutput(GRPhoneNumberField, valid, invalid)
-
-    def test_GRMobilePhoneNumberField(self):
-        error = ['Enter a greek mobile phone number starting with 69.']
-        valid = {
-            '6945555555': '6945555555',
-            '6931234567': '6931234567',
-            '+306971234567': '+306971234567',
-
-        }
-        invalid = {
-            '12 34': error,
-            '124567': error,
-            '21092929211': error,
-            '2102233444': error,
-            '2111234567': error,
-
-        }
-        self.assertFieldOutput(GRMobilePhoneNumberField, valid, invalid)

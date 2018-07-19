@@ -3,9 +3,7 @@ from __future__ import unicode_literals
 from django.test.testcases import SimpleTestCase
 from django.utils.translation import activate, deactivate, get_language
 
-from localflavor.ca.forms import (CAPhoneNumberField, CAPostalCodeField,
-                                  CAProvinceField, CAProvinceSelect,
-                                  CASocialInsuranceNumberField)
+from localflavor.ca.forms import CAPostalCodeField, CAProvinceField, CAProvinceSelect, CASocialInsuranceNumberField
 
 
 class CALocalFlavorTests(SimpleTestCase):
@@ -64,24 +62,6 @@ class CALocalFlavorTests(SimpleTestCase):
             'O2B 2R3': error_format,
         }
         self.assertFieldOutput(CAPostalCodeField, valid, invalid)
-
-    def test_CAPhoneNumberField(self):
-        error_format = ['Phone numbers must be in XXX-XXX-XXXX format.']
-        valid = {
-            '403-555-1212': '403-555-1212',
-            '4035551212': '403-555-1212',
-            '403 555-1212': '403-555-1212',
-            '(403) 555-1212': '403-555-1212',
-            '403 555 1212': '403-555-1212',
-            '403.555.1212': '403-555-1212',
-            '403.555-1212': '403-555-1212',
-            ' (403) 555.1212 ': '403-555-1212',
-        }
-        invalid = {
-            '555-1212': error_format,
-            '403-55-1212': error_format,
-        }
-        self.assertFieldOutput(CAPhoneNumberField, valid, invalid)
 
     def test_CAProvinceField(self):
         error_format = ['Enter a Canadian province or territory.']

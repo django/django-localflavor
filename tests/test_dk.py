@@ -1,13 +1,11 @@
 # coding: utf-8
 from __future__ import unicode_literals
-from django.test import SimpleTestCase
-from django.utils.translation import ugettext_lazy as _, override
 
-from localflavor.dk.forms import (
-    DKPhoneNumberField,
-    DKPostalCodeField,
-    DKMunicipalitySelect
-)
+from django.test import SimpleTestCase
+from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import override
+
+from localflavor.dk.forms import DKMunicipalitySelect, DKPostalCodeField
 
 
 class DKLocalFlavorTests(SimpleTestCase):
@@ -23,25 +21,6 @@ class DKLocalFlavorTests(SimpleTestCase):
             "12345": error_format,  # to many digits
         }
         self.assertFieldOutput(DKPostalCodeField, valid, invalid)
-
-    def test_DKPhoneNumberField(self):
-        error_format = [
-            _("A phone number must be 8 digits and may have country code")
-        ]
-        valid = {
-            "12345678": "12345678",
-            "12 34 56 78": "12 34 56 78",
-            "+4512345678": "+4512345678",
-            "+45 12345678": "+45 12345678",
-            "+45 12 34 56 78": "+45 12 34 56 78",
-        }
-        invalid = {
-            "12": error_format,  # too few digits
-            "abcdefgh": error_format,  # illegal characters
-            "1234567890": error_format,  # too many digits
-            "+4712345678": error_format,  # wrong country code
-        }
-        self.assertFieldOutput(DKPhoneNumberField, valid, invalid)
 
     def test_DKMunicipalitySelect(self):
         with override("en"):

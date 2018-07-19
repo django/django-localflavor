@@ -1,31 +1,26 @@
 # -*- coding: utf-8 -*-
-"""
-UY-specific form helpers.
-"""
+"""UY-specific form helpers."""
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
-from django.core.validators import EMPTY_VALUES
-from django.forms.fields import Select, RegexField
 from django.forms import ValidationError
+from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .util import get_validation_digit
 
 
 class UYDepartmentSelect(Select):
-    """
-    A Select widget that uses a list of Uruguayan departments as its choices.
-    """
+    """A Select widget that uses a list of Uruguayan departments as its choices."""
+
     def __init__(self, attrs=None):
         from .uy_departments import DEPARTMENT_CHOICES
         super(UYDepartmentSelect, self).__init__(attrs, choices=DEPARTMENT_CHOICES)
 
 
 class UYCIField(RegexField):
-    """
-    A field that validates Uruguayan 'Cedula de identidad' (CI) numbers.
-    """
+    """A field that validates Uruguayan 'Cedula de identidad' (CI) numbers."""
+
     default_error_messages = {
         'invalid': _("Enter a valid CI number in X.XXX.XXX-X,"
                      "XXXXXXX-X or XXXXXXXX format."),
@@ -45,10 +40,9 @@ class UYCIField(RegexField):
         the correct place. The three typically used formats are supported:
         [X]XXXXXXX, [X]XXXXXX-X and [X.]XXX.XXX-X.
         """
-
         value = super(UYCIField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         match = self.regex.match(value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])
@@ -56,7 +50,7 @@ class UYCIField(RegexField):
         number = int(match.group('num').replace('.', ''))
         validation_digit = int(match.group('val'))
 
-        if not validation_digit == get_validation_digit(number):
+        if validation_digit != get_validation_digit(number):
             raise ValidationError(self.error_messages['invalid_validation_digit'])
 
         return value

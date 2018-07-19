@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django import db
 from django.core.exceptions import ValidationError
 from django.test import SimpleTestCase
 
 from localflavor.nl import forms, models, validators
 
-from .forms import NLPlaceForm
-from .models import NLPlace
+from .forms import NLCarForm, NLPlaceForm
+from .models import NLCar, NLPlace
 
 
 class NLLocalFlavorValidatorTests(SimpleTestCase):
-    def assert_validator(self, validator, valid=[], invalid=[]):
+    def assert_validator(self, validator, valid=(), invalid=()):
         for item in valid:
             validator(item)
 
@@ -36,7 +35,7 @@ class NLLocalFlavorValidatorTests(SimpleTestCase):
         ]
         self.assert_validator(validators.NLZipCodeFieldValidator(), valid, invalid)
 
-    def test_NLSoFiNumberValidator(self):
+    def test_NLBSNValidator(self):
         valid = [
             '123456782',
         ]
@@ -45,38 +44,20 @@ class NLLocalFlavorValidatorTests(SimpleTestCase):
             '123456789',
             'foo',
         ]
-        self.assert_validator(validators.NLSoFiNumberFieldValidator(), valid, invalid)
+        self.assert_validator(validators.NLBSNFieldValidator(), valid, invalid)
 
-    def test_NLPhoneNumberValidator(self):
+    def test_NLLicensePlateValidator(self):
         valid = [
-            '0123456789',
-            '012-3456789',
-            '+31-12-3456789',
-            '(0123) 456789',
+            '12-AA-13',
+            'CDJ-123',
+            'AA-01',
         ]
         invalid = [
-            '(010) 12345678',
-            '06-123456789',
-            '+31 6123456789',
-            'foo',
+            'ZZZ-123',
+            'AA-AAA-1',
+            '11-123-A',
         ]
-        self.assert_validator(validators.NLPhoneNumberFieldValidator(), valid, invalid)
-
-    def test_NLBankAccountNumberFieldValidator(self):
-        valid = [
-            '0417164300',
-            '755490975',
-            '12345',
-        ]
-        invalid = [
-            '7584955151',
-            'foo',
-            '0',
-            '75849551519',
-            '00417164300',
-            '75849551',
-        ]
-        self.assert_validator(validators.NLBankAccountNumberFieldValidator(), valid, invalid)
+        self.assert_validator(validators.NLLicensePlateFieldValidator(), valid, invalid)
 
 
 class NLLocalFlavorModelTests(SimpleTestCase):
@@ -85,25 +66,21 @@ class NLLocalFlavorModelTests(SimpleTestCase):
 
         self.assertEqual(field.to_python('1234AB'), '1234 AB')
         self.assertEqual(field.to_python(None), None)
+        self.assertEqual(field.to_python(''), '')
 
         self.assertIsInstance(field.formfield(), forms.NLZipCodeField)
-
 
     def test_NL_model(self):
         m = NLPlace(**{
             'zipcode': '2403BW',
             'province': 'OV',
-            'sofinr': '123456782',
-            'phone': '012-3456789',
-            'bankaccount': '0417164300'
+            'bsn': '123456782',
         })
 
         self.assertEqual(str(m.zipcode), '2403BW')
         self.assertEqual(str(m.province), 'OV')
 
-        self.assertEqual(str(m.sofinr), '123456782')
-        self.assertEqual(str(m.phone), '012-3456789')
-        self.assertEqual(str(m.bankaccount), '0417164300')
+        self.assertEqual(str(m.bsn), '123456782')
 
         m.clean_fields()
 
@@ -111,9 +88,7 @@ class NLLocalFlavorModelTests(SimpleTestCase):
         m = NLPlace(**{
             'zipcode': '2403 bwa',
             'province': 'OV',
-            'sofinr': '123456782',
-            'phone': '012-3456789',
-            'bankaccount': '0417164300'
+            'bsn': '123456782',
         })
         # zipcode is not quite right, so it should raise an error
         self.assertRaises(ValidationError, lambda: m.clean_fields())
@@ -122,6 +97,27 @@ class NLLocalFlavorModelTests(SimpleTestCase):
         m.zipcode = '2403 bw'
         m.clean_fields()
         self.assertEquals(str(m.zipcode), '2403 BW')
+
+    def test_NL_car(self):
+        m = NLCar(**{
+            'license_plate': 'AB-12-CD'
+        })
+
+        m.clean_fields()
+        self.assertEqual(str(m.license_plate), 'AB-12-CD')
+
+    def test_NL_car_cleanup(self):
+        m = NLCar(**{
+            'license_plate': 'AA11AA'
+        })
+
+        # incorrect license plate number, should raise an error
+        self.assertRaises(ValidationError, lambda: m.clean_fields())
+
+        # correct license plate number, should be clean now
+        m.license_plate = 'AA-11-AA'
+        m.clean_fields()
+        self.assertEquals(str(m.license_plate), 'AA-11-AA')
 
 
 class NLLocalFlavorFormTests(SimpleTestCase):
@@ -161,26 +157,8 @@ class NLLocalFlavorFormTests(SimpleTestCase):
 </select>'''
         self.assertHTMLEqual(f.render('provinces', 'OV'), out)
 
-    def test_NLPhoneNumberField(self):
-        error_invalid = ['Enter a valid phone number.']
-        valid = {
-            '012-3456789': '012-3456789',
-            '0123456789': '0123456789',
-            '+31-12-3456789': '+31-12-3456789',
-            '(0123) 456789': '(0123) 456789',
-            '0623456789': '0623456789',
-
-        }
-        invalid = {
-            '(010) 12345678': error_invalid,
-            '06-123456789': error_invalid,
-            '+31 6123456789': error_invalid,
-            'foo': error_invalid,
-        }
-        self.assertFieldOutput(forms.NLPhoneNumberField, valid, invalid)
-
-    def test_NLSoFiNumberField(self):
-        error_invalid = ['Enter a valid SoFi number.']
+    def test_NLBSNFormField(self):
+        error_invalid = ['Enter a valid BSN.']
         valid = {
             '123456782': '123456782',
         }
@@ -189,15 +167,13 @@ class NLLocalFlavorFormTests(SimpleTestCase):
             '123456789': error_invalid,
             'foo': error_invalid,
         }
-        self.assertFieldOutput(forms.NLSoFiNumberField, valid, invalid)
+        self.assertFieldOutput(forms.NLBSNFormField, valid, invalid)
 
     def test_NL_ModelForm_errors(self):
         form = NLPlaceForm({
             'zipcode': 'invalid',
             'province': 'invalid',
-            'sofinr': 'invalid',
-            'phone': 'invalid',
-            'bankaccount': 'invalid',
+            'bsn': 'invalid',
         })
 
         self.assertFalse(form.is_valid())
@@ -205,16 +181,40 @@ class NLLocalFlavorFormTests(SimpleTestCase):
         invalid_choice = 'Select a valid choice. invalid is not one of the available choices.'
         self.assertEqual(form.errors['zipcode'], ['Enter a valid zip code.'])
         self.assertEqual(form.errors['province'], [invalid_choice])
-        self.assertEqual(form.errors['sofinr'], ['Enter a valid SoFi number.'])
-        self.assertEqual(form.errors['phone'], ['Enter a valid phone number.'])
-        self.assertEqual(form.errors['bankaccount'], ['Enter a valid bank account number.'])
+        self.assertEqual(form.errors['bsn'], ['Enter a valid BSN.'])
 
     def test_NL_ModelForm_valid(self):
         form = NLPlaceForm({
             'zipcode': '2233 AB',
             'province': 'OV',
-            'sofinr': '123456782',
-            'phone': '0623456789',
-            'bankaccount': '0417164300'
+            'bsn': '123456782',
         })
         self.assertTrue(form.is_valid())
+
+    def test_NLLicensePlateFormField(self):
+        error_invalid = ['Enter a valid license plate']
+        valid = {
+            '12-AAA-1': '12-AAA-1',
+            '12-AAA-1': '12-AAA-1',
+            'CDJ-123': 'CDJ-123',
+        }
+        invalid = {
+            'AAA-AA-1': error_invalid,
+            'CDA-111': error_invalid,
+            'a1s2d3': error_invalid,
+        }
+        self.assertFieldOutput(forms.NLLicensePlateFormField, valid, invalid)
+
+    def test_NL_car_ModelForm_valid(self):
+        form = NLCarForm({
+            'license_plate': 'AA-11-AA',
+        })
+
+        self.assertTrue(form.is_valid())
+
+    def test_NL_car_ModelForm_invalid(self):
+        form = NLCarForm({
+            'license_plate': 'AA-AAA-1',
+        })
+
+        self.assertFalse(form.is_valid())

@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import, unicode_literals
-
-import re
+from __future__ import unicode_literals
 
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
-from django.utils.encoding import smart_text
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -15,6 +12,7 @@ class NLZipCodeFieldValidator(RegexValidator):
 
     .. versionadded:: 1.3
     """
+
     error_message = _('Enter a valid zip code.')
 
     def __init__(self):
@@ -28,19 +26,19 @@ class NLZipCodeFieldValidator(RegexValidator):
             raise ValidationError(self.error_message)
 
 
-class NLSoFiNumberFieldValidator(RegexValidator):
+class NLBSNFieldValidator(RegexValidator):
     """
-    Validation for Dutch SoFinummers.
+    Validation for Dutch social security numbers (BSN).
 
-    .. versionadded:: 1.3
+    .. versionadded:: 1.6
     """
-    error_message = _('Enter a valid SoFi number.')
+
+    error_message = _('Enter a valid BSN.')
 
     def __init__(self):
-        super(NLSoFiNumberFieldValidator, self).__init__(regex='^\d{9}$',
-                                                         message=self.error_message)
+        super(NLBSNFieldValidator, self).__init__(regex='^\d{9}$', message=self.error_message)
 
-    def sofi_checksum_ok(self, value):
+    def bsn_checksum_ok(self, value):
         checksum = 0
         for i in range(9, 1, -1):
             checksum += int(value[9 - i]) * i
@@ -49,77 +47,46 @@ class NLSoFiNumberFieldValidator(RegexValidator):
         return checksum % 11 == 0
 
     def __call__(self, value):
-        super(NLSoFiNumberFieldValidator, self).__call__(value)
+        super(NLBSNFieldValidator, self).__call__(value)
 
         if int(value) == 0:
             raise ValidationError(self.error_message)
 
-        if not self.sofi_checksum_ok(value):
+        if not self.bsn_checksum_ok(value):
             raise ValidationError(self.error_message)
 
 
-class NLPhoneNumberFieldValidator(object):
+class NLLicensePlateFieldValidator(RegexValidator):
     """
-    Validation for Dutch phone numbers.
+    Validation for Dutch license plates.
 
-    .. versionadded:: 1.3
+    .. versionadded:: 2.1
     """
 
-    def __call__(self, value):
-        phone_nr = re.sub('[\-\s\(\)]', '', smart_text(value))
-        numeric_re = re.compile('^\d+$')
+    error_message = _('Enter a valid license plate')
 
-        if len(phone_nr) == 10 and numeric_re.search(phone_nr):
-            return
-
-        if phone_nr[:3] == '+31' and len(phone_nr) == 12 and numeric_re.search(phone_nr[3:]):
-            return
-
-        raise ValidationError(_('Enter a valid phone number.'))
-
-
-class NLBankAccountNumberFieldValidator(RegexValidator):
-    """
-    Validation for Dutch bank accounts.
-
-    Validation references:
-    http://www.mobilefish.com/services/elfproef/elfproef.php
-    http://www.credit-card.be/BankAccount/ValidationRules.htm#NL_Validation
-
-    .. versionadded:: 1.1
-    """
-    default_error_messages = {
-        'invalid': _('Enter a valid bank account number.'),
-        'wrong_length': _('Bank account numbers have 1 - 7, 9 or 10 digits.'),
+    VALIDATION_REGEXS = {
+        "sidecode1": r"^[A-Z]{2}-[0-9]{2}-[0-9]{2}$",  # AA-99-99
+        "sidecode2": r"^[0-9]{2}-[0-9]{2}-[A-Z]{2}$",  # 99-99-AA
+        "sidecode3": r"^[0-9]{2}-[A-Z]{2}-[0-9]{2}$",  # 99-AA-99
+        "sidecode4": r"^[A-Z]{2}-[0-9]{2}-[A-Z]{2}$",  # AA-99-AA
+        "sidecode5": r"^[A-Z]{2}-[A-Z]{2}-[0-9]{2}$",  # AA-AA-99
+        "sidecode6": r"^[0-9]{2}-[A-Z]{2}-[A-Z]{2}$",  # 99-AA-AA
+        "sidecode7": r"^[0-9]{2}-[A-Z]{3}-[0-9]{1}$",  # 99-AAA-9
+        "sidecode8": r"^[0-9]{1}-[A-Z]{3}-[0-9]{2}$",  # 9-AAA-99
+        "sidecode9": r"^[A-Z]{2}-[0-9]{3}-[A-Z]{1}$",  # AA-999-A
+        "sidecode10": r"^[A-Z]{1}-[0-9]{3}-[A-Z]{2}$",  # A-999-AA
+        "sidecode11": r"^[A-Z]{3}-[0-9]{2}-[A-Z]{1}$",  # AAA-99-A
+        "sidecode12": r"^[A-Z]{1}-[0-9]{2}-[A-Z]{3}$",  # A-99-AAA
+        "sidecode13": r"^[0-9]{1}-[A-Z]{2}-[0-9]{3}$",  # 9-AA-999
+        "sidecode14": r"^[0-9]{3}-[A-Z]{2}-[0-9]{1}$",  # 999-AA-9
+        "sidecode_koninklijk_huis": r"^AA-[0-9]{2,3}(-[0-9]{2})?$",  # AA-99(-99)?
+        "sidecode_internationaal_gerechtshof": r"^CDJ-[0-9]{3}$",  # CDJ-999
+        "sidecode_bijzondere_toelating": r"^ZZ-[0-9]{2}-[0-9]{2}$",  # ZZ-99-99
+        "sidecode_tijdelijk_voor_een_dag": r"^F-[0-9]{2}-[0-9]{2}$",  # F-99-99
+        "sidecode_voertuig_binnen_of_buiten_nederland_brengen": r"^Z-[0-9]{2}-[0-9]{2}$",  # Z-99-99
     }
 
-    def __init__(self, regex=None, message=None, code=None):
-        super(NLBankAccountNumberFieldValidator, self).__init__(regex='^[0-9]+$',
-                                                                message=self.default_error_messages['invalid'])
-        self.no_leading_zeros_regex = re.compile('[1-9]+')
-
-    def __call__(self, value):
-        super(NLBankAccountNumberFieldValidator, self).__call__(value)
-
-        # Need to check for values over the field's max length before the zero are stripped.
-        # This check is needed to allow this validator to be used without Django's MaxLengthValidator.
-        if len(value) > 10:
-            raise ValidationError(self.default_error_messages['wrong_length'])
-
-        # Strip the leading zeros.
-        m = re.search(self.no_leading_zeros_regex, value)
-        if not m:
-            raise ValidationError(self.default_error_messages['invalid'])
-        value = value[m.start():]
-
-        if len(value) != 9 and len(value) != 10 and not 1 <= len(value) <= 7:
-            raise ValidationError(self.default_error_messages['wrong_length'])
-
-        # Perform the eleven test validation on non-PostBank numbers.
-        if len(value) == 9 or len(value) == 10:
-            if len(value) == 9:
-                value = "0" + value
-
-            eleven_test_sum = sum([int(a) * b for a, b in zip(value, range(1, 11))])
-            if eleven_test_sum % 11 != 0:
-                raise ValidationError(self.default_error_messages['invalid'])
+    def __init__(self):
+        regex = r'(' + r'|'.join(self.VALIDATION_REGEXS.values()) + r')'
+        super(NLLicensePlateFieldValidator, self).__init__(regex=regex, message=self.error_message)

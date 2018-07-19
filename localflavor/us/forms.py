@@ -1,26 +1,22 @@
-"""
-USA-specific Form helpers
-"""
+"""USA-specific Form helpers."""
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select, CharField
-from django.utils.encoding import smart_text
+from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-
-phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 ssn_re = re.compile(r"^(?P<area>\d{3})[-\ ]?(?P<group>\d{2})[-\ ]?(?P<serial>\d{4})$")
 
 
 class USZipCodeField(RegexField):
-    """"
-    A form field that validates input as a U.S. ZIP code. Valid formats are
-    XXXXX or XXXXX-XXXX.
+    """
+    A form field that validates input as a U.S. ZIP code.
+
+    Valid formats are XXXXX or XXXXX-XXXX.
 
     .. note::
 
@@ -31,36 +27,19 @@ class USZipCodeField(RegexField):
 
     Whitespace around the ZIP code is accepted and automatically trimmed.
     """
+
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX or XXXXX-XXXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(USZipCodeField, self).__init__(r'^\d{5}(?:-\d{4})?$',
-                                             max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(USZipCodeField, self).__init__(r'^\d{5}(?:-\d{4})?$', *args, **kwargs)
 
     def to_python(self, value):
         value = super(USZipCodeField, self).to_python(value)
+        if value in self.empty_values:
+            return self.empty_value
         return value.strip()
-
-
-class USPhoneNumberField(CharField):
-    """
-    A form field that validates input as a U.S. phone number.
-    """
-    default_error_messages = {
-        'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),
-    }
-
-    def clean(self, value):
-        super(USPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub('(\(|\)|\s+)', '', smart_text(value))
-        m = phone_digits_re.search(value)
-        if m:
-            return '%s-%s-%s' % (m.group(1), m.group(2), m.group(3))
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class USSocialSecurityNumberField(CharField):
@@ -80,14 +59,15 @@ class USSocialSecurityNumberField(CharField):
 
     .. versionadded:: 1.1
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid U.S. Social Security number in XXX-XX-XXXX format.'),
     }
 
     def clean(self, value):
         super(USSocialSecurityNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         match = re.match(ssn_re, value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])
@@ -100,18 +80,21 @@ class USSocialSecurityNumberField(CharField):
         # Second pass: promotional and otherwise permanently invalid numbers.
         if (area == '666' or
                 area.startswith('9') or
-                value == '078-05-1120' or
-                value == '219-09-9999'):
+                (area == '078' and group == '05' and serial == '1120') or
+                (area == '219' and group == '09' and serial == '9999')):
             raise ValidationError(self.error_messages['invalid'])
         return '%s-%s-%s' % (area, group, serial)
 
 
 class USStateField(Field):
     """
-    A form field that validates its input is a U.S. state name or abbreviation.
-    It normalizes the input to the standard two-leter postal service
+    A form field that validates its input is a U.S. state, territory, or COFA territory.
+    The input is validated against a dictionary which includes names and abbreviations.
+
+    It normalizes the input to the standard two-letter postal service
     abbreviation for the given state.
     """
+
     default_error_messages = {
         'invalid': _('Enter a U.S. state or territory.'),
     }
@@ -134,9 +117,8 @@ class USStateField(Field):
 
 
 class USStateSelect(Select):
-    """
-    A Select widget that uses a list of U.S. states/territories as its choices.
-    """
+    """A Select widget that uses a list of U.S. states/territories as its choices."""
+
     def __init__(self, attrs=None):
         from .us_states import STATE_CHOICES
         super(USStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
@@ -144,8 +126,7 @@ class USStateSelect(Select):
 
 class USPSSelect(Select):
     """
-    A Select widget that uses a list of US Postal Service codes as its
-    choices.
+    A Select widget that uses a list of US Postal Service codes as its choices.
 
     .. note::
 
@@ -153,6 +134,7 @@ class USPSSelect(Select):
         please use :class:`~localflavor.us.forms.USZipCodeField`.
 
     """
+
     def __init__(self, attrs=None):
         from .us_states import USPS_CHOICES
         super(USPSSelect, self).__init__(attrs, choices=USPS_CHOICES)

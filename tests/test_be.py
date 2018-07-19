@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.be.forms import (BEPostalCodeField, BEPhoneNumberField,
-                                  BERegionSelect, BEProvinceSelect)
+from localflavor.be.forms import BEPostalCodeField, BEProvinceSelect, BERegionSelect
 
 
 class BELocalFlavorTests(SimpleTestCase):
@@ -21,38 +20,6 @@ class BELocalFlavorTests(SimpleTestCase):
             '859A': error_format,
         }
         self.assertFieldOutput(BEPostalCodeField, valid, invalid)
-
-    def test_BEPhoneNumberField(self):
-        error_format = [
-            ('Enter a valid phone number in one of the formats 0x xxx xx xx, '
-                '0xx xx xx xx, 04xx xx xx xx, 0x/xxx.xx.xx, 0xx/xx.xx.xx, '
-                '04xx/xx.xx.xx, 0x.xxx.xx.xx, 0xx.xx.xx.xx, 04xx.xx.xx.xx, '
-                '0xxxxxxxx or 04xxxxxxxx.')
-        ]
-        valid = {
-            '01 234 56 78': '01 234 56 78',
-            '01/234.56.78': '01/234.56.78',
-            '01.234.56.78': '01.234.56.78',
-            '012 34 56 78': '012 34 56 78',
-            '012/34.56.78': '012/34.56.78',
-            '012.34.56.78': '012.34.56.78',
-            '0412 34 56 78': '0412 34 56 78',
-            '0412/34.56.78': '0412/34.56.78',
-            '0412.34.56.78': '0412.34.56.78',
-            '012345678': '012345678',
-            '0412345678': '0412345678',
-        }
-        invalid = {
-            '01234567': error_format,
-            '12/345.67.89': error_format,
-            '012/345.678.90': error_format,
-            '012/34.56.789': error_format,
-            '0123/45.67.89': error_format,
-            '012/345 678 90': error_format,
-            '012/34 56 789': error_format,
-            '012.34 56 789': error_format,
-        }
-        self.assertFieldOutput(BEPhoneNumberField, valid, invalid)
 
     def test_BERegionSelect(self):
         f = BERegionSelect()

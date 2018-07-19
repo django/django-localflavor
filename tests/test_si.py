@@ -5,9 +5,7 @@ from datetime import date
 
 from django.test import SimpleTestCase
 
-from localflavor.si.forms import (SIEMSOField, SITaxNumberField,
-                                  SIPhoneNumberField, SIPostalCodeField,
-                                  SIPostalCodeSelect)
+from localflavor.si.forms import SIEMSOField, SIPostalCodeField, SIPostalCodeSelect, SITaxNumberField
 
 
 class SILocalFlavorTests(SimpleTestCase):
@@ -59,24 +57,6 @@ class SILocalFlavorTests(SimpleTestCase):
             f = SIEMSOField()
             f.clean(input)
             self.assertEqual(f.info, info)
-
-    def test_SIPhoneNumberField(self):
-        error_invalid = ['Enter phone number in form +386XXXXXXXX or 0XXXXXXXX.']
-        valid = {
-            '+38640999999': '40999999',
-            '+3861999999': '1999999',
-            '0038640999999': '40999999',
-            '040999999': '40999999',
-            '01999999': '1999999',
-            '059099999': '59099999',
-            '059 09 99 99': '59099999',
-            '0590/999-99': '59099999',
-        }
-        invalid = {
-            '03861999999': error_invalid,
-            '3861999999': error_invalid,
-        }
-        self.assertFieldOutput(SIPhoneNumberField, valid, invalid)
 
     def test_SIPostalCodeField(self):
         valid = {

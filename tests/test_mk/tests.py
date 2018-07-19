@@ -1,10 +1,9 @@
 # -*- encoding: utf-8 -*-
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 from django.test import TestCase
 
-from localflavor.mk.forms import (MKIdentityCardNumberField,
-                                  MKMunicipalitySelect, UMCNField)
+from localflavor.mk.forms import MKIdentityCardNumberField, MKMunicipalitySelect, UMCNField
 
 from .forms import MKPersonForm
 
@@ -22,18 +21,13 @@ class MKLocalFlavorTests(TestCase):
         })
 
     def test_get_display_methods(self):
-        """
-        Test that the get_*_display() methods are added to the model instances.
-        """
+        """Test that the get_*_display() methods are added to the model instances."""
         person = self.form.save()
         self.assertEqual(person.get_municipality_display(), 'Ohrid')
         self.assertEqual(person.get_municipality_req_display(), 'Veles')
 
     def test_municipality_required(self):
-        """
-        Test that required MKMunicipalityFields throw appropriate errors.
-        """
-
+        """Test that required MKMunicipalityFields throw appropriate errors."""
         form = MKPersonForm({
             'first_name': 'Someone',
             'last_name': 'Something',
@@ -46,9 +40,7 @@ class MKLocalFlavorTests(TestCase):
             form.errors['municipality_req'], ['This field is required.'])
 
     def test_umcn_invalid(self):
-        """
-        Test that UMCNFields throw appropriate errors for invalid UMCNs.
-        """
+        """Test that UMCNFields throw appropriate errors for invalid UMCNs."""
         form = MKPersonForm({
             'first_name': 'Someone',
             'last_name': 'Something',
@@ -72,11 +64,7 @@ class MKLocalFlavorTests(TestCase):
                          ['The first 7 digits of the UMCN must represent a valid past date.'])
 
     def test_idnumber_invalid(self):
-        """
-        Test that MKIdentityCardNumberFields throw
-        appropriate errors for invalid values
-        """
-
+        """Test that MKIdentityCardNumberFields throw appropriate errors for invalid values"""
         form = MKPersonForm({
             'first_name': 'Someone',
             'last_name': 'Something',
@@ -91,9 +79,7 @@ class MKLocalFlavorTests(TestCase):
                           'digits or an uppercase letter and 7 digits.'])
 
     def test_field_blank_option(self):
-        """
-        Test that the empty option is there.
-        """
+        """Test that the empty option is there."""
         municipality_select_html = """\
 <select name="municipality" id="id_municipality">
 <option value="">---------</option>

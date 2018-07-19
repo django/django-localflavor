@@ -3,11 +3,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.hr.forms import (HRCountySelect, HRPhoneNumberPrefixSelect,
-                                  HRLicensePlatePrefixSelect,
-                                  HRPhoneNumberField, HRLicensePlateField,
-                                  HRPostalCodeField, HROIBField,
-                                  HRJMBGField, HRJMBAGField)
+from localflavor.hr.forms import (HRCountySelect, HRJMBAGField, HRJMBGField, HRLicensePlateField,
+                                  HRLicensePlatePrefixSelect, HROIBField, HRPostalCodeField)
 
 
 class HRLocalFlavorTests(SimpleTestCase):
@@ -37,38 +34,6 @@ class HRLocalFlavorTests(SimpleTestCase):
 <option value="ZGŽ">Zagrebačka županija</option>
 </select>'''
         self.assertHTMLEqual(f.render('county', 'GZG'), out)
-
-    def test_HRPhoneNumberPrefixSelect(self):
-        f = HRPhoneNumberPrefixSelect()
-        out = '''<select name="phone">
-<option value="1" selected="selected">01</option>
-<option value="20">020</option>
-<option value="21">021</option>
-<option value="22">022</option>
-<option value="23">023</option>
-<option value="31">031</option>
-<option value="32">032</option>
-<option value="33">033</option>
-<option value="34">034</option>
-<option value="35">035</option>
-<option value="40">040</option>
-<option value="42">042</option>
-<option value="43">043</option>
-<option value="44">044</option>
-<option value="47">047</option>
-<option value="48">048</option>
-<option value="49">049</option>
-<option value="51">051</option>
-<option value="52">052</option>
-<option value="53">053</option>
-<option value="91">091</option>
-<option value="92">092</option>
-<option value="95">095</option>
-<option value="97">097</option>
-<option value="98">098</option>
-<option value="99">099</option>
-</select>'''
-        self.assertHTMLEqual(f.render('phone', '1'), out)
 
     def test_HRLicensePlatePrefixSelect(self):
         f = HRLicensePlatePrefixSelect()
@@ -109,25 +74,6 @@ class HRLocalFlavorTests(SimpleTestCase):
 <option value="ŽU">ŽU</option>
 </select>'''
         self.assertHTMLEqual(f.render('license', 'BJ'), out)
-
-    def test_HRPhoneNumberField(self):
-        error_invalid = ['Enter a valid phone number']
-        error_area = ['Enter a valid area or mobile network code']
-        error_number = ['The phone number is too long']
-        valid = {
-            '+38511234567': '+38511234567',
-            '0038511234567': '+38511234567',
-            '011234567': '+38511234567',
-            '+38521123456': '+38521123456',
-            '0038521123456': '+38521123456',
-            '021123456': '+38521123456',
-        }
-        invalid = {
-            '123456789': error_invalid,
-            '0811234567': error_area,
-            '0111234567': error_number,
-        }
-        self.assertFieldOutput(HRPhoneNumberField, valid, invalid)
 
     def test_HRLicensePlateField(self):
         error_invalid = ['Enter a valid vehicle license plate number']

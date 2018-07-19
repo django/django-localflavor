@@ -11,9 +11,7 @@ class TestUtilsChecksums(unittest.TestCase):
                 checksum.__name__, repr(value), output, not output))
 
     def test_luhn(self):
-        """
-        Check that function(value) equals output.
-        """
+        """Check that function(value) equals output."""
         result_pairs = (
             (4111111111111111, True),
             ('4111111111111111', True),
@@ -45,6 +43,8 @@ class TestUtilsChecksums(unittest.TestCase):
             (73513538, False),
             ('4006381333931', True),
             (4006381333931, True),
+            (7567554394380, True),
+            ('7567554394380', True),
             ('abc', False),
             (None, False),
             (object(), False),

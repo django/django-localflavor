@@ -7,3 +7,4 @@ repos
 docs/_build/
 *.py[cod]
 .idea/
+env/

@@ -1,8 +1,6 @@
 from django.db import models
 
-from localflavor.us.models import (USStateField, USPostalCodeField,
-                                   USSocialSecurityNumberField,
-                                   USZipCodeField)
+from localflavor.us.models import USPostalCodeField, USSocialSecurityNumberField, USStateField, USZipCodeField
 
 
 class USPlace(models.Model):

@@ -1,15 +1,13 @@
-"""
-South Africa-specific Form helpers
-"""
+"""South Africa-specific Form helpers."""
 from __future__ import unicode_literals
 
 import re
 from datetime import date
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
+
 from localflavor.generic.checksums import luhn
 
 id_re = re.compile(r'^(?P<yy>\d\d)(?P<mm>\d\d)(?P<dd>\d\d)(?P<mid>\d{4})(?P<end>\d{3})')
@@ -17,10 +15,12 @@ id_re = re.compile(r'^(?P<yy>\d\d)(?P<mm>\d\d)(?P<dd>\d\d)(?P<mid>\d{4})(?P<end>
 
 class ZAIDField(CharField):
     """
-    A form field for South African ID numbers -- the checksum is validated
-    using the Luhn checksum, and uses a simlistic (read: not entirely accurate)
+    A form field for South African ID numbers.
+
+    The checksum is validated using the Luhn checksum, and uses a simlistic (read: not entirely accurate)
     check for the birthdate
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid South African ID number'),
     }
@@ -28,8 +28,8 @@ class ZAIDField(CharField):
     def clean(self, value):
         super(ZAIDField, self).clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         # strip spaces and dashes
         value = value.strip().replace(' ', '').replace('-', '')
@@ -57,22 +57,22 @@ class ZAIDField(CharField):
 
 class ZAPostCodeField(RegexField):
     """
-    A form field that validates input as a South African postcode. Valid
-    postcodes must have four digits.
+    A form field that validates input as a South African postcode.
+
+    Valid postcodes must have four digits.
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid South African postal code'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ZAPostCodeField, self).__init__(r'^\d{4}$',
-                                              max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(ZAPostCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
 
 
 class ZAProvinceSelect(Select):
-    """
-    A Select widget that uses a list of South African Provinces as its choices.
-    """
+    """A Select widget that uses a list of South African Provinces as its choices."""
+
     def __init__(self, attrs=None):
         from .za_provinces import PROVINCE_CHOICES
         super(ZAProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)

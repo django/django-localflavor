@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
-"""
-Mexican-specific form helpers.
-"""
+"""Mexican-specific form helpers."""
 from __future__ import unicode_literals
+
 import re
 
 from django.forms import ValidationError
-from django.forms.fields import Select, RegexField
+from django.forms.fields import RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext_lazy as _
-from django.core.validators import EMPTY_VALUES
 
 from .mx_states import STATE_CHOICES
 
@@ -47,9 +45,8 @@ CURP_INCONVENIENT_WORDS = [
 
 
 class MXStateSelect(Select):
-    """
-    A Select widget that uses a list of Mexican states as its choices.
-    """
+    """A Select widget that uses a list of Mexican states as its choices."""
+
     def __init__(self, attrs=None):
         super(MXStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
@@ -61,6 +58,7 @@ class MXZipCodeField(RegexField):
     More info about this:
         http://en.wikipedia.org/wiki/List_of_postal_codes_in_Mexico
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid zip code in the format XXXXX.'),
     }
@@ -72,9 +70,9 @@ class MXZipCodeField(RegexField):
 
 class MXRFCField(RegexField):
     """
-    A form field that validates a Mexican *Registro Federal de Contribuyentes*
-    for either `Persona física` or `Persona moral`.
+    A form field that validates a Mexican *Registro Federal de Contribuyentes*.
 
+    Validates either `Persona física` or `Persona moral`.
     The Persona física RFC string is integrated by a juxtaposition of
     characters following the next pattern:
 
@@ -104,21 +102,22 @@ class MXRFCField(RegexField):
     More info about this:
         http://es.wikipedia.org/wiki/Registro_Federal_de_Contribuyentes_(M%C3%A9xico)
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid RFC.'),
         'invalid_checksum': _('Invalid checksum for RFC.'),
     }
 
-    def __init__(self, min_length=9, max_length=13, *args, **kwargs):
-        rfc_re = re.compile(r'^([A-Z&Ññ]{3}|[A-Z][AEIOU][A-Z]{2})%s([A-Z0-9]{2}[0-9A])?$' % DATE_RE,
+    def __init__(self, min_length=12, max_length=13, *args, **kwargs):
+        rfc_re = re.compile(r'^([A-Z&Ññ]{3}|[A-Z][AEIOU][A-Z]{2})%s[A-Z0-9]{2}[0-9A]$' % DATE_RE,
                             re.IGNORECASE)
         super(MXRFCField, self).__init__(rfc_re, min_length=min_length,
                                          max_length=max_length, *args, **kwargs)
 
     def clean(self, value):
         value = super(MXRFCField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = value.upper()
         if self._has_homoclave(value):
             if not value[-1] == self._checksum(value[:-1]):
@@ -129,8 +128,9 @@ class MXRFCField(RegexField):
 
     def _has_homoclave(self, rfc):
         """
-        This check is done due to the existance of RFCs without a *homoclave*
-        since the current algorithm to calculate it had not been created for
+        This check is done due to the existance of RFCs without a *homoclave*.
+
+        Since the current algorithm to calculate it had not been created for
         the first RFCs ever in Mexico.
         """
         rfc_without_homoclave_re = re.compile(r'^[A-Z&Ññ]{3,4}%s$' % DATE_RE,
@@ -139,6 +139,8 @@ class MXRFCField(RegexField):
 
     def _checksum(self, rfc):
         """
+        Checksum.
+
         More info about this procedure:
             www.sisi.org.mx/jspsi/documentos/2005/seguimiento/06101/0610100162005_065.doc
         """
@@ -160,6 +162,50 @@ class MXRFCField(RegexField):
     def _has_inconvenient_word(self, rfc):
         first_four = rfc[:4]
         return first_four in RFC_INCONVENIENT_WORDS
+
+
+class MXCLABEField(RegexField):
+    """
+    This field validates a CLABE (Clave Bancaria Estandarizada).
+
+    A CLABE is a 18-digits long number. The first 6 digits denote bank and branch number.
+    The remaining 12 digits denote an account number, plus a verifying digit.
+
+    More info:
+    https://en.wikipedia.org/wiki/CLABE
+
+    .. versionadded:: 1.4
+    """
+
+    default_error_messages = {
+        'invalid': _('Enter a valid CLABE.'),
+        'invalid_checksum': _('Invalid checksum for CLABE.'),
+    }
+
+    def __init__(self, min_length=18, max_length=18, *args, **kwargs):
+        clabe_re = r'^\d{18}$'
+        super(MXCLABEField, self).__init__(clabe_re, min_length=min_length, max_length=max_length, *args, **kwargs)
+
+    def _checksum(self, value):
+        verification_digit = int(value[-1])
+        number = value[:-1]
+
+        weight_factor = (3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7, 1, 3, 7)
+
+        sum_remainder = sum(x * int(y) % 10 for x, y in zip(weight_factor, number)) % 10
+
+        return verification_digit == (10 - sum_remainder) % 10
+
+    def clean(self, value):
+        value = super(MXCLABEField, self).clean(value)
+        if value in self.empty_values:
+            return self.empty_value
+        if not value.isdigit():
+            raise ValidationError(self.error_messages['invalid'])
+        if not self._checksum(value):
+            raise ValidationError(self.error_messages['invalid_checksum'])
+
+        return value
 
 
 class MXCURPField(RegexField):
@@ -186,13 +232,15 @@ class MXCURPField(RegexField):
     More info about this:
         http://www.condusef.gob.mx/index.php/clave-unica-de-registro-de-poblacion-curp
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid CURP.'),
         'invalid_checksum': _('Invalid checksum for CURP.'),
     }
 
     def __init__(self, min_length=18, max_length=18, *args, **kwargs):
-        states_re = r'(AS|BC|BS|CC|CL|CM|CS|CH|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)'
+        states_re = r'(AS|BC|BS|CC|CL|CM|CS|CH|DF|DG|GT|GR|HG|JC|MC|MN|' \
+                    r'MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)'
         consonants_re = r'[B-DF-HJ-NP-TV-Z]'
         curp_re = (r'^[A-Z][AEIOU][A-Z]{2}%s[HM]%s%s{3}[0-9A-Z]\d$' %
                    (DATE_RE, states_re, consonants_re))
@@ -202,8 +250,8 @@ class MXCURPField(RegexField):
 
     def clean(self, value):
         value = super(MXCURPField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         value = value.upper()
         if value[-1] != self._checksum(value[:-1]):
             raise ValidationError(self.error_messages['invalid_checksum'])
@@ -247,6 +295,7 @@ class MXSocialSecurityNumberField(RegexField):
     =====  ==================================================================
 
     """
+
     default_error_messages = {
         'invalid': _('Enter a valid Social Security Number.'),
         'invalid_checksum': _('Invalid checksum for Social Security Number.'),
@@ -262,8 +311,8 @@ class MXSocialSecurityNumberField(RegexField):
 
     def clean(self, value):
         value = super(MXSocialSecurityNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         if value[-1] != self.__checksum(value[:-1]):
             raise ValidationError(self.error_messages['invalid_checksum'])
         return value

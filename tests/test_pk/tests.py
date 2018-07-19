@@ -1,14 +1,14 @@
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.test import TestCase
 
-from localflavor.pk.forms import PKPostCodeField, PKPhoneNumberField, PKStateSelect
+from localflavor.pk.forms import PKPostCodeField, PKStateSelect
+
 from .forms import PakistaniPlaceForm
 
-
-SELECTED_OPTION_PATTERN = r'<option value="%s" selected="selected">'
+SELECTED_OPTION_PATTERN = r'<option value="%s" selected>'
 BLANK_OPTION_PATTERN = r'<option value="">'
 INPUT_VALUE_PATTERN = r'<input[^>]*value="%s"[^>]*>'
 
@@ -25,13 +25,13 @@ class PKLocalflavorTests(TestCase):
              })
 
     def test_get_display_methods(self):
-        """ Ensure get_*_display() methods are added to model instances. """
+        """Ensure get_*_display() methods are added to model instances."""
         place = self.form.save()
         self.assertEqual(place.get_state_display(), 'Islamabad')
         self.assertEqual(place.get_state_required_display(), 'Punjab')
 
     def test_default_values(self):
-        """ Ensure that default values are selected in forms. """
+        """Ensure that default values are selected in forms."""
         form = PakistaniPlaceForm()
         self.assertTrue(re.search(SELECTED_OPTION_PATTERN % 'PK-IS',
                                   str(form['state_default'])))
@@ -39,7 +39,7 @@ class PKLocalflavorTests(TestCase):
                                   str(form['postcode_default'])))
 
     def test_required(self):
-        """ Test that required PKStateFields throw appropriate errors. """
+        """Test that required PKStateFields throw appropriate errors."""
         form = PakistaniPlaceForm({'state': 'PK-PB', 'name': 'Lahore'})
         self.assertFalse(form.is_valid())
         self.assertEqual(
@@ -48,12 +48,12 @@ class PKLocalflavorTests(TestCase):
             form.errors['postcode_required'], ['This field is required.'])
 
     def test_field_blank_option(self):
-        """ Test that the empty option is there. """
+        """Test that the empty option is there."""
         self.assertTrue(re.search(BLANK_OPTION_PATTERN,
                                   str(self.form['state'])))
 
     def test_selected_values(self):
-        """ Ensure selected states match the initial values provided. """
+        """Ensure selected states match the initial values provided."""
         self.assertTrue(re.search(SELECTED_OPTION_PATTERN % 'PK-IS',
                                   str(self.form['state'])))
         self.assertTrue(re.search(SELECTED_OPTION_PATTERN % 'PK-PB',
@@ -88,24 +88,3 @@ class PKLocalflavorTests(TestCase):
             '123456': error_format,
         }
         self.assertFieldOutput(PKPostCodeField, valid, invalid)
-
-    def test_PKPhoneNumberField(self):
-        error_format = ['Phone numbers must contain 9, 10 or 11 digits.']
-        valid = {
-            '123456789': '123456789',
-            '1234567890': '1234567890',
-            '12345678901': '12345678901',
-            '0513456789': '0513456789',
-            '051 3456789': '0513456789',
-            '051 3456 789': '0513456789',
-            '(051) 3456 789': '0513456789',
-            '(051) 3456-789': '0513456789',
-            '(051)3456-789': '0513456789',
-            '0300 1234567': '03001234567',
-            '0300 1234 567': '03001234567',
-        }
-        invalid = {
-            '123': error_format,
-            '1800DJANGO': error_format,
-        }
-        self.assertFieldOutput(PKPhoneNumberField, valid, invalid)

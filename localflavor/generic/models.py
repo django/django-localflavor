@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from .forms import IBANFormField, BICFormField
-from .validators import IBANValidator, BICValidator
+from .forms import BICFormField, IBANFormField
+from .validators import BICValidator, IBANValidator
 
 
 class IBANField(models.CharField):
@@ -33,12 +33,21 @@ class IBANField(models.CharField):
 
     .. versionadded:: 1.1
     """
+
     description = _('An International Bank Account Number')
 
-    def __init__(self, use_nordea_extensions=False, include_countries=None, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 34)
+        self.use_nordea_extensions = kwargs.pop('use_nordea_extensions', False)
+        self.include_countries = kwargs.pop('include_countries', None)
         super(IBANField, self).__init__(*args, **kwargs)
-        self.validators.append(IBANValidator(use_nordea_extensions, include_countries))
+        self.validators.append(IBANValidator(self.use_nordea_extensions, self.include_countries))
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(IBANField, self).deconstruct()
+        kwargs['use_nordea_extensions'] = self.use_nordea_extensions
+        kwargs['include_countries'] = self.include_countries
+        return name, path, args, kwargs
 
     def to_python(self, value):
         value = super(IBANField, self).to_python(value)
@@ -47,7 +56,11 @@ class IBANField(models.CharField):
         return value
 
     def formfield(self, **kwargs):
-        defaults = {'form_class': IBANFormField}
+        defaults = {
+            'use_nordea_extensions': self.use_nordea_extensions,
+            'include_countries': self.include_countries,
+            'form_class': IBANFormField,
+        }
         defaults.update(kwargs)
         return super(IBANField, self).formfield(**defaults)
 
@@ -62,6 +75,7 @@ class BICField(models.CharField):
 
     .. versionadded:: 1.1
     """
+
     description = _('Business Identifier Code')
 
     def __init__(self, *args, **kwargs):

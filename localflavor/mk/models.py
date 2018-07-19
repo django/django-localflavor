@@ -1,16 +1,18 @@
-from django.db.models.fields import CharField
+from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
+from .forms import MKIdentityCardNumberField as MKIdentityCardNumberFormField
+from .forms import UMCNField as UMCNFormField
 from .mk_choices import MK_MUNICIPALITIES
-from .forms import (UMCNField as UMCNFormField,
-                    MKIdentityCardNumberField as MKIdentityCardNumberFormField)
 
 
 class MKIdentityCardNumberField(CharField):
     """
     A form field that validates input as a Macedonian identity card number.
+
     Both old and new identity card numbers are supported.
     """
+
     description = _("Macedonian identity card number")
 
     def __init__(self, *args, **kwargs):
@@ -26,14 +28,21 @@ class MKIdentityCardNumberField(CharField):
 class MKMunicipalityField(CharField):
     """
     A form field that validates input as a Macedonian identity card number.
+
     Both old and new identity card numbers are supported.
     """
+
     description = _("A Macedonian municipality (2 character code)")
 
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = MK_MUNICIPALITIES
         kwargs['max_length'] = 2
         super(MKMunicipalityField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(MKMunicipalityField, self).deconstruct()
+        del kwargs['choices']
+        return name, path, args, kwargs
 
 
 class UMCNField(CharField):
@@ -50,6 +59,7 @@ class UMCNField(CharField):
     * The first 7 digits represent a valid past date in the format DDMMYYY
     * The last digit of the UMCN passes a checksum test
     """
+
     description = _("Unique master citizen number (13 digits)")
 
     def __init__(self, *args, **kwargs):

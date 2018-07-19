@@ -1,8 +1,6 @@
-"""
-China(mainland)-specific Form helpers
-"""
+"""China(mainland)-specific Form helpers."""
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
@@ -12,20 +10,15 @@ from django.utils.translation import ugettext_lazy as _
 
 from .cn_provinces import CN_PROVINCE_CHOICES
 
-
 __all__ = (
     'CNProvinceSelect',
     'CNPostCodeField',
     'CNIDCardField',
-    'CNPhoneNumberField',
-    'CNCellNumberField',
 )
 
 
 ID_CARD_RE = r'^\d{15}(\d{2}[0-9xX])?$'
 POST_CODE_RE = r'^\d{6}$'
-PHONE_RE = r'^\d{3,4}-\d{7,8}(-\d+)?$'
-CELL_RE = r'^1[34578]\d{9}$'
 
 # Valid location code used in id card checking algorithm
 CN_LOCATION_CODES = (
@@ -67,10 +60,8 @@ CN_LOCATION_CODES = (
 
 
 class CNProvinceSelect(Select):
-    """
-    A select widget providing the list of provinces and districts
-    in People's Republic of China as choices.
-    """
+    """A select widget providing the list of provinces and districts in People's Republic of China as choices."""
+
     def __init__(self, attrs=None):
         super(CNProvinceSelect, self).__init__(attrs, choices=CN_PROVINCE_CHOICES)
 
@@ -78,8 +69,10 @@ class CNProvinceSelect(Select):
 class CNPostCodeField(RegexField):
     """
     A form field that validates input as postal codes in mainland China.
+
     Valid codes are in the format of XXXXXX where X is a digit.
     """
+
     default_error_messages = {
         'invalid': _('Enter a post code in the format XXXXXX.'),
     }
@@ -102,6 +95,7 @@ class CNIDCardField(CharField):
     The checksum algorithm is described in GB11643-1999.
     See: http://en.wikipedia.org/wiki/Resident_Identity_Card#Identity_card_number
     """
+
     default_error_messages = {
         'invalid': _('ID Card Number consists of 15 or 18 digits.'),
         'checksum': _('Invalid ID Card Number: Wrong checksum'),
@@ -110,16 +104,14 @@ class CNIDCardField(CharField):
     }
 
     def __init__(self, max_length=18, min_length=15, *args, **kwargs):
-        super(CNIDCardField, self).__init__(max_length, min_length, *args, **kwargs)
+        super(CNIDCardField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
-        """
-        Check whether the input is a valid ID Card Number.
-        """
+        """Check whether the input is a valid ID Card Number."""
         # Check the length of the ID card number.
         super(CNIDCardField, self).clean(value)
-        if not value:
-            return ""
+        if value in self.empty_values:
+            return self.empty_value
         # Check whether this ID card number has valid format
         if not re.match(ID_CARD_RE, value):
             raise ValidationError(self.error_messages['invalid'])
@@ -136,10 +128,7 @@ class CNIDCardField(CharField):
         return '%s' % value
 
     def has_valid_birthday(self, value):
-        """
-        This method would grab the date of birth from the ID card number and
-        test whether it is a valid date.
-        """
+        """This method grabs the date of birth from the ID card number and test whether it is a valid date."""
         from datetime import datetime
         if len(value) == 15:
             # 1st generation ID card
@@ -157,17 +146,11 @@ class CNIDCardField(CharField):
             return False
 
     def has_valid_location(self, value):
-        """
-        This method checks if the first two digits in the ID Card are
-        valid province code.
-        """
+        """This method checks if the first two digits in the ID Card are valid province code."""
         return int(value[:2]) in CN_LOCATION_CODES
 
     def has_valid_checksum(self, value):
-        """
-        This method checks if the last letter/digit is valid according to
-        GB11643-1999.
-        """
+        """This method checks if the last letter/digit is valid according to GB11643-1999."""
         # If the length of the number is not 18, then the number is a 1st
         # generation ID card number, and there is no checksum to be checked.
         if len(value) != 18:
@@ -178,41 +161,3 @@ class CNIDCardField(CharField):
                 value[:17],),
         ) % 11
         return '10X98765432'[checksum_index] == value[-1]
-
-
-class CNPhoneNumberField(RegexField):
-    """
-    A form field that validates input as a telephone number in mainland China.
-    A valid phone number could be like: 010-12345678.
-
-    Considering there might be extension numbers,
-    this could also be: 010-12345678-35.
-    """
-    default_error_messages = {
-        'invalid': _('Enter a valid phone number.'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        super(CNPhoneNumberField, self).__init__(PHONE_RE, *args, **kwargs)
-
-
-class CNCellNumberField(RegexField):
-    """
-    A form field that validates input as a cellphone number in mainland China.
-    A valid cellphone number could be like: 13012345678.
-
-    A very rough rule is used here: the first digit should be 1, the second
-    should be 3, 4, 5, 7 or 8, followed by 9 more digits.
-    The total length of a cellphone number should be 11.
-
-    .. versionchanged:: 1.1
-
-       Added 7 as a valid second digit for Chinese virtual mobile ISPs.
-
-    """
-    default_error_messages = {
-        'invalid': _('Enter a valid cell number.'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        super(CNCellNumberField, self).__init__(CELL_RE, *args, **kwargs)

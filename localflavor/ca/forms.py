@@ -1,20 +1,16 @@
-"""
-Canada-specific Form helpers
-"""
+"""Canada-specific Form helpers."""
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import unicode_literals
 
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, CharField, Select
-from django.utils.encoding import smart_text
+from django.forms.fields import CharField, Field, Select
 from django.utils.translation import ugettext_lazy as _
+
 from localflavor.generic.checksums import luhn
 
-
-phone_digits_re = re.compile(r'^(?:1-?)?(\d{3})[-\.]?(\d{3})[-\.]?(\d{4})$')
 sin_re = re.compile(r"^(\d{3})-(\d{3})-(\d{3})$")
 
 
@@ -27,6 +23,7 @@ class CAPostalCodeField(CharField):
     For more info see:
     http://www.canadapost.ca/tools/pg/manual/PGaddress-e.asp#1402170
     """
+
     default_error_messages = {
         'invalid': _('Enter a postal code in the format XXX XXX.'),
     }
@@ -36,8 +33,8 @@ class CAPostalCodeField(CharField):
 
     def clean(self, value):
         value = super(CAPostalCodeField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
         postcode = value.upper().strip()
         m = self.postcode_regex.match(postcode)
         if not m:
@@ -45,29 +42,14 @@ class CAPostalCodeField(CharField):
         return "%s %s" % (m.group(1), m.group(2))
 
 
-class CAPhoneNumberField(Field):
-    """Canadian phone number form field."""
-    default_error_messages = {
-        'invalid': _('Phone numbers must be in XXX-XXX-XXXX format.'),
-    }
-
-    def clean(self, value):
-        super(CAPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub('(\(|\)|\s+)', '', smart_text(value))
-        m = phone_digits_re.search(value)
-        if m:
-            return '%s-%s-%s' % (m.group(1), m.group(2), m.group(3))
-        raise ValidationError(self.error_messages['invalid'])
-
-
 class CAProvinceField(Field):
     """
     A form field that validates its input is a Canadian province name or abbreviation.
+
     It normalizes the input to the standard two-leter postal service
     abbreviation for the given province.
     """
+
     default_error_messages = {
         'invalid': _('Enter a Canadian province or territory.'),
     }
@@ -91,10 +73,8 @@ class CAProvinceField(Field):
 
 
 class CAProvinceSelect(Select):
-    """
-    A Select widget that uses a list of Canadian provinces and
-    territories as its choices.
-    """
+    """A Select widget that uses a list of Canadian provinces and territories as its choices."""
+
     def __init__(self, attrs=None):
         # Load data in memory only when it is required, see also #17275
         from .ca_provinces import PROVINCE_CHOICES
@@ -113,6 +93,7 @@ class CASocialInsuranceNumberField(Field):
          See: http://en.wikipedia.org/wiki/Social_Insurance_Number
 
     """
+
     default_error_messages = {
         'invalid': _(
             'Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format.'),

@@ -5,8 +5,7 @@ import datetime
 
 from django.test import SimpleTestCase
 
-from localflavor.se.forms import (SECountySelect, SEOrganisationNumberField,
-                                  SEPersonalIdentityNumberField,
+from localflavor.se.forms import (SECountySelect, SEOrganisationNumberField, SEPersonalIdentityNumberField,
                                   SEPostalCodeField)
 
 
@@ -132,6 +131,9 @@ class SELocalFlavorTests(SimpleTestCase):
             '870514-1111': error_invalid,
             # Co-ordination number with bad checksum
             '870573-1311': error_invalid,
+            # Interim numbers should be rejected by default, even though they are valid
+            '901129-T003': error_invalid,
+            '19901129T003': error_invalid,
         }
         self.assertFieldOutput(SEPersonalIdentityNumberField, valid, invalid)
 
@@ -147,6 +149,33 @@ class SELocalFlavorTests(SimpleTestCase):
             '870573-1311': error_invalid,
         }
         kwargs = {'coordination_number': False}
+        self.assertFieldOutput(SEPersonalIdentityNumberField, valid, invalid,
+                               field_kwargs=kwargs)
+
+        valid = {
+            # All ordinary numbers should work when switching the first serial
+            # digit to a letter. Additionally, lower case letters should be
+            # accepted and normalized to upper case.
+            '870512-T989': '19870512T989',
+            '870512-r120': '19870512R120',
+            '19870512-S989': '19870512S989',
+            '19870512u989': '19870512U989',
+            '081015-W316': '19081015W316',
+            '081015x316': '19081015X316',
+            '870514J060': '19870514J060',
+            '081015+k316': '18081015K316',
+        }
+        invalid = {
+            # The concepts of interim and coordination numbers can not be
+            # combined and should be considered invalid
+            '870574-L315': error_invalid,
+            '870574+m315': error_invalid,
+            '870574N315': error_invalid,
+            # Invalid interim numbers should be reported as invalid
+            '870512-T988': error_invalid,
+            '870512-r121': error_invalid,
+        }
+        kwargs = {'interim_number': True}
         self.assertFieldOutput(SEPersonalIdentityNumberField, valid, invalid,
                                field_kwargs=kwargs)
 

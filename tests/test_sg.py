@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.sg.forms import (SGPostCodeField, SGNRIC_FINField,
-                                  SGPhoneNumberField)
+from localflavor.sg.forms import SGNRICFINField, SGPostCodeField
 
 
 class SGLocalFlavorTests(SimpleTestCase):
@@ -22,23 +21,7 @@ class SGLocalFlavorTests(SimpleTestCase):
         }
         self.assertFieldOutput(SGPostCodeField, valid, invalid)
 
-    def test_SGPhoneNumberField(self):
-        error_format = ['Phone numbers must contain 8 digits and start with '
-                        'either 6, or 8, or 9.']
-        valid = {
-            '6880 4321 ': '68804321',
-            '  9123 3132': '91233132',
-            '83234441': '83234441',
-        }
-        invalid = {
-            '65 4234 4234': error_format,
-            '(+65) 1230 0180': error_format,
-            '(65)1432 2424': error_format,
-            '32344569': error_format,
-        }
-        self.assertFieldOutput(SGPhoneNumberField, valid, invalid)
-
-    def test_SGNRIC_FINField(self):
+    def test_SGNRICFINField(self):
         error_format = ['Invalid NRIC/FIN.']
         valid = {
             's8675985c': 'S8675985C',
@@ -54,4 +37,4 @@ class SGLocalFlavorTests(SimpleTestCase):
             'F8155379N': error_format,
             'G1087200K': error_format,
         }
-        self.assertFieldOutput(SGNRIC_FINField, valid, invalid)
+        self.assertFieldOutput(SGNRICFINField, valid, invalid)

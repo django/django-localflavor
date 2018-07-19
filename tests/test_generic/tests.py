@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.core.exceptions import ValidationError, ImproperlyConfigured
+from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.test import SimpleTestCase, TestCase
 from django.utils import formats
 
 from localflavor.generic.countries.sepa import IBAN_SEPA_COUNTRIES
+from localflavor.generic.forms import BICFormField, DateField, DateTimeField, IBANFormField, SplitDateTimeField
 from localflavor.generic.models import BICField, IBANField
-from localflavor.generic.validators import BICValidator, IBANValidator, EANValidator
-from localflavor.generic.forms import DateField, DateTimeField, SplitDateTimeField, BICFormField, IBANFormField
+from localflavor.generic.validators import BICValidator, EANValidator, IBANValidator
+
+from .forms import UseIncludedCountriesForm, UseNordeaExtensionsForm
 
 
 class DateTimeFieldTestCase(SimpleTestCase):
@@ -131,8 +133,25 @@ class IBANTests(TestCase):
         for iban in invalid:
             self.assertRaisesMessage(ValidationError, invalid[iban], IBANValidator(), iban)
 
+    def test_iban_validator_deconstruct(self):
+        # Call to the required deconstruct method to see if it exists and
+        # it doesn't throw an error.
+        IBANValidator().deconstruct()
+
+        test_cases = [
+            {'use_nordea_extensions': True, 'include_countries': ['IS', 'IT']},
+            {'use_nordea_extensions': True},
+            {'include_countries': ['IS', 'IT']},
+            {},
+        ]
+
+        for test_case in test_cases:
+            iban1 = IBANValidator(**test_case)
+            iban2 = IBANValidator(**test_case)
+            self.assertEqual(iban1, iban2, msg="IBAN validators with equal parameters are not equal.")
+
     def test_iban_fields(self):
-        """ Test the IBAN model and form field. """
+        """Test the IBAN model and form field."""
         valid = {
             'NL02ABNA0123456789': 'NL02ABNA0123456789',
             'Nl02aBNa0123456789': 'NL02ABNA0123456789',
@@ -189,10 +208,19 @@ class IBANTests(TestCase):
             self.assertEqual(context_manager.exception.messages, errors)
 
     def test_nordea_extensions(self):
-        """ Test a valid IBAN in the Nordea extensions. """
+        """Test a valid IBAN in the Nordea extensions."""
         iban_validator = IBANValidator(use_nordea_extensions=True)
         # Run the validator to ensure there are no ValidationErrors raised.
         iban_validator('Eg1100006001880800100014553')
+
+    def test_use_nordea_extensions_formfield(self):
+        form = UseNordeaExtensionsForm({'iban': 'EG1100006001880800100014553'})
+        self.assertFalse(form.errors)
+
+    def test_include_countries_formfield(self):
+        valid_not_included = 'CH9300762011623852957'
+        form = UseIncludedCountriesForm({'iban': valid_not_included})
+        self.assertRaises(ValidationError, form.fields['iban'].run_validators, valid_not_included)
 
     def test_form_field_formatting(self):
         iban_form_field = IBANFormField()
@@ -202,7 +230,7 @@ class IBANTests(TestCase):
         self.assertEqual(iban_form_field.to_python(None), '')
 
     def test_include_countries(self):
-        """ Test the IBAN model and form include_countries feature. """
+        """Test the IBAN model and form include_countries feature."""
         include_countries = ('NL', 'BE', 'LU')
 
         valid = {
@@ -233,7 +261,7 @@ class IBANTests(TestCase):
             self.assertEqual(context_manager.exception.messages, errors)
 
     def test_misconfigured_include_countries(self):
-        """ Test that an IBAN field or model raises an error when asked to validate a country not part of IBAN. """
+        """Test that an IBAN field or model raises an error when asked to validate a country not part of IBAN."""
         # Test an unassigned ISO 3166-1 country code.
         self.assertRaises(ImproperlyConfigured, IBANValidator, include_countries=('JJ',))
         self.assertRaises(ImproperlyConfigured, IBANValidator, use_nordea_extensions=True, include_countries=('JJ',))
@@ -242,7 +270,7 @@ class IBANTests(TestCase):
         self.assertRaises(ImproperlyConfigured, IBANValidator, include_countries=('AO',))
 
     def test_sepa_countries(self):
-        """ Test include_countries using the SEPA counties. """
+        """Test include_countries using the SEPA counties."""
         # A few SEPA valid IBANs.
         valid = {
             'GI75 NWBK 0000 0000 7099 453': 'GI75NWBK000000007099453',
@@ -253,7 +281,7 @@ class IBANTests(TestCase):
         # A few non-SEPA valid IBANs.
         invalid = {
             'SA03 8000 0000 6080 1016 7519': ['SA IBANs are not allowed in this field.'],
-            'CR05 1520 2001 0262 8406 6': ['CR IBANs are not allowed in this field.'],
+            'CR05 0152 0200 1026 2840 66': ['CR IBANs are not allowed in this field.'],
             'XK05 1212 0123 4567 8906': ['XK IBANs are not allowed in this field.']
         }
 
@@ -263,6 +291,14 @@ class IBANTests(TestCase):
     def test_default_form(self):
         iban_model_field = IBANField()
         self.assertEqual(type(iban_model_field.formfield()), type(IBANFormField()))
+
+    def test_model_field_deconstruct(self):
+        # test_instance must be created with the non-default options.
+        test_instance = IBANField(include_countries=('NL', 'BE'), use_nordea_extensions=True)
+        name, path, args, kwargs = test_instance.deconstruct()
+        new_instance = IBANField(*args, **kwargs)
+        for attr in ('include_countries', 'use_nordea_extensions'):
+            self.assertEqual(getattr(test_instance, attr), getattr(new_instance, attr))
 
 
 class BICTests(TestCase):
@@ -296,6 +332,14 @@ class BICTests(TestCase):
 
         for bic in invalid:
             self.assertRaisesMessage(ValidationError,  invalid[bic], BICValidator(), bic)
+
+    def test_bic_validator_deconstruct(self):
+        bic1 = BICValidator()
+        bic2 = BICValidator()
+        self.assertEqual(bic1, bic2, msg="BIC validators are not equal.")
+
+        # Call to the deconstruct method to see if it exists.
+        bic1.deconstruct()
 
     def test_form_field_formatting(self):
         bic_form_field = BICFormField()
@@ -366,6 +410,23 @@ class EANTests(TestCase):
 
         for value in invalid:
             self.assertRaisesMessage(ValidationError,  error_message, validator, value)
+
+    def test_ean_validator_deconstruct(self):
+        # Call to the required deconstruct method to see if it exists and
+        # it doesn't throw an error.
+        EANValidator().deconstruct()
+
+        test_cases = [
+            {'strip_nondigits': True, 'message': 'test'},
+            {'message': 'test'},
+            {'strip_nondigits': True},
+            {},
+        ]
+
+        for test_case in test_cases:
+            ean1 = EANValidator(**test_case)
+            ean2 = EANValidator(**test_case)
+            self.assertEqual(ean1, ean2, msg="EAN validators with equal parameters are not equal.")
 
     def test_ean_validator_strip_nondigits(self):
         valid = [

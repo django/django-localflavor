@@ -2,9 +2,8 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.pl.forms import (PLProvinceSelect, PLCountySelect,
-                                  PLPostalCodeField, PLNIPField, PLPESELField,
-                                  PLNationalIDCardNumberField, PLREGONField)
+from localflavor.pl.forms import (PLCountySelect, PLNationalIDCardNumberField, PLNIPField, PLPESELField,
+                                  PLPostalCodeField, PLProvinceSelect, PLREGONField)
 
 
 class PLLocalFlavorTests(SimpleTestCase):
@@ -440,6 +439,7 @@ class PLLocalFlavorTests(SimpleTestCase):
     def test_PLPESELField(self):
         error_checksum = ['Wrong checksum for the National Identification Number.']
         error_format = ['National Identification Number consists of 11 digits.']
+        error_birthdate = ['The National Identification Number contains an invalid birth date.']
         valid = {
             '80071610614': '80071610614',
         }
@@ -447,6 +447,7 @@ class PLLocalFlavorTests(SimpleTestCase):
             '80071610610': error_checksum,
             '80': error_format,
             '800716106AA': error_format,
+            '98765432121': error_birthdate,
         }
         self.assertFieldOutput(PLPESELField, valid, invalid)
 
