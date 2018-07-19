@@ -147,6 +147,12 @@ class ESLocalFlavorTests(SimpleTestCase):
         }
         self.assertFieldOutput(ESIdentityCardNumberField, valid, invalid)
 
+    def test_ESIdentityCardNumberField_invalid_error_override(self):
+        # https://github.com/django/django-localflavor/issues/336
+        invalid_override_message = 'Please enter a valid number.'
+        form = ESIdentityCardNumberField(error_messages={'invalid': invalid_override_message})
+        self.assertEqual(form.error_messages['invalid'], invalid_override_message)
+
     def test_ESCCCField(self):
         error_invalid = ['Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX.']
         error_checksum = ['Invalid checksum for bank account number.']

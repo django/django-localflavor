@@ -15,13 +15,15 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Allowed invalid message to be overridden in ESIdentityCardNumberField
+  (`gh-339 <https://github.com/django/django-localflavor/issues/339>`_).
 
 Other changes:
 
 - Added VAT identifcation number validator for all EU locales.
 - Fix EAN validation when intermediate checksum is 10
   (`gh-331 <https://github.com/django/django-localflavor/issues/331>`_).
+- Confirmed support for Django 2.1.
 
 
 2.0   (2017-12-30)
