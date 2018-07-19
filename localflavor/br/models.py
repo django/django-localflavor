@@ -1,4 +1,3 @@
-from django.db.models.fields import CharField
 from django.utils.translation import ugettext_lazy as _
 from django.db.models.fields import CharField
 from django.core.validators import RegexValidator
