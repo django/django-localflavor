@@ -1,4 +1,5 @@
 """Greek-specific forms helpers."""
+import datetime
 import re
 
 from django.core.validators import EMPTY_VALUES
@@ -6,9 +7,7 @@ from django.forms import Field, RegexField, ValidationError
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
-
-NUMERIC_RE = re.compile('^\d+$')
+from localflavor.generic.checksums import luhn
 
 
 class GRPostalCodeField(RegexField):
@@ -22,9 +21,8 @@ class GRPostalCodeField(RegexField):
         'invalid': _('Enter a valid 5-digit greek postal code.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(GRPostalCodeField, self).__init__(r'^[12345678]\d{4}$',
-                                                max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(GRPostalCodeField, self).__init__(r'^[12345678]\d{4}$', *args, **kwargs)
 
 
 class GRTaxNumberCodeField(Field):
@@ -67,56 +65,42 @@ class GRTaxNumberCodeField(Field):
         return val
 
 
-class GRPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
+class GRSocialSecurityNumberCodeField(RegexField):
     """
-    Greek general phone field.
+    Greek social security number (AMKA) field.
 
-    10 digits (can also start with +30 which is the country-code for greece)
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a 10-digit greek phone number.'),
-    }
-
-    def clean(self, value):
-        super(GRPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        phone_nr = re.sub('[\-\s\(\)]', '', force_text(value))
-
-        if len(phone_nr) == 10 and NUMERIC_RE.search(phone_nr):
-            return value
-
-        if phone_nr[:3] == '+30' and len(phone_nr) == 13 and NUMERIC_RE.search(phone_nr[3:]):
-            return value
-
-        raise ValidationError(self.error_messages['invalid'])
-
-
-class GRMobilePhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Greek mobile phone field.
-
-    10 digits starting with 69 (could also start with +30 which is the country-code for greece)
+    The allow_test_value option can be used to enable the usage of the
+    non valid 00000000000 (11 zeros) value for testing and development
     """
 
     default_error_messages = {
-        'invalid': _('Enter a greek mobile phone number starting with 69.'),
+        'invalid': _('Enter a valid greek social security number (AMKA - 11 digits).'),
     }
 
+    def __init__(self, allow_test_value=False, *args, **kwargs):
+        self.allow_test_value = allow_test_value
+        super(GRSocialSecurityNumberCodeField, self).__init__(r'^[0-9\s\-]+$', *args, **kwargs)
+
+    def check_date(self, val):
+        try:
+            datetime.datetime.strptime(val[:6], '%d%m%y')
+        except:
+            raise ValidationError(self.error_messages['invalid'])
+
     def clean(self, value):
-        super(GRMobilePhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        super(GRSocialSecurityNumberCodeField, self).clean(value)
+        if value in self.empty_values:
+            return self.empty_value
+        val = re.sub('[\-\s]', '', force_text(value))
+        if not val or len(val) < 11:
+            raise ValidationError(self.error_messages['invalid'])
+        if self.allow_test_value and val == '00000000000':
+            return val
+        if not all(char.isdigit() for char in val):
+            raise ValidationError(self.error_messages['invalid'])
 
-        phone_nr = re.sub('[\-\s\(\)]', '', force_text(value))
+        self.check_date(val)
+        if not luhn(val):
+            raise ValidationError(self.error_messages['invalid'])
 
-        if len(phone_nr) == 10 and NUMERIC_RE.search(phone_nr) and phone_nr.startswith('69'):
-            return value
-
-        if phone_nr[:3] == '+30' and len(phone_nr) == 13 and \
-                NUMERIC_RE.search(phone_nr[3:]) and phone_nr[3:].startswith('69'):
-            return value
-
-        raise ValidationError(self.error_messages['invalid'])
+        return val

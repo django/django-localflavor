@@ -7,8 +7,6 @@ from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .util import get_validation_digit
 
 
@@ -20,7 +18,7 @@ class UYDepartmentSelect(Select):
         super(UYDepartmentSelect, self).__init__(attrs, choices=DEPARTMENT_CHOICES)
 
 
-class UYCIField(EmptyValueCompatMixin, RegexField):
+class UYCIField(RegexField):
     """A field that validates Uruguayan 'Cedula de identidad' (CI) numbers."""
 
     default_error_messages = {

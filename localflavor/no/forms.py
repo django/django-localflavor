@@ -10,9 +10,6 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
-
 from .no_municipalities import MUNICIPALITY_CHOICES
 
 
@@ -27,9 +24,8 @@ class NOZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(NOZipCodeField, self).__init__(r'^\d{4}$',
-                                             max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(NOZipCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
 
 
 class NOMunicipalitySelect(Select):
@@ -99,7 +95,7 @@ class NOSocialSecurityNumber(Field):
         return birthday
 
 
-class NOBankAccountNumber(EmptyValueCompatMixin, CharField):
+class NOBankAccountNumber(CharField):
     """
     A form field for Norwegian bank account numbers.
 
@@ -160,23 +156,7 @@ class NOBankAccountNumber(EmptyValueCompatMixin, CharField):
         return value.replace('.', '').replace(' ', '')
 
     def prepare_value(self, value):
+        value = self.to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return '{}.{}.{}'.format(value[0:4], value[4:6], value[6:11])
-
-
-class NOPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Field with phonenumber validation.
-
-    Requires a phone number with 8 digits and optional country code
-    """
-
-    default_error_messages = {
-        'invalid': _('A phone number must be 8 digits and may have country code'),
-    }
-
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(NOPhoneNumberField, self).__init__(
-            r'^(?:\+47)? ?(\d{3}\s?\d{2}\s?\d{3}|\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$',
-            max_length, min_length, *args, **kwargs)

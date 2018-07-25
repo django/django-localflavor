@@ -9,8 +9,6 @@ from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .cz_regions import REGION_CHOICES
 
 birth_number = re.compile(r'^(?P<birth>\d{6})/?(?P<id>\d{3,4})$')
@@ -24,7 +22,7 @@ class CZRegionSelect(Select):
         super(CZRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
 
 
-class CZPostalCodeField(EmptyValueCompatMixin, RegexField):
+class CZPostalCodeField(RegexField):
     """
     A form field that validates its input as Czech postal code.
 
@@ -35,9 +33,8 @@ class CZPostalCodeField(EmptyValueCompatMixin, RegexField):
         'invalid': _('Enter a postal code in the format XXXXX or XXX XX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(CZPostalCodeField, self).__init__(r'^\d{5}$|^\d{3} \d{2}$',
-                                                max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(CZPostalCodeField, self).__init__(r'^\d{5}$|^\d{3} \d{2}$', *args, **kwargs)
 
     def clean(self, value):
         """
@@ -72,7 +69,7 @@ class CZBirthNumberField(Field):
         birth, id = match.groupdict()['birth'], match.groupdict()['id']
 
         # Three digits for verification number were used until 1. january 1954
-        if len(id) == 3:
+        if len(id) == 3 and int(birth[:2]) < 54:
             return '%s' % value
 
         # Birth number is in format YYMMDD. Females have month value raised by 50.

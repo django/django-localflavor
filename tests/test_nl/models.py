@@ -1,17 +1,21 @@
 from django.db import models
 
-from localflavor.nl.models import (NLBankAccountNumberField, NLPhoneNumberField, NLProvinceField, NLSoFiNumberField,
-                                   NLZipCodeField)
+from localflavor.nl.models import NLBSNField, NLLicensePlateField, NLProvinceField, NLZipCodeField
 
 
 class NLPlace(models.Model):
 
     zipcode = NLZipCodeField()
     province = NLProvinceField(default='ZH')
+    bsn = NLBSNField()
 
-    sofinr = NLSoFiNumberField()
-    phone = NLPhoneNumberField()
-    bankaccount = NLBankAccountNumberField()
+    class Meta:
+        app_label = 'test_nl'
+
+
+class NLCar(models.Model):
+
+    license_plate = NLLicensePlateField()
 
     class Meta:
         app_label = 'test_nl'

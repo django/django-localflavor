@@ -3,12 +3,10 @@
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .jp_prefectures import JP_PREFECTURE_CODES, JP_PREFECTURES
 
 
-class JPPostalCodeField(EmptyValueCompatMixin, RegexField):
+class JPPostalCodeField(RegexField):
     """
     A form field that validates its input is a Japanese postcode.
 
@@ -19,9 +17,8 @@ class JPPostalCodeField(EmptyValueCompatMixin, RegexField):
         'invalid': _('Enter a postal code in the format XXXXXXX or XXX-XXXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(JPPostalCodeField, self).__init__(r'^\d{3}-\d{4}$|^\d{7}$',
-                                                max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(JPPostalCodeField, self).__init__(r'^\d{3}-\d{4}$|^\d{7}$', *args, **kwargs)
 
     def clean(self, value):
         """

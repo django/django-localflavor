@@ -9,8 +9,6 @@ from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .pl_administrativeunits import ADMINISTRATIVE_UNIT_CHOICES
 from .pl_voivodeships import VOIVODESHIP_CHOICES
 
@@ -29,7 +27,7 @@ class PLCountySelect(Select):
         super(PLCountySelect, self).__init__(attrs, choices=ADMINISTRATIVE_UNIT_CHOICES)
 
 
-class PLPESELField(EmptyValueCompatMixin, RegexField):
+class PLPESELField(RegexField):
     """
     A form field that validates as Polish Identification Number (PESEL).
 
@@ -49,9 +47,8 @@ class PLPESELField(EmptyValueCompatMixin, RegexField):
         'birthdate': _('The National Identification Number contains an invalid birth date.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(PLPESELField, self).__init__(r'^\d{11}$',
-                                           max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(PLPESELField, self).__init__(r'^\d{11}$', *args, **kwargs)
 
     def clean(self, value):
         super(PLPESELField, self).clean(value)
@@ -91,7 +88,7 @@ class PLPESELField(EmptyValueCompatMixin, RegexField):
             return False
 
 
-class PLNationalIDCardNumberField(EmptyValueCompatMixin, RegexField):
+class PLNationalIDCardNumberField(RegexField):
     """
     A form field that validates as Polish National ID Card Number.
 
@@ -107,10 +104,8 @@ class PLNationalIDCardNumberField(EmptyValueCompatMixin, RegexField):
         'checksum': _('Wrong checksum for the National ID Card Number.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(PLNationalIDCardNumberField, self).__init__(r'^[A-Za-z]{3}\d{6}$',
-                                                          max_length, min_length,
-                                                          *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(PLNationalIDCardNumberField, self).__init__(r'^[A-Za-z]{3}\d{6}$', *args, **kwargs)
 
     def clean(self, value):
         super(PLNationalIDCardNumberField, self).clean(value)
@@ -145,7 +140,7 @@ class PLNationalIDCardNumberField(EmptyValueCompatMixin, RegexField):
         return result % 10 == 0
 
 
-class PLNIPField(EmptyValueCompatMixin, RegexField):
+class PLNIPField(RegexField):
     """
     A form field that validates as Polish Tax Number (NIP).
 
@@ -159,10 +154,11 @@ class PLNIPField(EmptyValueCompatMixin, RegexField):
         'checksum': _('Wrong checksum for the Tax Number (NIP).'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(PLNIPField, self).__init__(r'^\d{3}-\d{3}-\d{2}-\d{2}$|^\d{3}-\d{2}-\d{2}-\d{3}$|^\d{10}$',
-                                         max_length, min_length,
-                                         *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(PLNIPField, self).__init__(
+            r'^\d{3}-\d{3}-\d{2}-\d{2}$|^\d{3}-\d{2}-\d{2}-\d{3}$|^\d{10}$',
+            *args, **kwargs
+        )
 
     def clean(self, value):
         super(PLNIPField, self).clean(value)
@@ -184,7 +180,7 @@ class PLNIPField(EmptyValueCompatMixin, RegexField):
         return result == int(number[-1])
 
 
-class PLREGONField(EmptyValueCompatMixin, RegexField):
+class PLREGONField(RegexField):
     """
     A form field that validates its input is a REGON number.
 
@@ -197,9 +193,8 @@ class PLREGONField(EmptyValueCompatMixin, RegexField):
         'checksum': _('Wrong checksum for the National Business Register Number (REGON).'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(PLREGONField, self).__init__(r'^\d{9,14}$',
-                                           max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(PLREGONField, self).__init__(r'^\d{9,14}$', *args, **kwargs)
 
     def clean(self, value):
         super(PLREGONField, self).clean(value)
@@ -244,6 +239,5 @@ class PLPostalCodeField(RegexField):
         'invalid': _('Enter a postal code in the format XX-XXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(PLPostalCodeField, self).__init__(r'^\d{2}-\d{3}$',
-                                                max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(PLPostalCodeField, self).__init__(r'^\d{2}-\d{3}$', *args, **kwargs)

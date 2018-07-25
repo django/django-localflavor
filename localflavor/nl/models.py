@@ -3,12 +3,9 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.models import DeprecatedPhoneNumberField
-
 from . import forms
 from .nl_provinces import PROVINCE_CHOICES
-from .validators import (NLBankAccountNumberFieldValidator, NLPhoneNumberFieldValidator, NLSoFiNumberFieldValidator,
-                         NLZipCodeFieldValidator)
+from .validators import NLBSNFieldValidator, NLLicensePlateFieldValidator, NLZipCodeFieldValidator
 
 
 class NLZipCodeField(models.CharField):
@@ -64,63 +61,49 @@ class NLProvinceField(models.CharField):
         return name, path, args, kwargs
 
 
-class NLSoFiNumberField(models.CharField):
+class NLBSNField(models.CharField):
     """
-    A Dutch social security number (SoFi).
+    A Dutch social security number (BSN).
 
-    This model field uses :class:`validators.NLSoFiNumberFieldValidator` for validation.
+    This model field uses :class:`validators.NLBSNFieldValidator` for validation.
 
-    .. versionadded:: 1.3
+    .. versionadded:: 1.6
     """
 
-    description = _('Dutch social security number (SoFi)')
+    description = _('Dutch social security number (BSN)')
 
-    validators = [NLSoFiNumberFieldValidator()]
+    validators = [NLBSNFieldValidator()]
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 12)
-        super(NLSoFiNumberField, self).__init__(*args, **kwargs)
+        super(NLBSNField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
-        defaults = {'form_class': forms.NLSoFiNumberField}
+        defaults = {'form_class': forms.NLBSNFormField}
         defaults.update(kwargs)
-        return super(NLSoFiNumberField, self).formfield(**defaults)
+        return super(NLBSNField, self).formfield(**defaults)
 
 
-class NLPhoneNumberField(models.CharField, DeprecatedPhoneNumberField):
+class NLLicensePlateField(models.CharField):
     """
-    Dutch phone number model field.
+    A Dutch license plate.
 
-    This model field uses :class:`validators.NLPhoneNumberFieldValidator` for validation.
+    This model field uses :class:`validators.NLLicensePlateFieldValidator` for validation.
 
-    .. versionadded:: 1.3
+    .. versionadded:: 2.1
     """
 
-    description = _('Dutch phone number')
+    description = _('Dutch license plate')
 
-    validator = [NLPhoneNumberFieldValidator()]
+    default_form_field = forms.NLLicensePlateFormField
+
+    validators = [NLLicensePlateFieldValidator()]
 
     def __init__(self, *args, **kwargs):
-        kwargs.setdefault('max_length', 12)
-        super(NLPhoneNumberField, self).__init__(*args, **kwargs)
+        kwargs.setdefault('max_length', 8)
+        super(NLLicensePlateField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
-        defaults = {'form_class': forms.NLPhoneNumberField}
+        defaults = {'form_class': forms.NLLicensePlateFormField}
         defaults.update(kwargs)
-        return super(NLPhoneNumberField, self).formfield(**defaults)
-
-
-class NLBankAccountNumberField(models.CharField):
-    """
-    A Dutch bank account model field.
-
-    This model field uses :class:`validators.NLBankAccountNumberFieldValidator` for validation.
-
-    .. versionadded:: 1.1
-    """
-
-    def __init__(self, *args, **kwargs):
-        kwargs.setdefault('max_length', 10)
-        super(NLBankAccountNumberField, self).__init__(*args, **kwargs)
-        # Ensure that only the NLBankAccountNumberFieldValidator is set.
-        self.validators = [NLBankAccountNumberFieldValidator()]
+        return super(NLLicensePlateField, self).formfield(**defaults)

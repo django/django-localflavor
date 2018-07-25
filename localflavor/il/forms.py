@@ -9,10 +9,8 @@ from django.forms.fields import Field, RegexField
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.generic.checksums import luhn
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 id_number_re = re.compile(r'^(?P<number>\d{1,8})-?(?P<check>\d)$')
-mobile_phone_number_re = re.compile(r'^(\()?0?(5[02-9])(?(1)\))-?\d{7}$')  # including palestinian mobile carriers
 
 
 class ILPostalCodeField(RegexField):
@@ -71,14 +69,3 @@ class ILIDNumberField(Field):
         if not luhn(value):
             raise ValidationError(self.error_messages['invalid'])
         return value
-
-
-class ILMobilePhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """A form field that validates its input as an Israeli Mobile phone number."""
-
-    default_error_messages = {
-        'invalid': _('Enter a valid Mobile Number.'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        super(ILMobilePhoneNumberField, self).__init__(mobile_phone_number_re, *args, **kwargs)

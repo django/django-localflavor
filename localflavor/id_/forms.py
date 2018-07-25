@@ -11,10 +11,7 @@ from django.forms.fields import Field, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
-
 postcode_re = re.compile(r'^[1-9]\d{4}$')
-phone_re = re.compile(r'^(\+62|0)[2-9]\d{7,10}$')
 plate_re = re.compile(r'^(?P<prefix>[A-Z]{1,2}) ' +
                       r'(?P<number>\d{1,5})( (?P<suffix>([A-Z]{1,3}|[1-9][0-9]{,2})))?$')
 nik_re = re.compile(r'^\d{16}$')
@@ -57,30 +54,6 @@ class IDProvinceSelect(Select):
         # Load data in memory only when it is required, see also #17275
         from .id_choices import PROVINCE_CHOICES
         super(IDProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
-
-
-class IDPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    An Indonesian telephone number field.
-
-    http://id.wikipedia.org/wiki/Daftar_kode_telepon_di_Indonesia
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a valid phone number'),
-    }
-
-    def clean(self, value):
-        super(IDPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        phone_number = re.sub(r'[\-\s\(\)]', '', force_text(value))
-
-        if phone_re.search(phone_number):
-            return force_text(value)
-
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class IDLicensePlatePrefixSelect(Select):

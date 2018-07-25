@@ -2,20 +2,11 @@
 
 from __future__ import unicode_literals
 
-import re
-
-from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
-from localflavor.compat import EmptyValueCompatMixin
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .au_states import STATE_CHOICES
 from .validators import AUBusinessNumberFieldValidator, AUCompanyNumberFieldValidator, AUTaxFileNumberFieldValidator
-
-PHONE_DIGITS_RE = re.compile(r'^(\d{10})$')
 
 
 class AUPostCodeField(RegexField):
@@ -30,32 +21,8 @@ class AUPostCodeField(RegexField):
         'invalid': _('Enter a 4 digit postcode.'),
     }
 
-    def __init__(self, max_length=4, min_length=None, *args, **kwargs):
-        super(AUPostCodeField, self).__init__(r'^\d{4}$',
-                                              max_length, min_length, *args, **kwargs)
-
-
-class AUPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    A form field that validates input as an Australian phone number.
-
-    Valid numbers have ten digits.
-    """
-
-    default_error_messages = {
-        'invalid': 'Phone numbers must contain 10 digits.',
-    }
-
-    def clean(self, value):
-        """Validate a phone number. Strips parentheses, whitespace and hyphens."""
-        super(AUPhoneNumberField, self).clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        value = re.sub('(\(|\)|\s+|-)', '', force_text(value))
-        phone_match = PHONE_DIGITS_RE.search(value)
-        if phone_match:
-            return '%s' % phone_match.group(1)
-        raise ValidationError(self.error_messages['invalid'])
+    def __init__(self, max_length=4, *args, **kwargs):
+        super(AUPostCodeField, self).__init__(r'^\d{4}$', max_length=max_length, *args, **kwargs)
 
 
 class AUStateSelect(Select):
@@ -65,7 +32,7 @@ class AUStateSelect(Select):
         super(AUStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
 
 
-class AUBusinessNumberField(EmptyValueCompatMixin, CharField):
+class AUBusinessNumberField(CharField):
     """
     A form field that validates input as an Australian Business Number (ABN).
 
@@ -90,7 +57,7 @@ class AUBusinessNumberField(EmptyValueCompatMixin, CharField):
         return '{} {} {} {}'.format(spaceless[:2], spaceless[2:5], spaceless[5:8], spaceless[8:])
 
 
-class AUCompanyNumberField(EmptyValueCompatMixin, CharField):
+class AUCompanyNumberField(CharField):
     """
     A form field that validates input as an Australian Company Number (ACN).
 

@@ -4,12 +4,11 @@ import re
 
 from django.test import TestCase
 
-from localflavor.pk.forms import PKPhoneNumberField, PKPostCodeField, PKStateSelect
+from localflavor.pk.forms import PKPostCodeField, PKStateSelect
 
 from .forms import PakistaniPlaceForm
 
-# From Django 1.11, HTML5 syntax is used (selected)
-SELECTED_OPTION_PATTERN = r'<option value="%s" selected(="selected")?>'
+SELECTED_OPTION_PATTERN = r'<option value="%s" selected>'
 BLANK_OPTION_PATTERN = r'<option value="">'
 INPUT_VALUE_PATTERN = r'<input[^>]*value="%s"[^>]*>'
 
@@ -89,24 +88,3 @@ class PKLocalflavorTests(TestCase):
             '123456': error_format,
         }
         self.assertFieldOutput(PKPostCodeField, valid, invalid)
-
-    def test_PKPhoneNumberField(self):
-        error_format = ['Phone numbers must contain 9, 10 or 11 digits.']
-        valid = {
-            '123456789': '123456789',
-            '1234567890': '1234567890',
-            '12345678901': '12345678901',
-            '0513456789': '0513456789',
-            '051 3456789': '0513456789',
-            '051 3456 789': '0513456789',
-            '(051) 3456 789': '0513456789',
-            '(051) 3456-789': '0513456789',
-            '(051)3456-789': '0513456789',
-            '0300 1234567': '03001234567',
-            '0300 1234 567': '03001234567',
-        }
-        invalid = {
-            '123': error_format,
-            '1800DJANGO': error_format,
-        }
-        self.assertFieldOutput(PKPhoneNumberField, valid, invalid)

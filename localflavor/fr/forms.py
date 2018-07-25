@@ -8,12 +8,9 @@ from datetime import date
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
 from localflavor.generic.checksums import luhn
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
 from .fr_region import REGION_2016_CHOICES, REGION_CHOICES
@@ -40,44 +37,6 @@ class FRZipCodeField(RegexField):
         kwargs['max_length'] = 5
         kwargs['min_length'] = 5
         super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
-
-
-class FRPhoneNumberField(EmptyValueCompatMixin, CharField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Validate local French phone number (not international ones).
-
-    The correct format is '0X XX XX XX XX'.
-    '0X.XX.XX.XX.XX' and '0XXXXXXXXX' validate but are corrected to
-    '0X XX XX XX XX'.
-    """
-
-    phone_digits_re = re.compile(r'^0\d(\s|\.)?(\d{2}(\s|\.)?){3}\d{2}$')
-
-    default_error_messages = {
-        'invalid': _('Phone numbers must be in 0X XX XX XX XX format.'),
-    }
-
-    def __init__(self, *args, **kwargs):
-        kwargs.setdefault('label', _('Phone number'))
-        kwargs['max_length'] = 14
-        kwargs['min_length'] = 10
-        super(FRPhoneNumberField, self).__init__(*args, **kwargs)
-
-    def clean(self, value):
-        value = super(FRPhoneNumberField, self).clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        value = re.sub('(\.|\s)', '', force_text(value))
-        m = self.phone_digits_re.search(value)
-        if m:
-            return '%s %s %s %s %s' % (
-                value[0:2],
-                value[2:4],
-                value[4:6],
-                value[6:8],
-                value[8:10]
-            )
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class FRDepartmentSelect(Select):
@@ -140,7 +99,7 @@ class FRRegionField(CharField):
         super(FRRegionField, self).__init__(*args, **kwargs)
 
 
-class FRNationalIdentificationNumber(EmptyValueCompatMixin, CharField):
+class FRNationalIdentificationNumber(CharField):
     """
     Validates input as a French National Identification number.
 
@@ -235,7 +194,7 @@ class FRSIRENENumberMixin(object):
         return value
 
 
-class FRSIRENField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
+class FRSIRENField(FRSIRENENumberMixin, CharField):
     """
     SIREN stands for "Système d'identification du répertoire des entreprises".
 
@@ -258,7 +217,7 @@ class FRSIRENField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
         return ' '.join((value[:3], value[3:6], value[6:]))
 
 
-class FRSIRETField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
+class FRSIRETField(FRSIRENENumberMixin, CharField):
     """
     SIRET stands for "Système d'identification du répertoire des établissements".
 
@@ -280,7 +239,7 @@ class FRSIRETField(EmptyValueCompatMixin, FRSIRENENumberMixin, CharField):
 
         ret = super(FRSIRETField, self).clean(value)
 
-        if not luhn(ret[:9]):
+        if ret is not None and not luhn(ret[:9]):
             raise ValidationError(self.error_messages['invalid'])
         return ret
 

@@ -7,8 +7,6 @@ import re
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .se_counties import COUNTY_CHOICES
 from .utils import (format_organisation_number, format_personal_id_number, id_number_checksum, valid_organisation,
                     validate_id_birthday)
@@ -17,7 +15,7 @@ __all__ = ('SECountySelect', 'SEOrganisationNumberField',
            'SEPersonalIdentityNumberField', 'SEPostalCodeField')
 
 SWEDISH_ID_NUMBER = re.compile(r'^(?P<century>\d{2})?(?P<year>\d{2})(?P<month>\d{2})(?P<day>\d{2})'
-                               r'(?P<sign>[\-+])?(?P<serial>\d{3})(?P<checksum>\d)$')
+                               r'(?P<sign>[\-+])?(?P<serial>\d{3}|[A-Za-z]\d{2})(?P<checksum>\d)$')
 SE_POSTAL_CODE = re.compile(r'^[1-9]\d{2} ?\d{2}$')
 
 
@@ -34,7 +32,7 @@ class SECountySelect(forms.Select):
                                              choices=COUNTY_CHOICES)
 
 
-class SEOrganisationNumberField(EmptyValueCompatMixin, forms.CharField):
+class SEOrganisationNumberField(forms.CharField):
     """
     A form field that validates input as a Swedish organisation number (organisationsnummer).
 
@@ -81,7 +79,7 @@ class SEOrganisationNumberField(EmptyValueCompatMixin, forms.CharField):
             raise forms.ValidationError(self.error_messages['invalid'])
 
 
-class SEPersonalIdentityNumberField(EmptyValueCompatMixin, forms.CharField):
+class SEPersonalIdentityNumberField(forms.CharField):
     """
     A form field that validates input as a Swedish personal identity number (personnummer).
 
@@ -98,11 +96,19 @@ class SEPersonalIdentityNumberField(EmptyValueCompatMixin, forms.CharField):
     only allow real personal identity numbers, pass the keyword argument
     coordination_number=False to the constructor.
 
+    Interim numbers (interimspersonnummer), used by educational institutions
+    within the Ladok system, are supported but not accepted by default, since
+    they are not considered valid outside Ladok. They have the same format and
+    semantics as real personal identity numbers, except that the first control
+    digit is replaced by a letter (A-Z). To allow the use of interim numbers,
+    pass the keyword argument interim_numbers=True to the constructor.
+
     The cleaned value will always have the format YYYYMMDDXXXX.
     """
 
-    def __init__(self, coordination_number=True, *args, **kwargs):
+    def __init__(self, coordination_number=True, interim_number=False, *args, **kwargs):
         self.coordination_number = coordination_number
+        self.interim_number = interim_number
         super(SEPersonalIdentityNumberField, self).__init__(*args, **kwargs)
 
     default_error_messages = {
@@ -121,6 +127,8 @@ class SEPersonalIdentityNumberField(EmptyValueCompatMixin, forms.CharField):
             raise forms.ValidationError(self.error_messages['invalid'])
 
         gd = match.groupdict()
+        is_coordination_number = int(gd['day']) > 60
+        is_interim_number = gd['serial'][0].isalpha()
 
         # compare the calculated value with the checksum
         if id_number_checksum(gd) != int(gd['checksum']):
@@ -133,13 +141,23 @@ class SEPersonalIdentityNumberField(EmptyValueCompatMixin, forms.CharField):
             raise forms.ValidationError(self.error_messages['invalid'])
 
         # make sure that co-ordination numbers do not pass if not allowed
-        if not self.coordination_number and int(gd['day']) > 60:
+        if not self.coordination_number and is_coordination_number:
             raise forms.ValidationError(self.error_messages['coordination_number'])
+
+        # make sure that interim numbers do not pass if not allowed. This is
+        # reported as the number being plain invalid, as most people don't know
+        # what an interim number is.
+        if not self.interim_number and is_interim_number:
+            raise forms.ValidationError(self.error_messages['invalid'])
+
+        # Combining the concepts of coordination and interim numbers is invalid.
+        if is_coordination_number and is_interim_number:
+            raise forms.ValidationError(self.error_messages['invalid'])
 
         return format_personal_id_number(birth_day, gd)
 
 
-class SEPostalCodeField(EmptyValueCompatMixin, forms.RegexField):
+class SEPostalCodeField(forms.RegexField):
     """
     A form field that validates input as a Swedish postal code (postnummer).
 

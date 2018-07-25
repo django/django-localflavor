@@ -4,6 +4,7 @@ Authors
 * Aaron Boman
 * Adam Taylor
 * Adnane Belmadiaf
+* Adonys Alea Boffill
 * Adrian Holovaty
 * Agustín Scaramuzza
 * Alex Butum
@@ -28,7 +29,9 @@ Authors
 * Daniela Ponader
 * Danielle Madeley
 * Daniel Roschka
+* Didier 'OdyX' Raboud
 * Diederik van der Boor
+* Dmitry Dygalo
 * d.merc
 * Douglas Miranda
 * Elliott Fawcett
@@ -43,6 +46,7 @@ Authors
 * Hamad AlGhanim
 * Honza Král
 * Horst Gutmann
+* Igor Támara
 * Illia Volochii
 * Ivan Fisun
 * Jaap Roes
@@ -50,8 +54,10 @@ Authors
 * James Bennett
 * Jannis Leidel
 * Jan Pieter Waagmeester
+* Jarmo van Lenthe
 * Jérémie Ferry
 * Jocelyn Delalande
+* Johannes Hoppe
 * Johnny Lee Othon
 * Jonas Ghyllebert
 * Joseph Kocherhans
@@ -72,6 +78,7 @@ Authors
 * Michał Sałaban
 * Mike Lissner
 * Olivier Sels
+* Olle Vidner
 * Paul Donohue
 * Paulo Poiati
 * Peter J. Farrell
@@ -88,6 +95,7 @@ Authors
 * Thiago Avelino
 * Thor K. Høgås
 * Tino de Bruijn
+* Tom Forbes
 * Trey Hunner
 * Tyler Ball
 * Tom Forbes

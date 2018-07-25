@@ -1,8 +1,6 @@
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .ua_regions import UA_REGION_CHOICES
 
 
@@ -18,7 +16,7 @@ class UARegionSelect(Select):
         super(UARegionSelect, self).__init__(*args, **kwargs)
 
 
-class UAVatNumberField(EmptyValueCompatMixin, RegexField):
+class UAVatNumberField(RegexField):
     """
     A form field that validates input as a Ukrainian analog of a VAT number.
 
@@ -44,7 +42,7 @@ class UAVatNumberField(EmptyValueCompatMixin, RegexField):
         return value.strip()
 
 
-class UAPostalCodeField(EmptyValueCompatMixin, RegexField):
+class UAPostalCodeField(RegexField):
     """
     A form field that validates input as a Ukrainian postal code.
 

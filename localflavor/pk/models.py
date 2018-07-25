@@ -1,8 +1,6 @@
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.models import DeprecatedPhoneNumberField
-
 from . import forms
 from .pk_states import STATE_CHOICES
 
@@ -44,18 +42,3 @@ class PKPostCodeField(CharField):
         defaults = {'form_class': forms.PKPostCodeField}
         defaults.update(kwargs)
         return super(PKPostCodeField, self).formfield(**defaults)
-
-
-class PKPhoneNumberField(CharField, DeprecatedPhoneNumberField):
-    """A model field that checks that the value is a valid Pakistani phone number (nine to eleven digits)."""
-
-    description = _("Pakistani Phone number")
-
-    def __init__(self, *args, **kwargs):
-        kwargs['max_length'] = 20
-        super(PKPhoneNumberField, self).__init__(*args, **kwargs)
-
-    def formfield(self, **kwargs):
-        defaults = {'form_class': forms.PKPhoneNumberField}
-        defaults.update(kwargs)
-        return super(PKPhoneNumberField, self).formfield(**defaults)

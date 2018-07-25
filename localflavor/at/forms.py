@@ -24,9 +24,8 @@ class ATZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ATZipCodeField, self).__init__(r'^[1-9]{1}\d{3}$',
-                                             max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(ATZipCodeField, self).__init__(r'^[1-9]{1}\d{3}$', *args, **kwargs)
 
 
 class ATStateSelect(Select):

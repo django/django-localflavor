@@ -9,8 +9,6 @@ from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .kw_areas import AREA_CHOICES
 from .kw_governorates import GOVERNORATE_CHOICES
 
@@ -36,7 +34,7 @@ def is_valid_kw_civilid_checksum(value):
     return True
 
 
-class KWCivilIDNumberField(EmptyValueCompatMixin, RegexField):
+class KWCivilIDNumberField(RegexField):
     """
     Kuwaiti Civil ID numbers are 12 digits, second to seventh digits represents the person's birthdate.
 
@@ -51,9 +49,10 @@ class KWCivilIDNumberField(EmptyValueCompatMixin, RegexField):
     }
 
     def __init__(self, max_length=12, min_length=12, *args, **kwargs):
-        super(KWCivilIDNumberField, self).__init__(r'\d{12}',
-                                                   max_length,
-                                                   min_length, *args, **kwargs)
+        super(KWCivilIDNumberField, self).__init__(
+            r'\d{12}', max_length=max_length, min_length=min_length,
+            *args, **kwargs
+        )
 
     def clean(self, value):
         super(KWCivilIDNumberField, self).clean(value)

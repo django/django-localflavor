@@ -9,8 +9,6 @@ from django.forms.fields import RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .mx_states import STATE_CHOICES
 
 DATE_RE = r'\d{2}((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))'
@@ -70,7 +68,7 @@ class MXZipCodeField(RegexField):
         super(MXZipCodeField, self).__init__(zip_code_re, *args, **kwargs)
 
 
-class MXRFCField(EmptyValueCompatMixin, RegexField):
+class MXRFCField(RegexField):
     """
     A form field that validates a Mexican *Registro Federal de Contribuyentes*.
 
@@ -166,7 +164,7 @@ class MXRFCField(EmptyValueCompatMixin, RegexField):
         return first_four in RFC_INCONVENIENT_WORDS
 
 
-class MXCLABEField(EmptyValueCompatMixin, RegexField):
+class MXCLABEField(RegexField):
     """
     This field validates a CLABE (Clave Bancaria Estandarizada).
 
@@ -186,7 +184,7 @@ class MXCLABEField(EmptyValueCompatMixin, RegexField):
 
     def __init__(self, min_length=18, max_length=18, *args, **kwargs):
         clabe_re = r'^\d{18}$'
-        super(MXCLABEField, self).__init__(clabe_re, min_length, max_length, *args, **kwargs)
+        super(MXCLABEField, self).__init__(clabe_re, min_length=min_length, max_length=max_length, *args, **kwargs)
 
     def _checksum(self, value):
         verification_digit = int(value[-1])
@@ -210,7 +208,7 @@ class MXCLABEField(EmptyValueCompatMixin, RegexField):
         return value
 
 
-class MXCURPField(EmptyValueCompatMixin, RegexField):
+class MXCURPField(RegexField):
     """
     A field that validates a Mexican Clave Única de Registro de Población.
 
@@ -276,7 +274,7 @@ class MXCURPField(EmptyValueCompatMixin, RegexField):
         return first_four in CURP_INCONVENIENT_WORDS
 
 
-class MXSocialSecurityNumberField(EmptyValueCompatMixin, RegexField):
+class MXSocialSecurityNumberField(RegexField):
     """
     A field that validates a Mexican Social Security Number.
 

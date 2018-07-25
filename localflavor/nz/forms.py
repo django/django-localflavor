@@ -10,15 +10,9 @@ from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import smart_str
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
-
 from .nz_councils import NORTH_ISLAND_COUNCIL_CHOICES, SOUTH_ISLAND_COUNCIL_CHOICES
 from .nz_provinces import PROVINCE_CHOICES
 from .nz_regions import REGION_CHOICES
-
-PHONE_08_RE = re.compile(r'^((0800\d{6})|(0800\w{6,10}))$')
-PHONE_IN_RE = re.compile(r'^((0064|064|\+64|\+\+64)((\d{8})|(2\d{7,9})))$')
-PHONE_NZ_RE = re.compile(r'^((0\d{8})|(02\d{7,9}))$')
 
 BANK_ACCOUNT_NUMBER_RE = re.compile(r'^(\d{2})(\d{4})(\d{7})(\d{2,3})$')
 
@@ -61,30 +55,6 @@ class NZPostCodeField(RegexField):
     def __init__(self, *args, **kwargs):
         super(NZPostCodeField, self).__init__(r'^\d{4}$',
                                               *args, **kwargs)
-
-
-class NZPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """A form field that validates its input as New Zealand phone number."""
-
-    default_error_messages = {'invalid': _('Invalid phone number.')}
-
-    def clean(self, value):
-        super(NZPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub('(\(|\)|\s+|_|-)', '', smart_str(value))
-        value = re.sub('^(\+\+)', '00', smart_str(value))
-        value = re.sub('^(\+)', '00', smart_str(value))
-        phone_08_match = PHONE_08_RE.search(value)
-        if phone_08_match:
-            return '%s' % phone_08_match.group(0)
-        phone_nz_match = PHONE_NZ_RE.search(value)
-        if phone_nz_match:
-            return '%s' % phone_nz_match.group(0)
-        phone_in_match = PHONE_IN_RE.search(value)
-        if phone_in_match:
-            return '%s' % phone_in_match.group(0)
-        raise ValidationError(self.error_messages['invalid'])
 
 
 class NZBankAccountNumberField(Field):

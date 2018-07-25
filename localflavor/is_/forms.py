@@ -8,13 +8,10 @@ from django.forms.widgets import Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
-
 from .is_postalcodes import IS_POSTALCODES
 
 
-class ISIdNumberField(EmptyValueCompatMixin, RegexField):
+class ISIdNumberField(RegexField):
     """
     Icelandic identification number (kennitala).
 
@@ -27,8 +24,10 @@ class ISIdNumberField(EmptyValueCompatMixin, RegexField):
     }
 
     def __init__(self, max_length=11, min_length=10, *args, **kwargs):
-        super(ISIdNumberField, self).__init__(r'^\d{6}(-| )?\d{4}$',
-                                              max_length, min_length, *args, **kwargs)
+        super(ISIdNumberField, self).__init__(
+            r'^\d{6}(-| )?\d{4}$', max_length=max_length, min_length=min_length,
+            *args, **kwargs
+        )
 
     def clean(self, value):
         value = super(ISIdNumberField, self).clean(value)
@@ -58,26 +57,6 @@ class ISIdNumberField(EmptyValueCompatMixin, RegexField):
     def _format(self, value):
         """Takes in the value in canonical form and returns it in the common display format."""
         return force_text(value[:6] + '-' + value[6:])
-
-
-class ISPhoneNumberField(EmptyValueCompatMixin, RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Icelandic phone number.
-
-    Seven digits with an optional hyphen or space after the first three digits.
-    """
-
-    def __init__(self, max_length=8, min_length=7, *args, **kwargs):
-        super(ISPhoneNumberField, self).__init__(r'^\d{3}(-| )?\d{4}$',
-                                                 max_length, min_length, *args, **kwargs)
-
-    def clean(self, value):
-        value = super(ISPhoneNumberField, self).clean(value)
-
-        if value in self.empty_values:
-            return self.empty_value
-
-        return value.replace('-', '').replace(' ', '')
 
 
 class ISPostalCodeSelect(Select):

@@ -7,8 +7,6 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .ar_provinces import PROVINCE_CHOICES
 
 
@@ -19,7 +17,7 @@ class ARProvinceSelect(Select):
         super(ARProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class ARPostalCodeField(EmptyValueCompatMixin, RegexField):
+class ARPostalCodeField(RegexField):
     """
     A field that accepts a 'classic' NNNN Postal Code or a CPA.
 
@@ -33,9 +31,10 @@ class ARPostalCodeField(EmptyValueCompatMixin, RegexField):
     }
 
     def __init__(self, max_length=8, min_length=4, *args, **kwargs):
-        super(ARPostalCodeField, self).__init__(r'^\d{4}$|^[A-HJ-NP-Za-hj-np-z]\d{4}\D{3}$',
-                                                max_length, min_length,
-                                                *args, **kwargs)
+        super(ARPostalCodeField, self).__init__(
+            r'^\d{4}$|^[A-HJ-NP-Za-hj-np-z]\d{4}\D{3}$',
+            max_length=max_length, min_length=min_length, *args, **kwargs
+        )
 
     def clean(self, value):
         value = super(ARPostalCodeField, self).clean(value)
@@ -48,7 +47,7 @@ class ARPostalCodeField(EmptyValueCompatMixin, RegexField):
         return value
 
 
-class ARDNIField(EmptyValueCompatMixin, CharField):
+class ARDNIField(CharField):
     """A field that validates 'Documento Nacional de Identidad' (DNI) numbers."""
 
     default_error_messages = {
@@ -57,8 +56,7 @@ class ARDNIField(EmptyValueCompatMixin, CharField):
     }
 
     def __init__(self, max_length=10, min_length=7, *args, **kwargs):
-        super(ARDNIField, self).__init__(max_length, min_length,
-                                         *args, **kwargs)
+        super(ARDNIField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         """Value can be a string either in the [X]X.XXX.XXX or [X]XXXXXXX formats."""
@@ -75,7 +73,7 @@ class ARDNIField(EmptyValueCompatMixin, CharField):
         return value
 
 
-class ARCUITField(EmptyValueCompatMixin, RegexField):
+class ARCUITField(RegexField):
     """
     This field validates a CUIT (Código Único de Identificación Tributaria).
 
@@ -94,9 +92,8 @@ class ARCUITField(EmptyValueCompatMixin, RegexField):
         'legal_type': _('Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ARCUITField, self).__init__(r'^\d{2}-?\d{8}-?\d$',
-                                          max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(ARCUITField, self).__init__(r'^\d{2}-?\d{8}-?\d$', *args, **kwargs)
 
     def clean(self, value):
         """Value can be either a string in the format XX-XXXXXXXX-X or an 11-digit number."""
@@ -133,7 +130,7 @@ class ARCUITField(EmptyValueCompatMixin, RegexField):
         return '%s-%s-%s' % (cuit[:2], cuit[2:], check_digit)
 
 
-class ARCBUField(EmptyValueCompatMixin, CharField):
+class ARCBUField(CharField):
     """
     This field validates a CBU (Clave Bancaria Uniforme).
 

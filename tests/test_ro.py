@@ -3,8 +3,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.ro.forms import (ROCIFField, ROCNPField, ROCountyField, ROCountySelect, ROIBANField,
-                                  ROPhoneNumberField, ROPostalCodeField)
+from localflavor.ro.forms import ROCIFField, ROCNPField, ROCountyField, ROCountySelect, ROPostalCodeField
 
 
 class ROLocalFlavorTests(SimpleTestCase):
@@ -101,43 +100,6 @@ class ROLocalFlavorTests(SimpleTestCase):
             'Arges': error_format,
         }
         self.assertFieldOutput(ROCountyField, valid, invalid)
-
-    def test_ROIBANField(self):
-        valid = {
-            'RO56RZBR0000060003291177': 'RO56RZBR0000060003291177',
-            'RO56-RZBR-0000-0600-0329-1177': 'RO56RZBR0000060003291177',
-        }
-        invalid = {
-            'RO56RZBR0000060003291176': ['Not a valid IBAN.'],
-            'AT61 1904 3002 3457 3201': ['AT IBANs are not allowed in this field.'],
-            'RO56RZBR000006000329117': ['RO IBANs must contain 24 characters.']
-        }
-        self.assertFieldOutput(ROIBANField, valid, invalid)
-
-    def test_ROPhoneNumberField(self):
-        error_invalid_length = ['Phone numbers may only have 7 or 10 digits,' +
-                                ' except the national short numbers which have 3 to 6 digits']
-        error_invalid_long_format = ['Normal phone numbers (7 or 10 digits)' +
-                                     ' must begin with "0"']
-        error_invalid_short_format = ['National short numbers (3 to 6 digits)' +
-                                      ' must begin with "1"']
-        valid = {
-            '112': '112',
-            '12 345': '12345',
-            '123.456': '123456',
-            '0232 987': '0232987',
-            '0319876543': '0319876543',
-            '031-987-6543': '0319876543',
-            '(0232) 987 654': '0232987654',
-        }
-        invalid = {
-            '312': error_invalid_short_format,
-            '723.456': error_invalid_short_format,
-            '4232 987': error_invalid_long_format,
-            '4319876543': error_invalid_long_format,
-            '0232 987 6543': error_invalid_length,
-        }
-        self.assertFieldOutput(ROPhoneNumberField, valid, invalid)
 
     def test_ROPostalCodeField(self):
         error_atleast = ['Ensure this value has at least 6 characters (it has 5).']

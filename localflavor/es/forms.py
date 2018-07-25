@@ -10,9 +10,6 @@ from django.forms.fields import RegexField, Select
 from django.utils import six
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
-
 from .es_provinces import PROVINCE_CHOICES
 from .es_regions import REGION_CHOICES
 
@@ -29,35 +26,11 @@ class ESPostalCodeField(RegexField):
         'invalid': _('Enter a valid postal code in the range and format 01XXX - 52XXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ESPostalCodeField, self).__init__(
-            r'^(0[1-9]|[1-4][0-9]|5[0-2])\d{3}$',
-            max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(ESPostalCodeField, self).__init__(r'^(0[1-9]|[1-4][0-9]|5[0-2])\d{3}$', *args, **kwargs)
 
 
-class ESPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    A form field that validates its input as a Spanish phone number.
-
-    Information numbers are ommited.
-
-    Spanish phone numbers are nine digit numbers, where first digit is 6 (for
-    cell phones), 8 (for special phones), or 9 (for landlines and special
-    phones)
-
-    TODO: accept and strip characters like dot, hyphen... in phone number
-    """
-
-    default_error_messages = {
-        'invalid': _('Enter a valid phone number in one of the formats 6XXXXXXXX, 8XXXXXXXX or 9XXXXXXXX.'),
-    }
-
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ESPhoneNumberField, self).__init__(r'^(6|7|8|9)\d{8}$',
-                                                 max_length, min_length, *args, **kwargs)
-
-
-class ESIdentityCardNumberField(EmptyValueCompatMixin, RegexField):
+class ESIdentityCardNumberField(RegexField):
     """
     Spanish NIF/NIE/CIF (Fiscal Identification Number) code.
 
@@ -90,7 +63,7 @@ class ESIdentityCardNumberField(EmptyValueCompatMixin, RegexField):
         'invalid_cif': _('Invalid checksum for CIF.'),
     }
 
-    def __init__(self, only_nif=False, max_length=None, min_length=None, *args, **kwargs):
+    def __init__(self, only_nif=False, *args, **kwargs):
         self.only_nif = only_nif
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
@@ -102,11 +75,13 @@ class ESIdentityCardNumberField(EmptyValueCompatMixin, RegexField):
                                  self.nif_control + self.cif_control),
                                 re.IGNORECASE)
 
-        error_messages = kwargs.get('error_messages') or {}
-        error_messages['invalid'] = self.default_error_messages['invalid%s' % (self.only_nif and '_only_nif' or '')]
+        error_messages = {
+            'invalid': self.default_error_messages['invalid%s' % (self.only_nif and '_only_nif' or '')]
+        }
+        error_messages.update(kwargs.get('error_messages', {}))
         kwargs['error_messages'] = error_messages
 
-        super(ESIdentityCardNumberField, self).__init__(id_card_re, max_length, min_length, *args, **kwargs)
+        super(ESIdentityCardNumberField, self).__init__(id_card_re, *args, **kwargs)
 
     def clean(self, value):
         super(ESIdentityCardNumberField, self).clean(value)
@@ -148,7 +123,7 @@ class ESIdentityCardNumberField(EmptyValueCompatMixin, RegexField):
         return self.nif_control[int(d) % 23]
 
 
-class ESCCCField(EmptyValueCompatMixin, RegexField):
+class ESCCCField(RegexField):
     """
     A form field that validates its input as a Spanish bank account or CCC (Codigo Cuenta Cliente).
 
@@ -167,8 +142,6 @@ class ESCCCField(EmptyValueCompatMixin, RegexField):
         string 1, 2, 4, 8, 5, 10, 9, 7, 3, 6. Sum resulting numbers and extract
         it from 11.  Result is checksum except when 10 then is 1, or when 11
         then is 0.
-
-        TODO: allow IBAN validation too
     """
 
     default_error_messages = {
@@ -176,9 +149,8 @@ class ESCCCField(EmptyValueCompatMixin, RegexField):
         'checksum': _('Invalid checksum for bank account number.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(ESCCCField, self).__init__(r'^\d{4}[ -]?\d{4}[ -]?\d{2}[ -]?\d{10}$',
-                                         max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(ESCCCField, self).__init__(r'^\d{4}[ -]?\d{4}[ -]?\d{2}[ -]?\d{10}$', *args, **kwargs)
 
     def clean(self, value):
         super(ESCCCField, self).clean(value)

@@ -7,18 +7,13 @@ import re
 from django.core.validators import EMPTY_VALUES, RegexValidator
 from django.forms import ValidationError
 from django.forms.fields import CharField, Field, RegexField, Select
-from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
-from localflavor.generic.forms import DeprecatedPhoneNumberFormFieldMixin
 
 from ..generic import validators
 from .ch_states import STATE_CHOICES
 
 zip_re = re.compile(r'^[1-9]\d{3}$')
-id_re = re.compile(
-    r"^(?P<idnumber>\w{8})(?P<pos9>(\d{1}|<))(?P<checksum>\d{1})$")
-phone_digits_re = re.compile(r'^0([1-9]{1})\d{8}$')
+id_re = re.compile(r'^(?P<idnumber>\w{8})(?P<pos9>(\d{1}|<))(?P<checksum>\d{1})$')
 ssn_re = re.compile(r'^756.\d{4}\.\d{4}\.\d{2}$')
 
 
@@ -36,32 +31,8 @@ class CHZipCodeField(RegexField):
         'invalid': _('Enter a valid postal code in the range and format 1XXX - 9XXX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(CHZipCodeField, self).__init__(zip_re, max_length, min_length, *args, **kwargs)
-
-
-class CHPhoneNumberField(Field, DeprecatedPhoneNumberFormFieldMixin):
-    """
-    Validate local Swiss phone number (not international ones).
-
-    The correct format is '0XX XXX XX XX'.
-    '0XX.XXX.XX.XX' and '0XXXXXXXXX' validate but are corrected to
-    '0XX XXX XX XX'.
-    """
-
-    default_error_messages = {
-        'invalid': _('Phone numbers must be in 0XX XXX XX XX format.'),
-    }
-
-    def clean(self, value):
-        super(CHPhoneNumberField, self).clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub('(\.|\s|/|-)', '', force_text(value))
-        m = phone_digits_re.search(value)
-        if m:
-            return '%s %s %s %s' % (value[0:3], value[3:6], value[6:8], value[8:10])
-        raise ValidationError(self.error_messages['invalid'])
+    def __init__(self, *args, **kwargs):
+        super(CHZipCodeField, self).__init__(zip_re, *args, **kwargs)
 
 
 class CHStateSelect(Select):

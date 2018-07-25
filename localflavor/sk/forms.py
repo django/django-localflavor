@@ -5,8 +5,6 @@ from __future__ import unicode_literals
 from django.forms.fields import RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.compat import EmptyValueCompatMixin
-
 from .sk_districts import DISTRICT_CHOICES
 from .sk_regions import REGION_CHOICES
 
@@ -25,7 +23,7 @@ class SKDistrictSelect(Select):
         super(SKDistrictSelect, self).__init__(attrs, choices=DISTRICT_CHOICES)
 
 
-class SKPostalCodeField(EmptyValueCompatMixin, RegexField):
+class SKPostalCodeField(RegexField):
     """
     A form field that validates its input as Slovak postal code.
 
@@ -36,9 +34,8 @@ class SKPostalCodeField(EmptyValueCompatMixin, RegexField):
         'invalid': _('Enter a postal code in the format XXXXX or XXX XX.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(SKPostalCodeField, self).__init__(r'^\d{5}$|^\d{3} \d{2}$',
-                                                max_length, min_length, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(SKPostalCodeField, self).__init__(r'^\d{5}$|^\d{3} \d{2}$', *args, **kwargs)
 
     def clean(self, value):
         """

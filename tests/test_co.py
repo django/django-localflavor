@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.co.forms import CODepartmentSelect
+from localflavor.co.forms import CODepartmentSelect, CONITField
 
 
 class COLocalFlavorTests(SimpleTestCase):
@@ -44,3 +44,25 @@ class COLocalFlavorTests(SimpleTestCase):
 <option value="VID">Vichada</option>
 </select>"""
         self.assertHTMLEqual(d.render('department', 'COR'), out)
+
+    def test_CONITField(self):
+        error_format = ['Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format.']
+        error_invalid = ['Invalid NIT.']
+        valid = {
+            '37547837-0': '37547837-0',
+            '900227140-3': '900227140-3',
+            '79626331-8': '79626331-8',
+            '375478370': '37547837-0',
+            '796273731': '79627373-1',
+            '9002271403': '900227140-3',
+        }
+        invalid = {
+            '2-375478370-9': error_format,
+            '20-10123456-': error_format,
+            '3-375478370': error_format,
+            '375478370-': error_format,
+            '37547837-5': error_invalid,
+            '37547837-2': error_invalid,
+            '9002271401': error_invalid,
+        }
+        self.assertFieldOutput(CONITField, valid, invalid)

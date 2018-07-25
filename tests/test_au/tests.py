@@ -12,8 +12,7 @@ from localflavor.au.validators import (AUBusinessNumberFieldValidator, AUCompany
 from .forms import AustralianPlaceForm
 from .models import AustralianPlace
 
-# From Django 1.11, HTML5 syntax is used (selected)
-SELECTED_OPTION_PATTERN = r'<option value="%s" selected(="selected")?>'
+SELECTED_OPTION_PATTERN = r'<option value="%s" selected>'
 BLANK_OPTION_PATTERN = r'<option value="">'
 INPUT_VALUE_PATTERN = r'<input[^>]*value="%s"[^>]*>'
 
@@ -103,23 +102,6 @@ class AULocalflavorTests(TestCase):
             '20001': ['Ensure this value has at most 4 characters (it has 5).'] + error_format,
         }
         self.assertFieldOutput(forms.AUPostCodeField, valid, invalid)
-
-    def test_AUPhoneNumberField(self):
-        error_format = ['Phone numbers must contain 10 digits.']
-        valid = {
-            '1234567890': '1234567890',
-            '0213456789': '0213456789',
-            '02 13 45 67 89': '0213456789',
-            '(02) 1345 6789': '0213456789',
-            '(02) 1345-6789': '0213456789',
-            '(02)1345-6789': '0213456789',
-            '0408 123 456': '0408123456',
-        }
-        invalid = {
-            '123': error_format,
-            '1800DJANGO': error_format,
-        }
-        self.assertFieldOutput(forms.AUPhoneNumberField, valid, invalid)
 
     def test_abn(self):
         error_format = ['Enter a valid ABN.']

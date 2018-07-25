@@ -44,7 +44,6 @@ validate Finnish social security numbers.
    * :doc:`localflavor/fr`
    * :doc:`localflavor/gb`
    * :doc:`localflavor/gr`
-   * :doc:`localflavor/hk`
    * :doc:`localflavor/hr`
    * :doc:`localflavor/hu`
    * :doc:`localflavor/id_`
@@ -189,32 +188,21 @@ that you might consider implementing:
 Releases
 ========
 
-Due to django-localflavor' history as a former contrib app, the app is
-required to be working with the actively maintained Django versions. See
-the documentation about `Django's release process`_ for more information.
+django-localflavor releases follow `semver`_ with the major version number matching the major version number of Django
+(from Django 2.0 and above). A compatible version of django-localflavor will be released within one month of each Django
+release. django-localflavor may have additional releases if there are enough changes in between Django versions to
+justify a new version of django-localflavor. This means that the minor version number for django-localflavor may not
+match the minor version of Django itself. See the documentation about `Django's release process`_ for more information.
 
-django-localflavor releases are not tied to the release cycle of Django.
-Version numbers follow the appropriate Python standards, e.g. PEPs 386_ and 440_.
+Deprecation Policy
+------------------
 
-.. _386: http://www.python.org/dev/peps/pep-0386/
-.. _440: http://www.python.org/dev/peps/pep-0440/
+When non-internal parts of the project are deprecated a `DeprecationWarning` or a `PendingDeprecationWarning` will be
+thrown upon use until the next major version is released. The warning will explain how to safely update your code, and
+which version the functionality will be removed in. Deprecated code will be removed in releases with a new major version
+number (e.g. x.0 releases).
+
 .. _`Django's release process`: https://docs.djangoproject.com/en/dev/internals/release-process/
-
-Roadmap
--------
-
-django-localflavor releases follow `semver`_.
-Within one month of django release we would release a new verision.
-We might have an extra release if there are enough features in between django releases.
-
-=========== =========== ===============
-  Version     Django     Date
-=========== =========== ===============
-1.4         1.10         January 2017
-1.x         ...          ...
-2.0         2.0          January 2018
-=========== =========== ===============
-
 .. _semver: http://semver.org/
 
 How to migrate
