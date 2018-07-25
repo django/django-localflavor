@@ -17,6 +17,8 @@ Modifications to existing flavors:
 
 - Allowed invalid message to be overridden in ESIdentityCardNumberField
   (`gh-339 <https://github.com/django/django-localflavor/issues/339>`_).
+- Fix COFA validation for USStateField
+  (`gh-303 <https://github.com/django/django-localflavor/pull/303>`_)
 
 Other changes:
 
