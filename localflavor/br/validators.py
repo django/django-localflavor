@@ -1,5 +1,5 @@
-from django.utils.translation import ugettext_lazy as _
 from django.core.validators import RegexValidator
+from django.utils.translation import ugettext_lazy as _
 
 
 class BRCellPhoneValidator(RegexValidator):

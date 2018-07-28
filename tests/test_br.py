@@ -2,10 +2,10 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
+from localflavor.br import models
 from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
                                   BRZipCodeField)
 
-from localflavor.br import models
 
 class BRLocalFlavorTests(SimpleTestCase):
     def test_BRZipCodeField(self):

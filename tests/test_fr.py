@@ -7,7 +7,6 @@ from localflavor.fr.forms import (FRDepartmentField, FRDepartmentSelect, FRNatio
                                   FRRegion2016Select, FRRegionField, FRRegionSelect, FRSIRENField, FRSIRETField,
                                   FRZipCodeField)
 
-
 DEP_SELECT_OUTPUT = '''
     <select name="dep">
         <option value="01">01 - Ain</option>

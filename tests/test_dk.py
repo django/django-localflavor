@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
-from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import override
+from django.utils.translation import ugettext_lazy as _
 
 from localflavor.dk.forms import DKMunicipalitySelect, DKPostalCodeField
 

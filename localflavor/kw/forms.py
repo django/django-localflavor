@@ -12,7 +12,6 @@ from django.utils.translation import gettext_lazy as _
 from .kw_areas import AREA_CHOICES
 from .kw_governorates import GOVERNORATE_CHOICES
 
-
 id_re = re.compile(r'''^(?P<initial>\d)
                        (?P<yy>\d\d)
                        (?P<mm>\d\d)
