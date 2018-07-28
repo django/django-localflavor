@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 from django.utils.translation import ugettext_lazy as _
 from django.db.models.fields import CharField
 from localflavor.br import validators
@@ -11,8 +13,8 @@ class BRStateField(CharField):
     description = _("State of Brazil (two uppercase letters)")
 
     def __init__(self, *args, **kwargs):
-        self.choices = STATE_CHOICES
-        self.max_length = 2
+        kwargs['choices'] = STATE_CHOICES
+        kwargs['max_length'] = 2
         super().__init__(*args, **kwargs)
 
     def deconstruct(self):
@@ -29,9 +31,9 @@ class BRCPFField(CharField):
     description = _("CPF Document")
 
     def __init__(self, *args, **kwargs):
-        self.max_length = 14
-        self.validators.append(validators.BRCPFValidator())
+        kwargs['max_length'] = 14
         super().__init__(*args, **kwargs)
+        self.validators.append(validators.BRCPFValidator())
 
 
 class BRCNPJField(CharField):
@@ -42,9 +44,9 @@ class BRCNPJField(CharField):
     description = _("CNPJ Document")
 
     def __init__(self, *args, **kwargs):
-        self.max_length = 18
-        self.validators.append(validators.BRCNPJValidator())
+        kwargs['max_length'] = 18
         super().__init__(*args, **kwargs)
+        self.validators.append(validators.BRCNPJValidator())
 
 
 class BRTelephoneField(CharField):
@@ -55,9 +57,9 @@ class BRTelephoneField(CharField):
     description = _("Telephone (with DDD)")
 
     def __init__(self, *args, **kwargs):
-        self.max_length = 14
-        self.validators.append(validators.BRTelephoneValidator())
+        kwargs['max_length'] = 14
         super().__init__(*args, **kwargs)
+        self.validators.append(validators.BRTelephoneValidator())
 
 
 class BRCellPhoneField(CharField):
@@ -68,9 +70,9 @@ class BRCellPhoneField(CharField):
     description = _("Cell Phone (whith DDD)")
 
     def __init__(self, *args, **kwargs):
-        self.max_length = 15
-        self.validators.append(validators.BRCellPhoneValidator())
+        kwargs['max_length'] = 15
         super().__init__(*args, **kwargs)
+        self.validators.append(validators.BRCellPhoneValidator())
 
 
 class BRZipCodeField(CharField):
@@ -81,6 +83,6 @@ class BRZipCodeField(CharField):
     description = _("Zip Code")
 
     def __init__(self, *args, **kwargs):
-        self.max_length = 9
-        self.validators.append(validators.BRZipCodeValidator())
+        kwargs['max_length'] = 9
         super().__init__(*args, **kwargs)
+        self.validators.append(validators.BRZipCodeValidator())
