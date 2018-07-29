@@ -5,6 +5,7 @@ from django.test import SimpleTestCase
 
 from localflavor.ma.forms import MAPostalCodeField, MAProvinceField, MAProvinceSelect, MARegionField, MARegionSelect
 
+
 PROVINCE_SELECT_OUTPUT = '''
     <select name="province">
         <option value="01">01 - Al Hoceima</option>
