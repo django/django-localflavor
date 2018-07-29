@@ -11,7 +11,8 @@ from .ar_provinces import PROVINCE_CHOICES
 
 
 class ARProvinceSelect(Select):
-    """A Select widget that uses a list of Argentinean provinces/autonomous cities as its choices."""
+    """A Select widget that uses a list of Argentinean provinces/autonomous
+    cities as its choices."""
 
     def __init__(self, attrs=None):
         super(ARProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
@@ -22,8 +23,9 @@ class ARPostalCodeField(RegexField):
     A field that accepts a 'classic' NNNN Postal Code or a CPA.
 
     See:
-        http://www.correoargentino.com.ar/cpa/que_es
-        http://www.correoargentino.com.ar/cpa/como_escribirlo
+
+    * http://www.correoargentino.com.ar/cpa/que_es
+    * http://www.correoargentino.com.ar/cpa/como_escribirlo
     """
 
     default_error_messages = {
@@ -77,19 +79,19 @@ class ARCUITField(RegexField):
     """
     This field validates a CUIT (Código Único de Identificación Tributaria).
 
-    ACUIT is of the form XX-XXXXXXXX-V. The last digit is a check digit.
+    A CUIT is of the form XX-XXXXXXXX-V. The last digit is a check digit.
 
     More info:
     http://es.wikipedia.org/wiki/Clave_%C3%9Anica_de_Identificaci%C3%B3n_Tributaria
 
-    English info:
+    Info in English:
     http://www.justlanded.com/english/Argentina/Argentina-Guide/Visas-Permits/Other-Legal-Documents
     """
 
     default_error_messages = {
         'invalid': _('Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format.'),
         'checksum': _("Invalid CUIT."),
-        'legal_type': _('Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33.'),
+        'legal_type': _('Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34.'),
     }
 
     def __init__(self, *args, **kwargs):
@@ -101,7 +103,7 @@ class ARCUITField(RegexField):
         if value in self.empty_values:
             return self.empty_value
         value, cd = self._canon(value)
-        if not value[:2] in ['27', '20', '30', '23', '24', '33']:
+        if not value[:2] in ['27', '20', '30', '23', '24', '33', '34']:
             raise ValidationError(self.error_messages['legal_type'])
         if self._calc_cd(value) != cd:
             raise ValidationError(self.error_messages['checksum'])

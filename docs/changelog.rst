@@ -22,10 +22,12 @@ Modifications to existing flavors:
 
 Other changes:
 
-- Added VAT identifcation number validator for all EU locales.
+- Added VAT identification number validator for all EU locales.
 - Fix EAN validation when intermediate checksum is 10
   (`gh-331 <https://github.com/django/django-localflavor/issues/331>`_).
 - Confirmed support for Django 2.1.
+- Added 34 as a valid CUIT prefix value for `ARCUITField`
+  (`gh-342 <https://github.com/django/django-localflavor/pull/342>`_).
 
 
 2.0   (2017-12-30)
