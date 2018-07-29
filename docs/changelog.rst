@@ -9,6 +9,9 @@ New flavors:
 - None
 
 New fields for existing flavors:
+- Added BRZipCodeField, BRCPFField, BRCNPJField, BRTelephonField, BRCelPhoneField models fields.
+
+New fields for existing flavors:
 
 - `NLLicensePlateField` in NL flavor.
 
