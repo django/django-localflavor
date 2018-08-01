@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django.db.models import CharField
 from django.utils.translation import ugettext as _
-
 from localflavor.md.choices import COMPANY_TYPES_CHOICES
 from localflavor.md.validators import MDIDNOFieldValidator, MDLicensePlateValidator
 
@@ -55,4 +54,3 @@ class MDCompanyTypeField(CharField):
         name, path, args, kwargs = super(MDCompanyTypeField, self).deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs
-
