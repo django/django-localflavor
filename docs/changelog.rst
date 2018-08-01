@@ -6,7 +6,9 @@ Changelog
 
 New flavors:
 
-- None
+- Added local flavor for Moldova
+  (`gh-309 <https://github.com/django/django-localflavor/pull/309>`_)
+
 
 New fields for existing flavors:
 
@@ -117,9 +119,6 @@ New flavors:
 
 - Added local flavor for Cuba
   (`gh-292 <https://github.com/django/django-localflavor/pull/292>`_).
-
-- Added local flavor for Moldova
-  (`gh-309 <https://github.com/django/django-localflavor/pull/309>`_)
 
 New fields for existing flavors:
 

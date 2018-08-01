@@ -12,10 +12,9 @@ class MDIDNOField(CharField):
     """
     A model field for the Moldavian company identification number (IDNO).
 
-    .. versionadded:: 1.6
+    .. versionadded:: 2.1
     """
     description = _("Moldavian identity number")
-
     validators = [MDIDNOFieldValidator()]
 
     def __init__(self, *args, **kwargs):
@@ -27,10 +26,10 @@ class MDLicensePlateField(CharField):
     """
     A model field for the Moldavian license plate number.
 
-    .. versionadded:: 1.6
+    .. versionadded:: 2.1
     """
-    description = _("Moldavian license plate number")
 
+    description = _("Moldavian license plate number")
     validators = [MDLicensePlateValidator()]
 
     def __init__(self, *args, **kwargs):
@@ -42,7 +41,7 @@ class MDCompanyTypeField(CharField):
     """
     A model field for the Moldavian company type abbreviation.
 
-    .. versionadded:: 1.6
+    .. versionadded:: 2.1
     """
 
     description = _("Moldavian company types")

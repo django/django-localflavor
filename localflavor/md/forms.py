@@ -11,7 +11,7 @@ class MDIDNOField(forms.CharField):
     """
     A form field for the Moldavian company identification number (IDNO).
 
-    .. versionadded:: 1.6
+    .. versionadded:: 2.1
     """
 
     default_validators = [MDIDNOFieldValidator()]
@@ -25,7 +25,7 @@ class MDLicensePlateField(forms.CharField):
     """
     A form field for the Moldavian license plate number.
 
-    .. versionadded:: 1.6
+    .. versionadded:: 2.1
     """
 
     default_validators = [MDLicensePlateValidator()]
@@ -39,7 +39,7 @@ class MDCompanyTypesSelect(forms.Select):
     """
     A Select widget that uses a list of Moldavian company types as its choices.
 
-    .. versionadded:: 1.6
+    .. versionadded:: 2.1
     """
 
     def __init__(self, attrs=None):
@@ -50,7 +50,7 @@ class MDRegionSelect(forms.Select):
     """
     A Select widget that uses a list of Moldavian regions as its choices.
 
-    .. versionadded:: 1.6
+    .. versionadded:: 2.1
     """
 
     def __init__(self, attrs=None):

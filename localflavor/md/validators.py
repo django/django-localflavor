@@ -11,17 +11,12 @@ class MDIDNOFieldValidator(RegexValidator):
     """
     Validation for Moldavian IDNO.
 
-    .. versionadded:: 1.6
+    .. versionadded:: 2.1
     """
 
     error_message = _('Enter a valid IDNO number.')
-
-    def __init__(self):
-        super(MDIDNOFieldValidator, self).__init__(regex='^\d{13}$',
-                                                   message=self.error_message)
-
-    def __call__(self, value):
-        super(MDIDNOFieldValidator, self).__call__(value)
+    regex = '^\d{13}$'
+    message = error_message
 
 
 # https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Moldova
@@ -29,14 +24,12 @@ class MDLicensePlateValidator(RegexValidator):
     """
     Validation for Moldavian License Plates.
 
-    .. versionadded:: 1.6
+    .. versionadded:: 2.1
     """
 
     error_message = _('Enter a valid license plate.')
-
-    def __init__(self):
-        super(MDLicensePlateValidator, self).__init__(regex='^\d{9}$',
-                                                      message=self.error_message)
+    regex = '^\d{13}$'
+    message = error_message
 
     def __call__(self, value):
         value = value.upper()
