@@ -38,14 +38,16 @@ class MDLicensePlateValidator(RegexValidator):
             raise ValidationError(self.error_message)
 
     def _is_valid(self, value):
-        return self._is_old_format(value) or \
-               self._is_new_format(value) or \
-               self._is_president_format(value) or \
-               self._is_diplomatic_format(value) or \
-               self._is_police_format(value) or \
-               self._is_foreign_format(value) or \
-               self._is_state_security_format(value) or \
-               self._is_gov_format(value)
+        return (
+            self._is_old_format(value) or
+            self._is_new_format(value) or
+            self._is_president_format(value) or
+            self._is_diplomatic_format(value) or
+            self._is_police_format(value) or
+            self._is_foreign_format(value) or
+            self._is_state_security_format(value) or
+            self._is_gov_format(value)
+        )
 
     @staticmethod
     def _is_old_format(value):

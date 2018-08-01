@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django import forms
+
 from localflavor.md.choices import COMPANY_TYPES_CHOICES
 from localflavor.md.validators import MDIDNOFieldValidator, MDLicensePlateValidator
 
