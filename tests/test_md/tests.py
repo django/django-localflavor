@@ -102,6 +102,6 @@ class MDLocalFlavorTests(TestCase):
 
     def test_MDRegionSelect(self):
         form = forms.MDRegionSelect()
-        expected = '''<option value="C" selected="selected">Chișinău</option>'''
+        expected = '''<option value="C" selected>Chișinău</option>'''
         companies_form = form.render('regions', 'C')
         self.assertTrue(expected in companies_form)
