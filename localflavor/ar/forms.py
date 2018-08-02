@@ -11,8 +11,7 @@ from .ar_provinces import PROVINCE_CHOICES
 
 
 class ARProvinceSelect(Select):
-    """A Select widget that uses a list of Argentinean provinces/autonomous
-    cities as its choices."""
+    """A Select widget that uses a list of Argentinean provinces/autonomous cities as its choices."""
 
     def __init__(self, attrs=None):
         super(ARProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
