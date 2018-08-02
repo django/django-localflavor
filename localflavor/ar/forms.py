@@ -85,6 +85,10 @@ class ARCUITField(RegexField):
 
     Info in English:
     http://www.justlanded.com/english/Argentina/Argentina-Guide/Visas-Permits/Other-Legal-Documents
+
+    .. versionchanged:: 2.1
+
+        ``ARCUITField`` now also accepts CUIT with prefix 34.
     """
 
     default_error_messages = {
