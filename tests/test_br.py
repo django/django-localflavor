@@ -44,7 +44,7 @@ class BRLocalFlavorTests(SimpleTestCase):
         valid.update(short_version_valid)
 
         invalid = {
-            '../-12345678901210': error_format['invalid'],
+            '../-12345678901234': error_format['invalid'],
             '12-345-678/9012-10': error_format['invalid'],
             '12.345.678/9012-10': error_format['invalid'],
             '12345678/9012-10': error_format['invalid'],
@@ -81,8 +81,8 @@ class BRLocalFlavorTests(SimpleTestCase):
             '22222222222': error_format,
             '539.315.127-22': error_format,
             '375.788.573-XX': error_format,
-            '375.788.573-000': error_atmost_chars,
-            '123.456.78': error_atleast_chars,
+            '375.788.573-000': error_atmost_chars + error_format,
+            '123.456.78': error_atleast_chars + error_format,
             '123456789555': error_atmost,
         }
         self.assertFieldOutput(BRCPFField, valid, invalid)

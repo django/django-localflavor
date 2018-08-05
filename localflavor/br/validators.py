@@ -38,6 +38,16 @@ class BRCNPJValidator(RegexValidator):
     def __call__(self, value):
         orig_dv = value[-2:]
 
+        if not value.isdigit():
+            cnpj = cnpj_digits_re.search(value)
+            if cnpj:
+                value = ''.join(cnpj.groups())
+            else:
+                raise ValidationError(self.message, code='invalid')
+
+        if len(value) != 14:
+            raise ValidationError(self.message, code='max_digits')
+
         new_1dv = sum([i * int(value[idx]) for idx, i in enumerate(list(range(5, 1, -1)) + list(range(9, 1, -1)))])
         new_1dv = dv_maker(new_1dv % 11)
         value = value[:-2] + str(new_1dv) + value[-1]
@@ -67,8 +77,10 @@ class BRCPFValidator(RegexValidator):
             else:
                 raise ValidationError(self.message, code='invalid')
 
-        orig_dv = value[-2:]
+        if len(value) != 11:
+            raise ValidationError(self.message, code='max_digits')
 
+        orig_dv = value[-2:]
         new_1dv = sum([i * int(value[idx])
                        for idx, i in enumerate(range(10, 1, -1))])
         new_1dv = dv_maker(new_1dv % 11)

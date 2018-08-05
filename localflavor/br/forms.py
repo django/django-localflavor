@@ -85,10 +85,9 @@ class BRCPFField(CharField):
         'max_digits': _("This field requires at most 11 digits or 14 characters."),
     }
 
-    default_validators = [validators.BRCPFValidator()]
-
     def __init__(self, max_length=14, min_length=11, *args, **kwargs):
         super(BRCPFField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+        self.validators.append(validators.BRCPFValidator())
 
     def clean(self, value):
         """Value can be either a string in the format XXX.XXX.XXX-XX or an 11-digit number."""
@@ -123,10 +122,9 @@ class BRCNPJField(CharField):
         'max_digits': _("This field requires at least 14 digits"),
     }
 
-    default_validators = [validators.BRCNPJValidator()]
-
     def __init__(self, min_length=14, max_length=18, *args, **kwargs):
         super(BRCNPJField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+        self.validators.append(validators.BRCNPJValidator())
 
     def clean(self, value):
         """Value can be either a string in the format XX.XXX.XXX/XXXX-XX or a group of 14 characters."""

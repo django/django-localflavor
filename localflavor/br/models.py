@@ -32,7 +32,6 @@ class BRCPFField(CharField):
     description = _("CPF Document")
 
     def __init__(self, *args, **kwargs):
-        kwargs['min_length'] = 11
         kwargs['max_length'] = 14
         super(BRCPFField, self).__init__(*args, **kwargs)
         self.validators.append(validators.BRCPFValidator())
@@ -48,7 +47,6 @@ class BRCNPJField(CharField):
     description = _("CNPJ Document")
 
     def __init__(self, *args, **kwargs):
-        kwargs['min_length'] = 14
         kwargs['max_length'] = 18
         super(BRCNPJField, self).__init__(*args, **kwargs)
         self.validators.append(validators.BRPostalCodeValidator())
