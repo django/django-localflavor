@@ -198,26 +198,10 @@ class BRLocalFlavorModelTests(SimpleTestCase):
         self.assertEqual(instance.description, new_instance.description)
         self.assertEqual(instance.validators, new_instance.validators)
 
-    def test_BRCellPhoneField(self):
-        instance = models.BRCellPhoneField()
+    def test_BRPostalCodeField(self):
+        instance = models.BRPostalCodeField()
         name, path, args, kwargs = instance.deconstruct()
-        new_instance = models.BRCellPhoneField(*args, **kwargs)
-        self.assertEqual(instance.max_length, new_instance.max_length)
-        self.assertEqual(instance.description, new_instance.description)
-        self.assertEqual(instance.validators, new_instance.validators)
-
-    def test_BRTelephoneField(self):
-        instance = models.BRTelephoneField()
-        name, path, args, kwargs = instance.deconstruct()
-        new_instance = models.BRTelephoneField(*args, **kwargs)
-        self.assertEqual(instance.max_length, new_instance.max_length)
-        self.assertEqual(instance.description, new_instance.description)
-        self.assertEqual(instance.validators, new_instance.validators)
-
-    def test_BRZipCodeField(self):
-        instance = models.BRZipCodeField()
-        name, path, args, kwargs = instance.deconstruct()
-        new_instance = models.BRZipCodeField(*args, **kwargs)
+        new_instance = models.BRPostalCodeField(*args, **kwargs)
         self.assertEqual(instance.max_length, new_instance.max_length)
         self.assertEqual(instance.description, new_instance.description)
         self.assertEqual(instance.validators, new_instance.validators)

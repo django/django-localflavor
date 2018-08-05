@@ -2,9 +2,7 @@
 
 from django.db.models.fields import CharField
 from django.utils.translation import ugettext_lazy as _
-
 from localflavor.br import validators
-
 from .br_states import STATE_CHOICES
 
 
@@ -27,11 +25,14 @@ class BRStateField(CharField):
 class BRCPFField(CharField):
     """
     A model field for the brazilian document named of CPF (Cadastro de Pessoa Física)
+
+    .. versionadded:: 2.1
     """
 
     description = _("CPF Document")
 
     def __init__(self, *args, **kwargs):
+        kwargs['min_length'] = 11
         kwargs['max_length'] = 14
         super(BRCPFField, self).__init__(*args, **kwargs)
         self.validators.append(validators.BRCPFValidator())
@@ -40,50 +41,29 @@ class BRCPFField(CharField):
 class BRCNPJField(CharField):
     """
     A model field for the brazilian document named of CNPJ (Cadastro Nacional de Pessoa Jurídica)
+
+    .. versionadded:: 2.1
     """
 
     description = _("CNPJ Document")
 
     def __init__(self, *args, **kwargs):
+        kwargs['min_length'] = 14
         kwargs['max_length'] = 18
         super(BRCNPJField, self).__init__(*args, **kwargs)
-        self.validators.append(validators.BRCNPJValidator())
+        self.validators.append(validators.BRPostalCodeValidator())
 
 
-class BRTelephoneField(CharField):
-    """
-    A model field for the brazilian telephone
-    """
-
-    description = _("Telephone (with DDD)")
-
-    def __init__(self, *args, **kwargs):
-        kwargs['max_length'] = 14
-        super(BRTelephoneField, self).__init__(*args, **kwargs)
-        self.validators.append(validators.BRTelephoneValidator())
-
-
-class BRCellPhoneField(CharField):
-    """
-    A model field for the brazilian cell phone
-    """
-
-    description = _("Cell Phone (whith DDD)")
-
-    def __init__(self, *args, **kwargs):
-        kwargs['max_length'] = 15
-        super(BRCellPhoneField, self).__init__(*args, **kwargs)
-        self.validators.append(validators.BRCellPhoneValidator())
-
-
-class BRZipCodeField(CharField):
+class BRPostalCodeField(CharField):
     """
     A model field for the brazilian zip code
+
+    .. versionadded:: 2.1
     """
 
-    description = _("Zip Code")
+    description = _("Postal Code")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 9
-        super(BRZipCodeField, self).__init__(*args, **kwargs)
-        self.validators.append(validators.BRZipCodeValidator())
+        super(BRPostalCodeField, self).__init__(*args, **kwargs)
+        self.validators.append(validators.BRPostalCodeValidator())
