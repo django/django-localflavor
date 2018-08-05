@@ -35,7 +35,7 @@ class BRCNPJValidator(RegexValidator):
     .. versionadded:: 2.1
     """
 
-    def __init__(self, *args, **kwargs, ):
+    def __init__(self, *args, **kwargs):
         super(BRCNPJValidator, self).__init__(
             *args,
             regex=cnpj_digits_re,
@@ -73,7 +73,7 @@ class BRCPFValidator(RegexValidator):
     .. versionadded:: 2.1
     """
 
-    def __init__(self, *args, **kwargs, ):
+    def __init__(self, *args, **kwargs):
         super(BRCPFValidator, self).__init__(
             *args,
             regex=cpf_digits_re,
