@@ -2,7 +2,9 @@
 
 from django.db.models.fields import CharField
 from django.utils.translation import ugettext_lazy as _
+
 from localflavor.br import validators
+
 from .br_states import STATE_CHOICES
 
 

@@ -12,6 +12,7 @@ from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from localflavor.br import validators
+
 from .br_states import STATE_CHOICES
 
 process_digits_re = re.compile(
@@ -27,7 +28,7 @@ class BRZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(BRZipCodeField, self).__init__(r'^\d{5}-\d{3}$', *args, **kwargs)
+        super(BRZipCodeField, self).__init__(validators.postal_code_re, *args, **kwargs)
 
 
 class BRStateSelect(Select):

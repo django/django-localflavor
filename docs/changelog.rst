@@ -9,7 +9,7 @@ New flavors:
 - None
 
 New fields for existing flavors:
-- Added BRZipCodeField, BRCPFField, BRCNPJField, BRTelephonField, BRCelPhoneField models fields.
+- Added BRPostalCodeField, BRCPFField, BRCNPJField models fields.
 
 New fields for existing flavors:
 
