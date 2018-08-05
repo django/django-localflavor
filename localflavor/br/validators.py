@@ -16,7 +16,11 @@ def dv_maker(v):
 
 
 class BRPostalCodeValidator(RegexValidator):
-    """A validator for Brazilian Postal Codes (CEP)."""
+    """
+    A validator for Brazilian Postal Codes (CEP).
+
+    .. versionadded:: 2.1
+    """
 
     def __init__(self, *args, **kwargs):
         self.message = _('Enter a postal code in the format 00000-000.')
@@ -25,7 +29,11 @@ class BRPostalCodeValidator(RegexValidator):
 
 
 class BRCNPJValidator(RegexValidator):
-    """Validator for brazilian CNPJ."""
+    """
+    Validator for brazilian CNPJ.
+
+    .. versionadded:: 2.1
+    """
 
     def __init__(self, *args, **kwargs, ):
         super(BRCNPJValidator, self).__init__(
@@ -59,7 +67,11 @@ class BRCNPJValidator(RegexValidator):
 
 
 class BRCPFValidator(RegexValidator):
-    """Validator for brazilian CPF."""
+    """
+    Validator for brazilian CPF.
+
+    .. versionadded:: 2.1
+    """
 
     def __init__(self, *args, **kwargs, ):
         super(BRCPFValidator, self).__init__(
