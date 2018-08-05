@@ -63,12 +63,6 @@ class BRStateChoiceField(Field):
         return value
 
 
-def dv_maker(v):
-    if v >= 2:
-        return 11 - v
-    return 0
-
-
 class BRCPFField(CharField):
     """
     A form field that validates a CPF number or a CPF string.
