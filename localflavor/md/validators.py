@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
 from django.utils.translation import ugettext_lazy as _
 
-from .choices import (LICENSE_PLATE_GOVERNMENT_TYPE, LICENSE_PLATE_POLICE, LICENSE_PLATE_DIPLOMATIC,
+from .choices import (LICENSE_PLATE_DIPLOMATIC, LICENSE_PLATE_GOVERNMENT_TYPE, LICENSE_PLATE_POLICE,
                       REGION_CHOICES_2002_2015)
 
 
