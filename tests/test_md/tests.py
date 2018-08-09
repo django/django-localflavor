@@ -14,7 +14,7 @@ class MDLocalFlavorTests(TestCase):
         self.data = {
             'idno': '1231231231231',
             'company_type_1': 'SRL',
-            'company_type_2': 'ÎI',
+            'company_type_2': 'II',
             'license_plate': 'KBC 123',
         }
 
@@ -22,7 +22,9 @@ class MDLocalFlavorTests(TestCase):
         return MDPlaceForm(self.data)
 
     def _get_model(self):
-        return self._get_form().save()
+        form = self._get_form()
+        if form.is_valid():
+            return form.save()
 
     def test_MDIDNOField(self):
         error_format = ['Enter a valid IDNO number.']
@@ -75,7 +77,7 @@ class MDLocalFlavorTests(TestCase):
 
         self.assertEqual(model.idno, '1231231231231')
         self.assertEqual(model.company_type_1, 'SRL')
-        self.assertEqual(model.company_type_2, 'ÎI')
+        self.assertEqual(model.company_type_2, 'II')
         self.assertEqual(model.license_plate, 'KBC 123')
 
         model.clean_fields()
@@ -89,14 +91,14 @@ class MDLocalFlavorTests(TestCase):
         form = forms.MDCompanyTypesSelect()
         expected = '''
         <select name="companies">
-            <option value="ÎI">Întreprindere Individuală</option>
+            <option value="II">Întreprindere Individuală</option>
             <option value="SA">Societate pe acţiuni</option>
             <option value="SNC">Societate în nume colectiv</option>
             <option value="SC">Societatea în comandită</option>
             <option value="CP">Cooperativa de producţie</option>
-            <option value="CÎ">Cooperativa de întreprinzători</option>
+            <option value="CI">Cooperativa de întreprinzători</option>
             <option value="SRL" selected="selected">Societate cu răspundere limitată</option>
-            <option value="GŢ">Gospodăria ţărănească</option>
+            <option value="GT">Gospodăria ţărănească</option>
         </select>'''
         companies_form = form.render('companies', 'SRL')
         self.assertHTMLEqual(expected, companies_form)
