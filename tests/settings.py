@@ -11,6 +11,7 @@ INSTALLED_APPS = [
     'localflavor',
     'tests.test_au',
     'tests.test_ec',
+    'tests.test_md',
     'tests.test_mk',
     'tests.test_mx',
     'tests.test_ua',
