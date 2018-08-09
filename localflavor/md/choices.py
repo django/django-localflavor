@@ -4,14 +4,14 @@ from __future__ import unicode_literals
 from django.utils.translation import ugettext_lazy as _
 
 COMPANY_TYPES_CHOICES = (
-    ('ÎI', _('Întreprindere Individuală')),
+    ('II', _('Întreprindere Individuală')),
     ('SA', _('Societate pe acţiuni')),
     ('SNC', _('Societate în nume colectiv')),
     ('SC', _('Societatea în comandită')),
     ('CP', _('Cooperativa de producţie')),
-    ('CÎ', _('Cooperativa de întreprinzători')),
+    ('CI', _('Cooperativa de întreprinzători')),
     ('SRL', _('Societate cu răspundere limitată')),
-    ('GŢ', _('Gospodăria ţărănească')),
+    ('GT', _('Gospodăria ţărănească')),
 )
 
 LICENSE_PLATE_DIPLOMATIC = (
@@ -34,8 +34,7 @@ LICENSE_PLATE_GOVERNMENT_TYPE = (
     ('A', _('Chancellery')),
 )
 
-# 2002—2015 year classification
-REGION_CHOICES = (
+REGION_CHOICES_2002_2015 = (
     ('AN', _('Anenii Noi')),
     ('BE', _('Tighina')),
     ('BL', _('Bălți')),

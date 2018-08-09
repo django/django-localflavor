@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 
 from django import forms
 
-from localflavor.md.choices import COMPANY_TYPES_CHOICES
-from localflavor.md.validators import MDIDNOFieldValidator, MDLicensePlateValidator
+from .choices import COMPANY_TYPES_CHOICES, REGION_CHOICES_2002_2015
+from .validators import MDIDNOFieldValidator, MDLicensePlateValidator
 
 
 class MDIDNOField(forms.CharField):
@@ -54,5 +54,4 @@ class MDRegionSelect(forms.Select):
     """
 
     def __init__(self, attrs=None):
-        from .choices import REGION_CHOICES
-        super(MDRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super(MDRegionSelect, self).__init__(attrs, choices=REGION_CHOICES_2002_2015)
