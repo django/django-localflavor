@@ -62,7 +62,7 @@ REGION_CHOICES_2002_2015 = (
     ('GR', _('Grigoriopol')),
     ('HN', _('Hîncești')),
     ('IL', _('Ialoveni')),
-    ('K', _('Chișinău')),
+    ('K', _('Chișinău')),  # duplicate key for Chișinău (a.k.a. 'Kishinev')
     ('LV', _('Leova')),
     ('NS', _('Nisporeni')),
     ('OC', _('Ocnița')),
