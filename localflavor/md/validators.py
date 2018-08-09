@@ -7,12 +7,8 @@ from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
 from django.utils.translation import ugettext_lazy as _
 
-from .choices import (
-    LICENSE_PLATE_GOVERNMENT_TYPE,
-    LICENSE_PLATE_POLICE,
-    LICENSE_PLATE_DIPLOMATIC,
-    REGION_CHOICES_2002_2015
-)
+from .choices import (LICENSE_PLATE_GOVERNMENT_TYPE, LICENSE_PLATE_POLICE, LICENSE_PLATE_DIPLOMATIC,
+                      REGION_CHOICES_2002_2015)
 
 
 class MDIDNOFieldValidator(RegexValidator):
@@ -29,7 +25,7 @@ class MDIDNOFieldValidator(RegexValidator):
 
 class MDLicensePlateValidator(RegexValidator):
     """
-    Validation for `_Moldavian License Plates`_.
+    Validation for `Moldavian License Plates`_.
 
     .. _Moldavian License Plates: https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Moldova
     .. versionadded:: 2.1
