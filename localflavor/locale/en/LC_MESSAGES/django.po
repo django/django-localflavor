@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-23 12:05+0100\n"
+"POT-Creation-Date: 2018-08-13 08:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,39 +112,39 @@ msgstr ""
 msgid "Tucumán"
 msgstr ""
 
-#: ar/forms.py:30
+#: ar/forms.py:31
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
 msgstr ""
 
-#: ar/forms.py:54 pe/forms.py:24 pe/forms.py:52
+#: ar/forms.py:55 pe/forms.py:24 pe/forms.py:52
 msgid "This field requires only numbers."
 msgstr ""
 
-#: ar/forms.py:55
+#: ar/forms.py:56
 msgid "This field requires 7 or 8 digits."
 msgstr ""
 
-#: ar/forms.py:90
+#: ar/forms.py:95
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
 msgstr ""
 
-#: ar/forms.py:91
+#: ar/forms.py:96
 msgid "Invalid CUIT."
 msgstr ""
 
-#: ar/forms.py:92
-msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
+#: ar/forms.py:97
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
 msgstr ""
 
-#: ar/forms.py:147
+#: ar/forms.py:152
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
 msgstr ""
 
-#: ar/forms.py:148 ar/forms.py:149
+#: ar/forms.py:153 ar/forms.py:154
 msgid "CBU must be exactly 22 digits long."
 msgstr ""
 
-#: ar/forms.py:150
+#: ar/forms.py:155
 msgid "Invalid CBU."
 msgstr ""
 
@@ -4637,12 +4637,12 @@ msgstr ""
 msgid "Invalid checksum for CIF."
 msgstr ""
 
-#: es/forms.py:146
+#: es/forms.py:148
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr ""
 
-#: es/forms.py:147
+#: es/forms.py:149
 msgid "Invalid checksum for bank account number."
 msgstr ""
 
@@ -5328,22 +5328,26 @@ msgstr ""
 msgid "Not a valid EAN code."
 msgstr ""
 
-#: generic/validators.py:329
+#: generic/validators.py:330
 #, python-format
 msgid "%(country_code)s is not a valid country code."
 msgstr ""
 
-#: generic/validators.py:330
+#: generic/validators.py:331
 #, python-format
 msgid "%(vatin)s is not a valid VAT identification number."
 msgstr ""
 
-#: gr/forms.py:18
+#: gr/forms.py:21
 msgid "Enter a valid 5-digit greek postal code."
 msgstr ""
 
-#: gr/forms.py:34
+#: gr/forms.py:37
 msgid "Enter a valid greek tax number (9 digits)."
+msgstr ""
+
+#: gr/forms.py:77
+msgid "Enter a valid greek social security number (AMKA - 11 digits)."
 msgstr ""
 
 #: hr/forms.py:60
@@ -7802,6 +7806,278 @@ msgstr ""
 
 #: ma/ma_regions.py:20
 msgid "Dakhla-Oued Ed Dahab"
+msgstr ""
+
+#: md/choices.py:7
+msgid "Întreprindere Individuală"
+msgstr ""
+
+#: md/choices.py:8
+msgid "Societate pe acţiuni"
+msgstr ""
+
+#: md/choices.py:9
+msgid "Societate în nume colectiv"
+msgstr ""
+
+#: md/choices.py:10
+msgid "Societatea în comandită"
+msgstr ""
+
+#: md/choices.py:11
+msgid "Cooperativa de producţie"
+msgstr ""
+
+#: md/choices.py:12
+msgid "Cooperativa de întreprinzători"
+msgstr ""
+
+#: md/choices.py:13
+msgid "Societate cu răspundere limitată"
+msgstr ""
+
+#: md/choices.py:14
+msgid "Gospodăria ţărănească"
+msgstr ""
+
+#: md/choices.py:18
+msgid "Diplomatic Corps"
+msgstr ""
+
+#: md/choices.py:19
+msgid "Service Staff"
+msgstr ""
+
+#: md/choices.py:20
+msgid "Consular Staff"
+msgstr ""
+
+#: md/choices.py:21
+msgid "Administrative body"
+msgstr ""
+
+#: md/choices.py:25
+msgid "Ministry of Internal Affairs"
+msgstr ""
+
+#: md/choices.py:26
+msgid "Carabinieri Subdivision"
+msgstr ""
+
+#: md/choices.py:27
+msgid "Military Forces"
+msgstr ""
+
+#: md/choices.py:28
+msgid "Border Control"
+msgstr ""
+
+#: md/choices.py:32
+msgid "Parliament"
+msgstr ""
+
+#: md/choices.py:33
+msgid "Government"
+msgstr ""
+
+#: md/choices.py:34
+msgid "Chancellery"
+msgstr ""
+
+#: md/choices.py:38
+msgid "Anenii Noi"
+msgstr ""
+
+#: md/choices.py:39 md/choices.py:79
+msgid "Tighina"
+msgstr ""
+
+#: md/choices.py:40
+msgid "Bălți"
+msgstr ""
+
+#: md/choices.py:41
+msgid "Briceni"
+msgstr ""
+
+#: md/choices.py:42
+msgid "Basarabeasca"
+msgstr ""
+
+#: md/choices.py:43 md/choices.py:65
+msgid "Chișinău"
+msgstr ""
+
+#: md/choices.py:44
+msgid "Camenca"
+msgstr ""
+
+#: md/choices.py:45
+msgid "Ceadîr-Lunga"
+msgstr ""
+
+#: md/choices.py:46
+msgid "Cahul"
+msgstr ""
+
+#: md/choices.py:47
+msgid "Călărași"
+msgstr ""
+
+#: md/choices.py:48
+msgid "Cimișlia"
+msgstr ""
+
+#: md/choices.py:49
+msgid "Căinari"
+msgstr ""
+
+#: md/choices.py:50
+msgid "Comrat"
+msgstr ""
+
+#: md/choices.py:51
+msgid "Criuleni"
+msgstr ""
+
+#: md/choices.py:52
+msgid "Căușeni"
+msgstr ""
+
+#: md/choices.py:53
+msgid "Cantemir"
+msgstr ""
+
+#: md/choices.py:54
+msgid "Dubăsari"
+msgstr ""
+
+#: md/choices.py:55
+msgid "Dondușeni"
+msgstr ""
+
+#: md/choices.py:56
+msgid "Drochia"
+msgstr ""
+
+#: md/choices.py:57
+msgid "Edineț"
+msgstr ""
+
+#: md/choices.py:58
+msgid "Fălești"
+msgstr ""
+
+#: md/choices.py:59
+msgid "Florești"
+msgstr ""
+
+#: md/choices.py:60
+msgid "Gagauzia"
+msgstr ""
+
+#: md/choices.py:61
+msgid "Glodeni"
+msgstr ""
+
+#: md/choices.py:62
+msgid "Grigoriopol"
+msgstr ""
+
+#: md/choices.py:63
+msgid "Hîncești"
+msgstr ""
+
+#: md/choices.py:64
+msgid "Ialoveni"
+msgstr ""
+
+#: md/choices.py:66
+msgid "Leova"
+msgstr ""
+
+#: md/choices.py:67
+msgid "Nisporeni"
+msgstr ""
+
+#: md/choices.py:68
+msgid "Ocnița"
+msgstr ""
+
+#: md/choices.py:69
+msgid "Orhei"
+msgstr ""
+
+#: md/choices.py:70
+msgid "Rîbnița"
+msgstr ""
+
+#: md/choices.py:71
+msgid "Rîșcani"
+msgstr ""
+
+#: md/choices.py:72
+msgid "Rezina"
+msgstr ""
+
+#: md/choices.py:73
+msgid "Șoldănești"
+msgstr ""
+
+#: md/choices.py:74
+msgid "Sîngerei"
+msgstr ""
+
+#: md/choices.py:75
+msgid "Slobozia"
+msgstr ""
+
+#: md/choices.py:76
+msgid "Soroca"
+msgstr ""
+
+#: md/choices.py:77
+msgid "Strășeni"
+msgstr ""
+
+#: md/choices.py:78
+msgid "Ștefan Vodă"
+msgstr ""
+
+#: md/choices.py:80
+msgid "Taraclia"
+msgstr ""
+
+#: md/choices.py:81
+msgid "Telenești"
+msgstr ""
+
+#: md/choices.py:82
+msgid "Ungheni"
+msgstr ""
+
+#: md/choices.py:83
+msgid "Vulcănești"
+msgstr ""
+
+#: md/models.py:17
+msgid "Moldavian identity number"
+msgstr ""
+
+#: md/models.py:32
+msgid "Moldavian license plate number"
+msgstr ""
+
+#: md/models.py:47
+msgid "Moldavian company types"
+msgstr ""
+
+#: md/validators.py:21
+msgid "Enter a valid IDNO number."
+msgstr ""
+
+#: md/validators.py:34
+msgid "Enter a valid license plate."
 msgstr ""
 
 #: mk/forms.py:20
