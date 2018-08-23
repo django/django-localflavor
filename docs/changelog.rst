@@ -13,7 +13,7 @@ New flavors:
 New fields for existing flavors:
 
 - `NLLicensePlateField` in NL flavor.
-- `GRSocialSecurityNumberField` (AMKA) in GR flavore
+- `GRSocialSecurityNumberField` (AMKA) in GR flavor
 
 Modifications to existing flavors:
 
