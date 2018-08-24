@@ -15,15 +15,17 @@
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Lucas Infante <maccinza@gmail.com>, 2015
 # Magnun Leno <magnun.leno@gmail.com>, 2016
+# Otávio Reis Perkles <otaviocha@gmail.com>, 2018
 # Pedro Schumacher <pprschumacher@gmail.com>, 2016
 # Sergio Garcia <sergio@ginx.com.br>, 2015
+# Xico Petry <xico.petry@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2018-07-19 18:24+0000\n"
+"Last-Translator: Xico Petry <xico.petry@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "localflavor/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -187,7 +189,7 @@ msgid "Enter a valid ABN."
 msgstr "Insira um ABN válido."
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "Entre com um ACN válido."
 
 msgid "Enter a valid TFN."
 msgstr "Insira um TFN válido."
@@ -441,16 +443,16 @@ msgid "Invalid NIT."
 msgstr ""
 
 msgid "Occidental"
-msgstr ""
+msgstr "Ocidental"
 
 msgid "Central"
-msgstr ""
+msgstr "Central"
 
 msgid "Oriental"
-msgstr ""
+msgstr "Oriental"
 
 msgid "Pinar del Río"
-msgstr ""
+msgstr "Pinhal do Rio"
 
 msgid "Artemisa"
 msgstr ""
@@ -495,36 +497,40 @@ msgid "Guantánamo"
 msgstr ""
 
 msgid "Isla de la Juventud"
-msgstr ""
+msgstr "Ilha da Juventude"
 
 msgid "Enter a Cuban region."
-msgstr ""
+msgstr "Informe uma região cubana."
 
 msgid "Enter a Cuban province."
-msgstr ""
+msgstr "Informe uma província cubana."
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr ""
+msgstr "Entre com um código postal válido no formato XXXXX."
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
 msgstr ""
+"Entre com um número de identificação válido do cartão de crédito no formato "
+"XXXXXXXXXXX,"
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr ""
+msgstr "Regiões Cubanas (três letras maiúsculas)"
 
 msgid "Cuban provinces (three uppercase letters)"
-msgstr ""
+msgstr "Províncias Cubanas (três letras maiúsculas)"
 
 msgid "Cuban postal code"
-msgstr ""
+msgstr "Código postal cubano"
 
 msgid "Cuban identity card number"
-msgstr ""
+msgstr "Número do cartão de identificação cubano."
 
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
 msgstr ""
+"Entre com uma data válida (aammdd) para os 6 primeiros dígitos do cartão de "
+"identificação."
 
 msgid "Prague"
 msgstr "Praga"
@@ -3366,7 +3372,7 @@ msgid "Select Region"
 msgstr "Selecione Região"
 
 msgid "Enter a valid French National Identification number."
-msgstr ""
+msgstr "Informe um número de identificação francês válido."
 
 msgid "Enter a valid French SIREN number."
 msgstr ""
@@ -6446,7 +6452,7 @@ msgid "Tasman"
 msgstr ""
 
 msgid "West Coast"
-msgstr ""
+msgstr "Costa Oeste"
 
 msgid "This field requires 8 digits."
 msgstr "Este campo requer 8 dígitos."

@@ -6,7 +6,7 @@
 # Mingun <Alexander_Sergey@mail.ru>, 2014
 # Alexandr <alexromantsov@gmail.com>, 2016
 # Denis Darii <denis.darii@gmail.com>, 2011
-# Eugene MechanisM <eugene@mechanism.pro>, 2014
+# Eugene <eugene.mechanism@gmail.com>, 2014
 # Ivan Khomutov <iskhomutov@gmail.com>, 2017
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Michael Bashkirov <michael.bashkirov@gmail.com>, 2011

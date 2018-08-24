@@ -6,15 +6,16 @@
 # André Hagenbruch, 2014
 # Jannis Leidel <jannis@leidel.info>, 2011-2012,2014
 # Mark Raddatz <mraddatz@gmail.com>, 2011
-# Markus Holtermann <inyoka@markusholtermann.eu>, 2013
+# Markus Holtermann <info@markusholtermann.eu>, 2013
 # Mark Raddatz <mraddatz@gmail.com>, 2011
+# Nicola Valentini <nvalentini@laterpay.net>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2018-03-08 16:19+0000\n"
+"Last-Translator: Markus Holtermann <info@markusholtermann.eu>\n"
 "Language-Team: German (http://www.transifex.com/django/django-localflavor/"
 "language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -3843,15 +3844,15 @@ msgid "Not a valid IBAN."
 msgstr "Ungültige IBAN."
 
 msgid "BIC codes have either 8 or 11 characters."
-msgstr ""
+msgstr "BIC-Codes haben entweder 8 oder 11 Stellen."
 
 #, python-format
 msgid "%s is not a valid institution code."
-msgstr ""
+msgstr "%s ist kein gültiger Institutions-Code."
 
 #, python-format
 msgid "%s is not a valid country code."
-msgstr ""
+msgstr "%sist kein gültiger Länder-Code. "
 
 msgid "Not a valid EAN code."
 msgstr ""
