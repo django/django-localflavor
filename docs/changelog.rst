@@ -7,13 +7,14 @@ Changelog
 New flavors:
 
 - Added local flavor for Moldova
-  (`gh-309 <https://github.com/django/django-localflavor/pull/309>`_)
-
+  (`gh-309 <https://github.com/django/django-localflavor/pull/309>`_).
 
 New fields for existing flavors:
 
-- `NLLicensePlateField` in NL flavor.
+- `NLLicensePlateField` in NL flavor
+  (`gh-327 <https://github.com/django/django-localflavor/pull/327>`_).
 - `GRSocialSecurityNumberField` (AMKA) in GR flavor
+  (`gh-337 <https://github.com/django/django-localflavor/pull/337>`_).
 
 Modifications to existing flavors:
 
@@ -24,7 +25,8 @@ Modifications to existing flavors:
 
 Other changes:
 
-- Added VAT identification number validator for all EU locales.
+- Added VAT identification number validator for all EU locales
+  (`gh-324 <https://github.com/django/django-localflavor/pull/324>`_).
 - Fix EAN validation when intermediate checksum is 10
   (`gh-331 <https://github.com/django/django-localflavor/issues/331>`_).
 - Confirmed support for Django 2.1.
