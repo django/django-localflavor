@@ -7,14 +7,18 @@
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Lele Long <schemacs@gmail.com>, 2011
 # pylemon <leeway1985@gmail.com>, 2015
+# Ray Wang <pivstone@gmail.com>, 2017
 # slene <vslene@gmail.com>, 2011
+# 发城 张 <zhangfccn@gmail.com>, 2018
+# kkkkhu <tracis@wodiga.com>, 2017
+# Yang Zeyu (扩散性百万甜面包) <Himself6565@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2018-04-26 15:41+0000\n"
+"Last-Translator: Yang Zeyu (扩散性百万甜面包) <Himself6565@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-"
 "localflavor/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -39,55 +43,55 @@ msgid "Ciudad Autónoma de Buenos Aires"
 msgstr "布宜诺斯艾利斯"
 
 msgid "Córdoba"
-msgstr ""
+msgstr "科尔多瓦"
 
 msgid "Corrientes"
-msgstr ""
+msgstr "科连特斯"
 
 msgid "Entre Ríos"
-msgstr ""
+msgstr "恩特雷里奥斯"
 
 msgid "Formosa"
-msgstr ""
+msgstr "台湾"
 
 msgid "Jujuy"
-msgstr ""
+msgstr "胡胡伊"
 
 msgid "La Pampa"
-msgstr ""
+msgstr "拉潘帕"
 
 msgid "La Rioja"
 msgstr "里欧哈"
 
 msgid "Mendoza"
-msgstr ""
+msgstr "门多萨"
 
 msgid "Misiones"
-msgstr ""
+msgstr "米西奥内斯"
 
 msgid "Neuquén"
-msgstr ""
+msgstr "内乌肯省"
 
 msgid "Río Negro"
-msgstr ""
+msgstr "内格罗河"
 
 msgid "Salta"
-msgstr ""
+msgstr "萨尔塔"
 
 msgid "San Juan"
-msgstr ""
+msgstr "圣胡安"
 
 msgid "San Luis"
-msgstr ""
+msgstr "圣路易斯"
 
 msgid "Santa Cruz"
-msgstr ""
+msgstr "圣克鲁斯"
 
 msgid "Santa Fe"
-msgstr ""
+msgstr "圣菲"
 
 msgid "Santiago del Estero"
-msgstr ""
+msgstr "圣地亚哥-德尔埃斯特罗"
 
 msgid "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
 msgstr ""
@@ -165,22 +169,22 @@ msgid "Australian Postcode"
 msgstr "澳大利亚邮政编码"
 
 msgid "Australian Business Number"
-msgstr ""
+msgstr "澳大利亚商业电话号码"
 
 msgid "Australian Company Number"
-msgstr ""
+msgstr "澳大利亚公司编号"
 
 msgid "Australian Tax File Number"
-msgstr ""
+msgstr "澳大利亚税号"
 
 msgid "Enter a valid ABN."
-msgstr ""
+msgstr "输入一个有效的ABN。"
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "输入一个有效的ACN。"
 
 msgid "Enter a valid TFN."
-msgstr ""
+msgstr "输入一个有效的TFN。"
 
 msgid "Antwerp"
 msgstr "安特卫普"
@@ -302,7 +306,7 @@ msgid "Enter a postal code in the format XXX XXX."
 msgstr "以 XXX XXX 的格式输入一个邮政编码。"
 
 msgid "Enter a Canadian province or territory."
-msgstr ""
+msgstr "输入一个加拿大的省份或地区。"
 
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr "以 XXX-XXX-XXX 的格式输入一个有效的加拿大社会保障号码。"
@@ -388,7 +392,7 @@ msgstr ""
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
-msgstr ""
+msgstr "输入格式为 X1234567<0 或者 1234567890 的有效的瑞士身份证或护照卡号"
 
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
@@ -403,19 +407,19 @@ msgid "The Chilean RUT is not valid."
 msgstr "Chilean RUT 无效。"
 
 msgid "Enter a post code in the format XXXXXX."
-msgstr ""
+msgstr "以 XXXXX 格式输入一个邮政编码。"
 
 msgid "ID Card Number consists of 15 or 18 digits."
-msgstr ""
+msgstr "身份证号由15或18位数字组成。"
 
 msgid "Invalid ID Card Number: Wrong checksum"
-msgstr ""
+msgstr "身份证号非法：校验码错误"
 
 msgid "Invalid ID Card Number: Wrong birthdate"
-msgstr ""
+msgstr "身份证号非法：生日错误"
 
 msgid "Invalid ID Card Number: Wrong location code"
-msgstr ""
+msgstr "身份证号非法：区号错误"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
 msgstr ""
@@ -6115,7 +6119,7 @@ msgid "Zacatecas"
 msgstr "萨卡特卡斯"
 
 msgid "Dutch zipcode"
-msgstr ""
+msgstr "荷兰邮政编码"
 
 msgid "Dutch province"
 msgstr ""
@@ -7603,7 +7607,7 @@ msgid "Wyoming"
 msgstr ""
 
 msgid "Alaska"
-msgstr ""
+msgstr "阿拉斯加州"
 
 msgid "Hawaii"
 msgstr ""
@@ -7615,10 +7619,10 @@ msgid "Guam"
 msgstr ""
 
 msgid "Northern Mariana Islands"
-msgstr ""
+msgstr "北马里亚纳群岛"
 
 msgid "Puerto Rico"
-msgstr ""
+msgstr "波多黎各"
 
 msgid "Virgin Islands"
 msgstr ""

@@ -5,7 +5,7 @@
 # Translators:
 # Adrien Brunet <abrunet@centrale-marseille.fr>, 2017
 # Claude Paroz <claude@2xlibre.net>, 2011-2012
-# Claude Paroz <claude@2xlibre.net>, 2011,2013-2017
+# Claude Paroz <claude@2xlibre.net>, 2011,2013-2018
 # Claude Paroz <claude@2xlibre.net>, 2011,2013
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Jean-Baptiste Mora, 2015
@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2018-06-09 17:19+0000\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-localflavor/"
 "language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -429,9 +429,10 @@ msgstr "Numéro de carte d'identité non valide : mauvais code d'emplacement"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
 msgstr ""
+"Saisissez un numéro NIT valable au format XXXXXXXXXXX-Y ou XXXXXXXXXXXY."
 
 msgid "Invalid NIT."
-msgstr ""
+msgstr "NIT non valide."
 
 msgid "Occidental"
 msgstr "Occidental"
@@ -6144,7 +6145,7 @@ msgid "Dutch province"
 msgstr "Province des Pays-Bas"
 
 msgid "Dutch social security number (BSN)"
-msgstr ""
+msgstr "Numéro de sécurité sociale hollandais (BSN)"
 
 msgid "Drenthe"
 msgstr "Drenthe"
@@ -6180,7 +6181,7 @@ msgid "Zuid-Holland"
 msgstr "Hollande-Méridionale"
 
 msgid "Enter a valid BSN."
-msgstr ""
+msgstr "Saisissez un numéro BSN valide."
 
 msgid "Enter a valid Norwegian social security number."
 msgstr "Saisissez un numéro de sécurité sociale norvégien valide."

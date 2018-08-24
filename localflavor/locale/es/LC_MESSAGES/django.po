@@ -6,11 +6,12 @@
 # Abraham Estrada, 2011
 # Antoni Aloy <aaloy@apsl.net>, 2013-2014
 # Antoni Aloy <antoni.aloy@trespams.com>, 2011-2012
+# Clara Inés López Rodríguez <clarailr@yahoo.es>, 2018
 # Ernesto Avilés Vázquez <whippiii@gmail.com>, 2015
 # Ezequiel Pochiero <epochiero@gmail.com>, 2015
 # Herty Nava <translation@bolmedia.ca>, 2013
 # Jannis Leidel <jannis@leidel.info>, 2011
-# José Luis <alagunajs@gmail.com>, 2016
+# José Luis Sandoval Alaguna <alagunajs@gmail.com>, 2016
 # Juan Antonio Infantes Díaz <ersame@gmail.com>, 2011
 # juanda097 <juanda097@protonmail.ch>, 2014-2015
 # LECbg, 2017
@@ -23,8 +24,8 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2018-01-30 19:42+0000\n"
+"Last-Translator: Clara Inés López Rodríguez <clarailr@yahoo.es>\n"
 "Language-Team: Spanish (http://www.transifex.com/django/django-localflavor/"
 "language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -124,13 +125,13 @@ msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
 msgstr "Tipo legal válido. Tipo debe ser 27, 20, 30, 23, 24 o 33."
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
-msgstr ""
+msgstr "Introduzca una CBU válida en formato XXXXXXXXXXXXXXXXXXXXXX."
 
 msgid "CBU must be exactly 22 digits long."
-msgstr ""
+msgstr "La CBU debe tener 22 dígitos."
 
 msgid "Invalid CBU."
-msgstr ""
+msgstr "CBU no válida."
 
 msgid "Burgenland"
 msgstr "Burgenland"
@@ -177,19 +178,19 @@ msgid "Australian Postcode"
 msgstr "Código postal de Australia"
 
 msgid "Australian Business Number"
-msgstr ""
+msgstr "Australian Business Number, ABN"
 
 msgid "Australian Company Number"
-msgstr ""
+msgstr "Australian Company Number, ACN"
 
 msgid "Australian Tax File Number"
-msgstr ""
+msgstr "Australian Tax File Number"
 
 msgid "Enter a valid ABN."
-msgstr ""
+msgstr "Introduzca un ABN válido."
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "Introduzca un ACN válido."
 
 msgid "Enter a valid TFN."
 msgstr ""
@@ -495,13 +496,13 @@ msgid "Granma"
 msgstr ""
 
 msgid "Santiago de Cuba"
-msgstr ""
+msgstr "Santiago de Cuba"
 
 msgid "Guantánamo"
-msgstr ""
+msgstr "Guantánamo"
 
 msgid "Isla de la Juventud"
-msgstr ""
+msgstr "Isla de la Juventud"
 
 msgid "Enter a Cuban region."
 msgstr ""

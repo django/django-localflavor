@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Branko Kokanovic <branko@kokanovic.org>, 2018
 # Jannis Leidel <jannis@leidel.info>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2018-02-28 18:59+0000\n"
+"Last-Translator: Branko Kokanovic <branko@kokanovic.org>\n"
 "Language-Team: Serbian (http://www.transifex.com/django/django-localflavor/"
 "language/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -181,10 +182,10 @@ msgid "Enter a valid TFN."
 msgstr ""
 
 msgid "Antwerp"
-msgstr ""
+msgstr "Антверпен"
 
 msgid "Brussels"
-msgstr ""
+msgstr "Брисел"
 
 msgid "East Flanders"
 msgstr ""
@@ -202,7 +203,7 @@ msgid "Limburg"
 msgstr ""
 
 msgid "Luxembourg"
-msgstr ""
+msgstr "Луксембург"
 
 msgid "Namur"
 msgstr ""
@@ -220,7 +221,7 @@ msgid "Flemish Region"
 msgstr ""
 
 msgid "Wallonia"
-msgstr ""
+msgstr "Валонија"
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr ""

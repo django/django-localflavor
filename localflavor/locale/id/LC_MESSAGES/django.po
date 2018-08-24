@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Fery Setiawan <gembelweb@gmail.com>, 2015-2017
+# Fery Setiawan <gembelweb@gmail.com>, 2015-2018
 # Jannis Leidel <jannis@leidel.info>, 2011
 # oon arfiandwi (OonID) <oon.arfiandwi@gmail.com>, 2016
 # rodin <romihardiyanto@gmail.com>, 2011
@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2018-01-11 07:03+0000\n"
+"Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-"
 "localflavor/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -428,96 +428,98 @@ msgid "Invalid ID Card Number: Wrong location code"
 msgstr "Nomor Kartu ID tidak valid: Kode lokasi salah"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
-msgstr ""
+msgstr "Masikkan NIT sah dalam bentuk XXXXXXXXXXX-Y atau XXXXXXXXXXXY."
 
 msgid "Invalid NIT."
-msgstr ""
+msgstr "NIT tidak sah."
 
 msgid "Occidental"
-msgstr ""
+msgstr "Occidental"
 
 msgid "Central"
-msgstr ""
+msgstr "Central"
 
 msgid "Oriental"
-msgstr ""
+msgstr "Oriental"
 
 msgid "Pinar del Río"
-msgstr ""
+msgstr "Pinar del Río"
 
 msgid "Artemisa"
-msgstr ""
+msgstr "Artemisa"
 
 msgid "Mayabeque"
-msgstr ""
+msgstr "Mayabeque"
 
 msgid "La Habana"
-msgstr ""
+msgstr "La Habana"
 
 msgid "Matanzas"
-msgstr ""
+msgstr "Matanzas"
 
 msgid "Cienfuegos"
-msgstr ""
+msgstr "Matanzas"
 
 msgid "Villa Clara"
-msgstr ""
+msgstr "Villa Clara"
 
 msgid "Sancti Spíritus"
-msgstr ""
+msgstr "Sancti Spíritus"
 
 msgid "Ciego de Ávila"
-msgstr ""
+msgstr "Ciego de Ávila"
 
 msgid "Camagüey"
-msgstr ""
+msgstr "Camagüey"
 
 msgid "Las Tunas"
-msgstr ""
+msgstr "Las Tunas"
 
 msgid "Holguín"
-msgstr ""
+msgstr "Holguín"
 
 msgid "Granma"
-msgstr ""
+msgstr "Holguín"
 
 msgid "Santiago de Cuba"
-msgstr ""
+msgstr "Santiago de Cuba"
 
 msgid "Guantánamo"
-msgstr ""
+msgstr "Guantánamo"
 
 msgid "Isla de la Juventud"
-msgstr ""
+msgstr "Isla de la Juventud"
 
 msgid "Enter a Cuban region."
-msgstr ""
+msgstr "Masuk wilayah Kuba."
 
 msgid "Enter a Cuban province."
-msgstr ""
+msgstr "Masuk propinsi Kuba"
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr ""
+msgstr "Masukkan kode pos sah dalam bentuk XXXXX."
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
-msgstr ""
+msgstr "Masukkan nomor kartu identitas sah dalam bentuk XXXXXXXXXXX."
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr ""
+msgstr "Wilayah Kuba (tiga huruf besar)"
 
 msgid "Cuban provinces (three uppercase letters)"
-msgstr ""
+msgstr "Propinsi Kuba (tiga huruf besar)"
 
 msgid "Cuban postal code"
-msgstr ""
+msgstr "Kode pos Kuba"
 
 msgid "Cuban identity card number"
-msgstr ""
+msgstr "Nomor kartu identitas Kuba"
 
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
 msgstr ""
+"Masukkan tanggal sah (yymmdd) untuk 6 angka pertama dari Nomor Kartu "
+"Identitas."
 
 msgid "Prague"
 msgstr "Praha"
@@ -4483,367 +4485,367 @@ msgid "Enter a valid Kuwaiti Civil ID number"
 msgstr "Masukkan nomor ID Warga Kuwait yang valid"
 
 msgid "Kuwait City"
-msgstr ""
+msgstr "Kota Kuwait"
 
 msgid "Abdullah Al-Salem"
-msgstr ""
+msgstr "Abdullah Al-Salem"
 
 msgid "Adailiya"
-msgstr ""
+msgstr "Adailiya"
 
 msgid "Bneid Al Qar"
-msgstr ""
+msgstr "Bneid Al Qar"
 
 msgid "Daiya"
-msgstr ""
+msgstr "Daiya"
 
 msgid "Dasma"
-msgstr ""
+msgstr "Dasma"
 
 msgid "Dasman"
-msgstr ""
+msgstr "Dasman"
 
 msgid "Doha"
-msgstr ""
+msgstr "Doha"
 
 msgid "Faiha"
-msgstr ""
+msgstr "Faiha"
 
 msgid "Jaber Al Ahmad"
-msgstr ""
+msgstr "Jaber Al Ahmad"
 
 msgid "Jibla"
-msgstr ""
+msgstr "Jibla"
 
 msgid "Kaifan"
-msgstr ""
+msgstr "Kaifan"
 
 msgid "Khaldiya"
-msgstr ""
+msgstr "Khaldiya"
 
 msgid "Kuwait Free Trade Zone"
-msgstr ""
+msgstr "Kuwait Free Trade Zone"
 
 msgid "Mansouriya"
-msgstr ""
+msgstr "Mansouriya"
 
 msgid "Mirqab"
-msgstr ""
+msgstr "Mirqab"
 
 msgid "Mubarekiya Camps"
-msgstr ""
+msgstr "Mubarekiya Camps"
 
 msgid "Nahdha"
-msgstr ""
+msgstr "Nahdha"
 
 msgid "North West Al-Sulaibikhat"
-msgstr ""
+msgstr "North West Al-Sulaibikhat"
 
 msgid "Nuzha"
-msgstr ""
+msgstr "Nuzha"
 
 msgid "Qadsiya"
-msgstr ""
+msgstr "Qadsiya"
 
 msgid "Qairawan"
-msgstr ""
+msgstr "Qairawan"
 
 msgid "Qortuba"
-msgstr ""
+msgstr "Qortuba"
 
 msgid "Rawda"
-msgstr ""
+msgstr "Rawda"
 
 msgid "Salhiya"
-msgstr ""
+msgstr "Salhiya"
 
 msgid "Shamiya"
-msgstr ""
+msgstr "Shamiya"
 
 msgid "Sharq"
-msgstr ""
+msgstr "Sharq"
 
 msgid "Shuwaikh Administrative"
-msgstr ""
+msgstr "Shuwaikh Administrative"
 
 msgid "Shuwaikh Industrial"
-msgstr ""
+msgstr "Shuwaikh Industrial"
 
 msgid "Shuwaikh Residential"
-msgstr ""
+msgstr "Shuwaikh Residential"
 
 msgid "Sulaibikhat"
-msgstr ""
+msgstr "Sulaibikhat"
 
 msgid "Surra"
-msgstr ""
+msgstr "Surra"
 
 msgid "Yarmouk"
-msgstr ""
+msgstr "Yarmouk"
 
 msgid "Farwaniya"
-msgstr ""
+msgstr "Farwaniya"
 
 msgid "Abbasiya"
-msgstr ""
+msgstr "Abbasiya"
 
 msgid "Abdullah Al Mubarak Al Sabah"
-msgstr ""
+msgstr "Abdullah Al Mubarak Al Sabah"
 
 msgid "Abraq Khaitan"
-msgstr ""
+msgstr "Abraq Khaitan"
 
 msgid "Al-Dajeej"
-msgstr ""
+msgstr "Al-Dajeej"
 
 msgid "Al-Shadadiya"
-msgstr ""
+msgstr "Al-Shadadiya"
 
 msgid "Andalous"
-msgstr ""
+msgstr "Andalous"
 
 msgid "Ardiya"
-msgstr ""
+msgstr "Ardiya"
 
 msgid "Ardiya Small Industrial"
-msgstr ""
+msgstr "Ardiya Small Industrial"
 
 msgid "Ardiya Storage Zone"
-msgstr ""
+msgstr "Ardiya Storage Zone"
 
 msgid "Firdous"
-msgstr ""
+msgstr "Firdous"
 
 msgid "Ishbiliya"
-msgstr ""
+msgstr "Ishbiliya"
 
 msgid "Jeleeb Al-Shuyoukh"
-msgstr ""
+msgstr "Jeleeb Al-Shuyoukh"
 
 msgid "Khaitan"
-msgstr ""
+msgstr "Khaitan"
 
 msgid "Omariya"
-msgstr ""
+msgstr "Omariya"
 
 msgid "Rabia"
-msgstr ""
+msgstr "Rabia"
 
 msgid "Rai"
-msgstr ""
+msgstr "Rai"
 
 msgid "Rehab"
-msgstr ""
+msgstr "Rehab"
 
 msgid "Rigai"
-msgstr ""
+msgstr "Rigai"
 
 msgid "Sabah Al Nasser"
-msgstr ""
+msgstr "Sabah Al Nasser"
 
 msgid "South Khaitan - Exhibits"
-msgstr ""
+msgstr "South Khaitan - Exhibits"
 
 msgid "Mubarak Al Kabir"
 msgstr "Mubarak Al Kabir"
 
 msgid "Abu Al Hasaniya"
-msgstr ""
+msgstr "Abu Al Hasaniya"
 
 msgid "Abu Fatira"
-msgstr ""
+msgstr "Abu Fatira"
 
 msgid "Adan"
-msgstr ""
+msgstr "Adan"
 
 msgid "Al-Masayel"
-msgstr ""
+msgstr "Al-Masayel"
 
 msgid "Coast Strip B"
-msgstr ""
+msgstr "Coast Strip B"
 
 msgid "Fnaitees"
-msgstr ""
+msgstr "Fnaitees"
 
 msgid "Messila"
-msgstr ""
+msgstr "Messila"
 
 msgid "Mubarak Al Kabeer"
-msgstr ""
+msgstr "Mubarak Al Kabeer"
 
 msgid "Qurain"
-msgstr ""
+msgstr "Qurain"
 
 msgid "Qusor"
-msgstr ""
+msgstr "Qusor"
 
 msgid "Sabah Al Salem"
-msgstr ""
+msgstr "Sabah Al Salem"
 
 msgid "Sabhan Industrial Area"
-msgstr ""
+msgstr "Sabhan Industrial Area"
 
 msgid "South Wista"
-msgstr ""
+msgstr "South Wista"
 
 msgid "West Abu Fatira Small Industrial"
-msgstr ""
+msgstr "West Abu Fatira Small Industrial"
 
 msgid "Hawally"
-msgstr ""
+msgstr "Hawally"
 
 msgid "Al-Siddeeq"
-msgstr ""
+msgstr "Al-Siddeeq"
 
 msgid "Anjafa"
-msgstr ""
+msgstr "Anjafa"
 
 msgid "Bayan"
-msgstr ""
+msgstr "Bayan"
 
 msgid "Hateen"
-msgstr ""
+msgstr "Hateen"
 
 msgid "Jabriya"
-msgstr ""
+msgstr "Jabriya"
 
 msgid "Maidan Hawally"
-msgstr ""
+msgstr "Maidan Hawally"
 
 msgid "Mishref"
-msgstr ""
+msgstr "Mishref"
 
 msgid "Mubarak Al-Abdullah"
-msgstr ""
+msgstr "Mubarak Al-Abdullah"
 
 msgid "Rumaithiya"
-msgstr ""
+msgstr "Rumaithiya"
 
 msgid "Al-Salam"
-msgstr ""
+msgstr "Al-Salam"
 
 msgid "Salmiya"
-msgstr ""
+msgstr "Salmiya"
 
 msgid "Salwa"
-msgstr ""
+msgstr "Salwa"
 
 msgid "Shaab"
-msgstr ""
+msgstr "Shaab"
 
 msgid "Shuhada"
-msgstr ""
+msgstr "Shuhada"
 
 msgid "Zahra"
-msgstr ""
+msgstr "Zahra"
 
 msgid "Ahmadi"
 msgstr "Ahmadi"
 
 msgid "Abu Halifa"
-msgstr ""
+msgstr "Abu Halifa"
 
 msgid "Al Khiran"
-msgstr ""
+msgstr "Al Khiran"
 
 msgid "Al Wafrah"
-msgstr ""
+msgstr "Al Wafrah"
 
 msgid "Al-Nuwaiseeb"
-msgstr ""
+msgstr "Al-Nuwaiseeb"
 
 msgid "Al-Riqqa"
-msgstr ""
+msgstr "Al-Riqqa"
 
 msgid "Ali Sabah Al Salem"
-msgstr ""
+msgstr "Ali Sabah Al Salem"
 
 msgid "Assabahiyah"
-msgstr ""
+msgstr "Assabahiyah"
 
 msgid "Bnaider"
-msgstr ""
+msgstr "Bnaider"
 
 msgid "Dahar"
-msgstr ""
+msgstr "Dahar"
 
 msgid "Eqaila"
-msgstr ""
+msgstr "Eqaila"
 
 msgid "Fahad Al Ahmad"
-msgstr ""
+msgstr "Fahad Al Ahmad"
 
 msgid "Fahaheel"
-msgstr ""
+msgstr "Fahaheel"
 
 msgid "Fintas"
-msgstr ""
+msgstr "Fintas"
 
 msgid "Hadiya"
-msgstr ""
+msgstr "Hadiya"
 
 msgid "Jaber Al Ali"
-msgstr ""
+msgstr "Jaber Al Ali"
 
 msgid "Mahboula"
-msgstr ""
+msgstr "Mahboula"
 
 msgid "Mangaf"
-msgstr ""
+msgstr "Mangaf"
 
 msgid "Sabah Al Ahmad"
-msgstr ""
+msgstr "Sabah Al Ahmad"
 
 msgid "Al Dubaiya"
-msgstr ""
+msgstr "Al Dubaiya"
 
 msgid "Mina Abdullah"
-msgstr ""
+msgstr "Mina Abdullah"
 
 msgid "Shuaiba Block 1"
-msgstr ""
+msgstr "Shuaiba Block 1"
 
 msgid "West Industrial Shuaiba"
-msgstr ""
+msgstr "West Industrial Shuaiba"
 
 msgid "Zour"
-msgstr ""
+msgstr "Zour"
 
 msgid "Jahra"
 msgstr "Jahra"
 
 msgid "Al Sulaibiya Industrial 1"
-msgstr ""
+msgstr "Al Sulaibiya Industrial 1"
 
 msgid "Al Sulaibiya Industrial 2"
-msgstr ""
+msgstr "Al Sulaibiya Industrial 2"
 
 msgid "Amgarah Industrial Area"
-msgstr ""
+msgstr "Amgarah Industrial Area"
 
 msgid "Naeem"
-msgstr ""
+msgstr "Naeem"
 
 msgid "Naseem"
-msgstr ""
+msgstr "Naseem"
 
 msgid "Oyoun"
-msgstr ""
+msgstr "Oyoun"
 
 msgid "Qasr"
-msgstr ""
+msgstr "Qasr"
 
 msgid "Saad Al Abdullah"
-msgstr ""
+msgstr "Saad Al Abdullah"
 
 msgid "Sulaibiya"
-msgstr ""
+msgstr "Sulaibiya"
 
 msgid "Taima'"
-msgstr ""
+msgstr "Taima'"
 
 msgid "Waha"
-msgstr ""
+msgstr "Waha"
 
 msgid "Farwaniyah"
 msgstr "Farwaniyah"
@@ -6140,7 +6142,7 @@ msgid "Dutch province"
 msgstr "Propinsi Belanda"
 
 msgid "Dutch social security number (BSN)"
-msgstr ""
+msgstr "Dutch social security number (BSN)"
 
 msgid "Drenthe"
 msgstr "Drenthe"
@@ -6176,7 +6178,7 @@ msgid "Zuid-Holland"
 msgstr "Zuid-Holland"
 
 msgid "Enter a valid BSN."
-msgstr ""
+msgstr "Masukkan nilai sah BSN."
 
 msgid "Enter a valid Norwegian social security number."
 msgstr "Masukkan nomor jaminan sosial Norwegia yang sah."
