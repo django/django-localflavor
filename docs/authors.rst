@@ -24,6 +24,7 @@ Authors
 * Ben Konrath
 * Bruno M. Custódio
 * Burhan Khalid
+* Charlie DeTar
 * Claude Paroz
 * Daniel Ampuero
 * Daniela Ponader
