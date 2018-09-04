@@ -100,15 +100,17 @@ how to use them::
     class MyForm(forms.Form):
         my_date_field = generic.forms.DateField()
 
-The ``localflavor`` generic package also has IBAN and BIC model and form fields.
-Here's an example of how to use the IBAN and BIC form fields::
+The ``localflavor`` generic package also has IBAN and BIC model and form fields for international banking numbers, and Country model and form fields for specifying countries.  Here's an example of how to use these form fields::
 
     from django import forms
     from localflavor.generic.forms import BICFormField, IBANFormField
+    from localflavor.generic.forms import CountryFormField
 
     class MyForm(forms.Form):
+        country = CountryFormField()
         iban = IBANFormField()
         bic = BICFormField()
+ 
 
 .. _ISO 3166 country codes: http://www.iso.org/iso/country_codes.htm
 

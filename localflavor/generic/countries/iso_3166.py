@@ -1,256 +1,263 @@
 # -*- coding: utf-8 -*-
+from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import pgettext_lazy
 
 #: ISO 3166-1 country list.
 #: Sourced from https://www.iso.org/obp/ui on 2014-11-08
-ISO_3166_1_ALPHA2_COUNTRY_CODES = (
-    'AD',  # Andorra
-    'AE',  # United Arab Emirates
-    'AF',  # Afghanistan
-    'AG',  # Antigua and Barbuda
-    'AI',  # Anguilla
-    'AL',  # Albania
-    'AM',  # Armenia
-    'AO',  # Angola
-    'AQ',  # Antarctica
-    'AR',  # Argentina
-    'AS',  # American Samoa
-    'AT',  # Austria
-    'AU',  # Australia
-    'AW',  # Aruba
-    'AX',  # Åland Islands
-    'AZ',  # Azerbaijan
-    'BA',  # Bosnia and Herzegovina
-    'BB',  # Barbados
-    'BD',  # Bangladesh
-    'BE',  # Belgium
-    'BF',  # Burkina Faso
-    'BG',  # Bulgaria
-    'BH',  # Bahrain
-    'BI',  # Burundi
-    'BJ',  # Benin
-    'BL',  # Saint Barthélemy
-    'BM',  # Bermuda
-    'BN',  # Brunei Darussalam
-    'BO',  # Bolivia, Plurinational State of
-    'BQ',  # Bonaire, Sint Eustatius and Saba
-    'BR',  # Brazil
-    'BS',  # Bahamas
-    'BT',  # Bhutan
-    'BV',  # Bouvet Island
-    'BW',  # Botswana
-    'BY',  # Belarus
-    'BZ',  # Belize
-    'CA',  # Canada
-    'CC',  # Cocos (Keeling) Islands
-    'CD',  # Congo, the Democratic Republic of the
-    'CF',  # Central African Republic
-    'CG',  # Congo
-    'CH',  # Switzerland
-    'CI',  # Côte d'Ivoire
-    'CK',  # Cook Islands
-    'CL',  # Chile
-    'CM',  # Cameroon
-    'CN',  # China
-    'CO',  # Colombia
-    'CR',  # Costa Rica
-    'CU',  # Cuba
-    'CV',  # Cabo Verde
-    'CW',  # Curaçao
-    'CX',  # Christmas Island
-    'CY',  # Cyprus
-    'CZ',  # Czech Republic
-    'DE',  # Germany
-    'DJ',  # Djibouti
-    'DK',  # Denmark
-    'DM',  # Dominica
-    'DO',  # Dominican Republic
-    'DZ',  # Algeria
-    'EC',  # Ecuador
-    'EE',  # Estonia
-    'EG',  # Egypt
-    'EH',  # Western Sahara
-    'ER',  # Eritrea
-    'ES',  # Spain
-    'ET',  # Ethiopia
-    'FI',  # Finland
-    'FJ',  # Fiji
-    'FK',  # Falkland Islands (Malvinas)
-    'FM',  # Micronesia, Federated States of
-    'FO',  # Faroe Islands
-    'FR',  # France
-    'GA',  # Gabon
-    'GB',  # United Kingdom
-    'GD',  # Grenada
-    'GE',  # Georgia
-    'GF',  # French Guiana
-    'GG',  # Guernsey
-    'GH',  # Ghana
-    'GI',  # Gibraltar
-    'GL',  # Greenland
-    'GM',  # Gambia
-    'GN',  # Guinea
-    'GP',  # Guadeloupe
-    'GQ',  # Equatorial Guinea
-    'GR',  # Greece
-    'GS',  # South Georgia and the South Sandwich Islands
-    'GT',  # Guatemala
-    'GU',  # Guam
-    'GW',  # Guinea-Bissau
-    'GY',  # Guyana
-    'HK',  # Hong Kong
-    'HM',  # Heard Island and McDonald Islands
-    'HN',  # Honduras
-    'HR',  # Croatia
-    'HT',  # Haiti
-    'HU',  # Hungary
-    'ID',  # Indonesia
-    'IE',  # Ireland
-    'IL',  # Israel
-    'IM',  # Isle of Man
-    'IN',  # India
-    'IO',  # British Indian Ocean Territory
-    'IQ',  # Iraq
-    'IR',  # Iran, Islamic Republic of
-    'IS',  # Iceland
-    'IT',  # Italy
-    'JE',  # Jersey
-    'JM',  # Jamaica
-    'JO',  # Jordan
-    'JP',  # Japan
-    'KE',  # Kenya
-    'KG',  # Kyrgyzstan
-    'KH',  # Cambodia
-    'KI',  # Kiribati
-    'KM',  # Comoros
-    'KN',  # Saint Kitts and Nevis
-    'KP',  # Korea, Democratic People's Republic of
-    'KR',  # Korea, Republic of
-    'KW',  # Kuwait
-    'KY',  # Cayman Islands
-    'KZ',  # Kazakhstan
-    'LA',  # Lao People's Democratic Republic
-    'LB',  # Lebanon
-    'LC',  # Saint Lucia
-    'LI',  # Liechtenstein
-    'LK',  # Sri Lanka
-    'LR',  # Liberia
-    'LS',  # Lesotho
-    'LT',  # Lithuania
-    'LU',  # Luxembourg
-    'LV',  # Latvia
-    'LY',  # Libya
-    'MA',  # Morocco
-    'MC',  # Monaco
-    'MD',  # Moldova, Republic of
-    'ME',  # Montenegro
-    'MF',  # Saint Martin (French part)
-    'MG',  # Madagascar
-    'MH',  # Marshall Islands
-    'MK',  # Macedonia, the former Yugoslav Republic of
-    'ML',  # Mali
-    'MM',  # Myanmar
-    'MN',  # Mongolia
-    'MO',  # Macao
-    'MP',  # Northern Mariana Islands
-    'MQ',  # Martinique
-    'MR',  # Mauritania
-    'MS',  # Montserrat
-    'MT',  # Malta
-    'MU',  # Mauritius
-    'MV',  # Maldives
-    'MW',  # Malawi
-    'MX',  # Mexico
-    'MY',  # Malaysia
-    'MZ',  # Mozambique
-    'NA',  # Namibia
-    'NC',  # New Caledonia
-    'NE',  # Niger
-    'NF',  # Norfolk Island
-    'NG',  # Nigeria
-    'NI',  # Nicaragua
-    'NL',  # Netherlands
-    'NO',  # Norway
-    'NP',  # Nepal
-    'NR',  # Nauru
-    'NU',  # Niue
-    'NZ',  # New Zealand
-    'OM',  # Oman
-    'PA',  # Panama
-    'PE',  # Peru
-    'PF',  # French Polynesia
-    'PG',  # Papua New Guinea
-    'PH',  # Philippines
-    'PK',  # Pakistan
-    'PL',  # Poland
-    'PM',  # Saint Pierre and Miquelon
-    'PN',  # Pitcairn
-    'PR',  # Puerto Rico
-    'PS',  # Palestine, State of
-    'PT',  # Portugal
-    'PW',  # Palau
-    'PY',  # Paraguay
-    'QA',  # Qatar
-    'RE',  # Réunion
-    'RO',  # Romania
-    'RS',  # Serbia
-    'RU',  # Russian Federation
-    'RW',  # Rwanda
-    'SA',  # Saudi Arabia
-    'SB',  # Solomon Islands
-    'SC',  # Seychelles
-    'SD',  # Sudan
-    'SE',  # Sweden
-    'SG',  # Singapore
-    'SH',  # Saint Helena, Ascension and Tristan da Cunha
-    'SI',  # Slovenia
-    'SJ',  # Svalbard and Jan Mayen
-    'SK',  # Slovakia
-    'SL',  # Sierra Leone
-    'SM',  # San Marino
-    'SN',  # Senegal
-    'SO',  # Somalia
-    'SR',  # Suriname
-    'SS',  # South Sudan
-    'ST',  # Sao Tome and Principe
-    'SV',  # El Salvador
-    'SX',  # Sint Maarten (Dutch part)
-    'SY',  # Syrian Arab Republic
-    'SZ',  # Swaziland
-    'TC',  # Turks and Caicos Islands
-    'TD',  # Chad
-    'TF',  # French Southern Territories
-    'TG',  # Togo
-    'TH',  # Thailand
-    'TJ',  # Tajikistan
-    'TK',  # Tokelau
-    'TL',  # Timor-Leste
-    'TM',  # Turkmenistan
-    'TN',  # Tunisia
-    'TO',  # Tonga
-    'TR',  # Turkey
-    'TT',  # Trinidad and Tobago
-    'TV',  # Tuvalu
-    'TW',  # Taiwan, Province of China
-    'TZ',  # Tanzania, United Republic of
-    'UA',  # Ukraine
-    'UG',  # Uganda
-    'UM',  # United States Minor Outlying Islands
-    'US',  # United States
-    'UY',  # Uruguay
-    'UZ',  # Uzbekistan
-    'VA',  # Holy See (Vatican City State)
-    'VC',  # Saint Vincent and the Grenadines
-    'VE',  # Venezuela, Bolivarian Republic of
-    'VG',  # Virgin Islands, British
-    'VI',  # Virgin Islands, U.S.
-    'VN',  # Viet Nam
-    'VU',  # Vanuatu
-    'WF',  # Wallis and Futuna
-    'WS',  # Samoa
-    'YE',  # Yemen
-    'YT',  # Mayotte
-    'ZA',  # South Africa
-    'ZM',  # Zambia
-    'ZW',  # Zimbabwe
-    'XK'   # Republic of Kosovo (user-assigned country code)
+ISO_3166_1_COUNTRIES = (
+    ('AF', _("Afghanistan")),
+    ('AX', _("Åland Islands")),
+    ('AL', _("Albania")),
+    ('DZ', _("Algeria")),
+    ('AS', _("American Samoa")),
+    ('AD', _("Andorra")),
+    ('AO', _("Angola")),
+    ('AI', _("Anguilla")),
+    ('AQ', _("Antarctica")),
+    ('AG', _("Antigua and Barbuda")),
+    ('AR', _("Argentina")),
+    ('AM', _("Armenia")),
+    ('AW', _("Aruba")),
+    ('AU', _("Australia")),
+    ('AT', _("Austria")),
+    ('AZ', _("Azerbaijan")),
+    ('BS', _("Bahamas")),
+    ('BH', _("Bahrain")),
+    ('BD', _("Bangladesh")),
+    ('BB', _("Barbados")),
+    ('BY', _("Belarus")),
+    ('BE', _("Belgium")),
+    ('BZ', _("Belize")),
+    ('BJ', _("Benin")),
+    ('BM', _("Bermuda")),
+    ('BT', _("Bhutan")),
+    ('BQ', _("Bonaire, Sint Eustatius and Saba")),
+    ('BA', _("Bosnia and Herzegovina")),
+    ('BW', _("Botswana")),
+    ('BV', _("Bouvet Island")),
+    ('BR', _("Brazil")),
+    ('IO', _("British Indian Ocean Territory")),
+    ('BN', _("Brunei Darussalam")),
+    ('BG', _("Bulgaria")),
+    ('BF', _("Burkina Faso")),
+    ('BI', _("Burundi")),
+    ('CV', _("Cabo Verde")),
+    ('KH', _("Cambodia")),
+    ('CM', _("Cameroon")),
+    ('CA', _("Canada")),
+    ('KY', _("Cayman Islands")),
+    ('CF', _("Central African Republic")),
+    ('TD', _("Chad")),
+    ('CL', _("Chile")),
+    ('CN', _("China")),
+    ('CX', _("Christmas Island")),
+    ('CC', _("Cocos (Keeling) Islands")),
+    ('CO', _("Colombia")),
+    ('KM', _("Comoros")),
+    ('CG', _("Congo")),
+    ('CK', _("Cook Islands")),
+    ('CR', _("Costa Rica")),
+    ('HR', _("Croatia")),
+    ('CU', _("Cuba")),
+    ('CW', _("Curaçao")),
+    ('CY', _("Cyprus")),
+    ('CZ', _("Czech Republic")),
+    ('CI', _("Côte d'Ivoire")),
+    ('CD', _("Democratic Republic of the Congo")),
+    ('DK', _("Denmark")),
+    ('DJ', _("Djibouti")),
+    ('DM', _("Dominica")),
+    ('DO', _("Dominican Republic")),
+    ('EC', _("Ecuador")),
+    ('EG', _("Egypt")),
+    ('SV', _("El Salvador")),
+    ('GQ', _("Equatorial Guinea")),
+    ('ER', _("Eritrea")),
+    ('EE', _("Estonia")),
+    ('ET', _("Ethiopia")),
+    ('FK', _("Falkland Islands (Malvinas)")),
+    ('FO', _("Faroe Islands")),
+    ('FM', _("Federated States of Micronesia")),
+    ('FJ', _("Fiji")),
+    ('FI', _("Finland")),
+    ('FR', _("France")),
+    ('GF', _("French Guiana")),
+    ('PF', _("French Polynesia")),
+    ('TF', _("French Southern Territories")),
+    ('GA', _("Gabon")),
+    ('GM', _("Gambia")),
+    ('GE', pgettext_lazy("Country", "Georgia")),
+    ('DE', _("Germany")),
+    ('GH', _("Ghana")),
+    ('GI', _("Gibraltar")),
+    ('GR', _("Greece")),
+    ('GL', _("Greenland")),
+    ('GD', _("Grenada")),
+    ('GP', _("Guadeloupe")),
+    ('GU', _("Guam")),
+    ('GT', _("Guatemala")),
+    ('GG', _("Guernsey")),
+    ('GN', _("Guinea")),
+    ('GW', _("Guinea-Bissau")),
+    ('GY', _("Guyana")),
+    ('HT', _("Haiti")),
+    ('HM', _("Heard Island and McDonald Islands")),
+    ('VA', _("Holy See (Vatican City State)")),
+    ('HN', _("Honduras")),
+    ('HK', _("Hong Kong")),
+    ('HU', _("Hungary")),
+    ('IS', _("Iceland")),
+    ('IN', _("India")),
+    ('ID', _("Indonesia")),
+    ('IR', _("Iran, Islamic Republic of")),
+    ('IQ', _("Iraq")),
+    ('IE', _("Ireland")),
+    ('IM', _("Isle of Man")),
+    ('IL', _("Israel")),
+    ('IT', _("Italy")),
+    ('JM', _("Jamaica")),
+    ('JP', _("Japan")),
+    ('JE', _("Jersey")),
+    ('JO', _("Jordan")),
+    ('KZ', _("Kazakhstan")),
+    ('KE', _("Kenya")),
+    ('KI', _("Kiribati")),
+    ('KP', _("Korea, Democratic People's Republic of")),
+    ('KR', _("Korea, Republic of")),
+    ('KW', _("Kuwait")),
+    ('KG', _("Kyrgyzstan")),
+    ('LA', _("Lao People's Democratic Republic")),
+    ('LV', _("Latvia")),
+    ('LB', _("Lebanon")),
+    ('LS', _("Lesotho")),
+    ('LR', _("Liberia")),
+    ('LY', _("Libya")),
+    ('LI', _("Liechtenstein")),
+    ('LT', _("Lithuania")),
+    ('LU', _("Luxembourg")),
+    ('MO', _("Macao")),
+    ('MK', _("Macedonia, the former Yugoslav Republic of")),
+    ('MG', _("Madagascar")),
+    ('MW', _("Malawi")),
+    ('MY', _("Malaysia")),
+    ('MV', _("Maldives")),
+    ('ML', _("Mali")),
+    ('MT', _("Malta")),
+    ('MH', _("Marshall Islands")),
+    ('MQ', _("Martinique")),
+    ('MR', _("Mauritania")),
+    ('MU', _("Mauritius")),
+    ('YT', _("Mayotte")),
+    ('MX', _("Mexico")),
+    ('MD', _("Moldova, Republic of")),
+    ('MC', _("Monaco")),
+    ('MN', _("Mongolia")),
+    ('ME', _("Montenegro")),
+    ('MS', _("Montserrat")),
+    ('MA', _("Morocco")),
+    ('MZ', _("Mozambique")),
+    ('MM', _("Myanmar")),
+    ('NA', _("Namibia")),
+    ('NR', _("Nauru")),
+    ('NP', _("Nepal")),
+    ('NL', _("Netherlands")),
+    ('NC', _("New Caledonia")),
+    ('NZ', _("New Zealand")),
+    ('NI', _("Nicaragua")),
+    ('NE', _("Niger")),
+    ('NG', _("Nigeria")),
+    ('NU', _("Niue")),
+    ('NF', _("Norfolk Island")),
+    ('MP', _("Northern Mariana Islands")),
+    ('NO', _("Norway")),
+    ('OM', _("Oman")),
+    ('PK', _("Pakistan")),
+    ('PW', _("Palau")),
+    ('PS', _("Palestine, State of")),
+    ('PA', _("Panama")),
+    ('PG', _("Papua New Guinea")),
+    ('PY', _("Paraguay")),
+    ('PE', _("Peru")),
+    ('PH', _("Philippines")),
+    ('PN', _("Pitcairn")),
+    ('BO', _("Plurinational State of Bolivia")),
+    ('PL', _("Poland")),
+    ('PT', _("Portugal")),
+    ('PR', _("Puerto Rico")),
+    ('QA', _("Qatar")),
+    ('XK', _("Republic of Kosovo")),
+    ('RO', _("Romania")),
+    ('RU', _("Russian Federation")),
+    ('RW', _("Rwanda")),
+    ('RE', _("Réunion")),
+    ('BL', _("Saint Barthélemy")),
+    ('SH', _("Saint Helena, Ascension and Tristan da Cunha")),
+    ('KN', _("Saint Kitts and Nevis")),
+    ('LC', _("Saint Lucia")),
+    ('MF', _("Saint Martin (French part)")),
+    ('PM', _("Saint Pierre and Miquelon")),
+    ('VC', _("Saint Vincent and the Grenadines")),
+    ('WS', _("Samoa")),
+    ('SM', _("San Marino")),
+    ('ST', _("Sao Tome and Principe")),
+    ('SA', _("Saudi Arabia")),
+    ('SN', _("Senegal")),
+    ('RS', _("Serbia")),
+    ('SC', _("Seychelles")),
+    ('SL', _("Sierra Leone")),
+    ('SG', _("Singapore")),
+    ('SX', _("Sint Maarten (Dutch part)")),
+    ('SK', _("Slovakia")),
+    ('SI', _("Slovenia")),
+    ('SB', _("Solomon Islands")),
+    ('SO', _("Somalia")),
+    ('ZA', _("South Africa")),
+    ('GS', _("South Georgia and the South Sandwich Islands")),
+    ('SS', _("South Sudan")),
+    ('ES', _("Spain")),
+    ('LK', _("Sri Lanka")),
+    ('SD', _("Sudan")),
+    ('SR', _("Suriname")),
+    ('SJ', _("Svalbard and Jan Mayen")),
+    ('SZ', _("Swaziland")),
+    ('SE', _("Sweden")),
+    ('CH', _("Switzerland")),
+    ('SY', _("Syrian Arab Republic")),
+    ('TW', _("Taiwan, Province of China")),
+    ('TJ', _("Tajikistan")),
+    ('TZ', _("Tanzania, United Republic of")),
+    ('TH', _("Thailand")),
+    ('TL', _("Timor-Leste")),
+    ('TG', _("Togo")),
+    ('TK', _("Tokelau")),
+    ('TO', _("Tonga")),
+    ('TT', _("Trinidad and Tobago")),
+    ('TN', _("Tunisia")),
+    ('TR', _("Turkey")),
+    ('TM', _("Turkmenistan")),
+    ('TC', _("Turks and Caicos Islands")),
+    ('TV', _("Tuvalu")),
+    ('UG', _("Uganda")),
+    ('UA', _("Ukraine")),
+    ('AE', _("United Arab Emirates")),
+    ('GB', _("United Kingdom")),
+    ('US', _("United States of America")),
+    ('UM', _("United States Minor Outlying Islands")),
+    ('UY', _("Uruguay")),
+    ('UZ', _("Uzbekistan")),
+    ('VU', _("Vanuatu")),
+    ('VE', _("Venezuela, Bolivarian Republic of")),
+    ('VN', _("Viet Nam")),
+    ('VG', _("Virgin Islands, British")),
+    ('VI', _("Virgin Islands, U.S.")),
+    ('WF', _("Wallis and Futuna")),
+    ('EH', _("Western Sahara")),
+    ('YE', _("Yemen")),
+    ('ZM', _("Zambia")),
+    ('ZW', _("Zimbabwe")),
 )
+
+
+ISO_3166_1_ALPHA2_COUNTRY_CODES = tuple(sorted(
+    k for k, v in ISO_3166_1_COUNTRIES
+))

@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from .countries.iso_3166 import ISO_3166_1_COUNTRIES
 from .forms import BICFormField, IBANFormField
 from .validators import BICValidator, IBANValidator
 
@@ -95,3 +96,21 @@ class BICField(models.CharField):
         defaults = {'form_class': BICFormField}
         defaults.update(kwargs)
         return super(BICField, self).formfield(**defaults)
+
+
+class CountryField(models.CharField):
+    """
+    An ISO 3166-1 recognized country.
+
+    The stored value is the two character alpha-2 country code, and display
+    value is the name of the country.
+    """
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('max_length', 2)
+        kwargs.setdefault('choices', ISO_3166_1_COUNTRIES)
+        super(CountryField, self).__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super(CountryField, self).deconstruct()
+        del kwargs['choices']
+        return name, path, args, kwargs

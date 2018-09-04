@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django import forms
 
+from .countries.iso_3166 import ISO_3166_1_COUNTRIES
 from .validators import IBAN_COUNTRY_CODE_LENGTH, BICValidator, IBANValidator
 
 DEFAULT_DATE_INPUT_FORMATS = (
@@ -133,3 +134,13 @@ class BICFormField(forms.CharField):
         if value is not None:
             return value.upper()
         return value
+
+
+class CountryFormField(forms.ChoiceField):
+    """
+    A field representing a country, with ISO 3166-1 alpha-2 codes as the value,
+    and country name as the display.
+    """
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('choices', ISO_3166_1_Countries)
+        super(CountryField, self).__init__(*args, **kwargs)
