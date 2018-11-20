@@ -7,7 +7,7 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import CharField, Field, RegexField, Select
+from django.forms.fields import CharField, Field, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
