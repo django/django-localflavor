@@ -6,11 +6,12 @@ from django.test import SimpleTestCase
 from localflavor.br import models
 from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
                                   BRZipCodeField)
+from tests.test_br.forms import BRPersonProfileForm
 
 
 class BRLocalFlavorTests(SimpleTestCase):
     def test_BRZipCodeField(self):
-        error_format = ['Enter a zip code in the format XXXXX-XXX.']
+        error_format = ['Enter a postal code in the format 00000-000.']
         valid = {
             '12345-123': '12345-123',
         }
@@ -22,6 +23,14 @@ class BRLocalFlavorTests(SimpleTestCase):
             '-123': error_format,
         }
         self.assertFieldOutput(BRZipCodeField, valid, invalid)
+
+        for postal_code, _ in invalid.items():
+            form = BRPersonProfileForm({
+                'postal_code': postal_code
+            })
+
+            self.assertFalse(form.is_valid())
+            self.assertEqual(form.errors['postal_code'], error_format)
 
     def test_BRCNPJField(self):
         error_format = {
@@ -60,6 +69,14 @@ class BRLocalFlavorTests(SimpleTestCase):
         invalid_long = dict([(k, [error_format['only_short_version'][0] % len(k)]) for k in long_version_valid.keys()])
         self.assertFieldOutput(BRCNPJField, short_version_valid, invalid_long, field_kwargs={'max_length': 14})
 
+        for cnpj, invalid_msg in invalid.items():
+            form = BRPersonProfileForm({
+                'cnpj': cnpj
+            })
+
+            self.assertFalse(form.is_valid())
+            self.assertEqual(form.errors['cnpj'], invalid_msg)
+
     def test_BRCPFField(self):
         error_format = ['Invalid CPF number.']
         error_atmost_chars = ['Ensure this value has at most 14 characters (it has 15).']
@@ -86,6 +103,14 @@ class BRLocalFlavorTests(SimpleTestCase):
             '123456789555': error_atmost,
         }
         self.assertFieldOutput(BRCPFField, valid, invalid)
+
+        for cpf, invalid_msg in invalid.items():
+            form = BRPersonProfileForm({
+                'cpf': cpf
+            })
+
+            self.assertFalse(form.is_valid())
+            self.assertIn(form.errors['cpf'][0], invalid_msg)
 
     def test_BRProcessoField(self):
         error_format = ['Invalid Process number.']
@@ -178,6 +203,29 @@ class BRLocalFlavorTests(SimpleTestCase):
             'pr': error_invalid,
         }
         self.assertFieldOutput(BRStateChoiceField, valid, invalid)
+
+    def test_model_form_valid(self):
+        data_to_test = [
+            {
+                'cpf': '84828509895',
+                'cnpj': '64132916000188',
+                'postal_code': '08552-170'
+            },
+            {
+                'cpf': '84828509895',
+                'cnpj': '64132916/0001-88',
+                'postal_code': '08552-170'
+            },
+            {
+                'cpf': '663.256.017-26',
+                'cnpj': '64.132.916/0001-88',
+                'postal_code': '08552-170'
+            }
+        ]
+
+        for case in data_to_test:
+            form = BRPersonProfileForm(case)
+            self.assertTrue(form.is_valid())
 
 
 class BRLocalFlavorModelTests(SimpleTestCase):

@@ -59,7 +59,7 @@ class NLLicensePlateFormField(forms.CharField):
     https://www.rdw.nl/
     https://nl.wikipedia.org/wiki/Nederlands_kenteken
 
-    .. versionadded:: 2.1
+    .. versionadded:: 2.2
     """
 
     default_validators = [NLLicensePlateFieldValidator()]

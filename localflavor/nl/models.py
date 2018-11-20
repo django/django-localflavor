@@ -90,7 +90,7 @@ class NLLicensePlateField(models.CharField):
 
     This model field uses :class:`validators.NLLicensePlateFieldValidator` for validation.
 
-    .. versionadded:: 2.1
+    .. versionadded:: 2.2
     """
 
     description = _('Dutch license plate')

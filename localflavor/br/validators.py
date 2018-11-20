@@ -19,7 +19,7 @@ class BRPostalCodeValidator(RegexValidator):
     """
     A validator for Brazilian Postal Codes (CEP).
 
-    .. versionadded:: 2.1
+    .. versionadded:: 2.2
     """
 
     def __init__(self, *args, **kwargs):
@@ -32,7 +32,7 @@ class BRCNPJValidator(RegexValidator):
     """
     Validator for brazilian CNPJ.
 
-    .. versionadded:: 2.1
+    .. versionadded:: 2.2
     """
 
     def __init__(self, *args, **kwargs):
@@ -70,7 +70,7 @@ class BRCPFValidator(RegexValidator):
     """
     Validator for brazilian CPF.
 
-    .. versionadded:: 2.1
+    .. versionadded:: 2.2
     """
 
     def __init__(self, *args, **kwargs):

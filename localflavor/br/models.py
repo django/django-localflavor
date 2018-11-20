@@ -3,8 +3,7 @@
 from django.db.models.fields import CharField
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.br import validators
-
+from . import validators
 from .br_states import STATE_CHOICES
 
 
@@ -28,10 +27,15 @@ class BRCPFField(CharField):
     """
     A model field for the brazilian document named of CPF (Cadastro de Pessoa Física)
 
-    .. versionadded:: 2.1
+    .. versionadded:: 2.2
     """
 
     description = _("CPF Document")
+
+    default_error_messages = {
+        'invalid': _("Invalid CPF number."),
+        'max_digits': _("This field requires at most 11 digits or 14 characters."),
+    }
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 14
@@ -43,7 +47,7 @@ class BRCNPJField(CharField):
     """
     A model field for the brazilian document named of CNPJ (Cadastro Nacional de Pessoa Jurídica)
 
-    .. versionadded:: 2.1
+    .. versionadded:: 2.2
     """
 
     description = _("CNPJ Document")
@@ -51,14 +55,14 @@ class BRCNPJField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 18
         super(BRCNPJField, self).__init__(*args, **kwargs)
-        self.validators.append(validators.BRPostalCodeValidator())
+        self.validators.append(validators.BRCNPJValidator())
 
 
 class BRPostalCodeField(CharField):
     """
     A model field for the brazilian zip code
 
-    .. versionadded:: 2.1
+    .. versionadded:: 2.2
     """
 
     description = _("Postal Code")

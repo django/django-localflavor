@@ -11,24 +11,31 @@ from django.forms.fields import CharField, Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from localflavor.br import validators
-
 from .br_states import STATE_CHOICES
+from .validators import BRCNPJValidator, BRCPFValidator, BRPostalCodeValidator
 
 process_digits_re = re.compile(
     r'^(\d{7})-?(\d{2})\.?(\d{4})\.?(\d)\.?(\d{2})\.?(\d{4})$'
 )
 
 
-class BRZipCodeField(RegexField):
-    """A form field that validates input as a Brazilian zip code, with the format XXXXX-XXX."""
+class BRZipCodeField(CharField):
+    """
+    A form field that validates input as a Brazilian zip code, with the format XXXXX-XXX.
+
+    .. versionchanged:: 2.2
+
+        Use BRPostalCodeValidator to centralize validation logic and share with equivalent model field.
+        More details at: https://github.com/django/django-localflavor/issues/334
+    """
 
     default_error_messages = {
         'invalid': _('Enter a zip code in the format XXXXX-XXX.'),
     }
 
     def __init__(self, *args, **kwargs):
-        super(BRZipCodeField, self).__init__(validators.postal_code_re, *args, **kwargs)
+        super(BRZipCodeField, self).__init__(*args, **kwargs)
+        self.validators.append(BRPostalCodeValidator())
 
 
 class BRStateSelect(Select):
@@ -72,7 +79,10 @@ class BRCPFField(CharField):
     More information:
     http://en.wikipedia.org/wiki/Cadastro_de_Pessoas_F%C3%ADsicas
 
-    .. versionchanged:: 2.1
+    .. versionchanged:: 2.2
+
+        Use BRCPFValidator to centralize validation logic and share with equivalent model field.
+        More details at: https://github.com/django/django-localflavor/issues/334
     """
 
     default_error_messages = {
@@ -82,7 +92,7 @@ class BRCPFField(CharField):
 
     def __init__(self, max_length=14, min_length=11, *args, **kwargs):
         super(BRCPFField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
-        self.validators.append(validators.BRCPFValidator())
+        self.validators.append(BRCPFValidator())
 
     def clean(self, value):
         """Value can be either a string in the format XXX.XXX.XXX-XX or an 11-digit number."""
@@ -109,7 +119,10 @@ class BRCNPJField(CharField):
     Otherwise both formats will be valid.
 
     .. _Brazilian CNPJ: http://en.wikipedia.org/wiki/National_identification_number#Brazil
-    .. versionchanged:: 2.1
+    .. versionchanged:: 1.4
+    .. versionchanged:: 2.2
+        Use BRCNPJValidator to centralize validation logic and share with equivalent model field.
+        More details at: https://github.com/django/django-localflavor/issues/334
     """
 
     default_error_messages = {
@@ -119,7 +132,7 @@ class BRCNPJField(CharField):
 
     def __init__(self, min_length=14, max_length=18, *args, **kwargs):
         super(BRCNPJField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
-        self.validators.append(validators.BRCNPJValidator())
+        self.validators.append(BRCNPJValidator())
 
     def clean(self, value):
         """Value can be either a string in the format XX.XXX.XXX/XXXX-XX or a group of 14 characters."""

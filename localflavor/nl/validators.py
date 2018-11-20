@@ -60,7 +60,7 @@ class NLLicensePlateFieldValidator(RegexValidator):
     """
     Validation for Dutch license plates.
 
-    .. versionadded:: 2.1
+    .. versionadded:: 2.2
     """
 
     error_message = _('Enter a valid license plate')
