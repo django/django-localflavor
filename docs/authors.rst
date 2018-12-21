@@ -99,5 +99,6 @@ Authors
 * Trey Hunner
 * Tyler Ball
 * Tom Forbes
+* Vaclav Rehak
 * Venelin Stoykov
 * Vladimir Nani
