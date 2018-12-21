@@ -105,6 +105,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'TN': 24,  # Tunisia
                             'TR': 26,  # Turkey
                             'UA': 29,  # Ukraine
+                            'VA': 22,  # Vatican
                             'VG': 24,  # British Virgin Islands
                             'XK': 20}  # Kosovo (user-assigned country code)
 

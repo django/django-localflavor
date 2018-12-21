@@ -18,7 +18,7 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Added support for Vatican IBAN
 
 
 2.1   (2018-08-24)
