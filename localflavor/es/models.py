@@ -5,7 +5,6 @@ from .forms import ESIdentityCardNumberField as ESIdentityCardNumberFormField
 from .forms import ESPostalCodeField as ESPostalCodeFormField
 
 
-
 class ESPostalCodeField(CharField):
   """
   A model field that stores the five numbers (XXXXX) of Spain Postal Codes
@@ -25,7 +24,6 @@ class ESPostalCodeField(CharField):
     return super(ESPostalCodeField, self).formfield(**defaults)
 
 
-
 class ESIdentityCardNumberField(CharField):
   """A model field that stores Spanish NIF/NIE/CIF in format ``XXXXXXXXX``
   
@@ -43,4 +41,3 @@ class ESIdentityCardNumberField(CharField):
     defaults = {'form_class': ESIdentityCardNumberFormField}
     defaults.update(kwargs)
     return super(ESIdentityCardNumberField, self).formfield(**defaults)
-  
