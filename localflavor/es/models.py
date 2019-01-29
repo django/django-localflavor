@@ -8,7 +8,9 @@ from .forms import ESPostalCodeField as ESPostalCodeFormField
 
 class ESPostalCodeField(CharField):
   """
-  A model field that stores the five numbers of Spain Postal Codes
+  A model field that stores the five numbers (XXXXX) of Spain Postal Codes
+  
+  Forms represent it as ``form.ESPostalCodeField``
   """
   
   description = _("Spain postal code ( five numbers)")
