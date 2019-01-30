@@ -10,7 +10,8 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- Added Models for Spain ( ESPostalCodeField and ESIdentityCardNumberField )
+  (`gh-357 <https://github.com/django/django-localflavor/pull/357>`_)
 
 Modifications to existing flavors:
 
