@@ -44,6 +44,7 @@ Authors
 * Gary Wilson Jr
 * Gerardo Orozco
 * Ghassen Telmoudi
+* Gil Obradors
 * Grzes Furga
 * Hamad AlGhanim
 * Honza Král
