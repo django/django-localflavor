@@ -13,6 +13,9 @@ New fields for existing flavors:
 
 - `EircodeField` in IE flavor
 
+- Added Models for Spain (`ESPostalCodeField` and `ESIdentityCardNumberField`)
+  (`gh-357 <https://github.com/django/django-localflavor/pull/357>`_)
+
 Modifications to existing flavors:
 
 - Deprecated `generic.checksums.luhn` and `generic.checksums.ean`. Please use the python-stdnum library instead.
