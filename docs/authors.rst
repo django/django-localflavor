@@ -7,6 +7,7 @@ Authors
 * Adonys Alea Boffill
 * Adrian Holovaty
 * Agustín Scaramuzza
+* Ahmad Zolfaghari
 * Alex Butum
 * Alex Gaynor
 * Alex Hill
