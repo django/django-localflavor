@@ -19,7 +19,7 @@ class IRLocalFlavorTests(SimpleTestCase):
             <option value="GI">Gilan</option>
             <option value="GO">Golestan</option>
             <option value="HA">Hamadan</option>
-            <option value="HO">Hormozgān</option>
+            <option value="HO">Hormozgan</option>
             <option value="IL">Ilam</option>
             <option value="IS">Isfahan</option>
             <option value="KE">Kerman</option>

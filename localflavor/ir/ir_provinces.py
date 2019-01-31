@@ -16,7 +16,7 @@ PROVINCE_CHOICES = (
     ('GI', _('Gilan')),
     ('GO', _('Golestan')),
     ('HA', _('Hamadan')),
-    ('HO', _('Hormozgān')),
+    ('HO', _('Hormozgan')),
     ('IL', _('Ilam')),
     ('IS', _('Isfahan')),
     ('KE', _('Kerman')),
