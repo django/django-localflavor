@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
@@ -10,6 +12,8 @@ class ESPostalCodeField(CharField):
     A model field that stores the five numbers (XXXXX) of Spain Postal Codes
 
     Forms represent it as ``form.ESPostalCodeField``
+
+    .. versionadded:: 2.2
     """
 
     description = _("Spain postal code ( five numbers)")
@@ -29,6 +33,7 @@ class ESIdentityCardNumberField(CharField):
 
     Forms represent it as ``form.ESIdentityCardNumberField`` field.
 
+    .. versionadded:: 2.2
     """
 
     description = _("Identification National Document")
