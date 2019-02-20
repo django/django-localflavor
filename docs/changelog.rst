@@ -10,7 +10,7 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- `EircodeField` in IE flavor
 
 Modifications to existing flavors:
 
