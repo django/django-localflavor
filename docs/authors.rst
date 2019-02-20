@@ -82,6 +82,7 @@ Authors
 * Morgane Alonso
 * Olivier Sels
 * Olle Vidner
+* Paul Cunnane
 * Paul Donohue
 * Paulo Poiati
 * Peter J. Farrell
