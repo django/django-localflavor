@@ -2,14 +2,13 @@ from __future__ import unicode_literals
 
 from django.test import SimpleTestCase
 
-from localflavor.ie.forms import IECountySelect
+from localflavor.ie.forms import IECountySelect, EircodeField
 
 
 class IELocalFlavorTests(SimpleTestCase):
-
     def test_IECountySelect(self):
         f = IECountySelect()
-        out = '''<select name="counties">
+        out = """<select name="counties">
 <option value="carlow">Carlow</option>
 <option value="cavan">Cavan</option>
 <option value="clare">Clare</option>
@@ -36,5 +35,28 @@ class IELocalFlavorTests(SimpleTestCase):
 <option value="westmeath">Westmeath</option>
 <option value="wexford">Wexford</option>
 <option value="wicklow">Wicklow</option>
-</select>'''
-        self.assertHTMLEqual(f.render('counties', 'dublin'), out)
+</select>"""
+        self.assertHTMLEqual(f.render("counties", "dublin"), out)
+
+    def test_EircodeField(self):
+        error_invalid = ["Enter a valid Eircode."]
+        valid = {
+            "A65 F4E2": "A65F4E2",
+            "a65f4e2": "A65F4E2",
+            "D6w123A": "D6W123A",
+            " f28 e50f ": "F28E50F",
+        }
+        invalid = {
+            "A65F 4E2": error_invalid,
+            "A65  F4E2": error_invalid,
+            "A 65 F4E2": error_invalid,
+            "D4W 1234": error_invalid,
+            "Z99ABCF": error_invalid,
+            "a65 123b": error_invalid,
+            " b0gUS": error_invalid,
+        }
+        self.assertFieldOutput(EircodeField, valid, invalid)
+        valid = {}
+        invalid = {"1NV 4L1D": ["Enter a bloody eircode!"]}
+        kwargs = {"error_messages": {"invalid": "Enter a bloody eircode!"}}
+        self.assertFieldOutput(EircodeField, valid, invalid, field_kwargs=kwargs)
