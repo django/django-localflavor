@@ -4,7 +4,9 @@ cache: pip
 
 matrix:
   include:
+    # Need to use xenial in the docs build for a more recent version of sqlite.
     - python: 3.6
+      dist: xenial
       env: TOXENV=docs
     - python: 3.5
       env: TOXENV=prospector
