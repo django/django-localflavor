@@ -219,7 +219,7 @@ class BICValidator(object):
     """
 
     def __eq__(self, other):
-        # The is no outside modification of properties so this should always be true by default.
+        # There is no outside modification of properties so this should always be true by default.
         return True
 
     def __call__(self, value):
