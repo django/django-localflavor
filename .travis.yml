@@ -60,18 +60,6 @@ matrix:
       dist: xenial
       env: TOXENV=py37-master
   allow_failures:
-    - python: 3.5
-      dist: xenial
-      env: TOXENV=py35-2.2
-    - python: 3.6
-      dist: xenial
-      env: TOXENV=py36-2.2
-    - python: 3.7
-      dist: xenial
-      env: TOXENV=py37-2.2
-    - python: pypy3
-      dist: xenial
-      env: TOXENV=pypy3-2.2
     - python: 3.6
       dist: xenial
       env: TOXENV=py36-master
