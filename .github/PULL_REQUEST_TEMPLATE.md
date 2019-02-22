@@ -16,10 +16,6 @@ first version.
 - [ ] Add an entry for your name in the docs/authors.rst file if it's not
       already there.
 
-- [ ] Adjust your imports to a standard form by running this command:
-
-      `isort --recursive --line-width 120 localflavor tests`
-
 **New Fields Only**
 
 - [ ] Prefix the country code to all fields.
