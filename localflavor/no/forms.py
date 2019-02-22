@@ -129,7 +129,7 @@ class NOBankAccountNumber(CharField):
         elif not value.isdigit():
             # You must only contain decimals.
             raise ValidationError(self.error_messages['invalid'])
-        elif len(value) != 11:
+        elif len(value) is not 11:
             # They only have one length: the number is 10!
             # That being said, you always store them with the check digit included, so 11.
             raise ValidationError(self.error_messages['invalid_length'])
@@ -144,7 +144,7 @@ class NOBankAccountNumber(CharField):
         remainder = result % 11
         # The checksum is 0 in the event there's no remainder, seeing as we cannot have a checksum of 11
         # when 11 is one digit longer than we've got room for
-        checksum = 0 if remainder == 0 else 11 - remainder
+        checksum = 0 if remainder is 0 else 11 - remainder
 
         if checksum != check_digit:
             raise ValidationError(self.error_messages['invalid_checksum'])
