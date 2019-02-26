@@ -125,7 +125,7 @@ class BICFormField(forms.CharField):
         value = super(BICFormField, self).to_python(value)
         if value in self.empty_values:
             return self.empty_value
-        return value.upper()
+        return value.upper().replace(" ", "")
 
     def prepare_value(self, value):
         # BIC is always written in upper case.
