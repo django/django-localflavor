@@ -20,6 +20,8 @@ Other changes:
 
 - Added support for Vatican IBAN
 
+- Extended validation of BICs to check for the correct character set
+
 
 2.1   (2018-08-24)
 ------------------

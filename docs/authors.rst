@@ -84,6 +84,7 @@ Authors
 * Peter J. Farrell
 * Rael Max
 * Ramiro Morales
+* Raphael Michel
 * Rolf Erik Lekang
 * Russell Keith-Magee
 * Serafeim Papastefanos
