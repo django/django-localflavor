@@ -239,9 +239,8 @@ class BICValidator(object):
 
         # First 4 letters are A - Z.
         institution_code = value[:4]
-        for x in institution_code:
-            if x not in string.ascii_uppercase:
-                raise ValidationError(_('%s is not a valid institution code.') % institution_code)
+        if any(char not in string.ascii_uppercase for char in institution_code):
+            raise ValidationError(_('%s is not a valid institution code.') % institution_code)
 
         # Letters 5 and 6 consist of an ISO 3166-1 alpha-2 country code.
         country_code = value[4:6]
