@@ -97,8 +97,7 @@ class BRCPFField(CharField):
         value = super(BRCPFField, self).clean(value)
         if value in self.empty_values:
             return self.empty_value
-        orig_value = value[:]
-        return orig_value
+        return value
 
 
 class BRCNPJField(CharField):
@@ -137,8 +136,7 @@ class BRCNPJField(CharField):
         value = super(BRCNPJField, self).clean(value)
         if value in self.empty_values:
             return self.empty_value
-        original_value = value[:]
-        return original_value
+        return value
 
 
 def mod_97_base10(value):
