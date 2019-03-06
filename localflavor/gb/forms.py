@@ -16,7 +16,7 @@ class GBPostcodeField(CharField):
     A form field that validates its input is a UK postcode.
 
     The regular expression used is sourced from the schema for British Standard
-    BS7666 address types: http://www.govtalk.gov.uk/gdsc/schemas/bs7666-v2-0.xsd
+    BS7666 address types: https://data.gov.uk/education-standards/sites/default/files/CL-Address-Line-Type-v3-0.pdf
 
     The value is uppercased and a space added in the correct place, if required.
     """
