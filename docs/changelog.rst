@@ -14,7 +14,7 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- Improve prospector check for norway in `localflavor/no/forms.py` line 132 and 147
+- None
 
 Other changes:
 
