@@ -9,8 +9,7 @@ New flavors:
 - Added local flavor for Iran
 
 New fields for existing flavors:
-
-- None
+- Added BRPostalCodeField, BRCPFField, BRCNPJField models fields.
 
 Modifications to existing flavors:
 
@@ -19,6 +18,8 @@ Modifications to existing flavors:
 Other changes:
 
 - Added support for Vatican IBAN
+
+- Extended validation of BICs to check for the correct character set
 
 
 2.1   (2018-08-24)

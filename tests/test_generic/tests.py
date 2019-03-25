@@ -324,7 +324,9 @@ class BICTests(TestCase):
             'NEDSZAJJXX': 'BIC codes have either 8 or 11 characters.',
             '': 'BIC codes have either 8 or 11 characters.',
             'CIBCJJH2': 'JJ is not a valid country code.',
-            'DÉUTDEFF': 'is not a valid institution code.'
+            'D3UTDEFF': 'is not a valid institution code.',
+            'DÉUTDEFF': 'codes only contain alphabet letters and digits.',
+            'NEDSZAJJ XX': 'codes only contain alphabet letters and digits.',
         }
 
         bic_validator = BICValidator()

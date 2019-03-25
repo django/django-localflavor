@@ -233,11 +233,14 @@ class BICValidator(object):
         if bic_length != 8 and bic_length != 11:
             raise ValidationError(_('BIC codes have either 8 or 11 characters.'))
 
+        # BIC is alphanumeric
+        if any(char not in string.ascii_uppercase + string.digits for char in value):
+            raise ValidationError(_('BIC codes only contain alphabet letters and digits.'))
+
         # First 4 letters are A - Z.
         institution_code = value[:4]
-        for x in institution_code:
-            if x not in string.ascii_uppercase:
-                raise ValidationError(_('%s is not a valid institution code.') % institution_code)
+        if any(char not in string.ascii_uppercase for char in institution_code):
+            raise ValidationError(_('%s is not a valid institution code.') % institution_code)
 
         # Letters 5 and 6 consist of an ISO 3166-1 alpha-2 country code.
         country_code = value[4:6]
@@ -314,7 +317,7 @@ VATIN_COUNTRY_CODE_LENGTH = 2
 Length of the country code prefix of a VAT identification number.
 
 Codes are two letter ISO 3166-1 alpha-2 codes except for Greece that uses
-ISO 639-1. 
+ISO 639-1.
 """
 
 
