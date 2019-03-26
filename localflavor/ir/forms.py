@@ -4,17 +4,18 @@ from __future__ import unicode_literals
 import re
 
 from django.core.exceptions import ValidationError
-from django.core.validators import EMPTY_VALUES
 from django.forms.fields import Field, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
 
 from .ir_provinces import PROVINCE_CHOICES
 
-id_number_re = re.compile(r'^\d{10}$')
-
 
 class IRProvinceSelect(Select):
-    """A Select widget that uses a list of Iran provinces cities as its choices."""
+    """
+    A Select widget that uses a list of Iran provinces cities as its choices.
+
+    .. versionadded:: 2.2
+    """
 
     def __init__(self, attrs=None):
         super(IRProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
@@ -33,6 +34,7 @@ class IRPostalCodeField(RegexField):
         - The 5th digit cannot be 5
         - all digits aren't the same
 
+    .. versionadded:: 2.2
     """
 
     default_error_messages = {
@@ -55,19 +57,27 @@ class IRIDNumberField(Field):
 
     Valid form is per the Iranian ID specification.
 
+    persian documentation :
+        http://www.aliarash.com/article/codemeli/codemeli.htm
+
+        i can't find good english doc so i propose to use google translate for this one
+
+    .. versionadded:: 2.2
     """
+    id_number_re = re.compile(r'^\d{10}$')
 
     default_error_messages = {
         'invalid': _('Enter a valid ID number.'),
     }
+    empty_value = ''
 
     def clean(self, value):
         value = super(IRIDNumberField, self).clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
-        match = id_number_re.match(value)
+        match = self.id_number_re.match(value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])
 

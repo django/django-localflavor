@@ -73,5 +73,6 @@ class IRLocalFlavorTests(SimpleTestCase):
             '012346578': error_invalid,
             '012346578-': error_invalid,
             '01266925485': error_invalid,
+            '0566360272': error_invalid
         }
         self.assertFieldOutput(IRIDNumberField, valid, invalid)
