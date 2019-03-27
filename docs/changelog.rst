@@ -6,7 +6,7 @@ Changelog
 
 New flavors:
 
-- None
+- Added local flavor for Iran
 
 New fields for existing flavors:
 - Added BRPostalCodeField, BRCPFField, BRCNPJField models fields.
