@@ -60,7 +60,8 @@ class IRIDNumberField(Field):
     persian documentation :
         http://www.aliarash.com/article/codemeli/codemeli.htm
 
-        i can't find good english doc so i propose to use google translate for this one
+        There isn't good English documentation available for the Iranian identification number. Non-Persian speakers
+        will need to use an online translation service to read this documentation.
 
     .. versionadded:: 2.2
     """
