@@ -57,7 +57,7 @@ class IRIDNumberField(Field):
 
     Valid form is per the Iranian ID specification.
 
-    persian documentation :
+    Persian documentation :
         http://www.aliarash.com/article/codemeli/codemeli.htm
 
         There isn't good English documentation available for the Iranian identification number. Non-Persian speakers
