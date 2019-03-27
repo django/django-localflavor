@@ -10,8 +10,7 @@ from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
-
-from localflavor.generic.checksums import luhn
+from stdnum import luhn
 
 from .hr_choices import HR_COUNTY_CHOICES, HR_LICENSE_PLATE_PREFIX_CHOICES
 
@@ -227,7 +226,7 @@ class HRJMBAGField(Field):
             raise ValidationError(self.error_messages['copy'])
 
         # Validate checksum using Luhn algorithm.
-        if not luhn(value):
+        if not luhn.is_valid(value):
             raise ValidationError(self.error_messages['invalid'])
 
         return '%s' % value

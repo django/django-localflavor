@@ -7,8 +7,7 @@ from datetime import date
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
-
-from localflavor.generic.checksums import luhn
+from stdnum import luhn
 
 id_re = re.compile(r'^(?P<yy>\d\d)(?P<mm>\d\d)(?P<dd>\d\d)(?P<mid>\d{4})(?P<end>\d{3})')
 
@@ -49,7 +48,7 @@ class ZAIDField(CharField):
         except ValueError:
             raise ValidationError(self.error_messages['invalid'])
 
-        if not luhn(value):
+        if not luhn.is_valid(value):
             raise ValidationError(self.error_messages['invalid'])
 
         return value
