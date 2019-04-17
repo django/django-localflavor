@@ -79,6 +79,7 @@ Authors
 * Matias Dinota
 * Michał Sałaban
 * Mike Lissner
+* Morgane Alonso
 * Olivier Sels
 * Olle Vidner
 * Paul Donohue

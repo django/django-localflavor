@@ -21,6 +21,10 @@ Other changes:
 
 - Extended validation of BICs to check for the correct character set
 
+- Run tests for Django 2.2 and Python 3.5, 3.6 and 3.7
+
+- Run tests for Django 2.0 and Python 3.7
+
 
 2.1   (2018-08-24)
 ------------------
