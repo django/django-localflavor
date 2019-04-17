@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: An alphabetical list of regions for use as `choices` in a formfield.
 #: http://www.pncl.gov.ma/fr/Pages/decoupage.aspx

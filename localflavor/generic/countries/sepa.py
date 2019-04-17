@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 #: European Payments Council list of SEPA scheme countries as of 2 Sep 2015.
 #: http://www.europeanpaymentscouncil.eu/index.cfm/knowledge-bank/epc-documents/epc-list-of-sepa-scheme-countries/
 IBAN_SEPA_COUNTRIES = (

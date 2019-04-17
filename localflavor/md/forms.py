@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django import forms
 
 from .choices import COMPANY_TYPES_CHOICES, REGION_CHOICES_2002_2015
@@ -18,7 +15,7 @@ class MDIDNOField(forms.CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
-        super(MDIDNOField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class MDLicensePlateField(forms.CharField):
@@ -32,7 +29,7 @@ class MDLicensePlateField(forms.CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
-        super(MDLicensePlateField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class MDCompanyTypesSelect(forms.Select):
@@ -43,7 +40,7 @@ class MDCompanyTypesSelect(forms.Select):
     """
 
     def __init__(self, attrs=None):
-        super(MDCompanyTypesSelect, self).__init__(attrs, choices=COMPANY_TYPES_CHOICES)
+        super().__init__(attrs, choices=COMPANY_TYPES_CHOICES)
 
 
 class MDRegionSelect(forms.Select):
@@ -54,4 +51,4 @@ class MDRegionSelect(forms.Select):
     """
 
     def __init__(self, attrs=None):
-        super(MDRegionSelect, self).__init__(attrs, choices=REGION_CHOICES_2002_2015)
+        super().__init__(attrs, choices=REGION_CHOICES_2002_2015)

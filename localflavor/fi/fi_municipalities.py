@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 #: An alphabetical list of Finnish municipalities for use as `choices` in a formfield.
 MUNICIPALITY_CHOICES = (
     ('akaa', "Akaa"),

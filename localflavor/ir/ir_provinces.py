@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: A list of Iran provinces and autonomous cities as `choices` in a
 #: formfield. From https://en.wikipedia.org/wiki/Provinces_of_Iran

@@ -1,13 +1,9 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 import importlib
 import pkgutil
 
 from django import forms
 from django.db import models
 from django.test.testcases import TestCase
-from django.utils import six
 
 import localflavor
 
@@ -26,7 +22,7 @@ class GeneralTests(TestCase):
                 if f.startswith('_'):
                     continue
                 item = getattr(module, f)
-                if localflavor.__name__ in six.text_type(item):
+                if localflavor.__name__ in str(item):
                     try:
                         if issubclass(item, base_class):
                             classes.append(item)

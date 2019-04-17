@@ -1,7 +1,5 @@
 """ID-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 import time
 
@@ -9,7 +7,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, Select
 from django.utils.encoding import force_text
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 postcode_re = re.compile(r'^[1-9]\d{4}$')
 plate_re = re.compile(r'^(?P<prefix>[A-Z]{1,2}) ' +
@@ -29,7 +27,7 @@ class IDPostCodeField(Field):
     }
 
     def clean(self, value):
-        super(IDPostCodeField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -53,7 +51,7 @@ class IDProvinceSelect(Select):
     def __init__(self, attrs=None):
         # Load data in memory only when it is required, see also #17275
         from .id_choices import PROVINCE_CHOICES
-        super(IDProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)
 
 
 class IDLicensePlatePrefixSelect(Select):
@@ -66,8 +64,7 @@ class IDLicensePlatePrefixSelect(Select):
     def __init__(self, attrs=None):
         # Load data in memory only when it is required, see also #17275
         from .id_choices import LICENSE_PLATE_PREFIX_CHOICES
-        super(IDLicensePlatePrefixSelect, self).__init__(attrs,
-                                                         choices=LICENSE_PLATE_PREFIX_CHOICES)
+        super().__init__(attrs, choices=LICENSE_PLATE_PREFIX_CHOICES)
 
 
 class IDLicensePlateField(Field):
@@ -85,7 +82,7 @@ class IDLicensePlateField(Field):
     foreign_vehicles_prefixes = ('CD', 'CC')
 
     def clean(self, value):
-        super(IDLicensePlateField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         plate_number = re.sub(r'\s+', ' ', force_text(value.strip())).upper()
@@ -167,7 +164,7 @@ class IDNationalIdentityNumberField(Field):
     }
 
     def clean(self, value):
-        super(IDNationalIdentityNumberField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 

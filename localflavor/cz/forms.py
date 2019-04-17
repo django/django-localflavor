@@ -1,13 +1,11 @@
 """Czech-specific form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .cz_regions import REGION_CHOICES
 
@@ -19,7 +17,7 @@ class CZRegionSelect(Select):
     """A select widget widget with list of Czech regions as choices."""
 
     def __init__(self, attrs=None):
-        super(CZRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class CZPostalCodeField(RegexField):
@@ -34,7 +32,7 @@ class CZPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(CZPostalCodeField, self).__init__(r'^\d{5}$|^\d{3} \d{2}$', *args, **kwargs)
+        super().__init__(r'^\d{5}$|^\d{3} \d{2}$', *args, **kwargs)
 
     def clean(self, value):
         """
@@ -42,7 +40,7 @@ class CZPostalCodeField(RegexField):
 
         Returns an empty string for empty values.
         """
-        value = super(CZPostalCodeField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         return value.replace(' ', '')
@@ -57,7 +55,7 @@ class CZBirthNumberField(Field):
     }
 
     def clean(self, value):
-        super(CZBirthNumberField, self).clean(value)
+        super().clean(value)
 
         if value in EMPTY_VALUES:
             return ''
@@ -106,7 +104,7 @@ class CZICNumberField(Field):
     }
 
     def clean(self, value):
-        super(CZICNumberField, self).clean(value)
+        super().clean(value)
 
         if value in EMPTY_VALUES:
             return ''

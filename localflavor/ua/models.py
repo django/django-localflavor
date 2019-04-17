@@ -1,6 +1,6 @@
 from django.core.validators import RegexValidator
 from django.db.models import CharField
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .ua_regions import UA_REGION_CHOICES
 
@@ -20,10 +20,10 @@ class UARegionField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = UA_REGION_CHOICES
         kwargs['max_length'] = 5
-        super(UARegionField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def deconstruct(self):
-        name, path, args, kwargs = super(UARegionField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs
 
@@ -43,7 +43,7 @@ class UAVatNumberField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 10
-        super(UAVatNumberField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class UAPostalCodeField(CharField):
@@ -61,4 +61,4 @@ class UAPostalCodeField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
-        super(UAPostalCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)

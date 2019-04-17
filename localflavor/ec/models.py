@@ -1,5 +1,5 @@
 from django.db.models import CharField
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .ec_provinces import PROVINCE_CHOICES
 
@@ -16,9 +16,9 @@ class ECProvinceField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = PROVINCE_CHOICES
         kwargs['max_length'] = 2
-        super(ECProvinceField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def deconstruct(self):
-        name, path, args, kwargs = super(ECProvinceField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs

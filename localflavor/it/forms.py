@@ -1,13 +1,11 @@
 """IT-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .it_province import PROVINCE_CHOICES
 from .it_region import REGION_CHOICES, REGION_PROVINCE_CHOICES
@@ -26,28 +24,28 @@ class ITZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(ITZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
+        super().__init__(r'^\d{5}$', *args, **kwargs)
 
 
 class ITRegionSelect(Select):
     """A Select widget that uses a list of IT regions as its choices."""
 
     def __init__(self, attrs=None):
-        super(ITRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class ITRegionProvinceSelect(Select):
     """A Select widget that uses a named group list of IT regions mapped to regions as its choices."""
 
     def __init__(self, attrs=None):
-        super(ITRegionProvinceSelect, self).__init__(attrs, choices=REGION_PROVINCE_CHOICES)
+        super().__init__(attrs, choices=REGION_PROVINCE_CHOICES)
 
 
 class ITProvinceSelect(Select):
     """A Select widget that uses a list of IT provinces as its choices."""
 
     def __init__(self, attrs=None):
-        super(ITProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)
 
 
 class ITSocialSecurityNumberField(RegexField):
@@ -70,12 +68,12 @@ class ITSocialSecurityNumberField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(ITSocialSecurityNumberField, self).__init__(
+        super().__init__(
             r'^\w{3}\s*\w{3}\s*\w{5}\s*\w{5}$|\d{10}', *args, **kwargs
         )
 
     def clean(self, value):
-        value = super(ITSocialSecurityNumberField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         value = re.sub('\s', '', value).upper()
@@ -101,7 +99,7 @@ class ITVatNumberField(Field):
     }
 
     def clean(self, value):
-        value = super(ITVatNumberField, self).clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         try:

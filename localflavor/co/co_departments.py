@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 #: A list of Colombian departaments as `choices` in a
 #: formfield.
 DEPARTMENT_CHOICES = (

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Ve-specific Form helpers.
 """
@@ -14,7 +13,7 @@ class VERegionSelect(Select):
     A Select widget that uses a list of Venezuelan regions as its choices.
     """
     def __init__(self, attrs=None):
-        super(VERegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class VEStateSelect(Select):
@@ -22,4 +21,4 @@ class VEStateSelect(Select):
     A Select widget that uses a list of Venezuelan states as its choices.
     """
     def __init__(self, attrs=None):
-        super(VEStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+        super().__init__(attrs, choices=STATE_CHOICES)

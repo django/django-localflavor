@@ -1,12 +1,10 @@
-from __future__ import unicode_literals
-
 import re
 from datetime import date
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .lv_choices import MUNICIPALITY_CHOICES
 
@@ -28,7 +26,7 @@ class LVPostalCodeField(Field):
     }
 
     def clean(self, value):
-        value = super(LVPostalCodeField, self).clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -43,7 +41,7 @@ class LVMunicipalitySelect(Select):
     """A select field of Latvian municipalities."""
 
     def __init__(self, attrs=None):
-        super(LVMunicipalitySelect, self).__init__(attrs, choices=MUNICIPALITY_CHOICES)
+        super().__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 
 class LVPersonalCodeField(Field):
@@ -63,7 +61,7 @@ class LVPersonalCodeField(Field):
         return ((1 - check) % 11) % 10
 
     def clean(self, value):
-        super(LVPersonalCodeField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 

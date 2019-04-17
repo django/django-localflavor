@@ -1,12 +1,10 @@
 """Israeli-specific form helpers."""
-from __future__ import unicode_literals
-
 import re
 
 from django.core.exceptions import ValidationError
 from django.core.validators import EMPTY_VALUES
 from django.forms.fields import Field, RegexField
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
 id_number_re = re.compile(r'^(?P<number>\d{1,8})-?(?P<check>\d)$')
@@ -24,12 +22,12 @@ class ILPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(ILPostalCodeField, self).__init__(r'^\d{5}$|^\d{7}$', *args, **kwargs)
+        super().__init__(r'^\d{5}$|^\d{7}$', *args, **kwargs)
 
     def clean(self, value):
         if value not in self.empty_values:
             value = value.replace(' ', '')
-        return super(ILPostalCodeField, self).clean(value)
+        return super().clean(value)
 
 
 class ILIDNumberField(Field):
@@ -55,7 +53,7 @@ class ILIDNumberField(Field):
     }
 
     def clean(self, value):
-        value = super(ILIDNumberField, self).clean(value)
+        value = super().clean(value)
 
         if value in EMPTY_VALUES:
             return ''

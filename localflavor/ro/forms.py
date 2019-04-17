@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
 """Romanian specific form helpers."""
-from __future__ import unicode_literals
-
 import datetime
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, Select, ValidationError
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .ro_counties import COUNTIES_CHOICES
 
@@ -23,7 +20,7 @@ class ROCIFField(RegexField):
     }
 
     def __init__(self, max_length=10, min_length=2, *args, **kwargs):
-        super(ROCIFField, self).__init__(
+        super().__init__(
             r'^(RO)?[0-9]{2,10}', max_length=max_length, min_length=min_length,
             *args, **kwargs
         )
@@ -35,7 +32,7 @@ class ROCIFField(RegexField):
         Args:
             value: the CIF code
         """
-        value = super(ROCIFField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -76,7 +73,7 @@ class ROCNPField(RegexField):
     }
 
     def __init__(self, max_length=13, min_length=13, *args, **kwargs):
-        super(ROCNPField, self).__init__(
+        super().__init__(
             r'^[1-9][0-9]{12}', max_length=max_length, min_length=min_length,
             *args, **kwargs
         )
@@ -88,7 +85,7 @@ class ROCNPField(RegexField):
         Args:
             value: the CNP code
         """
-        value = super(ROCNPField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -141,7 +138,7 @@ class ROCountyField(Field):
     }
 
     def clean(self, value):
-        super(ROCountyField, self).clean(value)
+        super().clean(value)
 
         if value in EMPTY_VALUES:
             return ''
@@ -172,7 +169,7 @@ class ROCountySelect(Select):
     """A Select widget that uses a list of Romanian counties (județe) as its choices."""
 
     def __init__(self, attrs=None):
-        super(ROCountySelect, self).__init__(attrs, choices=COUNTIES_CHOICES)
+        super().__init__(attrs, choices=COUNTIES_CHOICES)
 
 
 class ROPostalCodeField(RegexField):
@@ -183,7 +180,7 @@ class ROPostalCodeField(RegexField):
     }
 
     def __init__(self, max_length=6, min_length=6, *args, **kwargs):
-        super(ROPostalCodeField, self).__init__(
+        super().__init__(
             r'^[0-9][0-8][0-9]{4}$', max_length=max_length,
             min_length=min_length, *args, **kwargs
         )

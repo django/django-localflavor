@@ -1,4 +1,4 @@
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: An alphabetical list of provinces and territories for use as `choices`
 #: in a formfield. Source: http://www.canada.gc.ca/othergov/prov_e.html

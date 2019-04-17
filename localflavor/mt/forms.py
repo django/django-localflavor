@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
 """Maltese-specific Form helpers."""
-from __future__ import unicode_literals
-
 from django.forms.fields import RegexField
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class MTPostalCodeField(RegexField):
@@ -19,4 +16,4 @@ class MTPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(MTPostalCodeField, self).__init__(r'^[A-Z]{3}\ \d{4}$', *args, **kwargs)
+        super().__init__(r'^[A-Z]{3}\ \d{4}$', *args, **kwargs)

@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: Croatian Counties: http://en.wikipedia.org/wiki/ISO_3166-2:HR
 #: Croatia doesn't have official abbreviations for counties. The ones provided are in common use.

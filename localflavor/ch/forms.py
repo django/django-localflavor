@@ -1,13 +1,11 @@
 """Swiss-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.core.validators import EMPTY_VALUES, RegexValidator
 from django.forms import ValidationError
 from django.forms.fields import CharField, Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from ..generic import validators
 from .ch_states import STATE_CHOICES
@@ -32,14 +30,14 @@ class CHZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(CHZipCodeField, self).__init__(zip_re, *args, **kwargs)
+        super().__init__(zip_re, *args, **kwargs)
 
 
 class CHStateSelect(Select):
     """A Select widget that uses a list of CH states as its choices."""
 
     def __init__(self, attrs=None):
-        super(CHStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+        super().__init__(attrs, choices=STATE_CHOICES)
 
 
 class CHIdentityCardNumberField(Field):
@@ -88,7 +86,7 @@ class CHIdentityCardNumberField(Field):
         return str(calculated_checksum)[-1] == given_checksum
 
     def clean(self, value):
-        super(CHIdentityCardNumberField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -135,7 +133,7 @@ class CHSocialSecurityNumberField(CharField):
 
     def run_validators(self, value):
         try:
-            super(CHSocialSecurityNumberField, self).run_validators(value)
+            super().run_validators(value)
         except ValidationError as errs:
             # Deduplicate error messages, if any
             raise ValidationError(list(set(errs.messages)))

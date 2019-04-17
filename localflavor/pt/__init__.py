@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 """
 django_localflavot_pt
 ~~~~~~~~~~~~~~~~~~~~~

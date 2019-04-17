@@ -1,4 +1,4 @@
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: Polish voivodeship as in http://en.wikipedia.org/wiki/Poland#Administrative_division
 VOIVODESHIP_CHOICES = (

@@ -1,13 +1,11 @@
 """USA-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 ssn_re = re.compile(r"^(?P<area>\d{3})[-\ ]?(?P<group>\d{2})[-\ ]?(?P<serial>\d{4})$")
 
@@ -33,10 +31,10 @@ class USZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(USZipCodeField, self).__init__(r'^\d{5}(?:-\d{4})?$', *args, **kwargs)
+        super().__init__(r'^\d{5}(?:-\d{4})?$', *args, **kwargs)
 
     def to_python(self, value):
-        value = super(USZipCodeField, self).to_python(value)
+        value = super().to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return value.strip()
@@ -65,7 +63,7 @@ class USSocialSecurityNumberField(CharField):
     }
 
     def clean(self, value):
-        super(USSocialSecurityNumberField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         match = re.match(ssn_re, value)
@@ -101,7 +99,7 @@ class USStateField(Field):
 
     def clean(self, value):
         from .us_states import STATES_NORMALIZED
-        super(USStateField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         try:
@@ -121,7 +119,7 @@ class USStateSelect(Select):
 
     def __init__(self, attrs=None):
         from .us_states import STATE_CHOICES
-        super(USStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+        super().__init__(attrs, choices=STATE_CHOICES)
 
 
 class USPSSelect(Select):
@@ -137,4 +135,4 @@ class USPSSelect(Select):
 
     def __init__(self, attrs=None):
         from .us_states import USPS_CHOICES
-        super(USPSSelect, self).__init__(attrs, choices=USPS_CHOICES)
+        super().__init__(attrs, choices=USPS_CHOICES)

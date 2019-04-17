@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.db.models import CharField
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext_lazy as _
 
 from .choices import PROVINCE_CHOICES, REGION_CHOICES
 from .forms import CUIdentityCardNumberField as CUIdentityCardNumberFormField
@@ -23,10 +20,10 @@ class CURegionField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = REGION_CHOICES
         kwargs['max_length'] = 3
-        super(CURegionField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def deconstruct(self):
-        name, path, args, kwargs = super(CURegionField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs
 
@@ -45,10 +42,10 @@ class CUProvinceField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = PROVINCE_CHOICES
         kwargs['max_length'] = 3
-        super(CUProvinceField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def deconstruct(self):
-        name, path, args, kwargs = super(CUProvinceField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs
 
@@ -66,12 +63,12 @@ class CUPostalCodeField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
-        super(CUPostalCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': CUPostalCodeFormField}
         defaults.update(kwargs)
-        return super(CUPostalCodeField, self).formfield(**defaults)
+        return super().formfield(**defaults)
 
 
 class CUIdentityCardNumberField(CharField):
@@ -87,9 +84,9 @@ class CUIdentityCardNumberField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
-        super(CUIdentityCardNumberField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': CUIdentityCardNumberFormField}
         defaults.update(kwargs)
-        return super(CUIdentityCardNumberField, self).formfield(**defaults)
+        return super().formfield(**defaults)

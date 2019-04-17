@@ -1,4 +1,4 @@
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: Indonesia does not have an official Province code standard.
 #: I decided to use unambiguous and consistent (some are common) 3-letter codes.

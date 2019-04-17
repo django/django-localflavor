@@ -1,4 +1,4 @@
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: Czech regions, translations get from http://www.crwflags.com/fotw/Flags/cz-re.html
 REGION_CHOICES = (

@@ -1,5 +1,5 @@
 from django.db.models import CharField
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from . import forms
 from .pk_states import STATE_CHOICES
@@ -17,10 +17,10 @@ class PKStateField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = STATE_CHOICES
         kwargs['max_length'] = 5
-        super(PKStateField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def deconstruct(self):
-        name, path, args, kwargs = super(PKStateField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs
 
@@ -36,9 +36,9 @@ class PKPostCodeField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
-        super(PKPostCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.PKPostCodeField}
         defaults.update(kwargs)
-        return super(PKPostCodeField, self).formfield(**defaults)
+        return super().formfield(**defaults)

@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 #: A list of Icelandic postal codes
 IS_POSTALCODES = (
     ('101', '101 Reykjavík'),

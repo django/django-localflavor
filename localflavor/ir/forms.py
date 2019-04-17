@@ -1,11 +1,9 @@
 """Iranian-specific form helpers."""
-from __future__ import unicode_literals
-
 import re
 
 from django.core.exceptions import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .ir_provinces import PROVINCE_CHOICES
 
@@ -18,7 +16,7 @@ class IRProvinceSelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super(IRProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)
 
 
 class IRPostalCodeField(RegexField):
@@ -42,13 +40,12 @@ class IRPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(IRPostalCodeField, self).\
-            __init__(r'\b(?!(\d)\1{3})[13-9]{4}[1346-9][013-9]{5}\b$', *args, **kwargs)
+        super().__init__(r'\b(?!(\d)\1{3})[13-9]{4}[1346-9][013-9]{5}\b$', *args, **kwargs)
 
     def clean(self, value):
         if value not in self.empty_values:
             value = value.replace(' ', '')
-        return super(IRPostalCodeField, self).clean(value)
+        return super().clean(value)
 
 
 class IRIDNumberField(Field):
@@ -73,7 +70,7 @@ class IRIDNumberField(Field):
     empty_value = ''
 
     def clean(self, value):
-        value = super(IRIDNumberField, self).clean(value)
+        value = super().clean(value)
 
         if value in self.empty_values:
             return self.empty_value

@@ -1,6 +1,3 @@
-# *-* coding: utf-8 *-*
-from __future__ import unicode_literals
-
 #: A list of Slovenian postal codes
 SI_POSTALCODES = [
     (1000, 'Ljubljana'),

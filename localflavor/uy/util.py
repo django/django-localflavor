@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 def get_validation_digit(number):
     """Calculates the validation digit for the given number."""
     weighted_sum = 0

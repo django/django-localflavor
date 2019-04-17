@@ -9,11 +9,6 @@ matrix:
       env: TOXENV=docs
     - python: 3.5
       env: TOXENV=prospector
-    - python: 2.7
-      env: TOXENV=py27-1.11
-    - python: pypy
-      dist: trusty
-      env: TOXENV=pypy-1.11
     - python: 3.4
       env: TOXENV=py34-1.11
     - python: 3.5

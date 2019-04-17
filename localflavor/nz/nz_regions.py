@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 New Zealand regions.
 
@@ -6,9 +5,7 @@ Source: http://en.wikipedia.org/wiki/Regions_of_New_Zealand#List_of_regions
 
 """
 
-from __future__ import unicode_literals
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: A list of regions
 REGION_CHOICES = (

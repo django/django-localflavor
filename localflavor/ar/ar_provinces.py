@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: A list of Argentinean provinces and autonomous cities as `choices` in a
 #: formfield. From http://www.argentina.gov.ar/argentina/portal/paginas.dhtml?pagina=425

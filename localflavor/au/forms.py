@@ -1,9 +1,7 @@
 """Australian-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .au_states import STATE_CHOICES
 from .validators import AUBusinessNumberFieldValidator, AUCompanyNumberFieldValidator, AUTaxFileNumberFieldValidator
@@ -22,14 +20,14 @@ class AUPostCodeField(RegexField):
     }
 
     def __init__(self, max_length=4, *args, **kwargs):
-        super(AUPostCodeField, self).__init__(r'^\d{4}$', max_length=max_length, *args, **kwargs)
+        super().__init__(r'^\d{4}$', max_length=max_length, *args, **kwargs)
 
 
 class AUStateSelect(Select):
     """A Select widget that uses a list of Australian states/territories as its choices."""
 
     def __init__(self, attrs=None):
-        super(AUStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+        super().__init__(attrs, choices=STATE_CHOICES)
 
 
 class AUBusinessNumberField(CharField):
@@ -43,7 +41,7 @@ class AUBusinessNumberField(CharField):
     default_validators = [AUBusinessNumberFieldValidator()]
 
     def to_python(self, value):
-        value = super(AUBusinessNumberField, self).to_python(value)
+        value = super().to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return value.upper().replace(' ', '')
@@ -67,7 +65,7 @@ class AUCompanyNumberField(CharField):
     default_validators = [AUCompanyNumberFieldValidator()]
 
     def to_python(self, value):
-        value = super(AUCompanyNumberField, self).to_python(value)
+        value = super().to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return value.upper().replace(' ', '')

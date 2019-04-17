@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*
-from __future__ import unicode_literals
-
 from .it_province import PROVINCES
 
 #: An alphabetical list of regions

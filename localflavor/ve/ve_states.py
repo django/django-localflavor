@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: A list of Venezuelan states for use as `choices` in a formfield.
 #: Data based from ISO_3166-2:VE http://en.wikipedia.org/wiki/ISO_3166-2:VE

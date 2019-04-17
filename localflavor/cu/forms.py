@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.core.exceptions import ValidationError
 from django.forms import Field, RegexField, Select
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext_lazy as _
 
 from .choices import PROVINCE_CHOICES, PROVINCE_NORMALIZED, REGION_CHOICES, REGION_NORMALIZED
 from .validators import CUIdentityCardNumberBirthdayValidator
@@ -24,7 +21,7 @@ class CURegionField(Field):
     }
 
     def clean(self, value):
-        super(CURegionField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return ''
         try:
@@ -42,7 +39,7 @@ class CURegionSelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super(CURegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class CUProvinceField(Field):
@@ -60,7 +57,7 @@ class CUProvinceField(Field):
     }
 
     def clean(self, value):
-        super(CUProvinceField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return ''
         try:
@@ -78,7 +75,7 @@ class CUProvinceSelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super(CUProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)
 
 
 class CUPostalCodeField(RegexField):
@@ -97,10 +94,10 @@ class CUPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(CUPostalCodeField, self).__init__(r'^[1-9]\d{4}$', *args, **kwargs)
+        super().__init__(r'^[1-9]\d{4}$', *args, **kwargs)
 
     def to_python(self, value):
-        value = super(CUPostalCodeField, self).to_python(value)
+        value = super().to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return value.strip()
@@ -131,11 +128,11 @@ class CUIdentityCardNumberField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(CUIdentityCardNumberField, self).__init__(r'^\d{11}$', *args, **kwargs)
+        super().__init__(r'^\d{11}$', *args, **kwargs)
         self.validators.append(CUIdentityCardNumberBirthdayValidator())
 
     def to_python(self, value):
-        value = super(CUIdentityCardNumberField, self).to_python(value)
+        value = super().to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return value.strip()

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 This module contains various lists of regions and subdivisions in Great Britain.
 
@@ -12,7 +11,7 @@ about it.
 
 """
 
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: Metropolitan and non-metropolitan counties of England
 #: (not the ceremonial counties)

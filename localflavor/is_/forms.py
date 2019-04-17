@@ -1,12 +1,10 @@
 """Iceland specific form helpers."""
 
-from __future__ import unicode_literals
-
 from django.forms import ValidationError
 from django.forms.fields import RegexField
 from django.forms.widgets import Select
 from django.utils.encoding import force_text
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .is_postalcodes import IS_POSTALCODES
 
@@ -24,13 +22,13 @@ class ISIdNumberField(RegexField):
     }
 
     def __init__(self, max_length=11, min_length=10, *args, **kwargs):
-        super(ISIdNumberField, self).__init__(
+        super().__init__(
             r'^\d{6}(-| )?\d{4}$', max_length=max_length, min_length=min_length,
             *args, **kwargs
         )
 
     def clean(self, value):
-        value = super(ISIdNumberField, self).clean(value)
+        value = super().clean(value)
 
         if value in self.empty_values:
             return self.empty_value
@@ -63,4 +61,4 @@ class ISPostalCodeSelect(Select):
     """A Select widget that uses a list of Icelandic postal codes as its choices."""
 
     def __init__(self, attrs=None):
-        super(ISPostalCodeSelect, self).__init__(attrs, choices=IS_POSTALCODES)
+        super().__init__(attrs, choices=IS_POSTALCODES)

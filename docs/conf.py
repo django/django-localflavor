@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-#
 # django-localflavor documentation build configuration file, created by
 # sphinx-quickstart on Sun Jun  2 17:56:28 2013.
 #

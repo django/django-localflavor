@@ -16,7 +16,7 @@ class BGEGNField(models.CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 10
-        super(BGEGNField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class BGEIKField(models.CharField):
@@ -32,4 +32,4 @@ class BGEIKField(models.CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
-        super(BGEIKField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)

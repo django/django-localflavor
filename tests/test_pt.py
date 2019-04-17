@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
 """Contains a set of tests which can be used to validate the current implementation."""
-from __future__ import unicode_literals
-
 from django.test import SimpleTestCase
 
 from localflavor.pt.forms import PTCitizenCardNumberField, PTRegionSelect, PTSocialSecurityNumberField, PTZipCodeField

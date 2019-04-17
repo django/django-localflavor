@@ -1,5 +1,5 @@
 from django.db.models import CharField
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .forms import MXCLABEField as MXCLABEFormField
 from .forms import MXCURPField as MXCURPFormField
@@ -17,10 +17,10 @@ class MXStateField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = STATE_CHOICES
         kwargs['max_length'] = 3
-        super(MXStateField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def deconstruct(self):
-        name, path, args, kwargs = super(MXStateField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs
 
@@ -32,12 +32,12 @@ class MXZipCodeField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
-        super(MXZipCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXZipCodeFormField}
         defaults.update(kwargs)
-        return super(MXZipCodeField, self).formfield(**defaults)
+        return super().formfield(**defaults)
 
 
 class MXRFCField(CharField):
@@ -47,12 +47,12 @@ class MXRFCField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
-        super(MXRFCField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXRFCFormField}
         defaults.update(kwargs)
-        return super(MXRFCField, self).formfield(**defaults)
+        return super().formfield(**defaults)
 
 
 class MXCLABEField(CharField):
@@ -66,12 +66,12 @@ class MXCLABEField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 18
-        super(MXCLABEField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXCLABEFormField}
         defaults.update(kwargs)
-        return super(MXCLABEField, self).formfield(**defaults)
+        return super().formfield(**defaults)
 
 
 class MXCURPField(CharField):
@@ -81,12 +81,12 @@ class MXCURPField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 18
-        super(MXCURPField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXCURPFormField}
         defaults.update(kwargs)
-        return super(MXCURPField, self).formfield(**defaults)
+        return super().formfield(**defaults)
 
 
 class MXSocialSecurityNumberField(CharField):
@@ -100,9 +100,9 @@ class MXSocialSecurityNumberField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
-        super(MXSocialSecurityNumberField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': MXSocialSecurityNumberFormField}
         defaults.update(kwargs)
-        return super(MXSocialSecurityNumberField, self).formfield(**defaults)
+        return super().formfield(**defaults)

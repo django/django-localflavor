@@ -1,7 +1,5 @@
-# -*- encoding: utf-8 -*-
-
 from django.db.models import CharField
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .forms import ESIdentityCardNumberField as ESIdentityCardNumberFormField
 from .forms import ESPostalCodeField as ESPostalCodeFormField
@@ -20,12 +18,12 @@ class ESPostalCodeField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
-        super(ESPostalCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': ESPostalCodeFormField}
         defaults.update(kwargs)
-        return super(ESPostalCodeField, self).formfield(**defaults)
+        return super().formfield(**defaults)
 
 
 class ESIdentityCardNumberField(CharField):
@@ -40,10 +38,10 @@ class ESIdentityCardNumberField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 9
-        super(ESIdentityCardNumberField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def to_python(self, value):
-        value = super(ESIdentityCardNumberField, self).to_python(value)
+        value = super().to_python(value)
         if value is not None:
             return value.upper().replace(' ', '').replace('-', '')
         return value
@@ -51,4 +49,4 @@ class ESIdentityCardNumberField(CharField):
     def formfield(self, **kwargs):
         defaults = {'form_class': ESIdentityCardNumberFormField}
         defaults.update(kwargs)
-        return super(ESIdentityCardNumberField, self).formfield(**defaults)
+        return super().formfield(**defaults)

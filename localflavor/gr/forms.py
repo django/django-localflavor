@@ -5,7 +5,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, ValidationError
 from django.utils.encoding import force_text
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
 
@@ -21,7 +21,7 @@ class GRPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(GRPostalCodeField, self).__init__(r'^[12345678]\d{4}$', *args, **kwargs)
+        super().__init__(r'^[12345678]\d{4}$', *args, **kwargs)
 
 
 class GRTaxNumberCodeField(Field):
@@ -38,10 +38,10 @@ class GRTaxNumberCodeField(Field):
 
     def __init__(self, allow_test_value=False, *args, **kwargs):
         self.allow_test_value = allow_test_value
-        super(GRTaxNumberCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def clean(self, value):
-        super(GRTaxNumberCodeField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -78,7 +78,7 @@ class GRSocialSecurityNumberCodeField(RegexField):
 
     def __init__(self, allow_test_value=False, *args, **kwargs):
         self.allow_test_value = allow_test_value
-        super(GRSocialSecurityNumberCodeField, self).__init__(r'^[0-9\s\-]+$', *args, **kwargs)
+        super().__init__(r'^[0-9\s\-]+$', *args, **kwargs)
 
     def check_date(self, val):
         try:
@@ -87,7 +87,7 @@ class GRSocialSecurityNumberCodeField(RegexField):
             raise ValidationError(self.error_messages['invalid'])
 
     def clean(self, value):
-        super(GRSocialSecurityNumberCodeField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         val = re.sub('[\-\s]', '', force_text(value))

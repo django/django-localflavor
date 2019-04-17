@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class AUBusinessNumberFieldValidator(RegexValidator):
@@ -17,8 +14,7 @@ class AUBusinessNumberFieldValidator(RegexValidator):
 
     def __init__(self):
         eleven_digits = '^\d{11}$'
-        super(AUBusinessNumberFieldValidator, self).__init__(
-            regex=eleven_digits, message=self.error_message)
+        super().__init__(regex=eleven_digits, message=self.error_message)
 
     def _is_valid(self, value):
         """
@@ -46,7 +42,7 @@ class AUBusinessNumberFieldValidator(RegexValidator):
         return remainder == 0
 
     def __call__(self, value):
-        super(AUBusinessNumberFieldValidator, self).__call__(value)
+        super().__call__(value)
         if not self._is_valid(value):
             raise ValidationError(self.error_message)
 
@@ -62,8 +58,7 @@ class AUCompanyNumberFieldValidator(RegexValidator):
 
     def __init__(self):
         nine_digits = '^\d{9}$'
-        super(AUCompanyNumberFieldValidator, self).__init__(
-            regex=nine_digits, message=self.error_message)
+        super().__init__(regex=nine_digits, message=self.error_message)
 
     def _is_valid(self, value):
         """
@@ -89,7 +84,7 @@ class AUCompanyNumberFieldValidator(RegexValidator):
         return check == digits[8]
 
     def __call__(self, value):
-        super(AUCompanyNumberFieldValidator, self).__call__(value)
+        super().__call__(value)
         if not self._is_valid(value):
             raise ValidationError(self.error_message)
 
@@ -106,8 +101,7 @@ class AUTaxFileNumberFieldValidator(RegexValidator):
 
     def __init__(self):
         """Regex for 8 to 9 digits."""
-        super(AUTaxFileNumberFieldValidator, self).__init__(
-            regex='^\d{8,9}$', message=self.error_message)
+        super().__init__(regex='^\d{8,9}$', message=self.error_message)
 
     def _is_valid(self, value):
         """
@@ -138,6 +132,6 @@ class AUTaxFileNumberFieldValidator(RegexValidator):
 
     def __call__(self, value):
         value = value.replace(' ', '')
-        super(AUTaxFileNumberFieldValidator, self).__call__(value)
+        super().__call__(value)
         if not self._is_valid(value):
             raise ValidationError(self.error_message)

@@ -1,11 +1,9 @@
-from __future__ import unicode_literals
-
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .tr_provinces import PROVINCE_CHOICES
 
@@ -22,13 +20,13 @@ class TRPostalCodeField(RegexField):
     }
 
     def __init__(self, max_length=5, min_length=5, *args, **kwargs):
-        super(TRPostalCodeField, self).__init__(
+        super().__init__(
             r'^\d{5}$', max_length=max_length, min_length=min_length,
             *args, **kwargs
         )
 
     def clean(self, value):
-        value = super(TRPostalCodeField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         if len(value) != 5:
@@ -60,7 +58,7 @@ class TRIdentificationNumberField(Field):
     }
 
     def clean(self, value):
-        super(TRIdentificationNumberField, self).clean(value)
+        super().clean(value)
 
         if value in EMPTY_VALUES:
             return ''
@@ -89,4 +87,4 @@ class TRProvinceSelect(Select):
     """A Select widget that uses a list of provinces in Turkey as its choices."""
 
     def __init__(self, attrs=None):
-        super(TRProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)

@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: A list of Austrian states according to https://en.wikipedia.org/wiki/States_of_Austria
 STATE_CHOICES = (

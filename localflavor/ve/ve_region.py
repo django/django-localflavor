@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: A list of Venezuelan regions for use as `choices` in a formfield.
 #: Data based from http://en.wikipedia.org/wiki/Regions_of_Venezuela

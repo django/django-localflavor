@@ -1,21 +1,15 @@
-# -*- coding: utf-8 -*-
-
-
 """
 django_localflavot_pt.forms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Contains PT-specific Django form helpers.
 """
 
-
-from __future__ import unicode_literals
-
 from re import compile as regex_compile
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .pt_regions import REGION_CHOICES
 
@@ -43,7 +37,7 @@ class PTCitizenCardNumberField(Field):
     }
 
     def clean(self, value):
-        super(PTCitizenCardNumberField, self).clean(value)
+        super().clean(value)
 
         if value in EMPTY_VALUES:
             return ''
@@ -83,7 +77,7 @@ class PTRegionSelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super(PTRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class PTSocialSecurityNumberField(Field):
@@ -101,7 +95,7 @@ class PTSocialSecurityNumberField(Field):
     }
 
     def clean(self, value):
-        super(PTSocialSecurityNumberField, self).clean(value)
+        super().clean(value)
 
         if value in EMPTY_VALUES:
             return ''
@@ -139,4 +133,4 @@ class PTZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(PTZipCodeField, self).__init__(ZIP_CODE_REGEX, *args, **kwargs)
+        super().__init__(ZIP_CODE_REGEX, *args, **kwargs)

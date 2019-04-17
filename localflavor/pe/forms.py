@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
 """PE-specific Form helpers."""
-
-from __future__ import unicode_literals
 
 from django.forms import ValidationError
 from django.forms.fields import CharField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .pe_region import REGION_CHOICES
 
@@ -14,7 +11,7 @@ class PERegionSelect(Select):
     """A Select widget that uses a list of Peruvian Regions as its choices."""
 
     def __init__(self, attrs=None):
-        super(PERegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class PEDNIField(CharField):
@@ -26,11 +23,11 @@ class PEDNIField(CharField):
     }
 
     def __init__(self, max_length=8, min_length=8, *args, **kwargs):
-        super(PEDNIField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         """Value must be a string in the XXXXXXXX formats."""
-        value = super(PEDNIField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         if not value.isdigit():
@@ -54,11 +51,11 @@ class PERUCField(CharField):
     }
 
     def __init__(self, max_length=11, min_length=11, *args, **kwargs):
-        super(PERUCField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         """Value must be an 11-digit number."""
-        value = super(PERUCField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         if not value.isdigit():

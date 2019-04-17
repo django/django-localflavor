@@ -1,5 +1,5 @@
 from django.db.models import CharField
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .forms import USSocialSecurityNumberField as USSocialSecurityNumberFieldFormField
 from .forms import USZipCodeField as USZipCodeFormField
@@ -18,10 +18,10 @@ class USStateField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = STATE_CHOICES
         kwargs['max_length'] = 2
-        super(USStateField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def deconstruct(self):
-        name, path, args, kwargs = super(USStateField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs
 
@@ -43,10 +43,10 @@ class USPostalCodeField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = USPS_CHOICES
         kwargs['max_length'] = 2
-        super(USPostalCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def deconstruct(self):
-        name, path, args, kwargs = super(USPostalCodeField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs
 
@@ -70,12 +70,12 @@ class USZipCodeField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 10
-        super(USZipCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': USZipCodeFormField}
         defaults.update(kwargs)
-        return super(USZipCodeField, self).formfield(**defaults)
+        return super().formfield(**defaults)
 
 
 class USSocialSecurityNumberField(CharField):
@@ -91,9 +91,9 @@ class USSocialSecurityNumberField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
-        super(USSocialSecurityNumberField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         defaults = {'form_class': USSocialSecurityNumberFieldFormField}
         defaults.update(kwargs)
-        return super(USSocialSecurityNumberField, self).formfield(**defaults)
+        return super().formfield(**defaults)

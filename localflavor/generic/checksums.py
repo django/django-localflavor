@@ -1,7 +1,6 @@
 """Common checksum routines."""
 import warnings
 
-from django.utils import six
 from stdnum import ean as stdnum_ean
 from stdnum import luhn as stdnum_luhn
 
@@ -27,7 +26,7 @@ def luhn(candidate):
         RemovedInLocalflavor30Warning,
     )
 
-    if not isinstance(candidate, six.string_types):
+    if not isinstance(candidate, str):
         candidate = str(candidate)
 
     # Our version returned True for empty strings.
@@ -55,7 +54,7 @@ def ean(candidate):
         RemovedInLocalflavor30Warning,
     )
 
-    if not isinstance(candidate, six.string_types):
+    if not isinstance(candidate, str):
         candidate = str(candidate)
 
     return stdnum_ean.is_valid(candidate)

@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 #: A list of Turkish provinces
 PROVINCE_CHOICES = (
     ('01', ('Adana')),

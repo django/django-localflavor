@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .forms import BICFormField, IBANFormField
 from .validators import BICValidator, IBANValidator
@@ -40,17 +40,17 @@ class IBANField(models.CharField):
         kwargs.setdefault('max_length', 34)
         self.use_nordea_extensions = kwargs.pop('use_nordea_extensions', False)
         self.include_countries = kwargs.pop('include_countries', None)
-        super(IBANField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.validators.append(IBANValidator(self.use_nordea_extensions, self.include_countries))
 
     def deconstruct(self):
-        name, path, args, kwargs = super(IBANField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         kwargs['use_nordea_extensions'] = self.use_nordea_extensions
         kwargs['include_countries'] = self.include_countries
         return name, path, args, kwargs
 
     def to_python(self, value):
-        value = super(IBANField, self).to_python(value)
+        value = super().to_python(value)
         if value is not None:
             return value.upper().replace(' ', '').replace('-', '')
         return value
@@ -62,7 +62,7 @@ class IBANField(models.CharField):
             'form_class': IBANFormField,
         }
         defaults.update(kwargs)
-        return super(IBANField, self).formfield(**defaults)
+        return super().formfield(**defaults)
 
 
 class BICField(models.CharField):
@@ -80,13 +80,13 @@ class BICField(models.CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 11)
-        super(BICField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.validators.append(BICValidator())
 
     def to_python(self, value):
         # BIC is always written in upper case.
         # https://www2.swift.com/uhbonline/books/public/en_uk/bic_policy/bic_policy.pdf
-        value = super(BICField, self).to_python(value)
+        value = super().to_python(value)
         if value is not None:
             return value.replace(' ', '').upper()
         return value
@@ -94,4 +94,4 @@ class BICField(models.CharField):
     def formfield(self, **kwargs):
         defaults = {'form_class': BICFormField}
         defaults.update(kwargs)
-        return super(BICField, self).formfield(**defaults)
+        return super().formfield(**defaults)

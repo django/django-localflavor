@@ -1,14 +1,10 @@
-# -*- coding: utf-8 -*-
 """Spanish-specific Form helpers."""
-
-from __future__ import unicode_literals
 
 import re
 
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
-from django.utils import six
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .es_provinces import PROVINCE_CHOICES
 from .es_regions import REGION_CHOICES
@@ -27,7 +23,7 @@ class ESPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(ESPostalCodeField, self).__init__(r'^(0[1-9]|[1-4][0-9]|5[0-2])\d{3}$', *args, **kwargs)
+        super().__init__(r'^(0[1-9]|[1-4][0-9]|5[0-2])\d{3}$', *args, **kwargs)
 
 
 class ESIdentityCardNumberField(RegexField):
@@ -81,10 +77,10 @@ class ESIdentityCardNumberField(RegexField):
         error_messages.update(kwargs.get('error_messages', {}))
         kwargs['error_messages'] = error_messages
 
-        super(ESIdentityCardNumberField, self).__init__(id_card_re, *args, **kwargs)
+        super().__init__(id_card_re, *args, **kwargs)
 
     def clean(self, value):
-        super(ESIdentityCardNumberField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -103,7 +99,7 @@ class ESIdentityCardNumberField(RegexField):
                 raise ValidationError(self.error_messages['invalid_nif'])
         elif letter1 in self.nie_types and letter2:
             # NIE
-            if letter2 == self.nif_get_checksum(six.text_type(self.nie_types.index(letter1)) + number):
+            if letter2 == self.nif_get_checksum(str(self.nie_types.index(letter1)) + number):
                 return value
             else:
                 raise ValidationError(self.error_messages['invalid_nie'])
@@ -150,10 +146,10 @@ class ESCCCField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(ESCCCField, self).__init__(r'^\d{4}[ -]?\d{4}[ -]?\d{2}[ -]?\d{10}$', *args, **kwargs)
+        super().__init__(r'^\d{4}[ -]?\d{4}[ -]?\d{2}[ -]?\d{10}$', *args, **kwargs)
 
     def clean(self, value):
-        super(ESCCCField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         m = re.match(r'^(\d{4})[ -]?(\d{4})[ -]?(\d{2})[ -]?(\d{10})$', value)
@@ -174,14 +170,14 @@ class ESRegionSelect(Select):
     """A Select widget that uses a list of spanish regions as its choices."""
 
     def __init__(self, attrs=None):
-        super(ESRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class ESProvinceSelect(Select):
     """A Select widget that uses a list of spanish provinces as its choices."""
 
     def __init__(self, attrs=None):
-        super(ESProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)
 
 
 def cif_get_checksum(number):

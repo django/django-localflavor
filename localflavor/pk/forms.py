@@ -1,11 +1,9 @@
 """Pakistani-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.forms.fields import RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .pk_states import STATE_CHOICES
 
@@ -24,11 +22,11 @@ class PKPostCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(PKPostCodeField, self).__init__(POSTCODE_DIGITS_RE, *args, **kwargs)
+        super().__init__(POSTCODE_DIGITS_RE, *args, **kwargs)
 
 
 class PKStateSelect(Select):
     """A Select widget that uses a list of Pakistani states/territories as its choices."""
 
     def __init__(self, attrs=None):
-        super(PKStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+        super().__init__(attrs, choices=STATE_CHOICES)

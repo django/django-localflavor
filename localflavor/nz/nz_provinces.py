@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 New Zealand Provinces.
 
@@ -11,9 +10,7 @@ Note that provinces were abolished in 1876 and the names have very limited moder
 Source: http://en.wikipedia.org/wiki/Provinces_of_New_Zealand
 """
 
-from __future__ import unicode_literals
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: A list of provinces (abolished in 1876, use regions instead)
 PROVINCE_CHOICES = (
