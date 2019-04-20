@@ -5,12 +5,10 @@ from __future__ import unicode_literals
 import re
 from datetime import date
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import ugettext_lazy as _
-
-from localflavor.generic.checksums import luhn
+from stdnum import luhn
 
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
 from .fr_region import REGION_2016_CHOICES, REGION_CHOICES
@@ -189,7 +187,7 @@ class FRSIRENENumberMixin(object):
             return self.empty_value
 
         value = value.replace(' ', '').replace('-', '')
-        if not self.r_valid.match(value) or not luhn(value):
+        if not self.r_valid.match(value) or not luhn.is_valid(value):
             raise ValidationError(self.error_messages['invalid'])
         return value
 
@@ -234,14 +232,15 @@ class FRSIRETField(FRSIRENENumberMixin, CharField):
     }
 
     def clean(self, value):
-        if value not in EMPTY_VALUES:
-            value = value.replace(' ', '').replace('-', '')
+        value = super(FRSIRETField, self).clean(value)
+        if value in self.empty_values:
+            return self.empty_value
 
-        ret = super(FRSIRETField, self).clean(value)
+        value = value.replace(' ', '').replace('-', '')
 
-        if ret is not None and not luhn(ret[:9]):
+        if not luhn.is_valid(value[:9]):
             raise ValidationError(self.error_messages['invalid'])
-        return ret
+        return value
 
     def prepare_value(self, value):
         if value is None:

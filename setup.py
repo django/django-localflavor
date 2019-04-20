@@ -119,7 +119,10 @@ setup(
     author_email='foundation@djangoproject.com',
     packages=find_packages(exclude=['tests', 'tests.*']),
     package_data=find_package_data(),
-    install_requires=['django>=1.11'],
+    install_requires=[
+        'django>=1.11',
+        'python-stdnum>=1.0',
+    ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',

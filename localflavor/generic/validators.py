@@ -7,8 +7,8 @@ import string
 from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.utils.deconstruct import deconstructible
 from django.utils.translation import ugettext_lazy as _
+from stdnum import ean
 
-from . import checksums
 from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 
 # Dictionary of ISO country code to IBAN length.
@@ -272,7 +272,7 @@ class EANValidator(object):
             return value
         if self.strip_nondigits:
             value = re.compile(r'[^\d]+').sub('', value)
-        if not checksums.ean(value):
+        if not ean.is_valid(value):
             raise ValidationError(self.message, code='invalid')
 
 

@@ -7,8 +7,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import EMPTY_VALUES
 from django.forms.fields import Field, RegexField
 from django.utils.translation import ugettext_lazy as _
-
-from localflavor.generic.checksums import luhn
+from stdnum import luhn
 
 id_number_re = re.compile(r'^(?P<number>\d{1,8})-?(?P<check>\d)$')
 
@@ -66,6 +65,6 @@ class ILIDNumberField(Field):
             raise ValidationError(self.error_messages['invalid'])
 
         value = match.group('number') + match.group('check')
-        if not luhn(value):
+        if not luhn.is_valid(value):
             raise ValidationError(self.error_messages['invalid'])
         return value

@@ -13,7 +13,7 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Deprecated `generic.checksums.luhn` and `generic.checksums.ean`. Please use the python-stdnum library instead.
 
 Other changes:
 

@@ -8,8 +8,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, Field, Select
 from django.utils.translation import ugettext_lazy as _
-
-from localflavor.generic.checksums import luhn
+from stdnum import luhn
 
 sin_re = re.compile(r"^(\d{3})-(\d{3})-(\d{3})$")
 
@@ -113,6 +112,6 @@ class CASocialInsuranceNumberField(Field):
             match.group(1),
             match.group(2),
             match.group(3))
-        if not luhn(check_number):
+        if not luhn.is_valid(check_number):
             raise ValidationError(self.error_messages['invalid'])
         return number
