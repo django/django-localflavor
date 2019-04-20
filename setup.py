@@ -122,7 +122,6 @@ setup(
     install_requires=[
         'django>=1.11',
         'python-stdnum>=1.0',
-        'mock>=2.0;python_version<"3.0"',
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
