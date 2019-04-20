@@ -18,7 +18,7 @@ def luhn(candidate):
     Both numeric and string candidates are accepted.
 
     .. deprecated:: 2.2
-        Use the luhn function in the python-stdnum_ library instead.
+       Use the luhn function in the python-stdnum_ library instead.
 
     .. _python-stdnum: https://arthurdejong.org/python-stdnum/
     """
@@ -44,8 +44,9 @@ def ean(candidate):
     Note that this validator does not enforce any length checks (usually 13 or 8).
 
     http://en.wikipedia.org/wiki/International_Article_Number_(EAN)
+
     .. deprecated:: 2.2
-        Use the ean function in the python-stdnum_ library instead.
+       Use the ean function in the python-stdnum_ library instead.
 
     .. _python-stdnum: https://arthurdejong.org/python-stdnum/
     """
