@@ -39,8 +39,14 @@ class ESIdentityCardNumberField(CharField):
     description = _("Identification National Document")
 
     def __init__(self, *args, **kwargs):
-        kwargs['max_length'] = 10
+        kwargs['max_length'] = 9
         super(ESIdentityCardNumberField, self).__init__(*args, **kwargs)
+
+    def to_python(self, value):
+        value = super(ESIdentityCardNumberField, self).to_python(value)
+        if value is not None:
+            return value.upper().replace(' ', '').replace('-', '')
+        return value
 
     def formfield(self, **kwargs):
         defaults = {'form_class': ESIdentityCardNumberFormField}
