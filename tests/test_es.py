@@ -35,7 +35,7 @@ class ESLocalFlavorTests(SimpleTestCase):
     def test_ESProvinceSelect(self):
         f = ESProvinceSelect()
         out = '''<select name="provinces">
-<option value="01">Alaba</option>
+<option value="01">Araba</option>
 <option value="02">Albacete</option>
 <option value="03">Alacant</option>
 <option value="04">Almeria</option>
