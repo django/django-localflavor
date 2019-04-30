@@ -4,28 +4,37 @@ Changelog
 2.2   (unreleased)
 ------------------
 
+All deprecated code will be removed in the next release (3.0). Please run you project's tests using `python -Wd` so that
+deprecation warnings appear and can be addressed.
+
 New flavors:
 
 - Added local flavor for Iran
+  (`gh-359 <https://github.com/django/django-localflavor/pull/359>`_).
 
 New fields for existing flavors:
-- Added BRPostalCodeField, BRCPFField, BRCNPJField models fields.
-
+- Added `BRPostalCodeField`, `BRCPFField`, `BRCNPJField` models fields
+  (`gh-365 <https://github.com/django/django-localflavor/pull/365>`_).
 - `EircodeField` in IE flavor
+  (`gh-366 <https://github.com/django/django-localflavor/pull/366>`_).
 
 Modifications to existing flavors:
 
 - Deprecated `generic.checksums.luhn` and `generic.checksums.ean`. Please use the python-stdnum library instead.
+  (`gh-370 <https://github.com/django/django-localflavor/pull/370>`_).
 
 Other changes:
 
+- Added dependency on python-stdnum which is currently used for Luhn and EAN validation in several local-flavors.
+  (`gh-370 <https://github.com/django/django-localflavor/pull/370>`_).
 - Added support for Vatican IBAN
-
+  (`gh-355 <https://github.com/django/django-localflavor/pull/355>`_).
 - Extended validation of BICs to check for the correct character set
-
+  (`gh-364 <https://github.com/django/django-localflavor/pull/364>`_).
 - Run tests for Django 2.2 and Python 3.5, 3.6 and 3.7
-
+  (`gh-368 <https://github.com/django/django-localflavor/pull/368>`_).
 - Run tests for Django 2.0 and Python 3.7
+  (`gh-368 <https://github.com/django/django-localflavor/pull/368>`_).
 
 
 2.1   (2018-08-24)
