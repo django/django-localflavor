@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-13 08:49+0200\n"
+"POT-Creation-Date: 2019-04-30 21:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -296,38 +296,58 @@ msgstr ""
 msgid "EIK/BULSTAT is not valid"
 msgstr ""
 
-#: br/forms.py:29
+#: br/forms.py:32
 msgid "Enter a zip code in the format XXXXX-XXX."
 msgstr ""
 
-#: br/forms.py:48
+#: br/forms.py:52
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
 msgstr ""
 
-#: br/forms.py:85
+#: br/forms.py:87 br/models.py:36 br/validators.py:80
 msgid "Invalid CPF number."
 msgstr ""
 
-#: br/forms.py:86
+#: br/forms.py:88 br/models.py:37
 msgid "This field requires at most 11 digits or 14 characters."
 msgstr ""
 
-#: br/forms.py:144
+#: br/forms.py:126 br/validators.py:42
 msgid "Invalid CNPJ number."
 msgstr ""
 
-#: br/forms.py:145
+#: br/forms.py:127
 msgid "This field requires at least 14 digits"
 msgstr ""
 
-#: br/forms.py:195
+#: br/forms.py:157
 msgid "Invalid Process number."
 msgstr ""
 
-#: br/models.py:10
+#: br/models.py:13
 msgid "State of Brazil (two uppercase letters)"
+msgstr ""
+
+#: br/models.py:33
+msgid "CPF Document"
+msgstr ""
+
+#: br/models.py:53
+msgid "CNPJ Document"
+msgstr ""
+
+#: br/models.py:68
+msgid "Postal Code"
+msgstr ""
+
+#: br/validators.py:26
+msgid "Enter a postal code in the format 00000-000."
+msgstr ""
+
+#: br/validators.py:27
+msgid "Invalid Postal Code"
 msgstr ""
 
 #: ca/ca_provinces.py:6
@@ -382,15 +402,15 @@ msgstr ""
 msgid "Yukon"
 msgstr ""
 
-#: ca/forms.py:28
+#: ca/forms.py:27
 msgid "Enter a postal code in the format XXX XXX."
 msgstr ""
 
-#: ca/forms.py:54
+#: ca/forms.py:53
 msgid "Enter a Canadian province or territory."
 msgstr ""
 
-#: ca/forms.py:99
+#: ca/forms.py:98
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr ""
 
@@ -798,7 +818,7 @@ msgstr ""
 msgid "Thuringia"
 msgstr ""
 
-#: de/forms.py:26 ee/forms.py:26 fi/forms.py:23 fr/forms.py:32
+#: de/forms.py:26 ee/forms.py:26 fi/forms.py:23 fr/forms.py:30
 msgid "Enter a zip code in the format XXXXX."
 msgstr ""
 
@@ -4646,31 +4666,39 @@ msgstr ""
 msgid "Invalid checksum for bank account number."
 msgstr ""
 
+#: es/models.py:19
+msgid "Spain postal code (five numbers)"
+msgstr ""
+
+#: es/models.py:39
+msgid "Identification National Document"
+msgstr ""
+
 #: fi/forms.py:41
 msgid "Enter a valid Finnish social security number."
 msgstr ""
 
-#: fr/forms.py:36
+#: fr/forms.py:34
 msgid "Zip code"
 msgstr ""
 
-#: fr/forms.py:88
+#: fr/forms.py:86
 msgid "Select Department"
 msgstr ""
 
-#: fr/forms.py:98 ma/forms.py:84
+#: fr/forms.py:96 ma/forms.py:84
 msgid "Select Region"
 msgstr ""
 
-#: fr/forms.py:112
+#: fr/forms.py:110
 msgid "Enter a valid French National Identification number."
 msgstr ""
 
-#: fr/forms.py:210
+#: fr/forms.py:208
 msgid "Enter a valid French SIREN number."
 msgstr ""
 
-#: fr/forms.py:233
+#: fr/forms.py:231
 msgid "Enter a valid French SIRET number."
 msgstr ""
 
@@ -5286,103 +5314,107 @@ msgstr ""
 msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:177
+#: generic/validators.py:178
 #, python-format
 msgid "%s is not a valid character for IBAN."
 msgstr ""
 
-#: generic/validators.py:199
+#: generic/validators.py:200
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
-#: generic/validators.py:202
+#: generic/validators.py:203
 #, python-format
 msgid "%s is not a valid country code for IBAN."
 msgstr ""
 
-#: generic/validators.py:204
+#: generic/validators.py:205
 #, python-format
 msgid "%s IBANs are not allowed in this field."
 msgstr ""
 
-#: generic/validators.py:207
+#: generic/validators.py:208
 msgid "Not a valid IBAN."
 msgstr ""
 
-#: generic/validators.py:233
+#: generic/validators.py:234
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#: generic/validators.py:239
+#: generic/validators.py:238
+msgid "BIC codes only contain alphabet letters and digits."
+msgstr ""
+
+#: generic/validators.py:243
 #, python-format
 msgid "%s is not a valid institution code."
 msgstr ""
 
-#: generic/validators.py:244
+#: generic/validators.py:248
 #, python-format
 msgid "%s is not a valid country code."
 msgstr ""
 
-#: generic/validators.py:255
+#: generic/validators.py:259
 msgid "Not a valid EAN code."
 msgstr ""
 
-#: generic/validators.py:330
+#: generic/validators.py:334
 #, python-format
 msgid "%(country_code)s is not a valid country code."
 msgstr ""
 
-#: generic/validators.py:331
+#: generic/validators.py:335
 #, python-format
 msgid "%(vatin)s is not a valid VAT identification number."
 msgstr ""
 
-#: gr/forms.py:21
+#: gr/forms.py:20
 msgid "Enter a valid 5-digit greek postal code."
 msgstr ""
 
-#: gr/forms.py:37
+#: gr/forms.py:36
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr ""
 
-#: gr/forms.py:77
+#: gr/forms.py:76
 msgid "Enter a valid greek social security number (AMKA - 11 digits)."
 msgstr ""
 
-#: hr/forms.py:60
+#: hr/forms.py:59
 msgid "Enter a valid 13 digit JMBG"
 msgstr ""
 
-#: hr/forms.py:61
+#: hr/forms.py:60
 msgid "Error in date segment"
 msgstr ""
 
-#: hr/forms.py:108
+#: hr/forms.py:107
 msgid "Enter a valid 11 digit OIB"
 msgstr ""
 
-#: hr/forms.py:142 id_/forms.py:83
+#: hr/forms.py:141 id_/forms.py:83
 msgid "Enter a valid vehicle license plate number"
 msgstr ""
 
-#: hr/forms.py:143
+#: hr/forms.py:142
 msgid "Enter a valid location code"
 msgstr ""
 
-#: hr/forms.py:144
+#: hr/forms.py:143
 msgid "Number part cannot be zero"
 msgstr ""
 
-#: hr/forms.py:181
+#: hr/forms.py:180
 msgid "Enter a valid 5 digit postal code"
 msgstr ""
 
-#: hr/forms.py:210
+#: hr/forms.py:209
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr ""
 
-#: hr/forms.py:211
+#: hr/forms.py:210
 msgid "Card issue number cannot be zero"
 msgstr ""
 
@@ -5818,6 +5850,10 @@ msgstr ""
 msgid "Garut"
 msgstr ""
 
+#: ie/forms.py:30
+msgid "Enter a valid Eircode."
+msgstr ""
+
 #: ie/ie_counties.py:5
 msgid "Carlow"
 msgstr ""
@@ -5922,11 +5958,11 @@ msgstr ""
 msgid "Wicklow"
 msgstr ""
 
-#: il/forms.py:24
+#: il/forms.py:23
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
 msgstr ""
 
-#: il/forms.py:55
+#: il/forms.py:54 ir/forms.py:71
 msgid "Enter a valid ID number."
 msgstr ""
 
@@ -5945,6 +5981,134 @@ msgstr ""
 
 #: in_/models.py:14
 msgid "Indian state (two uppercase letters)"
+msgstr ""
+
+#: ir/forms.py:41
+msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
+msgstr ""
+
+#: ir/ir_provinces.py:9
+msgid "Alborz"
+msgstr ""
+
+#: ir/ir_provinces.py:10
+msgid "Ardabil"
+msgstr ""
+
+#: ir/ir_provinces.py:11
+msgid "Azerbaijan East"
+msgstr ""
+
+#: ir/ir_provinces.py:12
+msgid "Azerbaijan Wast"
+msgstr ""
+
+#: ir/ir_provinces.py:13
+msgid "Bushehr"
+msgstr ""
+
+#: ir/ir_provinces.py:14
+msgid "Chahar Mahaal and Bakhtiari"
+msgstr ""
+
+#: ir/ir_provinces.py:15
+msgid "Fars"
+msgstr ""
+
+#: ir/ir_provinces.py:16
+msgid "Gilan"
+msgstr ""
+
+#: ir/ir_provinces.py:17
+msgid "Golestan"
+msgstr ""
+
+#: ir/ir_provinces.py:18
+msgid "Hamadan"
+msgstr ""
+
+#: ir/ir_provinces.py:19
+msgid "Hormozgan"
+msgstr ""
+
+#: ir/ir_provinces.py:20
+msgid "Ilam"
+msgstr ""
+
+#: ir/ir_provinces.py:21
+msgid "Isfahan"
+msgstr ""
+
+#: ir/ir_provinces.py:22
+msgid "Kerman"
+msgstr ""
+
+#: ir/ir_provinces.py:23
+msgid "Kermanshah"
+msgstr ""
+
+#: ir/ir_provinces.py:24
+msgid "Khorasan North"
+msgstr ""
+
+#: ir/ir_provinces.py:25
+msgid "Khorasan Razavi"
+msgstr ""
+
+#: ir/ir_provinces.py:26
+msgid "Khorasan South"
+msgstr ""
+
+#: ir/ir_provinces.py:27
+msgid "Khuzestan"
+msgstr ""
+
+#: ir/ir_provinces.py:28
+msgid "Kohgiluyeh and Boyer-Ahmad"
+msgstr ""
+
+#: ir/ir_provinces.py:29
+msgid "Kurdistan"
+msgstr ""
+
+#: ir/ir_provinces.py:30
+msgid "Lorestan"
+msgstr ""
+
+#: ir/ir_provinces.py:31
+msgid "Markazi"
+msgstr ""
+
+#: ir/ir_provinces.py:32
+msgid "Mazandaran"
+msgstr ""
+
+#: ir/ir_provinces.py:33
+msgid "Qazvin"
+msgstr ""
+
+#: ir/ir_provinces.py:34
+msgid "Qom"
+msgstr ""
+
+#: ir/ir_provinces.py:35
+msgid "Semnan"
+msgstr ""
+
+#: ir/ir_provinces.py:36
+msgid "Sistan and Baluchestan"
+msgstr ""
+
+#: ir/ir_provinces.py:37
+msgid "Tehran"
+msgstr ""
+
+#: ir/ir_provinces.py:38
+msgid "Yazd"
+msgstr ""
+
+#: ir/ir_provinces.py:39
+msgid "Zanjan"
 msgstr ""
 
 #: is_/forms.py:22
@@ -10843,11 +11007,11 @@ msgstr ""
 msgid "Zulia"
 msgstr ""
 
-#: za/forms.py:25
+#: za/forms.py:24
 msgid "Enter a valid South African ID number"
 msgstr ""
 
-#: za/forms.py:66
+#: za/forms.py:65
 msgid "Enter a valid South African postal code"
 msgstr ""
 
