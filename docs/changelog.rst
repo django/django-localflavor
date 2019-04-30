@@ -17,10 +17,11 @@ New fields for existing flavors:
 - Added `BRPostalCodeField`, `BRCPFField` and `BRCNPJField` models fields
   (`gh-365 <https://github.com/django/django-localflavor/pull/365>`_).
 - Added `EircodeField` in IE flavor
+  (`gh-360 <https://github.com/django/django-localflavor/pull/360>`_)
   (`gh-366 <https://github.com/django/django-localflavor/pull/366>`_).
-
 - Added Models for Spain (`ESPostalCodeField` and `ESIdentityCardNumberField`)
   (`gh-357 <https://github.com/django/django-localflavor/pull/357>`_)
+  (`gh-372 <https://github.com/django/django-localflavor/pull/372>`_).
 
 Modifications to existing flavors:
 
