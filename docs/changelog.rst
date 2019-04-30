@@ -13,9 +13,10 @@ New flavors:
   (`gh-359 <https://github.com/django/django-localflavor/pull/359>`_).
 
 New fields for existing flavors:
-- Added `BRPostalCodeField`, `BRCPFField`, `BRCNPJField` models fields
+
+- Added `BRPostalCodeField`, `BRCPFField` and `BRCNPJField` models fields
   (`gh-365 <https://github.com/django/django-localflavor/pull/365>`_).
-- `EircodeField` in IE flavor
+- Added `EircodeField` in IE flavor
   (`gh-366 <https://github.com/django/django-localflavor/pull/366>`_).
 
 Modifications to existing flavors:
@@ -25,7 +26,7 @@ Modifications to existing flavors:
 
 Other changes:
 
-- Added dependency on python-stdnum which is currently used for Luhn and EAN validation in several local-flavors.
+- Added dependency on python-stdnum which is currently used for Luhn and EAN validation in several local-flavors
   (`gh-370 <https://github.com/django/django-localflavor/pull/370>`_).
 - Added support for Vatican IBAN
   (`gh-355 <https://github.com/django/django-localflavor/pull/355>`_).
