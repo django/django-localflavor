@@ -7,6 +7,12 @@ Forms
 .. automodule:: localflavor.es.forms
     :members:
 
+Models
+------
+
+.. automodule:: localflavor.es.models
+    :members:
+
 Data
 ----
 
