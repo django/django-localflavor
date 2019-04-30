@@ -16,7 +16,7 @@ class ESPostalCodeField(CharField):
     .. versionadded:: 2.2
     """
 
-    description = _("Spain postal code ( five numbers)")
+    description = _("Spain postal code (five numbers)")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 5
