@@ -33,6 +33,11 @@ Package Index: https://pypi.python.org/pypi/django-localflavor
 You're encouraged to use the latest version of this package unless you need
 support for an unsupported version of Django.
 
+**2019-05-07 - 2.2**: Django 1.11 - 2.2
+
+All deprecated code will be removed in the 3.0 release. Please run you project's tests using `python -Wd` so that
+deprecation warnings appear and can be addressed. See changelog for details.
+
 **2018-08-24 - 2.1**: Django 1.11 - 2.1
 
 **2017-12-30 - 2.0**: Django 1.11 - 2.0
