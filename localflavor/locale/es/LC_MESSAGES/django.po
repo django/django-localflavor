@@ -11,7 +11,7 @@
 # Ezequiel Pochiero <epochiero@gmail.com>, 2015
 # Herty Nava <translation@bolmedia.ca>, 2013
 # Jannis Leidel <jannis@leidel.info>, 2011
-# José Luis Sandoval Alaguna <alagunajs@gmail.com>, 2016
+# José Luis <alagunajs@gmail.com>, 2016
 # Juan Antonio Infantes Díaz <ersame@gmail.com>, 2011
 # juanda097 <juanda097@protonmail.ch>, 2014-2015
 # LECbg, 2017

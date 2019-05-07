@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Bogdan Mateescu, 2019
 # Denis Darii <denis.darii@gmail.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Razvan Stefanescu <razvan.stefanescu@gmail.com>, 2015-2017
@@ -11,8 +12,8 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2019-04-19 16:14+0000\n"
+"Last-Translator: Bogdan Mateescu\n"
 "Language-Team: Romanian (http://www.transifex.com/django/django-localflavor/"
 "language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -160,7 +161,7 @@ msgid "Enter a 4 digit postcode."
 msgstr "Introduceți un cod poștal de 4 cifre."
 
 msgid "Australian State"
-msgstr ""
+msgstr "Statul Australian"
 
 msgid "Australian Postcode"
 msgstr "Cod Poștal Australian"
@@ -4843,7 +4844,7 @@ msgid "Farwaniyah"
 msgstr ""
 
 msgid "Capital"
-msgstr ""
+msgstr "Capitala"
 
 msgid "Hawalli"
 msgstr ""

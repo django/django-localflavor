@@ -13,16 +13,16 @@
 # konryd <inactive+konryd@transifex.com>, 2011
 # konryd <inactive+konryd@transifex.com>, 2011
 # lukaszkoziara <koziara.lukasz@gmail.com>, 2017
-# m_aciek <maciej.olko@gmail.com>, 2016-2017
+# m_aciek <maciej.olko@gmail.com>, 2016-2017,2019
 # m_aciek <maciej.olko@gmail.com>, 2016
-# Roman Barczyński <rombar@gmail.com>, 2012
+# Roman Barczyński, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2019-03-02 22:24+0000\n"
+"Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-localflavor/"
 "language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -439,25 +439,25 @@ msgid "Invalid ID Card Number: Wrong location code"
 msgstr "Niepoprawny nr dowodu: zły kod lokacji"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
-msgstr ""
+msgstr "Wprowadź poprawny NIT w formacie XXXXXXXXXXX-Y lub XXXXXXXXXXXY."
 
 msgid "Invalid NIT."
-msgstr ""
+msgstr "Niepoprawny NIT."
 
 msgid "Occidental"
-msgstr ""
+msgstr "Occidental"
 
 msgid "Central"
-msgstr ""
+msgstr "Centralna"
 
 msgid "Oriental"
-msgstr ""
+msgstr "Oriental"
 
 msgid "Pinar del Río"
-msgstr ""
+msgstr "Pinar del Río"
 
 msgid "Artemisa"
-msgstr ""
+msgstr "Artemisa"
 
 msgid "Mayabeque"
 msgstr ""

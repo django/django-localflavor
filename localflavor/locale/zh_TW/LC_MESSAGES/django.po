@@ -6,7 +6,7 @@
 # Eric Ho <eric913@gmail.com>, 2013
 # Jannis Leidel <jannis@leidel.info>, 2011
 # ming hsien tzang <tzangms@gmail.com>, 2011
-# quantum9876 <quantum9876@gmail.com>, 2011
+# 619e61dbdb61c57213f62815aaf60e01, 2011
 # tcc <tcchou@tcchou.org>, 2011
 msgid ""
 msgstr ""

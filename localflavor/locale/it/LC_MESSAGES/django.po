@@ -11,14 +11,15 @@
 # Mattia Procopio <promat85@gmail.com>, 2015
 # Nicola Larosa <transifex@teknico.net>, 2011-2012
 # palmux <palmux@gmail.com>, 2016
+# Simone Pugliese, 2018
 # Stefano Brentegani <sbrentegani@gmail.com>, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2018-12-29 17:00+0000\n"
+"Last-Translator: Simone Pugliese\n"
 "Language-Team: Italian (http://www.transifex.com/django/django-localflavor/"
 "language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -119,13 +120,13 @@ msgstr ""
 "Tipo entità non riconosciuto. Il tipo deve essere 27, 20, 30, 23, 24 o 33."
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
-msgstr ""
+msgstr "Inserire un CBU valido nel formato XXXXXXXXXXXXXXXXXXXXXX."
 
 msgid "CBU must be exactly 22 digits long."
-msgstr ""
+msgstr "CBU deve avere esattamente 22 cifre."
 
 msgid "Invalid CBU."
-msgstr ""
+msgstr "CBU non valido."
 
 msgid "Burgenland"
 msgstr ""
@@ -172,7 +173,7 @@ msgid "Australian Postcode"
 msgstr "Codice postale Australiano"
 
 msgid "Australian Business Number"
-msgstr ""
+msgstr "Numero d'affari australiano "
 
 msgid "Australian Company Number"
 msgstr ""
@@ -181,10 +182,10 @@ msgid "Australian Tax File Number"
 msgstr ""
 
 msgid "Enter a valid ABN."
-msgstr ""
+msgstr "Inserire un ABN valido"
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "Inserire un ACN valido"
 
 msgid "Enter a valid TFN."
 msgstr ""
@@ -236,10 +237,10 @@ msgstr ""
 "Inserisci un codice postale valido nell'intervallo e formato 1XXX - 9XXX."
 
 msgid "The EGN is not valid"
-msgstr ""
+msgstr "L'EGN non è valido."
 
 msgid "EIK/BULSTAT is not valid"
-msgstr ""
+msgstr "L'EIK/BULSTAT non è valido"
 
 msgid "Enter a zip code in the format XXXXX-XXX."
 msgstr "Inserisci un codice postale nel formato XXXXX-XXX ."
@@ -264,7 +265,7 @@ msgid "This field requires at least 14 digits"
 msgstr "Questo campo richiede almeno 14 cifre"
 
 msgid "Invalid Process number."
-msgstr ""
+msgstr "Numero di processo non valido "
 
 msgid "State of Brazil (two uppercase letters)"
 msgstr "Stato del Brasile (2 lettere maiuscole)"
@@ -434,19 +435,19 @@ msgid "Invalid ID Card Number: Wrong location code"
 msgstr "Numero carta d'identità non valido: codice località errato"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
-msgstr ""
+msgstr "Inserire un NIT valido nel formato XXXXXXXXXXX-Y o XXXXXXXXXXXY"
 
 msgid "Invalid NIT."
-msgstr ""
+msgstr "NIT non valido "
 
 msgid "Occidental"
-msgstr ""
+msgstr "Occidentale"
 
 msgid "Central"
-msgstr ""
+msgstr "Centrale"
 
 msgid "Oriental"
-msgstr ""
+msgstr "Orientale"
 
 msgid "Pinar del Río"
 msgstr ""
@@ -497,33 +498,36 @@ msgid "Isla de la Juventud"
 msgstr ""
 
 msgid "Enter a Cuban region."
-msgstr ""
+msgstr "Inserire una regione cubana "
 
 msgid "Enter a Cuban province."
-msgstr ""
+msgstr "Inserire una provincia cubana"
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr ""
+msgstr "Inserire un codice postale valido nel formato XXXXX."
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
 msgstr ""
+"Inserire un numero di carta di identità valido nel formato XXXXXXXXXXX."
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr ""
+msgstr "Regioni cubane (tre lettere maiuscole)"
 
 msgid "Cuban provinces (three uppercase letters)"
-msgstr ""
+msgstr "Province cubane (tre lettere maiuscole)"
 
 msgid "Cuban postal code"
-msgstr ""
+msgstr "Codice postale cubano"
 
 msgid "Cuban identity card number"
-msgstr ""
+msgstr "Numero di carta di identità cubano"
 
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
 msgstr ""
+"Inserire una data valida (aammgg) per le prime 6 cifre del numero della "
+"carta di identità"
 
 msgid "Prague"
 msgstr "Praga"

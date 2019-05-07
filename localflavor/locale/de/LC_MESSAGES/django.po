@@ -6,6 +6,7 @@
 # André Hagenbruch, 2014
 # Jannis Leidel <jannis@leidel.info>, 2011-2012,2014
 # Mark Raddatz <mraddatz@gmail.com>, 2011
+# Markus Holtermann <info@markusholtermann.eu>, 2018
 # Markus Holtermann <info@markusholtermann.eu>, 2013
 # Mark Raddatz <mraddatz@gmail.com>, 2011
 # Nicola Valentini <nvalentini@laterpay.net>, 2018
@@ -14,7 +15,7 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2018-03-08 16:19+0000\n"
+"PO-Revision-Date: 2018-08-27 12:32+0000\n"
 "Last-Translator: Markus Holtermann <info@markusholtermann.eu>\n"
 "Language-Team: German (http://www.transifex.com/django/django-localflavor/"
 "language/de/)\n"
@@ -3852,7 +3853,7 @@ msgstr "%s ist kein gültiger Institutions-Code."
 
 #, python-format
 msgid "%s is not a valid country code."
-msgstr "%sist kein gültiger Länder-Code. "
+msgstr "%s ist kein gültiger Länder-Code. "
 
 msgid "Not a valid EAN code."
 msgstr ""

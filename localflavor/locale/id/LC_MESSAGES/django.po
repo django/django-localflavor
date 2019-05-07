@@ -5,7 +5,7 @@
 # Translators:
 # Fery Setiawan <gembelweb@gmail.com>, 2015-2018
 # Jannis Leidel <jannis@leidel.info>, 2011
-# oon arfiandwi (OonID) <oon.arfiandwi@gmail.com>, 2016
+# oon arfiandwi <oon.arfiandwi@gmail.com>, 2016
 # rodin <romihardiyanto@gmail.com>, 2011
 # rodin <romihardiyanto@gmail.com>, 2012
 # Sakti Dwi Cahyono <54krpl@gmail.com>, 2014

@@ -8,8 +8,8 @@
 # Nick Mavrakis <mavrakis.n@gmail.com>, 2016
 # Pãnoș <panos.laganakos@gmail.com>, 2016
 # Yorgos Pagles <y.pagles@gmail.com>, 2011
-# George M, 2017
-# George M, 2017
+# 437c9d6e19936ed69f57bed9e0fe4716, 2017
+# 437c9d6e19936ed69f57bed9e0fe4716, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"

@@ -6,7 +6,7 @@
 # Andreas Pelme <andreas@pelme.se>, 2011-2012
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Jonathan Lindén, 2015
-# Thomas Lundqvist <thomas@biljettshop.se>, 2013
+# Thomas Lundqvist, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
