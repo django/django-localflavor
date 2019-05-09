@@ -1,14 +1,12 @@
 """India-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import force_text
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .in_states import STATE_CHOICES, STATES_NORMALIZED
 
@@ -23,10 +21,10 @@ class INZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(INZipCodeField, self).__init__(r'^\d{3}\s?\d{3}$', *args, **kwargs)
+        super().__init__(r'^\d{3}\s?\d{3}$', *args, **kwargs)
 
     def clean(self, value):
-        value = super(INZipCodeField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         # Convert to "NNNNNN" if "NNN NNN" given
@@ -53,7 +51,7 @@ class INStateField(Field):
     }
 
     def clean(self, value):
-        value = super(INStateField, self).clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         try:
@@ -94,7 +92,7 @@ class INAadhaarNumberField(Field):
     }
 
     def clean(self, value):
-        value = super(INAadhaarNumberField, self).clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -122,4 +120,4 @@ class INStateSelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super(INStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+        super().__init__(attrs, choices=STATE_CHOICES)

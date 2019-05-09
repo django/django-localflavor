@@ -1,14 +1,11 @@
-# -*- coding: utf-8 -*-
 """New Zealand specific form helpers."""
-from __future__ import unicode_literals
-
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import smart_str
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .nz_councils import NORTH_ISLAND_COUNCIL_CHOICES, SOUTH_ISLAND_COUNCIL_CHOICES
 from .nz_provinces import PROVINCE_CHOICES
@@ -21,28 +18,28 @@ class NZRegionSelect(Select):
     """A select widget with list of New Zealand regions as its choices."""
 
     def __init__(self, attrs=None):
-        super(NZRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class NZProvinceSelect(Select):
     """A select widget with list of New Zealand provinces as its choices."""
 
     def __init__(self, attrs=None):
-        super(NZProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)
 
 
 class NZNorthIslandCouncilSelect(Select):
     """A select widget with list of New Zealand North Island city and district councils as its choices."""
 
     def __init__(self, attrs=None):
-        super(NZNorthIslandCouncilSelect, self).__init__(attrs, choices=NORTH_ISLAND_COUNCIL_CHOICES)
+        super().__init__(attrs, choices=NORTH_ISLAND_COUNCIL_CHOICES)
 
 
 class NZSouthIslandCouncilSelect(Select):
     """A select widget with list of New Zealand South Island city and district councils as its choices."""
 
     def __init__(self, attrs=None):
-        super(NZSouthIslandCouncilSelect, self).__init__(attrs, choices=SOUTH_ISLAND_COUNCIL_CHOICES)
+        super().__init__(attrs, choices=SOUTH_ISLAND_COUNCIL_CHOICES)
 
 
 class NZPostCodeField(RegexField):
@@ -53,8 +50,7 @@ class NZPostCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(NZPostCodeField, self).__init__(r'^\d{4}$',
-                                              *args, **kwargs)
+        super().__init__(r'^\d{4}$', *args, **kwargs)
 
 
 class NZBankAccountNumberField(Field):
@@ -85,7 +81,7 @@ class NZBankAccountNumberField(Field):
     }
 
     def clean(self, value):
-        super(NZBankAccountNumberField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         value = re.sub('(\s+|-)', '', smart_str(value))

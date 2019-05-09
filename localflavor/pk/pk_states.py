@@ -1,4 +1,4 @@
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: An alphabetical list of states for use as `choices` in a formfield.
 # Codes taken from http://en.wikipedia.org/wiki/ISO_3166-2:PK

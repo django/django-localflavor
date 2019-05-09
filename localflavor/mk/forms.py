@@ -1,10 +1,8 @@
-from __future__ import unicode_literals
-
 import datetime
 
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .mk_choices import MK_MUNICIPALITIES
 
@@ -25,7 +23,7 @@ class MKIdentityCardNumberField(RegexField):
         kwargs['min_length'] = None
         kwargs['max_length'] = 8
         regex = r'(^[A-Z]{1}\d{7}$)|(^\d{4,7}$)'
-        super(MKIdentityCardNumberField, self).__init__(regex, *args, **kwargs)
+        super().__init__(regex, *args, **kwargs)
 
 
 class MKMunicipalitySelect(Select):
@@ -36,7 +34,7 @@ class MKMunicipalitySelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super(MKMunicipalitySelect, self).__init__(attrs, choices=MK_MUNICIPALITIES)
+        super().__init__(attrs, choices=MK_MUNICIPALITIES)
 
 
 class UMCNField(RegexField):
@@ -64,10 +62,10 @@ class UMCNField(RegexField):
     def __init__(self, *args, **kwargs):
         kwargs['min_length'] = None
         kwargs['max_length'] = 13
-        super(UMCNField, self).__init__(r'^\d{13}$', *args, **kwargs)
+        super().__init__(r'^\d{13}$', *args, **kwargs)
 
     def clean(self, value):
-        value = super(UMCNField, self).clean(value)
+        value = super().clean(value)
 
         if value in self.empty_values:
             return self.empty_value

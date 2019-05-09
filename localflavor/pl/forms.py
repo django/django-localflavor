@@ -1,13 +1,11 @@
 """Polish-specific form helpers."""
 
-from __future__ import unicode_literals
-
 import datetime
 import re
 
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .pl_administrativeunits import ADMINISTRATIVE_UNIT_CHOICES
 from .pl_voivodeships import VOIVODESHIP_CHOICES
@@ -17,14 +15,14 @@ class PLProvinceSelect(Select):
     """A select widget with list of Polish administrative provinces as choices."""
 
     def __init__(self, attrs=None):
-        super(PLProvinceSelect, self).__init__(attrs, choices=VOIVODESHIP_CHOICES)
+        super().__init__(attrs, choices=VOIVODESHIP_CHOICES)
 
 
 class PLCountySelect(Select):
     """A select widget with list of Polish administrative units as choices."""
 
     def __init__(self, attrs=None):
-        super(PLCountySelect, self).__init__(attrs, choices=ADMINISTRATIVE_UNIT_CHOICES)
+        super().__init__(attrs, choices=ADMINISTRATIVE_UNIT_CHOICES)
 
 
 class PLPESELField(RegexField):
@@ -48,10 +46,10 @@ class PLPESELField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(PLPESELField, self).__init__(r'^\d{11}$', *args, **kwargs)
+        super().__init__(r'^\d{11}$', *args, **kwargs)
 
     def clean(self, value):
-        super(PLPESELField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         if not self.has_valid_checksum(value):
@@ -105,10 +103,10 @@ class PLNationalIDCardNumberField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(PLNationalIDCardNumberField, self).__init__(r'^[A-Za-z]{3}\d{6}$', *args, **kwargs)
+        super().__init__(r'^[A-Za-z]{3}\d{6}$', *args, **kwargs)
 
     def clean(self, value):
-        super(PLNationalIDCardNumberField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -155,13 +153,13 @@ class PLNIPField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(PLNIPField, self).__init__(
+        super().__init__(
             r'^\d{3}-\d{3}-\d{2}-\d{2}$|^\d{3}-\d{2}-\d{2}-\d{3}$|^\d{10}$',
             *args, **kwargs
         )
 
     def clean(self, value):
-        super(PLNIPField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         value = re.sub("[-]", "", value)
@@ -194,10 +192,10 @@ class PLREGONField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(PLREGONField, self).__init__(r'^\d{9,14}$', *args, **kwargs)
+        super().__init__(r'^\d{9,14}$', *args, **kwargs)
 
     def clean(self, value):
-        super(PLREGONField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         if not self.has_valid_checksum(value):
@@ -240,4 +238,4 @@ class PLPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(PLPostalCodeField, self).__init__(r'^\d{2}-\d{3}$', *args, **kwargs)
+        super().__init__(r'^\d{2}-\d{3}$', *args, **kwargs)

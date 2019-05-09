@@ -13,7 +13,7 @@ when explicitly needed.
 import operator
 
 from django.utils.functional import lazy
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
 
 #: The 48 contiguous states, plus the District of Columbia.

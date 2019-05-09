@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 #: A list of Ecuador provinces as `choices` in a formfield.
 PROVINCE_CHOICES = (
     ('A', 'Azuay'),

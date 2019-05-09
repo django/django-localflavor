@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
 """HR-specific Form helpers."""
-from __future__ import unicode_literals
-
 import datetime
 import re
 
@@ -9,7 +6,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
 from django.utils.encoding import force_text
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
 from .hr_choices import HR_COUNTY_CHOICES, HR_LICENSE_PLATE_PREFIX_CHOICES
@@ -28,15 +25,14 @@ class HRCountySelect(Select):
     """A Select widget that uses a list of counties of Croatia as its choices."""
 
     def __init__(self, attrs=None):
-        super(HRCountySelect, self).__init__(attrs, choices=HR_COUNTY_CHOICES)
+        super().__init__(attrs, choices=HR_COUNTY_CHOICES)
 
 
 class HRLicensePlatePrefixSelect(Select):
     """A Select widget that uses a list of vehicle license plate prefixes of Croatia as its choices."""
 
     def __init__(self, attrs=None):
-        super(HRLicensePlatePrefixSelect, self).__init__(attrs,
-                                                         choices=HR_LICENSE_PLATE_PREFIX_CHOICES)
+        super().__init__(attrs, choices=HR_LICENSE_PLATE_PREFIX_CHOICES)
 
 
 class HRJMBGField(Field):
@@ -61,7 +57,7 @@ class HRJMBGField(Field):
     }
 
     def clean(self, value):
-        super(HRJMBGField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -108,13 +104,13 @@ class HROIBField(RegexField):
     }
 
     def __init__(self, min_length=11, max_length=11, *args, **kwargs):
-        super(HROIBField, self).__init__(
+        super().__init__(
             r'^\d{11}$', max_length=max_length, min_length=min_length,
             *args, **kwargs
         )
 
     def clean(self, value):
-        super(HROIBField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -144,7 +140,7 @@ class HRLicensePlateField(Field):
     }
 
     def clean(self, value):
-        super(HRLicensePlateField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -181,7 +177,7 @@ class HRPostalCodeField(Field):
     }
 
     def clean(self, value):
-        super(HRPostalCodeField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -211,7 +207,7 @@ class HRJMBAGField(Field):
     }
 
     def clean(self, value):
-        super(HRJMBAGField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 

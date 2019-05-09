@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
 """MA-specific Form helpers"""
-from __future__ import unicode_literals
-
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .ma_provinces import PROVINCE_CHOICES_PER_REGION
 from .ma_regions import REGION_CHOICES
@@ -26,7 +23,7 @@ class MAPostalCodeField(RegexField):
         kwargs.setdefault('label', _('Postal code'))
         kwargs['max_length'] = 5
         kwargs['min_length'] = 5
-        super(MAPostalCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
+        super().__init__(r'^\d{5}$', *args, **kwargs)
 
 
 class MAProvinceSelect(Select):
@@ -37,10 +34,7 @@ class MAProvinceSelect(Select):
             (province[0], '%s - %s' % (province[0], province[1]))
             for province in PROVINCE_CHOICES_PER_REGION
         ]
-        super(MAProvinceSelect, self).__init__(
-            attrs,
-            choices=choices
-        )
+        super().__init__(attrs, choices=choices)
 
 
 class MARegionSelect(Select):
@@ -51,10 +45,7 @@ class MARegionSelect(Select):
             (region[0], '%s - %s' % (region[0], region[1]))
             for region in REGION_CHOICES
         ]
-        super(MARegionSelect, self).__init__(
-            attrs,
-            choices=choices
-        )
+        super().__init__(attrs, choices=choices)
 
 
 class MAProvinceField(CharField):
@@ -68,7 +59,7 @@ class MAProvinceField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('label', _('Select Province'))
-        super(MAProvinceField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class MARegionField(CharField):
@@ -82,4 +73,4 @@ class MARegionField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('label', _('Select Region'))
-        super(MARegionField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)

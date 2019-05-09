@@ -1,7 +1,7 @@
 """Belgium-specific Form helpers."""
 
 from django.forms.fields import RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .be_provinces import PROVINCE_CHOICES
 from .be_regions import REGION_CHOICES
@@ -24,18 +24,18 @@ class BEPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(BEPostalCodeField, self).__init__(r'^[1-9]\d{3}$', *args, **kwargs)
+        super().__init__(r'^[1-9]\d{3}$', *args, **kwargs)
 
 
 class BERegionSelect(Select):
     """A Select widget that uses a list of belgium regions as its choices."""
 
     def __init__(self, attrs=None):
-        super(BERegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class BEProvinceSelect(Select):
     """A Select widget that uses a list of belgium provinces as its choices."""
 
     def __init__(self, attrs=None):
-        super(BEProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)

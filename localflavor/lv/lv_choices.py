@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: A list of Latvian municipalities and republican cities.
 #: Identifiers based on ISO 3166-2:LV. https://en.wikipedia.org/wiki/ISO_3166-2:LV

@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 #: See the "Code officiel géographique" on the INSEE website <www.insee.fr>.
 REGION_CHOICES = (
     # Overseas regions

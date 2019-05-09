@@ -1,7 +1,5 @@
 import datetime
 
-from django.utils import six
-
 
 def id_number_checksum(gd):
     """Calculates a Swedish ID number checksum, using the "Luhn"-algoritm."""
@@ -73,7 +71,7 @@ def format_personal_id_number(birth_day, gd):
     # If the ID number is an interim number, the letter in the serial part
     # should be normalized to upper case. Source:
     # https://wiki.swami.se/display/Inkubator/norEduPersonNIN+och+Svenska+Personnummer
-    return six.text_type(str(birth_day.year) + gd['month'] + gd['day'] + gd['serial'].upper() + gd['checksum'])
+    return str(birth_day.year) + gd['month'] + gd['day'] + gd['serial'].upper() + gd['checksum']
 
 
 def format_organisation_number(gd):
@@ -82,7 +80,7 @@ def format_organisation_number(gd):
     else:
         century = gd['century']
 
-    return six.text_type(century + gd['year'] + gd['month'] + gd['day'] + gd['serial'] + gd['checksum'])
+    return century + gd['year'] + gd['month'] + gd['day'] + gd['serial'] + gd['checksum']
 
 
 def valid_organisation(gd):

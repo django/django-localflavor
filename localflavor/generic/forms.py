@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from django import forms
 
 from .validators import IBAN_COUNTRY_CODE_LENGTH, BICValidator, IBANValidator
@@ -32,7 +30,7 @@ class DateField(forms.DateField):
 
     def __init__(self, input_formats=None, *args, **kwargs):
         input_formats = input_formats or DEFAULT_DATE_INPUT_FORMATS
-        super(DateField, self).__init__(input_formats=input_formats, *args, **kwargs)
+        super().__init__(input_formats=input_formats, *args, **kwargs)
 
 
 class DateTimeField(forms.DateTimeField):
@@ -40,7 +38,7 @@ class DateTimeField(forms.DateTimeField):
 
     def __init__(self, input_formats=None, *args, **kwargs):
         input_formats = input_formats or DEFAULT_DATETIME_INPUT_FORMATS
-        super(DateTimeField, self).__init__(input_formats=input_formats, *args, **kwargs)
+        super().__init__(input_formats=input_formats, *args, **kwargs)
 
 
 class SplitDateTimeField(forms.SplitDateTimeField):
@@ -48,8 +46,8 @@ class SplitDateTimeField(forms.SplitDateTimeField):
 
     def __init__(self, input_date_formats=None, input_time_formats=None, *args, **kwargs):
         input_date_formats = input_date_formats or DEFAULT_DATE_INPUT_FORMATS
-        super(SplitDateTimeField, self).__init__(input_date_formats=input_date_formats,
-                                                 input_time_formats=input_time_formats, *args, **kwargs)
+        super().__init__(input_date_formats=input_date_formats,
+                         input_time_formats=input_time_formats, *args, **kwargs)
 
 
 class IBANFormField(forms.CharField):
@@ -85,10 +83,10 @@ class IBANFormField(forms.CharField):
         kwargs.setdefault('min_length', IBAN_MIN_LENGTH)
         kwargs.setdefault('max_length', 34)
         self.default_validators = [IBANValidator(use_nordea_extensions, include_countries)]
-        super(IBANFormField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def to_python(self, value):
-        value = super(IBANFormField, self).to_python(value)
+        value = super().to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return value.upper().replace(' ', '').replace('-', '')
@@ -117,19 +115,19 @@ class BICFormField(forms.CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 11)
-        super(BICFormField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def to_python(self, value):
         # BIC is always written in upper case.
         # https://www2.swift.com/uhbonline/books/public/en_uk/bic_policy/bic_policy.pdf
-        value = super(BICFormField, self).to_python(value)
+        value = super().to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return value.upper().replace(" ", "")
 
     def prepare_value(self, value):
         # BIC is always written in upper case.
-        value = super(BICFormField, self).prepare_value(value)
+        value = super().prepare_value(value)
         if value is not None:
             return value.upper()
         return value

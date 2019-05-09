@@ -8,4 +8,4 @@ class ECProvinceSelect(Select):
     """A Select widget that uses a list of Ecuador provinces as its choices."""
 
     def __init__(self, attrs=None):
-        super(ECProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)

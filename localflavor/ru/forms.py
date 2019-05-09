@@ -1,8 +1,6 @@
 """Russian-specific forms helpers."""
-from __future__ import unicode_literals
-
 from django.forms.fields import RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .ru_regions import RU_COUNTY_CHOICES, RU_REGIONS_CHOICES
 
@@ -11,14 +9,14 @@ class RUCountySelect(Select):
     """A Select widget that uses a list of Russian Counties as its choices."""
 
     def __init__(self, attrs=None):
-        super(RUCountySelect, self).__init__(attrs, choices=RU_COUNTY_CHOICES)
+        super().__init__(attrs, choices=RU_COUNTY_CHOICES)
 
 
 class RURegionSelect(Select):
     """A Select widget that uses a list of Russian Regions as its choices."""
 
     def __init__(self, attrs=None):
-        super(RURegionSelect, self).__init__(attrs, choices=RU_REGIONS_CHOICES)
+        super().__init__(attrs, choices=RU_REGIONS_CHOICES)
 
 
 class RUPostalCodeField(RegexField):
@@ -33,7 +31,7 @@ class RUPostalCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(RUPostalCodeField, self).__init__(r'^\d{6}$', *args, **kwargs)
+        super().__init__(r'^\d{6}$', *args, **kwargs)
 
 
 class RUPassportNumberField(RegexField):
@@ -48,7 +46,7 @@ class RUPassportNumberField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(RUPassportNumberField, self).__init__(r'^\d{4} \d{6}$', *args, **kwargs)
+        super().__init__(r'^\d{4} \d{6}$', *args, **kwargs)
 
 
 class RUAlienPassportNumberField(RegexField):
@@ -63,4 +61,4 @@ class RUAlienPassportNumberField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(RUAlienPassportNumberField, self).__init__(r'^\d{2} \d{7}$', *args, **kwargs)
+        super().__init__(r'^\d{2} \d{7}$', *args, **kwargs)

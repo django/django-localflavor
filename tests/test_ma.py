@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.test import SimpleTestCase
 
 from localflavor.ma.forms import MAPostalCodeField, MAProvinceField, MAProvinceSelect, MARegionField, MARegionSelect

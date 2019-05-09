@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
 """BR-specific Form helpers."""
-
-from __future__ import unicode_literals
 
 import re
 
@@ -9,7 +6,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, Field, Select
 from django.utils.encoding import force_text
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .br_states import STATE_CHOICES
 from .validators import BRCNPJValidator, BRCPFValidator, BRPostalCodeValidator
@@ -33,7 +30,7 @@ class BRZipCodeField(CharField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(BRZipCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.validators.append(BRPostalCodeValidator())
 
 
@@ -41,7 +38,7 @@ class BRStateSelect(Select):
     """A Select widget that uses a list of Brazilian states/territories as its choices."""
 
     def __init__(self, attrs=None):
-        super(BRStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+        super().__init__(attrs, choices=STATE_CHOICES)
 
 
 class BRStateChoiceField(Field):
@@ -53,11 +50,11 @@ class BRStateChoiceField(Field):
     }
 
     def __init__(self, **kwargs):
-        super(BRStateChoiceField, self).__init__(**kwargs)
+        super().__init__(**kwargs)
         self.widget.choices = STATE_CHOICES
 
     def clean(self, value):
-        value = super(BRStateChoiceField, self).clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             value = ''
         value = force_text(value)
@@ -89,12 +86,12 @@ class BRCPFField(CharField):
     }
 
     def __init__(self, max_length=14, min_length=11, *args, **kwargs):
-        super(BRCPFField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
         self.validators.append(BRCPFValidator())
 
     def clean(self, value):
         """Value can be either a string in the format XXX.XXX.XXX-XX or an 11-digit number."""
-        value = super(BRCPFField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         return value
@@ -128,12 +125,12 @@ class BRCNPJField(CharField):
     }
 
     def __init__(self, min_length=14, max_length=18, *args, **kwargs):
-        super(BRCNPJField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
         self.validators.append(BRCNPJValidator())
 
     def clean(self, value):
         """Value can be either a string in the format XX.XXX.XXX/XXXX-XX or a group of 14 characters."""
-        value = super(BRCNPJField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         return value
@@ -157,11 +154,11 @@ class BRProcessoField(CharField):
     default_error_messages = {'invalid': _("Invalid Process number.")}
 
     def __init__(self, max_length=25, min_length=20, *args, **kwargs):
-        super(BRProcessoField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         """Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or an 20-digit number."""
-        value = super(BRProcessoField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 

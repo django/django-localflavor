@@ -1,13 +1,11 @@
 """FI-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .fi_municipalities import MUNICIPALITY_CHOICES
 
@@ -24,14 +22,14 @@ class FIZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(FIZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
+        super().__init__(r'^\d{5}$', *args, **kwargs)
 
 
 class FIMunicipalitySelect(Select):
     """A Select widget that uses a list of Finnish municipalities as its choices."""
 
     def __init__(self, attrs=None):
-        super(FIMunicipalitySelect, self).__init__(attrs, choices=MUNICIPALITY_CHOICES)
+        super().__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 
 class FISocialSecurityNumber(Field):
@@ -42,7 +40,7 @@ class FISocialSecurityNumber(Field):
     }
 
     def clean(self, value):
-        super(FISocialSecurityNumber, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 

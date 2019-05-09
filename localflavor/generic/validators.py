@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 import re
 import string
 
 from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.utils.deconstruct import deconstructible
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from stdnum import ean
 
 from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
@@ -134,7 +131,7 @@ NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
 
 
 @deconstructible
-class IBANValidator(object):
+class IBANValidator:
     """A validator for International Bank Account Numbers (IBAN - ISO 13616-1:2007)."""
 
     def __init__(self, use_nordea_extensions=False, include_countries=None):
@@ -209,7 +206,7 @@ class IBANValidator(object):
 
 
 @deconstructible
-class BICValidator(object):
+class BICValidator:
     """
     A validator for SWIFT Business Identifier Codes (ISO 9362:2009).
 
@@ -249,7 +246,7 @@ class BICValidator(object):
 
 
 @deconstructible
-class EANValidator(object):
+class EANValidator:
     """
     A generic validator for EAN like codes with the last digit being the checksum.
 

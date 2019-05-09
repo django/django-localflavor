@@ -1,5 +1,4 @@
-# -*- encoding: utf-8 -*-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: http://ru.wikipedia.org/wiki/Коды_субъектов_Российской_Федерации
 RU_COUNTY_CHOICES = (

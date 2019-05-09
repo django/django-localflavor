@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class NLZipCodeFieldValidator(RegexValidator):
@@ -16,11 +13,10 @@ class NLZipCodeFieldValidator(RegexValidator):
     error_message = _('Enter a valid zip code.')
 
     def __init__(self):
-        super(NLZipCodeFieldValidator, self).__init__(regex='^\d{4} ?[A-Z]{2}$',
-                                                      message=self.error_message)
+        super().__init__(regex='^\d{4} ?[A-Z]{2}$', message=self.error_message)
 
     def __call__(self, value):
-        super(NLZipCodeFieldValidator, self).__call__(value)
+        super().__call__(value)
 
         if int(value[:4]) < 1000:
             raise ValidationError(self.error_message)
@@ -36,7 +32,7 @@ class NLBSNFieldValidator(RegexValidator):
     error_message = _('Enter a valid BSN.')
 
     def __init__(self):
-        super(NLBSNFieldValidator, self).__init__(regex='^\d{9}$', message=self.error_message)
+        super().__init__(regex='^\d{9}$', message=self.error_message)
 
     def bsn_checksum_ok(self, value):
         checksum = 0
@@ -47,7 +43,7 @@ class NLBSNFieldValidator(RegexValidator):
         return checksum % 11 == 0
 
     def __call__(self, value):
-        super(NLBSNFieldValidator, self).__call__(value)
+        super().__call__(value)
 
         if int(value) == 0:
             raise ValidationError(self.error_message)
@@ -89,4 +85,4 @@ class NLLicensePlateFieldValidator(RegexValidator):
 
     def __init__(self):
         regex = r'(' + r'|'.join(self.VALIDATION_REGEXS.values()) + r')'
-        super(NLLicensePlateFieldValidator, self).__init__(regex=regex, message=self.error_message)
+        super().__init__(regex=regex, message=self.error_message)

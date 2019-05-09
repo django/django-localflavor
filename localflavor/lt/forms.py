@@ -1,12 +1,10 @@
-from __future__ import unicode_literals
-
 import re
 from datetime import date
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
 
@@ -17,15 +15,14 @@ class LTCountySelect(Select):
     """A select field with the Lithuanian counties as choices"""
 
     def __init__(self, attrs=None):
-        super(LTCountySelect, self).__init__(attrs, choices=COUNTY_CHOICES)
+        super().__init__(attrs, choices=COUNTY_CHOICES)
 
 
 class LTMunicipalitySelect(Select):
     """A select field with the Lithuanian municipalities as choices"""
 
     def __init__(self, attrs=None):
-        super(LTMunicipalitySelect, self).__init__(attrs,
-                                                   choices=MUNICIPALITY_CHOICES)
+        super().__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 
 class LTIDCodeField(RegexField):
@@ -45,10 +42,10 @@ class LTIDCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(LTIDCodeField, self).__init__(r'^\d{11}$', *args, **kwargs)
+        super().__init__(r'^\d{11}$', *args, **kwargs)
 
     def clean(self, value):
-        super(LTIDCodeField, self).clean(value)
+        super().clean(value)
 
         if value in self.empty_values:
             return self.empty_value
@@ -104,7 +101,7 @@ class LTPostalCodeField(Field):
     }
 
     def clean(self, value):
-        value = super(LTPostalCodeField, self).clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 

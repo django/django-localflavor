@@ -1,6 +1,4 @@
 """South Africa-specific Form helpers."""
-from __future__ import unicode_literals
-
 import re
 from datetime import date
 
@@ -25,7 +23,7 @@ class ZAIDField(CharField):
     }
 
     def clean(self, value):
-        super(ZAIDField, self).clean(value)
+        super().clean(value)
 
         if value in self.empty_values:
             return self.empty_value
@@ -66,7 +64,7 @@ class ZAPostCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(ZAPostCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
+        super().__init__(r'^\d{4}$', *args, **kwargs)
 
 
 class ZAProvinceSelect(Select):
@@ -74,4 +72,4 @@ class ZAProvinceSelect(Select):
 
     def __init__(self, attrs=None):
         from .za_provinces import PROVINCE_CHOICES
-        super(ZAProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)

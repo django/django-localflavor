@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
 """Swedish specific Form helpers."""
-from __future__ import unicode_literals
-
 import re
 
 from django import forms
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .se_counties import COUNTY_CHOICES
 from .utils import (format_organisation_number, format_personal_id_number, id_number_checksum, valid_organisation,
@@ -28,8 +25,7 @@ class SECountySelect(forms.Select):
     """
 
     def __init__(self, attrs=None):
-        super(SECountySelect, self).__init__(attrs=attrs,
-                                             choices=COUNTY_CHOICES)
+        super().__init__(attrs=attrs, choices=COUNTY_CHOICES)
 
 
 class SEOrganisationNumberField(forms.CharField):
@@ -52,7 +48,7 @@ class SEOrganisationNumberField(forms.CharField):
     }
 
     def clean(self, value):
-        value = super(SEOrganisationNumberField, self).clean(value)
+        value = super().clean(value)
 
         if value in self.empty_values:
             return self.empty_value
@@ -109,7 +105,7 @@ class SEPersonalIdentityNumberField(forms.CharField):
     def __init__(self, coordination_number=True, interim_number=False, *args, **kwargs):
         self.coordination_number = coordination_number
         self.interim_number = interim_number
-        super(SEPersonalIdentityNumberField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     default_error_messages = {
         'invalid': _('Enter a valid Swedish personal identity number.'),
@@ -117,7 +113,7 @@ class SEPersonalIdentityNumberField(forms.CharField):
     }
 
     def clean(self, value):
-        value = super(SEPersonalIdentityNumberField, self).clean(value)
+        value = super().clean(value)
 
         if value in self.empty_values:
             return self.empty_value
@@ -172,10 +168,10 @@ class SEPostalCodeField(forms.RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(SEPostalCodeField, self).__init__(SE_POSTAL_CODE, *args, **kwargs)
+        super().__init__(SE_POSTAL_CODE, *args, **kwargs)
 
     def clean(self, value):
-        value = super(SEPostalCodeField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         return value.replace(' ', '')

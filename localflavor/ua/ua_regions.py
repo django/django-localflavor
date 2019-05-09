@@ -1,4 +1,4 @@
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 #: 24 oblasts, Avtonomna Respublika Krym and 2 cities with special status
 # Codes were gotten from ISO 3166-2:UA

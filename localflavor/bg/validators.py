@@ -1,12 +1,12 @@
 from django.core.exceptions import ValidationError
 from django.utils.deconstruct import deconstructible
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .utils import get_egn_birth_date
 
 
 @deconstructible
-class EGNValidator(object):
+class EGNValidator:
     """
     Check Bulgarian unique citizenship number (EGN) for validity.
 
@@ -35,7 +35,7 @@ class EGNValidator(object):
 
 
 @deconstructible
-class EIKValidator(object):
+class EIKValidator:
     """
     Check Bulgarian EIK/BULSTAT codes for validity.
 

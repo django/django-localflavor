@@ -2,7 +2,7 @@
 
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .co_departments import DEPARTMENT_CHOICES
 
@@ -11,7 +11,7 @@ class CODepartmentSelect(Select):
     """A Select widget that uses a list of Colombian states as its choices."""
 
     def __init__(self, attrs=None):
-        super(CODepartmentSelect, self).__init__(attrs, choices=DEPARTMENT_CHOICES)
+        super().__init__(attrs, choices=DEPARTMENT_CHOICES)
 
 
 class CONITField(RegexField):
@@ -31,14 +31,14 @@ class CONITField(RegexField):
     PRIME_PLACES = [3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71]
 
     def __init__(self, *args, **kwargs):
-        super(CONITField, self).__init__(r'^\d{5,12}-?\d$', *args, **kwargs)
+        super().__init__(r'^\d{5,12}-?\d$', *args, **kwargs)
 
     def clean(self, value):
         """
         Value can be either a string in the format XXXXXXXXXX-Y or
         XXXXXXXXXXY.
         """
-        value = super(CONITField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         value, cd = self._canon(value)

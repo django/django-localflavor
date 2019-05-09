@@ -1,13 +1,10 @@
-# -*- coding: utf-8 -*-
 """FR-specific Form helpers"""
-from __future__ import unicode_literals
-
 import re
 from datetime import date
 
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
 from .fr_department import DEPARTMENT_CHOICES_PER_REGION
@@ -34,7 +31,7 @@ class FRZipCodeField(RegexField):
         kwargs.setdefault('label', _('Zip code'))
         kwargs['max_length'] = 5
         kwargs['min_length'] = 5
-        super(FRZipCodeField, self).__init__(r'^\d{5}$', *args, **kwargs)
+        super().__init__(r'^\d{5}$', *args, **kwargs)
 
 
 class FRDepartmentSelect(Select):
@@ -45,10 +42,7 @@ class FRDepartmentSelect(Select):
             (dep[0], '%s - %s' % (dep[0], dep[1]))
             for dep in DEPARTMENT_CHOICES_PER_REGION
         ]
-        super(FRDepartmentSelect, self).__init__(
-            attrs,
-            choices=choices
-        )
+        super().__init__(attrs, choices=choices)
 
 
 class FRRegionSelect(Select):
@@ -59,10 +53,7 @@ class FRRegionSelect(Select):
             (dep[0], '%s - %s' % (dep[0], dep[1]))
             for dep in REGION_CHOICES
         ]
-        super(FRRegionSelect, self).__init__(
-            attrs,
-            choices=choices
-        )
+        super().__init__(attrs, choices=choices)
 
 
 class FRRegion2016Select(Select):
@@ -74,7 +65,7 @@ class FRRegion2016Select(Select):
             (reg[0], '%s - %s' % (reg[0], reg[1]))
             for reg in REGION_2016_CHOICES
         ]
-        super(FRRegion2016Select, self).__init__(attrs, choices=choices)
+        super().__init__(attrs, choices=choices)
 
 
 class FRDepartmentField(CharField):
@@ -84,7 +75,7 @@ class FRDepartmentField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('label', _('Select Department'))
-        super(FRDepartmentField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class FRRegionField(CharField):
@@ -94,7 +85,7 @@ class FRRegionField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('label', _('Select Region'))
-        super(FRRegionField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class FRNationalIdentificationNumber(CharField):
@@ -111,7 +102,7 @@ class FRNationalIdentificationNumber(CharField):
     }
 
     def clean(self, value):
-        super(FRNationalIdentificationNumber, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -178,11 +169,11 @@ class FRNationalIdentificationNumber(CharField):
         return commune_of_origin, department_of_origin
 
 
-class FRSIRENENumberMixin(object):
+class FRSIRENENumberMixin:
     """Abstract class for SIREN and SIRET numbers, from the SIRENE register."""
 
     def clean(self, value):
-        super(FRSIRENENumberMixin, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -232,7 +223,7 @@ class FRSIRETField(FRSIRENENumberMixin, CharField):
     }
 
     def clean(self, value):
-        value = super(FRSIRETField, self).clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 

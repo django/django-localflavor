@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.db.models import CharField
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 from .choices import COMPANY_TYPES_CHOICES
 from .validators import MDIDNOFieldValidator, MDLicensePlateValidator
@@ -19,7 +16,7 @@ class MDIDNOField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 13
-        super(MDIDNOField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class MDLicensePlateField(CharField):
@@ -34,7 +31,7 @@ class MDLicensePlateField(CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 9
-        super(MDLicensePlateField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class MDCompanyTypeField(CharField):
@@ -49,9 +46,9 @@ class MDCompanyTypeField(CharField):
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = COMPANY_TYPES_CHOICES
         kwargs['max_length'] = 5
-        super(MDCompanyTypeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def deconstruct(self):
-        name, path, args, kwargs = super(MDCompanyTypeField, self).deconstruct()
+        name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs

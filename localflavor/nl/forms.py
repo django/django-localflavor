@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
 """NL-specific Form helpers."""
-
-from __future__ import unicode_literals
 
 import re
 
 from django import forms
-from django.utils import six
 
 from .nl_provinces import PROVINCE_CHOICES
 from .validators import NLBSNFieldValidator, NLLicensePlateFieldValidator, NLZipCodeFieldValidator
@@ -18,20 +14,20 @@ class NLZipCodeField(forms.CharField):
     default_validators = [NLZipCodeFieldValidator()]
 
     def clean(self, value):
-        if isinstance(value, six.string_types):
+        if isinstance(value, str):
             value = value.upper().replace(' ', '')
 
             if len(value) == 6:
                 value = '%s %s' % (value[:4], value[4:])
 
-        return super(NLZipCodeField, self).clean(value)
+        return super().clean(value)
 
 
 class NLProvinceSelect(forms.Select):
     """A Select widget that uses a list of provinces of the Netherlands as it's choices."""
 
     def __init__(self, attrs=None):
-        super(NLProvinceSelect, self).__init__(attrs, choices=PROVINCE_CHOICES)
+        super().__init__(attrs, choices=PROVINCE_CHOICES)
 
 
 class NLBSNFormField(forms.CharField):
@@ -49,7 +45,7 @@ class NLBSNFormField(forms.CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 9
-        super(NLBSNFormField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class NLLicensePlateFormField(forms.CharField):
@@ -88,10 +84,10 @@ class NLLicensePlateFormField(forms.CharField):
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 8
-        super(NLLicensePlateFormField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def clean(self, value):
-        value = super(NLLicensePlateFormField, self).clean(value)
+        value = super().clean(value)
         if value:
             value = value.upper().replace('-', '')
             for sidecode, regex in self.SANITIZE_REGEXS.items():

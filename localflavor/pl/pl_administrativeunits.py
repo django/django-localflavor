@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 #: Polish administrative units as in http://pl.wikipedia.org/wiki/Podzia%C5%82_administracyjny_Polski
 ADMINISTRATIVE_UNIT_CHOICES = (
     ('wroclaw', 'Wrocław'),

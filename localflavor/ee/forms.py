@@ -1,12 +1,10 @@
-from __future__ import unicode_literals
-
 import re
 from datetime import date
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .ee_counties import COUNTY_CHOICES
 
@@ -27,14 +25,14 @@ class EEZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(EEZipCodeField, self).__init__(zipcode, *args, **kwargs)
+        super().__init__(zipcode, *args, **kwargs)
 
 
 class EECountySelect(Select):
     """A Select widget that uses a list of Estonian counties as its choices."""
 
     def __init__(self, attrs=None):
-        super(EECountySelect, self).__init__(attrs, choices=COUNTY_CHOICES)
+        super().__init__(attrs, choices=COUNTY_CHOICES)
 
 
 class EEPersonalIdentificationCode(Field):
@@ -64,7 +62,7 @@ class EEPersonalIdentificationCode(Field):
         return check % 10
 
     def clean(self, value):
-        super(EEPersonalIdentificationCode, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -103,7 +101,7 @@ class EEBusinessRegistryCode(Field):
     }
 
     def clean(self, value):
-        value = super(EEBusinessRegistryCode, self).clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         value = value.strip()

@@ -13,4 +13,4 @@ class HUCountySelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super(HUCountySelect, self).__init__(attrs, choices=HU_COUNTY_CHOICES)
+        super().__init__(attrs, choices=HU_COUNTY_CHOICES)

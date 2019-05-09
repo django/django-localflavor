@@ -1,13 +1,11 @@
 """Slovenian specific form helpers."""
 
-from __future__ import unicode_literals
-
 import datetime
 import re
 
 from django.forms import ValidationError
 from django.forms.fields import CharField, ChoiceField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .si_postalcodes import SI_POSTALCODES_CHOICES
 
@@ -27,7 +25,7 @@ class SIEMSOField(CharField):
     emso_regex = re.compile('^(\d{2})(\d{2})(\d{3})(\d{2})(\d{3})(\d)$')
 
     def clean(self, value):
-        super(SIEMSOField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -94,7 +92,7 @@ class SITaxNumberField(CharField):
     sitax_regex = re.compile('^(?:SI)?([1-9]\d{7})$')
 
     def clean(self, value):
-        super(SITaxNumberField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -125,12 +123,11 @@ class SIPostalCodeField(ChoiceField):
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('choices', SI_POSTALCODES_CHOICES)
-        super(SIPostalCodeField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class SIPostalCodeSelect(Select):
     """A Select widget that uses Slovenian postal codes as its choices."""
 
     def __init__(self, attrs=None):
-        super(SIPostalCodeSelect, self).__init__(attrs,
-                                                 choices=SI_POSTALCODES_CHOICES)
+        super().__init__(attrs, choices=SI_POSTALCODES_CHOICES)

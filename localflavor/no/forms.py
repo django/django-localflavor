@@ -1,14 +1,12 @@
 """Norwegian-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import datetime
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .no_municipalities import MUNICIPALITY_CHOICES
 
@@ -25,14 +23,14 @@ class NOZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(NOZipCodeField, self).__init__(r'^\d{4}$', *args, **kwargs)
+        super().__init__(r'^\d{4}$', *args, **kwargs)
 
 
 class NOMunicipalitySelect(Select):
     """A Select widget that uses a list of Norwegian municipalities (fylker) as its choices."""
 
     def __init__(self, attrs=None):
-        super(NOMunicipalitySelect, self).__init__(attrs, choices=MUNICIPALITY_CHOICES)
+        super().__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 
 class NOSocialSecurityNumber(Field):
@@ -43,7 +41,7 @@ class NOSocialSecurityNumber(Field):
     }
 
     def clean(self, value):
-        super(NOSocialSecurityNumber, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -121,7 +119,7 @@ class NOBankAccountNumber(CharField):
     }
 
     def validate(self, value):
-        super(NOBankAccountNumber, self).validate(value)
+        super().validate(value)
 
         if value in self.empty_values:
             # It's alright to be empty.
@@ -150,7 +148,7 @@ class NOBankAccountNumber(CharField):
             raise ValidationError(self.error_messages['invalid_checksum'])
 
     def to_python(self, value):
-        value = super(NOBankAccountNumber, self).to_python(value)
+        value = super().to_python(value)
         if value in self.empty_values:
             return self.empty_value
         return value.replace('.', '').replace(' ', '')

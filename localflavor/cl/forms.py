@@ -1,11 +1,9 @@
 """Chile specific form helpers."""
 
-from __future__ import unicode_literals
-
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
 from django.utils.encoding import force_text
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .cl_regions import REGION_CHOICES
 
@@ -14,7 +12,7 @@ class CLRegionSelect(Select):
     """A Select widget that uses a list of Chilean Regions (Regiones) as its choices."""
 
     def __init__(self, attrs=None):
-        super(CLRegionSelect, self).__init__(attrs, choices=REGION_CHOICES)
+        super().__init__(attrs, choices=REGION_CHOICES)
 
 
 class CLRutField(RegexField):
@@ -36,17 +34,17 @@ class CLRutField(RegexField):
     def __init__(self, *args, **kwargs):
         if 'strict' in kwargs:
             del kwargs['strict']
-            super(CLRutField, self).__init__(r'^(\d{1,2}\.)?\d{3}\.\d{3}-[\dkK]$',
-                                             error_messages={'invalid': self.default_error_messages['strict']},
-                                             *args, **kwargs)
+            super().__init__(r'^(\d{1,2}\.)?\d{3}\.\d{3}-[\dkK]$',
+                             error_messages={'invalid': self.default_error_messages['strict']},
+                             *args, **kwargs)
         else:
             # In non-strict mode, accept RUTs that validate but do not exist in
             # the real world.
-            super(CLRutField, self).__init__(r'^[\d\.]{1,11}-?[\dkK]$', *args, **kwargs)
+            super().__init__(r'^[\d\.]{1,11}-?[\dkK]$', *args, **kwargs)
 
     def clean(self, value):
         """Check and clean the Chilean RUT."""
-        super(CLRutField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         rut, verificador = self._canonify(value)

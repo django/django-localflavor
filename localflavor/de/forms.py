@@ -1,13 +1,11 @@
 """DE-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .de_states import STATE_CHOICES
 
@@ -27,14 +25,14 @@ class DEZipCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(DEZipCodeField, self).__init__(r'^([0]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{3}$', *args, **kwargs)
+        super().__init__(r'^([0]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{3}$', *args, **kwargs)
 
 
 class DEStateSelect(Select):
     """A Select widget that uses a list of DE states as its choices."""
 
     def __init__(self, attrs=None):
-        super(DEStateSelect, self).__init__(attrs, choices=STATE_CHOICES)
+        super().__init__(attrs, choices=STATE_CHOICES)
 
 
 class DEIdentityCardNumberField(Field):
@@ -73,7 +71,7 @@ class DEIdentityCardNumberField(Field):
         return str(calculated_checksum)[-1] == given_checksum
 
     def clean(self, value):
-        super(DEIdentityCardNumberField, self).clean(value)
+        super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         match = re.match(ID_RE, value)

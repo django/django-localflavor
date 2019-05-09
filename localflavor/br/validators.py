@@ -2,7 +2,7 @@ import re
 
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 postal_code_re = re.compile(r'^\d{5}-\d{3}$')
 cnpj_digits_re = re.compile(r'^(\d{2})[.-]?(\d{3})[.-]?(\d{3})/(\d{4})-(\d{2})$')
@@ -25,7 +25,7 @@ class BRPostalCodeValidator(RegexValidator):
     def __init__(self, *args, **kwargs):
         self.message = _('Enter a postal code in the format 00000-000.')
         self.code = _('Invalid Postal Code')
-        super(BRPostalCodeValidator, self).__init__(postal_code_re, *args, **kwargs)
+        super().__init__(postal_code_re, *args, **kwargs)
 
 
 class BRCNPJValidator(RegexValidator):
@@ -36,7 +36,7 @@ class BRCNPJValidator(RegexValidator):
     """
 
     def __init__(self, *args, **kwargs):
-        super(BRCNPJValidator, self).__init__(
+        super().__init__(
             *args,
             regex=cnpj_digits_re,
             message=_("Invalid CNPJ number."),
@@ -74,7 +74,7 @@ class BRCPFValidator(RegexValidator):
     """
 
     def __init__(self, *args, **kwargs):
-        super(BRCPFValidator, self).__init__(
+        super().__init__(
             *args,
             regex=cpf_digits_re,
             message=_("Invalid CPF number."),

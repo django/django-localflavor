@@ -1,12 +1,10 @@
 """China(mainland)-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .cn_provinces import CN_PROVINCE_CHOICES
 
@@ -63,7 +61,7 @@ class CNProvinceSelect(Select):
     """A select widget providing the list of provinces and districts in People's Republic of China as choices."""
 
     def __init__(self, attrs=None):
-        super(CNProvinceSelect, self).__init__(attrs, choices=CN_PROVINCE_CHOICES)
+        super().__init__(attrs, choices=CN_PROVINCE_CHOICES)
 
 
 class CNPostCodeField(RegexField):
@@ -78,7 +76,7 @@ class CNPostCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(CNPostCodeField, self).__init__(POST_CODE_RE, *args, **kwargs)
+        super().__init__(POST_CODE_RE, *args, **kwargs)
 
 
 class CNIDCardField(CharField):
@@ -104,12 +102,12 @@ class CNIDCardField(CharField):
     }
 
     def __init__(self, max_length=18, min_length=15, *args, **kwargs):
-        super(CNIDCardField, self).__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         """Check whether the input is a valid ID Card Number."""
         # Check the length of the ID card number.
-        super(CNIDCardField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         # Check whether this ID card number has valid format

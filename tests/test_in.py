@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from django.test import SimpleTestCase
 
 from localflavor.in_.forms import INAadhaarNumberField, INStateField, INStateSelect, INZipCodeField

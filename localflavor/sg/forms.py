@@ -1,13 +1,11 @@
 """Singapore-specific Form helpers."""
 
-from __future__ import unicode_literals
-
 import re
 
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField
 from django.utils.encoding import force_text
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 NRIC_FIN_RE = re.compile(r'^[SFTG](\d{7})[A-Z]$')
 NRIC_FIN_DIGIT_WEIGHT = [2, 7, 6, 5, 4, 3, 2]
@@ -27,7 +25,7 @@ class SGPostCodeField(RegexField):
     }
 
     def __init__(self, *args, **kwargs):
-        super(SGPostCodeField, self).__init__(r'^\d{6}$', *args, **kwargs)
+        super().__init__(r'^\d{6}$', *args, **kwargs)
 
 
 class SGNRICFINField(CharField):
@@ -59,7 +57,7 @@ class SGNRICFINField(CharField):
 
         Strips whitespace.
         """
-        super(SGNRICFINField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         value = re.sub('(\s+)', '', force_text(value.upper()))

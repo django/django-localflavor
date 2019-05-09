@@ -1,6 +1,4 @@
 """Kuwait-specific Form helpers."""
-from __future__ import unicode_literals
-
 import re
 import textwrap
 from datetime import date
@@ -49,13 +47,13 @@ class KWCivilIDNumberField(RegexField):
     }
 
     def __init__(self, max_length=12, min_length=12, *args, **kwargs):
-        super(KWCivilIDNumberField, self).__init__(
+        super().__init__(
             r'\d{12}', max_length=max_length, min_length=min_length,
             *args, **kwargs
         )
 
     def clean(self, value):
-        super(KWCivilIDNumberField, self).clean(value)
+        super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -87,8 +85,7 @@ class KWGovernorateSelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super(KWGovernorateSelect, self).__init__(attrs,
-                                                  choices=GOVERNORATE_CHOICES)
+        super().__init__(attrs, choices=GOVERNORATE_CHOICES)
 
 
 class KWAreaSelect(Select):
@@ -100,5 +97,4 @@ class KWAreaSelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super(KWAreaSelect, self).__init__(attrs,
-                                           choices=AREA_CHOICES)
+        super().__init__(attrs, choices=AREA_CHOICES)
