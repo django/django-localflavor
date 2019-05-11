@@ -8,3 +8,6 @@ docs/_build/
 *.py[cod]
 .idea/
 env/
+
+# vscode
+.vscode/
