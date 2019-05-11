@@ -14,6 +14,7 @@ class EGLocalFlavorTests(SimpleTestCase):
             '30302071301592': '30302071301592',
         }
         invalid = {
+            '29406190500551': error_invalid,
             '29413191300551': error_invalid,
             '30000000000555': error_invalid,
             '30332071301592': error_invalid,

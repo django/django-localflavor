@@ -18,6 +18,8 @@ class EGNationalIDNumberField(RegexField):
         * The century number is valid.
         * The birthdate of the person is a valid date.
         * The governorate code is valid.
+
+    .. versionadded:: 3.0
     """
 
     default_error_messages = {
@@ -25,10 +27,7 @@ class EGNationalIDNumberField(RegexField):
     }
 
     def __init__(self, max_length=14, min_length=14, *args, **kwargs):
-        super().__init__(
-            r'\d{14}', max_length=max_length, min_length=min_length,
-            *args, **kwargs
-        )
+        super().__init__(r'\d{14}', max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
         super().clean(value)
@@ -55,9 +54,8 @@ class EGNationalIDNumberField(RegexField):
             raise ValidationError(self.error_messages['invalid'])
 
         # is valid governorate code?
-        governorate_codes = (
-            '01', '02', '03', '04', '11', '12', '13', '14', '15', '16', '17', '18', '19', '21',
-            '22', '23', '24', '25', '26', '27', '28', '29', '31', '32', '33', '34', '35', '88')
+        governorate_codes = ('01', '02', '03', '04', '11', '12', '13', '14', '15', '16', '17', '18', '19', '21', '22',
+                             '23', '24', '25', '26', '27', '28', '29', '31', '32', '33', '34', '35', '88')
         if governorate_code not in governorate_codes:
             raise ValidationError(self.error_messages['invalid'])
 
@@ -67,6 +65,8 @@ class EGNationalIDNumberField(RegexField):
 class EGGovernorateSelect(Select):
     """
     A Select widget that uses a list of Egypt governorates as its choices.
+
+    .. versionadded:: 3.0
     """
 
     def __init__(self, attrs=None):
