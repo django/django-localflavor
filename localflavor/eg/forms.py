@@ -3,24 +3,25 @@ import textwrap
 from datetime import date
 
 from django.forms import ValidationError
-from django.forms.fields import CharField, Select
+from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .choices import GOVERNORATE_CHOICES
 
 
-class EGNationalIDNumberField(CharField):
+class EGNationalIDNumberField(RegexField):
     """
     Egypt ID numbers are 14 digits, second to seventh digits represents the person's birthdate.
 
     Checks the following rules to determine the validity of the number:
         * The number consist of 14 digits.
+        * The century number is valid.
         * The birthdate of the person is a valid date.
-        * The calculated checksum equals to the last digit of the National ID.
+        * The governorate code is valid.
     """
 
     default_error_messages = {
-        'invalid': _('Enter a valid Egypt ID number'),
+        'invalid': _('Enter a valid Egyptian National ID number'),
     }
 
     def __init__(self, max_length=14, min_length=14, *args, **kwargs):
@@ -37,6 +38,10 @@ class EGNationalIDNumberField(CharField):
         century = value[0]
         year, month, day = textwrap.wrap(value[1:7], 2)
         governorate_code = value[7:9]
+
+        # is valid century?
+        if century not in ('2', '3'):
+            raise ValidationError(self.error_messages['invalid'])
 
         # Complete year (19XX, 20XX)
         if int(century) == 3:
