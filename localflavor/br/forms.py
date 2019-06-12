@@ -9,6 +9,7 @@ from django.utils.encoding import force_text
 from django.utils.translation import gettext_lazy as _
 
 from .br_states import STATE_CHOICES
+from .br_compe_code import BR_BANK_CHOICES
 from .validators import BRCNPJValidator, BRCPFValidator, BRPostalCodeValidator
 
 process_digits_re = re.compile(
@@ -178,3 +179,30 @@ class BRProcessoField(CharField):
             raise ValidationError(self.error_messages['invalid'])
 
         return orig_value
+
+class BRBankChoiceField(Field):
+    """
+    A choice field that uses a list of Brazilian Banks as its choices.
+    - Uses COMPE code as id
+    """
+
+    widget = Select
+    default_error_messages = {
+        'invalid': _('Select a valid brazilian bank. Value not available.'),
+    }
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.widget.choices = BR_BANK_CHOICES
+
+    def clean(self, value):
+        value = super().clean(value)
+        if value in EMPTY_VALUES:
+            value = ''
+        value = force_text(value)
+        if value == '':
+            return value
+        valid_values = set([force_text(entry[0]) for entry in self.widget.choices])
+        if value not in valid_values:
+            raise ValidationError(self.error_messages['invalid'])
+        return value

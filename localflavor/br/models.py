@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 from . import validators
 from .br_states import STATE_CHOICES
+from .br_compe_code import BR_BANK_CHOICES
 
 
 class BRStateField(CharField):
@@ -69,3 +70,18 @@ class BRPostalCodeField(CharField):
         kwargs['max_length'] = 9
         super().__init__(*args, **kwargs)
         self.validators.append(validators.BRPostalCodeValidator())
+
+class BRBankField(CharField):
+    """A model field for Brazilian Banks (COMPE code)."""
+
+    description = _("Brazilian Bank (COMPE code)")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['choices'] = BR_BANK_CHOICES
+        kwargs['max_length'] = 3
+        super().__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super().deconstruct()
+        del kwargs['choices']
+        return name, path, args, kwargs
