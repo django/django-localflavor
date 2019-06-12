@@ -10,7 +10,7 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- Brazilian Banks COMPE codes
 
 Modifications to existing flavors:
 

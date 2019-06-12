@@ -71,6 +71,7 @@ Authors
 * László Ratskó
 * Lefteris Nikoltsios
 * Luis Alberto Santana
+* Lucas Vido
 * Łukasz Langa
 * Luke Benstead
 * luyikei
