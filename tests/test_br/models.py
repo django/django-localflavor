@@ -1,8 +1,6 @@
 from django.db import models
 
-from localflavor.br.models import BRCNPJField, BRCPFField, BRPostalCodeField,
-BR
-# from localflavor.br.models import BRBankField
+from localflavor.br.models import BRCNPJField, BRCPFField, BRPostalCodeField, BRBankField
 
 
 class BRPersonProfile(models.Model):
@@ -10,3 +8,6 @@ class BRPersonProfile(models.Model):
     cnpj = BRCNPJField()
     postal_code = BRPostalCodeField()
     #bank = BRBankField()
+
+class BankingDataBR(models.Model):
+    bank = BRBankField()

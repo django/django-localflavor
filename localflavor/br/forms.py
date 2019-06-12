@@ -180,6 +180,7 @@ class BRProcessoField(CharField):
 
         return orig_value
 
+
 class BRBankChoiceField(Field):
     """
     A choice field that uses a list of Brazilian Banks as its choices.
@@ -189,6 +190,7 @@ class BRBankChoiceField(Field):
     widget = Select
     default_error_messages = {
         'invalid': _('Select a valid brazilian bank. Value not available.'),
+        'max_digits': _('This field requires 03 digits'),
     }
 
     def __init__(self, **kwargs):
@@ -203,6 +205,8 @@ class BRBankChoiceField(Field):
         if value == '':
             return value
         valid_values = set([force_text(entry[0]) for entry in self.widget.choices])
+        if len(value) != 3:
+            raise ValidationError(self.error_messages['max_digits'])
         if value not in valid_values:
             raise ValidationError(self.error_messages['invalid'])
         return value

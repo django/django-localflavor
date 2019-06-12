@@ -71,6 +71,7 @@ class BRPostalCodeField(CharField):
         super().__init__(*args, **kwargs)
         self.validators.append(validators.BRPostalCodeValidator())
 
+
 class BRBankField(CharField):
     """A model field for Brazilian Banks (COMPE code)."""
 

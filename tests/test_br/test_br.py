@@ -2,7 +2,7 @@ from django.test import SimpleTestCase
 
 from localflavor.br import models
 from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
-                                  BRZipCodeField)
+                                  BRZipCodeField, BRBankChoiceField)
 from tests.test_br.forms import BRPersonProfileForm
 
 
@@ -201,6 +201,21 @@ class BRLocalFlavorTests(SimpleTestCase):
         }
         self.assertFieldOutput(BRStateChoiceField, valid, invalid)
 
+    def test_BRBankChoiceField(self):
+        error_invalid = ['Select a valid brazilian bank. Value not available.']
+        error_maxlength = ['This field requires 03 digits']
+        valid = {
+            '341': '341',
+            '001': '001',
+        }
+        invalid = {
+            '9999': error_maxlength,
+            '1': error_maxlength,
+            'BCO': error_invalid,
+        }
+        self.assertFieldOutput(BRBankChoiceField, valid, invalid)
+
+
     def test_model_form_valid(self):
         data_to_test = [
             {
@@ -247,6 +262,14 @@ class BRLocalFlavorModelTests(SimpleTestCase):
         instance = models.BRPostalCodeField()
         name, path, args, kwargs = instance.deconstruct()
         new_instance = models.BRPostalCodeField(*args, **kwargs)
+        self.assertEqual(instance.max_length, new_instance.max_length)
+        self.assertEqual(instance.description, new_instance.description)
+        self.assertEqual(instance.validators, new_instance.validators)
+
+    def test_BRBankField(self):
+        instance = models.BRBankField()
+        name, path, args, kwargs = instance.deconstruct()
+        new_instance = models.BRBankField(*args, **kwargs)
         self.assertEqual(instance.max_length, new_instance.max_length)
         self.assertEqual(instance.description, new_instance.description)
         self.assertEqual(instance.validators, new_instance.validators)
