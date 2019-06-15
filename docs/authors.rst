@@ -75,6 +75,7 @@ Authors
 * Luke Benstead
 * luyikei
 * Malcolm Tredinnick
+* Marco Beri
 * Martin Ogden
 * Marti Raudsepp
 * Matias Dinota
