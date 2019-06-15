@@ -133,13 +133,10 @@ class ITLocalFlavorTests(SimpleTestCase):
 </optgroup>
 <optgroup label="Sardegna">
 <option value="CA">Cagliari</option>
-<option value="CI">Carbonia-Iglesias</option>
-<option value="VS">Medio Campidano</option>
 <option value="NU">Nuoro</option>
-<option value="OG">Ogliastra</option>
-<option value="OT">Olbia-Tempio</option>
 <option value="OR">Oristano</option>
 <option value="SS">Sassari</option>
+<option value="SU">Sud Sardegna</option>
 </optgroup>
 <optgroup label="Sicilia">
 <option value="AG">Agrigento</option>
