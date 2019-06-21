@@ -13,14 +13,6 @@ Models
 .. automodule:: localflavor.generic.models
     :members:
 
-Checksums
----------
-
-.. automodule:: localflavor.generic.checksums
-    :members:
-
-.. versionadded:: 1.1
-
 Validators
 ----------
 
