@@ -4,6 +4,9 @@ Changelog
 3.0   (unreleased)
 ------------------
 
+The deprecated `generic.checksums.luhn` and `generic.checksums.ean` functions have been removed in this release. Please
+use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead.
+
 New flavors:
 
 - Egypt local flavor
@@ -18,7 +21,9 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Removed deprecated `generic.checksums.luhn` and `generic.checksums.ean` functions
+  (`gh-379 <https://github.com/django/django-localflavor/pull/379>`_).
+
 
 2.2   (2019-05-07)
 ------------------
