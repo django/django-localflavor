@@ -47,6 +47,7 @@ Authors
 * Gil Obradors
 * Grzes Furga
 * Hamad AlGhanim
+* Henrik Ossipoff Hansen
 * Honza Král
 * Horst Gutmann
 * Igor Támara
