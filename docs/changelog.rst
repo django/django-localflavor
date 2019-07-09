@@ -17,7 +17,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Extended Danish `DK_POSTALCODES` with small Danish islands getting independant post code since 2017.
+  (`gh-380 <https://github.com/django/django-localflavor/pull/380>`_).
 
 Other changes:
 
