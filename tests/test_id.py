@@ -5,44 +5,46 @@ from localflavor.id_.forms import (IDLicensePlateField, IDLicensePlatePrefixSele
 
 
 class IDLocalFlavorTests(SimpleTestCase):
+
     def test_IDProvinceSelect(self):
         f = IDProvinceSelect()
         out = '''<select name="provinces">
-<option value="ACE">Aceh</option>
-<option value="BLI">Bali</option>
-<option value="BTN">Banten</option>
-<option value="BKL">Bengkulu</option>
-<option value="DIY">Yogyakarta</option>
-<option value="JKT">Jakarta</option>
-<option value="GOR">Gorontalo</option>
-<option value="JMB">Jambi</option>
-<option value="JBR">Jawa Barat</option>
-<option value="JTG">Jawa Tengah</option>
-<option value="JTM">Jawa Timur</option>
-<option value="KBR">Kalimantan Barat</option>
-<option value="KSL">Kalimantan Selatan</option>
-<option value="KTG">Kalimantan Tengah</option>
-<option value="KTM">Kalimantan Timur</option>
-<option value="BBL">Kepulauan Bangka-Belitung</option>
-<option value="KRI">Kepulauan Riau</option>
-<option value="LPG" selected="selected">Lampung</option>
-<option value="MLK">Maluku</option>
-<option value="MUT">Maluku Utara</option>
+<option value="ACEH">Nanggroe Aceh Darussalam</option>
+<option value="BABEL">Kepulauan Bangka-Belitung</option>
+<option value="BALI">Bali</option>
+<option value="BANTEN">Banten</option>
+<option value="BENGKULU">Bengkulu</option>
+<option value="DI_YOGYAKARTA">DI Yogyakarta</option>   
+<option value="DKI_JAKARTA">DKI Jakarta</option> 
+<option value="GORONTALO">Gorontalo</option>
+<option value="JABAR">Jawa Barat</option>
+<option value="JAMBI">Jambi</option>
+<option value="JATENG">Jawa Tengah</option>
+<option value="JATIM">Jawa Timur</option>
+<option value="KALBAR">Kalimantan Barat</option>
+<option value="KALSEL">Kalimantan Selatan</option>
+<option value="KALTENG">Kalimantan Tengah</option>
+<option value="KALTIM">Kalimantan Timur</option>
+<option value="KALUT">Kalimantan Utara</option>
+<option value="KEPRI">Kepulauan Riau</option>
+<option value="LAMPUNG" selected="selected">Lampung</option>
+<option value="MALUKU">Maluku</option>
+<option value="MALUT">Maluku Utara</option>
 <option value="NTB">Nusa Tenggara Barat</option>
 <option value="NTT">Nusa Tenggara Timur</option>
-<option value="PPA">Papua</option>
-<option value="PPB">Papua Barat</option>
-<option value="RIU">Riau</option>
-<option value="SLB">Sulawesi Barat</option>
-<option value="SLS">Sulawesi Selatan</option>
-<option value="SLT">Sulawesi Tengah</option>
-<option value="SLR">Sulawesi Tenggara</option>
-<option value="SLU">Sulawesi Utara</option>
-<option value="SMB">Sumatera Barat</option>
-<option value="SMS">Sumatera Selatan</option>
-<option value="SMU">Sumatera Utara</option>
+<option value="PAPUA">Papua</option>
+<option value="PAPUA_BARAT">Papua Barat</option>
+<option value="RIAU">Riau</option>
+<option value="SULBAR">Sulawesi Barat</option>
+<option value="SULSEL">Sumatera Selatan</option>
+<option value="SULTENG">Sulawesi Tengah</option>
+<option value="SULTRA">Sulawesi Tenggara</option>
+<option value="SULUT">Sulawesi Utara</option>
+<option value="SUMBAR">Sumatera Barat</option>
+<option value="SUMSEL">Sumatera Selatan</option>
+<option value="SUMUT">Sumatera Utara</option>
 </select>'''
-        self.assertHTMLEqual(f.render('provinces', 'LPG'), out)
+        self.assertHTMLEqual(f.render('provinces', 'LAMPUNG'), out)
 
     def test_IDLicensePlatePrefixSelect(self):
         f = IDLicensePlatePrefixSelect()

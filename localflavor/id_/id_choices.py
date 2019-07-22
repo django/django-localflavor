@@ -1,42 +1,43 @@
 from django.utils.translation import gettext_lazy as _
 
-#: Indonesia does not have an official Province code standard.
-#: I decided to use unambiguous and consistent (some are common) 3-letter codes.
-#: http://id.wikipedia.org/wiki/Daftar_provinsi_Indonesia
+# Provincial code in Indonesia doesn't comply with the standard 3-letter province code
+# data taken from the official page of Indonesian internal affair ministry
+# http://www.kemendagri.go.id/pages/data-wilayah
 PROVINCE_CHOICES = (
-    ('ACE', _('Aceh')),
-    ('BLI', _('Bali')),
-    ('BTN', _('Banten')),
-    ('BKL', _('Bengkulu')),
-    ('DIY', _('Yogyakarta')),
-    ('JKT', _('Jakarta')),
-    ('GOR', _('Gorontalo')),
-    ('JMB', _('Jambi')),
-    ('JBR', _('Jawa Barat')),
-    ('JTG', _('Jawa Tengah')),
-    ('JTM', _('Jawa Timur')),
-    ('KBR', _('Kalimantan Barat')),
-    ('KSL', _('Kalimantan Selatan')),
-    ('KTG', _('Kalimantan Tengah')),
-    ('KTM', _('Kalimantan Timur')),
-    ('BBL', _('Kepulauan Bangka-Belitung')),
-    ('KRI', _('Kepulauan Riau')),
-    ('LPG', _('Lampung')),
-    ('MLK', _('Maluku')),
-    ('MUT', _('Maluku Utara')),
+    ('ACEH', _('Nanggroe Aceh Darussalam')),
+    ('BABEL', _('Kepulauan Bangka-Belitung')),
+    ('BALI', _('Bali')),
+    ('BANTEN', _('Banten')),
+    ('BENGKULU', _('Bengkulu')),
+    ('DI_YOGYAKARTA', _('DI Yogyakarta')),  # Special Region Yogyakarta
+    ('DKI_JAKARTA', _('DKI Jakarta')),  # Special Capital Region Jakarta
+    ('GORONTALO', _('Gorontalo')),
+    ('JABAR', _('Jawa Barat')),
+    ('JAMBI', _('Jambi')),
+    ('JATENG', _('Jawa Tengah')),
+    ('JATIM', _('Jawa Timur')),
+    ('KALBAR', _('Kalimantan Barat')),
+    ('KALSEL', _('Kalimantan Selatan')),
+    ('KALTENG', _('Kalimantan Tengah')),
+    ('KALTIM', _('Kalimantan Timur')),
+    ('KALUT', _('Kalimantan Utara')),
+    ('KEPRI', _('Kepulauan Riau')),
+    ('LAMPUNG', _('Lampung')),
+    ('MALUKU', _('Maluku')),
+    ('MALUT', _('Maluku Utara')),
     ('NTB', _('Nusa Tenggara Barat')),
     ('NTT', _('Nusa Tenggara Timur')),
-    ('PPA', _('Papua')),
-    ('PPB', _('Papua Barat')),
-    ('RIU', _('Riau')),
-    ('SLB', _('Sulawesi Barat')),
-    ('SLS', _('Sulawesi Selatan')),
-    ('SLT', _('Sulawesi Tengah')),
-    ('SLR', _('Sulawesi Tenggara')),
-    ('SLU', _('Sulawesi Utara')),
-    ('SMB', _('Sumatera Barat')),
-    ('SMS', _('Sumatera Selatan')),
-    ('SMU', _('Sumatera Utara')),
+    ('PAPUA', _('Papua')),
+    ('PAPUA_BARAT', _('Papua Barat')),
+    ('RIAU', _('Riau')),
+    ('SULBAR', _('Sulawesi Barat')),
+    ('SULSEL', _('Sumatera Selatan')),
+    ('SULTENG', _('Sulawesi Tengah')),
+    ('SULTRA', _('Sulawesi Tenggara')),
+    ('SULUT', _('Sulawesi Utara')),
+    ('SUMBAR', _('Sumatera Barat')),
+    ('SUMSEL', _('Sumatera Selatan')),
+    ('SUMUT', _('Sumatera Utara')),
 )
 
 #: License plate prefixes
