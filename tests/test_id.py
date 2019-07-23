@@ -23,6 +23,7 @@ class IDLocalFlavorTests(SimpleTestCase):
 <option value="KSL">Kalimantan Selatan</option>
 <option value="KTG">Kalimantan Tengah</option>
 <option value="KTM">Kalimantan Timur</option>
+<option value="KTR">Kalimantan Utara</option>
 <option value="BBL">Kepulauan Bangka-Belitung</option>
 <option value="KRI">Kepulauan Riau</option>
 <option value="LPG" selected="selected">Lampung</option>

@@ -19,6 +19,7 @@ PROVINCE_CHOICES = (
     ('KSL', _('Kalimantan Selatan')),
     ('KTG', _('Kalimantan Tengah')),
     ('KTM', _('Kalimantan Timur')),
+    ('KTR', _('Kalimantan Utara')),
     ('BBL', _('Kepulauan Bangka-Belitung')),
     ('KRI', _('Kepulauan Riau')),
     ('LPG', _('Lampung')),
