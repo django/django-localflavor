@@ -21,7 +21,7 @@ Modifications to existing flavors:
   (`gh-380 <https://github.com/django/django-localflavor/pull/380>`_).
 
 - Add validation for women National identity number for Indonesia localflavor.
-  (`gh-385 <https://github.com/django/django-localflavor/pull/385>`_).
+  (`gh-386 <https://github.com/django/django-localflavor/pull/386>`_).
 
 Other changes:
 
