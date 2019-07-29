@@ -21,7 +21,7 @@ Modifications to existing flavors:
   (`gh-380 <https://github.com/django/django-localflavor/pull/380>`_).
 
 - Add Kalimantan Utara in  `PROVINCE_CHOICES` for Indonesia local flavor.
-  (`gh-380 <https://github.com/django/django-localflavor/pull/385>`_).
+  (`gh-385 <https://github.com/django/django-localflavor/pull/385>`_).
 
 Other changes:
 
