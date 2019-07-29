@@ -159,6 +159,7 @@ class IDNationalIdentityNumberField(Field):
     http://id.wikipedia.org/wiki/Nomor_Induk_Kependudukan
 
     xx.xxxx.ddmmyy.xxxx - 16 digits (excl. dots)
+    notes: for women dd + 40
     """
 
     default_error_messages = {
