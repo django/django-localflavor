@@ -29,9 +29,6 @@ class MyKadField(CharField):
     }
 
     def __init__(self, hyphen=True, *args, **kwargs):
-        if not isinstance(hyphen, bool):
-            raise TypeError('expected boolean type')
-
         self.hyphen = hyphen
         if self.hyphen:
             self.pattern = MY_KAD_RE_HYPHENATED
@@ -48,11 +45,8 @@ class MyKadField(CharField):
 
         match = self.pattern.match(value)
 
-        if not match:
-            raise ValidationError(self.error_messages['invalid'])
-
         pb = value[7:9] if self.hyphen else value[6:8]
-        if pb in INVALID_PLACE_OF_BIRTH:
+        if (not match) or (pb in INVALID_PLACE_OF_BIRTH):
             raise ValidationError(self.error_messages['invalid'])
 
         return value
