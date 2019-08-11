@@ -20,6 +20,7 @@ class MyKadField(CharField):
     A form field that validates input as a Malaysia MyKad number.
 
     Conforms to the YYMMDD-PB-###G or YYMMDDPB###G format
+    More info: https://en.wikipedia.org/wiki/Malaysian_identity_card
 
     .. versionadded:: 2.2
     """
