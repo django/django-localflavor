@@ -11,16 +11,16 @@ first version.
 
 **All Changes**
 
-- [x] Add an entry to the docs/changelog.rst describing the change.
+- [ ] Add an entry to the docs/changelog.rst describing the change.
 
-- [x] Add an entry for your name in the docs/authors.rst file if it's not
+- [ ] Add an entry for your name in the docs/authors.rst file if it's not
       already there.
 
 **New Fields Only**
 
-- [x] Prefix the country code to all fields.
+- [ ] Prefix the country code to all fields.
 
-- [X] Field names should be easily understood by developers from the target
+- [ ] Field names should be easily understood by developers from the target
       localflavor country. This means that English translations are usually
       not the best name unless it's for something standard like postal code,
       tax / VAT ID etc.
@@ -29,10 +29,10 @@ first version.
       international English; ZipCode is a term specific to the United
       States postal system.
 
-- [X] Add meaningful tests. 100% test coverage is not required but all
+- [ ] Add meaningful tests. 100% test coverage is not required but all
       validation edge cases should be covered.
 
-- [x] Add `.. versionadded:: <next-version>` comment markers to new
+- [ ] Add `.. versionadded:: <next-version>` comment markers to new
       localflavors.
 
-- [x] Add documentation for all fields.
+- [ ] Add documentation for all fields.
