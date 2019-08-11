@@ -99,6 +99,7 @@ Authors
 * Simonas Kazlauskas
 * Simon Charette
 * Stefan Kjartansson
+* Syafiq Termizi
 * tadeo
 * Thiago Avelino
 * Thor K. Høgås
