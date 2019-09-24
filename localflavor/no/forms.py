@@ -186,3 +186,39 @@ class NOPhoneNumberField(RegexField, DeprecatedPhoneNumberFormFieldMixin):
         super(NOPhoneNumberField, self).__init__(
             r'^(?:\+47)? ?(\d{3}\s?\d{2}\s?\d{3}|\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$',
             max_length, min_length, *args, **kwargs)
+
+
+class NOOrganisationNumberField(RegexField):
+    """
+    Validates the input as a Norwegian "organisasjonsnummer", which is a 9 digit number
+    with a checksum using modulus 11.
+    """
+
+    default_error_messages = {'invalid': _("Please enter a valid Norwegian organisation number")}
+
+    def __init__(self, *args, **kwargs):
+        kwargs['regex'] = re.compile(r'^(NO )?(\d{3}) ?(\d{3}) ? (\d{3})( MVA)?$', re.IGNORECASE)
+
+    def to_python(self, value):
+        match = self.regex.match(value)
+        if match:
+            groups = match.groups()
+            prefix, suffix = groups[0] if groups[0] else '', groups[-1] if groups[-1] else ''
+            return prefix + ''.join(match.groups()[1:4]) + suffix
+        return value
+
+    def clean(self, value):
+        value = super(NOOrganisationNumberField, self).clean(value)
+        if not value and not self.required:
+            return value
+        number = ''.join(self.regex.match(value).groups()[1:4])
+        checksum = int(number[-1])
+        digits = [int(x) for x in list(number[:8])]
+        weights = [2, 3, 4, 5, 6, 7, 2, 3]
+        result = sum(w * (int(x)) for w, x in zip(weights, digits))
+        remainder = result % 11
+        if remainder == 11:
+            remainder = 0
+        if remainder == 10 or remainder != checksum:
+            raise ValidationError(self.default_error_messages['invalid'], code='invalid')
+        return value
