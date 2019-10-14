@@ -15,7 +15,7 @@ matrix:
       env: TOXENV=py35-1.11
     - python: 3.6
       env: TOXENV=py36-1.11
-    - python: pypy3.5
+    - python: pypy3
       env: TOXENV=pypy3-1.11
     - python: 3.4
       env: TOXENV=py34-2.0
@@ -25,7 +25,7 @@ matrix:
       env: TOXENV=py36-2.0
     - python: 3.7
       env: TOXENV=py37-2.0
-    - python: pypy3.5
+    - python: pypy3
       env: TOXENV=pypy3-2.0
     - python: 3.5
       env: TOXENV=py35-2.1
@@ -33,7 +33,7 @@ matrix:
       env: TOXENV=py36-2.1
     - python: 3.7
       env: TOXENV=py37-2.1
-    - python: pypy3.5
+    - python: pypy3
       env: TOXENV=pypy3-2.1
     - python: 3.5
       env: TOXENV=py35-2.2
@@ -41,8 +41,16 @@ matrix:
       env: TOXENV=py36-2.2
     - python: 3.7
       env: TOXENV=py37-2.2
-    - python: pypy3.5
+    - python: pypy3
       env: TOXENV=pypy3-2.2
+    - python: 3.6
+      env: TOXENV=py36-3.0
+    - python: 3.7
+      env: TOXENV=py37-3.0
+    - python: 3.8-dev
+      env: TOXENV=py38-3.0
+    - python: pypy3
+      env: TOXENV=pypy3-3.0
     - python: 3.6
       env: TOXENV=py36-master
     - python: 3.7
@@ -52,7 +60,7 @@ matrix:
       env: TOXENV=py36-master
     - python: 3.7
       env: TOXENV=py37-master
-    - python: pypy3.5
+    - python: pypy3
       env: TOXENV=pypy3-master
 install:
     - pip wheel -r tests/requirements.txt codecov
