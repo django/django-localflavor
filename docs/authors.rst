@@ -19,6 +19,7 @@ Authors
 * Andreas Pelme
 * Andres Torres Marroquin
 * Andrew Godwin
+* Arthur de Jong
 * Aymeric Augustin
 * baffolobill
 * Baptiste Darthenay
