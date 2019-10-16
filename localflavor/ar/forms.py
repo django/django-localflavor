@@ -3,6 +3,8 @@
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
+from stdnum.ar import cbu
+from stdnum.exceptions import InvalidLength, InvalidChecksum, ValidationError as StdnumValidationError
 
 from .ar_provinces import PROVINCE_CHOICES
 
@@ -143,6 +145,7 @@ class ARCBUField(CharField):
     https://es.wikipedia.org/wiki/Clave_Bancaria_Uniforme
 
     .. versionadded:: 1.3
+    .. versionchanged:: 3.0
     """
 
     default_error_messages = {
@@ -152,42 +155,16 @@ class ARCBUField(CharField):
         'checksum': _('Invalid CBU.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        kwargs['min_length'] = kwargs['max_length'] = 22
-        super().__init__(*args, **kwargs)
-
-    def _valid_block(self, block, ponderator):
-        number = block[:-1]
-        v_digit = int(block[-1])
-
-        block_sum = sum(x * int(y) for x, y in zip(ponderator, number))
-        remainder = block_sum % 10
-
-        # The verification digit and the result of the calculation must be the same.
-        # In the edge case that the remainder is 0, the verification digit must be 0 too.
-        if remainder == 0:
-            return v_digit == remainder
-
-        return v_digit == (10 - remainder)
-
-    def _checksum(self, value):
-        block_1 = value[0:8]
-        block_2 = value[8:22]
-
-        ponderator_1 = (9, 7, 1, 3, 9, 7, 1, 3)
-        ponderator_2 = (3, 9, 7, 1, 3, 9, 7, 1, 3, 9, 7, 1, 3)
-
-        is_valid_1 = self._valid_block(block_1, ponderator_1)
-        is_valid_2 = self._valid_block(block_2, ponderator_2)
-        return is_valid_1 and is_valid_2
-
     def clean(self, value):
         """Value must be a 22 digits long number."""
         value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-        if not value.isdigit():
-            raise ValidationError(self.error_messages['invalid'])
-        if not self._checksum(value):
+        try:
+            return cbu.validate(value)
+        except InvalidLength:
+            raise ValidationError(self.error_messages['max_length'])
+        except InvalidChecksum:
             raise ValidationError(self.error_messages['checksum'])
-        return value
+        except StdnumValidationError:
+            raise ValidationError(self.error_messages['invalid'])

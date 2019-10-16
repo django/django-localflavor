@@ -19,6 +19,8 @@ Modifications to existing flavors:
 
 - Extended Danish `DK_POSTALCODES` with small Danish islands getting independant post code since 2017.
   (`gh-380 <https://github.com/django/django-localflavor/pull/380>`_).
+- Switched incorrect `ar.forms.ARCBUField` implementation to use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead
+  (`gh-391 <https://github.com/django/django-localflavor/pull/391>`_).
 
 Other changes:
 
