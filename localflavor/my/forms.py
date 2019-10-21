@@ -22,7 +22,7 @@ class MyKadField(CharField):
     Conforms to the YYMMDD-PB-###G or YYMMDDPB###G format
     More info: https://en.wikipedia.org/wiki/Malaysian_identity_card
 
-    .. versionadded:: 2.2
+    .. versionadded:: 3.0
     """
 
     default_error_messages = {
