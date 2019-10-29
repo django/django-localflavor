@@ -15,6 +15,8 @@ class SIEMSOField(CharField):
     A form for validating Slovenian personal identification number.
 
     Additionally stores gender, nationality and birthday to self.info dictionary.
+
+    .. versionchanged:: 3.0
     """
 
     default_error_messages = {
@@ -28,8 +30,6 @@ class SIEMSOField(CharField):
         super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-
-        value = value.strip()
 
         m = self._regex_match(value)
         day, month, year, nationality, gender, checksum = [int(i) for i in m.groups()]
@@ -84,6 +84,8 @@ class SITaxNumberField(CharField):
     Valid input is SIXXXXXXXX or XXXXXXXX where X is a number.
 
     http://zylla.wipos.p.lodz.pl/ut/translation.html#PZSI
+
+    .. versionchanged:: 3.0
     """
 
     default_error_messages = {
@@ -95,8 +97,6 @@ class SITaxNumberField(CharField):
         super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-
-        value = value.strip()
 
         m = self.sitax_regex.match(value)
         if m is None:

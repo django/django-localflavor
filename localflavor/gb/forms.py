@@ -17,6 +17,8 @@ class GBPostcodeField(CharField):
     BS7666 address types: https://data.gov.uk/education-standards/sites/default/files/CL-Address-Line-Type-v3-0.pdf
 
     The value is uppercased and a space added in the correct place, if required.
+
+    .. versionchanged:: 3.0
     """
 
     default_error_messages = {
@@ -31,7 +33,7 @@ class GBPostcodeField(CharField):
         value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-        postcode = value.upper().strip()
+        postcode = value.upper()
         # Put a single space before the incode (second part).
         postcode = self.space_regex.sub(r' \1', postcode)
         if not self.postcode_regex.search(postcode):
