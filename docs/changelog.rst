@@ -22,6 +22,9 @@ Modifications to existing flavors:
   (`gh-380 <https://github.com/django/django-localflavor/pull/380>`_).
 - Switched incorrect `ar.forms.ARCBUField` implementation to use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead
   (`gh-391 <https://github.com/django/django-localflavor/pull/391>`_).
+- Use set value of `strip` in fields that inherit from `django.forms.CharField`: `gb.forms.GBPostcodeField`,
+  `si.forms.SIEMSOField`, `si.forms.SITaxNumberField` and `za.forms.ZAIDField`
+  (`gh-392 <https://github.com/django/django-localflavor/pull/392>`_).
 
 Other changes:
 

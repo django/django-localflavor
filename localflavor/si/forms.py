@@ -29,8 +29,6 @@ class SIEMSOField(CharField):
         if value in self.empty_values:
             return self.empty_value
 
-        value = value.strip()
-
         m = self._regex_match(value)
         day, month, year, nationality, gender, checksum = [int(i) for i in m.groups()]
 
@@ -95,8 +93,6 @@ class SITaxNumberField(CharField):
         super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-
-        value = value.strip()
 
         m = self.sitax_regex.match(value)
         if m is None:

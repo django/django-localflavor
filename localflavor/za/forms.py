@@ -15,7 +15,7 @@ class ZAIDField(CharField):
     A form field for South African ID numbers.
 
     The checksum is validated using the Luhn checksum, and uses a simlistic (read: not entirely accurate)
-    check for the birthdate
+    check for the birth date.
     """
 
     default_error_messages = {
@@ -29,7 +29,7 @@ class ZAIDField(CharField):
             return self.empty_value
 
         # strip spaces and dashes
-        value = value.strip().replace(' ', '').replace('-', '')
+        value = value.replace(' ', '').replace('-', '')
 
         match = re.match(id_re, value)
 
