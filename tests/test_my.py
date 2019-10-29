@@ -1,11 +1,11 @@
 from django.test import SimpleTestCase
 
-from localflavor.my.forms import MyKadField
+from localflavor.my.forms import MyKadFormField
 
 
 class MYLocalFlavorTests(SimpleTestCase):
 
-    def test_MyKadField(self):
+    def test_MyKadFormField(self):
         error_format = ['Invalid MyKad number.']
         valid = {
             '900127-01-1234': '900127011234',
@@ -32,4 +32,15 @@ class MYLocalFlavorTests(SimpleTestCase):
             '940827-96-1234': error_format,
             '940827-97-1234': error_format,
         }
-        self.assertFieldOutput(MyKadField, valid, invalid)
+        self.assertFieldOutput(MyKadFormField, valid, invalid)
+
+    def test_my_kad_form_field_formatting(self):
+        form_field = MyKadFormField()
+
+        self.assertIsNone(form_field.prepare_value(None))
+        self.assertEqual(
+            form_field.prepare_value('940731077891'), '940731-07-7891'
+        )
+
+        self.assertEqual(form_field.to_python('940731077891'), '940731077891')
+        self.assertEqual(form_field.to_python('940731-07-7891'), '940731077891')

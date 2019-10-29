@@ -1,12 +1,10 @@
-import re
-
 from stdnum.my import nric
 from django.forms.fields import CharField
 from django.forms import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
 
-class MyKadField(CharField):
+class MyKadFormField(CharField):
     """
     A form field that validates input as a Malaysia MyKad number.
 
@@ -39,4 +37,6 @@ class MyKadField(CharField):
 
     def prepare_value(self, value):
         value = super().prepare_value(value)
+        if value is None:
+            return value
         return nric.format(value)
