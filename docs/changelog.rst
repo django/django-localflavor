@@ -10,6 +10,7 @@ use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead.
 New flavors:
 
 - Egypt local flavor
+- Malaysia local flavor
 
 New fields for existing flavors:
 
