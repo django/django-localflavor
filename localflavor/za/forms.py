@@ -16,8 +16,6 @@ class ZAIDField(CharField):
 
     The checksum is validated using the Luhn checksum, and uses a simlistic (read: not entirely accurate)
     check for the birth date.
-
-    .. versionchanged:: 3.0
     """
 
     default_error_messages = {

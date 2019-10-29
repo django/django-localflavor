@@ -17,8 +17,6 @@ class GBPostcodeField(CharField):
     BS7666 address types: https://data.gov.uk/education-standards/sites/default/files/CL-Address-Line-Type-v3-0.pdf
 
     The value is uppercased and a space added in the correct place, if required.
-
-    .. versionchanged:: 3.0
     """
 
     default_error_messages = {
