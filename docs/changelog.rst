@@ -25,6 +25,8 @@ Modifications to existing flavors:
 - Use set value of `strip` in fields that inherit from `django.forms.CharField`: `gb.forms.GBPostcodeField`,
   `si.forms.SIEMSOField`, `si.forms.SITaxNumberField` and `za.forms.ZAIDField`
   (`gh-392 <https://github.com/django/django-localflavor/pull/392>`_).
+- Updated Icelandic `IS_POSTALCODES` with missing entries and removed non-existing ones.
+  (`gh-380 <https://github.com/django/django-localflavor/pull/>`_).
 
 Other changes:
 
