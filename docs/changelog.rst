@@ -26,7 +26,7 @@ Modifications to existing flavors:
   `si.forms.SIEMSOField`, `si.forms.SITaxNumberField` and `za.forms.ZAIDField`
   (`gh-392 <https://github.com/django/django-localflavor/pull/392>`_).
 - Updated Icelandic `IS_POSTALCODES` with missing entries and removed non-existing ones.
-  (`gh-380 <https://github.com/django/django-localflavor/pull/394>`_).
+  (`gh-394 <https://github.com/django/django-localflavor/pull/394>`_).
 
 Other changes:
 
