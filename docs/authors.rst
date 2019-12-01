@@ -49,6 +49,7 @@ Authors
 * Grzes Furga
 * Hamad AlGhanim
 * Henrik Ossipoff Hansen
+* Heri Priyatno
 * Honza Král
 * Horst Gutmann
 * Igor Támara

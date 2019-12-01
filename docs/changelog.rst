@@ -26,6 +26,9 @@ Modifications to existing flavors:
   `si.forms.SIEMSOField`, `si.forms.SITaxNumberField` and `za.forms.ZAIDField`
   (`gh-392 <https://github.com/django/django-localflavor/pull/392>`_).
 
+- Add Kalimantan Utara in  `PROVINCE_CHOICES` for Indonesia local flavor.
+  (`gh-385 <https://github.com/django/django-localflavor/pull/385>`_).
+
 Other changes:
 
 - Removed deprecated `generic.checksums.luhn` and `generic.checksums.ean` functions
