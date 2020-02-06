@@ -34,7 +34,6 @@ Other changes:
 
 - Removed deprecated `generic.checksums.luhn` and `generic.checksums.ean` functions
   (`gh-379 <https://github.com/django/django-localflavor/pull/379>`_).
-- Re
 
 
 2.2   (2019-05-07)
