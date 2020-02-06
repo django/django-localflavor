@@ -7,6 +7,8 @@ Changelog
 The deprecated `generic.checksums.luhn` and `generic.checksums.ean` functions have been removed in this release. Please
 use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead.
 
+Some Icelandic postcodes in `IS_POSTALCODES` have had their spelling updated, and some entries have been removed entirely.
+
 New flavors:
 
 - Egypt local flavor
@@ -25,6 +27,8 @@ Modifications to existing flavors:
 - Use set value of `strip` in fields that inherit from `django.forms.CharField`: `gb.forms.GBPostcodeField`,
   `si.forms.SIEMSOField`, `si.forms.SITaxNumberField` and `za.forms.ZAIDField`
   (`gh-392 <https://github.com/django/django-localflavor/pull/392>`_).
+- Updated Icelandic `IS_POSTALCODES` with missing entries, updated spelling of entries, and removed non-existing ones.
+  (`gh-394 <https://github.com/django/django-localflavor/pull/394>`_).
 
 - Add Kalimantan Utara in  `PROVINCE_CHOICES` for Indonesia local flavor.
   (`gh-385 <https://github.com/django/django-localflavor/pull/385>`_).
