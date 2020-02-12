@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-31 10:07-0400\n"
+"POT-Creation-Date: 2020-02-12 09:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,39 +112,39 @@ msgstr ""
 msgid "Tucumán"
 msgstr ""
 
-#: ar/forms.py:28
+#: ar/forms.py:30
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
 msgstr ""
 
-#: ar/forms.py:52 pe/forms.py:21 pe/forms.py:49
+#: ar/forms.py:54 pe/forms.py:21 pe/forms.py:49
 msgid "This field requires only numbers."
 msgstr ""
 
-#: ar/forms.py:53
+#: ar/forms.py:55
 msgid "This field requires 7 or 8 digits."
 msgstr ""
 
-#: ar/forms.py:92
+#: ar/forms.py:94
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
 msgstr ""
 
-#: ar/forms.py:93
+#: ar/forms.py:95
 msgid "Invalid CUIT."
 msgstr ""
 
-#: ar/forms.py:94
+#: ar/forms.py:96
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
 msgstr ""
 
-#: ar/forms.py:149
+#: ar/forms.py:152
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
 msgstr ""
 
-#: ar/forms.py:150 ar/forms.py:151
+#: ar/forms.py:153 ar/forms.py:154
 msgid "CBU must be exactly 22 digits long."
 msgstr ""
 
-#: ar/forms.py:152
+#: ar/forms.py:155
 msgid "Invalid CBU."
 msgstr ""
 
@@ -828,15 +828,15 @@ msgid ""
 "format."
 msgstr ""
 
-#: dk/dk_municipalities.py:6 dk/dk_postalcodes.py:686
+#: dk/dk_municipalities.py:6 dk/dk_postalcodes.py:691
 msgid "Albertslund"
 msgstr ""
 
-#: dk/dk_municipalities.py:7 dk/dk_postalcodes.py:745
+#: dk/dk_municipalities.py:7 dk/dk_postalcodes.py:750
 msgid "Allerød"
 msgstr ""
 
-#: dk/dk_municipalities.py:8 dk/dk_postalcodes.py:701
+#: dk/dk_municipalities.py:8 dk/dk_postalcodes.py:706
 msgid "Ballerup"
 msgstr ""
 
@@ -844,11 +844,11 @@ msgstr ""
 msgid "Bornholm"
 msgstr ""
 
-#: dk/dk_municipalities.py:10 dk/dk_postalcodes.py:684
+#: dk/dk_municipalities.py:10 dk/dk_postalcodes.py:689
 msgid "Brøndby"
 msgstr ""
 
-#: dk/dk_municipalities.py:11 dk/dk_postalcodes.py:705
+#: dk/dk_municipalities.py:11 dk/dk_postalcodes.py:710
 msgid "Dragør"
 msgstr ""
 
@@ -856,15 +856,15 @@ msgstr ""
 msgid "Egedal"
 msgstr ""
 
-#: dk/dk_municipalities.py:13 dk/dk_postalcodes.py:747
+#: dk/dk_municipalities.py:13 dk/dk_postalcodes.py:752
 msgid "Fredensborg"
 msgstr ""
 
-#: dk/dk_municipalities.py:14 dk/dk_postalcodes.py:675
+#: dk/dk_municipalities.py:14 dk/dk_postalcodes.py:680
 msgid "Frederiksberg"
 msgstr ""
 
-#: dk/dk_municipalities.py:15 dk/dk_postalcodes.py:753
+#: dk/dk_municipalities.py:15 dk/dk_postalcodes.py:758
 msgid "Frederikssund"
 msgstr ""
 
@@ -872,7 +872,7 @@ msgstr ""
 msgid "Furesø"
 msgstr ""
 
-#: dk/dk_municipalities.py:17 dk/dk_postalcodes.py:707
+#: dk/dk_municipalities.py:17 dk/dk_postalcodes.py:712
 msgid "Gentofte"
 msgstr ""
 
@@ -880,7 +880,7 @@ msgstr ""
 msgid "Gladsaxe"
 msgstr ""
 
-#: dk/dk_municipalities.py:19 dk/dk_postalcodes.py:683
+#: dk/dk_municipalities.py:19 dk/dk_postalcodes.py:688
 msgid "Glostrup"
 msgstr ""
 
@@ -892,19 +892,19 @@ msgstr ""
 msgid "Halsnæs"
 msgstr ""
 
-#: dk/dk_municipalities.py:22 dk/dk_postalcodes.py:723
+#: dk/dk_municipalities.py:22 dk/dk_postalcodes.py:728
 msgid "Helsingør"
 msgstr ""
 
-#: dk/dk_municipalities.py:23 dk/dk_postalcodes.py:699
+#: dk/dk_municipalities.py:23 dk/dk_postalcodes.py:704
 msgid "Herlev"
 msgstr ""
 
-#: dk/dk_municipalities.py:24 dk/dk_postalcodes.py:744
+#: dk/dk_municipalities.py:24 dk/dk_postalcodes.py:749
 msgid "Hillerød"
 msgstr ""
 
-#: dk/dk_municipalities.py:25 dk/dk_postalcodes.py:691
+#: dk/dk_municipalities.py:25 dk/dk_postalcodes.py:696
 msgid "Hvidovre"
 msgstr ""
 
@@ -912,11 +912,11 @@ msgstr ""
 msgid "Høje-Taastrup"
 msgstr ""
 
-#: dk/dk_municipalities.py:27 dk/dk_postalcodes.py:720
+#: dk/dk_municipalities.py:27 dk/dk_postalcodes.py:725
 msgid "Hørsholm"
 msgstr ""
 
-#: dk/dk_municipalities.py:28 dk/dk_postalcodes.py:689
+#: dk/dk_municipalities.py:28 dk/dk_postalcodes.py:694
 msgid "Ishøj"
 msgstr ""
 
@@ -932,7 +932,7 @@ msgstr ""
 msgid "Rudersdal"
 msgstr ""
 
-#: dk/dk_municipalities.py:32 dk/dk_postalcodes.py:685
+#: dk/dk_municipalities.py:32 dk/dk_postalcodes.py:690
 msgid "Rødovre"
 msgstr ""
 
@@ -940,7 +940,7 @@ msgstr ""
 msgid "Tårnby"
 msgstr ""
 
-#: dk/dk_municipalities.py:34 dk/dk_postalcodes.py:687
+#: dk/dk_municipalities.py:34 dk/dk_postalcodes.py:692
 msgid "Vallensbæk"
 msgstr ""
 
@@ -948,20 +948,20 @@ msgstr ""
 msgid "Favrskov"
 msgstr ""
 
-#: dk/dk_municipalities.py:41 dk/dk_postalcodes.py:1186
+#: dk/dk_municipalities.py:41 dk/dk_postalcodes.py:1202
 msgid "Hedensted"
 msgstr ""
 
-#: dk/dk_municipalities.py:42 dk/dk_postalcodes.py:1078
-#: dk/dk_postalcodes.py:1079
+#: dk/dk_municipalities.py:42 dk/dk_postalcodes.py:1094
+#: dk/dk_postalcodes.py:1095
 msgid "Herning"
 msgstr ""
 
-#: dk/dk_municipalities.py:43 dk/dk_postalcodes.py:1087
+#: dk/dk_municipalities.py:43 dk/dk_postalcodes.py:1103
 msgid "Holstebro"
 msgstr ""
 
-#: dk/dk_municipalities.py:44 dk/dk_postalcodes.py:1184
+#: dk/dk_municipalities.py:44 dk/dk_postalcodes.py:1200
 msgid "Horsens"
 msgstr ""
 
@@ -969,7 +969,7 @@ msgstr ""
 msgid "Ikast-Brande"
 msgstr ""
 
-#: dk/dk_municipalities.py:46 dk/dk_postalcodes.py:1093
+#: dk/dk_municipalities.py:46 dk/dk_postalcodes.py:1109
 msgid "Lemvig"
 msgstr ""
 
@@ -977,7 +977,7 @@ msgstr ""
 msgid "Norddjurs"
 msgstr ""
 
-#: dk/dk_municipalities.py:48 dk/dk_postalcodes.py:1138
+#: dk/dk_municipalities.py:48 dk/dk_postalcodes.py:1154
 msgid "Odder"
 msgstr ""
 
@@ -989,23 +989,23 @@ msgstr ""
 msgid "Ringkøbing-Skjern"
 msgstr ""
 
-#: dk/dk_municipalities.py:51 dk/dk_postalcodes.py:1139
+#: dk/dk_municipalities.py:51 dk/dk_postalcodes.py:1155
 msgid "Samsø"
 msgstr ""
 
-#: dk/dk_municipalities.py:52 dk/dk_postalcodes.py:1174
+#: dk/dk_municipalities.py:52 dk/dk_postalcodes.py:1190
 msgid "Silkeborg"
 msgstr ""
 
-#: dk/dk_municipalities.py:53 dk/dk_postalcodes.py:1181
+#: dk/dk_municipalities.py:53 dk/dk_postalcodes.py:1197
 msgid "Skanderborg"
 msgstr ""
 
-#: dk/dk_municipalities.py:54 dk/dk_postalcodes.py:1107
+#: dk/dk_municipalities.py:54 dk/dk_postalcodes.py:1123
 msgid "Skive"
 msgstr ""
 
-#: dk/dk_municipalities.py:55 dk/dk_postalcodes.py:1092
+#: dk/dk_municipalities.py:55 dk/dk_postalcodes.py:1108
 msgid "Struer"
 msgstr ""
 
@@ -1013,7 +1013,7 @@ msgstr ""
 msgid "Syddjurs"
 msgstr ""
 
-#: dk/dk_municipalities.py:57 dk/dk_postalcodes.py:1198
+#: dk/dk_municipalities.py:57 dk/dk_postalcodes.py:1216
 msgid "Viborg"
 msgstr ""
 
@@ -1021,15 +1021,15 @@ msgstr ""
 msgid "Aarhus"
 msgstr ""
 
-#: dk/dk_municipalities.py:64 dk/dk_postalcodes.py:1270
+#: dk/dk_municipalities.py:64 dk/dk_postalcodes.py:1288
 msgid "Brønderslev"
 msgstr ""
 
-#: dk/dk_municipalities.py:65 dk/dk_postalcodes.py:1279
+#: dk/dk_municipalities.py:65 dk/dk_postalcodes.py:1297
 msgid "Frederikshavn"
 msgstr ""
 
-#: dk/dk_municipalities.py:66 dk/dk_postalcodes.py:1274
+#: dk/dk_municipalities.py:66 dk/dk_postalcodes.py:1292
 msgid "Hjørring"
 msgstr ""
 
@@ -1037,7 +1037,7 @@ msgstr ""
 msgid "Jammerbugt"
 msgstr ""
 
-#: dk/dk_municipalities.py:68 dk/dk_postalcodes.py:1280
+#: dk/dk_municipalities.py:68 dk/dk_postalcodes.py:1298
 msgid "Læsø"
 msgstr ""
 
@@ -1053,7 +1053,7 @@ msgstr ""
 msgid "Rebild"
 msgstr ""
 
-#: dk/dk_municipalities.py:72 dk/dk_postalcodes.py:1098
+#: dk/dk_municipalities.py:72 dk/dk_postalcodes.py:1114
 msgid "Thisted"
 msgstr ""
 
@@ -1061,16 +1061,16 @@ msgstr ""
 msgid "Vesthimmerland"
 msgstr ""
 
-#: dk/dk_municipalities.py:74 dk/dk_postalcodes.py:1221
-#: dk/dk_postalcodes.py:1222 dk/dk_postalcodes.py:1223
+#: dk/dk_municipalities.py:74 dk/dk_postalcodes.py:1239
+#: dk/dk_postalcodes.py:1240 dk/dk_postalcodes.py:1241
 msgid "Aalborg"
 msgstr ""
 
-#: dk/dk_municipalities.py:80 dk/dk_postalcodes.py:834
+#: dk/dk_municipalities.py:80 dk/dk_postalcodes.py:842
 msgid "Faxe"
 msgstr ""
 
-#: dk/dk_municipalities.py:81 dk/dk_postalcodes.py:694
+#: dk/dk_municipalities.py:81 dk/dk_postalcodes.py:699
 msgid "Greve"
 msgstr ""
 
@@ -1078,19 +1078,19 @@ msgstr ""
 msgid "Guldborgsund"
 msgstr ""
 
-#: dk/dk_municipalities.py:83 dk/dk_postalcodes.py:798
+#: dk/dk_municipalities.py:83 dk/dk_postalcodes.py:805
 msgid "Holbæk"
 msgstr ""
 
-#: dk/dk_municipalities.py:84 dk/dk_postalcodes.py:806
+#: dk/dk_municipalities.py:84 dk/dk_postalcodes.py:814
 msgid "Kalundborg"
 msgstr ""
 
-#: dk/dk_municipalities.py:85 dk/dk_postalcodes.py:829
+#: dk/dk_municipalities.py:85 dk/dk_postalcodes.py:837
 msgid "Køge"
 msgstr ""
 
-#: dk/dk_municipalities.py:86 dk/dk_postalcodes.py:799
+#: dk/dk_municipalities.py:86 dk/dk_postalcodes.py:807
 msgid "Lejre"
 msgstr ""
 
@@ -1098,7 +1098,7 @@ msgstr ""
 msgid "Lolland"
 msgstr ""
 
-#: dk/dk_municipalities.py:88 dk/dk_postalcodes.py:847
+#: dk/dk_municipalities.py:88 dk/dk_postalcodes.py:855
 msgid "Næstved"
 msgstr ""
 
@@ -1106,15 +1106,15 @@ msgstr ""
 msgid "Odsherred"
 msgstr ""
 
-#: dk/dk_municipalities.py:90 dk/dk_postalcodes.py:773 dk/dk_postalcodes.py:774
+#: dk/dk_municipalities.py:90 dk/dk_postalcodes.py:778 dk/dk_postalcodes.py:779
 msgid "Ringsted"
 msgstr ""
 
-#: dk/dk_municipalities.py:91 dk/dk_postalcodes.py:767
+#: dk/dk_municipalities.py:91 dk/dk_postalcodes.py:772
 msgid "Roskilde"
 msgstr ""
 
-#: dk/dk_municipalities.py:92 dk/dk_postalcodes.py:783
+#: dk/dk_municipalities.py:92 dk/dk_postalcodes.py:788
 msgid "Slagelse"
 msgstr ""
 
@@ -1122,7 +1122,7 @@ msgstr ""
 msgid "Solrød"
 msgstr ""
 
-#: dk/dk_municipalities.py:94 dk/dk_postalcodes.py:781
+#: dk/dk_municipalities.py:94 dk/dk_postalcodes.py:786
 msgid "Sorø"
 msgstr ""
 
@@ -1130,29 +1130,29 @@ msgstr ""
 msgid "Stevns"
 msgstr ""
 
-#: dk/dk_municipalities.py:96 dk/dk_postalcodes.py:853
+#: dk/dk_municipalities.py:96 dk/dk_postalcodes.py:861
 msgid "Vordingborg"
 msgstr ""
 
-#: dk/dk_municipalities.py:102 dk/dk_postalcodes.py:929
+#: dk/dk_municipalities.py:102 dk/dk_postalcodes.py:942
 msgid "Assens"
 msgstr ""
 
-#: dk/dk_municipalities.py:103 dk/dk_postalcodes.py:1066
+#: dk/dk_municipalities.py:103 dk/dk_postalcodes.py:1082
 msgid "Billund"
 msgstr ""
 
-#: dk/dk_municipalities.py:104 dk/dk_postalcodes.py:1010
-#: dk/dk_postalcodes.py:1011
+#: dk/dk_municipalities.py:104 dk/dk_postalcodes.py:1026
+#: dk/dk_postalcodes.py:1027
 msgid "Esbjerg"
 msgstr ""
 
-#: dk/dk_municipalities.py:105 dk/dk_postalcodes.py:1015
+#: dk/dk_municipalities.py:105 dk/dk_postalcodes.py:1031
 msgid "Fanø"
 msgstr ""
 
-#: dk/dk_municipalities.py:106 dk/dk_postalcodes.py:1049
-#: dk/dk_postalcodes.py:1050 dk/dk_postalcodes.py:1053
+#: dk/dk_municipalities.py:106 dk/dk_postalcodes.py:1065
+#: dk/dk_postalcodes.py:1066 dk/dk_postalcodes.py:1069
 msgid "Fredericia"
 msgstr ""
 
@@ -1160,15 +1160,15 @@ msgstr ""
 msgid "Faaborg-Midtfyn"
 msgstr ""
 
-#: dk/dk_municipalities.py:108 dk/dk_postalcodes.py:971
+#: dk/dk_municipalities.py:108 dk/dk_postalcodes.py:986
 msgid "Haderslev"
 msgstr ""
 
-#: dk/dk_municipalities.py:109 dk/dk_postalcodes.py:903
+#: dk/dk_municipalities.py:109 dk/dk_postalcodes.py:913
 msgid "Kerteminde"
 msgstr ""
 
-#: dk/dk_municipalities.py:110 dk/dk_postalcodes.py:961
+#: dk/dk_municipalities.py:110 dk/dk_postalcodes.py:976
 msgid "Kolding"
 msgstr ""
 
@@ -1176,7 +1176,7 @@ msgstr ""
 msgid "Langeland"
 msgstr ""
 
-#: dk/dk_municipalities.py:112 dk/dk_postalcodes.py:921
+#: dk/dk_municipalities.py:112 dk/dk_postalcodes.py:931
 msgid "Middelfart"
 msgstr ""
 
@@ -1184,7 +1184,7 @@ msgstr ""
 msgid "Nordfyn"
 msgstr ""
 
-#: dk/dk_municipalities.py:114 dk/dk_postalcodes.py:942
+#: dk/dk_municipalities.py:114 dk/dk_postalcodes.py:955
 msgid "Nyborg"
 msgstr ""
 
@@ -1192,27 +1192,27 @@ msgstr ""
 msgid "Odense"
 msgstr ""
 
-#: dk/dk_municipalities.py:116 dk/dk_postalcodes.py:936
+#: dk/dk_municipalities.py:116 dk/dk_postalcodes.py:949
 msgid "Svendborg"
 msgstr ""
 
-#: dk/dk_municipalities.py:117 dk/dk_postalcodes.py:986
+#: dk/dk_municipalities.py:117 dk/dk_postalcodes.py:1002
 msgid "Sønderborg"
 msgstr ""
 
-#: dk/dk_municipalities.py:118 dk/dk_postalcodes.py:976
+#: dk/dk_municipalities.py:118 dk/dk_postalcodes.py:992
 msgid "Tønder"
 msgstr ""
 
-#: dk/dk_municipalities.py:119 dk/dk_postalcodes.py:1024
+#: dk/dk_municipalities.py:119 dk/dk_postalcodes.py:1040
 msgid "Varde"
 msgstr ""
 
-#: dk/dk_municipalities.py:120 dk/dk_postalcodes.py:998
+#: dk/dk_municipalities.py:120 dk/dk_postalcodes.py:1014
 msgid "Vejen"
 msgstr ""
 
-#: dk/dk_municipalities.py:121 dk/dk_postalcodes.py:1055
+#: dk/dk_municipalities.py:121 dk/dk_postalcodes.py:1071
 msgid "Vejle"
 msgstr ""
 
@@ -1220,7 +1220,7 @@ msgstr ""
 msgid "Ærø"
 msgstr ""
 
-#: dk/dk_municipalities.py:123 dk/dk_postalcodes.py:972
+#: dk/dk_municipalities.py:123 dk/dk_postalcodes.py:987
 msgid "Aabenraa"
 msgstr ""
 
@@ -1244,3040 +1244,3096 @@ msgstr ""
 msgid "Region Syddanmark"
 msgstr ""
 
-#: dk/dk_postalcodes.py:5
+#: dk/dk_postalcodes.py:7
 msgid "Scanning"
 msgstr ""
 
-#: dk/dk_postalcodes.py:6
-msgid "Høje Taastrup"
-msgstr ""
-
-#: dk/dk_postalcodes.py:7 dk/dk_postalcodes.py:13 dk/dk_postalcodes.py:14
-#: dk/dk_postalcodes.py:18 dk/dk_postalcodes.py:20
-msgid "København C"
-msgstr ""
-
 #: dk/dk_postalcodes.py:8
-msgid "Sjælland USF P"
+msgid "Facility"
 msgstr ""
 
 #: dk/dk_postalcodes.py:9
-msgid "Sjælland USF B"
+msgid "Høje Taastrup"
 msgstr ""
 
-#: dk/dk_postalcodes.py:10
-msgid "Udbetaling"
+#: dk/dk_postalcodes.py:10 dk/dk_postalcodes.py:16 dk/dk_postalcodes.py:17
+#: dk/dk_postalcodes.py:23 dk/dk_postalcodes.py:25
+msgid "København C"
 msgstr ""
 
 #: dk/dk_postalcodes.py:11
-msgid "eBrevsprækken"
+msgid "Sjælland USF P"
 msgstr ""
 
 #: dk/dk_postalcodes.py:12
-msgid "Kommuneservice"
+msgid "Sjælland USF B"
+msgstr ""
+
+#: dk/dk_postalcodes.py:13
+msgid "Udbetaling"
+msgstr ""
+
+#: dk/dk_postalcodes.py:14
+msgid "eBrevsprækken"
 msgstr ""
 
 #: dk/dk_postalcodes.py:15
+msgid "Kommuneservice"
+msgstr ""
+
+#: dk/dk_postalcodes.py:18 dk/dk_postalcodes.py:19 dk/dk_postalcodes.py:20
 msgid "Københavns Pakkecenter"
 msgstr ""
 
-#: dk/dk_postalcodes.py:16
+#: dk/dk_postalcodes.py:21
 msgid "Københavns Pakke BRC"
 msgstr ""
 
-#: dk/dk_postalcodes.py:17
+#: dk/dk_postalcodes.py:22
 msgid "Returprint BRC"
 msgstr ""
 
-#: dk/dk_postalcodes.py:19
+#: dk/dk_postalcodes.py:24
 msgid "Internationalt Postcenter"
 msgstr ""
 
-#: dk/dk_postalcodes.py:21 dk/dk_postalcodes.py:22 dk/dk_postalcodes.py:23
-#: dk/dk_postalcodes.py:24 dk/dk_postalcodes.py:25 dk/dk_postalcodes.py:26
-#: dk/dk_postalcodes.py:27 dk/dk_postalcodes.py:28 dk/dk_postalcodes.py:29
-#: dk/dk_postalcodes.py:30 dk/dk_postalcodes.py:31 dk/dk_postalcodes.py:32
-#: dk/dk_postalcodes.py:33 dk/dk_postalcodes.py:34 dk/dk_postalcodes.py:35
-#: dk/dk_postalcodes.py:36 dk/dk_postalcodes.py:37 dk/dk_postalcodes.py:38
-#: dk/dk_postalcodes.py:39 dk/dk_postalcodes.py:40 dk/dk_postalcodes.py:41
-#: dk/dk_postalcodes.py:42 dk/dk_postalcodes.py:43 dk/dk_postalcodes.py:44
-#: dk/dk_postalcodes.py:45 dk/dk_postalcodes.py:46 dk/dk_postalcodes.py:47
-#: dk/dk_postalcodes.py:48 dk/dk_postalcodes.py:49 dk/dk_postalcodes.py:50
-#: dk/dk_postalcodes.py:51 dk/dk_postalcodes.py:52 dk/dk_postalcodes.py:53
-#: dk/dk_postalcodes.py:54 dk/dk_postalcodes.py:55 dk/dk_postalcodes.py:56
-#: dk/dk_postalcodes.py:57 dk/dk_postalcodes.py:58 dk/dk_postalcodes.py:59
-#: dk/dk_postalcodes.py:60 dk/dk_postalcodes.py:61 dk/dk_postalcodes.py:62
-#: dk/dk_postalcodes.py:63 dk/dk_postalcodes.py:64 dk/dk_postalcodes.py:65
-#: dk/dk_postalcodes.py:66 dk/dk_postalcodes.py:67 dk/dk_postalcodes.py:68
-#: dk/dk_postalcodes.py:69 dk/dk_postalcodes.py:70 dk/dk_postalcodes.py:71
-#: dk/dk_postalcodes.py:72 dk/dk_postalcodes.py:73 dk/dk_postalcodes.py:74
-#: dk/dk_postalcodes.py:75 dk/dk_postalcodes.py:76 dk/dk_postalcodes.py:77
-#: dk/dk_postalcodes.py:78 dk/dk_postalcodes.py:79 dk/dk_postalcodes.py:80
-#: dk/dk_postalcodes.py:81 dk/dk_postalcodes.py:82 dk/dk_postalcodes.py:83
-#: dk/dk_postalcodes.py:84 dk/dk_postalcodes.py:85 dk/dk_postalcodes.py:86
-#: dk/dk_postalcodes.py:87 dk/dk_postalcodes.py:88 dk/dk_postalcodes.py:89
-#: dk/dk_postalcodes.py:90 dk/dk_postalcodes.py:91 dk/dk_postalcodes.py:92
-#: dk/dk_postalcodes.py:93 dk/dk_postalcodes.py:94 dk/dk_postalcodes.py:95
-#: dk/dk_postalcodes.py:96 dk/dk_postalcodes.py:97 dk/dk_postalcodes.py:98
-#: dk/dk_postalcodes.py:99 dk/dk_postalcodes.py:100 dk/dk_postalcodes.py:101
-#: dk/dk_postalcodes.py:102 dk/dk_postalcodes.py:103 dk/dk_postalcodes.py:104
-#: dk/dk_postalcodes.py:105 dk/dk_postalcodes.py:106 dk/dk_postalcodes.py:107
-#: dk/dk_postalcodes.py:108 dk/dk_postalcodes.py:109 dk/dk_postalcodes.py:110
-#: dk/dk_postalcodes.py:111 dk/dk_postalcodes.py:112 dk/dk_postalcodes.py:113
-#: dk/dk_postalcodes.py:114 dk/dk_postalcodes.py:115 dk/dk_postalcodes.py:116
-#: dk/dk_postalcodes.py:117 dk/dk_postalcodes.py:118 dk/dk_postalcodes.py:119
-#: dk/dk_postalcodes.py:120 dk/dk_postalcodes.py:121 dk/dk_postalcodes.py:122
-#: dk/dk_postalcodes.py:123 dk/dk_postalcodes.py:124 dk/dk_postalcodes.py:125
-#: dk/dk_postalcodes.py:126 dk/dk_postalcodes.py:127 dk/dk_postalcodes.py:128
-#: dk/dk_postalcodes.py:129 dk/dk_postalcodes.py:130 dk/dk_postalcodes.py:131
-#: dk/dk_postalcodes.py:132 dk/dk_postalcodes.py:133 dk/dk_postalcodes.py:134
-#: dk/dk_postalcodes.py:135 dk/dk_postalcodes.py:136 dk/dk_postalcodes.py:137
-#: dk/dk_postalcodes.py:138 dk/dk_postalcodes.py:139 dk/dk_postalcodes.py:140
-#: dk/dk_postalcodes.py:141 dk/dk_postalcodes.py:142 dk/dk_postalcodes.py:143
-#: dk/dk_postalcodes.py:144 dk/dk_postalcodes.py:145 dk/dk_postalcodes.py:146
-#: dk/dk_postalcodes.py:147 dk/dk_postalcodes.py:148 dk/dk_postalcodes.py:149
-#: dk/dk_postalcodes.py:150 dk/dk_postalcodes.py:151 dk/dk_postalcodes.py:152
-#: dk/dk_postalcodes.py:153 dk/dk_postalcodes.py:154 dk/dk_postalcodes.py:155
-#: dk/dk_postalcodes.py:156 dk/dk_postalcodes.py:157 dk/dk_postalcodes.py:158
-#: dk/dk_postalcodes.py:159 dk/dk_postalcodes.py:160 dk/dk_postalcodes.py:161
-#: dk/dk_postalcodes.py:162 dk/dk_postalcodes.py:163 dk/dk_postalcodes.py:164
-#: dk/dk_postalcodes.py:165 dk/dk_postalcodes.py:166 dk/dk_postalcodes.py:167
-#: dk/dk_postalcodes.py:168 dk/dk_postalcodes.py:169 dk/dk_postalcodes.py:170
-#: dk/dk_postalcodes.py:171 dk/dk_postalcodes.py:172 dk/dk_postalcodes.py:173
-#: dk/dk_postalcodes.py:174 dk/dk_postalcodes.py:175 dk/dk_postalcodes.py:176
-#: dk/dk_postalcodes.py:177 dk/dk_postalcodes.py:178 dk/dk_postalcodes.py:179
-#: dk/dk_postalcodes.py:180 dk/dk_postalcodes.py:181 dk/dk_postalcodes.py:182
-#: dk/dk_postalcodes.py:183 dk/dk_postalcodes.py:184 dk/dk_postalcodes.py:185
-#: dk/dk_postalcodes.py:186 dk/dk_postalcodes.py:187 dk/dk_postalcodes.py:188
-#: dk/dk_postalcodes.py:189 dk/dk_postalcodes.py:190 dk/dk_postalcodes.py:191
-#: dk/dk_postalcodes.py:192 dk/dk_postalcodes.py:193 dk/dk_postalcodes.py:194
-#: dk/dk_postalcodes.py:195 dk/dk_postalcodes.py:196 dk/dk_postalcodes.py:197
-#: dk/dk_postalcodes.py:198 dk/dk_postalcodes.py:199 dk/dk_postalcodes.py:200
-#: dk/dk_postalcodes.py:201 dk/dk_postalcodes.py:202 dk/dk_postalcodes.py:203
-#: dk/dk_postalcodes.py:204 dk/dk_postalcodes.py:205 dk/dk_postalcodes.py:206
-#: dk/dk_postalcodes.py:207 dk/dk_postalcodes.py:208 dk/dk_postalcodes.py:209
-#: dk/dk_postalcodes.py:210 dk/dk_postalcodes.py:211 dk/dk_postalcodes.py:212
-#: dk/dk_postalcodes.py:213 dk/dk_postalcodes.py:214 dk/dk_postalcodes.py:215
-#: dk/dk_postalcodes.py:216 dk/dk_postalcodes.py:217 dk/dk_postalcodes.py:218
-#: dk/dk_postalcodes.py:219 dk/dk_postalcodes.py:220 dk/dk_postalcodes.py:221
-#: dk/dk_postalcodes.py:222 dk/dk_postalcodes.py:223 dk/dk_postalcodes.py:224
-#: dk/dk_postalcodes.py:225 dk/dk_postalcodes.py:226 dk/dk_postalcodes.py:227
-#: dk/dk_postalcodes.py:228 dk/dk_postalcodes.py:229 dk/dk_postalcodes.py:230
-#: dk/dk_postalcodes.py:231 dk/dk_postalcodes.py:232 dk/dk_postalcodes.py:233
-#: dk/dk_postalcodes.py:234 dk/dk_postalcodes.py:235 dk/dk_postalcodes.py:236
-#: dk/dk_postalcodes.py:237 dk/dk_postalcodes.py:238 dk/dk_postalcodes.py:239
-#: dk/dk_postalcodes.py:240 dk/dk_postalcodes.py:241 dk/dk_postalcodes.py:242
-#: dk/dk_postalcodes.py:243 dk/dk_postalcodes.py:244 dk/dk_postalcodes.py:245
-#: dk/dk_postalcodes.py:246 dk/dk_postalcodes.py:247 dk/dk_postalcodes.py:248
-#: dk/dk_postalcodes.py:249 dk/dk_postalcodes.py:250 dk/dk_postalcodes.py:251
-#: dk/dk_postalcodes.py:252 dk/dk_postalcodes.py:253 dk/dk_postalcodes.py:254
-#: dk/dk_postalcodes.py:255 dk/dk_postalcodes.py:256 dk/dk_postalcodes.py:257
-#: dk/dk_postalcodes.py:258 dk/dk_postalcodes.py:259 dk/dk_postalcodes.py:260
-#: dk/dk_postalcodes.py:261 dk/dk_postalcodes.py:262 dk/dk_postalcodes.py:263
-#: dk/dk_postalcodes.py:264 dk/dk_postalcodes.py:265 dk/dk_postalcodes.py:266
-#: dk/dk_postalcodes.py:267 dk/dk_postalcodes.py:268 dk/dk_postalcodes.py:269
-#: dk/dk_postalcodes.py:270 dk/dk_postalcodes.py:271 dk/dk_postalcodes.py:272
-#: dk/dk_postalcodes.py:273 dk/dk_postalcodes.py:274 dk/dk_postalcodes.py:275
-#: dk/dk_postalcodes.py:276 dk/dk_postalcodes.py:277 dk/dk_postalcodes.py:278
-#: dk/dk_postalcodes.py:279 dk/dk_postalcodes.py:280 dk/dk_postalcodes.py:281
-#: dk/dk_postalcodes.py:282 dk/dk_postalcodes.py:283 dk/dk_postalcodes.py:284
-#: dk/dk_postalcodes.py:285 dk/dk_postalcodes.py:286 dk/dk_postalcodes.py:287
-#: dk/dk_postalcodes.py:288 dk/dk_postalcodes.py:289 dk/dk_postalcodes.py:290
-#: dk/dk_postalcodes.py:291 dk/dk_postalcodes.py:292 dk/dk_postalcodes.py:293
-#: dk/dk_postalcodes.py:294 dk/dk_postalcodes.py:295 dk/dk_postalcodes.py:296
-#: dk/dk_postalcodes.py:297 dk/dk_postalcodes.py:298 dk/dk_postalcodes.py:299
-#: dk/dk_postalcodes.py:300 dk/dk_postalcodes.py:301 dk/dk_postalcodes.py:302
-#: dk/dk_postalcodes.py:303 dk/dk_postalcodes.py:304 dk/dk_postalcodes.py:305
-#: dk/dk_postalcodes.py:306 dk/dk_postalcodes.py:307 dk/dk_postalcodes.py:308
-#: dk/dk_postalcodes.py:309 dk/dk_postalcodes.py:310 dk/dk_postalcodes.py:311
-#: dk/dk_postalcodes.py:312 dk/dk_postalcodes.py:313 dk/dk_postalcodes.py:314
-#: dk/dk_postalcodes.py:315 dk/dk_postalcodes.py:316 dk/dk_postalcodes.py:317
-#: dk/dk_postalcodes.py:318 dk/dk_postalcodes.py:319 dk/dk_postalcodes.py:320
-#: dk/dk_postalcodes.py:321 dk/dk_postalcodes.py:322 dk/dk_postalcodes.py:323
-#: dk/dk_postalcodes.py:324 dk/dk_postalcodes.py:325 dk/dk_postalcodes.py:326
-#: dk/dk_postalcodes.py:327 dk/dk_postalcodes.py:328 dk/dk_postalcodes.py:329
-#: dk/dk_postalcodes.py:330 dk/dk_postalcodes.py:331 dk/dk_postalcodes.py:332
-#: dk/dk_postalcodes.py:333 dk/dk_postalcodes.py:334 dk/dk_postalcodes.py:335
-#: dk/dk_postalcodes.py:336 dk/dk_postalcodes.py:337 dk/dk_postalcodes.py:338
-#: dk/dk_postalcodes.py:339 dk/dk_postalcodes.py:340 dk/dk_postalcodes.py:341
-#: dk/dk_postalcodes.py:342 dk/dk_postalcodes.py:343 dk/dk_postalcodes.py:344
-#: dk/dk_postalcodes.py:345 dk/dk_postalcodes.py:346 dk/dk_postalcodes.py:347
-#: dk/dk_postalcodes.py:348 dk/dk_postalcodes.py:349 dk/dk_postalcodes.py:350
-#: dk/dk_postalcodes.py:351 dk/dk_postalcodes.py:352 dk/dk_postalcodes.py:353
-#: dk/dk_postalcodes.py:354 dk/dk_postalcodes.py:355 dk/dk_postalcodes.py:356
-#: dk/dk_postalcodes.py:357 dk/dk_postalcodes.py:358 dk/dk_postalcodes.py:359
-#: dk/dk_postalcodes.py:360 dk/dk_postalcodes.py:361 dk/dk_postalcodes.py:362
-#: dk/dk_postalcodes.py:363 dk/dk_postalcodes.py:364 dk/dk_postalcodes.py:365
-#: dk/dk_postalcodes.py:366 dk/dk_postalcodes.py:367 dk/dk_postalcodes.py:368
-#: dk/dk_postalcodes.py:369
+#: dk/dk_postalcodes.py:26 dk/dk_postalcodes.py:27 dk/dk_postalcodes.py:28
+#: dk/dk_postalcodes.py:29 dk/dk_postalcodes.py:30 dk/dk_postalcodes.py:31
+#: dk/dk_postalcodes.py:32 dk/dk_postalcodes.py:33 dk/dk_postalcodes.py:34
+#: dk/dk_postalcodes.py:35 dk/dk_postalcodes.py:36 dk/dk_postalcodes.py:37
+#: dk/dk_postalcodes.py:38 dk/dk_postalcodes.py:39 dk/dk_postalcodes.py:40
+#: dk/dk_postalcodes.py:41 dk/dk_postalcodes.py:42 dk/dk_postalcodes.py:43
+#: dk/dk_postalcodes.py:44 dk/dk_postalcodes.py:45 dk/dk_postalcodes.py:46
+#: dk/dk_postalcodes.py:47 dk/dk_postalcodes.py:48 dk/dk_postalcodes.py:49
+#: dk/dk_postalcodes.py:50 dk/dk_postalcodes.py:51 dk/dk_postalcodes.py:52
+#: dk/dk_postalcodes.py:53 dk/dk_postalcodes.py:54 dk/dk_postalcodes.py:55
+#: dk/dk_postalcodes.py:56 dk/dk_postalcodes.py:57 dk/dk_postalcodes.py:58
+#: dk/dk_postalcodes.py:59 dk/dk_postalcodes.py:60 dk/dk_postalcodes.py:61
+#: dk/dk_postalcodes.py:62 dk/dk_postalcodes.py:63 dk/dk_postalcodes.py:64
+#: dk/dk_postalcodes.py:65 dk/dk_postalcodes.py:66 dk/dk_postalcodes.py:67
+#: dk/dk_postalcodes.py:68 dk/dk_postalcodes.py:69 dk/dk_postalcodes.py:70
+#: dk/dk_postalcodes.py:71 dk/dk_postalcodes.py:72 dk/dk_postalcodes.py:73
+#: dk/dk_postalcodes.py:74 dk/dk_postalcodes.py:75 dk/dk_postalcodes.py:76
+#: dk/dk_postalcodes.py:77 dk/dk_postalcodes.py:78 dk/dk_postalcodes.py:79
+#: dk/dk_postalcodes.py:80 dk/dk_postalcodes.py:81 dk/dk_postalcodes.py:82
+#: dk/dk_postalcodes.py:83 dk/dk_postalcodes.py:84 dk/dk_postalcodes.py:85
+#: dk/dk_postalcodes.py:86 dk/dk_postalcodes.py:87 dk/dk_postalcodes.py:88
+#: dk/dk_postalcodes.py:89 dk/dk_postalcodes.py:90 dk/dk_postalcodes.py:91
+#: dk/dk_postalcodes.py:92 dk/dk_postalcodes.py:93 dk/dk_postalcodes.py:94
+#: dk/dk_postalcodes.py:95 dk/dk_postalcodes.py:96 dk/dk_postalcodes.py:97
+#: dk/dk_postalcodes.py:98 dk/dk_postalcodes.py:99 dk/dk_postalcodes.py:100
+#: dk/dk_postalcodes.py:101 dk/dk_postalcodes.py:102 dk/dk_postalcodes.py:103
+#: dk/dk_postalcodes.py:104 dk/dk_postalcodes.py:105 dk/dk_postalcodes.py:106
+#: dk/dk_postalcodes.py:107 dk/dk_postalcodes.py:108 dk/dk_postalcodes.py:109
+#: dk/dk_postalcodes.py:110 dk/dk_postalcodes.py:111 dk/dk_postalcodes.py:112
+#: dk/dk_postalcodes.py:113 dk/dk_postalcodes.py:114 dk/dk_postalcodes.py:115
+#: dk/dk_postalcodes.py:116 dk/dk_postalcodes.py:117 dk/dk_postalcodes.py:118
+#: dk/dk_postalcodes.py:119 dk/dk_postalcodes.py:120 dk/dk_postalcodes.py:121
+#: dk/dk_postalcodes.py:122 dk/dk_postalcodes.py:123 dk/dk_postalcodes.py:124
+#: dk/dk_postalcodes.py:125 dk/dk_postalcodes.py:126 dk/dk_postalcodes.py:127
+#: dk/dk_postalcodes.py:128 dk/dk_postalcodes.py:129 dk/dk_postalcodes.py:130
+#: dk/dk_postalcodes.py:131 dk/dk_postalcodes.py:132 dk/dk_postalcodes.py:133
+#: dk/dk_postalcodes.py:134 dk/dk_postalcodes.py:135 dk/dk_postalcodes.py:136
+#: dk/dk_postalcodes.py:137 dk/dk_postalcodes.py:138 dk/dk_postalcodes.py:139
+#: dk/dk_postalcodes.py:140 dk/dk_postalcodes.py:141 dk/dk_postalcodes.py:142
+#: dk/dk_postalcodes.py:143 dk/dk_postalcodes.py:144 dk/dk_postalcodes.py:145
+#: dk/dk_postalcodes.py:146 dk/dk_postalcodes.py:147 dk/dk_postalcodes.py:148
+#: dk/dk_postalcodes.py:149 dk/dk_postalcodes.py:150 dk/dk_postalcodes.py:151
+#: dk/dk_postalcodes.py:152 dk/dk_postalcodes.py:153 dk/dk_postalcodes.py:154
+#: dk/dk_postalcodes.py:155 dk/dk_postalcodes.py:156 dk/dk_postalcodes.py:157
+#: dk/dk_postalcodes.py:158 dk/dk_postalcodes.py:159 dk/dk_postalcodes.py:160
+#: dk/dk_postalcodes.py:161 dk/dk_postalcodes.py:162 dk/dk_postalcodes.py:163
+#: dk/dk_postalcodes.py:164 dk/dk_postalcodes.py:165 dk/dk_postalcodes.py:166
+#: dk/dk_postalcodes.py:167 dk/dk_postalcodes.py:168 dk/dk_postalcodes.py:169
+#: dk/dk_postalcodes.py:170 dk/dk_postalcodes.py:171 dk/dk_postalcodes.py:172
+#: dk/dk_postalcodes.py:173 dk/dk_postalcodes.py:174 dk/dk_postalcodes.py:175
+#: dk/dk_postalcodes.py:176 dk/dk_postalcodes.py:177 dk/dk_postalcodes.py:178
+#: dk/dk_postalcodes.py:179 dk/dk_postalcodes.py:180 dk/dk_postalcodes.py:181
+#: dk/dk_postalcodes.py:182 dk/dk_postalcodes.py:183 dk/dk_postalcodes.py:184
+#: dk/dk_postalcodes.py:185 dk/dk_postalcodes.py:186 dk/dk_postalcodes.py:187
+#: dk/dk_postalcodes.py:188 dk/dk_postalcodes.py:189 dk/dk_postalcodes.py:190
+#: dk/dk_postalcodes.py:191 dk/dk_postalcodes.py:192 dk/dk_postalcodes.py:193
+#: dk/dk_postalcodes.py:194 dk/dk_postalcodes.py:195 dk/dk_postalcodes.py:196
+#: dk/dk_postalcodes.py:197 dk/dk_postalcodes.py:198 dk/dk_postalcodes.py:199
+#: dk/dk_postalcodes.py:200 dk/dk_postalcodes.py:201 dk/dk_postalcodes.py:202
+#: dk/dk_postalcodes.py:203 dk/dk_postalcodes.py:204 dk/dk_postalcodes.py:205
+#: dk/dk_postalcodes.py:206 dk/dk_postalcodes.py:207 dk/dk_postalcodes.py:208
+#: dk/dk_postalcodes.py:209 dk/dk_postalcodes.py:210 dk/dk_postalcodes.py:211
+#: dk/dk_postalcodes.py:212 dk/dk_postalcodes.py:213 dk/dk_postalcodes.py:214
+#: dk/dk_postalcodes.py:215 dk/dk_postalcodes.py:216 dk/dk_postalcodes.py:217
+#: dk/dk_postalcodes.py:218 dk/dk_postalcodes.py:219 dk/dk_postalcodes.py:220
+#: dk/dk_postalcodes.py:221 dk/dk_postalcodes.py:222 dk/dk_postalcodes.py:223
+#: dk/dk_postalcodes.py:224 dk/dk_postalcodes.py:225 dk/dk_postalcodes.py:226
+#: dk/dk_postalcodes.py:227 dk/dk_postalcodes.py:228 dk/dk_postalcodes.py:229
+#: dk/dk_postalcodes.py:230 dk/dk_postalcodes.py:231 dk/dk_postalcodes.py:232
+#: dk/dk_postalcodes.py:233 dk/dk_postalcodes.py:234 dk/dk_postalcodes.py:235
+#: dk/dk_postalcodes.py:236 dk/dk_postalcodes.py:237 dk/dk_postalcodes.py:238
+#: dk/dk_postalcodes.py:239 dk/dk_postalcodes.py:240 dk/dk_postalcodes.py:241
+#: dk/dk_postalcodes.py:242 dk/dk_postalcodes.py:243 dk/dk_postalcodes.py:244
+#: dk/dk_postalcodes.py:245 dk/dk_postalcodes.py:246 dk/dk_postalcodes.py:247
+#: dk/dk_postalcodes.py:248 dk/dk_postalcodes.py:249 dk/dk_postalcodes.py:250
+#: dk/dk_postalcodes.py:251 dk/dk_postalcodes.py:252 dk/dk_postalcodes.py:253
+#: dk/dk_postalcodes.py:254 dk/dk_postalcodes.py:255 dk/dk_postalcodes.py:256
+#: dk/dk_postalcodes.py:257 dk/dk_postalcodes.py:258 dk/dk_postalcodes.py:259
+#: dk/dk_postalcodes.py:260 dk/dk_postalcodes.py:261 dk/dk_postalcodes.py:262
+#: dk/dk_postalcodes.py:263 dk/dk_postalcodes.py:264 dk/dk_postalcodes.py:265
+#: dk/dk_postalcodes.py:266 dk/dk_postalcodes.py:267 dk/dk_postalcodes.py:268
+#: dk/dk_postalcodes.py:269 dk/dk_postalcodes.py:270 dk/dk_postalcodes.py:271
+#: dk/dk_postalcodes.py:272 dk/dk_postalcodes.py:273 dk/dk_postalcodes.py:274
+#: dk/dk_postalcodes.py:275 dk/dk_postalcodes.py:276 dk/dk_postalcodes.py:277
+#: dk/dk_postalcodes.py:278 dk/dk_postalcodes.py:279 dk/dk_postalcodes.py:280
+#: dk/dk_postalcodes.py:281 dk/dk_postalcodes.py:282 dk/dk_postalcodes.py:283
+#: dk/dk_postalcodes.py:284 dk/dk_postalcodes.py:285 dk/dk_postalcodes.py:286
+#: dk/dk_postalcodes.py:287 dk/dk_postalcodes.py:288 dk/dk_postalcodes.py:289
+#: dk/dk_postalcodes.py:290 dk/dk_postalcodes.py:291 dk/dk_postalcodes.py:292
+#: dk/dk_postalcodes.py:293 dk/dk_postalcodes.py:294 dk/dk_postalcodes.py:295
+#: dk/dk_postalcodes.py:296 dk/dk_postalcodes.py:297 dk/dk_postalcodes.py:298
+#: dk/dk_postalcodes.py:299 dk/dk_postalcodes.py:300 dk/dk_postalcodes.py:301
+#: dk/dk_postalcodes.py:302 dk/dk_postalcodes.py:303 dk/dk_postalcodes.py:304
+#: dk/dk_postalcodes.py:305 dk/dk_postalcodes.py:306 dk/dk_postalcodes.py:307
+#: dk/dk_postalcodes.py:308 dk/dk_postalcodes.py:309 dk/dk_postalcodes.py:310
+#: dk/dk_postalcodes.py:311 dk/dk_postalcodes.py:312 dk/dk_postalcodes.py:313
+#: dk/dk_postalcodes.py:314 dk/dk_postalcodes.py:315 dk/dk_postalcodes.py:316
+#: dk/dk_postalcodes.py:317 dk/dk_postalcodes.py:318 dk/dk_postalcodes.py:319
+#: dk/dk_postalcodes.py:320 dk/dk_postalcodes.py:321 dk/dk_postalcodes.py:322
+#: dk/dk_postalcodes.py:323 dk/dk_postalcodes.py:324 dk/dk_postalcodes.py:325
+#: dk/dk_postalcodes.py:326 dk/dk_postalcodes.py:327 dk/dk_postalcodes.py:328
+#: dk/dk_postalcodes.py:329 dk/dk_postalcodes.py:330 dk/dk_postalcodes.py:331
+#: dk/dk_postalcodes.py:332 dk/dk_postalcodes.py:333 dk/dk_postalcodes.py:334
+#: dk/dk_postalcodes.py:335 dk/dk_postalcodes.py:336 dk/dk_postalcodes.py:337
+#: dk/dk_postalcodes.py:338 dk/dk_postalcodes.py:339 dk/dk_postalcodes.py:340
+#: dk/dk_postalcodes.py:341 dk/dk_postalcodes.py:342 dk/dk_postalcodes.py:343
+#: dk/dk_postalcodes.py:344 dk/dk_postalcodes.py:345 dk/dk_postalcodes.py:346
+#: dk/dk_postalcodes.py:347 dk/dk_postalcodes.py:348 dk/dk_postalcodes.py:349
+#: dk/dk_postalcodes.py:350 dk/dk_postalcodes.py:351 dk/dk_postalcodes.py:352
+#: dk/dk_postalcodes.py:353 dk/dk_postalcodes.py:354 dk/dk_postalcodes.py:355
+#: dk/dk_postalcodes.py:356 dk/dk_postalcodes.py:357 dk/dk_postalcodes.py:358
+#: dk/dk_postalcodes.py:359 dk/dk_postalcodes.py:360 dk/dk_postalcodes.py:361
+#: dk/dk_postalcodes.py:362 dk/dk_postalcodes.py:363 dk/dk_postalcodes.py:364
+#: dk/dk_postalcodes.py:365 dk/dk_postalcodes.py:366 dk/dk_postalcodes.py:367
+#: dk/dk_postalcodes.py:368 dk/dk_postalcodes.py:369 dk/dk_postalcodes.py:370
+#: dk/dk_postalcodes.py:371 dk/dk_postalcodes.py:372 dk/dk_postalcodes.py:373
+#: dk/dk_postalcodes.py:374
 msgid "København K"
 msgstr ""
 
-#: dk/dk_postalcodes.py:370 dk/dk_postalcodes.py:371 dk/dk_postalcodes.py:372
-#: dk/dk_postalcodes.py:373 dk/dk_postalcodes.py:374 dk/dk_postalcodes.py:375
-#: dk/dk_postalcodes.py:376 dk/dk_postalcodes.py:377 dk/dk_postalcodes.py:378
-#: dk/dk_postalcodes.py:379 dk/dk_postalcodes.py:380 dk/dk_postalcodes.py:383
-#: dk/dk_postalcodes.py:384 dk/dk_postalcodes.py:385 dk/dk_postalcodes.py:386
-#: dk/dk_postalcodes.py:387 dk/dk_postalcodes.py:388 dk/dk_postalcodes.py:389
-#: dk/dk_postalcodes.py:390 dk/dk_postalcodes.py:391 dk/dk_postalcodes.py:392
-#: dk/dk_postalcodes.py:393 dk/dk_postalcodes.py:394 dk/dk_postalcodes.py:395
-#: dk/dk_postalcodes.py:396 dk/dk_postalcodes.py:397 dk/dk_postalcodes.py:398
-#: dk/dk_postalcodes.py:399 dk/dk_postalcodes.py:400 dk/dk_postalcodes.py:401
-#: dk/dk_postalcodes.py:402 dk/dk_postalcodes.py:403 dk/dk_postalcodes.py:404
-#: dk/dk_postalcodes.py:405 dk/dk_postalcodes.py:406 dk/dk_postalcodes.py:407
-#: dk/dk_postalcodes.py:408 dk/dk_postalcodes.py:409 dk/dk_postalcodes.py:410
-#: dk/dk_postalcodes.py:411 dk/dk_postalcodes.py:412 dk/dk_postalcodes.py:413
-#: dk/dk_postalcodes.py:414 dk/dk_postalcodes.py:415 dk/dk_postalcodes.py:416
-#: dk/dk_postalcodes.py:417 dk/dk_postalcodes.py:418 dk/dk_postalcodes.py:419
-#: dk/dk_postalcodes.py:420 dk/dk_postalcodes.py:421 dk/dk_postalcodes.py:422
-#: dk/dk_postalcodes.py:423 dk/dk_postalcodes.py:424 dk/dk_postalcodes.py:425
-#: dk/dk_postalcodes.py:426 dk/dk_postalcodes.py:427 dk/dk_postalcodes.py:428
-#: dk/dk_postalcodes.py:429 dk/dk_postalcodes.py:430 dk/dk_postalcodes.py:431
-#: dk/dk_postalcodes.py:432 dk/dk_postalcodes.py:433 dk/dk_postalcodes.py:434
-#: dk/dk_postalcodes.py:435 dk/dk_postalcodes.py:436 dk/dk_postalcodes.py:437
-#: dk/dk_postalcodes.py:438 dk/dk_postalcodes.py:439 dk/dk_postalcodes.py:440
-#: dk/dk_postalcodes.py:441 dk/dk_postalcodes.py:442 dk/dk_postalcodes.py:443
-#: dk/dk_postalcodes.py:444 dk/dk_postalcodes.py:445 dk/dk_postalcodes.py:446
-#: dk/dk_postalcodes.py:447 dk/dk_postalcodes.py:448 dk/dk_postalcodes.py:449
-#: dk/dk_postalcodes.py:450 dk/dk_postalcodes.py:451 dk/dk_postalcodes.py:452
-#: dk/dk_postalcodes.py:453 dk/dk_postalcodes.py:454 dk/dk_postalcodes.py:455
-#: dk/dk_postalcodes.py:456 dk/dk_postalcodes.py:457 dk/dk_postalcodes.py:458
-#: dk/dk_postalcodes.py:459 dk/dk_postalcodes.py:460 dk/dk_postalcodes.py:461
-#: dk/dk_postalcodes.py:462 dk/dk_postalcodes.py:463 dk/dk_postalcodes.py:464
-#: dk/dk_postalcodes.py:465 dk/dk_postalcodes.py:466 dk/dk_postalcodes.py:467
-#: dk/dk_postalcodes.py:468 dk/dk_postalcodes.py:469 dk/dk_postalcodes.py:470
-#: dk/dk_postalcodes.py:471 dk/dk_postalcodes.py:472 dk/dk_postalcodes.py:473
-#: dk/dk_postalcodes.py:474 dk/dk_postalcodes.py:475 dk/dk_postalcodes.py:476
-#: dk/dk_postalcodes.py:477 dk/dk_postalcodes.py:478 dk/dk_postalcodes.py:479
-#: dk/dk_postalcodes.py:480 dk/dk_postalcodes.py:481 dk/dk_postalcodes.py:482
-#: dk/dk_postalcodes.py:483 dk/dk_postalcodes.py:484 dk/dk_postalcodes.py:485
-#: dk/dk_postalcodes.py:486 dk/dk_postalcodes.py:487 dk/dk_postalcodes.py:488
-#: dk/dk_postalcodes.py:489 dk/dk_postalcodes.py:490 dk/dk_postalcodes.py:491
-#: dk/dk_postalcodes.py:492 dk/dk_postalcodes.py:493 dk/dk_postalcodes.py:494
-#: dk/dk_postalcodes.py:495 dk/dk_postalcodes.py:496 dk/dk_postalcodes.py:497
-#: dk/dk_postalcodes.py:498 dk/dk_postalcodes.py:499 dk/dk_postalcodes.py:500
-#: dk/dk_postalcodes.py:501 dk/dk_postalcodes.py:502 dk/dk_postalcodes.py:503
-#: dk/dk_postalcodes.py:504 dk/dk_postalcodes.py:505 dk/dk_postalcodes.py:506
-#: dk/dk_postalcodes.py:507 dk/dk_postalcodes.py:508 dk/dk_postalcodes.py:509
-#: dk/dk_postalcodes.py:510 dk/dk_postalcodes.py:511 dk/dk_postalcodes.py:512
-#: dk/dk_postalcodes.py:513 dk/dk_postalcodes.py:514 dk/dk_postalcodes.py:515
-#: dk/dk_postalcodes.py:516 dk/dk_postalcodes.py:517 dk/dk_postalcodes.py:518
-#: dk/dk_postalcodes.py:519 dk/dk_postalcodes.py:520 dk/dk_postalcodes.py:521
-#: dk/dk_postalcodes.py:522 dk/dk_postalcodes.py:523 dk/dk_postalcodes.py:524
-#: dk/dk_postalcodes.py:525 dk/dk_postalcodes.py:526 dk/dk_postalcodes.py:527
-#: dk/dk_postalcodes.py:528 dk/dk_postalcodes.py:529 dk/dk_postalcodes.py:530
-#: dk/dk_postalcodes.py:531 dk/dk_postalcodes.py:532 dk/dk_postalcodes.py:533
-#: dk/dk_postalcodes.py:534 dk/dk_postalcodes.py:535 dk/dk_postalcodes.py:536
-#: dk/dk_postalcodes.py:537 dk/dk_postalcodes.py:538 dk/dk_postalcodes.py:539
-#: dk/dk_postalcodes.py:540 dk/dk_postalcodes.py:541 dk/dk_postalcodes.py:542
-#: dk/dk_postalcodes.py:543 dk/dk_postalcodes.py:544 dk/dk_postalcodes.py:545
-#: dk/dk_postalcodes.py:546 dk/dk_postalcodes.py:547 dk/dk_postalcodes.py:548
-#: dk/dk_postalcodes.py:549 dk/dk_postalcodes.py:550 dk/dk_postalcodes.py:551
-#: dk/dk_postalcodes.py:552 dk/dk_postalcodes.py:553 dk/dk_postalcodes.py:554
-#: dk/dk_postalcodes.py:555 dk/dk_postalcodes.py:556 dk/dk_postalcodes.py:557
-#: dk/dk_postalcodes.py:558 dk/dk_postalcodes.py:559 dk/dk_postalcodes.py:560
-#: dk/dk_postalcodes.py:561 dk/dk_postalcodes.py:562 dk/dk_postalcodes.py:563
-#: dk/dk_postalcodes.py:564 dk/dk_postalcodes.py:565 dk/dk_postalcodes.py:566
-#: dk/dk_postalcodes.py:567
+#: dk/dk_postalcodes.py:375 dk/dk_postalcodes.py:376 dk/dk_postalcodes.py:377
+#: dk/dk_postalcodes.py:378 dk/dk_postalcodes.py:379 dk/dk_postalcodes.py:380
+#: dk/dk_postalcodes.py:381 dk/dk_postalcodes.py:382 dk/dk_postalcodes.py:383
+#: dk/dk_postalcodes.py:384 dk/dk_postalcodes.py:385 dk/dk_postalcodes.py:388
+#: dk/dk_postalcodes.py:389 dk/dk_postalcodes.py:390 dk/dk_postalcodes.py:391
+#: dk/dk_postalcodes.py:392 dk/dk_postalcodes.py:393 dk/dk_postalcodes.py:394
+#: dk/dk_postalcodes.py:395 dk/dk_postalcodes.py:396 dk/dk_postalcodes.py:397
+#: dk/dk_postalcodes.py:398 dk/dk_postalcodes.py:399 dk/dk_postalcodes.py:400
+#: dk/dk_postalcodes.py:401 dk/dk_postalcodes.py:402 dk/dk_postalcodes.py:403
+#: dk/dk_postalcodes.py:404 dk/dk_postalcodes.py:405 dk/dk_postalcodes.py:406
+#: dk/dk_postalcodes.py:407 dk/dk_postalcodes.py:408 dk/dk_postalcodes.py:409
+#: dk/dk_postalcodes.py:410 dk/dk_postalcodes.py:411 dk/dk_postalcodes.py:412
+#: dk/dk_postalcodes.py:413 dk/dk_postalcodes.py:414 dk/dk_postalcodes.py:415
+#: dk/dk_postalcodes.py:416 dk/dk_postalcodes.py:417 dk/dk_postalcodes.py:418
+#: dk/dk_postalcodes.py:419 dk/dk_postalcodes.py:420 dk/dk_postalcodes.py:421
+#: dk/dk_postalcodes.py:422 dk/dk_postalcodes.py:423 dk/dk_postalcodes.py:424
+#: dk/dk_postalcodes.py:425 dk/dk_postalcodes.py:426 dk/dk_postalcodes.py:427
+#: dk/dk_postalcodes.py:428 dk/dk_postalcodes.py:429 dk/dk_postalcodes.py:430
+#: dk/dk_postalcodes.py:431 dk/dk_postalcodes.py:432 dk/dk_postalcodes.py:433
+#: dk/dk_postalcodes.py:434 dk/dk_postalcodes.py:435 dk/dk_postalcodes.py:436
+#: dk/dk_postalcodes.py:437 dk/dk_postalcodes.py:438 dk/dk_postalcodes.py:439
+#: dk/dk_postalcodes.py:440 dk/dk_postalcodes.py:441 dk/dk_postalcodes.py:442
+#: dk/dk_postalcodes.py:443 dk/dk_postalcodes.py:444 dk/dk_postalcodes.py:445
+#: dk/dk_postalcodes.py:446 dk/dk_postalcodes.py:447 dk/dk_postalcodes.py:448
+#: dk/dk_postalcodes.py:449 dk/dk_postalcodes.py:450 dk/dk_postalcodes.py:451
+#: dk/dk_postalcodes.py:452 dk/dk_postalcodes.py:453 dk/dk_postalcodes.py:454
+#: dk/dk_postalcodes.py:455 dk/dk_postalcodes.py:456 dk/dk_postalcodes.py:457
+#: dk/dk_postalcodes.py:458 dk/dk_postalcodes.py:459 dk/dk_postalcodes.py:460
+#: dk/dk_postalcodes.py:461 dk/dk_postalcodes.py:462 dk/dk_postalcodes.py:463
+#: dk/dk_postalcodes.py:464 dk/dk_postalcodes.py:465 dk/dk_postalcodes.py:466
+#: dk/dk_postalcodes.py:467 dk/dk_postalcodes.py:468 dk/dk_postalcodes.py:469
+#: dk/dk_postalcodes.py:470 dk/dk_postalcodes.py:471 dk/dk_postalcodes.py:472
+#: dk/dk_postalcodes.py:473 dk/dk_postalcodes.py:474 dk/dk_postalcodes.py:475
+#: dk/dk_postalcodes.py:476 dk/dk_postalcodes.py:477 dk/dk_postalcodes.py:478
+#: dk/dk_postalcodes.py:479 dk/dk_postalcodes.py:480 dk/dk_postalcodes.py:481
+#: dk/dk_postalcodes.py:482 dk/dk_postalcodes.py:483 dk/dk_postalcodes.py:484
+#: dk/dk_postalcodes.py:485 dk/dk_postalcodes.py:486 dk/dk_postalcodes.py:487
+#: dk/dk_postalcodes.py:488 dk/dk_postalcodes.py:489 dk/dk_postalcodes.py:490
+#: dk/dk_postalcodes.py:491 dk/dk_postalcodes.py:492 dk/dk_postalcodes.py:493
+#: dk/dk_postalcodes.py:494 dk/dk_postalcodes.py:495 dk/dk_postalcodes.py:496
+#: dk/dk_postalcodes.py:497 dk/dk_postalcodes.py:498 dk/dk_postalcodes.py:499
+#: dk/dk_postalcodes.py:500 dk/dk_postalcodes.py:501 dk/dk_postalcodes.py:502
+#: dk/dk_postalcodes.py:503 dk/dk_postalcodes.py:504 dk/dk_postalcodes.py:505
+#: dk/dk_postalcodes.py:506 dk/dk_postalcodes.py:507 dk/dk_postalcodes.py:508
+#: dk/dk_postalcodes.py:509 dk/dk_postalcodes.py:510 dk/dk_postalcodes.py:511
+#: dk/dk_postalcodes.py:512 dk/dk_postalcodes.py:513 dk/dk_postalcodes.py:514
+#: dk/dk_postalcodes.py:515 dk/dk_postalcodes.py:516 dk/dk_postalcodes.py:517
+#: dk/dk_postalcodes.py:518 dk/dk_postalcodes.py:519 dk/dk_postalcodes.py:520
+#: dk/dk_postalcodes.py:521 dk/dk_postalcodes.py:522 dk/dk_postalcodes.py:523
+#: dk/dk_postalcodes.py:524 dk/dk_postalcodes.py:525 dk/dk_postalcodes.py:526
+#: dk/dk_postalcodes.py:527 dk/dk_postalcodes.py:528 dk/dk_postalcodes.py:529
+#: dk/dk_postalcodes.py:530 dk/dk_postalcodes.py:531 dk/dk_postalcodes.py:532
+#: dk/dk_postalcodes.py:533 dk/dk_postalcodes.py:534 dk/dk_postalcodes.py:535
+#: dk/dk_postalcodes.py:536 dk/dk_postalcodes.py:537 dk/dk_postalcodes.py:538
+#: dk/dk_postalcodes.py:539 dk/dk_postalcodes.py:540 dk/dk_postalcodes.py:541
+#: dk/dk_postalcodes.py:542 dk/dk_postalcodes.py:543 dk/dk_postalcodes.py:544
+#: dk/dk_postalcodes.py:545 dk/dk_postalcodes.py:546 dk/dk_postalcodes.py:547
+#: dk/dk_postalcodes.py:548 dk/dk_postalcodes.py:549 dk/dk_postalcodes.py:550
+#: dk/dk_postalcodes.py:551 dk/dk_postalcodes.py:552 dk/dk_postalcodes.py:553
+#: dk/dk_postalcodes.py:554 dk/dk_postalcodes.py:555 dk/dk_postalcodes.py:556
+#: dk/dk_postalcodes.py:557 dk/dk_postalcodes.py:558 dk/dk_postalcodes.py:559
+#: dk/dk_postalcodes.py:560 dk/dk_postalcodes.py:561 dk/dk_postalcodes.py:562
+#: dk/dk_postalcodes.py:563 dk/dk_postalcodes.py:564 dk/dk_postalcodes.py:565
+#: dk/dk_postalcodes.py:566 dk/dk_postalcodes.py:567 dk/dk_postalcodes.py:568
+#: dk/dk_postalcodes.py:569 dk/dk_postalcodes.py:570 dk/dk_postalcodes.py:571
+#: dk/dk_postalcodes.py:572
 msgid "København V"
 msgstr ""
 
-#: dk/dk_postalcodes.py:381
+#: dk/dk_postalcodes.py:386
 msgid "Returpost"
 msgstr ""
 
-#: dk/dk_postalcodes.py:382
+#: dk/dk_postalcodes.py:387
 msgid "Centraltastning"
 msgstr ""
 
-#: dk/dk_postalcodes.py:568 dk/dk_postalcodes.py:569 dk/dk_postalcodes.py:570
-#: dk/dk_postalcodes.py:571 dk/dk_postalcodes.py:572 dk/dk_postalcodes.py:573
-#: dk/dk_postalcodes.py:574 dk/dk_postalcodes.py:575 dk/dk_postalcodes.py:576
-#: dk/dk_postalcodes.py:577 dk/dk_postalcodes.py:578 dk/dk_postalcodes.py:579
-#: dk/dk_postalcodes.py:580 dk/dk_postalcodes.py:581 dk/dk_postalcodes.py:582
-#: dk/dk_postalcodes.py:583 dk/dk_postalcodes.py:584 dk/dk_postalcodes.py:585
-#: dk/dk_postalcodes.py:586 dk/dk_postalcodes.py:587 dk/dk_postalcodes.py:588
-#: dk/dk_postalcodes.py:589 dk/dk_postalcodes.py:590 dk/dk_postalcodes.py:591
-#: dk/dk_postalcodes.py:592 dk/dk_postalcodes.py:593 dk/dk_postalcodes.py:594
-#: dk/dk_postalcodes.py:595 dk/dk_postalcodes.py:596 dk/dk_postalcodes.py:597
-#: dk/dk_postalcodes.py:598 dk/dk_postalcodes.py:599 dk/dk_postalcodes.py:600
-#: dk/dk_postalcodes.py:601 dk/dk_postalcodes.py:602 dk/dk_postalcodes.py:603
-#: dk/dk_postalcodes.py:604 dk/dk_postalcodes.py:605 dk/dk_postalcodes.py:606
-#: dk/dk_postalcodes.py:607 dk/dk_postalcodes.py:608 dk/dk_postalcodes.py:609
-#: dk/dk_postalcodes.py:610 dk/dk_postalcodes.py:611 dk/dk_postalcodes.py:612
-#: dk/dk_postalcodes.py:613 dk/dk_postalcodes.py:614 dk/dk_postalcodes.py:615
-#: dk/dk_postalcodes.py:616 dk/dk_postalcodes.py:617 dk/dk_postalcodes.py:618
-#: dk/dk_postalcodes.py:619 dk/dk_postalcodes.py:620 dk/dk_postalcodes.py:621
-#: dk/dk_postalcodes.py:622 dk/dk_postalcodes.py:623 dk/dk_postalcodes.py:624
-#: dk/dk_postalcodes.py:625 dk/dk_postalcodes.py:626 dk/dk_postalcodes.py:627
-#: dk/dk_postalcodes.py:628 dk/dk_postalcodes.py:629 dk/dk_postalcodes.py:630
-#: dk/dk_postalcodes.py:631 dk/dk_postalcodes.py:632 dk/dk_postalcodes.py:633
-#: dk/dk_postalcodes.py:634 dk/dk_postalcodes.py:635 dk/dk_postalcodes.py:636
-#: dk/dk_postalcodes.py:637 dk/dk_postalcodes.py:638 dk/dk_postalcodes.py:639
-#: dk/dk_postalcodes.py:640 dk/dk_postalcodes.py:641 dk/dk_postalcodes.py:642
-#: dk/dk_postalcodes.py:643 dk/dk_postalcodes.py:644 dk/dk_postalcodes.py:645
-#: dk/dk_postalcodes.py:646 dk/dk_postalcodes.py:647 dk/dk_postalcodes.py:648
-#: dk/dk_postalcodes.py:649 dk/dk_postalcodes.py:650 dk/dk_postalcodes.py:651
-#: dk/dk_postalcodes.py:652 dk/dk_postalcodes.py:653 dk/dk_postalcodes.py:654
-#: dk/dk_postalcodes.py:655 dk/dk_postalcodes.py:656 dk/dk_postalcodes.py:657
-#: dk/dk_postalcodes.py:658 dk/dk_postalcodes.py:659 dk/dk_postalcodes.py:660
-#: dk/dk_postalcodes.py:661 dk/dk_postalcodes.py:662 dk/dk_postalcodes.py:663
-#: dk/dk_postalcodes.py:664 dk/dk_postalcodes.py:665 dk/dk_postalcodes.py:666
-#: dk/dk_postalcodes.py:667 dk/dk_postalcodes.py:668 dk/dk_postalcodes.py:669
-#: dk/dk_postalcodes.py:670 dk/dk_postalcodes.py:671 dk/dk_postalcodes.py:672
-#: dk/dk_postalcodes.py:673 dk/dk_postalcodes.py:674
+#: dk/dk_postalcodes.py:573 dk/dk_postalcodes.py:574 dk/dk_postalcodes.py:575
+#: dk/dk_postalcodes.py:576 dk/dk_postalcodes.py:577 dk/dk_postalcodes.py:578
+#: dk/dk_postalcodes.py:579 dk/dk_postalcodes.py:580 dk/dk_postalcodes.py:581
+#: dk/dk_postalcodes.py:582 dk/dk_postalcodes.py:583 dk/dk_postalcodes.py:584
+#: dk/dk_postalcodes.py:585 dk/dk_postalcodes.py:586 dk/dk_postalcodes.py:587
+#: dk/dk_postalcodes.py:588 dk/dk_postalcodes.py:589 dk/dk_postalcodes.py:590
+#: dk/dk_postalcodes.py:591 dk/dk_postalcodes.py:592 dk/dk_postalcodes.py:593
+#: dk/dk_postalcodes.py:594 dk/dk_postalcodes.py:595 dk/dk_postalcodes.py:596
+#: dk/dk_postalcodes.py:597 dk/dk_postalcodes.py:598 dk/dk_postalcodes.py:599
+#: dk/dk_postalcodes.py:600 dk/dk_postalcodes.py:601 dk/dk_postalcodes.py:602
+#: dk/dk_postalcodes.py:603 dk/dk_postalcodes.py:604 dk/dk_postalcodes.py:605
+#: dk/dk_postalcodes.py:606 dk/dk_postalcodes.py:607 dk/dk_postalcodes.py:608
+#: dk/dk_postalcodes.py:609 dk/dk_postalcodes.py:610 dk/dk_postalcodes.py:611
+#: dk/dk_postalcodes.py:612 dk/dk_postalcodes.py:613 dk/dk_postalcodes.py:614
+#: dk/dk_postalcodes.py:615 dk/dk_postalcodes.py:616 dk/dk_postalcodes.py:617
+#: dk/dk_postalcodes.py:618 dk/dk_postalcodes.py:619 dk/dk_postalcodes.py:620
+#: dk/dk_postalcodes.py:621 dk/dk_postalcodes.py:622 dk/dk_postalcodes.py:623
+#: dk/dk_postalcodes.py:624 dk/dk_postalcodes.py:625 dk/dk_postalcodes.py:626
+#: dk/dk_postalcodes.py:627 dk/dk_postalcodes.py:628 dk/dk_postalcodes.py:629
+#: dk/dk_postalcodes.py:630 dk/dk_postalcodes.py:631 dk/dk_postalcodes.py:632
+#: dk/dk_postalcodes.py:633 dk/dk_postalcodes.py:634 dk/dk_postalcodes.py:635
+#: dk/dk_postalcodes.py:636 dk/dk_postalcodes.py:637 dk/dk_postalcodes.py:638
+#: dk/dk_postalcodes.py:639 dk/dk_postalcodes.py:640 dk/dk_postalcodes.py:641
+#: dk/dk_postalcodes.py:642 dk/dk_postalcodes.py:643 dk/dk_postalcodes.py:644
+#: dk/dk_postalcodes.py:645 dk/dk_postalcodes.py:646 dk/dk_postalcodes.py:647
+#: dk/dk_postalcodes.py:648 dk/dk_postalcodes.py:649 dk/dk_postalcodes.py:650
+#: dk/dk_postalcodes.py:651 dk/dk_postalcodes.py:652 dk/dk_postalcodes.py:653
+#: dk/dk_postalcodes.py:654 dk/dk_postalcodes.py:655 dk/dk_postalcodes.py:656
+#: dk/dk_postalcodes.py:657 dk/dk_postalcodes.py:658 dk/dk_postalcodes.py:659
+#: dk/dk_postalcodes.py:660 dk/dk_postalcodes.py:661 dk/dk_postalcodes.py:662
+#: dk/dk_postalcodes.py:663 dk/dk_postalcodes.py:664 dk/dk_postalcodes.py:665
+#: dk/dk_postalcodes.py:666 dk/dk_postalcodes.py:667 dk/dk_postalcodes.py:668
+#: dk/dk_postalcodes.py:669 dk/dk_postalcodes.py:670 dk/dk_postalcodes.py:671
+#: dk/dk_postalcodes.py:672 dk/dk_postalcodes.py:673 dk/dk_postalcodes.py:674
+#: dk/dk_postalcodes.py:675 dk/dk_postalcodes.py:676 dk/dk_postalcodes.py:677
+#: dk/dk_postalcodes.py:678 dk/dk_postalcodes.py:679
 msgid "Frederiksberg C"
 msgstr ""
 
-#: dk/dk_postalcodes.py:676
+#: dk/dk_postalcodes.py:681
 msgid "København Ø"
 msgstr ""
 
-#: dk/dk_postalcodes.py:677
+#: dk/dk_postalcodes.py:682
 msgid "Nordhavn"
 msgstr ""
 
-#: dk/dk_postalcodes.py:678
+#: dk/dk_postalcodes.py:683
 msgid "København N"
 msgstr ""
 
-#: dk/dk_postalcodes.py:679
+#: dk/dk_postalcodes.py:684
 msgid "København S"
 msgstr ""
 
-#: dk/dk_postalcodes.py:680
+#: dk/dk_postalcodes.py:685
 msgid "København NV"
 msgstr ""
 
-#: dk/dk_postalcodes.py:681
+#: dk/dk_postalcodes.py:686
 msgid "København SV"
 msgstr ""
 
-#: dk/dk_postalcodes.py:682
+#: dk/dk_postalcodes.py:687
 msgid "Valby"
 msgstr ""
 
-#: dk/dk_postalcodes.py:688
+#: dk/dk_postalcodes.py:693
 msgid "Taastrup"
 msgstr ""
 
-#: dk/dk_postalcodes.py:690
+#: dk/dk_postalcodes.py:695
 msgid "Hedehusene"
 msgstr ""
 
-#: dk/dk_postalcodes.py:692
+#: dk/dk_postalcodes.py:697
 msgid "Brøndby Strand"
 msgstr ""
 
-#: dk/dk_postalcodes.py:693
+#: dk/dk_postalcodes.py:698
 msgid "Vallensbæk Strand"
 msgstr ""
 
-#: dk/dk_postalcodes.py:695
+#: dk/dk_postalcodes.py:700
 msgid "Solrød Strand"
 msgstr ""
 
-#: dk/dk_postalcodes.py:696
+#: dk/dk_postalcodes.py:701
 msgid "Karlslunde"
 msgstr ""
 
-#: dk/dk_postalcodes.py:697
+#: dk/dk_postalcodes.py:702
 msgid "Brønshøj"
 msgstr ""
 
-#: dk/dk_postalcodes.py:698
+#: dk/dk_postalcodes.py:703
 msgid "Vanløse"
 msgstr ""
 
-#: dk/dk_postalcodes.py:700
+#: dk/dk_postalcodes.py:705
 msgid "Skovlunde"
 msgstr ""
 
-#: dk/dk_postalcodes.py:702
+#: dk/dk_postalcodes.py:707
 msgid "Måløv"
 msgstr ""
 
-#: dk/dk_postalcodes.py:703
+#: dk/dk_postalcodes.py:708
 msgid "Smørum"
 msgstr ""
 
-#: dk/dk_postalcodes.py:704
+#: dk/dk_postalcodes.py:709
 msgid "Kastrup"
 msgstr ""
 
-#: dk/dk_postalcodes.py:706
+#: dk/dk_postalcodes.py:711
 msgid "Kongens Lyngby"
 msgstr ""
 
-#: dk/dk_postalcodes.py:708
+#: dk/dk_postalcodes.py:713
 msgid "Virum"
 msgstr ""
 
-#: dk/dk_postalcodes.py:709
+#: dk/dk_postalcodes.py:714
 msgid "Holte"
 msgstr ""
 
-#: dk/dk_postalcodes.py:710
+#: dk/dk_postalcodes.py:715
 msgid "Nærum"
 msgstr ""
 
-#: dk/dk_postalcodes.py:711
+#: dk/dk_postalcodes.py:716
 msgid "Søborg"
 msgstr ""
 
-#: dk/dk_postalcodes.py:712
+#: dk/dk_postalcodes.py:717
 msgid "Dyssegård"
 msgstr ""
 
-#: dk/dk_postalcodes.py:713
+#: dk/dk_postalcodes.py:718
 msgid "Bagsværd"
 msgstr ""
 
-#: dk/dk_postalcodes.py:714
+#: dk/dk_postalcodes.py:719
 msgid "Hellerup"
 msgstr ""
 
-#: dk/dk_postalcodes.py:715
+#: dk/dk_postalcodes.py:720
 msgid "Charlottenlund"
 msgstr ""
 
-#: dk/dk_postalcodes.py:716
+#: dk/dk_postalcodes.py:721
 msgid "Klampenborg"
 msgstr ""
 
-#: dk/dk_postalcodes.py:717
+#: dk/dk_postalcodes.py:722
 msgid "Skodsborg"
 msgstr ""
 
-#: dk/dk_postalcodes.py:718
+#: dk/dk_postalcodes.py:723
 msgid "Vedbæk"
 msgstr ""
 
-#: dk/dk_postalcodes.py:719
+#: dk/dk_postalcodes.py:724
 msgid "Rungsted Kyst"
 msgstr ""
 
-#: dk/dk_postalcodes.py:721
+#: dk/dk_postalcodes.py:726
 msgid "Kokkedal"
 msgstr ""
 
-#: dk/dk_postalcodes.py:722
+#: dk/dk_postalcodes.py:727
 msgid "Nivå"
 msgstr ""
 
-#: dk/dk_postalcodes.py:724
+#: dk/dk_postalcodes.py:729
 msgid "Humlebæk"
 msgstr ""
 
-#: dk/dk_postalcodes.py:725
+#: dk/dk_postalcodes.py:730
 msgid "Espergærde"
 msgstr ""
 
-#: dk/dk_postalcodes.py:726
+#: dk/dk_postalcodes.py:731
 msgid "Snekkersten"
 msgstr ""
 
-#: dk/dk_postalcodes.py:727
+#: dk/dk_postalcodes.py:732
 msgid "Tikøb"
 msgstr ""
 
-#: dk/dk_postalcodes.py:728
+#: dk/dk_postalcodes.py:733
 msgid "Hornbæk"
 msgstr ""
 
-#: dk/dk_postalcodes.py:729
+#: dk/dk_postalcodes.py:734
 msgid "Dronningmølle"
 msgstr ""
 
-#: dk/dk_postalcodes.py:730
+#: dk/dk_postalcodes.py:735
 msgid "Ålsgårde"
 msgstr ""
 
-#: dk/dk_postalcodes.py:731
+#: dk/dk_postalcodes.py:736
 msgid "Hellebæk"
 msgstr ""
 
-#: dk/dk_postalcodes.py:732
+#: dk/dk_postalcodes.py:737
 msgid "Helsinge"
 msgstr ""
 
-#: dk/dk_postalcodes.py:733
+#: dk/dk_postalcodes.py:738
 msgid "Vejby"
 msgstr ""
 
-#: dk/dk_postalcodes.py:734
+#: dk/dk_postalcodes.py:739
 msgid "Tisvildeleje"
 msgstr ""
 
-#: dk/dk_postalcodes.py:735
+#: dk/dk_postalcodes.py:740
 msgid "Græsted"
 msgstr ""
 
-#: dk/dk_postalcodes.py:736
+#: dk/dk_postalcodes.py:741
 msgid "Gilleleje"
 msgstr ""
 
-#: dk/dk_postalcodes.py:737
+#: dk/dk_postalcodes.py:742
 msgid "Frederiksværk"
 msgstr ""
 
-#: dk/dk_postalcodes.py:738
+#: dk/dk_postalcodes.py:743
 msgid "Ølsted"
 msgstr ""
 
-#: dk/dk_postalcodes.py:739
+#: dk/dk_postalcodes.py:744
 msgid "Skævinge"
 msgstr ""
 
-#: dk/dk_postalcodes.py:740
+#: dk/dk_postalcodes.py:745
 msgid "Gørløse"
 msgstr ""
 
-#: dk/dk_postalcodes.py:741
+#: dk/dk_postalcodes.py:746
 msgid "Liseleje"
 msgstr ""
 
-#: dk/dk_postalcodes.py:742
+#: dk/dk_postalcodes.py:747
 msgid "Melby"
 msgstr ""
 
-#: dk/dk_postalcodes.py:743
+#: dk/dk_postalcodes.py:748
 msgid "Hundested"
 msgstr ""
 
-#: dk/dk_postalcodes.py:746
+#: dk/dk_postalcodes.py:751
 msgid "Birkerød"
 msgstr ""
 
-#: dk/dk_postalcodes.py:748
+#: dk/dk_postalcodes.py:753
 msgid "Kvistgård"
 msgstr ""
 
-#: dk/dk_postalcodes.py:749
+#: dk/dk_postalcodes.py:754
 msgid "Værløse"
 msgstr ""
 
-#: dk/dk_postalcodes.py:750
+#: dk/dk_postalcodes.py:755
 msgid "Farum"
 msgstr ""
 
-#: dk/dk_postalcodes.py:751
+#: dk/dk_postalcodes.py:756
 msgid "Lynge"
 msgstr ""
 
-#: dk/dk_postalcodes.py:752
+#: dk/dk_postalcodes.py:757
 msgid "Slangerup"
 msgstr ""
 
-#: dk/dk_postalcodes.py:754
+#: dk/dk_postalcodes.py:759
 msgid "Jægerspris"
 msgstr ""
 
-#: dk/dk_postalcodes.py:755
+#: dk/dk_postalcodes.py:760
 msgid "Ølstykke"
 msgstr ""
 
-#: dk/dk_postalcodes.py:756
+#: dk/dk_postalcodes.py:761
 msgid "Stenløse"
 msgstr ""
 
-#: dk/dk_postalcodes.py:757
+#: dk/dk_postalcodes.py:762
 msgid "Veksø Sjælland"
 msgstr ""
 
-#: dk/dk_postalcodes.py:758
+#: dk/dk_postalcodes.py:763
 msgid "Rønne"
 msgstr ""
 
-#: dk/dk_postalcodes.py:759
+#: dk/dk_postalcodes.py:764
 msgid "Aakirkeby"
 msgstr ""
 
-#: dk/dk_postalcodes.py:760
+#: dk/dk_postalcodes.py:765
 msgid "Nexø"
 msgstr ""
 
-#: dk/dk_postalcodes.py:761
+#: dk/dk_postalcodes.py:766
 msgid "Svaneke"
 msgstr ""
 
-#: dk/dk_postalcodes.py:762
+#: dk/dk_postalcodes.py:767
 msgid "Østermarie"
 msgstr ""
 
-#: dk/dk_postalcodes.py:763
+#: dk/dk_postalcodes.py:768
 msgid "Gudhjem"
 msgstr ""
 
-#: dk/dk_postalcodes.py:764
+#: dk/dk_postalcodes.py:769
 msgid "Allinge"
 msgstr ""
 
-#: dk/dk_postalcodes.py:765
+#: dk/dk_postalcodes.py:770
 msgid "Klemensker"
 msgstr ""
 
-#: dk/dk_postalcodes.py:766
+#: dk/dk_postalcodes.py:771
 msgid "Hasle"
 msgstr ""
 
-#: dk/dk_postalcodes.py:768
+#: dk/dk_postalcodes.py:773
 msgid "Tune"
 msgstr ""
 
-#: dk/dk_postalcodes.py:769
+#: dk/dk_postalcodes.py:774
 msgid "Jyllinge"
 msgstr ""
 
-#: dk/dk_postalcodes.py:770
+#: dk/dk_postalcodes.py:775
 msgid "Skibby"
 msgstr ""
 
-#: dk/dk_postalcodes.py:771
+#: dk/dk_postalcodes.py:776
 msgid "Kirke Såby"
 msgstr ""
 
-#: dk/dk_postalcodes.py:772
+#: dk/dk_postalcodes.py:777
 msgid "Kirke Hyllinge"
 msgstr ""
 
-#: dk/dk_postalcodes.py:775
+#: dk/dk_postalcodes.py:780
 msgid "Viby Sjælland"
 msgstr ""
 
-#: dk/dk_postalcodes.py:776
+#: dk/dk_postalcodes.py:781
 msgid "Borup"
 msgstr ""
 
-#: dk/dk_postalcodes.py:777
+#: dk/dk_postalcodes.py:782
 msgid "Herlufmagle"
 msgstr ""
 
-#: dk/dk_postalcodes.py:778
+#: dk/dk_postalcodes.py:783
 msgid "Glumsø"
 msgstr ""
 
-#: dk/dk_postalcodes.py:779
+#: dk/dk_postalcodes.py:784
 msgid "Fjenneslev"
 msgstr ""
 
-#: dk/dk_postalcodes.py:780
+#: dk/dk_postalcodes.py:785
 msgid "Jystrup Midtsj"
 msgstr ""
 
-#: dk/dk_postalcodes.py:782
+#: dk/dk_postalcodes.py:787
 msgid "Munke Bjergby"
 msgstr ""
 
-#: dk/dk_postalcodes.py:784
+#: dk/dk_postalcodes.py:789
 msgid "Korsør"
 msgstr ""
 
-#: dk/dk_postalcodes.py:785
+#: dk/dk_postalcodes.py:790
 msgid "Skælskør"
 msgstr ""
 
-#: dk/dk_postalcodes.py:786
+#: dk/dk_postalcodes.py:791
 msgid "Vemmelev"
 msgstr ""
 
-#: dk/dk_postalcodes.py:787
+#: dk/dk_postalcodes.py:792
 msgid "Boeslunde"
 msgstr ""
 
-#: dk/dk_postalcodes.py:788
+#: dk/dk_postalcodes.py:793
 msgid "Rude"
 msgstr ""
 
-#: dk/dk_postalcodes.py:789
-msgid "Fuglebjerg"
-msgstr ""
-
-#: dk/dk_postalcodes.py:790
-msgid "Dalmose"
-msgstr ""
-
-#: dk/dk_postalcodes.py:791
-msgid "Sandved"
-msgstr ""
-
-#: dk/dk_postalcodes.py:792
-msgid "Høng"
-msgstr ""
-
-#: dk/dk_postalcodes.py:793
-msgid "Gørlev"
-msgstr ""
-
 #: dk/dk_postalcodes.py:794
-msgid "Ruds Vedby"
+msgid "Agersø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:795
-msgid "Dianalund"
+msgid "Omø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:796
-msgid "Stenlille"
+msgid "Fuglebjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:797
-msgid "Nyrup"
+msgid "Dalmose"
+msgstr ""
+
+#: dk/dk_postalcodes.py:798
+msgid "Sandved"
+msgstr ""
+
+#: dk/dk_postalcodes.py:799
+msgid "Høng"
 msgstr ""
 
 #: dk/dk_postalcodes.py:800
-msgid "Hvalsø"
+msgid "Gørlev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:801
-msgid "Tølløse"
+msgid "Ruds Vedby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:802
-msgid "Ugerløse"
+msgid "Dianalund"
 msgstr ""
 
 #: dk/dk_postalcodes.py:803
-msgid "Kirke Eskilstrup"
+msgid "Stenlille"
 msgstr ""
 
 #: dk/dk_postalcodes.py:804
-msgid "Store Merløse"
+msgid "Nyrup"
 msgstr ""
 
-#: dk/dk_postalcodes.py:805
-msgid "Vipperød"
-msgstr ""
-
-#: dk/dk_postalcodes.py:807
-msgid "Regstrup"
+#: dk/dk_postalcodes.py:806
+msgid "Orø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:808
-msgid "Mørkøv"
+msgid "Hvalsø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:809
-msgid "Jyderup"
+msgid "Tølløse"
 msgstr ""
 
 #: dk/dk_postalcodes.py:810
-msgid "Snertinge"
+msgid "Ugerløse"
 msgstr ""
 
 #: dk/dk_postalcodes.py:811
-msgid "Svebølle"
+msgid "Kirke Eskilstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:812
-msgid "Store Fuglede"
+msgid "Store Merløse"
 msgstr ""
 
 #: dk/dk_postalcodes.py:813
-msgid "Jerslev Sjælland"
-msgstr ""
-
-#: dk/dk_postalcodes.py:814
-msgid "Nykøbing Sj"
+msgid "Vipperød"
 msgstr ""
 
 #: dk/dk_postalcodes.py:815
-msgid "Svinninge"
+msgid "Regstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:816
-msgid "Gislinge"
+msgid "Mørkøv"
 msgstr ""
 
 #: dk/dk_postalcodes.py:817
-msgid "Hørve"
+msgid "Jyderup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:818
-msgid "Fårevejle"
+msgid "Snertinge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:819
-msgid "Asnæs"
+msgid "Svebølle"
 msgstr ""
 
 #: dk/dk_postalcodes.py:820
-msgid "Vig"
+msgid "Store Fuglede"
 msgstr ""
 
 #: dk/dk_postalcodes.py:821
-msgid "Grevinge"
+msgid "Jerslev Sjælland"
 msgstr ""
 
 #: dk/dk_postalcodes.py:822
-msgid "Nørre Asmindrup"
+msgid "Nykøbing Sj"
 msgstr ""
 
 #: dk/dk_postalcodes.py:823
-msgid "Højby"
+msgid "Svinninge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:824
-msgid "Rørvig"
+msgid "Gislinge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:825
-msgid "Sjællands Odde"
+msgid "Hørve"
 msgstr ""
 
 #: dk/dk_postalcodes.py:826
-msgid "Føllenslev"
+msgid "Fårevejle"
 msgstr ""
 
 #: dk/dk_postalcodes.py:827
-msgid "Sejerø"
+msgid "Asnæs"
 msgstr ""
 
 #: dk/dk_postalcodes.py:828
-msgid "Eskebjerg"
+msgid "Vig"
+msgstr ""
+
+#: dk/dk_postalcodes.py:829
+msgid "Grevinge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:830
-msgid "Gadstrup"
+msgid "Nørre Asmindrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:831
-msgid "Havdrup"
+msgid "Højby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:832
-msgid "Lille Skensved"
+msgid "Rørvig"
 msgstr ""
 
 #: dk/dk_postalcodes.py:833
-msgid "Bjæverskov"
+msgid "Sjællands Odde"
+msgstr ""
+
+#: dk/dk_postalcodes.py:834
+msgid "Føllenslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:835
-msgid "Hårlev"
+msgid "Sejerø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:836
-msgid "Karise"
-msgstr ""
-
-#: dk/dk_postalcodes.py:837
-msgid "Faxe Ladeplads"
+msgid "Eskebjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:838
-msgid "Store Heddinge"
+msgid "Gadstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:839
-msgid "Strøby"
+msgid "Havdrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:840
-msgid "Klippinge"
+msgid "Lille Skensved"
 msgstr ""
 
 #: dk/dk_postalcodes.py:841
-msgid "Rødvig Stevns"
-msgstr ""
-
-#: dk/dk_postalcodes.py:842
-msgid "Herfølge"
+msgid "Bjæverskov"
 msgstr ""
 
 #: dk/dk_postalcodes.py:843
-msgid "Tureby"
+msgid "Hårlev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:844
-msgid "Rønnede"
+msgid "Karise"
 msgstr ""
 
 #: dk/dk_postalcodes.py:845
-msgid "Holmegaard"
+msgid "Faxe Ladeplads"
 msgstr ""
 
 #: dk/dk_postalcodes.py:846
-msgid "Haslev"
+msgid "Store Heddinge"
+msgstr ""
+
+#: dk/dk_postalcodes.py:847
+msgid "Strøby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:848
-msgid "Præstø"
+msgid "Klippinge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:849
-msgid "Tappernøje"
+msgid "Rødvig Stevns"
 msgstr ""
 
 #: dk/dk_postalcodes.py:850
-msgid "Mern"
+msgid "Herfølge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:851
-msgid "Karrebæksminde"
+msgid "Tureby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:852
-msgid "Lundby"
+msgid "Rønnede"
+msgstr ""
+
+#: dk/dk_postalcodes.py:853
+msgid "Holmegaard"
 msgstr ""
 
 #: dk/dk_postalcodes.py:854
-msgid "Kalvehave"
-msgstr ""
-
-#: dk/dk_postalcodes.py:855
-msgid "Langebæk"
+msgid "Haslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:856
-msgid "Stensved"
+msgid "Præstø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:857
-msgid "Stege"
+msgid "Tappernøje"
 msgstr ""
 
 #: dk/dk_postalcodes.py:858
-msgid "Borre"
+msgid "Mern"
 msgstr ""
 
 #: dk/dk_postalcodes.py:859
-msgid "Askeby"
+msgid "Karrebæksminde"
 msgstr ""
 
 #: dk/dk_postalcodes.py:860
-msgid "Bogø By"
-msgstr ""
-
-#: dk/dk_postalcodes.py:861
-msgid "Nykøbing F"
+msgid "Lundby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:862
-msgid "Nørre Alslev"
+msgid "Kalvehave"
 msgstr ""
 
 #: dk/dk_postalcodes.py:863
-msgid "Stubbekøbing"
+msgid "Langebæk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:864
-msgid "Guldborg"
+msgid "Stensved"
 msgstr ""
 
 #: dk/dk_postalcodes.py:865
-msgid "Eskilstrup"
+msgid "Stege"
 msgstr ""
 
 #: dk/dk_postalcodes.py:866
-msgid "Horbelev"
+msgid "Borre"
 msgstr ""
 
 #: dk/dk_postalcodes.py:867
-msgid "Idestrup"
+msgid "Askeby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:868
-msgid "Væggerløse"
+msgid "Bogø By"
 msgstr ""
 
 #: dk/dk_postalcodes.py:869
-msgid "Gedser"
+msgid "Nykøbing F"
 msgstr ""
 
 #: dk/dk_postalcodes.py:870
-msgid "Nysted"
+msgid "Nørre Alslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:871
-msgid "Toreby L"
+msgid "Stubbekøbing"
 msgstr ""
 
 #: dk/dk_postalcodes.py:872
-msgid "Kettinge"
+msgid "Guldborg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:873
-msgid "Øster Ulslev"
+msgid "Eskilstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:874
-msgid "Errindlev"
+msgid "Horbelev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:875
-msgid "Nakskov"
+msgid "Idestrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:876
-msgid "Harpelunde"
+msgid "Væggerløse"
 msgstr ""
 
 #: dk/dk_postalcodes.py:877
-msgid "Horslunde"
+msgid "Gedser"
 msgstr ""
 
 #: dk/dk_postalcodes.py:878
-msgid "Søllested"
+msgid "Nysted"
 msgstr ""
 
 #: dk/dk_postalcodes.py:879
-msgid "Maribo"
+msgid "Toreby L"
 msgstr ""
 
 #: dk/dk_postalcodes.py:880
-msgid "Bandholm"
+msgid "Kettinge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:881
-msgid "Torrig L"
+msgid "Øster Ulslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:882
-msgid "Fejø"
+msgid "Errindlev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:883
-msgid "Nørreballe"
+msgid "Nakskov"
 msgstr ""
 
 #: dk/dk_postalcodes.py:884
-msgid "Stokkemarke"
+msgid "Harpelunde"
 msgstr ""
 
 #: dk/dk_postalcodes.py:885
-msgid "Vesterborg"
+msgid "Horslunde"
 msgstr ""
 
 #: dk/dk_postalcodes.py:886
-msgid "Holeby"
+msgid "Søllested"
 msgstr ""
 
 #: dk/dk_postalcodes.py:887
-msgid "Rødby"
+msgid "Maribo"
 msgstr ""
 
 #: dk/dk_postalcodes.py:888
-msgid "Dannemare"
+msgid "Bandholm"
 msgstr ""
 
 #: dk/dk_postalcodes.py:889
-msgid "Sakskøbing"
+msgid "Askø og Lilleø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:890
-msgid "Midtsjælland USF P"
+msgid "Torrig L"
 msgstr ""
 
-#: dk/dk_postalcodes.py:891 dk/dk_postalcodes.py:892 dk/dk_postalcodes.py:893
-msgid "Odense C"
+#: dk/dk_postalcodes.py:891
+msgid "Fejø"
+msgstr ""
+
+#: dk/dk_postalcodes.py:892
+msgid "Femø"
+msgstr ""
+
+#: dk/dk_postalcodes.py:893
+msgid "Nørreballe"
 msgstr ""
 
 #: dk/dk_postalcodes.py:894
-msgid "Odense V"
+msgid "Stokkemarke"
 msgstr ""
 
 #: dk/dk_postalcodes.py:895
-msgid "Odense NV"
+msgid "Vesterborg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:896
-msgid "Odense SØ"
+msgid "Holeby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:897
-msgid "Odense M"
+msgid "Rødby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:898
-msgid "Odense NØ"
+msgid "Dannemare"
 msgstr ""
 
 #: dk/dk_postalcodes.py:899
-msgid "Odense SV"
+msgid "Sakskøbing"
 msgstr ""
 
 #: dk/dk_postalcodes.py:900
-msgid "Odense S"
+msgid "Midtsjælland USF P"
 msgstr ""
 
-#: dk/dk_postalcodes.py:901
-msgid "Odense N"
-msgstr ""
-
-#: dk/dk_postalcodes.py:902
-msgid "Marslev"
+#: dk/dk_postalcodes.py:901 dk/dk_postalcodes.py:902 dk/dk_postalcodes.py:903
+msgid "Odense C"
 msgstr ""
 
 #: dk/dk_postalcodes.py:904
-msgid "Agedrup"
+msgid "Odense V"
 msgstr ""
 
 #: dk/dk_postalcodes.py:905
-msgid "Munkebo"
+msgid "Odense NV"
 msgstr ""
 
 #: dk/dk_postalcodes.py:906
-msgid "Rynkeby"
+msgid "Odense SØ"
 msgstr ""
 
 #: dk/dk_postalcodes.py:907
-msgid "Mesinge"
+msgid "Odense M"
 msgstr ""
 
 #: dk/dk_postalcodes.py:908
-msgid "Dalby"
+msgid "Odense NØ"
 msgstr ""
 
 #: dk/dk_postalcodes.py:909
-msgid "Martofte"
+msgid "Odense SV"
 msgstr ""
 
 #: dk/dk_postalcodes.py:910
-msgid "Bogense"
+msgid "Odense S"
 msgstr ""
 
 #: dk/dk_postalcodes.py:911
-msgid "Otterup"
+msgid "Odense N"
 msgstr ""
 
 #: dk/dk_postalcodes.py:912
-msgid "Morud"
-msgstr ""
-
-#: dk/dk_postalcodes.py:913
-msgid "Harndrup"
+msgid "Marslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:914
-msgid "Brenderup Fyn"
+msgid "Agedrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:915
-msgid "Asperup"
+msgid "Munkebo"
 msgstr ""
 
 #: dk/dk_postalcodes.py:916
-msgid "Søndersø"
+msgid "Rynkeby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:917
-msgid "Veflinge"
+msgid "Mesinge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:918
-msgid "Skamby"
+msgid "Dalby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:919
-msgid "Blommenslyst"
+msgid "Martofte"
 msgstr ""
 
 #: dk/dk_postalcodes.py:920
-msgid "Vissenbjerg"
+msgid "Bogense"
+msgstr ""
+
+#: dk/dk_postalcodes.py:921
+msgid "Otterup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:922
-msgid "Ullerslev"
+msgid "Morud"
 msgstr ""
 
 #: dk/dk_postalcodes.py:923
-msgid "Langeskov"
+msgid "Harndrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:924
-msgid "Aarup"
+msgid "Brenderup Fyn"
 msgstr ""
 
 #: dk/dk_postalcodes.py:925
-msgid "Nørre Aaby"
+msgid "Asperup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:926
-msgid "Gelsted"
+msgid "Søndersø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:927
-msgid "Ejby"
+msgid "Veflinge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:928
-msgid "Faaborg"
+msgid "Skamby"
+msgstr ""
+
+#: dk/dk_postalcodes.py:929
+msgid "Blommenslyst"
 msgstr ""
 
 #: dk/dk_postalcodes.py:930
-msgid "Glamsbjerg"
-msgstr ""
-
-#: dk/dk_postalcodes.py:931
-msgid "Ebberup"
+msgid "Vissenbjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:932
-msgid "Millinge"
+msgid "Ullerslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:933
-msgid "Broby"
+msgid "Langeskov"
 msgstr ""
 
 #: dk/dk_postalcodes.py:934
-msgid "Haarby"
+msgid "Aarup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:935
-msgid "Tommerup"
+msgid "Nørre Aaby"
+msgstr ""
+
+#: dk/dk_postalcodes.py:936
+msgid "Gelsted"
 msgstr ""
 
 #: dk/dk_postalcodes.py:937
-msgid "Ringe"
+msgid "Ejby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:938
-msgid "Vester Skerninge"
+msgid "Faaborg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:939
-msgid "Stenstrup"
+msgid "Lyø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:940
-msgid "Kværndrup"
+msgid "Avernakø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:941
-msgid "Årslev"
+msgid "Bjørnø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:943
-msgid "Ørbæk"
+msgid "Glamsbjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:944
-msgid "Gislev"
+msgid "Ebberup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:945
-msgid "Ryslinge"
+msgid "Millinge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:946
-msgid "Ferritslev Fyn"
+msgid "Broby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:947
-msgid "Frørup"
+msgid "Haarby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:948
-msgid "Hesselager"
-msgstr ""
-
-#: dk/dk_postalcodes.py:949
-msgid "Skårup Fyn"
+msgid "Tommerup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:950
-msgid "Vejstrup"
+msgid "Ringe"
 msgstr ""
 
 #: dk/dk_postalcodes.py:951
-msgid "Oure"
+msgid "Vester Skerninge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:952
-msgid "Gudme"
+msgid "Stenstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:953
-msgid "Gudbjerg Sydfyn"
+msgid "Kværndrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:954
-msgid "Rudkøbing"
-msgstr ""
-
-#: dk/dk_postalcodes.py:955
-msgid "Humble"
+msgid "Årslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:956
-msgid "Bagenkop"
+msgid "Ørbæk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:957
-msgid "Tranekær"
+msgid "Gislev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:958
-msgid "Marstal"
+msgid "Ryslinge"
 msgstr ""
 
 #: dk/dk_postalcodes.py:959
-msgid "Ærøskøbing"
+msgid "Ferritslev Fyn"
 msgstr ""
 
 #: dk/dk_postalcodes.py:960
-msgid "Søby Ærø"
+msgid "Frørup"
+msgstr ""
+
+#: dk/dk_postalcodes.py:961
+msgid "Hesselager"
 msgstr ""
 
 #: dk/dk_postalcodes.py:962
-msgid "Egtved"
+msgid "Skårup Fyn"
 msgstr ""
 
 #: dk/dk_postalcodes.py:963
-msgid "Almind"
+msgid "Vejstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:964
-msgid "Viuf"
+msgid "Oure"
 msgstr ""
 
 #: dk/dk_postalcodes.py:965
-msgid "Jordrup"
+msgid "Gudme"
 msgstr ""
 
 #: dk/dk_postalcodes.py:966
-msgid "Christiansfeld"
+msgid "Gudbjerg Sydfyn"
 msgstr ""
 
 #: dk/dk_postalcodes.py:967
-msgid "Bjert"
+msgid "Rudkøbing"
 msgstr ""
 
 #: dk/dk_postalcodes.py:968
-msgid "Sønder Stenderup"
+msgid "Humble"
 msgstr ""
 
 #: dk/dk_postalcodes.py:969
-msgid "Sjølund"
+msgid "Bagenkop"
 msgstr ""
 
 #: dk/dk_postalcodes.py:970
-msgid "Hejls"
+msgid "Strynø"
+msgstr ""
+
+#: dk/dk_postalcodes.py:971
+msgid "Tranekær"
+msgstr ""
+
+#: dk/dk_postalcodes.py:972
+msgid "Marstal"
 msgstr ""
 
 #: dk/dk_postalcodes.py:973
-msgid "Rødekro"
+msgid "Birkholm"
 msgstr ""
 
 #: dk/dk_postalcodes.py:974
-msgid "Løgumkloster"
+msgid "Ærøskøbing"
 msgstr ""
 
 #: dk/dk_postalcodes.py:975
-msgid "Bredebro"
+msgid "Søby Ærø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:977
-msgid "Højer"
+msgid "Egtved"
 msgstr ""
 
 #: dk/dk_postalcodes.py:978
-msgid "Gråsten"
+msgid "Almind"
 msgstr ""
 
 #: dk/dk_postalcodes.py:979
-msgid "Broager"
+msgid "Viuf"
 msgstr ""
 
 #: dk/dk_postalcodes.py:980
-msgid "Egernsund"
+msgid "Jordrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:981
-msgid "Padborg"
+msgid "Christiansfeld"
 msgstr ""
 
 #: dk/dk_postalcodes.py:982
-msgid "Kruså"
+msgid "Bjert"
 msgstr ""
 
 #: dk/dk_postalcodes.py:983
-msgid "Tinglev"
+msgid "Sønder Stenderup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:984
-msgid "Bylderup-Bov"
+msgid "Sjølund"
 msgstr ""
 
 #: dk/dk_postalcodes.py:985
-msgid "Bolderslev"
-msgstr ""
-
-#: dk/dk_postalcodes.py:987
-msgid "Nordborg"
+msgid "Hejls"
 msgstr ""
 
 #: dk/dk_postalcodes.py:988
-msgid "Augustenborg"
+msgid "Barsø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:989
-msgid "Sydals"
+msgid "Rødekro"
 msgstr ""
 
 #: dk/dk_postalcodes.py:990
-msgid "Vojens"
+msgid "Løgumkloster"
 msgstr ""
 
 #: dk/dk_postalcodes.py:991
-msgid "Gram"
-msgstr ""
-
-#: dk/dk_postalcodes.py:992
-msgid "Toftlund"
+msgid "Bredebro"
 msgstr ""
 
 #: dk/dk_postalcodes.py:993
-msgid "Agerskov"
+msgid "Højer"
 msgstr ""
 
 #: dk/dk_postalcodes.py:994
-msgid "Branderup J"
+msgid "Gråsten"
 msgstr ""
 
 #: dk/dk_postalcodes.py:995
-msgid "Bevtoft"
+msgid "Broager"
 msgstr ""
 
 #: dk/dk_postalcodes.py:996
-msgid "Sommersted"
+msgid "Egernsund"
 msgstr ""
 
 #: dk/dk_postalcodes.py:997
-msgid "Vamdrup"
+msgid "Padborg"
+msgstr ""
+
+#: dk/dk_postalcodes.py:998
+msgid "Kruså"
 msgstr ""
 
 #: dk/dk_postalcodes.py:999
-msgid "Gesten"
+msgid "Tinglev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1000
-msgid "Bække"
+msgid "Bylderup-Bov"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1001
-msgid "Vorbasse"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1002
-msgid "Rødding"
+msgid "Bolderslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1003
-msgid "Lunderskov"
+msgid "Nordborg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1004
-msgid "Brørup"
+msgid "Augustenborg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1005
-msgid "Lintrup"
+msgid "Sydals"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1006
-msgid "Holsted"
+msgid "Vojens"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1007
-msgid "Hovborg"
+msgid "Gram"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1008
-msgid "Føvling"
+msgid "Toftlund"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1009
-msgid "Gørding"
+msgid "Agerskov"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1010
+msgid "Branderup J"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1011
+msgid "Bevtoft"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1012
-msgid "Esbjerg Ø"
+msgid "Sommersted"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1013
-msgid "Esbjerg V"
+msgid "Vamdrup"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1014
-msgid "Esbjerg N"
+#: dk/dk_postalcodes.py:1015
+msgid "Gesten"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1016
-msgid "Tjæreborg"
+msgid "Bække"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1017
-msgid "Bramming"
+msgid "Vorbasse"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1018
-msgid "Glejbjerg"
+msgid "Rødding"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1019
-msgid "Agerbæk"
+msgid "Lunderskov"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1020
-msgid "Ribe"
+msgid "Brørup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1021
-msgid "Gredstedbro"
+msgid "Lintrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1022
-msgid "Skærbæk"
+msgid "Holsted"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1023
-msgid "Rømø"
+msgid "Hovborg"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1024
+msgid "Føvling"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1025
-msgid "Årre"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1026
-msgid "Ansager"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1027
-msgid "Nørre Nebel"
+msgid "Gørding"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1028
-msgid "Oksbøl"
+msgid "Esbjerg Ø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1029
-msgid "Janderup Vestj"
+msgid "Esbjerg V"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1030
-msgid "Billum"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1031
-msgid "Vejers Strand"
+msgid "Esbjerg N"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1032
-msgid "Henne"
+msgid "Tjæreborg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1033
-msgid "Outrup"
+msgid "Bramming"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1034
-msgid "Blåvand"
+msgid "Glejbjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1035
-msgid "Tistrup"
+msgid "Agerbæk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1036
-msgid "Ølgod"
+msgid "Ribe"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1037
-msgid "Tarm"
+msgid "Gredstedbro"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1038
-msgid "Hemmet"
+msgid "Skærbæk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1039
-msgid "Skjern"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1040
-msgid "Videbæk"
+msgid "Rømø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1041
-msgid "Kibæk"
+msgid "Årre"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1042
-msgid "Lem St"
+msgid "Ansager"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1043
-msgid "Ringkøbing"
+msgid "Nørre Nebel"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1044
-msgid "Hvide Sande"
+msgid "Oksbøl"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1045
-msgid "Spjald"
+msgid "Janderup Vestj"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1046
-msgid "Ørnhøj"
+msgid "Billum"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1047
-msgid "Tim"
+msgid "Vejers Strand"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1048
-msgid "Ulfborg"
+msgid "Henne"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1049
+msgid "Outrup"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1050
+msgid "Blåvand"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1051
-msgid "Taulov Pakkecenter"
+msgid "Tistrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1052
-msgid "Pakker TLP"
+msgid "Ølgod"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1053
+msgid "Tarm"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1054
-msgid "Børkop"
+msgid "Hemmet"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1055
+msgid "Skjern"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1056
-msgid "Vejle Øst"
+msgid "Videbæk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1057
-msgid "Juelsminde"
+msgid "Kibæk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1058
-msgid "Stouby"
+msgid "Lem St"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1059
-msgid "Barrit"
+msgid "Ringkøbing"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1060
-msgid "Tørring"
+msgid "Hvide Sande"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1061
-msgid "Uldum"
+msgid "Spjald"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1062
-msgid "Vonge"
+msgid "Ørnhøj"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1063
-msgid "Bredsten"
+msgid "Tim"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1064
-msgid "Randbøl"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1065
-msgid "Vandel"
+msgid "Ulfborg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1067
-msgid "Grindsted"
+msgid "Taulov Pakkecenter"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1068
-msgid "Hejnsvig"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1069
-msgid "Sønder Omme"
+msgid "Pakker TLP"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1070
-msgid "Stakroge"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1071
-msgid "Sønder Felding"
+msgid "Børkop"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1072
-msgid "Jelling"
+msgid "Vejle Øst"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1073
-msgid "Gadbjerg"
+msgid "Juelsminde"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1074
-msgid "Give"
+msgid "Stouby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1075
-msgid "Brande"
+msgid "Barrit"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1076
-msgid "Ejstrupholm"
+msgid "Tørring"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1077
-msgid "Hampen"
+msgid "Uldum"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1078
+msgid "Vonge"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1079
+msgid "Bredsten"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1080
-msgid "Ikast"
+msgid "Randbøl"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1081
-msgid "Bording"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1082
-msgid "Engesvang"
+msgid "Vandel"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1083
-msgid "Sunds"
+msgid "Grindsted"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1084
-msgid "Karup J"
+msgid "Hejnsvig"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1085
-msgid "Vildbjerg"
+msgid "Sønder Omme"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1086
-msgid "Aulum"
+msgid "Stakroge"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1087
+msgid "Sønder Felding"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1088
-msgid "Haderup"
+msgid "Jelling"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1089
-msgid "Sørvad"
+msgid "Gadbjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1090
-msgid "Hjerm"
+msgid "Give"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1091
-msgid "Vemb"
+msgid "Brande"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1094
-msgid "Bøvlingbjerg"
+#: dk/dk_postalcodes.py:1092
+msgid "Ejstrupholm"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1095
-msgid "Bækmarksbro"
+#: dk/dk_postalcodes.py:1093
+msgid "Hampen"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1096
-msgid "Harboøre"
+msgid "Ikast"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1097
-msgid "Thyborøn"
+msgid "Bording"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1098
+msgid "Engesvang"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1099
-msgid "Hanstholm"
+msgid "Sunds"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1100
-msgid "Frøstrup"
+msgid "Karup J"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1101
-msgid "Vesløs"
+msgid "Vildbjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1102
-msgid "Snedsted"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1103
-msgid "Bedsted Thy"
+msgid "Aulum"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1104
-msgid "Hurup Thy"
+msgid "Haderup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1105
-msgid "Vestervig"
+msgid "Sørvad"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1106
-msgid "Thyholm"
+msgid "Hjerm"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1108
-msgid "Vinderup"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1109
-msgid "Højslev"
+#: dk/dk_postalcodes.py:1107
+msgid "Vemb"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1110
-msgid "Stoholm Jyll"
+msgid "Bøvlingbjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1111
-msgid "Spøttrup"
+msgid "Bækmarksbro"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1112
-msgid "Roslev"
+msgid "Harboøre"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1113
-msgid "Fur"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1114
-msgid "Nykøbing M"
+msgid "Thyborøn"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1115
-msgid "Erslev"
+msgid "Hanstholm"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1116
-msgid "Karby"
+msgid "Frøstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1117
-msgid "Redsted M"
+msgid "Vesløs"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1118
-msgid "Vils"
+msgid "Snedsted"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1119
-msgid "Øster Assels"
+msgid "Bedsted Thy"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1120
-msgid "Sydjylland/Fyn USF P"
+msgid "Hurup Thy"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1121
-msgid "Sydjylland/Fyn USF B"
+msgid "Vestervig"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1122 dk/dk_postalcodes.py:1287
-msgid "Fakturaservice"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1123 dk/dk_postalcodes.py:1288
-msgid "Fakturascanning"
+#: dk/dk_postalcodes.py:1122
+msgid "Thyholm"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1124
-msgid "Statsservice"
+msgid "Vinderup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1125
-msgid "Kommunepost"
+msgid "Højslev"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1126 dk/dk_postalcodes.py:1127
-msgid "Aarhus C"
+#: dk/dk_postalcodes.py:1126
+msgid "Stoholm Jyll"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1127
+msgid "Spøttrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1128
-msgid "Aarhus N"
+msgid "Roslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1129
-msgid "Aarhus V"
+msgid "Fur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1130
-msgid "Brabrand"
+msgid "Nykøbing M"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1131 dk/dk_postalcodes.py:1134
-msgid "Risskov Ø"
+#: dk/dk_postalcodes.py:1131
+msgid "Erslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1132
-msgid "Åbyhøj"
+msgid "Karby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1133
-msgid "Risskov"
+msgid "Redsted M"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1134
+msgid "Vils"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1135
-msgid "Egå"
+msgid "Øster Assels"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1136
-msgid "Viby J"
+msgid "Sydjylland/Fyn USF P"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1137
-msgid "Højbjerg"
+msgid "Sydjylland/Fyn USF B"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1138 dk/dk_postalcodes.py:1305
+msgid "Fakturaservice"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1139 dk/dk_postalcodes.py:1306
+msgid "Fakturascanning"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1140
-msgid "Tranbjerg J"
+msgid "Statsservice"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1141
-msgid "Mårslet"
+msgid "Kommunepost"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1142
-msgid "Beder"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1143
-msgid "Malling"
+#: dk/dk_postalcodes.py:1142 dk/dk_postalcodes.py:1143
+msgid "Aarhus C"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1144
-msgid "Hundslund"
+msgid "Aarhus N"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1145
-msgid "Solbjerg"
+msgid "Aarhus V"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1146
-msgid "Hasselager"
+msgid "Brabrand"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1147
-msgid "Hørning"
+#: dk/dk_postalcodes.py:1147 dk/dk_postalcodes.py:1150
+msgid "Risskov Ø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1148
-msgid "Hadsten"
+msgid "Åbyhøj"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1149
-msgid "Trige"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1150
-msgid "Tilst"
+msgid "Risskov"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1151
-msgid "Hinnerup"
+msgid "Egå"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1152
-msgid "Ebeltoft"
+msgid "Viby J"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1153
-msgid "Rønde"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1154
-msgid "Knebel"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1155
-msgid "Balle"
+msgid "Højbjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1156
-msgid "Hammel"
+msgid "Tranbjerg J"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1157
-msgid "Harlev J"
+msgid "Mårslet"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1158
-msgid "Galten"
+msgid "Beder"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1159
-msgid "Sabro"
+msgid "Malling"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1160
-msgid "Sporup"
+msgid "Hundslund"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1161
-msgid "Grenaa"
+msgid "Solbjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1162
-msgid "Lystrup"
+msgid "Hasselager"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1163
-msgid "Hjortshøj"
+msgid "Hørning"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1164
-msgid "Skødstrup"
+msgid "Hadsten"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1165
-msgid "Hornslet"
+msgid "Trige"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1166
-msgid "Mørke"
+msgid "Tilst"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1167
-msgid "Ryomgård"
+msgid "Hinnerup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1168
-msgid "Kolind"
+msgid "Ebeltoft"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1169
-msgid "Trustrup"
+msgid "Rønde"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1170
-msgid "Nimtofte"
+msgid "Knebel"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1171
-msgid "Glesborg"
+msgid "Balle"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1172
-msgid "Ørum Djurs"
+msgid "Hammel"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1173
-msgid "Anholt"
+msgid "Harlev J"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1174
+msgid "Galten"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1175
-msgid "Kjellerup"
+msgid "Sabro"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1176
-msgid "Lemming"
+msgid "Sporup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1177
-msgid "Sorring"
+msgid "Grenaa"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1178
-msgid "Ans By"
+msgid "Lystrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1179
-msgid "Them"
+msgid "Hjortshøj"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1180
-msgid "Bryrup"
+msgid "Skødstrup"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1181
+msgid "Hornslet"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1182
-msgid "Låsby"
+msgid "Mørke"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1183
-msgid "Ry"
+msgid "Ryomgård"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1184
+msgid "Kolind"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1185
-msgid "Daugård"
+msgid "Trustrup"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1186
+msgid "Nimtofte"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1187
-msgid "Løsning"
+msgid "Glesborg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1188
-msgid "Hovedgård"
+msgid "Ørum Djurs"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1189
-msgid "Brædstrup"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1190
-msgid "Gedved"
+msgid "Anholt"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1191
-msgid "Østbirk"
+msgid "Kjellerup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1192
-msgid "Flemming"
+msgid "Lemming"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1193
-msgid "Rask Mølle"
+msgid "Sorring"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1194
-msgid "Klovborg"
+msgid "Ans By"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1195
-msgid "Nørre Snede"
+msgid "Them"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1196
-msgid "Stenderup"
+msgid "Bryrup"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1197
-msgid "Hornsyld"
+#: dk/dk_postalcodes.py:1198
+msgid "Låsby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1199
-msgid "Tjele"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1200
-msgid "Løgstrup"
+msgid "Ry"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1201
-msgid "Skals"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1202
-msgid "Rødkærsbro"
+msgid "Daugård"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1203
-msgid "Bjerringbro"
+msgid "Løsning"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1204
-msgid "Ulstrup"
+msgid "Hovedgård"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1205
-msgid "Langå"
+msgid "Brædstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1206
-msgid "Thorsø"
+msgid "Gedved"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1207
-msgid "Fårvang"
+msgid "Østbirk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1208
-msgid "Gjern"
+msgid "Flemming"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1209
-msgid "Randers C"
+msgid "Rask Mølle"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1210
-msgid "Randers NV"
+msgid "Klovborg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1211
-msgid "Randers NØ"
+msgid "Nørre Snede"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1212
-msgid "Randers SV"
+msgid "Stenderup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1213
-msgid "Ørsted"
+msgid "Hornsyld"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1214
-msgid "Randers SØ"
+msgid "Endelave"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1215
-msgid "Allingåbro"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1216
-msgid "Auning"
+msgid "Tunø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1217
-msgid "Havndal"
+msgid "Tjele"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1218
-msgid "Spentrup"
+msgid "Løgstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1219
-msgid "Gjerlev J"
+msgid "Skals"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1220
-msgid "Fårup"
+msgid "Rødkærsbro"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1221
+msgid "Bjerringbro"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1222
+msgid "Ulstrup"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1223
+msgid "Langå"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1224
-msgid "Aalborg SV"
+msgid "Thorsø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1225
-msgid "Aalborg SØ"
+msgid "Fårvang"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1226
-msgid "Aalborg Øst"
+msgid "Gjern"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1227
-msgid "Svenstrup J"
+msgid "Randers C"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1228
-msgid "Nibe"
+msgid "Randers NV"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1229
-msgid "Gistrup"
+msgid "Randers NØ"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1230
-msgid "Klarup"
+msgid "Randers SV"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1231
-msgid "Storvorde"
+msgid "Ørsted"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1232
-msgid "Kongerslev"
+msgid "Randers SØ"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1233
-msgid "Sæby"
+msgid "Allingåbro"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1234
-msgid "Vodskov"
+msgid "Auning"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1235
-msgid "Hjallerup"
+msgid "Havndal"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1236
-msgid "Dronninglund"
+msgid "Spentrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1237
-msgid "Asaa"
+msgid "Gjerlev J"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1238
-msgid "Dybvad"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1239
-msgid "Gandrup"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1240
-msgid "Hals"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1241
-msgid "Vestbjerg"
+msgid "Fårup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1242
-msgid "Sulsted"
+msgid "Aalborg SV"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1243
-msgid "Tylstrup"
+msgid "Aalborg SØ"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1244
-msgid "Nørresundby"
+msgid "Aalborg Øst"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1245
-msgid "Vadum"
+msgid "Svenstrup J"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1246
-msgid "Aabybro"
+msgid "Nibe"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1247
-msgid "Brovst"
+msgid "Gistrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1248
-msgid "Løkken"
+msgid "Klarup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1249
-msgid "Pandrup"
+msgid "Storvorde"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1250
-msgid "Blokhus"
+msgid "Kongerslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1251
-msgid "Saltum"
+msgid "Sæby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1252
-msgid "Hobro"
+msgid "Vodskov"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1253
-msgid "Arden"
+msgid "Hjallerup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1254
-msgid "Skørping"
+msgid "Dronninglund"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1255
-msgid "Støvring"
+msgid "Asaa"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1256
-msgid "Suldrup"
+msgid "Dybvad"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1257
-msgid "Mariager"
+msgid "Gandrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1258
-msgid "Hadsund"
+msgid "Hals"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1259
-msgid "Bælum"
+msgid "Vestbjerg"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1260
-msgid "Terndrup"
+msgid "Sulsted"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1261
-msgid "Aars"
+msgid "Tylstrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1262
-msgid "Nørager"
+msgid "Nørresundby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1263
-msgid "Aalestrup"
+msgid "Vadum"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1264
-msgid "Gedsted"
+msgid "Aabybro"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1265
-msgid "Møldrup"
+msgid "Brovst"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1266
-msgid "Farsø"
+msgid "Løkken"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1267
-msgid "Løgstør"
+msgid "Pandrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1268
-msgid "Ranum"
+msgid "Blokhus"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1269
-msgid "Fjerritslev"
+msgid "Saltum"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1270
+msgid "Hobro"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1271
-msgid "Jerslev J"
+msgid "Arden"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1272
-msgid "Østervrå"
+msgid "Skørping"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1273
-msgid "Vrå"
+msgid "Støvring"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1274
+msgid "Suldrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1275
-msgid "Tårs"
+msgid "Mariager"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1276
-msgid "Hirtshals"
+msgid "Hadsund"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1277
-msgid "Sindal"
+msgid "Bælum"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1278
-msgid "Bindslev"
+msgid "Terndrup"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1279
+msgid "Aars"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1280
+msgid "Nørager"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1281
-msgid "Strandby"
+msgid "Aalestrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1282
-msgid "Jerup"
+msgid "Gedsted"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1283
-msgid "Ålbæk"
+msgid "Møldrup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1284
-msgid "Skagen"
+msgid "Farsø"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1285
-msgid "Jylland USF P"
+msgid "Løgstør"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1286
-msgid "Jylland USF B"
+msgid "Ranum"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1287
+msgid "Fjerritslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1289
-msgid "Borgerservice"
+msgid "Jerslev J"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1290
-msgid "Santa Claus/Julemanden"
+msgid "Østervrå"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1291
-msgid "Nuuk"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1292
-msgid "Nuussuaq"
+msgid "Vrå"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1293
-msgid "Kangerlussuaq"
+msgid "Tårs"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1294
-msgid "Sisimiut"
+msgid "Hirtshals"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1295
-msgid "Maniitsoq"
+msgid "Sindal"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1296
-msgid "Tasiilaq"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1297
-msgid "Kulusuk"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1298
-msgid "Alluitsup Paa"
+msgid "Bindslev"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1299
-msgid "Qaqortoq"
+msgid "Strandby"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1300
-msgid "Narsaq"
+msgid "Jerup"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1301
-msgid "Nanortalik"
+msgid "Ålbæk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1302
-msgid "Narsarsuaq"
+msgid "Skagen"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1303
-msgid "Ikerasassuaq"
+msgid "Jylland USF P"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1304
-msgid "Kangilinnguit"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1305
-msgid "Arsuk"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1306
-msgid "Paamiut"
+msgid "Jylland USF B"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1307
-msgid "Aasiaat"
+msgid "Borgerservice"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1308
-msgid "Qasigiannguit"
+msgid "Santa Claus/Julemanden"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1309
-msgid "Ilulissat"
+msgid "Nuuk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1310
-msgid "Qeqertarsuaq"
+msgid "Nuussuaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1311
-msgid "Kangaatsiaq"
+msgid "Kangerlussuaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1312
-msgid "Uummannaq"
+msgid "Sisimiut"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1313
-msgid "Upernavik"
+msgid "Maniitsoq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1314
-msgid "Qaarsut"
+msgid "Tasiilaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1315
-msgid "Pituffik"
+msgid "Kulusuk"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1316
-msgid "Qaanaaq"
+msgid "Alluitsup Paa"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1317
-msgid "Station Nord"
+msgid "Qaqortoq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1318
-msgid "Ittoqqortoormiit"
+msgid "Narsaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1319
-msgid "Mestersvig"
+msgid "Nanortalik"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1320
-msgid "Danmarkshavn"
+msgid "Narsarsuaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1321
-msgid "Constable Pynt"
+msgid "Ikerasassuaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1322
-msgid "Slædepatrulje Sirius"
+msgid "Kangilinnguit"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1323 dk/dk_postalcodes.py:1324
-msgid "Tórshavn"
+#: dk/dk_postalcodes.py:1323
+msgid "Arsuk"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1325 dk/dk_postalcodes.py:1326
-msgid "Argir"
+#: dk/dk_postalcodes.py:1324
+msgid "Paamiut"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1325
+msgid "Aasiaat"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1326
+msgid "Qasigiannguit"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1327
-msgid "Kirkjubøur"
+msgid "Ilulissat"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1328
-msgid "Velbastadur"
+msgid "Qeqertarsuaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1329
-msgid "\"Sydradalur, Streymoy\""
+msgid "Kangaatsiaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1330
-msgid "Nordradalur"
+msgid "Uummannaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1331
-msgid "Kaldbak"
+msgid "Upernavik"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1332
-msgid "Kaldbaksbotnur"
+msgid "Qaarsut"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1333
-msgid "Sund"
+msgid "Pituffik"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1334
-msgid "Hvitanes"
+msgid "Qaanaaq"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1335
-msgid "Hoyvík"
+msgid "Station Nord"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1336 dk/dk_postalcodes.py:1337
-msgid "Sandur"
+#: dk/dk_postalcodes.py:1336
+msgid "Ittoqqortoormiit"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1337
+msgid "Mestersvig"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1338
-msgid "Skálavík"
+msgid "Danmarkshavn"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1339
-msgid "Húsavík"
+msgid "Constable Pynt"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1340
-msgid "Dalur"
+msgid "Slædepatrulje Sirius"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1341
-msgid "Skarvanes"
+#: dk/dk_postalcodes.py:1341 dk/dk_postalcodes.py:1342
+msgid "Tórshavn"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1342
-msgid "Skopun"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1343
-msgid "Skúvoy"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1344
-msgid "Nólsoy"
+#: dk/dk_postalcodes.py:1343 dk/dk_postalcodes.py:1344
+msgid "Argir"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1345
-msgid "Hestur"
+msgid "Kirkjubøur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1346
-msgid "Koltur"
+msgid "Velbastadur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1347
-msgid "Stóra Dimun"
+msgid "\"Sydradalur, Streymoy\""
 msgstr ""
 
 #: dk/dk_postalcodes.py:1348
-msgid "Stykkid"
+msgid "Nordradalur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1349
-msgid "Leynar"
+msgid "Kaldbak"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1350
-msgid "Skællingur"
+msgid "Kaldbaksbotnur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1351
-msgid "Kvívík"
+msgid "Sund"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1352 dk/dk_postalcodes.py:1353
-msgid "Vestmanna"
+#: dk/dk_postalcodes.py:1352
+msgid "Hvitanes"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1354
-msgid "Válur"
+#: dk/dk_postalcodes.py:1353
+msgid "Hoyvík"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1355
-msgid "Sandavágur"
+#: dk/dk_postalcodes.py:1354 dk/dk_postalcodes.py:1355
+msgid "Sandur"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1356 dk/dk_postalcodes.py:1357
-msgid "Midvágur"
+#: dk/dk_postalcodes.py:1356
+msgid "Skálavík"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1357
+msgid "Húsavík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1358
-msgid "Sørvágur"
+msgid "Dalur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1359
-msgid "Vatnsoyrar"
+msgid "Skarvanes"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1360
-msgid "Bøur"
+msgid "Skopun"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1361
-msgid "Gásadalur"
+msgid "Skúvoy"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1362
-msgid "Mykines"
+msgid "Nólsoy"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1363 dk/dk_postalcodes.py:1364
-msgid "Oyrarbakki"
+#: dk/dk_postalcodes.py:1363
+msgid "Hestur"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1364
+msgid "Koltur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1365
-msgid "Kollafjørdur"
+msgid "Stóra Dimun"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1366
-msgid "Oyrareingir"
+msgid "Stykkid"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1367
-msgid "Signabøur"
+msgid "Leynar"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1368
-msgid "Hósvík"
+msgid "Skællingur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1369
-msgid "Hvalvík"
+msgid "Kvívík"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1370
-msgid "Streymnes"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1371
-msgid "Saksun"
+#: dk/dk_postalcodes.py:1370 dk/dk_postalcodes.py:1371
+msgid "Vestmanna"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1372
-msgid "Nesvík"
+msgid "Válur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1373
-msgid "Langasandur"
+msgid "Sandavágur"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1374
-msgid "Haldarsvík"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1375
-msgid "Tjørnuvík"
+#: dk/dk_postalcodes.py:1374 dk/dk_postalcodes.py:1375
+msgid "Midvágur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1376
-msgid "Oyri"
+msgid "Sørvágur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1377
-msgid "Nordskáli"
+msgid "Vatnsoyrar"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1378
-msgid "Svináir"
+msgid "Bøur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1379
-msgid "Ljósá"
+msgid "Gásadalur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1380
-msgid "Eidi"
+msgid "Mykines"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1381
-msgid "Funningur"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1382
-msgid "Gjógv"
+#: dk/dk_postalcodes.py:1381 dk/dk_postalcodes.py:1382
+msgid "Oyrarbakki"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1383
-msgid "Funningsfjørdur"
+msgid "Kollafjørdur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1384
-msgid "Elduvík"
+msgid "Oyrareingir"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1385
-msgid "Skáli"
+msgid "Signabøur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1386
-msgid "Skálafjørdur"
+msgid "Hósvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1387
-msgid "Strendur"
+msgid "Hvalvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1388
-msgid "Innan Glyvur"
+msgid "Streymnes"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1389
-msgid "Kolbanargjógv"
+msgid "Saksun"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1390
-msgid "Morskranes"
+msgid "Nesvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1391
-msgid "Selatrad"
+msgid "Langasandur"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1392 dk/dk_postalcodes.py:1396
-msgid "Gøta"
+#: dk/dk_postalcodes.py:1392
+msgid "Haldarsvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1393
-msgid "Gøtugjógv"
+msgid "Tjørnuvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1394
-msgid "Nordragøta"
+msgid "Oyri"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1395
-msgid "Sydrugøta"
+msgid "Nordskáli"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1396
+msgid "Svináir"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1397
-msgid "Leirvík"
+msgid "Ljósá"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1398 dk/dk_postalcodes.py:1399
-msgid "Fuglafjørdur"
+#: dk/dk_postalcodes.py:1398
+msgid "Eidi"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1400 dk/dk_postalcodes.py:1401
-msgid "Saltangará"
+#: dk/dk_postalcodes.py:1399
+msgid "Funningur"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1400
+msgid "Gjógv"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1401
+msgid "Funningsfjørdur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1402
-msgid "Runavík"
+msgid "Elduvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1403
-msgid "Glyvrar"
+msgid "Skáli"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1404
-msgid "Lambareidi"
+msgid "Skálafjørdur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1405
-msgid "Lambi"
+msgid "Strendur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1406
-msgid "Rituvík"
+msgid "Innan Glyvur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1407
-msgid "Æduvík"
+msgid "Kolbanargjógv"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1408
-msgid "Toftir"
+msgid "Morskranes"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1409
-msgid "\"Nes, Eysturoy\""
+msgid "Selatrad"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1410
-msgid "Saltnes"
+#: dk/dk_postalcodes.py:1410 dk/dk_postalcodes.py:1414
+msgid "Gøta"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1411
-msgid "Søldarfjørdur"
+msgid "Gøtugjógv"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1412
-msgid "Skipanes"
+msgid "Nordragøta"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1413
-msgid "Gøtueidi"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1414
-msgid "Oyndarfjørdur"
+msgid "Sydrugøta"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1415
-msgid "Hellur"
+msgid "Leirvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1416 dk/dk_postalcodes.py:1417
-msgid "Klaksvík"
+msgid "Fuglafjørdur"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1418
-msgid "Nordoyri"
-msgstr ""
-
-#: dk/dk_postalcodes.py:1419
-msgid "Ánir"
+#: dk/dk_postalcodes.py:1418 dk/dk_postalcodes.py:1419
+msgid "Saltangará"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1420
-msgid "Árnafjørdur"
+msgid "Runavík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1421
-msgid "Norddepil"
+msgid "Glyvrar"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1422
-msgid "Depil"
+msgid "Lambareidi"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1423
-msgid "Nordtoftir"
+msgid "Lambi"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1424
-msgid "Múli"
+msgid "Rituvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1425
-msgid "Hvannasund"
+msgid "Æduvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1426
-msgid "Vidareidi"
+msgid "Toftir"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1427
-msgid "Svinoy"
+msgid "\"Nes, Eysturoy\""
 msgstr ""
 
 #: dk/dk_postalcodes.py:1428
-msgid "Kirkja"
+msgid "Saltnes"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1429
-msgid "Hattarvík"
+msgid "Søldarfjørdur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1430
-msgid "Kunoy"
+msgid "Skipanes"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1431
-msgid "Haraldssund"
+msgid "Gøtueidi"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1432
-msgid "\"Sydradalur, Kalsoy\""
+msgid "Oyndarfjørdur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1433
-msgid "Húsar"
+msgid "Hellur"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1434
-msgid "Mikladalur"
+#: dk/dk_postalcodes.py:1434 dk/dk_postalcodes.py:1435
+msgid "Klaksvík"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1435
-msgid "Trøllanes"
+#: dk/dk_postalcodes.py:1436
+msgid "Nordoyri"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1436 dk/dk_postalcodes.py:1437
-msgid "Tvøroyri"
+#: dk/dk_postalcodes.py:1437
+msgid "Ánir"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1438
-msgid "Frodba"
+msgid "Árnafjørdur"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1439
-msgid "Trongisvágur"
+msgid "Norddepil"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1440
-msgid "Øravík"
+msgid "Depil"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1441
-msgid "Hvalba"
+msgid "Nordtoftir"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1442
-msgid "Sandvík"
+msgid "Múli"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1443
-msgid "Fámjin"
+msgid "Hvannasund"
 msgstr ""
 
-#: dk/dk_postalcodes.py:1444 dk/dk_postalcodes.py:1445
-msgid "Vágur"
+#: dk/dk_postalcodes.py:1444
+msgid "Vidareidi"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1445
+msgid "Svinoy"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1446
-msgid "\"Nes, Vágur\""
+msgid "Kirkja"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1447
-msgid "Lopra"
+msgid "Hattarvík"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1448
-msgid "Akrar"
+msgid "Kunoy"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1449
-msgid "Vikarbyrgi"
+msgid "Haraldssund"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1450
-msgid "Porkeri"
+msgid "\"Sydradalur, Kalsoy\""
 msgstr ""
 
 #: dk/dk_postalcodes.py:1451
-msgid "Hov"
+msgid "Húsar"
 msgstr ""
 
 #: dk/dk_postalcodes.py:1452
+msgid "Mikladalur"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1453
+msgid "Trøllanes"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1454 dk/dk_postalcodes.py:1455
+msgid "Tvøroyri"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1456
+msgid "Frodba"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1457
+msgid "Trongisvágur"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1458
+msgid "Øravík"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1459
+msgid "Hvalba"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1460
+msgid "Sandvík"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1461
+msgid "Fámjin"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1462 dk/dk_postalcodes.py:1463
+msgid "Vágur"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1464
+msgid "\"Nes, Vágur\""
+msgstr ""
+
+#: dk/dk_postalcodes.py:1465
+msgid "Lopra"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1466
+msgid "Akrar"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1467
+msgid "Vikarbyrgi"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1468
+msgid "Porkeri"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1469
+msgid "Hov"
+msgstr ""
+
+#: dk/dk_postalcodes.py:1470
 msgid "Sumba"
 msgstr ""
 
@@ -5702,31 +5758,31 @@ msgstr ""
 msgid "Aceh"
 msgstr ""
 
-#: id_/id_choices.py:8 id_/id_choices.py:72
+#: id_/id_choices.py:8 id_/id_choices.py:73
 msgid "Bali"
 msgstr ""
 
-#: id_/id_choices.py:9 id_/id_choices.py:44
+#: id_/id_choices.py:9 id_/id_choices.py:45
 msgid "Banten"
 msgstr ""
 
-#: id_/id_choices.py:10 id_/id_choices.py:53
+#: id_/id_choices.py:10 id_/id_choices.py:54
 msgid "Bengkulu"
 msgstr ""
 
-#: id_/id_choices.py:11 id_/id_choices.py:46
+#: id_/id_choices.py:11 id_/id_choices.py:47
 msgid "Yogyakarta"
 msgstr ""
 
-#: id_/id_choices.py:12 id_/id_choices.py:50
+#: id_/id_choices.py:12 id_/id_choices.py:51
 msgid "Jakarta"
 msgstr ""
 
-#: id_/id_choices.py:13 id_/id_choices.py:74
+#: id_/id_choices.py:13 id_/id_choices.py:75
 msgid "Gorontalo"
 msgstr ""
 
-#: id_/id_choices.py:14 id_/id_choices.py:56
+#: id_/id_choices.py:14 id_/id_choices.py:57
 msgid "Jambi"
 msgstr ""
 
@@ -5742,223 +5798,227 @@ msgstr ""
 msgid "Jawa Timur"
 msgstr ""
 
-#: id_/id_choices.py:18 id_/id_choices.py:87
+#: id_/id_choices.py:18 id_/id_choices.py:88
 msgid "Kalimantan Barat"
 msgstr ""
 
-#: id_/id_choices.py:19 id_/id_choices.py:65
+#: id_/id_choices.py:19 id_/id_choices.py:66
 msgid "Kalimantan Selatan"
 msgstr ""
 
-#: id_/id_choices.py:20 id_/id_choices.py:88
+#: id_/id_choices.py:20 id_/id_choices.py:89
 msgid "Kalimantan Tengah"
 msgstr ""
 
-#: id_/id_choices.py:21 id_/id_choices.py:89
+#: id_/id_choices.py:21 id_/id_choices.py:90
 msgid "Kalimantan Timur"
 msgstr ""
 
 #: id_/id_choices.py:22
+msgid "Kalimantan Utara"
+msgstr ""
+
+#: id_/id_choices.py:23
 msgid "Kepulauan Bangka-Belitung"
 msgstr ""
 
-#: id_/id_choices.py:23 id_/id_choices.py:61
+#: id_/id_choices.py:24 id_/id_choices.py:62
 msgid "Kepulauan Riau"
 msgstr ""
 
-#: id_/id_choices.py:24 id_/id_choices.py:54
+#: id_/id_choices.py:25 id_/id_choices.py:55
 msgid "Lampung"
 msgstr ""
 
-#: id_/id_choices.py:25 id_/id_choices.py:69
+#: id_/id_choices.py:26 id_/id_choices.py:70
 msgid "Maluku"
 msgstr ""
 
-#: id_/id_choices.py:26 id_/id_choices.py:70
+#: id_/id_choices.py:27 id_/id_choices.py:71
 msgid "Maluku Utara"
 msgstr ""
 
-#: id_/id_choices.py:27
+#: id_/id_choices.py:28
 msgid "Nusa Tenggara Barat"
 msgstr ""
 
-#: id_/id_choices.py:28
+#: id_/id_choices.py:29
 msgid "Nusa Tenggara Timur"
 msgstr ""
 
-#: id_/id_choices.py:29
+#: id_/id_choices.py:30
 msgid "Papua"
 msgstr ""
 
-#: id_/id_choices.py:30
+#: id_/id_choices.py:31
 msgid "Papua Barat"
 msgstr ""
 
-#: id_/id_choices.py:31 id_/id_choices.py:59
+#: id_/id_choices.py:32 id_/id_choices.py:60
 msgid "Riau"
 msgstr ""
 
-#: id_/id_choices.py:32 id_/id_choices.py:67
+#: id_/id_choices.py:33 id_/id_choices.py:68
 msgid "Sulawesi Barat"
 msgstr ""
 
-#: id_/id_choices.py:33 id_/id_choices.py:68
+#: id_/id_choices.py:34 id_/id_choices.py:69
 msgid "Sulawesi Selatan"
 msgstr ""
 
-#: id_/id_choices.py:34 id_/id_choices.py:75
+#: id_/id_choices.py:35 id_/id_choices.py:76
 msgid "Sulawesi Tengah"
 msgstr ""
 
-#: id_/id_choices.py:35 id_/id_choices.py:78
+#: id_/id_choices.py:36 id_/id_choices.py:79
 msgid "Sulawesi Tenggara"
 msgstr ""
 
-#: id_/id_choices.py:36
+#: id_/id_choices.py:37
 msgid "Sulawesi Utara"
 msgstr ""
 
-#: id_/id_choices.py:37 id_/id_choices.py:51
+#: id_/id_choices.py:38 id_/id_choices.py:52
 msgid "Sumatera Barat"
 msgstr ""
 
-#: id_/id_choices.py:38 id_/id_choices.py:55
+#: id_/id_choices.py:39 id_/id_choices.py:56
 msgid "Sumatera Selatan"
 msgstr ""
 
-#: id_/id_choices.py:39 id_/id_choices.py:57
+#: id_/id_choices.py:40 id_/id_choices.py:58
 msgid "Sumatera Utara"
 msgstr ""
 
-#: id_/id_choices.py:45
+#: id_/id_choices.py:46
 msgid "Magelang"
 msgstr ""
 
-#: id_/id_choices.py:47
+#: id_/id_choices.py:48
 msgid "Surakarta - Solo"
 msgstr ""
 
-#: id_/id_choices.py:48
+#: id_/id_choices.py:49
 msgid "Madiun"
 msgstr ""
 
-#: id_/id_choices.py:49
+#: id_/id_choices.py:50
 msgid "Kediri"
 msgstr ""
 
-#: id_/id_choices.py:52
+#: id_/id_choices.py:53
 msgid "Tapanuli"
 msgstr ""
 
-#: id_/id_choices.py:58
+#: id_/id_choices.py:59
 msgid "Nanggroe Aceh Darussalam"
 msgstr ""
 
-#: id_/id_choices.py:60
+#: id_/id_choices.py:61
 msgid "Kepulauan Bangka Belitung"
 msgstr ""
 
-#: id_/id_choices.py:62
+#: id_/id_choices.py:63
 msgid "Corps Consulate"
 msgstr ""
 
-#: id_/id_choices.py:63
+#: id_/id_choices.py:64
 msgid "Corps Diplomatic"
 msgstr ""
 
-#: id_/id_choices.py:64
+#: id_/id_choices.py:65
 msgid "Bandung"
 msgstr ""
 
-#: id_/id_choices.py:66
+#: id_/id_choices.py:67
 msgid "Sulawesi Utara Daratan"
 msgstr ""
 
-#: id_/id_choices.py:71
+#: id_/id_choices.py:72
 msgid "NTT - Timor"
 msgstr ""
 
-#: id_/id_choices.py:73
+#: id_/id_choices.py:74
 msgid "Sulawesi Utara Kepulauan"
 msgstr ""
 
-#: id_/id_choices.py:76
+#: id_/id_choices.py:77
 msgid "NTB - Lombok"
 msgstr ""
 
-#: id_/id_choices.py:77
+#: id_/id_choices.py:78
 msgid "Papua dan Papua Barat"
 msgstr ""
 
-#: id_/id_choices.py:79
+#: id_/id_choices.py:80
 msgid "Cirebon"
 msgstr ""
 
-#: id_/id_choices.py:80
+#: id_/id_choices.py:81
 msgid "NTB - Sumbawa"
 msgstr ""
 
-#: id_/id_choices.py:81
+#: id_/id_choices.py:82
 msgid "NTT - Flores"
 msgstr ""
 
-#: id_/id_choices.py:82
+#: id_/id_choices.py:83
 msgid "NTT - Sumba"
 msgstr ""
 
-#: id_/id_choices.py:83
+#: id_/id_choices.py:84
 msgid "Bogor"
 msgstr ""
 
-#: id_/id_choices.py:84
+#: id_/id_choices.py:85
 msgid "Pekalongan"
 msgstr ""
 
-#: id_/id_choices.py:85
+#: id_/id_choices.py:86
 msgid "Semarang"
 msgstr ""
 
-#: id_/id_choices.py:86
+#: id_/id_choices.py:87
 msgid "Pati"
 msgstr ""
 
-#: id_/id_choices.py:90
+#: id_/id_choices.py:91
 msgid "Surabaya"
 msgstr ""
 
-#: id_/id_choices.py:91
+#: id_/id_choices.py:92
 msgid "Madura"
 msgstr ""
 
-#: id_/id_choices.py:92
+#: id_/id_choices.py:93
 msgid "Malang"
 msgstr ""
 
-#: id_/id_choices.py:93
+#: id_/id_choices.py:94
 msgid "Jember"
 msgstr ""
 
-#: id_/id_choices.py:94
+#: id_/id_choices.py:95
 msgid "Banyumas"
 msgstr ""
 
-#: id_/id_choices.py:95
+#: id_/id_choices.py:96
 msgid "Federal Government"
 msgstr ""
 
-#: id_/id_choices.py:96
+#: id_/id_choices.py:97
 msgid "Bojonegoro"
 msgstr ""
 
-#: id_/id_choices.py:97
+#: id_/id_choices.py:98
 msgid "Purwakarta"
 msgstr ""
 
-#: id_/id_choices.py:98
+#: id_/id_choices.py:99
 msgid "Sidoarjo"
 msgstr ""
 
-#: id_/id_choices.py:99
+#: id_/id_choices.py:100
 msgid "Garut"
 msgstr ""
 
@@ -8914,6 +8974,10 @@ msgstr ""
 msgid "Zacatecas"
 msgstr ""
 
+#: my/forms.py:18
+msgid "Invalid MyKad number."
+msgstr ""
+
 #: nl/models.py:18
 msgid "Dutch zipcode"
 msgstr ""
@@ -10102,7 +10166,7 @@ msgstr ""
 msgid "The EMSO is not valid."
 msgstr ""
 
-#: si/forms.py:90
+#: si/forms.py:88
 msgid "Enter a valid tax number in form SIXXXXXXXX"
 msgstr ""
 
