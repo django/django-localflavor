@@ -1,5 +1,5 @@
 from django.test import SimpleTestCase
-
+from django.utils.translation import gettext_lazy as _
 from localflavor.id_.forms import (IDLicensePlateField, IDLicensePlatePrefixSelect, IDNationalIdentityNumberField,
                                    IDPostCodeField, IDProvinceSelect)
 
@@ -108,7 +108,7 @@ class IDLocalFlavorTests(SimpleTestCase):
         self.assertHTMLEqual(f.render('codes', 'BE'), out)
 
     def test_IDPostCodeField(self):
-        error_invalid = ['Enter a valid post code']
+        error_invalid = [_('Enter a valid post code')]
         valid = {
             '12340': '12340',
             '25412': '25412',
@@ -124,22 +124,26 @@ class IDLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(IDPostCodeField, valid, invalid)
 
     def test_IDNationalIdentityNumberField(self):
-        error_invalid = ['Enter a valid NIK/KTP number']
+        error_invalid = [_('Enter a valid NIK/KTP number')]
         valid = {
             ' 12.3456.010178 3456 ': '12.3456.010178.3456',
             '1234560101783456': '12.3456.010178.3456',
+            '1234564101783456': '12.3456.410178.3456',
             '12.3456.010101.3456': '12.3456.010101.3456',
+            '12.3456.410101.3456': '12.3456.410101.3456',
         }
         invalid = {
             '12.3456.310278.3456': error_invalid,
+            '12.3456.710278.3456': error_invalid,
             '00.0000.010101.0000': error_invalid,
+            '00.0000.410101.0000': error_invalid,
             '1234567890123456': error_invalid,
             'foo': error_invalid,
         }
         self.assertFieldOutput(IDNationalIdentityNumberField, valid, invalid)
 
     def test_IDLicensePlateField(self):
-        error_invalid = ['Enter a valid vehicle license plate number']
+        error_invalid = [_('Enter a valid vehicle license plate number')]
         valid = {
             ' b 1234  ab ': 'B 1234 AB',
             'B 1234 ABC': 'B 1234 ABC',

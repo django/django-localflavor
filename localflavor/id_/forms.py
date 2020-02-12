@@ -14,6 +14,8 @@ plate_re = re.compile(r'^(?P<prefix>[A-Z]{1,2}) ' +
                       r'(?P<number>\d{1,5})( (?P<suffix>([A-Z]{1,3}|[1-9][0-9]{,2})))?$')
 nik_re = re.compile(r'^\d{16}$')
 
+WOMAN_IDENTIFIER = 40
+
 
 class IDPostCodeField(Field):
     """
@@ -42,7 +44,7 @@ class IDPostCodeField(Field):
         if value[0] == '1' and value[4] != '0':
             raise ValidationError(self.error_messages['invalid'])
 
-        return '%s' % (value, )
+        return '%s' % (value,)
 
 
 class IDProvinceSelect(Select):
@@ -157,6 +159,7 @@ class IDNationalIdentityNumberField(Field):
     http://id.wikipedia.org/wiki/Nomor_Induk_Kependudukan
 
     xx.xxxx.ddmmyy.xxxx - 16 digits (excl. dots)
+    notes: for women dd + 40
     """
 
     default_error_messages = {
@@ -179,6 +182,10 @@ class IDNationalIdentityNumberField(Field):
         year = int(value[10:12])
         month = int(value[8:10])
         day = int(value[6:8])
+        # for woman, birth date is added with 40
+        if day > 31:
+            day -= WOMAN_IDENTIFIER
+
         current_year = time.localtime().tm_year
         if year < int(str(current_year)[-2:]):
             if not IDNationalIdentityNumberField._valid_nik_date(2000 + int(year), month, day):
