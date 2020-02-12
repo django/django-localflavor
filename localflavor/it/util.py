@@ -1,4 +1,4 @@
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
 
@@ -57,16 +57,16 @@ def vat_number_validation(vat_number):
     check_digit = vat_number_check_digit(vat_number[0:10])
     if vat_number[10] != check_digit:
         raise ValueError(_('Check digit does not match.'))
-    return force_text(vat_number)
+    return force_str(vat_number)
 
 
 def vat_number_check_digit(vat_number):
     """Calculate Italian VAT number check digit."""
-    normalized_vat_number = force_text(vat_number).zfill(10)
+    normalized_vat_number = force_str(vat_number).zfill(10)
     total = 0
     for i in range(0, 10, 2):
         total += int(normalized_vat_number[i])
     for i in range(1, 11, 2):
         quotient, remainder = divmod(int(normalized_vat_number[i]) * 2, 10)
         total += quotient + remainder
-    return force_text((10 - total % 10) % 10)
+    return force_str((10 - total % 10) % 10)

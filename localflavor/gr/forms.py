@@ -4,7 +4,7 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import Field, RegexField, ValidationError
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
@@ -45,7 +45,7 @@ class GRTaxNumberCodeField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        val = re.sub('[\-\s\(\)]', '', force_text(value))
+        val = re.sub('[\-\s\(\)]', '', force_str(value))
         if(len(val) < 9):
             raise ValidationError(self.error_messages['invalid'])
         if not all(char.isdigit() for char in val):
@@ -90,7 +90,7 @@ class GRSocialSecurityNumberCodeField(RegexField):
         super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-        val = re.sub('[\-\s]', '', force_text(value))
+        val = re.sub('[\-\s]', '', force_str(value))
         if not val or len(val) < 11:
             raise ValidationError(self.error_messages['invalid'])
         if self.allow_test_value and val == '00000000000':

@@ -3,7 +3,7 @@
 from django.forms import ValidationError
 from django.forms.fields import RegexField
 from django.forms.widgets import Select
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
 from .is_postalcodes import IS_POSTALCODES
@@ -54,7 +54,7 @@ class ISIdNumberField(RegexField):
 
     def _format(self, value):
         """Takes in the value in canonical form and returns it in the common display format."""
-        return force_text(value[:6] + '-' + value[6:])
+        return force_str(value[:6] + '-' + value[6:])
 
 
 class ISPostalCodeSelect(Select):

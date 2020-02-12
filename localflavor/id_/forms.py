@@ -6,7 +6,7 @@ import time
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, Select
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
 postcode_re = re.compile(r'^[1-9]\d{4}$')
@@ -85,7 +85,7 @@ class IDLicensePlateField(Field):
         super().clean(value)
         if value in EMPTY_VALUES:
             return ''
-        plate_number = re.sub(r'\s+', ' ', force_text(value.strip())).upper()
+        plate_number = re.sub(r'\s+', ' ', force_str(value.strip())).upper()
 
         number, prefix, suffix = self._validate_regex_match(plate_number)
         self._validate_prefix(prefix)
@@ -168,7 +168,7 @@ class IDNationalIdentityNumberField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        value = re.sub(r'[\s.]', '', force_text(value))
+        value = re.sub(r'[\s.]', '', force_str(value))
 
         if not nik_re.search(value):
             raise ValidationError(self.error_messages['invalid'])

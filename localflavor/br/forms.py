@@ -5,7 +5,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import CharField, Field, Select
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
 from .br_states import STATE_CHOICES
@@ -57,10 +57,10 @@ class BRStateChoiceField(Field):
         value = super().clean(value)
         if value in EMPTY_VALUES:
             value = ''
-        value = force_text(value)
+        value = force_str(value)
         if value == '':
             return value
-        valid_values = set([force_text(entry[0]) for entry in self.widget.choices])
+        valid_values = set([force_str(entry[0]) for entry in self.widget.choices])
         if value not in valid_values:
             raise ValidationError(self.error_messages['invalid'])
         return value
