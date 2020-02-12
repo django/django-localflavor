@@ -5,7 +5,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
 from .in_states import STATE_CHOICES, STATES_NORMALIZED
@@ -60,7 +60,7 @@ class INStateField(Field):
             pass
         else:
             try:
-                return force_text(STATES_NORMALIZED[value.strip().lower()])
+                return force_str(STATES_NORMALIZED[value.strip().lower()])
             except KeyError:
                 pass
         raise ValidationError(self.error_messages['invalid'])

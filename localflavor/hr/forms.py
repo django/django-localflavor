@@ -5,7 +5,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
@@ -144,7 +144,7 @@ class HRLicensePlateField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        value = re.sub(r'[\s\-]+', '', force_text(value.strip())).upper()
+        value = re.sub(r'[\s\-]+', '', force_str(value.strip())).upper()
 
         matches = plate_re.search(value)
         if matches is None:

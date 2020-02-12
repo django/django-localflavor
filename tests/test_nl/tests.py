@@ -93,7 +93,7 @@ class NLLocalFlavorModelTests(SimpleTestCase):
         # correct zipcode, should be clean now
         m.zipcode = '2403 bw'
         m.clean_fields()
-        self.assertEquals(str(m.zipcode), '2403 BW')
+        self.assertEqual(str(m.zipcode), '2403 BW')
 
     def test_NL_car(self):
         m = NLCar(**{
@@ -114,7 +114,7 @@ class NLLocalFlavorModelTests(SimpleTestCase):
         # correct license plate number, should be clean now
         m.license_plate = 'AA-11-AA'
         m.clean_fields()
-        self.assertEquals(str(m.license_plate), 'AA-11-AA')
+        self.assertEqual(str(m.license_plate), 'AA-11-AA')
 
 
 class NLLocalFlavorFormTests(SimpleTestCase):

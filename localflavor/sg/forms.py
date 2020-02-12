@@ -4,7 +4,7 @@ import re
 
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
 NRIC_FIN_RE = re.compile(r'^[SFTG](\d{7})[A-Z]$')
@@ -60,7 +60,7 @@ class SGNRICFINField(CharField):
         super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-        value = re.sub('(\s+)', '', force_text(value.upper()))
+        value = re.sub('(\s+)', '', force_str(value.upper()))
         match = NRIC_FIN_RE.search(value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])

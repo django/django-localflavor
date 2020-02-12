@@ -2,7 +2,7 @@
 
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
 from .cl_regions import REGION_CHOICES
@@ -66,7 +66,7 @@ class CLRutField(RegexField):
 
     def _canonify(self, rut):
         """Turns the RUT into one normalized format. Returns a (rut, verifier) tuple."""
-        rut = force_text(rut).replace(' ', '').replace('.', '').replace('-', '')
+        rut = force_str(rut).replace(' ', '').replace('.', '').replace('-', '')
         return rut[:-1], rut[-1].upper()
 
     def _format(self, code, verifier=None):
