@@ -21,7 +21,7 @@ class CURegionField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return ''
         try:
@@ -57,7 +57,7 @@ class CUProvinceField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return ''
         try:

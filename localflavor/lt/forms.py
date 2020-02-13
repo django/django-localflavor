@@ -45,7 +45,7 @@ class LTIDCodeField(RegexField):
         super().__init__(r'^\d{11}$', *args, **kwargs)
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
 
         if value in self.empty_values:
             return self.empty_value

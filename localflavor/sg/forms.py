@@ -57,7 +57,7 @@ class SGNRICFINField(CharField):
 
         Strips whitespace.
         """
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         value = re.sub('(\s+)', '', force_str(value.upper()))

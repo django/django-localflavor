@@ -80,7 +80,7 @@ class ESIdentityCardNumberField(RegexField):
         super().__init__(id_card_re, *args, **kwargs)
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -149,7 +149,7 @@ class ESCCCField(RegexField):
         super().__init__(r'^\d{4}[ -]?\d{4}[ -]?\d{2}[ -]?\d{10}$', *args, **kwargs)
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         m = re.match(r'^(\d{4})[ -]?(\d{4})[ -]?(\d{2})[ -]?(\d{10})$', value)

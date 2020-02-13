@@ -25,7 +25,7 @@ class SIEMSOField(CharField):
     emso_regex = re.compile('^(\d{2})(\d{2})(\d{3})(\d{2})(\d{3})(\d)$')
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -90,7 +90,7 @@ class SITaxNumberField(CharField):
     sitax_regex = re.compile('^(?:SI)?([1-9]\d{7})$')
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 

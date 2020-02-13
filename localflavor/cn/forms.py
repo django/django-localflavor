@@ -107,7 +107,7 @@ class CNIDCardField(CharField):
     def clean(self, value):
         """Check whether the input is a valid ID Card Number."""
         # Check the length of the ID card number.
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         # Check whether this ID card number has valid format

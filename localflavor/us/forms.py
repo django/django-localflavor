@@ -63,7 +63,7 @@ class USSocialSecurityNumberField(CharField):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         match = re.match(ssn_re, value)
@@ -99,7 +99,7 @@ class USStateField(Field):
 
     def clean(self, value):
         from .us_states import STATES_NORMALIZED
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         try:

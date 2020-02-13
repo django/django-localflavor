@@ -23,7 +23,7 @@ class ZAIDField(CharField):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
 
         if value in self.empty_values:
             return self.empty_value
