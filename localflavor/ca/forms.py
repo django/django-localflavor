@@ -52,7 +52,7 @@ class CAProvinceField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         try:
@@ -97,7 +97,7 @@ class CASocialInsuranceNumberField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 

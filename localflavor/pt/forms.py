@@ -37,7 +37,7 @@ class PTCitizenCardNumberField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
 
         if value in EMPTY_VALUES:
             return ''
@@ -95,7 +95,7 @@ class PTSocialSecurityNumberField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
 
         if value in EMPTY_VALUES:
             return ''

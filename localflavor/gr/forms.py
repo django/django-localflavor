@@ -41,7 +41,7 @@ class GRTaxNumberCodeField(Field):
         super().__init__(*args, **kwargs)
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -87,7 +87,7 @@ class GRSocialSecurityNumberCodeField(RegexField):
             raise ValidationError(self.error_messages['invalid'])
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         val = re.sub('[\-\s]', '', force_str(value))

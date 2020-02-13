@@ -86,7 +86,7 @@ class CHIdentityCardNumberField(Field):
         return str(calculated_checksum)[-1] == given_checksum
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 

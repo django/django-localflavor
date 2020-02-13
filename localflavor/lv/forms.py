@@ -61,7 +61,7 @@ class LVPersonalCodeField(Field):
         return ((1 - check) % 11) % 10
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
