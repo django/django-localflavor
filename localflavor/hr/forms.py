@@ -57,7 +57,7 @@ class HRJMBGField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -110,7 +110,7 @@ class HROIBField(RegexField):
         )
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -140,7 +140,7 @@ class HRLicensePlateField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -177,7 +177,7 @@ class HRPostalCodeField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -207,7 +207,7 @@ class HRJMBAGField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 

@@ -102,7 +102,7 @@ class FRNationalIdentificationNumber(CharField):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -173,7 +173,7 @@ class FRSIRENENumberMixin:
     """Abstract class for SIREN and SIRET numbers, from the SIRENE register."""
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 

@@ -29,7 +29,7 @@ class IDPostCodeField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 
@@ -84,7 +84,7 @@ class IDLicensePlateField(Field):
     foreign_vehicles_prefixes = ('CD', 'CC')
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
         plate_number = re.sub(r'\s+', ' ', force_str(value.strip())).upper()
@@ -167,7 +167,7 @@ class IDNationalIdentityNumberField(Field):
     }
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
 

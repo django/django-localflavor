@@ -30,7 +30,7 @@ class EGNationalIDNumberField(RegexField):
         super().__init__(r'\d{14}', max_length=max_length, min_length=min_length, *args, **kwargs)
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 

@@ -49,7 +49,7 @@ class PLPESELField(RegexField):
         super().__init__(r'^\d{11}$', *args, **kwargs)
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         if not self.has_valid_checksum(value):
@@ -106,7 +106,7 @@ class PLNationalIDCardNumberField(RegexField):
         super().__init__(r'^[A-Za-z]{3}\d{6}$', *args, **kwargs)
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
@@ -159,7 +159,7 @@ class PLNIPField(RegexField):
         )
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         value = re.sub("[-]", "", value)
@@ -195,7 +195,7 @@ class PLREGONField(RegexField):
         super().__init__(r'^\d{9,14}$', *args, **kwargs)
 
     def clean(self, value):
-        super().clean(value)
+        value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
         if not self.has_valid_checksum(value):
