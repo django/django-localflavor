@@ -4,10 +4,16 @@ Changelog
 3.0   (unreleased)
 ------------------
 
+Breaking changes:
+
 The deprecated `generic.checksums.luhn` and `generic.checksums.ean` functions have been removed in this release. Please
 use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead.
 
 Some Icelandic postcodes in `IS_POSTALCODES` have had their spelling updated, and some entries have been removed entirely.
+
+A data migration is required for users of the `ITRegionProvinceSelect`. The `CI`, `VS`, `OG`, and `OT` keys need to be
+migrated to `SU` to account for the 2016 Italian provincial changes. Users wishing to maintain compatibility with the
+old provincial structure will need to create a custom version of `ITRegionProvinceSelect`.
 
 New flavors:
 
@@ -35,6 +41,9 @@ Modifications to existing flavors:
 
 - Add validation for women National identity number for Indonesia localflavor.
   (`gh-386 <https://github.com/django/django-localflavor/pull/386>`_).
+- Updated `ITRegionProvinceSelect` for 2016 Italian provincial changes. See breaking changes notice above.
+  (`gh-378 <https://github.com/django/django-localflavor/pull/378>`_),
+  (`gh-402 <https://github.com/django/django-localflavor/pull/402>`_).
 
 Other changes:
 
