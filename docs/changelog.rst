@@ -10,11 +10,16 @@ The deprecated `generic.checksums.luhn` and `generic.checksums.ean` functions ha
 use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead.
 
 Some Icelandic postcodes in `IS_POSTALCODES` have had their spelling updated, and some entries have been removed
-entirely.
+entirely. A warning message will be displayed when `is_.forms.ISPostalCodeSelect` is used. See the
+`localflavor online docs <https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility>`_ for
+instructions on how to suppress this warning once any incompatibilities have been dealt with.
 
-A data migration is required for users of the `ITRegionProvinceSelect`. The `CI`, `VS`, `OG`, and `OT` keys need to be
-migrated to `SU` to account for the 2016 Italian provincial changes. Users wishing to maintain compatibility with the
-old provincial structure will need to create a custom version of `ITRegionProvinceSelect`.
+A data migration is required for users of `it.forms.ITRegionProvinceSelect`. The `CI`, `VS`, `OG`, and `OT` keys need to
+be migrated to `SU` to account for the 2016 Italian provincial changes. Users wishing to maintain compatibility with the
+old provincial structure will need to create a custom version of `it.forms.ITRegionProvinceSelect`. A warning message
+will be displayed when `it.forms.ITRegionProvinceSelect` is used. See the
+`localflavor online docs <https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility>`_ for
+instructions on how to suppress this warning once the migration has been completed.
 
 New flavors:
 
@@ -27,74 +32,79 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- Extended Danish `DK_POSTALCODES` with small Danish islands getting independent post code since 2017.
+- Extended Danish `DK_POSTALCODES` with small Danish islands getting independent post code since 2017
   (`gh-380 <https://github.com/django/django-localflavor/pull/380>`_).
 - Switched incorrect `ar.forms.ARCBUField` implementation to use
   `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead
   (`gh-391 <https://github.com/django/django-localflavor/pull/391>`_).
-- Use set value of `strip` in fields that inherit from `django.forms.CharField`: `gb.forms.GBPostcodeField`,
-  `si.forms.SIEMSOField`, `si.forms.SITaxNumberField` and `za.forms.ZAIDField`
-  (`gh-392 <https://github.com/django/django-localflavor/pull/392>`_).
-- Updated Icelandic `IS_POSTALCODES` with missing entries, updated spelling of entries, and removed non-existing ones.
-  (`gh-394 <https://github.com/django/django-localflavor/pull/394>`_).
-- Add Kalimantan Utara in  `PROVINCE_CHOICES` for Indonesia local flavor.
-  (`gh-385 <https://github.com/django/django-localflavor/pull/385>`_).
-- Add validation for women National identity number for Indonesia localflavor.
-  (`gh-386 <https://github.com/django/django-localflavor/pull/386>`_).
-- Updated `ITRegionProvinceSelect` for 2016 Italian provincial changes. See breaking changes notice above.
-  (`gh-378 <https://github.com/django/django-localflavor/pull/378>`_),
-  (`gh-402 <https://github.com/django/django-localflavor/pull/402>`_).
-- Use the value returned by clean() in the following fields:
-  (`gh-401 <https://github.com/django/django-localflavor/pull/401>`_),
-  (`gh-403 <https://github.com/django/django-localflavor/pull/403>`_):
+- Use set value of `strip` in fields that inherit from `django.forms.CharField`
+  (`gh-392 <https://github.com/django/django-localflavor/pull/392>`_):
 
-  - `ca.CAProvinceField`
-  - `ca.CASocialInsuranceNumberField`
-  - `ch.CHIdentityCardNumberField`
-  - `cl.CLRutField`
-  - `cn.CNIDCardField`
-  - `cu.CURegionField`
-  - `cu.CUProvinceField`
-  - `cz.CZBirthNumberField`
-  - `cz.CZICNumberField`
-  - `de.DEIdentityCardNumberField`
-  - `ee.EEPersonalIdentificationCode`
-  - `eg.EGNationalIDNumberField`
-  - `es.ESIdentityCardNumberField`
-  - `es.ESCCCField`
-  - `fi.FISocialSecurityNumber`
-  - `fr.FRNationalIdentificationNumber`
-  - `fr.FRSIRENField`
-  - `fr.FRSIRETField`
-  - `gr.GRTaxNumberCodeField`
-  - `gr.GRSocialSecurityNumberCodeField`
-  - `hr.HRJMBGField`
-  - `hr.HROIBField`
-  - `hr.HRLicensePlateField`
-  - `hr.HRPostalCodeField`
-  - `hr.HRJMBAGField`
-  - `id.IDPostCodeField`
-  - `id.IDLicensePlateField`
-  - `id.IDNationalIdentityNumberField`
-  - `kw.KWCivilIDNumberField`
-  - `lt.LTIDCodeField`
-  - `lv.LVPersonalCodeField`
-  - `no.NOSocialSecurityNumber`
-  - `nz.NZBankAccountNumberField`
-  - `pl.PLPESELField`
-  - `pl.PLNationalIDCardNumberField`
-  - `pl.PLNIPField`
-  - `pl.PLREGONField`
-  - `pt.PTCitizenCardNumberField`
-  - `pt.PTSocialSecurityNumberField`
-  - `ro.ROCountyField`
-  - `sg.SGNRICFINField`
-  - `si.SIEMSOField`
-  - `si.SITaxNumberField`
-  - `tr.TRIdentificationNumberField`
-  - `us.USSocialSecurityNumberField`
-  - `us.USStateField`
-  - `za.ZAIDField`
+  - `gb.forms.GBPostcodeField`
+  - `si.forms.SIEMSOField`
+  - `si.forms.SITaxNumberField`
+  - `za.forms.ZAIDField`
+
+- Updated Icelandic `IS_POSTALCODES` with missing entries, updated spelling of entries, and removed non-existing ones.
+  See breaking changes notice above (`gh-394 <https://github.com/django/django-localflavor/pull/394>`_).
+- Add Kalimantan Utara in  `PROVINCE_CHOICES` for Indonesia local flavor
+  (`gh-385 <https://github.com/django/django-localflavor/pull/385>`_).
+- Add validation for women National identity number for Indonesia localflavor
+  (`gh-386 <https://github.com/django/django-localflavor/pull/386>`_).
+- Updated `ITRegionProvinceSelect` for 2016 Italian provincial changes. See breaking changes notice above
+  (`gh-378 <https://github.com/django/django-localflavor/pull/378>`_,
+  `gh-402 <https://github.com/django/django-localflavor/pull/402>`_).
+- Use the value returned by clean() in the following fields
+  (`gh-401 <https://github.com/django/django-localflavor/pull/401>`_,
+  `gh-403 <https://github.com/django/django-localflavor/pull/403>`_):
+
+  - `ca.forms.CAProvinceField`
+  - `ca.forms.CASocialInsuranceNumberField`
+  - `ch.forms.CHIdentityCardNumberField`
+  - `cl.forms.CLRutField`
+  - `cn.forms.CNIDCardField`
+  - `cu.forms.CURegionField`
+  - `cu.forms.CUProvinceField`
+  - `cz.forms.CZBirthNumberField`
+  - `cz.forms.CZICNumberField`
+  - `de.forms.DEIdentityCardNumberField`
+  - `ee.forms.EEPersonalIdentificationCode`
+  - `eg.forms.EGNationalIDNumberField`
+  - `es.forms.ESIdentityCardNumberField`
+  - `es.forms.ESCCCField`
+  - `fi.forms.FISocialSecurityNumber`
+  - `fr.forms.FRNationalIdentificationNumber`
+  - `fr.forms.FRSIRENField`
+  - `fr.forms.FRSIRETField`
+  - `gr.forms.GRTaxNumberCodeField`
+  - `gr.forms.GRSocialSecurityNumberCodeField`
+  - `hr.forms.HRJMBGField`
+  - `hr.forms.HROIBField`
+  - `hr.forms.HRLicensePlateField`
+  - `hr.forms.HRPostalCodeField`
+  - `hr.forms.HRJMBAGField`
+  - `id.forms.IDPostCodeField`
+  - `id.forms.IDLicensePlateField`
+  - `id.forms.IDNationalIdentityNumberField`
+  - `kw.forms.KWCivilIDNumberField`
+  - `lt.forms.LTIDCodeField`
+  - `lv.forms.LVPersonalCodeField`
+  - `no.forms.NOSocialSecurityNumber`
+  - `nz.forms.NZBankAccountNumberField`
+  - `pl.forms.PLPESELField`
+  - `pl.forms.PLNationalIDCardNumberField`
+  - `pl.forms.PLNIPField`
+  - `pl.forms.PLREGONField`
+  - `pt.forms.PTCitizenCardNumberField`
+  - `pt.forms.PTSocialSecurityNumberField`
+  - `ro.forms.ROCountyField`
+  - `sg.forms.SGNRICFINField`
+  - `si.forms.SIEMSOField`
+  - `si.forms.SITaxNumberField`
+  - `tr.forms.TRIdentificationNumberField`
+  - `us.forms.USSocialSecurityNumberField`
+  - `us.forms.USStateField`
+  - `za.forms.ZAIDField`
 
 Other changes:
 
