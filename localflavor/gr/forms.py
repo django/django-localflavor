@@ -45,8 +45,8 @@ class GRTaxNumberCodeField(Field):
         if value in EMPTY_VALUES:
             return ''
 
-        val = re.sub('[\-\s\(\)]', '', force_str(value))
-        if(len(val) < 9):
+        val = re.sub(r'[\-\s\(\)]', '', force_str(value))
+        if len(val) < 9:
             raise ValidationError(self.error_messages['invalid'])
         if not all(char.isdigit() for char in val):
             raise ValidationError(self.error_messages['invalid'])
@@ -90,7 +90,7 @@ class GRSocialSecurityNumberCodeField(RegexField):
         value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-        val = re.sub('[\-\s]', '', force_str(value))
+        val = re.sub(r'[\-\s]', '', force_str(value))
         if not val or len(val) < 11:
             raise ValidationError(self.error_messages['invalid'])
         if self.allow_test_value and val == '00000000000':
