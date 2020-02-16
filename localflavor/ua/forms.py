@@ -31,9 +31,9 @@ class UAVatNumberField(RegexField):
         'invalid': _('Enter a valid VAT number.'),
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs['max_length'] = kwargs['min_length'] = 10
-        super().__init__(r'^\d{10}$', *args, **kwargs)
+        super().__init__(r'^\d{10}$', **kwargs)
 
     def to_python(self, value):
         value = super().to_python(value)
@@ -57,9 +57,9 @@ class UAPostalCodeField(RegexField):
         'invalid': _('Enter a valid postal code.'),
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs['max_length'] = kwargs['min_length'] = 5
-        super().__init__(r'^(?!00)\d{5}$', *args, **kwargs)
+        super().__init__(r'^(?!00)\d{5}$', **kwargs)
 
     def to_python(self, value):
         value = super().to_python(value)

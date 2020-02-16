@@ -46,10 +46,10 @@ class KWCivilIDNumberField(RegexField):
         'invalid': _('Enter a valid Kuwaiti Civil ID number'),
     }
 
-    def __init__(self, max_length=12, min_length=12, *args, **kwargs):
+    def __init__(self, max_length=12, min_length=12, **kwargs):
         super().__init__(
             r'\d{12}', max_length=max_length, min_length=min_length,
-            *args, **kwargs
+            **kwargs
         )
 
     def clean(self, value):

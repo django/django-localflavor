@@ -59,9 +59,9 @@ class MXZipCodeField(RegexField):
         'invalid': _('Enter a valid zip code in the format XXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         zip_code_re = r'^(0[1-9]|[1][0-6]|[2-9]\d)(\d{3})$'
-        super().__init__(zip_code_re, *args, **kwargs)
+        super().__init__(zip_code_re, **kwargs)
 
 
 class MXRFCField(RegexField):
@@ -104,10 +104,10 @@ class MXRFCField(RegexField):
         'invalid_checksum': _('Invalid checksum for RFC.'),
     }
 
-    def __init__(self, min_length=12, max_length=13, *args, **kwargs):
+    def __init__(self, min_length=12, max_length=13, **kwargs):
         rfc_re = re.compile(r'^([A-Z&Ññ]{3}|[A-Z][AEIOU][A-Z]{2})%s[A-Z0-9]{2}[0-9A]$' % DATE_RE,
                             re.IGNORECASE)
-        super().__init__(rfc_re, min_length=min_length, max_length=max_length, *args, **kwargs)
+        super().__init__(rfc_re, min_length=min_length, max_length=max_length, **kwargs)
 
     def clean(self, value):
         value = super().clean(value)
@@ -177,9 +177,9 @@ class MXCLABEField(RegexField):
         'invalid_checksum': _('Invalid checksum for CLABE.'),
     }
 
-    def __init__(self, min_length=18, max_length=18, *args, **kwargs):
+    def __init__(self, min_length=18, max_length=18, **kwargs):
         clabe_re = r'^\d{18}$'
-        super().__init__(clabe_re, min_length=min_length, max_length=max_length, *args, **kwargs)
+        super().__init__(clabe_re, min_length=min_length, max_length=max_length, **kwargs)
 
     def _checksum(self, value):
         verification_digit = int(value[-1])
@@ -233,14 +233,14 @@ class MXCURPField(RegexField):
         'invalid_checksum': _('Invalid checksum for CURP.'),
     }
 
-    def __init__(self, min_length=18, max_length=18, *args, **kwargs):
+    def __init__(self, min_length=18, max_length=18, **kwargs):
         states_re = r'(AS|BC|BS|CC|CL|CM|CS|CH|DF|DG|GT|GR|HG|JC|MC|MN|' \
                     r'MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)'
         consonants_re = r'[B-DF-HJ-NP-TV-Z]'
         curp_re = (r'^[A-Z][AEIOU][A-Z]{2}%s[HM]%s%s{3}[0-9A-Z]\d$' %
                    (DATE_RE, states_re, consonants_re))
         curp_re = re.compile(curp_re, re.IGNORECASE)
-        super().__init__(curp_re, min_length=min_length, max_length=max_length, *args, **kwargs)
+        super().__init__(curp_re, min_length=min_length, max_length=max_length, **kwargs)
 
     def clean(self, value):
         value = super().clean(value)
@@ -295,10 +295,10 @@ class MXSocialSecurityNumberField(RegexField):
         'invalid_checksum': _('Invalid checksum for Social Security Number.'),
     }
 
-    def __init__(self, min_length=11, max_length=11, *args, **kwargs):
+    def __init__(self, min_length=11, max_length=11, **kwargs):
         ssn_re = r'^\d{11}$'
         ssn_re = re.compile(ssn_re)
-        super().__init__(ssn_re, min_length=min_length, max_length=max_length, *args, **kwargs)
+        super().__init__(ssn_re, min_length=min_length, max_length=max_length, **kwargs)
 
     def clean(self, value):
         value = super().clean(value)

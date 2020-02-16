@@ -19,10 +19,10 @@ class ROCIFField(RegexField):
         'invalid': _("Enter a valid CIF."),
     }
 
-    def __init__(self, max_length=10, min_length=2, *args, **kwargs):
+    def __init__(self, max_length=10, min_length=2, **kwargs):
         super().__init__(
             r'^(RO)?[0-9]{2,10}', max_length=max_length, min_length=min_length,
-            *args, **kwargs
+            **kwargs
         )
 
     def clean(self, value):
@@ -72,10 +72,10 @@ class ROCNPField(RegexField):
         'invalid': _("Enter a valid CNP."),
     }
 
-    def __init__(self, max_length=13, min_length=13, *args, **kwargs):
+    def __init__(self, max_length=13, min_length=13, **kwargs):
         super().__init__(
             r'^[1-9][0-9]{12}', max_length=max_length, min_length=min_length,
-            *args, **kwargs
+            **kwargs
         )
 
     def clean(self, value):
@@ -179,8 +179,8 @@ class ROPostalCodeField(RegexField):
         'invalid': _('Enter a valid postal code in the format XXXXXX'),
     }
 
-    def __init__(self, max_length=6, min_length=6, *args, **kwargs):
+    def __init__(self, max_length=6, min_length=6, **kwargs):
         super().__init__(
             r'^[0-9][0-8][0-9]{4}$', max_length=max_length,
-            min_length=min_length, *args, **kwargs
+            min_length=min_length, **kwargs
         )

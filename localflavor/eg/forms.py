@@ -26,8 +26,8 @@ class EGNationalIDNumberField(RegexField):
         'invalid': _('Enter a valid Egyptian National ID number'),
     }
 
-    def __init__(self, max_length=14, min_length=14, *args, **kwargs):
-        super().__init__(r'\d{14}', max_length=max_length, min_length=min_length, *args, **kwargs)
+    def __init__(self, max_length=14, min_length=14, **kwargs):
+        super().__init__(r'\d{14}', max_length=max_length, min_length=min_length, **kwargs)
 
     def clean(self, value):
         value = super().clean(value)

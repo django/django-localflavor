@@ -22,10 +22,10 @@ class ISIdNumberField(RegexField):
         'checksum': _('The Icelandic identification number is not valid.'),
     }
 
-    def __init__(self, max_length=11, min_length=10, *args, **kwargs):
+    def __init__(self, max_length=11, min_length=10, **kwargs):
         super().__init__(
             r'^\d{6}(-| )?\d{4}$', max_length=max_length, min_length=min_length,
-            *args, **kwargs
+            **kwargs
         )
 
     def clean(self, value):

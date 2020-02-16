@@ -27,10 +27,10 @@ class EircodeField(RegexField):
 
     default_error_messages = {"invalid": _("Enter a valid Eircode.")}
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs.setdefault('strip', True)
         super().__init__("^(D6W|[AC-FHKNPRTV-Y][0-9]{2})([AC-FHKNPRTV-Y0-9]{4})$",
-                         *args, **kwargs)
+                         **kwargs)
 
     def to_python(self, value):
         # The Eircode should be stored as uppercase without spaces (see page 7):

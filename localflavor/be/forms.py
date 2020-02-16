@@ -23,8 +23,8 @@ class BEPostalCodeField(RegexField):
             'Enter a valid postal code in the range and format 1XXX - 9XXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^[1-9]\d{3}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^[1-9]\d{3}$', **kwargs)
 
 
 class BERegionSelect(Select):

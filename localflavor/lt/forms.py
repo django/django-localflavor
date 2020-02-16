@@ -41,8 +41,8 @@ class LTIDCodeField(RegexField):
         'date': _('ID Code contains invalid date.')
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{11}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{11}$', **kwargs)
 
     def clean(self, value):
         value = super().clean(value)

@@ -30,8 +30,8 @@ class CONITField(RegexField):
 
     PRIME_PLACES = [3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71]
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{5,12}-?\d$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{5,12}-?\d$', **kwargs)
 
     def clean(self, value):
         """

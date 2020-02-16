@@ -132,5 +132,5 @@ class PTZipCodeField(RegexField):
                      ' (where X is a digit between 1 and 9 and Y is any other digit).'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(ZIP_CODE_REGEX, *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(ZIP_CODE_REGEX, **kwargs)

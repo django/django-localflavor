@@ -20,8 +20,8 @@ class GRPostalCodeField(RegexField):
         'invalid': _('Enter a valid 5-digit greek postal code.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^[12345678]\d{4}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^[12345678]\d{4}$', **kwargs)
 
 
 class GRTaxNumberCodeField(Field):
@@ -76,9 +76,9 @@ class GRSocialSecurityNumberCodeField(RegexField):
         'invalid': _('Enter a valid greek social security number (AMKA - 11 digits).'),
     }
 
-    def __init__(self, allow_test_value=False, *args, **kwargs):
+    def __init__(self, allow_test_value=False, **kwargs):
         self.allow_test_value = allow_test_value
-        super().__init__(r'^[0-9\s\-]+$', *args, **kwargs)
+        super().__init__(r'^[0-9\s\-]+$', **kwargs)
 
     def check_date(self, val):
         try:

@@ -19,11 +19,11 @@ class MKIdentityCardNumberField(RegexField):
                      ' either 4 to 7 digits or an uppercase letter and 7 digits.'),
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs['min_length'] = None
         kwargs['max_length'] = 8
         regex = r'(^[A-Z]{1}\d{7}$)|(^\d{4,7}$)'
-        super().__init__(regex, *args, **kwargs)
+        super().__init__(regex, **kwargs)
 
 
 class MKMunicipalitySelect(Select):
@@ -59,10 +59,10 @@ class UMCNField(RegexField):
         'checksum': _('The UMCN is not valid.'),
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs['min_length'] = None
         kwargs['max_length'] = 13
-        super().__init__(r'^\d{13}$', *args, **kwargs)
+        super().__init__(r'^\d{13}$', **kwargs)
 
     def clean(self, value):
         value = super().clean(value)

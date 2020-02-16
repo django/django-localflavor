@@ -29,8 +29,8 @@ class CHZipCodeField(RegexField):
         'invalid': _('Enter a valid postal code in the range and format 1XXX - 9XXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(zip_re, *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(zip_re, **kwargs)
 
 
 class CHStateSelect(Select):

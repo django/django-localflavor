@@ -24,8 +24,8 @@ class SGPostCodeField(RegexField):
         'invalid': _('Enter a 6-digit postal code.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{6}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{6}$', **kwargs)
 
 
 class SGNRICFINField(CharField):

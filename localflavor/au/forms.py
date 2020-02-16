@@ -19,8 +19,8 @@ class AUPostCodeField(RegexField):
         'invalid': _('Enter a 4 digit postcode.'),
     }
 
-    def __init__(self, max_length=4, *args, **kwargs):
-        super().__init__(r'^\d{4}$', max_length=max_length, *args, **kwargs)
+    def __init__(self, max_length=4, **kwargs):
+        super().__init__(r'^\d{4}$', max_length=max_length, **kwargs)
 
 
 class AUStateSelect(Select):
