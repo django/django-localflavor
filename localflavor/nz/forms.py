@@ -4,7 +4,7 @@ import re
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
 from django.forms.fields import Field, RegexField, Select
-from django.utils.encoding import smart_str
+from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
 from .nz_councils import NORTH_ISLAND_COUNCIL_CHOICES, SOUTH_ISLAND_COUNCIL_CHOICES
@@ -84,7 +84,7 @@ class NZBankAccountNumberField(Field):
         value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub(r'(\s+|-)', '', smart_str(value))
+        value = re.sub(r'(\s+|-)', '', force_str(value))
         match = BANK_ACCOUNT_NUMBER_RE.search(value)
         if match:
             # normalize the last part
