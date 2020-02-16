@@ -9,7 +9,8 @@ Breaking changes:
 The deprecated `generic.checksums.luhn` and `generic.checksums.ean` functions have been removed in this release. Please
 use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead.
 
-Some Icelandic postcodes in `IS_POSTALCODES` have had their spelling updated, and some entries have been removed entirely.
+Some Icelandic postcodes in `IS_POSTALCODES` have had their spelling updated, and some entries have been removed
+entirely.
 
 A data migration is required for users of the `ITRegionProvinceSelect`. The `CI`, `VS`, `OG`, and `OT` keys need to be
 migrated to `SU` to account for the 2016 Italian provincial changes. Users wishing to maintain compatibility with the
@@ -26,19 +27,18 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- Extended Danish `DK_POSTALCODES` with small Danish islands getting independant post code since 2017.
+- Extended Danish `DK_POSTALCODES` with small Danish islands getting independent post code since 2017.
   (`gh-380 <https://github.com/django/django-localflavor/pull/380>`_).
-- Switched incorrect `ar.forms.ARCBUField` implementation to use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead
+- Switched incorrect `ar.forms.ARCBUField` implementation to use
+  `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead
   (`gh-391 <https://github.com/django/django-localflavor/pull/391>`_).
 - Use set value of `strip` in fields that inherit from `django.forms.CharField`: `gb.forms.GBPostcodeField`,
   `si.forms.SIEMSOField`, `si.forms.SITaxNumberField` and `za.forms.ZAIDField`
   (`gh-392 <https://github.com/django/django-localflavor/pull/392>`_).
 - Updated Icelandic `IS_POSTALCODES` with missing entries, updated spelling of entries, and removed non-existing ones.
   (`gh-394 <https://github.com/django/django-localflavor/pull/394>`_).
-
 - Add Kalimantan Utara in  `PROVINCE_CHOICES` for Indonesia local flavor.
   (`gh-385 <https://github.com/django/django-localflavor/pull/385>`_).
-
 - Add validation for women National identity number for Indonesia localflavor.
   (`gh-386 <https://github.com/django/django-localflavor/pull/386>`_).
 - Updated `ITRegionProvinceSelect` for 2016 Italian provincial changes. See breaking changes notice above.
