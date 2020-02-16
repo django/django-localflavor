@@ -44,6 +44,56 @@ Modifications to existing flavors:
 - Updated `ITRegionProvinceSelect` for 2016 Italian provincial changes. See breaking changes notice above.
   (`gh-378 <https://github.com/django/django-localflavor/pull/378>`_),
   (`gh-402 <https://github.com/django/django-localflavor/pull/402>`_).
+- Use the value returned by clean() in the following fields:
+  (`gh-401 <https://github.com/django/django-localflavor/pull/401>`_),
+  (`gh-403 <https://github.com/django/django-localflavor/pull/403>`_):
+
+  - `ca.CAProvinceField(Field)`
+  - `ca.CASocialInsuranceNumberField(Field)`
+  - `ch.CHIdentityCardNumberField(Field)`
+  - `cl.CLRutField(RegexField)`
+  - `cn.CNIDCardField(CharField)`
+  - `cu.CURegionField(Field)`
+  - `cu.CUProvinceField(Field)`
+  - `cz.CZBirthNumberField(Field)`
+  - `cz.CZICNumberField(Field)`
+  - `de.DEIdentityCardNumberField(Field)`
+  - `ee.EEPersonalIdentificationCode(Field)`
+  - `eg.EGNationalIDNumberField(RegexField)`
+  - `es.ESIdentityCardNumberField(RegexField)`
+  - `es.ESCCCField(RegexField)`
+  - `fi.FISocialSecurityNumber(Field)`
+  - `fr.FRNationalIdentificationNumber(CharField)`
+  - `fr.FRSIRENENumberMixin`
+  - `gr.GRTaxNumberCodeField(Field)`
+  - `gr.GRSocialSecurityNumberCodeField(RegexField)`
+  - `hr.HRJMBGField(Field)`
+  - `hr.HROIBField(RegexField)`
+  - `hr.HRLicensePlateField(Field)`
+  - `hr.HRPostalCodeField(Field)`
+  - `hr.HRJMBAGField(Field)`
+  - `id.IDPostCodeField(Field)`
+  - `id.IDLicensePlateField(Field)`
+  - `id.IDNationalIdentityNumberField(Field)`
+  - `kw.KWCivilIDNumberField(RegexField)`
+  - `lt.LTIDCodeField(RegexField)`
+  - `lv.LVPersonalCodeField(Field)`
+  - `no.NOSocialSecurityNumber(Field)`
+  - `nz.NZBankAccountNumberField(Field)`
+  - `pl.PLPESELField(RegexField)`
+  - `pl.PLNationalIDCardNumberField(RegexField)`
+  - `pl.PLNIPField(RegexField)`
+  - `pl.PLREGONField(RegexField)`
+  - `pt.PTCitizenCardNumberField(Field)`
+  - `pt.PTSocialSecurityNumberField(Field)`
+  - `ro.ROCountyField(Field)`
+  - `sg.SGNRICFINField(CharField)`
+  - `si.SIEMSOField(CharField)`
+  - `si.SITaxNumberField(CharField)`
+  - `tr.TRIdentificationNumberField(Field)`
+  - `us.USSocialSecurityNumberField(CharField)`
+  - `us.USStateField(Field)`
+  - `za.ZAIDField(CharField)`
 
 Other changes:
 
