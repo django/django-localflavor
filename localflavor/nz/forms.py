@@ -84,7 +84,7 @@ class NZBankAccountNumberField(Field):
         value = super().clean(value)
         if value in EMPTY_VALUES:
             return ''
-        value = re.sub('(\s+|-)', '', smart_str(value))
+        value = re.sub(r'(\s+|-)', '', smart_str(value))
         match = BANK_ACCOUNT_NUMBER_RE.search(value)
         if match:
             # normalize the last part

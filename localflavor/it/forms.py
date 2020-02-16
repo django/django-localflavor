@@ -78,7 +78,7 @@ class ITSocialSecurityNumberField(RegexField):
         value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-        value = re.sub('\s', '', value).upper()
+        value = re.sub(r'\s', '', value).upper()
         # Entities SSN are numeric-only
         if value.isdigit():
             try:

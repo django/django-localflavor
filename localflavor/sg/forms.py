@@ -60,7 +60,7 @@ class SGNRICFINField(CharField):
         value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
-        value = re.sub('(\s+)', '', force_str(value.upper()))
+        value = re.sub(r'(\s+)', '', force_str(value.upper()))
         match = NRIC_FIN_RE.search(value)
         if not match:
             raise ValidationError(self.error_messages['invalid'])
