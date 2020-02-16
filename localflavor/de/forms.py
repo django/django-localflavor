@@ -24,8 +24,8 @@ class DEZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^([0]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{3}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^([0]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{3}$', **kwargs)
 
 
 class DEStateSelect(Select):

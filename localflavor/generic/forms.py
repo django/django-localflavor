@@ -28,26 +28,26 @@ IBAN_MIN_LENGTH = min(IBAN_COUNTRY_CODE_LENGTH.values())
 class DateField(forms.DateField):
     """A date input field which uses non-US date input formats by default."""
 
-    def __init__(self, input_formats=None, *args, **kwargs):
+    def __init__(self, input_formats=None, **kwargs):
         input_formats = input_formats or DEFAULT_DATE_INPUT_FORMATS
-        super().__init__(input_formats=input_formats, *args, **kwargs)
+        super().__init__(input_formats=input_formats, **kwargs)
 
 
 class DateTimeField(forms.DateTimeField):
     """A date and time input field which uses non-US date and time input formats by default."""
 
-    def __init__(self, input_formats=None, *args, **kwargs):
+    def __init__(self, input_formats=None, **kwargs):
         input_formats = input_formats or DEFAULT_DATETIME_INPUT_FORMATS
-        super().__init__(input_formats=input_formats, *args, **kwargs)
+        super().__init__(input_formats=input_formats, **kwargs)
 
 
 class SplitDateTimeField(forms.SplitDateTimeField):
     """Split date and time input fields which use non-US date and time input formats by default."""
 
-    def __init__(self, input_date_formats=None, input_time_formats=None, *args, **kwargs):
+    def __init__(self, input_date_formats=None, input_time_formats=None, **kwargs):
         input_date_formats = input_date_formats or DEFAULT_DATE_INPUT_FORMATS
         super().__init__(input_date_formats=input_date_formats,
-                         input_time_formats=input_time_formats, *args, **kwargs)
+                         input_time_formats=input_time_formats, **kwargs)
 
 
 class IBANFormField(forms.CharField):

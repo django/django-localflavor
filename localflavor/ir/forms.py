@@ -39,8 +39,8 @@ class IRPostalCodeField(RegexField):
         'invalid': _('Enter a postal code in the format XXXXXXXXXX - digits only'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'\b(?!(\d)\1{3})[13-9]{4}[1346-9][013-9]{5}\b$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'\b(?!(\d)\1{3})[13-9]{4}[1346-9][013-9]{5}\b$', **kwargs)
 
     def clean(self, value):
         if value not in self.empty_values:

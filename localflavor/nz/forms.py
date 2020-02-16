@@ -49,8 +49,8 @@ class NZPostCodeField(RegexField):
         'invalid': _('Invalid post code.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{4}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{4}$', **kwargs)
 
 
 class NZBankAccountNumberField(Field):

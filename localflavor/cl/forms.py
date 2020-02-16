@@ -31,16 +31,16 @@ class CLRutField(RegexField):
         'checksum': _('The Chilean RUT is not valid.'),
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         if 'strict' in kwargs:
             del kwargs['strict']
             super().__init__(r'^(\d{1,2}\.)?\d{3}\.\d{3}-[\dkK]$',
                              error_messages={'invalid': self.default_error_messages['strict']},
-                             *args, **kwargs)
+                             **kwargs)
         else:
             # In non-strict mode, accept RUTs that validate but do not exist in
             # the real world.
-            super().__init__(r'^[\d\.]{1,11}-?[\dkK]$', *args, **kwargs)
+            super().__init__(r'^[\d\.]{1,11}-?[\dkK]$', **kwargs)
 
     def clean(self, value):
         """Check and clean the Chilean RUT."""

@@ -24,8 +24,8 @@ class UYCIField(RegexField):
         'invalid_validation_digit': _("Enter a valid CI number."),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'(?P<num>(\d{6,7}|(\d\.)?\d{3}\.\d{3}))-?(?P<val>\d)', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'(?P<num>(\d{6,7}|(\d\.)?\d{3}\.\d{3}))-?(?P<val>\d)', **kwargs)
 
     def clean(self, value):
         """

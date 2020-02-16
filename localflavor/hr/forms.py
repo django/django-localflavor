@@ -103,10 +103,10 @@ class HROIBField(RegexField):
         'invalid': _('Enter a valid 11 digit OIB'),
     }
 
-    def __init__(self, min_length=11, max_length=11, *args, **kwargs):
+    def __init__(self, min_length=11, max_length=11, **kwargs):
         super().__init__(
             r'^\d{11}$', max_length=max_length, min_length=min_length,
-            *args, **kwargs
+            **kwargs
         )
 
     def clean(self, value):

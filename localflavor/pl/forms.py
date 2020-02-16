@@ -45,8 +45,8 @@ class PLPESELField(RegexField):
         'birthdate': _('The National Identification Number contains an invalid birth date.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{11}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{11}$', **kwargs)
 
     def clean(self, value):
         value = super().clean(value)
@@ -102,8 +102,8 @@ class PLNationalIDCardNumberField(RegexField):
         'checksum': _('Wrong checksum for the National ID Card Number.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^[A-Za-z]{3}\d{6}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^[A-Za-z]{3}\d{6}$', **kwargs)
 
     def clean(self, value):
         value = super().clean(value)
@@ -152,10 +152,10 @@ class PLNIPField(RegexField):
         'checksum': _('Wrong checksum for the Tax Number (NIP).'),
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         super().__init__(
             r'^\d{3}-\d{3}-\d{2}-\d{2}$|^\d{3}-\d{2}-\d{2}-\d{3}$|^\d{10}$',
-            *args, **kwargs
+            **kwargs
         )
 
     def clean(self, value):
@@ -191,8 +191,8 @@ class PLREGONField(RegexField):
         'checksum': _('Wrong checksum for the National Business Register Number (REGON).'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{9,14}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{9,14}$', **kwargs)
 
     def clean(self, value):
         value = super().clean(value)
@@ -237,5 +237,5 @@ class PLPostalCodeField(RegexField):
         'invalid': _('Enter a postal code in the format XX-XXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{2}-\d{3}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{2}-\d{3}$', **kwargs)

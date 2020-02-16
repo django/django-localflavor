@@ -22,15 +22,15 @@ class ESPostalCodeField(RegexField):
         'invalid': _('Enter a valid postal code in the range and format 01XXX - 52XXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^(0[1-9]|[1-4][0-9]|5[0-2])\d{3}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^(0[1-9]|[1-4][0-9]|5[0-2])\d{3}$', **kwargs)
 
 
 class ESIdentityCardNumberField(RegexField):
     """
     Spanish NIF/NIE/CIF (Fiscal Identification Number) code.
 
-    Validates three diferent formats:
+    Validates three different formats:
 
         NIF (individuals): 12345678A
         CIF (companies): A12345678
@@ -59,7 +59,7 @@ class ESIdentityCardNumberField(RegexField):
         'invalid_cif': _('Invalid checksum for CIF.'),
     }
 
-    def __init__(self, only_nif=False, *args, **kwargs):
+    def __init__(self, only_nif=False, **kwargs):
         self.only_nif = only_nif
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
@@ -77,7 +77,7 @@ class ESIdentityCardNumberField(RegexField):
         error_messages.update(kwargs.get('error_messages', {}))
         kwargs['error_messages'] = error_messages
 
-        super().__init__(id_card_re, *args, **kwargs)
+        super().__init__(id_card_re, **kwargs)
 
     def clean(self, value):
         value = super().clean(value)
@@ -145,8 +145,8 @@ class ESCCCField(RegexField):
         'checksum': _('Invalid checksum for bank account number.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{4}[ -]?\d{4}[ -]?\d{2}[ -]?\d{10}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{4}[ -]?\d{4}[ -]?\d{2}[ -]?\d{10}$', **kwargs)
 
     def clean(self, value):
         value = super().clean(value)

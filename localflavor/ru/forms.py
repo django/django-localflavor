@@ -30,8 +30,8 @@ class RUPostalCodeField(RegexField):
         'invalid': _('Enter a postal code in the format XXXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{6}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{6}$', **kwargs)
 
 
 class RUPassportNumberField(RegexField):
@@ -45,8 +45,8 @@ class RUPassportNumberField(RegexField):
         'invalid': _('Enter a passport number in the format XXXX XXXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{4} \d{6}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{4} \d{6}$', **kwargs)
 
 
 class RUAlienPassportNumberField(RegexField):
@@ -60,5 +60,5 @@ class RUAlienPassportNumberField(RegexField):
         'invalid': _('Enter a passport number in the format XX XXXXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{2} \d{7}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{2} \d{7}$', **kwargs)

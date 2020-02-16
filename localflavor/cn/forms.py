@@ -75,8 +75,8 @@ class CNPostCodeField(RegexField):
         'invalid': _('Enter a post code in the format XXXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(POST_CODE_RE, *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(POST_CODE_RE, **kwargs)
 
 
 class CNIDCardField(CharField):

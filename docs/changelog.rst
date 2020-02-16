@@ -21,6 +21,11 @@ will be displayed when `it.forms.ITRegionProvinceSelect` is used. See the
 `localflavor online docs <https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility>`_ for
 instructions on how to suppress this warning once the migration has been completed.
 
+Using positional arguments with fields that inherit from Django's `forms.RegexField` previously only worked with Django
+1.11 but were ignored with Django >= 2.0. Positional arguments have now been removed from all fields that inherit from
+Django's `forms.RegexField`. Any options needed on the parent `forms.RegexField`, `forms.CharField` or `forms.Field`
+must now be set with keyword arguments.
+
 New flavors:
 
 - Egypt local flavor
@@ -105,6 +110,9 @@ Modifications to existing flavors:
   - `us.forms.USSocialSecurityNumberField`
   - `us.forms.USStateField`
   - `za.forms.ZAIDField`
+
+- Removed unused positional arguments from fields that inherit from `forms.RegexField`
+  (`gh-405 <https://github.com/django/django-localflavor/pull/405>`_).
 
 Other changes:
 

@@ -27,11 +27,11 @@ class FRZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs.setdefault('label', _('Zip code'))
         kwargs['max_length'] = 5
         kwargs['min_length'] = 5
-        super().__init__(r'^\d{5}$', *args, **kwargs)
+        super().__init__(r'^\d{5}$', **kwargs)
 
 
 class FRDepartmentSelect(Select):

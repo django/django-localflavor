@@ -20,8 +20,8 @@ class INZipCodeField(RegexField):
         'invalid': _('Enter a zip code in the format XXXXXX or XXX XXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{3}\s?\d{3}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{3}\s?\d{3}$', **kwargs)
 
     def clean(self, value):
         value = super().clean(value)

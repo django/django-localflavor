@@ -30,10 +30,10 @@ class ARPostalCodeField(RegexField):
         'invalid': _("Enter a postal code in the format NNNN or ANNNNAAA."),
     }
 
-    def __init__(self, max_length=8, min_length=4, *args, **kwargs):
+    def __init__(self, max_length=8, min_length=4, **kwargs):
         super().__init__(
             r'^\d{4}$|^[A-HJ-NP-Za-hj-np-z]\d{4}\D{3}$',
-            max_length=max_length, min_length=min_length, *args, **kwargs
+            max_length=max_length, min_length=min_length, **kwargs
         )
 
     def clean(self, value):
@@ -96,8 +96,8 @@ class ARCUITField(RegexField):
         'legal_type': _('Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{2}-?\d{8}-?\d$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{2}-?\d{8}-?\d$', **kwargs)
 
     def clean(self, value):
         """Value can be either a string in the format XX-XXXXXXXX-X or an 11-digit number."""

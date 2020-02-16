@@ -21,8 +21,8 @@ class ILPostalCodeField(RegexField):
         'invalid': _('Enter a postal code in the format XXXXXXX (or XXXXX) - digits only'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{5}$|^\d{7}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{5}$|^\d{7}$', **kwargs)
 
     def clean(self, value):
         if value not in self.empty_values:

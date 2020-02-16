@@ -93,8 +93,8 @@ class CUPostalCodeField(RegexField):
         'invalid': _('Enter a valid postal code in the format XXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^[1-9]\d{4}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^[1-9]\d{4}$', **kwargs)
 
     def to_python(self, value):
         value = super().to_python(value)
@@ -127,8 +127,8 @@ class CUIdentityCardNumberField(RegexField):
         'invalid': _('Enter a valid identity card number in the format XXXXXXXXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(r'^\d{11}$', *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(r'^\d{11}$', **kwargs)
         self.validators.append(CUIdentityCardNumberBirthdayValidator())
 
     def to_python(self, value):

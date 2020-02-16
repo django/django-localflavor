@@ -167,8 +167,8 @@ class SEPostalCodeField(forms.RegexField):
         'invalid': _('Enter a Swedish postal code in the format XXXXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(SE_POSTAL_CODE, *args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(SE_POSTAL_CODE, **kwargs)
 
     def clean(self, value):
         value = super().clean(value)
