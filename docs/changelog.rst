@@ -1,6 +1,26 @@
 Changelog
 =========
 
+3.1   (unreleased)
+------------------
+
+New flavors:
+
+- None
+
+New fields for existing flavors:
+
+- None
+
+Modifications to existing flavors:
+
+- None
+
+Other changes:
+
+- None
+
+
 3.0   (2020-02-19)
 ------------------
 
