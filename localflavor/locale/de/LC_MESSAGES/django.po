@@ -4,6 +4,7 @@
 #
 # Translators:
 # André Hagenbruch, 2014
+# Bruce Röttgers <bruce.roet@gmail.com>, 2020
 # Jannis Leidel <jannis@leidel.info>, 2011-2012,2014
 # Mark Raddatz <mraddatz@gmail.com>, 2011
 # Markus Holtermann <info@markusholtermann.eu>, 2018
@@ -15,8 +16,8 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2018-08-27 12:32+0000\n"
-"Last-Translator: Markus Holtermann <info@markusholtermann.eu>\n"
+"PO-Revision-Date: 2020-02-16 17:42+0000\n"
+"Last-Translator: Bruce Röttgers <bruce.roet@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/django/django-localflavor/"
 "language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -117,13 +118,13 @@ msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
 msgstr ""
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
-msgstr ""
+msgstr "Geben sie eine korrekte CBU im XXXXXXXXXXXXXXXXXXXXXX Format ein."
 
 msgid "CBU must be exactly 22 digits long."
-msgstr ""
+msgstr "Die CBU sollte 22 Zeichen lang sein"
 
 msgid "Invalid CBU."
-msgstr ""
+msgstr "Falsche CBU"
 
 msgid "Burgenland"
 msgstr "Burgenland"
@@ -170,22 +171,22 @@ msgid "Australian Postcode"
 msgstr "Australisch Postleitzahl"
 
 msgid "Australian Business Number"
-msgstr ""
+msgstr "Australische Geschäftsnummer"
 
 msgid "Australian Company Number"
-msgstr ""
+msgstr "Australische Geschäftsnummer"
 
 msgid "Australian Tax File Number"
 msgstr ""
 
 msgid "Enter a valid ABN."
-msgstr ""
+msgstr "Geben Sie eine korrekte ABN ein."
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "Geben Sie eine korrekte ACN ein."
 
 msgid "Enter a valid TFN."
-msgstr ""
+msgstr "Geben Sie eine korrekte TFN ein."
 
 msgid "Antwerp"
 msgstr "Antwerpen"
@@ -233,10 +234,10 @@ msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Bitte eine gültige Postleitzahl im Format 1XXX bis 9XXX eingeben."
 
 msgid "The EGN is not valid"
-msgstr ""
+msgstr "Die eingegebene EGN ist nicht korrekt."
 
 msgid "EIK/BULSTAT is not valid"
-msgstr ""
+msgstr "Die eingegebene EIK/BULSTAT ist nicht korrekt."
 
 msgid "Enter a zip code in the format XXXXX-XXX."
 msgstr "Bitte eine gültige Postleitzahl im Format XXXXX-XXX eingeben."
@@ -259,7 +260,7 @@ msgid "This field requires at least 14 digits"
 msgstr "Dieses Feld benötigt mindestens 14 Ziffern"
 
 msgid "Invalid Process number."
-msgstr ""
+msgstr "Die Prozessnummer ist nicht korrekt."
 
 msgid "State of Brazil (two uppercase letters)"
 msgstr ""

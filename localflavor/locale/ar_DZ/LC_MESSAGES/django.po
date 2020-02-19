@@ -3,114 +3,112 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Jannis Leidel <jannis@leidel.info>, 2011
-# Luke Blaney <transifex@lukeblaney.co.uk>, 2019
-# Michael Thornhill <michael@maithu.com>, 2011-2012
+# Rabah Saadi <infosrabah@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2019-06-22 21:57+0000\n"
-"Last-Translator: Luke Blaney <transifex@lukeblaney.co.uk>\n"
-"Language-Team: Irish (http://www.transifex.com/django/django-localflavor/"
-"language/ga/)\n"
+"PO-Revision-Date: 2019-12-17 18:13+0000\n"
+"Last-Translator: Rabah Saadi <infosrabah@gmail.com>\n"
+"Language-Team: Arabic (Algeria) (http://www.transifex.com/django/django-"
+"localflavor/language/ar_DZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ga\n"
-"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : "
-"4);\n"
+"Language: ar_DZ\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 msgid "Buenos Aires"
-msgstr ""
+msgstr "بوينس آيرس"
 
 msgid "Catamarca"
-msgstr ""
+msgstr "كاتاماركا"
 
 msgid "Chaco"
-msgstr ""
+msgstr "شاكو"
 
 msgid "Chubut"
-msgstr ""
+msgstr "تشوبوت"
 
 msgid "Ciudad Autónoma de Buenos Aires"
-msgstr ""
+msgstr "سيوداد دي بوينس آيرس المستقلة"
 
 msgid "Córdoba"
-msgstr ""
+msgstr "قرطبة"
 
 msgid "Corrientes"
-msgstr ""
+msgstr "كورينتس"
 
 msgid "Entre Ríos"
-msgstr ""
+msgstr "انتري ريوس"
 
 msgid "Formosa"
-msgstr ""
+msgstr "فورموزا"
 
 msgid "Jujuy"
-msgstr ""
+msgstr "خوخوي"
 
 msgid "La Pampa"
-msgstr ""
+msgstr "لا بامبا"
 
 msgid "La Rioja"
-msgstr ""
+msgstr "لا ريوخا"
 
 msgid "Mendoza"
-msgstr ""
+msgstr "ميندوزا"
 
 msgid "Misiones"
-msgstr ""
+msgstr "ميسيونيس"
 
 msgid "Neuquén"
-msgstr ""
+msgstr "نيوكوين"
 
 msgid "Río Negro"
-msgstr ""
+msgstr "ريو نيغرو"
 
 msgid "Salta"
-msgstr ""
+msgstr "سالتا"
 
 msgid "San Juan"
-msgstr ""
+msgstr "سان خوان"
 
 msgid "San Luis"
-msgstr ""
+msgstr "سان لويس"
 
 msgid "Santa Cruz"
-msgstr ""
+msgstr "سانتا كروز"
 
 msgid "Santa Fe"
-msgstr ""
+msgstr "سانتا في"
 
 msgid "Santiago del Estero"
-msgstr ""
+msgstr "سانتياغو ديل استيرو"
 
 msgid "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
-msgstr ""
+msgstr "تييرا ديل فويغو، أنتارتيدا إي ايسلاس ديل أتلانتيكو سور"
 
 msgid "Tucumán"
-msgstr ""
+msgstr "توكومان"
 
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
-msgstr "Cuir isteach cód póstal ins an formáid NNNN nó ANNNNAAA"
+msgstr "أدخل رمزاً بريدياً بالنسق NNNN أو ANNNNAAA."
 
 msgid "This field requires only numbers."
-msgstr "Teastaíonn an réimse seo uimhreacha amháin."
+msgstr "يتطلب هذا الحقل أرقاماً فقط."
 
 msgid "This field requires 7 or 8 digits."
-msgstr "Teastaíonn an réimse seo 7 nó 8 digite."
+msgstr "يتطلب الحقل 7 أو 8 أعداد."
 
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
-msgstr "Cuir isteach CUIT bailí i formáid XX-XXXXXXXX-X nó XXXXXXXXXXXX."
+msgstr "أدخل رمز CUIT صحيح بالنسق XX-XXXXXXXX-X أو XXXXXXXXXXXX."
 
 msgid "Invalid CUIT."
-msgstr "CUIT neamhbailí"
+msgstr "رمز CUIT غير صحيح."
 
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
-msgstr ""
+msgstr "\"نوع قانوني خاطئ. يجب أن يكون نوع 27، 20، 30، 23، 24، أو 33.\""
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
 msgstr ""
@@ -122,47 +120,46 @@ msgid "Invalid CBU."
 msgstr ""
 
 msgid "Burgenland"
-msgstr ""
+msgstr "برغنلاند"
 
 msgid "Carinthia"
-msgstr ""
+msgstr "كارينثيا"
 
 msgid "Lower Austria"
-msgstr "An Ostair íochtarach"
+msgstr "أدنى النمسا"
 
 msgid "Upper Austria"
-msgstr "An Ostair uachtarach"
+msgstr "أقصى النمسا"
 
 msgid "Salzburg"
-msgstr ""
+msgstr "سالزبورغ"
 
 msgid "Styria"
-msgstr ""
+msgstr "ستيريا"
 
 msgid "Tyrol"
-msgstr ""
+msgstr "تايرُل"
 
 msgid "Vorarlberg"
-msgstr "Tyrol"
+msgstr "فورارلبيرغ"
 
 msgid "Vienna"
-msgstr "Vín"
+msgstr "فيينا"
 
 msgid "Enter a zip code in the format XXXX."
-msgstr "Cuir isteach cód zip ins an formáid XXXX."
+msgstr "أدخل رمز zip بالنسق XXXX."
 
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
-msgstr ""
-"Iontráil uimhir Ostaire Slándáil Shóisialta bailí i bhformáid XXXX XXXXXX."
+msgstr "أدخل رقم ضمان اجتماعي سويدي صحيح بالنسق XXXX XXXXXX."
 
 msgid "Enter a 4 digit postcode."
-msgstr "Iontráil postchód4 dhigit."
+msgstr "ادخل رمز بريدي من 4 أرقام."
 
 msgid "Australian State"
-msgstr "Stát na hAstráile"
+msgstr "ولاية استرالية"
 
 msgid "Australian Postcode"
-msgstr "Postchód Astráil"
+msgstr "رمز بريدي استرالي"
 
 msgid "Australian Business Number"
 msgstr ""
@@ -183,243 +180,241 @@ msgid "Enter a valid TFN."
 msgstr ""
 
 msgid "Antwerp"
-msgstr ""
+msgstr "أنتويرب"
 
 msgid "Brussels"
-msgstr "An Bhruiséil"
+msgstr "بروكسل"
 
 msgid "East Flanders"
-msgstr "Flóndras Oirthear"
+msgstr "فلاندرز الشرقية"
 
 msgid "Flemish Brabant"
-msgstr "Brabant Pléimeannach"
+msgstr "برابانت الفلمنكي"
 
 msgid "Hainaut"
-msgstr ""
+msgstr "هينو"
 
 msgid "Liege"
-msgstr ""
+msgstr "لييج"
 
 msgid "Limburg"
-msgstr ""
+msgstr "ليمبورغ"
 
 msgid "Luxembourg"
-msgstr "Lucsamburg"
+msgstr "لوكسومبورج"
 
 msgid "Namur"
-msgstr ""
+msgstr "نامور"
 
 msgid "Walloon Brabant"
-msgstr ""
+msgstr "الون برابانت"
 
 msgid "West Flanders"
-msgstr ""
+msgstr "فلاندرز الغربية"
 
 msgid "Brussels Capital Region"
-msgstr "Caipitil Réigiún na Bhruiséil"
+msgstr "بروكسل منطقة العاصمة"
 
 msgid "Flemish Region"
-msgstr "Réigiún Pléimeannach"
+msgstr "المنطقة الفلمنكية"
 
 msgid "Wallonia"
-msgstr ""
+msgstr "والونيا"
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
-msgstr "Cuir isteach cód poist bailí sa raon agus formáid 1XXX - 9XXX."
+msgstr "أدخل الرمز البريدي بالتسلسل الصحيح ما بين 1XXX - 9XXX."
 
 msgid "The EGN is not valid"
-msgstr ""
+msgstr "أدخل رمزاً بريدياً بالنسق XXXXX-XXX."
 
 msgid "EIK/BULSTAT is not valid"
 msgstr ""
 
 msgid "Enter a zip code in the format XXXXX-XXX."
-msgstr "Iontráil zip-cód i bhformáid XXXXX-XXX."
+msgstr "أدخل رمزاً بريدياً بالنسق XXXXX-XXX."
 
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
-msgstr ""
-"Roghnaigh stát na Brasaíle bailí. Ní thugann an Stát sin ar cheann de na "
-"stáit atá ar fáil."
+msgstr "نتق ولايةً برازيلية صحيحة. تلك الولاية ليست ضمن الولايات المتاحة."
 
 msgid "Invalid CPF number."
-msgstr "Uimhir CPF neamhbhailí."
+msgstr "رقم CPF غير صحيح."
 
 msgid "This field requires at most 11 digits or 14 characters."
-msgstr ""
-"Éilíonn an réimse seo ag an chuid is mó dhigit 11 nó 14 de charachtair."
+msgstr "يتطلب هذا الحقل 11 رقماً أو 14 حرفاً كحد أقصى."
 
 msgid "Invalid CNPJ number."
-msgstr "Neamhbhailí CNPJ uimhir."
+msgstr "رقم CNPJ غير صحيح."
 
 msgid "This field requires at least 14 digits"
-msgstr "Éilíonn an réimse seo ar a laghad 14 digití"
+msgstr "يتطلب هذا الحقل 14 رقماً على الأقل."
 
 msgid "Invalid Process number."
-msgstr ""
+msgstr "رقم عملية غير صحيح."
 
 msgid "State of Brazil (two uppercase letters)"
-msgstr ""
+msgstr "ولاية برازيلية (حرفان كبيران)"
 
 msgid "Alberta"
-msgstr ""
+msgstr "ألبرتا"
 
 msgid "British Columbia"
-msgstr ""
+msgstr "كولومبيا البريطانية"
 
 msgid "Manitoba"
-msgstr ""
+msgstr "مانيتوبا"
 
 msgid "New Brunswick"
-msgstr ""
+msgstr "نيو برونزويك"
 
 msgid "Newfoundland and Labrador"
-msgstr ""
+msgstr "نيوفاوندلاند ولابرادور"
 
 msgid "Northwest Territories"
-msgstr ""
+msgstr "الأقاليم الشمالية الغربية"
 
 msgid "Nova Scotia"
-msgstr ""
+msgstr "نوفا سكوتيا"
 
 msgid "Nunavut"
-msgstr ""
+msgstr "نونافوت"
 
 msgid "Ontario"
-msgstr ""
+msgstr "أونتاريو"
 
 msgid "Prince Edward Island"
-msgstr ""
+msgstr "جزيرة الأمير إدوارد"
 
 msgid "Quebec"
-msgstr ""
+msgstr "كيبيك"
 
 msgid "Saskatchewan"
-msgstr ""
+msgstr "ساسكاتشوان"
 
 msgid "Yukon"
-msgstr ""
+msgstr "يوكون"
 
 msgid "Enter a postal code in the format XXX XXX."
-msgstr "Iontráil cód poist i bhformáid XXX XXX."
+msgstr "أدخل رمزاً بريدياً بنسق XXX XXX."
 
 msgid "Enter a Canadian province or territory."
-msgstr ""
+msgstr "ادخل مقاطعة كندية أو إقليم."
 
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
-msgstr ""
-"Iontráil uimhir Cheanada Árachais Shóisialaigh bailí i bhformáid XXX-XXX-XXX."
+msgstr "أدخل رقم ضمان اجتماعي كندي صحيح بالنسق XXX-XXX-XXX."
 
 msgid "Aargau"
-msgstr ""
+msgstr "أراغاو"
 
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "أبنزل إينرهودن"
 
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "أبنزل أوسيرهودن"
 
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "بازل شتات"
 
 msgid "Basel-Land"
-msgstr ""
+msgstr "بازل-لاند"
 
 msgid "Berne"
-msgstr ""
+msgstr "برن"
 
 msgid "Fribourg"
-msgstr ""
+msgstr "فريبورغ"
 
 msgid "Geneva"
-msgstr ""
+msgstr "جنيف"
 
 msgid "Glarus"
-msgstr ""
+msgstr "جلاروس"
 
 msgid "Graubuenden"
-msgstr ""
+msgstr "غراوبوندن"
 
 msgid "Jura"
-msgstr ""
+msgstr "جورا"
 
 msgid "Lucerne"
-msgstr ""
+msgstr "لوسيرن"
 
 msgid "Neuchatel"
-msgstr ""
+msgstr "نيوشاتل"
 
 msgid "Nidwalden"
-msgstr ""
+msgstr "نيدوالدن"
 
 msgid "Obwalden"
-msgstr ""
+msgstr "أوبوالدن"
 
 msgid "Schaffhausen"
-msgstr ""
+msgstr "شافهاوزن"
 
 msgid "Schwyz"
-msgstr ""
+msgstr "شويز"
 
 msgid "Solothurn"
-msgstr ""
+msgstr "سولوتورن"
 
 msgid "St. Gallen"
-msgstr ""
+msgstr "سانت غالن"
 
 msgid "Thurgau"
-msgstr ""
+msgstr "ثورجو"
 
 msgid "Ticino"
-msgstr ""
+msgstr "تيسان"
 
 msgid "Uri"
-msgstr ""
+msgstr "أوري"
 
 msgid "Valais"
-msgstr ""
+msgstr "فاليه"
 
 msgid "Vaud"
-msgstr ""
+msgstr "فو"
 
 msgid "Zug"
-msgstr ""
+msgstr "زوغ"
 
 msgid "Zurich"
-msgstr ""
+msgstr "زيوريخ"
 
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr ""
+"أدخل رقم هوية أو رقم جواز سفر سويسري صحيح بالصيغة X1234567 <0 أو 1234567890 "
+"الشكل."
 
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
-msgstr ""
+msgstr "أدخل رقم ضمان اجتماعي سويسري صحيح بالنسق 756.XXXX.XXXX.XX."
 
 msgid "Enter a valid Chilean RUT."
-msgstr "Iontráil RUT Chilean bailí."
+msgstr "أدخل رمز RUT تشيلي صحيح."
 
 msgid "Enter a valid Chilean RUT. The format is XX.XXX.XXX-X."
-msgstr "Iontráil RUT bailí Chilean. Is é an fhormáid XX.XXX.XXX-X."
+msgstr "أدخل رمز RUT تشيلي صحيح. النسق هو XX.XXX.XXX-X."
 
 msgid "The Chilean RUT is not valid."
-msgstr "Níl an RUT Chilean bailí."
+msgstr "قيمة RUT التشيلية غير صحيحة."
 
 msgid "Enter a post code in the format XXXXXX."
-msgstr "Iontráil postchód i bhformáid XXXXXX."
+msgstr "أدخل رمزاً بريدياً بنسق XXXXXX."
 
 msgid "ID Card Number consists of 15 or 18 digits."
-msgstr "Uimhir Aitheantais Carta comhdhéanta de 15 nó 18 digití."
+msgstr ""
 
 msgid "Invalid ID Card Number: Wrong checksum"
-msgstr "Uimhir Aitheantais Carta neamhbhailí: checksum mícheart "
+msgstr ""
 
 msgid "Invalid ID Card Number: Wrong birthdate"
-msgstr "Carta ID neamhbhailí: breith lá mícheart "
+msgstr ""
 
 msgid "Invalid ID Card Number: Wrong location code"
-msgstr "Carta ID neamhbhailí: cód na háite mícheart "
+msgstr ""
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
 msgstr ""
@@ -511,70 +506,70 @@ msgstr ""
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
-msgstr ""
+msgstr "أدخل تاريخًا صالحًا (yymmdd) لأول 6 أرقام من رقم بطاقة الهوية."
 
 msgid "Prague"
-msgstr ""
+msgstr "براغ"
 
 msgid "Central Bohemian Region"
-msgstr "Réigiún Central Bohemian"
+msgstr "وسط منطقة بوهيميا"
 
 msgid "South Bohemian Region"
-msgstr "Réigiún Bohemian Theas"
+msgstr "جنوب منطقة بوهيميا"
 
 msgid "Pilsen Region"
-msgstr "Pilsen Réigiún"
+msgstr ""
 
 msgid "Carlsbad Region"
-msgstr "Carlsbad Réigiún"
+msgstr ""
 
 msgid "Usti Region"
-msgstr "Usti Réigiún"
+msgstr ""
 
 msgid "Liberec Region"
-msgstr "Liberec Réigiún"
+msgstr ""
 
 msgid "Hradec Region"
-msgstr "Hradec Réigiún"
+msgstr ""
 
 msgid "Pardubice Region"
-msgstr "Pardubice Réigiún"
+msgstr ""
 
 msgid "Vysocina Region"
-msgstr "Vysocina Réigiún"
+msgstr ""
 
 msgid "South Moravian Region"
-msgstr "Réigiún Moravian Theas"
+msgstr "منطقة جنوب مورافيا"
 
 msgid "Olomouc Region"
-msgstr "Réigiún Olomouc"
+msgstr ""
 
 msgid "Zlin Region"
-msgstr "Réigiún Zlin"
+msgstr ""
 
 msgid "Moravian-Silesian Region"
-msgstr "Réigiún Moravian-Silesian"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXX or XXX XX."
-msgstr "Iontráil cód poist i bhformáid XXXXX nó XXX XX."
+msgstr "أدخل رمزاً بريدياً بالنسق XXXXX أو XXX XX."
 
 msgid "Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX."
-msgstr "Iontráil uimhir breithe i bhformáid XXXXXX/XXXX nó XXXXXXXXXX."
+msgstr "أدخل رقم الميلاد بالنسق XXXXXX/XXXX أو XXXXXXXXXX."
 
 msgid "Enter a valid birth number."
-msgstr "Cuir isteach uimhir breithe bailí."
+msgstr "أدخل رقم ميلاد صحيح."
 
 msgid "Enter a valid IC number."
-msgstr "Cuir isteach uimhir IC bailí."
+msgstr "أدخل رقم IC صحيح."
 
 msgid "Baden-Wuerttemberg"
 msgstr ""
 
 msgid "Bavaria"
-msgstr "An Bhaváir"
+msgstr "بافاريا"
 
 msgid "Berlin"
-msgstr "Beirlín"
+msgstr "برلين"
 
 msgid "Brandenburg"
 msgstr ""
@@ -583,31 +578,31 @@ msgid "Bremen"
 msgstr ""
 
 msgid "Hamburg"
-msgstr ""
+msgstr "هامبورغ"
 
 msgid "Hessen"
 msgstr ""
 
 msgid "Mecklenburg-Western Pomerania"
-msgstr "Mecklenburg-Pomerania Thiar"
+msgstr ""
 
 msgid "Lower Saxony"
-msgstr "An tSacsain Íochtair"
+msgstr ""
 
 msgid "North Rhine-Westphalia"
-msgstr "Réin Thuaidh-Westphalia"
+msgstr ""
 
 msgid "Rhineland-Palatinate"
-msgstr "Dúiche na Réine-Palatinate"
+msgstr ""
 
 msgid "Saarland"
 msgstr ""
 
 msgid "Saxony"
-msgstr "An tSacsain"
+msgstr ""
 
 msgid "Saxony-Anhalt"
-msgstr "An tSacsain-Anhalt"
+msgstr ""
 
 msgid "Schleswig-Holstein"
 msgstr ""
@@ -616,14 +611,13 @@ msgid "Thuringia"
 msgstr ""
 
 msgid "Enter a zip code in the format XXXXX."
-msgstr "Iontráil zip-cód i bhformáid XXXXX."
+msgstr "أدخل رمز zip بالنسق XXXXX."
 
 msgid ""
 "Enter a valid German identity card number in XXXXXXXXXXX-XXXXXXX-XXXXXXX-X "
 "format."
 msgstr ""
-"Iontráil uimhir cárta aitheantais na Gearmáine bailí i bhformáid XXXXXXXXXXX-"
-"XXXXXXX-XXXXXXX-X."
+"أدخل رقم بطاقة هوية ألمانية صحيحة بالنسق XXXXXXXXXXX-XXXXXXX-XXXXXXX-X."
 
 msgid "Albertslund"
 msgstr ""
@@ -3125,7 +3119,7 @@ msgid "Almeria"
 msgstr ""
 
 msgid "Avila"
-msgstr "Ávila"
+msgstr ""
 
 msgid "Badajoz"
 msgstr ""
@@ -3140,10 +3134,10 @@ msgid "Burgos"
 msgstr ""
 
 msgid "Caceres"
-msgstr "Cáceres"
+msgstr ""
 
 msgid "Cadiz"
-msgstr "Cádiz"
+msgstr ""
 
 msgid "Castello"
 msgstr ""
@@ -3155,7 +3149,7 @@ msgid "Cordoba"
 msgstr ""
 
 msgid "A Coruna"
-msgstr "A Coruña"
+msgstr ""
 
 msgid "Cuenca"
 msgstr ""
@@ -3191,10 +3185,10 @@ msgid "Lugo"
 msgstr ""
 
 msgid "Madrid"
-msgstr "Maidrid"
+msgstr ""
 
 msgid "Malaga"
-msgstr "Málaga"
+msgstr ""
 
 msgid "Murcia"
 msgstr ""
@@ -3230,7 +3224,7 @@ msgid "Segovia"
 msgstr ""
 
 msgid "Seville"
-msgstr "Sevilla"
+msgstr ""
 
 msgid "Soria"
 msgstr ""
@@ -3272,25 +3266,25 @@ msgid "Aragon"
 msgstr ""
 
 msgid "Principality of Asturias"
-msgstr "Phrionsacht Asturias"
+msgstr ""
 
 msgid "Balearic Islands"
-msgstr "Na hOileáin Bhailéaracha"
+msgstr ""
 
 msgid "Basque Country"
-msgstr "Tír na mBascach"
+msgstr ""
 
 msgid "Canary Islands"
-msgstr "Na hOileáin Chanáracha"
+msgstr ""
 
 msgid "Castile-La Mancha"
-msgstr "Castilla-La Mancha"
+msgstr ""
 
 msgid "Castile and Leon"
-msgstr "Castilla agus Leon"
+msgstr ""
 
 msgid "Catalonia"
-msgstr "An Chatalóin"
+msgstr ""
 
 msgid "Extremadura"
 msgstr ""
@@ -3299,10 +3293,10 @@ msgid "Galicia"
 msgstr ""
 
 msgid "Region of Murcia"
-msgstr "Réigiún de Murcia"
+msgstr ""
 
 msgid "Foral Community of Navarre"
-msgstr "Chomhphobail Foral de Navarre"
+msgstr ""
 
 msgid "Valencian Community"
 msgstr ""
@@ -3314,33 +3308,32 @@ msgid "Autonomous city of Mellila"
 msgstr ""
 
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
-msgstr "Iontráil cód poist bailí i raon agus formáid 01XXX - 52XXX."
+msgstr ""
 
 msgid "Please enter a valid NIF, NIE, or CIF."
-msgstr "Cuir isteach NIF bailí, NIE, nó CIF."
+msgstr ""
 
 msgid "Please enter a valid NIF or NIE."
-msgstr "Cuir isteach NIF bailí nó NIE."
+msgstr ""
 
 msgid "Invalid checksum for NIF."
-msgstr "Sheiceála neamhbhailí do NIF."
+msgstr ""
 
 msgid "Invalid checksum for NIE."
-msgstr "Sheiceála neamhbhailí do NIE."
+msgstr ""
 
 msgid "Invalid checksum for CIF."
-msgstr "Sheiceála neamhbhailí do CIF."
+msgstr ""
 
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr ""
-"Cuir isteach uimhir chuntais bainc bailí i bhformáid XXXX-XXXX-XX-XXXXXXXXXX."
 
 msgid "Invalid checksum for bank account number."
-msgstr "Sheiceála neamhbhailí do uimhir cuntas bainc."
+msgstr ""
 
 msgid "Enter a valid Finnish social security number."
-msgstr "Cuir isteach uimhir Fionlainne slándála sóisialta bailí."
+msgstr ""
 
 msgid "Zip code"
 msgstr ""
@@ -3367,7 +3360,7 @@ msgid "SIRET Number"
 msgstr ""
 
 msgid "Enter a valid postcode."
-msgstr "Iontráil postchód bailí."
+msgstr ""
 
 msgid "Bath and North East Somerset"
 msgstr ""
@@ -3484,7 +3477,7 @@ msgid "Lincolnshire"
 msgstr ""
 
 msgid "London"
-msgstr "Londain"
+msgstr ""
 
 msgid "Luton"
 msgstr ""
@@ -3634,7 +3627,7 @@ msgid "Fermanagh"
 msgstr ""
 
 msgid "Londonderry"
-msgstr "Doire"
+msgstr ""
 
 msgid "Tyrone"
 msgstr ""
@@ -3721,7 +3714,7 @@ msgid "Clackmannanshire"
 msgstr ""
 
 msgid "Dumfries and Galloway"
-msgstr "Dumfries agus Galloway"
+msgstr ""
 
 msgid "Dundee City"
 msgstr ""
@@ -3739,7 +3732,7 @@ msgid "East Renfrewshire"
 msgstr ""
 
 msgid "Edinburgh, City of"
-msgstr "Dún Éideann"
+msgstr ""
 
 msgid "Falkirk"
 msgstr ""
@@ -3796,22 +3789,22 @@ msgid "Na h-Eileanan Siar"
 msgstr ""
 
 msgid "Orkney Islands"
-msgstr "na hOiléain Orkney"
+msgstr ""
 
 msgid "Shetland Islands"
-msgstr "na hOiléain Shetland"
+msgstr ""
 
 msgid "England"
-msgstr "Sasana"
+msgstr ""
 
 msgid "Northern Ireland"
-msgstr "Tuaisceart Éireann"
+msgstr ""
 
 msgid "Wales"
-msgstr "An Bhreatain Bheag"
+msgstr ""
 
 msgid "Scotland"
-msgstr "Albain"
+msgstr ""
 
 msgid "An International Bank Account Number"
 msgstr ""
@@ -3859,31 +3852,31 @@ msgid "Enter a valid greek tax number (9 digits)."
 msgstr ""
 
 msgid "Enter a valid 13 digit JMBG"
-msgstr "Iontráil JMBG 13 digit bailí"
+msgstr ""
 
 msgid "Error in date segment"
-msgstr "Earráid sa deighleog dáta"
+msgstr ""
 
 msgid "Enter a valid 11 digit OIB"
-msgstr "Iontráil OIB 11 dhigit bailí "
+msgstr ""
 
 msgid "Enter a valid vehicle license plate number"
-msgstr "Cuir isteach uimhir feithicle bailí pláta cheadúnas"
+msgstr ""
 
 msgid "Enter a valid location code"
-msgstr "Iontráil cód suoímh bailí"
+msgstr ""
 
 msgid "Number part cannot be zero"
-msgstr "Ní féidir an uimhir a bheith nialas"
+msgstr ""
 
 msgid "Enter a valid 5 digit postal code"
-msgstr "Iontráil postcód 5 dhigit bailí"
+msgstr ""
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
-msgstr "Iontráil JMBAG 19 dhigit bailí ag tosú le 601983"
+msgstr ""
 
 msgid "Card issue number cannot be zero"
-msgstr "Ní féidir uimhir eisiúna cárta a bheith nialas"
+msgstr ""
 
 msgid "Grad Zagreb"
 msgstr ""
@@ -4006,10 +3999,10 @@ msgid "Zala"
 msgstr ""
 
 msgid "Enter a valid post code"
-msgstr "Iontráil cód poist bailí"
+msgstr ""
 
 msgid "Enter a valid NIK/KTP number"
-msgstr "Cuir isteach uimhir NIK/KTP bailí"
+msgstr ""
 
 msgid "Aceh"
 msgstr ""
@@ -4132,10 +4125,10 @@ msgid "Kepulauan Bangka Belitung"
 msgstr ""
 
 msgid "Corps Consulate"
-msgstr "Cór gconsalacht"
+msgstr ""
 
 msgid "Corps Diplomatic"
-msgstr "Cór Taidhleoireachta"
+msgstr ""
 
 msgid "Bandung"
 msgstr ""
@@ -4195,7 +4188,7 @@ msgid "Banyumas"
 msgstr ""
 
 msgid "Federal Government"
-msgstr "Rialtas Feidearálach"
+msgstr ""
 
 msgid "Bojonegoro"
 msgstr ""
@@ -4210,94 +4203,94 @@ msgid "Garut"
 msgstr ""
 
 msgid "Carlow"
-msgstr "Ceatharlach"
+msgstr ""
 
 msgid "Cavan"
-msgstr "An Cabhan"
+msgstr ""
 
 msgid "Clare"
-msgstr "An Clar"
+msgstr ""
 
 msgid "Cork"
-msgstr "Corcaigh"
+msgstr ""
 
 msgid "Donegal"
-msgstr "Dún na nGall"
+msgstr ""
 
 msgid "Dublin"
-msgstr "Baile Atha Cliath"
+msgstr ""
 
 msgid "Galway"
-msgstr "Gaillimh"
+msgstr ""
 
 msgid "Kerry"
-msgstr "Chiarrai"
+msgstr ""
 
 msgid "Kildare"
-msgstr "Cill Dara"
+msgstr ""
 
 msgid "Kilkenny"
-msgstr "Cill Chainnigh"
+msgstr ""
 
 msgid "Laois"
-msgstr "Laoise"
+msgstr ""
 
 msgid "Leitrim"
-msgstr "Liatroim"
+msgstr ""
 
 msgid "Limerick"
-msgstr "Luimneach"
+msgstr ""
 
 msgid "Longford"
-msgstr "An Longfort"
+msgstr ""
 
 msgid "Louth"
-msgstr "Lú"
+msgstr ""
 
 msgid "Mayo"
-msgstr "Mhaigh Eo"
+msgstr ""
 
 msgid "Meath"
-msgstr "an Mhí"
+msgstr ""
 
 msgid "Monaghan"
-msgstr "Muineachán"
+msgstr ""
 
 msgid "Offaly"
-msgstr "Uíbh Fhailí"
+msgstr ""
 
 msgid "Roscommon"
-msgstr "Ros Comain"
+msgstr ""
 
 msgid "Sligo"
-msgstr "Sligeach"
+msgstr ""
 
 msgid "Tipperary"
-msgstr "Tiobraid Arann"
+msgstr ""
 
 msgid "Waterford"
-msgstr "Port Láirge"
+msgstr ""
 
 msgid "Westmeath"
-msgstr "Na hIarmhí"
+msgstr ""
 
 msgid "Wexford"
-msgstr "Loch Garman"
+msgstr ""
 
 msgid "Wicklow"
-msgstr "Cill Mhantáin"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
 msgstr ""
 
 msgid "Enter a valid ID number."
-msgstr "Cuir isteach uimhir aitheantais bailí."
+msgstr ""
 
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
-msgstr "Cuir isteach cód zip san fhormáid XXXXXX nó XXX XXX."
+msgstr ""
 
 msgid "Enter an Indian state or territory."
-msgstr "Cuir isteach an stát Indiach nó gcríoch."
+msgstr ""
 
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
@@ -4309,26 +4302,24 @@ msgstr ""
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
 msgstr ""
-"Cuir isteach uimhir aitheantais bailí hÍoslainne. Is é an fhormáid XXXXXX-"
-"XXXX."
 
 msgid "The Icelandic identification number is not valid."
-msgstr "Níl an uimhir aitheantais hÍoslainne bailí."
+msgstr ""
 
 msgid "Enter a valid zip code."
-msgstr "Iontráil zip-cód bailí."
+msgstr ""
 
 msgid "Enter a valid Tax code."
 msgstr ""
 
 msgid "Enter a valid VAT number."
-msgstr "Iontráil uimhir CBL bailí."
+msgstr ""
 
 msgid "Check digit does not match."
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
-msgstr "Iontráil cód poist i bhformáid XXXXXXX nó XXX-XXXX."
+msgstr ""
 
 msgid "Hokkaido"
 msgstr ""
@@ -4367,7 +4358,7 @@ msgid "Chiba"
 msgstr ""
 
 msgid "Tokyo"
-msgstr "Tóiceo"
+msgstr ""
 
 msgid "Kanagawa"
 msgstr ""
@@ -4472,7 +4463,7 @@ msgid "Okinawa"
 msgstr ""
 
 msgid "Enter a valid Kuwaiti Civil ID number"
-msgstr "Iontráil uimhir ID Sibhialta Kuwati bailí"
+msgstr ""
 
 msgid "Kuwait City"
 msgstr ""
@@ -5435,7 +5426,7 @@ msgid "Zilupe municipality"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXX."
-msgstr "Cuir isteach cód poist san fhormáid XXXXX."
+msgstr ""
 
 msgid "Postal code"
 msgstr ""
@@ -5708,19 +5699,15 @@ msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
 msgstr ""
-"Ní mór uimhreacha cártaí aitheantais go bhfuil ceachtar 4 go 7 dhigit nó "
-"litir chás uachtair agus 7 digití."
 
 msgid "This field should contain exactly 13 digits."
-msgstr "Ba chóir go bhfuil an réimse seo go díreach 13 digití."
+msgstr ""
 
 msgid "The first 7 digits of the UMCN must represent a valid past date."
 msgstr ""
-"Ní mór don chéad 7 dhigit de na UMCN ionadaíocht a dhéanamh ar dháta bailí "
-"anuas."
 
 msgid "The UMCN is not valid."
-msgstr "Níl an UMCN bailí."
+msgstr ""
 
 msgid "Aerodrom"
 msgstr ""
@@ -5975,25 +5962,25 @@ msgid "Šuto Orizari"
 msgstr ""
 
 msgid "Macedonian identity card number"
-msgstr "Cárta uimhir aitheantais Macadóinis"
+msgstr ""
 
 msgid "A Macedonian municipality (2 character code)"
-msgstr "A bhardas Macadóinis (2 cód carachtar)"
+msgstr ""
 
 msgid "Unique master citizen number (13 digits)"
-msgstr "Líon saoránach uathúil máistir (13 dhigit)"
+msgstr ""
 
 msgid "Enter a valid postal code in format AAA 0000."
 msgstr ""
 
 msgid "Enter a valid zip code in the format XXXXX."
-msgstr "Cuir isteach cód zip bailí sa XXXXX bhformáid."
+msgstr ""
 
 msgid "Enter a valid RFC."
-msgstr "Iontráil RFC bailí."
+msgstr ""
 
 msgid "Invalid checksum for RFC."
-msgstr "Sheiceála neamhbhailí do RFC."
+msgstr ""
 
 msgid "Enter a valid CLABE."
 msgstr ""
@@ -6002,10 +5989,10 @@ msgid "Invalid checksum for CLABE."
 msgstr ""
 
 msgid "Enter a valid CURP."
-msgstr "Iontráil CURP bailí."
+msgstr ""
 
 msgid "Invalid checksum for CURP."
-msgstr "Neamhbhailí sheiceála do CURP."
+msgstr ""
 
 msgid "Enter a valid Social Security Number."
 msgstr ""
@@ -6014,19 +6001,19 @@ msgid "Invalid checksum for Social Security Number."
 msgstr ""
 
 msgid "Mexico state (three uppercase letters)"
-msgstr "Meicsiceo stáit (trí litreacha cás uachtair)"
+msgstr ""
 
 msgid "Mexico zip code"
-msgstr "Cód zip Meicsiceo"
+msgstr ""
 
 msgid "Mexican RFC"
-msgstr "Mheicsiceo RFC"
+msgstr ""
 
 msgid "Mexican CLABE"
 msgstr ""
 
 msgid "Mexican CURP"
-msgstr "Mheicsiceo CURP"
+msgstr ""
 
 msgid "Mexican Social Security Number"
 msgstr ""
@@ -6038,7 +6025,7 @@ msgid "Baja California"
 msgstr ""
 
 msgid "Baja California Sur"
-msgstr "Baja California an Ridire"
+msgstr ""
 
 msgid "Campeche"
 msgstr ""
@@ -6056,7 +6043,7 @@ msgid "Colima"
 msgstr ""
 
 msgid "Distrito Federal"
-msgstr "Distrito Feidearálach"
+msgstr ""
 
 msgid "Durango"
 msgstr ""
@@ -6098,7 +6085,7 @@ msgid "Querétaro"
 msgstr ""
 
 msgid "Quintana Roo"
-msgstr "Quintana Rubha"
+msgstr ""
 
 msgid "Sinaloa"
 msgstr ""
@@ -6173,7 +6160,7 @@ msgid "Enter a valid BSN."
 msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
-msgstr "Cuir isteach uimhir leasa na hIorua sóisialta bailí."
+msgstr ""
 
 msgid "Enter a valid Norwegian bank account number."
 msgstr ""
@@ -6437,10 +6424,10 @@ msgid "West Coast"
 msgstr ""
 
 msgid "This field requires 8 digits."
-msgstr "Éilíonn an réimse 8 digití."
+msgstr ""
 
 msgid "This field requires 11 digits."
-msgstr "Éilíonn an réimse seo 11 digití."
+msgstr ""
 
 msgid "Enter a 5 digit postcode."
 msgstr ""
@@ -6476,43 +6463,39 @@ msgid "Sindh"
 msgstr ""
 
 msgid "National Identification Number consists of 11 digits."
-msgstr "Náisiúnta Uimhir Aitheantais comhdhéanta de 11 digití."
+msgstr ""
 
 msgid "Wrong checksum for the National Identification Number."
-msgstr "Sheiceála mícheart ar an Uimhir Aitheantais Náisiúnta."
+msgstr ""
 
 msgid "The National Identification Number contains an invalid birth date."
 msgstr ""
 
 msgid "National ID Card Number consists of 3 letters and 6 digits."
 msgstr ""
-"Is éard atá Náisiúnta Uimhir an Chárta Aitheantais de 3 litreacha agus "
-"digití 6."
 
 msgid "Wrong checksum for the National ID Card Number."
-msgstr "Sheiceála mícheart le haghaidh an Chárta ID Náisiúnta."
+msgstr ""
 
 msgid ""
 "Enter a tax number field (NIP) in the format XXX-XXX-XX-XX, XXX-XX-XX-XXX or "
 "XXXXXXXXXX."
 msgstr ""
-"Cuir isteach ar réimse uimhir cánach (NIP) i bhformáid XXX-XXX-XX-XX, XXX-"
-"XXX-XX XX-nó XXXXXXXXXX."
 
 msgid "Wrong checksum for the Tax Number (NIP)."
-msgstr "Sheiceála mícheart ar an Uimhir Cánach (NIP)."
+msgstr ""
 
 msgid "National Business Register Number (REGON) consists of 9 or 14 digits."
-msgstr "Uimhir Náisiúnta Clár Gnó (REGON) comhdhéanta de 9 nó 14 digití."
+msgstr ""
 
 msgid "Wrong checksum for the National Business Register Number (REGON)."
-msgstr "Sheiceála Mícheart do Uimhir Ghnó Clár Náisiúnta (REGON)."
+msgstr ""
 
 msgid "Enter a postal code in the format XX-XXX."
-msgstr "Iontráil cód poist i bhformáid XX-XXX."
+msgstr ""
 
 msgid "Lower Silesian"
-msgstr "Silesia Íochtarach"
+msgstr ""
 
 msgid "Kuyavian-Pomeranian"
 msgstr ""
@@ -6527,7 +6510,7 @@ msgid "Lodz"
 msgstr ""
 
 msgid "Lesser Poland"
-msgstr "An Pholainn lú"
+msgstr ""
 
 msgid "Masovian"
 msgstr ""
@@ -6542,10 +6525,10 @@ msgid "Podlasie"
 msgstr ""
 
 msgid "Pomeranian"
-msgstr "Pomerania"
+msgstr ""
 
 msgid "Silesian"
-msgstr "Silesia Íochtarach"
+msgstr ""
 
 msgid "Swietokrzyskie"
 msgstr ""
@@ -6554,10 +6537,10 @@ msgid "Warmian-Masurian"
 msgstr ""
 
 msgid "Greater Poland"
-msgstr "An Pholainn Mór"
+msgstr ""
 
 msgid "West Pomeranian"
-msgstr "Pomerania Thiar"
+msgstr ""
 
 msgid "The specified value is not a valid Citizen Card number."
 msgstr ""
@@ -6641,46 +6624,46 @@ msgid "Região Autónoma dos Açores"
 msgstr ""
 
 msgid "Enter a valid CIF."
-msgstr "Iontráil CIF bailí."
+msgstr ""
 
 msgid "Enter a valid CNP."
-msgstr "Iontráil CNP bailí."
+msgstr ""
 
 msgid "Enter a valid postal code in the format XXXXXX"
-msgstr "Iontráil cód poist bailí i bhformáid XXXXXX"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXXX."
-msgstr "Cuir isteach postcód san fhormáid XXXXXX."
+msgstr ""
 
 msgid "Enter a passport number in the format XXXX XXXXXX."
-msgstr "Iontráil uimhir phas san fhormáid XXXX XXXXXX."
+msgstr ""
 
 msgid "Enter a passport number in the format XX XXXXXXX."
-msgstr "Iontráil uimhir phas san fhormáid XX XXXXXXX."
+msgstr ""
 
 msgid "Central Federal County"
-msgstr "Contae Feidearálach Lár"
+msgstr ""
 
 msgid "South Federal County"
-msgstr "Contae Feidearálach Deisceart"
+msgstr ""
 
 msgid "North-West Federal County"
-msgstr "Contae Feidearálach Iar-Tuaisceart"
+msgstr ""
 
 msgid "Far-East Federal County"
-msgstr "Contae Feidearálach Fada Oirthear"
+msgstr ""
 
 msgid "Siberian Federal County"
-msgstr "Contae Feidearálach Siberian"
+msgstr ""
 
 msgid "Ural Federal County"
-msgstr "Contae Feidearálach Ural"
+msgstr ""
 
 msgid "Privolzhsky Federal County"
-msgstr "Contae Feidearálach Privolzhsky"
+msgstr ""
 
 msgid "North-Caucasian Federal County"
-msgstr "Contae Feidearálach North-Caucasian"
+msgstr ""
 
 msgid "Moskva"
 msgstr ""
@@ -6932,19 +6915,19 @@ msgid "Yamalo-Neneckiy avtonomnyy okrug"
 msgstr ""
 
 msgid "Enter a valid Swedish organisation number."
-msgstr "Cuir isteach uimhir eagraíochta bailí Sualainnis."
+msgstr ""
 
 msgid "Enter a valid Swedish personal identity number."
-msgstr "Iontráil uimhir aitheantais bailí Sualainnis pearsanta."
+msgstr ""
 
 msgid "Co-ordination numbers are not allowed."
-msgstr "Ní líon Comhordaithe Co-cheadaítear."
+msgstr ""
 
 msgid "Enter a Swedish postal code in the format XXXXX."
-msgstr "Iontráil cód poist na Sualainne i bhformáid XXXXX."
+msgstr ""
 
 msgid "Stockholm"
-msgstr "Stócólm"
+msgstr ""
 
 msgid "Västerbotten"
 msgstr ""
@@ -7014,14 +6997,12 @@ msgstr ""
 
 msgid "The first 7 digits of the EMSO must represent a valid past date."
 msgstr ""
-"Ní mór don chéad 7 dhigit de na EMSO ionadaíocht a dhéanamh ar dháta bailí "
-"anuas."
 
 msgid "The EMSO is not valid."
-msgstr "Níl an EMSO bailí."
+msgstr ""
 
 msgid "Enter a valid tax number in form SIXXXXXXXX"
-msgstr "Iontráil uimhir cánach bailí i bhfoirm SIXXXXXXXX"
+msgstr ""
 
 msgid "Banska Bystrica"
 msgstr ""
@@ -7039,19 +7020,19 @@ msgid "Brezno"
 msgstr ""
 
 msgid "Bratislava I"
-msgstr "An Bhratasláiv I"
+msgstr ""
 
 msgid "Bratislava II"
-msgstr "An Bhratasláiv II"
+msgstr ""
 
 msgid "Bratislava III"
-msgstr "An Bhratasláiv III"
+msgstr ""
 
 msgid "Bratislava IV"
-msgstr "An Bhratasláiv IV"
+msgstr ""
 
 msgid "Bratislava V"
-msgstr "An Bhratasláiv V"
+msgstr ""
 
 msgid "Bytca"
 msgstr ""
@@ -7108,7 +7089,7 @@ msgid "Krupina"
 msgstr ""
 
 msgid "Kysucke Nove Mesto"
-msgstr "Kysucke Nove mesto"
+msgstr ""
 
 msgid "Levice"
 msgstr ""
@@ -7144,7 +7125,7 @@ msgid "Nitra"
 msgstr ""
 
 msgid "Nove Mesto nad Vahom"
-msgstr "Nove mesto nad Vahom"
+msgstr ""
 
 msgid "Nove Zamky"
 msgstr ""
@@ -7261,28 +7242,28 @@ msgid "Zilina"
 msgstr ""
 
 msgid "Banska Bystrica region"
-msgstr "Banska Bystrica réigiún"
+msgstr ""
 
 msgid "Bratislava region"
-msgstr "An Bhratasláiv réigiún"
+msgstr ""
 
 msgid "Kosice region"
-msgstr "Kosice réigiún"
+msgstr ""
 
 msgid "Nitra region"
-msgstr "Nitra réigiún"
+msgstr ""
 
 msgid "Presov region"
-msgstr "Presov réigiún"
+msgstr ""
 
 msgid "Trencin region"
-msgstr "Trencin réigiún"
+msgstr ""
 
 msgid "Trnava region"
-msgstr "Trnava réigiún"
+msgstr ""
 
 msgid "Zilina region"
-msgstr "Zilina réigiún"
+msgstr ""
 
 msgid "Ariana"
 msgstr ""
@@ -7354,10 +7335,10 @@ msgid "Zaghouan"
 msgstr ""
 
 msgid "Enter a valid Turkish Identification number."
-msgstr "Iontráil uimhir aitheantais bailí Tuircis."
+msgstr ""
 
 msgid "Turkish Identification number must be 11 digits."
-msgstr "Ní mór a aithint Tuircis uimhir 11 digití."
+msgstr ""
 
 msgid "Enter a valid postal code."
 msgstr ""
@@ -7453,19 +7434,19 @@ msgid "Sevastopol"
 msgstr ""
 
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
-msgstr "Iontráil zip-cód i bhformáid XXXXX nó XXXXX-XXXX."
+msgstr ""
 
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
-msgstr "Iontráil uimhir Slándáil Shóisialta US bailí i bhformáid XXX-XX-XXXX."
+msgstr ""
 
 msgid "Enter a U.S. state or territory."
-msgstr "Iontráil US stát nó i gcríoch."
+msgstr ""
 
 msgid "U.S. state (two uppercase letters)"
-msgstr "U.S. stát (dhá litreacha móra)"
+msgstr ""
 
 msgid "U.S. postal code (two uppercase letters)"
-msgstr "US cód poist (dhá litreacha móra)"
+msgstr ""
 
 msgid "U.S. ZIP code"
 msgstr ""
@@ -7674,10 +7655,9 @@ msgstr ""
 
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
 msgstr ""
-"Iontráil CI bailí a roinnt i X.XXX.XXX-X, XXXXXXX-X nó XXXXXXXX formáid."
 
 msgid "Enter a valid CI number."
-msgstr "Cuir isteach uimhir IC bailí."
+msgstr ""
 
 msgid "Región Capital"
 msgstr ""
@@ -7785,16 +7765,16 @@ msgid "Zulia"
 msgstr ""
 
 msgid "Enter a valid South African ID number"
-msgstr "Iontráil uimhir ID hAfraice Theas bailí"
+msgstr ""
 
 msgid "Enter a valid South African postal code"
-msgstr "Iontráil cód poist na hAfraice Theas bailí"
+msgstr ""
 
 msgid "Eastern Cape"
 msgstr ""
 
 msgid "Free State"
-msgstr "Saorstát"
+msgstr ""
 
 msgid "Gauteng"
 msgstr ""
@@ -7812,7 +7792,7 @@ msgid "Northern Cape"
 msgstr ""
 
 msgid "North West"
-msgstr "Iarthuaisceart"
+msgstr ""
 
 msgid "Western Cape"
 msgstr ""
