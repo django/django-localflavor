@@ -33,6 +33,12 @@ Package Index: https://pypi.python.org/pypi/django-localflavor
 You're encouraged to use the latest version of this package unless you need
 support for an unsupported version of Django.
 
+**2020-02-19 - 3.0**: Django 2.2 & 3.0
+
+All deprecated code has been removed in this release. This release also includes a number of other breaking changes.
+Please see the changelog for details:
+https://github.com/django/django-localflavor/blob/3.0/docs/changelog.rst
+
 **2019-05-07 - 2.2**: Django 1.11 - 2.2
 
 All deprecated code will be removed in the 3.0 release. Please run you project's tests using `python -Wd` so that
