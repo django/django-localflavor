@@ -6,6 +6,8 @@ Changelog
 
 Breaking changes:
 
+Dropped support for Django < 2.2.
+
 The deprecated `generic.checksums.luhn` and `generic.checksums.ean` functions have been removed in this release. Please
 use `python-stdnum <https://arthurdejong.org/python-stdnum/>`_ instead.
 
