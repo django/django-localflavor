@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
+"PO-Revision-Date: 2020-02-27 17:33+0200\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Russian (http://www.transifex.com/django/django-localflavor/"
 "language/ru/)\n"
@@ -170,7 +170,7 @@ msgstr ""
 "XXXXXX."
 
 msgid "Enter a 4 digit postcode."
-msgstr "Введите 4 цифры почтового индекса"
+msgstr "Введите 4 цифры почтового индекса."
 
 msgid "Australian State"
 msgstr "Австралийский штат"
@@ -5459,7 +5459,7 @@ msgid "Enter a postal code in the format XXXXX."
 msgstr "Введите почтовый индекс в формате XXXXX."
 
 msgid "Postal code"
-msgstr ""
+msgstr "Почтовый индекс"
 
 msgid "Select Province"
 msgstr ""
@@ -7394,82 +7394,82 @@ msgid "Ukrainian region"
 msgstr "Украинский регион"
 
 msgid "Ukrainian VAT number"
-msgstr ""
+msgstr "Украинский номер НДС"
 
 msgid "Ukrainian postal code"
-msgstr "Украинский почтовый индекс"
+msgstr "Почтовый индекс Украины"
 
 msgid "Cherkasy Oblast"
 msgstr "Черкасская область"
 
 msgid "Chernihiv Oblast"
-msgstr ""
+msgstr "Черниговская область"
 
 msgid "Chernivtsi Oblast"
-msgstr ""
+msgstr "Черновицкая область"
 
 msgid "Dnipropetrovsk Oblast"
-msgstr ""
+msgstr "Днепропетровская область"
 
 msgid "Donetsk Oblast"
-msgstr ""
+msgstr "Донецкая область"
 
 msgid "Ivano-Frankivsk Oblast"
-msgstr ""
+msgstr "Ивано-Франковская область"
 
 msgid "Kharkiv Oblast"
-msgstr ""
+msgstr "Харьковская область"
 
 msgid "Kherson Oblast"
-msgstr ""
+msgstr "Херсонская область"
 
 msgid "Khmelnytskyi Oblast"
-msgstr ""
+msgstr "Хмельницкая область"
 
 msgid "Kirovohrad Oblast"
-msgstr ""
+msgstr "Кировоградская область"
 
 msgid "Kiev Oblast"
-msgstr ""
+msgstr "Киевская область"
 
 msgid "Luhansk Oblast"
-msgstr ""
+msgstr "Луганская область"
 
 msgid "Lviv Oblast"
-msgstr ""
+msgstr "Львовская область"
 
 msgid "Mykolaiv Oblast"
-msgstr ""
+msgstr "Николаевская область"
 
 msgid "Odessa Oblast"
-msgstr ""
+msgstr "Одесская область"
 
 msgid "Poltava Oblast"
-msgstr ""
+msgstr "Полтавская область"
 
 msgid "Rivne Oblast"
-msgstr ""
+msgstr "Ровненская область"
 
 msgid "Sumy Oblast"
-msgstr ""
+msgstr "Сумская область"
 
 msgid "Ternopil Oblast"
-msgstr ""
+msgstr "Тернопольская область"
 
 msgid "Vinnytsia Oblast"
-msgstr ""
+msgstr "Винницкая область"
 
 msgid "Volyn Oblast"
-msgstr ""
+msgstr "Волынская область"
 
 msgid "Zakarpattia Oblast"
-msgstr ""
+msgstr "Закарпатская область"
 
 msgid "Zaporizhia Oblast"
-msgstr ""
+msgstr "Запорожская область"
 
 msgid "Zhytomyr Oblast"
-msgstr ""
+msgstr "Житомирская область"
 
 msgid "Autonomous Republic of Crimea"
 msgstr "Автономная республика Крым"
