@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
+"PO-Revision-Date: 2020-02-29 02:27+0200\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/django/django-localflavor/"
 "language/uk/)\n"
@@ -119,7 +119,7 @@ msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
 msgstr "Введіть правильний CBU у форматі XXXXXXXXXXXXXXXXXXXXXX."
 
 msgid "CBU must be exactly 22 digits long."
-msgstr "CBU повинен складатись з 22 чисел."
+msgstr "CBU повинен складатись з 22 цифр."
 
 msgid "Invalid CBU."
 msgstr "Невірний CBU."
@@ -178,13 +178,13 @@ msgid "Australian Tax File Number"
 msgstr ""
 
 msgid "Enter a valid ABN."
-msgstr ""
+msgstr "Введіть правильний ABN."
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "Введіть правильний ACN."
 
 msgid "Enter a valid TFN."
-msgstr ""
+msgstr "Введіть правильний TFN."
 
 msgid "Antwerp"
 msgstr "Антверпен"
@@ -263,7 +263,7 @@ msgid "Invalid Process number."
 msgstr "Помилковий номер Процесу."
 
 msgid "State of Brazil (two uppercase letters)"
-msgstr ""
+msgstr "Штат Бразилії (дві великі літери)"
 
 msgid "Alberta"
 msgstr "Альберта"
@@ -627,7 +627,7 @@ msgid ""
 "format."
 msgstr ""
 "Введіть правильний номер німецького посвідчення особи в форматі XXXXXXXXXXX-"
-"XXXXXXX-XXXXXXX-X "
+"XXXXXXX-XXXXXXX-X."
 
 msgid "Albertslund"
 msgstr ""
@@ -3324,7 +3324,7 @@ msgid "Please enter a valid NIF, NIE, or CIF."
 msgstr "Будь ласка введіть правильний NIF, NIE, або CIF."
 
 msgid "Please enter a valid NIF or NIE."
-msgstr "Будь ласка введіть правильний NIF або NIE"
+msgstr "Будь ласка введіть правильний NIF або NIE."
 
 msgid "Invalid checksum for NIF."
 msgstr "Помилкова контрольна сума для NIF."
@@ -4011,7 +4011,7 @@ msgid "Zala"
 msgstr ""
 
 msgid "Enter a valid post code"
-msgstr "Введіть правильний поштовий індекс."
+msgstr "Введіть правильний поштовий індекс"
 
 msgid "Enter a valid NIK/KTP number"
 msgstr ""
@@ -4299,7 +4299,7 @@ msgid "Enter a valid ID number."
 msgstr "Введіть дійсний номер ID."
 
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
-msgstr ""
+msgstr "Введіть поштовий індекс у форматі XXXXXX або XXX XXX."
 
 msgid "Enter an Indian state or territory."
 msgstr ""
@@ -4323,7 +4323,7 @@ msgid "Enter a valid zip code."
 msgstr "Введіть правильну поштову адресу."
 
 msgid "Enter a valid Tax code."
-msgstr ""
+msgstr "Введіть правильний податковий номер."
 
 msgid "Enter a valid VAT number."
 msgstr "Введіть правильний номер VAT."
@@ -6479,7 +6479,7 @@ msgid "National Identification Number consists of 11 digits."
 msgstr "Національний ідентифікаційний номер складається з 11 цифр."
 
 msgid "Wrong checksum for the National Identification Number."
-msgstr "Помилкова контрольна сума для Національного ідентифікаційного номера"
+msgstr "Помилкова контрольна сума для Національного ідентифікаційного номера."
 
 msgid "The National Identification Number contains an invalid birth date."
 msgstr ""
@@ -6774,7 +6774,7 @@ msgid "Primorskiy Kray"
 msgstr "Приморський край"
 
 msgid "Stavropol'siyy Kray"
-msgstr " Ставропольський край"
+msgstr "Ставропольський край"
 
 msgid "Khabarovskiy Kray"
 msgstr "Хабаровський край"
@@ -7359,94 +7359,94 @@ msgid "Enter a valid postal code."
 msgstr ""
 
 msgid "Ukrainian region"
-msgstr ""
+msgstr "Область України"
 
 msgid "Ukrainian VAT number"
 msgstr ""
 
 msgid "Ukrainian postal code"
-msgstr ""
+msgstr "Поштовий індекс України"
 
 msgid "Cherkasy Oblast"
-msgstr ""
+msgstr "Черкаська область"
 
 msgid "Chernihiv Oblast"
-msgstr ""
+msgstr "Чернігівська область"
 
 msgid "Chernivtsi Oblast"
-msgstr ""
+msgstr "Чернівецька область"
 
 msgid "Dnipropetrovsk Oblast"
-msgstr ""
+msgstr "Дніпропетровська область"
 
 msgid "Donetsk Oblast"
-msgstr ""
+msgstr "Донецька область"
 
 msgid "Ivano-Frankivsk Oblast"
-msgstr ""
+msgstr "Івано-Франківська область"
 
 msgid "Kharkiv Oblast"
-msgstr ""
+msgstr "Харківська область"
 
 msgid "Kherson Oblast"
-msgstr ""
+msgstr "Херсонська область"
 
 msgid "Khmelnytskyi Oblast"
-msgstr ""
+msgstr "Хмельницька область"
 
 msgid "Kirovohrad Oblast"
-msgstr ""
+msgstr "Кіровоградська область"
 
 msgid "Kiev Oblast"
-msgstr ""
+msgstr "Київська область"
 
 msgid "Luhansk Oblast"
-msgstr ""
+msgstr "Луганська область"
 
 msgid "Lviv Oblast"
-msgstr ""
+msgstr "Львівська область"
 
 msgid "Mykolaiv Oblast"
-msgstr ""
+msgstr "Миколаївська область"
 
 msgid "Odessa Oblast"
-msgstr ""
+msgstr "Одеська область"
 
 msgid "Poltava Oblast"
-msgstr ""
+msgstr "Полтавська область"
 
 msgid "Rivne Oblast"
-msgstr ""
+msgstr "Рівненська область"
 
 msgid "Sumy Oblast"
-msgstr ""
+msgstr "Сумська область"
 
 msgid "Ternopil Oblast"
-msgstr ""
+msgstr "Тернопільська область"
 
 msgid "Vinnytsia Oblast"
-msgstr ""
+msgstr "Вінницька область"
 
 msgid "Volyn Oblast"
-msgstr ""
+msgstr "Волинська область"
 
 msgid "Zakarpattia Oblast"
-msgstr ""
+msgstr "Закарпатська область"
 
 msgid "Zaporizhia Oblast"
-msgstr ""
+msgstr "Запорізька область"
 
 msgid "Zhytomyr Oblast"
-msgstr ""
+msgstr "Житомирська область"
 
 msgid "Autonomous Republic of Crimea"
-msgstr ""
+msgstr "Автономна Республіка Крим"
 
 msgid "Kiev"
-msgstr ""
+msgstr "Київ"
 
 msgid "Sevastopol"
-msgstr ""
+msgstr "Севастополь"
 
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr "Введіть поштовий індекс у форматі XXXXX або XXXXX-XXXX."
@@ -7468,7 +7468,7 @@ msgid "U.S. ZIP code"
 msgstr ""
 
 msgid "Social security number"
-msgstr ""
+msgstr "Номер соціального страхування"
 
 msgid "Alabama"
 msgstr ""
