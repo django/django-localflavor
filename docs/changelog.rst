@@ -14,11 +14,11 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Added Ukrainan region names for uk, ru locale's
 
 Other changes:
 
-- None
+- minor locale improvements for uk, ru languages
 
 
 3.0   (2020-02-19)
