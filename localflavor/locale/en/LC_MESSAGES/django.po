@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 09:13+0100\n"
+"POT-Creation-Date: 2020-03-08 10:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5562,7 +5562,7 @@ msgstr ""
 msgid "Enter a valid 11 digit OIB"
 msgstr ""
 
-#: hr/forms.py:137 id_/forms.py:80
+#: hr/forms.py:137 id_/forms.py:82
 msgid "Enter a valid vehicle license plate number"
 msgstr ""
 
@@ -5746,11 +5746,11 @@ msgstr ""
 msgid "Zala"
 msgstr ""
 
-#: id_/forms.py:26
+#: id_/forms.py:28
 msgid "Enter a valid post code"
 msgstr ""
 
-#: id_/forms.py:163
+#: id_/forms.py:166
 msgid "Enter a valid NIK/KTP number"
 msgstr ""
 
@@ -6283,24 +6283,24 @@ msgstr ""
 msgid "Zanjan"
 msgstr ""
 
-#: is_/forms.py:20
+#: is_/forms.py:21
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
 msgstr ""
 
-#: is_/forms.py:21
+#: is_/forms.py:22
 msgid "The Icelandic identification number is not valid."
 msgstr ""
 
-#: it/forms.py:23 nl/validators.py:13
+#: it/forms.py:24 nl/validators.py:13
 msgid "Enter a valid zip code."
 msgstr ""
 
-#: it/forms.py:67
+#: it/forms.py:69
 msgid "Enter a valid Tax code."
 msgstr ""
 
-#: it/forms.py:98 ua/forms.py:31
+#: it/forms.py:100 ua/forms.py:31
 msgid "Enter a valid VAT number."
 msgstr ""
 
