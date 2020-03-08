@@ -36,7 +36,7 @@ class KWCivilIDNumberField(RegexField):
     """
     Kuwaiti Civil ID numbers are 12 digits, second to seventh digits represents the person's birthdate.
 
-    Checks the following rules to determine the validty of the number:
+    Checks the following rules to determine the validity of the number:
         * The number consist of 12 digits.
         * The birthdate of the person is a valid date.
         * The calculated checksum equals to the last digit of the Civil ID.
