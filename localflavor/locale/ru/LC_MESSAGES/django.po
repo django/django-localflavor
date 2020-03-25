@@ -5,6 +5,7 @@
 # Translators:
 # Mingun <Alexander_Sergey@mail.ru>, 2014
 # Alexandr <alexromantsov@gmail.com>, 2016
+# Alex Dutch <soft@email.ua>, 2020
 # Denis Darii <denis.darii@gmail.com>, 2011
 # Eugene <eugene.mechanism@gmail.com>, 2014
 # Ivan Khomutov <iskhomutov@gmail.com>, 2017
@@ -21,9 +22,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2020-03-08 10:42+0100\n"
+"PO-Revision-Date: 2020-03-25 02:56+0000\n"
+"Last-Translator: Alex Dutch <soft@email.ua>\n"
 "Language-Team: Russian (http://www.transifex.com/django/django-localflavor/"
 "language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -121,9 +122,8 @@ msgstr "Введите правильный CUIT в формате XX-XXXXXXXX-X
 msgid "Invalid CUIT."
 msgstr "Неверный CUIT."
 
-msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
 msgstr ""
-"Неправильный допустимый тип. Тип должен быть 27, 20, 30, 23, 24 или 33."
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
 msgstr "Введите правильный CBU в формате XXXXXXXXXXXXXXXXXXXXXX."
@@ -275,6 +275,21 @@ msgstr "Неверный номер процесса"
 
 msgid "State of Brazil (two uppercase letters)"
 msgstr "Штат Бразилии (две заглавные буквы)"
+
+msgid "CPF Document"
+msgstr ""
+
+msgid "CNPJ Document"
+msgstr ""
+
+msgid "Postal Code"
+msgstr "Почтовый индекс"
+
+msgid "Enter a postal code in the format 00000-000."
+msgstr "Введите почтовый индекс в формате 00000-000."
+
+msgid "Invalid Postal Code"
+msgstr "Некорректный почтовый индекс"
 
 msgid "Alberta"
 msgstr "Альберта"
@@ -957,6 +972,9 @@ msgstr ""
 msgid "Scanning"
 msgstr ""
 
+msgid "Facility"
+msgstr ""
+
 msgid "Høje Taastrup"
 msgstr ""
 
@@ -1275,6 +1293,12 @@ msgstr ""
 msgid "Rude"
 msgstr ""
 
+msgid "Agersø"
+msgstr ""
+
+msgid "Omø"
+msgstr ""
+
 msgid "Fuglebjerg"
 msgstr ""
 
@@ -1300,6 +1324,9 @@ msgid "Stenlille"
 msgstr ""
 
 msgid "Nyrup"
+msgstr ""
+
+msgid "Orø"
 msgstr ""
 
 msgid "Hvalsø"
@@ -1530,10 +1557,16 @@ msgstr ""
 msgid "Bandholm"
 msgstr ""
 
+msgid "Askø og Lilleø"
+msgstr ""
+
 msgid "Torrig L"
 msgstr ""
 
 msgid "Fejø"
+msgstr ""
+
+msgid "Femø"
 msgstr ""
 
 msgid "Nørreballe"
@@ -1662,6 +1695,15 @@ msgstr ""
 msgid "Faaborg"
 msgstr ""
 
+msgid "Lyø"
+msgstr ""
+
+msgid "Avernakø"
+msgstr ""
+
+msgid "Bjørnø"
+msgstr ""
+
 msgid "Glamsbjerg"
 msgstr ""
 
@@ -1737,10 +1779,16 @@ msgstr ""
 msgid "Bagenkop"
 msgstr ""
 
+msgid "Strynø"
+msgstr ""
+
 msgid "Tranekær"
 msgstr ""
 
 msgid "Marstal"
+msgstr ""
+
+msgid "Birkholm"
 msgstr ""
 
 msgid "Ærøskøbing"
@@ -1774,6 +1822,9 @@ msgid "Sjølund"
 msgstr ""
 
 msgid "Hejls"
+msgstr ""
+
+msgid "Barsø"
 msgstr ""
 
 msgid "Rødekro"
@@ -2368,6 +2419,12 @@ msgid "Stenderup"
 msgstr ""
 
 msgid "Hornsyld"
+msgstr ""
+
+msgid "Endelave"
+msgstr ""
+
+msgid "Tunø"
 msgstr ""
 
 msgid "Tjele"
@@ -3132,6 +3189,90 @@ msgstr ""
 msgid "Enter a valid Estonian business registry code."
 msgstr ""
 
+msgid "Dakahlia"
+msgstr ""
+
+msgid "Red Sea"
+msgstr ""
+
+msgid "Beheira"
+msgstr ""
+
+msgid "Faiyum"
+msgstr ""
+
+msgid "Gharbia"
+msgstr ""
+
+msgid "Alexandria"
+msgstr ""
+
+msgid "Ismailia"
+msgstr ""
+
+msgid "Giza"
+msgstr ""
+
+msgid "Monufia"
+msgstr ""
+
+msgid "Minya"
+msgstr ""
+
+msgid "Cairo"
+msgstr ""
+
+msgid "Qalyubia"
+msgstr ""
+
+msgid "Luxor"
+msgstr ""
+
+msgid "New Valley"
+msgstr ""
+
+msgid "Suez"
+msgstr ""
+
+msgid "Al Sharqia"
+msgstr ""
+
+msgid "Aswan"
+msgstr ""
+
+msgid "Asyut"
+msgstr ""
+
+msgid "Beni Suef"
+msgstr ""
+
+msgid "Port Said"
+msgstr ""
+
+msgid "Damietta"
+msgstr ""
+
+msgid "South Sinai"
+msgstr ""
+
+msgid "Kafr el-Sheikh"
+msgstr ""
+
+msgid "Matrouh"
+msgstr ""
+
+msgid "Qena"
+msgstr ""
+
+msgid "North Sinai"
+msgstr ""
+
+msgid "Sohag"
+msgstr ""
+
+msgid "Enter a valid Egyptian National ID number"
+msgstr ""
+
 msgid "Araba"
 msgstr "Араба"
 
@@ -3359,6 +3500,12 @@ msgstr ""
 
 msgid "Invalid checksum for bank account number."
 msgstr "Неверная проверочная сумма для банковского номера."
+
+msgid "Spain postal code (five numbers)"
+msgstr ""
+
+msgid "Identification National Document"
+msgstr ""
 
 msgid "Enter a valid Finnish social security number."
 msgstr "Введите правильный номер социального страхования Финляндии."
@@ -3838,7 +3985,7 @@ msgid "An International Bank Account Number"
 msgstr ""
 
 msgid "Business Identifier Code"
-msgstr ""
+msgstr "SWIFT код"
 
 #, python-format
 msgid "%s is not a valid character for IBAN."
@@ -3846,7 +3993,7 @@ msgstr "%s  не допустимый символ для IBAN."
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
-msgstr ""
+msgstr "%(country_code)s IBAN должен состоять из %(number)s знака(ов)."
 
 #, python-format
 msgid "%s is not a valid country code for IBAN."
@@ -3862,6 +4009,9 @@ msgstr "Не верный IBAN."
 msgid "BIC codes have either 8 or 11 characters."
 msgstr "BIC коды имеют 8 или 11 символов."
 
+msgid "BIC codes only contain alphabet letters and digits."
+msgstr ""
+
 #, python-format
 msgid "%s is not a valid institution code."
 msgstr "%s  не допустимый код учреждения."
@@ -3873,11 +4023,22 @@ msgstr "%s не действительный код страны"
 msgid "Not a valid EAN code."
 msgstr "Не действительный код EAN."
 
+#, python-format
+msgid "%(country_code)s is not a valid country code."
+msgstr "%(country_code)s недействительный код страны."
+
+#, python-format
+msgid "%(vatin)s is not a valid VAT identification number."
+msgstr ""
+
 msgid "Enter a valid 5-digit greek postal code."
 msgstr "Введите 5 цифр греческого почтового индекса."
 
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr "Введите корректный греческий налоговый номер (9 цифр)."
+
+msgid "Enter a valid greek social security number (AMKA - 11 digits)."
+msgstr ""
 
 msgid "Enter a valid 13 digit JMBG"
 msgstr "Введите корретный 13-значный JMBG"
@@ -4077,6 +4238,9 @@ msgstr "Центральный Калимантан"
 msgid "Kalimantan Timur"
 msgstr "Восточный Калимантан"
 
+msgid "Kalimantan Utara"
+msgstr ""
+
 msgid "Kepulauan Bangka-Belitung"
 msgstr "Острова Бангка-Белитунг"
 
@@ -4230,6 +4394,9 @@ msgstr "Сидоарджо"
 msgid "Garut"
 msgstr "Гарут"
 
+msgid "Enter a valid Eircode."
+msgstr ""
+
 msgid "Carlow"
 msgstr "Карлоу"
 
@@ -4327,6 +4494,102 @@ msgstr ""
 
 msgid "Indian state (two uppercase letters)"
 msgstr "Штат Индии (две заглавные буквы)"
+
+msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
+msgstr "Введите почтовый индекс в формате XXXXXXXXXX - только цифры"
+
+msgid "Alborz"
+msgstr ""
+
+msgid "Ardabil"
+msgstr ""
+
+msgid "Azerbaijan East"
+msgstr ""
+
+msgid "Azerbaijan Wast"
+msgstr ""
+
+msgid "Bushehr"
+msgstr ""
+
+msgid "Chahar Mahaal and Bakhtiari"
+msgstr ""
+
+msgid "Fars"
+msgstr ""
+
+msgid "Gilan"
+msgstr ""
+
+msgid "Golestan"
+msgstr ""
+
+msgid "Hamadan"
+msgstr ""
+
+msgid "Hormozgan"
+msgstr ""
+
+msgid "Ilam"
+msgstr ""
+
+msgid "Isfahan"
+msgstr ""
+
+msgid "Kerman"
+msgstr ""
+
+msgid "Kermanshah"
+msgstr ""
+
+msgid "Khorasan North"
+msgstr ""
+
+msgid "Khorasan Razavi"
+msgstr ""
+
+msgid "Khorasan South"
+msgstr ""
+
+msgid "Khuzestan"
+msgstr ""
+
+msgid "Kohgiluyeh and Boyer-Ahmad"
+msgstr ""
+
+msgid "Kurdistan"
+msgstr ""
+
+msgid "Lorestan"
+msgstr ""
+
+msgid "Markazi"
+msgstr ""
+
+msgid "Mazandaran"
+msgstr ""
+
+msgid "Qazvin"
+msgstr ""
+
+msgid "Qom"
+msgstr ""
+
+msgid "Semnan"
+msgstr ""
+
+msgid "Sistan and Baluchestan"
+msgstr ""
+
+msgid "Tehran"
+msgstr ""
+
+msgid "Yazd"
+msgstr ""
+
+msgid "Zanjan"
+msgstr ""
 
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
@@ -5459,7 +5722,7 @@ msgid "Enter a postal code in the format XXXXX."
 msgstr "Введите почтовый индекс в формате XXXXX."
 
 msgid "Postal code"
-msgstr ""
+msgstr "Почтовый индекс"
 
 msgid "Select Province"
 msgstr ""
@@ -5723,6 +5986,210 @@ msgid "Laâyoune-Sakia El Hamra"
 msgstr ""
 
 msgid "Dakhla-Oued Ed Dahab"
+msgstr ""
+
+msgid "Întreprindere Individuală"
+msgstr ""
+
+msgid "Societate pe acţiuni"
+msgstr ""
+
+msgid "Societate în nume colectiv"
+msgstr ""
+
+msgid "Societatea în comandită"
+msgstr ""
+
+msgid "Cooperativa de producţie"
+msgstr ""
+
+msgid "Cooperativa de întreprinzători"
+msgstr ""
+
+msgid "Societate cu răspundere limitată"
+msgstr ""
+
+msgid "Gospodăria ţărănească"
+msgstr ""
+
+msgid "Diplomatic Corps"
+msgstr ""
+
+msgid "Service Staff"
+msgstr ""
+
+msgid "Consular Staff"
+msgstr ""
+
+msgid "Administrative body"
+msgstr ""
+
+msgid "Ministry of Internal Affairs"
+msgstr ""
+
+msgid "Carabinieri Subdivision"
+msgstr ""
+
+msgid "Military Forces"
+msgstr ""
+
+msgid "Border Control"
+msgstr ""
+
+msgid "Parliament"
+msgstr ""
+
+msgid "Government"
+msgstr ""
+
+msgid "Chancellery"
+msgstr ""
+
+msgid "Anenii Noi"
+msgstr ""
+
+msgid "Tighina"
+msgstr ""
+
+msgid "Bălți"
+msgstr ""
+
+msgid "Briceni"
+msgstr ""
+
+msgid "Basarabeasca"
+msgstr ""
+
+msgid "Chișinău"
+msgstr ""
+
+msgid "Camenca"
+msgstr ""
+
+msgid "Ceadîr-Lunga"
+msgstr ""
+
+msgid "Cahul"
+msgstr ""
+
+msgid "Călărași"
+msgstr ""
+
+msgid "Cimișlia"
+msgstr ""
+
+msgid "Căinari"
+msgstr ""
+
+msgid "Comrat"
+msgstr ""
+
+msgid "Criuleni"
+msgstr ""
+
+msgid "Căușeni"
+msgstr ""
+
+msgid "Cantemir"
+msgstr ""
+
+msgid "Dubăsari"
+msgstr ""
+
+msgid "Dondușeni"
+msgstr ""
+
+msgid "Drochia"
+msgstr ""
+
+msgid "Edineț"
+msgstr ""
+
+msgid "Fălești"
+msgstr ""
+
+msgid "Florești"
+msgstr ""
+
+msgid "Gagauzia"
+msgstr ""
+
+msgid "Glodeni"
+msgstr ""
+
+msgid "Grigoriopol"
+msgstr ""
+
+msgid "Hîncești"
+msgstr ""
+
+msgid "Ialoveni"
+msgstr ""
+
+msgid "Leova"
+msgstr ""
+
+msgid "Nisporeni"
+msgstr ""
+
+msgid "Ocnița"
+msgstr ""
+
+msgid "Orhei"
+msgstr ""
+
+msgid "Rîbnița"
+msgstr ""
+
+msgid "Rîșcani"
+msgstr ""
+
+msgid "Rezina"
+msgstr ""
+
+msgid "Șoldănești"
+msgstr ""
+
+msgid "Sîngerei"
+msgstr ""
+
+msgid "Slobozia"
+msgstr ""
+
+msgid "Soroca"
+msgstr ""
+
+msgid "Strășeni"
+msgstr ""
+
+msgid "Ștefan Vodă"
+msgstr ""
+
+msgid "Taraclia"
+msgstr ""
+
+msgid "Telenești"
+msgstr ""
+
+msgid "Ungheni"
+msgstr ""
+
+msgid "Vulcănești"
+msgstr ""
+
+msgid "Moldavian identity number"
+msgstr ""
+
+msgid "Moldavian license plate number"
+msgstr ""
+
+msgid "Moldavian company types"
+msgstr ""
+
+msgid "Enter a valid IDNO number."
+msgstr ""
+
+msgid "Enter a valid license plate."
 msgstr ""
 
 msgid ""
@@ -6146,6 +6613,9 @@ msgstr "Юкатан"
 msgid "Zacatecas"
 msgstr "Сакатекас"
 
+msgid "Invalid MyKad number."
+msgstr ""
+
 msgid "Dutch zipcode"
 msgstr ""
 
@@ -6153,6 +6623,9 @@ msgid "Dutch province"
 msgstr ""
 
 msgid "Dutch social security number (BSN)"
+msgstr ""
+
+msgid "Dutch license plate"
 msgstr ""
 
 msgid "Drenthe"
@@ -6189,6 +6662,9 @@ msgid "Zuid-Holland"
 msgstr "Южная Голландия"
 
 msgid "Enter a valid BSN."
+msgstr ""
+
+msgid "Enter a valid license plate"
 msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
@@ -7391,85 +7867,85 @@ msgid "Enter a valid postal code."
 msgstr "Введите правильный почтовый индекс."
 
 msgid "Ukrainian region"
-msgstr "Украинский регион"
+msgstr "Область Украины"
 
 msgid "Ukrainian VAT number"
-msgstr ""
+msgstr "Украинский номер НДС"
 
 msgid "Ukrainian postal code"
-msgstr "Украинский почтовый индекс"
+msgstr "Почтовый индекс Украины"
 
 msgid "Cherkasy Oblast"
 msgstr "Черкасская область"
 
 msgid "Chernihiv Oblast"
-msgstr ""
+msgstr "Черниговская область"
 
 msgid "Chernivtsi Oblast"
-msgstr ""
+msgstr "Черновицкая область"
 
 msgid "Dnipropetrovsk Oblast"
-msgstr ""
+msgstr "Днепропетровская область"
 
 msgid "Donetsk Oblast"
-msgstr ""
+msgstr "Донецкая область"
 
 msgid "Ivano-Frankivsk Oblast"
-msgstr ""
+msgstr "Ивано-Франковская область"
 
 msgid "Kharkiv Oblast"
-msgstr ""
+msgstr "Харьковская область"
 
 msgid "Kherson Oblast"
-msgstr ""
+msgstr "Херсонская область"
 
 msgid "Khmelnytskyi Oblast"
-msgstr ""
+msgstr "Хмельницкая область"
 
 msgid "Kirovohrad Oblast"
-msgstr ""
+msgstr "Кировоградская область"
 
 msgid "Kiev Oblast"
-msgstr ""
+msgstr "Киевская область"
 
 msgid "Luhansk Oblast"
-msgstr ""
+msgstr "Луганская область"
 
 msgid "Lviv Oblast"
-msgstr ""
+msgstr "Львовская область"
 
 msgid "Mykolaiv Oblast"
-msgstr ""
+msgstr "Николаевская область"
 
 msgid "Odessa Oblast"
-msgstr ""
+msgstr "Одесская область"
 
 msgid "Poltava Oblast"
-msgstr ""
+msgstr "Полтавская область"
 
 msgid "Rivne Oblast"
-msgstr ""
+msgstr "Ровненская область"
 
 msgid "Sumy Oblast"
-msgstr ""
+msgstr "Сумская область"
 
 msgid "Ternopil Oblast"
-msgstr ""
+msgstr "Тернопольская область"
 
 msgid "Vinnytsia Oblast"
-msgstr ""
+msgstr "Винницкая область"
 
 msgid "Volyn Oblast"
-msgstr ""
+msgstr "Волынская область"
 
 msgid "Zakarpattia Oblast"
-msgstr ""
+msgstr "Закарпатская область"
 
 msgid "Zaporizhia Oblast"
-msgstr ""
+msgstr "Запорожская область"
 
 msgid "Zhytomyr Oblast"
-msgstr ""
+msgstr "Житомирская область"
 
 msgid "Autonomous Republic of Crimea"
 msgstr "Автономная республика Крым"
