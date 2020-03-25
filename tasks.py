@@ -58,7 +58,7 @@ def make_translations(c, locale='en'):
         if locale == 'all':
             c.run('django-admin.py makemessages -a')
         else:
-            c.run(f'django-admin.py makemessages -l {locale}')
+            c.run('django-admin.py makemessages -l {locale}'.format(locale=locale))
 
 
 @task
