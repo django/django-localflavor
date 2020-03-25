@@ -52,13 +52,13 @@ def pull_translations(c, locale=None):
         c.run('msgcat --no-location -o {0} {0}'.format(po_file))
 
 
-@task(post=[compile_translations])
-def make_translations(c, locale=None):
-    if locale:
-        c.run('cd localflavor; '
-              'django-admin.py makemessages -l {0}; '.format(locale))
-    else:
-        c.run('cd localflavor; django-admin.py makemessages -a')
+@task
+def make_translations(c, locale='en'):
+    with c.cd('localflavor'):
+        if locale == 'all':
+            c.run('django-admin.py makemessages -a')
+        else:
+            c.run(f'django-admin.py makemessages -l {locale}')
 
 
 @task
