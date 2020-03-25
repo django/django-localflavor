@@ -4,7 +4,7 @@
 #
 # Translators:
 # Ahmet Emre Aladağ <emre.aladag@isik.edu.tr>, 2013
-# BouRock, 2015
+# BouRock, 2015,2020
 # BouRock, 2014
 # Cihan Okyay <cihan.okyay@linux.org.tr>, 2014
 # Gokhan Kaya <gokhankaya722@gmail.com>, 2017
@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2020-03-08 10:42+0100\n"
+"PO-Revision-Date: 2020-03-07 21:00+0000\n"
+"Last-Translator: BouRock\n"
 "Language-Team: Turkish (http://www.transifex.com/django/django-localflavor/"
 "language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -116,9 +116,9 @@ msgstr "XX-XXXXXXXX-X ya da XXXXXXXXXXXX biçiminde geçerli bir CUIT girin."
 msgid "Invalid CUIT."
 msgstr "Geçersiz CUIT."
 
-msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
 msgstr ""
-"Geçersiz legal türü. Yazı 27, 20, 30, 23, 24 ya da 33 olmak zorundadır."
+"Geçersiz legal türü. Yazı 27, 20, 30, 23, 24, 33 ya da 34 olmak zorundadır."
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
 msgstr "XXXXXXXXXXXXXXXXXXXXXX formatında geçerli bir CBU girin."
@@ -176,7 +176,7 @@ msgid "Australian Business Number"
 msgstr "Avustralya İş Numarası"
 
 msgid "Australian Company Number"
-msgstr ""
+msgstr "Avustralya Şirket Numarası"
 
 msgid "Australian Tax File Number"
 msgstr "Avusturalya Vergi Dosya Numarası"
@@ -185,7 +185,7 @@ msgid "Enter a valid ABN."
 msgstr "Geçerli bir ABN girin."
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "Geçerli bir ACN girin."
 
 msgid "Enter a valid TFN."
 msgstr "Geçerli bir TFN girin."
@@ -268,6 +268,21 @@ msgstr "Geçersiz İşlem numarası."
 
 msgid "State of Brazil (two uppercase letters)"
 msgstr "Brezilya Devleti (iki büyük harf)"
+
+msgid "CPF Document"
+msgstr "CPF Belgesi"
+
+msgid "CNPJ Document"
+msgstr "CNPJ Belgesi"
+
+msgid "Postal Code"
+msgstr "Posta Kodu"
+
+msgid "Enter a postal code in the format 00000-000."
+msgstr "00000-000 biçiminde bir posta kodu girin."
+
+msgid "Invalid Postal Code"
+msgstr "Geçersiz Posta Kodu"
 
 msgid "Alberta"
 msgstr "Alberta"
@@ -433,10 +448,10 @@ msgid "Invalid ID Card Number: Wrong location code"
 msgstr "Geçersiz Kimlik Kartı Numarası: Yanlış konum kodu"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
-msgstr ""
+msgstr "XXXXXXXXXXX-Y ya da XXXXXXXXXXXY biçiminde geçerli bir NIT girin."
 
 msgid "Invalid NIT."
-msgstr ""
+msgstr "Geçersiz NIT."
 
 msgid "Occidental"
 msgstr ""
@@ -451,7 +466,7 @@ msgid "Pinar del Río"
 msgstr ""
 
 msgid "Artemisa"
-msgstr ""
+msgstr "Artemis"
 
 msgid "Mayabeque"
 msgstr ""
@@ -490,39 +505,40 @@ msgid "Santiago de Cuba"
 msgstr ""
 
 msgid "Guantánamo"
-msgstr ""
+msgstr "Guantanamo"
 
 msgid "Isla de la Juventud"
 msgstr ""
 
 msgid "Enter a Cuban region."
-msgstr ""
+msgstr "Küba bölgesi girin."
 
 msgid "Enter a Cuban province."
-msgstr ""
+msgstr "Küba eyaleti girin."
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr ""
+msgstr "XXXXX biçiminde geçerli bir posta kodu girin."
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
-msgstr ""
+msgstr "XXXXXXXXXXX biçiminde geçerli bir kimlik kartı numarası girin."
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr ""
+msgstr "Küba bölgeleri (üç büyük harf)"
 
 msgid "Cuban provinces (three uppercase letters)"
-msgstr ""
+msgstr "Küba eyaletleri (üç büyük harf)"
 
 msgid "Cuban postal code"
-msgstr ""
+msgstr "Küba posta kodu"
 
 msgid "Cuban identity card number"
-msgstr ""
+msgstr "Küba kimlik kartı numarası"
 
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
 msgstr ""
+"Kimlik Kartı Numarasının ilk 6 hanesi için geçerli bir tarih (yyaagg) girin."
 
 msgid "Prague"
 msgstr "Prag"
@@ -949,6 +965,9 @@ msgstr ""
 msgid "Scanning"
 msgstr "Taranıyor"
 
+msgid "Facility"
+msgstr "Tesis"
+
 msgid "Høje Taastrup"
 msgstr ""
 
@@ -1267,6 +1286,12 @@ msgstr ""
 msgid "Rude"
 msgstr ""
 
+msgid "Agersø"
+msgstr ""
+
+msgid "Omø"
+msgstr ""
+
 msgid "Fuglebjerg"
 msgstr ""
 
@@ -1292,6 +1317,9 @@ msgid "Stenlille"
 msgstr ""
 
 msgid "Nyrup"
+msgstr ""
+
+msgid "Orø"
 msgstr ""
 
 msgid "Hvalsø"
@@ -1522,10 +1550,16 @@ msgstr ""
 msgid "Bandholm"
 msgstr ""
 
+msgid "Askø og Lilleø"
+msgstr ""
+
 msgid "Torrig L"
 msgstr ""
 
 msgid "Fejø"
+msgstr ""
+
+msgid "Femø"
 msgstr ""
 
 msgid "Nørreballe"
@@ -1654,6 +1688,15 @@ msgstr ""
 msgid "Faaborg"
 msgstr ""
 
+msgid "Lyø"
+msgstr ""
+
+msgid "Avernakø"
+msgstr ""
+
+msgid "Bjørnø"
+msgstr ""
+
 msgid "Glamsbjerg"
 msgstr ""
 
@@ -1729,10 +1772,16 @@ msgstr ""
 msgid "Bagenkop"
 msgstr ""
 
+msgid "Strynø"
+msgstr ""
+
 msgid "Tranekær"
 msgstr ""
 
 msgid "Marstal"
+msgstr ""
+
+msgid "Birkholm"
 msgstr ""
 
 msgid "Ærøskøbing"
@@ -1766,6 +1815,9 @@ msgid "Sjølund"
 msgstr ""
 
 msgid "Hejls"
+msgstr ""
+
+msgid "Barsø"
 msgstr ""
 
 msgid "Rødekro"
@@ -2360,6 +2412,12 @@ msgid "Stenderup"
 msgstr ""
 
 msgid "Hornsyld"
+msgstr ""
+
+msgid "Endelave"
+msgstr ""
+
+msgid "Tunø"
 msgstr ""
 
 msgid "Tjele"
@@ -3124,6 +3182,90 @@ msgstr "8 rakamlı Estonya işletme kayıt kodu girin."
 msgid "Enter a valid Estonian business registry code."
 msgstr "Geçerli bir Estonya işletme kayıt kodu girin."
 
+msgid "Dakahlia"
+msgstr ""
+
+msgid "Red Sea"
+msgstr ""
+
+msgid "Beheira"
+msgstr ""
+
+msgid "Faiyum"
+msgstr ""
+
+msgid "Gharbia"
+msgstr ""
+
+msgid "Alexandria"
+msgstr ""
+
+msgid "Ismailia"
+msgstr ""
+
+msgid "Giza"
+msgstr ""
+
+msgid "Monufia"
+msgstr ""
+
+msgid "Minya"
+msgstr ""
+
+msgid "Cairo"
+msgstr ""
+
+msgid "Qalyubia"
+msgstr ""
+
+msgid "Luxor"
+msgstr ""
+
+msgid "New Valley"
+msgstr ""
+
+msgid "Suez"
+msgstr ""
+
+msgid "Al Sharqia"
+msgstr ""
+
+msgid "Aswan"
+msgstr ""
+
+msgid "Asyut"
+msgstr ""
+
+msgid "Beni Suef"
+msgstr ""
+
+msgid "Port Said"
+msgstr ""
+
+msgid "Damietta"
+msgstr ""
+
+msgid "South Sinai"
+msgstr ""
+
+msgid "Kafr el-Sheikh"
+msgstr ""
+
+msgid "Matrouh"
+msgstr ""
+
+msgid "Qena"
+msgstr ""
+
+msgid "North Sinai"
+msgstr ""
+
+msgid "Sohag"
+msgstr ""
+
+msgid "Enter a valid Egyptian National ID number"
+msgstr "Geçerli bir Mısır Ulusal Kimlik numarası girin"
+
 msgid "Araba"
 msgstr "Araba"
 
@@ -3351,6 +3493,12 @@ msgstr ""
 
 msgid "Invalid checksum for bank account number."
 msgstr "Banka hesap numarası için geçersiz sağlama."
+
+msgid "Spain postal code (five numbers)"
+msgstr "İspanya posta kodu (beş numara)"
+
+msgid "Identification National Document"
+msgstr "Kimlik Ulusal Belgesi"
 
 msgid "Enter a valid Finnish social security number."
 msgstr "Geçerli bir Finlandiya sosyal güvenlik numarası girin."
@@ -3854,6 +4002,9 @@ msgstr "Geçerli bir IBAN değil."
 msgid "BIC codes have either 8 or 11 characters."
 msgstr "BIC kodları ya 8 ya da 11 karakter olur."
 
+msgid "BIC codes only contain alphabet letters and digits."
+msgstr "BIC kodları sadece alfabe harfleri ve rakamlar içerir."
+
 #, python-format
 msgid "%s is not a valid institution code."
 msgstr "%s geçerli bir kurum kodu değil."
@@ -3865,11 +4016,22 @@ msgstr "%s geçerli bir ülke kodu değil."
 msgid "Not a valid EAN code."
 msgstr "Geçerli bir EAN kodu değil."
 
+#, python-format
+msgid "%(country_code)s is not a valid country code."
+msgstr "%(country_code)s geçerli bir ülke kodu değil."
+
+#, python-format
+msgid "%(vatin)s is not a valid VAT identification number."
+msgstr "%(vatin)s geçerli bir VAT kimlik numarası değil."
+
 msgid "Enter a valid 5-digit greek postal code."
 msgstr "Geçerli bir 5 rakamlı yunanistan posta kodu girin."
 
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr "Geçerli bir yunanistan vergi numarası (9 rakam) girin."
+
+msgid "Enter a valid greek social security number (AMKA - 11 digits)."
+msgstr "Geçerli bir yunan sosyal güvenlik numarası (AMKA - 11 haneli) girin."
 
 msgid "Enter a valid 13 digit JMBG"
 msgstr "Geçerli bir 13 rakamlı JMBG girin"
@@ -4069,6 +4231,9 @@ msgstr "Orta Kalimantan"
 msgid "Kalimantan Timur"
 msgstr "Doğu Kalimantan"
 
+msgid "Kalimantan Utara"
+msgstr ""
+
 msgid "Kepulauan Bangka-Belitung"
 msgstr "Bangka-Belitung Adaları"
 
@@ -4222,6 +4387,9 @@ msgstr "Sidoarjo"
 msgid "Garut"
 msgstr "Garut"
 
+msgid "Enter a valid Eircode."
+msgstr "Geçerli bir Eircode girin."
+
 msgid "Carlow"
 msgstr "Carlow"
 
@@ -4320,6 +4488,102 @@ msgstr ""
 
 msgid "Indian state (two uppercase letters)"
 msgstr "Hindistan eyaleti (iki büyük harf)"
+
+msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
+msgstr "XXXXXXXXXX biçiminde bir posta kodu girin - sadece rakamlar"
+
+msgid "Alborz"
+msgstr ""
+
+msgid "Ardabil"
+msgstr ""
+
+msgid "Azerbaijan East"
+msgstr ""
+
+msgid "Azerbaijan Wast"
+msgstr ""
+
+msgid "Bushehr"
+msgstr ""
+
+msgid "Chahar Mahaal and Bakhtiari"
+msgstr ""
+
+msgid "Fars"
+msgstr ""
+
+msgid "Gilan"
+msgstr ""
+
+msgid "Golestan"
+msgstr ""
+
+msgid "Hamadan"
+msgstr ""
+
+msgid "Hormozgan"
+msgstr ""
+
+msgid "Ilam"
+msgstr ""
+
+msgid "Isfahan"
+msgstr ""
+
+msgid "Kerman"
+msgstr ""
+
+msgid "Kermanshah"
+msgstr ""
+
+msgid "Khorasan North"
+msgstr ""
+
+msgid "Khorasan Razavi"
+msgstr ""
+
+msgid "Khorasan South"
+msgstr ""
+
+msgid "Khuzestan"
+msgstr ""
+
+msgid "Kohgiluyeh and Boyer-Ahmad"
+msgstr ""
+
+msgid "Kurdistan"
+msgstr ""
+
+msgid "Lorestan"
+msgstr ""
+
+msgid "Markazi"
+msgstr ""
+
+msgid "Mazandaran"
+msgstr ""
+
+msgid "Qazvin"
+msgstr ""
+
+msgid "Qom"
+msgstr ""
+
+msgid "Semnan"
+msgstr ""
+
+msgid "Sistan and Baluchestan"
+msgstr ""
+
+msgid "Tehran"
+msgstr ""
+
+msgid "Yazd"
+msgstr ""
+
+msgid "Zanjan"
+msgstr ""
 
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
@@ -5451,7 +5715,7 @@ msgid "Enter a postal code in the format XXXXX."
 msgstr "XXXXX biçiminde bir posta kodu girin."
 
 msgid "Postal code"
-msgstr ""
+msgstr "Posta kodu"
 
 msgid "Select Province"
 msgstr ""
@@ -5716,6 +5980,210 @@ msgstr ""
 
 msgid "Dakhla-Oued Ed Dahab"
 msgstr ""
+
+msgid "Întreprindere Individuală"
+msgstr ""
+
+msgid "Societate pe acţiuni"
+msgstr ""
+
+msgid "Societate în nume colectiv"
+msgstr ""
+
+msgid "Societatea în comandită"
+msgstr ""
+
+msgid "Cooperativa de producţie"
+msgstr ""
+
+msgid "Cooperativa de întreprinzători"
+msgstr ""
+
+msgid "Societate cu răspundere limitată"
+msgstr ""
+
+msgid "Gospodăria ţărănească"
+msgstr ""
+
+msgid "Diplomatic Corps"
+msgstr ""
+
+msgid "Service Staff"
+msgstr ""
+
+msgid "Consular Staff"
+msgstr ""
+
+msgid "Administrative body"
+msgstr ""
+
+msgid "Ministry of Internal Affairs"
+msgstr ""
+
+msgid "Carabinieri Subdivision"
+msgstr ""
+
+msgid "Military Forces"
+msgstr ""
+
+msgid "Border Control"
+msgstr ""
+
+msgid "Parliament"
+msgstr ""
+
+msgid "Government"
+msgstr ""
+
+msgid "Chancellery"
+msgstr ""
+
+msgid "Anenii Noi"
+msgstr ""
+
+msgid "Tighina"
+msgstr ""
+
+msgid "Bălți"
+msgstr ""
+
+msgid "Briceni"
+msgstr ""
+
+msgid "Basarabeasca"
+msgstr ""
+
+msgid "Chișinău"
+msgstr ""
+
+msgid "Camenca"
+msgstr ""
+
+msgid "Ceadîr-Lunga"
+msgstr ""
+
+msgid "Cahul"
+msgstr ""
+
+msgid "Călărași"
+msgstr ""
+
+msgid "Cimișlia"
+msgstr ""
+
+msgid "Căinari"
+msgstr ""
+
+msgid "Comrat"
+msgstr ""
+
+msgid "Criuleni"
+msgstr ""
+
+msgid "Căușeni"
+msgstr ""
+
+msgid "Cantemir"
+msgstr ""
+
+msgid "Dubăsari"
+msgstr ""
+
+msgid "Dondușeni"
+msgstr ""
+
+msgid "Drochia"
+msgstr ""
+
+msgid "Edineț"
+msgstr ""
+
+msgid "Fălești"
+msgstr ""
+
+msgid "Florești"
+msgstr ""
+
+msgid "Gagauzia"
+msgstr ""
+
+msgid "Glodeni"
+msgstr ""
+
+msgid "Grigoriopol"
+msgstr ""
+
+msgid "Hîncești"
+msgstr ""
+
+msgid "Ialoveni"
+msgstr ""
+
+msgid "Leova"
+msgstr ""
+
+msgid "Nisporeni"
+msgstr ""
+
+msgid "Ocnița"
+msgstr ""
+
+msgid "Orhei"
+msgstr ""
+
+msgid "Rîbnița"
+msgstr ""
+
+msgid "Rîșcani"
+msgstr ""
+
+msgid "Rezina"
+msgstr ""
+
+msgid "Șoldănești"
+msgstr ""
+
+msgid "Sîngerei"
+msgstr ""
+
+msgid "Slobozia"
+msgstr ""
+
+msgid "Soroca"
+msgstr ""
+
+msgid "Strășeni"
+msgstr ""
+
+msgid "Ștefan Vodă"
+msgstr ""
+
+msgid "Taraclia"
+msgstr ""
+
+msgid "Telenești"
+msgstr ""
+
+msgid "Ungheni"
+msgstr ""
+
+msgid "Vulcănești"
+msgstr ""
+
+msgid "Moldavian identity number"
+msgstr "Moldavya kimlik numarası"
+
+msgid "Moldavian license plate number"
+msgstr "Moldavya plaka numarası"
+
+msgid "Moldavian company types"
+msgstr "Moldavya şirket türleri"
+
+msgid "Enter a valid IDNO number."
+msgstr "Geçerli bir IDNO numarası girin."
+
+msgid "Enter a valid license plate."
+msgstr "Geçerli bir plaka girin."
 
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
@@ -6007,10 +6475,10 @@ msgid "Invalid checksum for RFC."
 msgstr "RFC için geçersiz sağlama."
 
 msgid "Enter a valid CLABE."
-msgstr ""
+msgstr "Geçerli bir CLABE girin."
 
 msgid "Invalid checksum for CLABE."
-msgstr ""
+msgstr "CLABE için geçersiz sağlama."
 
 msgid "Enter a valid CURP."
 msgstr "Geçerli bir CURP girin."
@@ -6034,7 +6502,7 @@ msgid "Mexican RFC"
 msgstr "Meksika RFC"
 
 msgid "Mexican CLABE"
-msgstr ""
+msgstr "Meksika CLABE"
 
 msgid "Mexican CURP"
 msgstr "Meksika CURP"
@@ -6138,14 +6606,20 @@ msgstr "Yucatan"
 msgid "Zacatecas"
 msgstr "Zacatecas"
 
+msgid "Invalid MyKad number."
+msgstr "Geçersiz MyKad numarası."
+
 msgid "Dutch zipcode"
-msgstr ""
+msgstr "Hollanda posta kodu"
 
 msgid "Dutch province"
-msgstr ""
+msgstr "Hollanda eyaleti"
 
 msgid "Dutch social security number (BSN)"
-msgstr ""
+msgstr "Hollanda sosyal güvenlik numarası (BSN)"
+
+msgid "Dutch license plate"
+msgstr "Hollanda plakası"
 
 msgid "Drenthe"
 msgstr "Drenthe"
@@ -6181,19 +6655,24 @@ msgid "Zuid-Holland"
 msgstr "Güney Hollanda"
 
 msgid "Enter a valid BSN."
-msgstr ""
+msgstr "Geçerli bir BSN girin."
+
+msgid "Enter a valid license plate"
+msgstr "Geçerli bir plaka girin"
 
 msgid "Enter a valid Norwegian social security number."
 msgstr "Geçerli bir Norveç Sosyal Güvenlik numarası girin."
 
 msgid "Enter a valid Norwegian bank account number."
-msgstr ""
+msgstr "Geçerli bir Norveç banka hesap numarası girin."
 
 msgid "Invalid control digit. Enter a valid Norwegian bank account number."
 msgstr ""
+"Geçersiz denetim rakamı. Geçerli bir Norveç banka hesap numarası girin."
 
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr ""
+"Geçersiz uzunluk. Norveç banka hesap numaraları 11 rakam uzunluğundadır."
 
 msgid "Invalid post code."
 msgstr "Geçersiz posta kodu."
@@ -7375,16 +7854,16 @@ msgid "Turkish Identification number must be 11 digits."
 msgstr "TC kimlik numarası 11 rakam olmak zorundadır."
 
 msgid "Enter a valid postal code."
-msgstr ""
+msgstr "Geçerli bir posta kodu girin."
 
 msgid "Ukrainian region"
-msgstr ""
+msgstr "Ukrayna bölgesi"
 
 msgid "Ukrainian VAT number"
-msgstr ""
+msgstr "Ukrayna VAT numarası"
 
 msgid "Ukrainian postal code"
-msgstr ""
+msgstr "Ukrayna posta kodu"
 
 msgid "Cherkasy Oblast"
 msgstr ""
@@ -7459,10 +7938,10 @@ msgid "Zhytomyr Oblast"
 msgstr ""
 
 msgid "Autonomous Republic of Crimea"
-msgstr ""
+msgstr "Kırım Özerk Cumhuriyeti"
 
 msgid "Kiev"
-msgstr ""
+msgstr "Kiev"
 
 msgid "Sevastopol"
 msgstr ""
