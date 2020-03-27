@@ -1,6 +1,16 @@
 Changelog
 =========
 
+3.0.1   (2020-03-27)
+--------------------
+
+See notes about breaking changes in the 3.0 changelog entry.
+
+Changes:
+
+    Updated translations. The latest version was not included in the 3.0 release.
+
+
 3.0   (2020-02-19)
 ------------------
 
