@@ -143,10 +143,6 @@ class FRNationalIdentificationNumber(CharField):
             raise ValidationError(self.error_messages['invalid'])
 
     def _clean_department_and_commune(self, commune_of_origin, current_year, department_of_origin, year_of_birth):
-        # Department number 98 is for Monaco
-        if department_of_origin == '98':
-            raise ValidationError(self.error_messages['invalid'])
-
         # Departments number 20, 2A and 2B represent Corsica
         if department_of_origin in ['20', '2A', '2B']:
             # For people born before 1976, Corsica number was 20
@@ -156,14 +152,23 @@ class FRNationalIdentificationNumber(CharField):
             if (int(year_of_birth) > 75 and department_of_origin not in ['2A', '2B']):
                 raise ValidationError(self.error_messages['invalid'])
 
-        # Overseas department numbers starts with 97 and are 3 digits long
+        # Overseas department numbers starts with 97 or 98 and are 3 digits long
         if department_of_origin == '97':
             department_of_origin += commune_of_origin[:1]
-            if int(department_of_origin) not in range(971, 976):
+            if int(department_of_origin) not in range(971, 978):
                 raise ValidationError(self.error_messages['invalid'])
             commune_of_origin = commune_of_origin[1:]
             if int(commune_of_origin) < 1 or int(commune_of_origin) > 90:
                 raise ValidationError(self.error_messages['invalid'])
+        if department_of_origin == '98':
+            department_of_origin += commune_of_origin[:1]
+            if int(department_of_origin) not in range(984, 989):
+                raise ValidationError(self.error_messages['invalid'])
+            commune_of_origin = commune_of_origin[1:]
+            if int(commune_of_origin) < 1 or int(commune_of_origin) > 90:
+                raise ValidationError(self.error_messages['invalid'])
+        # Last case is for '99' as department_of_origin, eg. people born in a foreign country
+        # In this case, commune_of_origin is the INSEE country code, must be [001-990]
         elif int(commune_of_origin) < 1 or int(commune_of_origin) > 990:
             raise ValidationError(self.error_messages['invalid'])
         return commune_of_origin, department_of_origin

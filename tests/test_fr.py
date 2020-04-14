@@ -218,6 +218,7 @@ class FRLocalFlavorTests(SimpleTestCase):
             '869067543002289': '869067543002289',
             # Good Overseas
             '869069713002256': '869069713002256',
+            '869069854002248': '869069854002248',
             # Good, old Corsica department number (20) with birthdate < 1976
             '870062009002285': '870062009002285',
             # Good, new Corsica department number (2A) with birthdate >= 1976
@@ -228,6 +229,8 @@ class FRLocalFlavorTests(SimpleTestCase):
             '105062B09002231': '105062B09002231',
             # Good, new Corsica department number (20) with birthdate < 1976 (1905)
             '105062009002231': '105062009002231',
+            # Good foreign
+            '869069913802253': '869069913802253',
             # Good, birth month not known (then, can be 20, [30-42] or [50-99])
             '140200109002223': '140200109002223',
             '141330109002285': '141330109002285',
@@ -249,6 +252,9 @@ class FRLocalFlavorTests(SimpleTestCase):
             '869069773002289': error_format,
             # Good overseas Bad Commune
             '869069710002256': error_format,
+            '869069813002229': error_format,
+            # Bad foreign country code
+            '869069999102271': error_format,
             # Bad Commune
             '869067500002289': error_format,
             # Bad "Person Unique Number"
