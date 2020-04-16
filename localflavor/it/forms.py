@@ -1,7 +1,5 @@
 """IT-specific Form helpers."""
-
 import re
-import warnings
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -39,7 +37,6 @@ class ITRegionProvinceSelect(Select):
     """A Select widget that uses a named group list of IT regions mapped to regions as its choices."""
 
     def __init__(self, attrs=None):
-        warnings.warn('Choices have changed for ITRegionProvinceSelect in localflavor 3.0. See changelog for details')
         super().__init__(attrs, choices=REGION_PROVINCE_CHOICES)
 
 

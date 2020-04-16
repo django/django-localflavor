@@ -1,6 +1,4 @@
 """Iceland specific form helpers."""
-import warnings
-
 from django.forms import ValidationError
 from django.forms.fields import RegexField
 from django.forms.widgets import Select
@@ -62,5 +60,4 @@ class ISPostalCodeSelect(Select):
     """A Select widget that uses a list of Icelandic postal codes as its choices."""
 
     def __init__(self, attrs=None):
-        warnings.warn('Choices have changed for ISPostalCodeSelect in localflavor 3.0. See changelog for details')
         super().__init__(attrs, choices=IS_POSTALCODES)
