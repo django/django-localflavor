@@ -94,6 +94,10 @@ class FRNationalIdentificationNumber(CharField):
 
     Validation of the Number, and checksum calculation is detailed at http://en.wikipedia.org/wiki/INSEE_code
 
+    Complete spec of the codification is detailed here:
+      - https://fr.scribd.com/document/456848429/INSEE-Guide-Identification
+      - https://fr.scribd.com/document/456848431/INSEE-Codes-Pays
+
     .. versionadded:: 1.1
     """
 
