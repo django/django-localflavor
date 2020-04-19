@@ -14,7 +14,7 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Fix `FRNationalIdentificationNumber` validation for people born overseas
 
 Other changes:
 
