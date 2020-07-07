@@ -322,6 +322,7 @@ class BICTests(TestCase):
             '': 'BIC codes have either 8 or 11 characters.',
             'CIBCJJH2': 'JJ is not a valid country code.',
             'D3UTDEFF': 'is not a valid institution code.',
+            'DAAEDEDOXXX': 'is not a valid location code.',
             'DÉUTDEFF': 'codes only contain alphabet letters and digits.',
             'NEDSZAJJ XX': 'codes only contain alphabet letters and digits.',
         }
