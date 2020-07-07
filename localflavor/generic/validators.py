@@ -246,7 +246,7 @@ class BICValidator:
 
         # Letters 7 and 8 are a "location" code. As per ISO20022 Payments
         # Maintenance 2009 document, they may only be from the charset [A-Z2-9][A-NP-Z0-9]
-        if '1' in value[6] or 'O' in value[7]:
+        if '1' == value[6] or 'O' == value[7]:
             raise ValidationError(_('%s is not a valid location code.') % value[6:8])
 
 
