@@ -244,6 +244,11 @@ class BICValidator:
         if country_code not in ISO_3166_1_ALPHA2_COUNTRY_CODES:
             raise ValidationError(_('%s is not a valid country code.') % country_code)
 
+        # Letters 7 and 8 are a "location" code. As per ISO20022 Payments
+        # Maintenance 2009 document, they may only be from the charset [A-Z2-9][A-NP-Z0-9]
+        if '1' == value[6] or 'O' == value[7]:
+            raise ValidationError(_('%s is not a valid location code.') % value[6:8])
+
 
 @deconstructible
 class EANValidator:

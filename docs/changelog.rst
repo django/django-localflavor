@@ -18,7 +18,7 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Extended validation of BICs to match official SEPA regulations
 
 
 3.0   (2020-02-19)
