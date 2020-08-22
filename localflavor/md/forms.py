@@ -13,9 +13,9 @@ class MDIDNOField(forms.CharField):
 
     default_validators = [MDIDNOFieldValidator()]
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs['max_length'] = 13
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
 
 class MDLicensePlateField(forms.CharField):
@@ -27,9 +27,9 @@ class MDLicensePlateField(forms.CharField):
 
     default_validators = [MDLicensePlateValidator()]
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs['max_length'] = 13
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
 
 class MDCompanyTypesSelect(forms.Select):

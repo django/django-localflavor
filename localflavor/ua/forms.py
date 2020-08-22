@@ -11,9 +11,8 @@ class UARegionSelect(Select):
     .. versionadded:: 1.5
     """
 
-    def __init__(self, *args, **kwargs):
-        kwargs['choices'] = UA_REGION_CHOICES
-        super().__init__(*args, **kwargs)
+    def __init__(self, attrs=None):
+        super().__init__(attrs, choices=UA_REGION_CHOICES)
 
 
 class UAVatNumberField(RegexField):
