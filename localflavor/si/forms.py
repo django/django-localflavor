@@ -22,7 +22,7 @@ class SIEMSOField(CharField):
         'date': _('The first 7 digits of the EMSO must represent a valid past date.'),
         'checksum': _('The EMSO is not valid.'),
     }
-    emso_regex = re.compile('^(\d{2})(\d{2})(\d{3})(\d{2})(\d{3})(\d)$')
+    emso_regex = re.compile(r'^(\d{2})(\d{2})(\d{3})(\d{2})(\d{3})(\d)$')
 
     def clean(self, value):
         value = super().clean(value)
@@ -87,7 +87,7 @@ class SITaxNumberField(CharField):
     default_error_messages = {
         'invalid': _('Enter a valid tax number in form SIXXXXXXXX'),
     }
-    sitax_regex = re.compile('^(?:SI)?([1-9]\d{7})$')
+    sitax_regex = re.compile(r'^(?:SI)?([1-9]\d{7})$')
 
     def clean(self, value):
         value = super().clean(value)

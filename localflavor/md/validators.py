@@ -16,7 +16,7 @@ class MDIDNOFieldValidator(RegexValidator):
     """
 
     error_message = _('Enter a valid IDNO number.')
-    regex = '^\d{13}$'
+    regex = r'^\d{13}$'
     message = error_message
 
 
@@ -29,7 +29,7 @@ class MDLicensePlateValidator(RegexValidator):
     """
 
     error_message = _('Enter a valid license plate.')
-    regex = '^\d{13}$'
+    regex = r'^\d{13}$'
     message = error_message
 
     def __call__(self, value):
@@ -52,44 +52,44 @@ class MDLicensePlateValidator(RegexValidator):
     @staticmethod
     def _is_old_format(value):
         regions = "|".join([code for code, desc in REGION_CHOICES_2002_2015])
-        pattern = '({regions}) [A-Z]{{2}} \d{{1,3}}'.format(regions=regions)
+        pattern = r'({regions}) [A-Z]{{2}} \d{{1,3}}'.format(regions=regions)
         return re.match(pattern, value) is not None
 
     @staticmethod
     def _is_new_format(value):
         if not any(x in value for x, y in LICENSE_PLATE_POLICE):
-            pattern = '^[A-Z]{3} \d{1,3}$'
+            pattern = r'^[A-Z]{3} \d{1,3}$'
             return re.match(pattern, value) is not None
 
     @staticmethod
     def _is_gov_format(value):
         types = "|".join([code for code, desc in LICENSE_PLATE_GOVERNMENT_TYPE])
-        pattern = '^RM ({types}) \d{{3}}$'.format(types=types)
+        pattern = r'^RM ({types}) \d{{3}}$'.format(types=types)
         return re.match(pattern, value) is not None
 
     @staticmethod
     def _is_diplomatic_format(value):
         types = "|".join([code for code, desc in LICENSE_PLATE_DIPLOMATIC])
-        pattern = '^({types}) \d{{3}} A{{1,2}}$'.format(types=types)
+        pattern = r'^({types}) \d{{3}} A{{1,2}}$'.format(types=types)
         return re.match(pattern, value) is not None
 
     @staticmethod
     def _is_police_format(value):
         types = "|".join([code for code, desc in LICENSE_PLATE_POLICE])
-        gov_format = '^({types}) \d{{4}}$'.format(types=types)
+        gov_format = r'^({types}) \d{{4}}$'.format(types=types)
         return re.match(gov_format, value) is not None
 
     @staticmethod
     def _is_president_format(value):
-        pattern = '^RM \d{4}$'
+        pattern = r'^RM \d{4}$'
         return re.match(pattern, value) is not None
 
     @staticmethod
     def _is_state_security_format(value):
-        pattern = '^SP \d{3}$'
+        pattern = r'^SP \d{3}$'
         return re.match(pattern, value) is not None
 
     @staticmethod
     def _is_foreign_format(value):
-        pattern = '^H \d{4}$'
+        pattern = r'^H \d{4}$'
         return re.match(pattern, value) is not None
