@@ -117,9 +117,9 @@ class SITaxNumberField(CharField):
 class SIPostalCodeField(ChoiceField):
     """Slovenian post codes field."""
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs.setdefault('choices', SI_POSTALCODES_CHOICES)
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
 
 class SIPostalCodeSelect(Select):

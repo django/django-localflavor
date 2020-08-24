@@ -101,8 +101,8 @@ class CNIDCardField(CharField):
         'location': _('Invalid ID Card Number: Wrong location code'),
     }
 
-    def __init__(self, max_length=18, min_length=15, *args, **kwargs):
-        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+    def __init__(self, max_length=18, min_length=15, **kwargs):
+        super().__init__(max_length=max_length, min_length=min_length, **kwargs)
 
     def clean(self, value):
         """Check whether the input is a valid ID Card Number."""

@@ -29,8 +29,8 @@ class BRZipCodeField(CharField):
         'invalid': _('Enter a zip code in the format XXXXX-XXX.'),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
         self.validators.append(BRPostalCodeValidator())
 
 
@@ -85,8 +85,8 @@ class BRCPFField(CharField):
         'max_digits': _("This field requires at most 11 digits or 14 characters."),
     }
 
-    def __init__(self, max_length=14, min_length=11, *args, **kwargs):
-        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+    def __init__(self, max_length=14, min_length=11, **kwargs):
+        super().__init__(max_length=max_length, min_length=min_length, **kwargs)
         self.validators.append(BRCPFValidator())
 
     def clean(self, value):
@@ -124,8 +124,8 @@ class BRCNPJField(CharField):
         'max_digits': _("This field requires at least 14 digits"),
     }
 
-    def __init__(self, min_length=14, max_length=18, *args, **kwargs):
-        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+    def __init__(self, min_length=14, max_length=18, **kwargs):
+        super().__init__(max_length=max_length, min_length=min_length, **kwargs)
         self.validators.append(BRCNPJValidator())
 
     def clean(self, value):
@@ -153,8 +153,8 @@ class BRProcessoField(CharField):
 
     default_error_messages = {'invalid': _("Invalid Process number.")}
 
-    def __init__(self, max_length=25, min_length=20, *args, **kwargs):
-        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+    def __init__(self, max_length=25, min_length=20, **kwargs):
+        super().__init__(max_length=max_length, min_length=min_length, **kwargs)
 
     def clean(self, value):
         """Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or an 20-digit number."""

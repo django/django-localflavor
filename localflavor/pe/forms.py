@@ -22,8 +22,8 @@ class PEDNIField(CharField):
         'max_digits': _("This field requires 8 digits."),
     }
 
-    def __init__(self, max_length=8, min_length=8, *args, **kwargs):
-        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+    def __init__(self, max_length=8, min_length=8, **kwargs):
+        super().__init__(max_length=max_length, min_length=min_length, **kwargs)
 
     def clean(self, value):
         """Value must be a string in the XXXXXXXX formats."""
@@ -50,8 +50,8 @@ class PERUCField(CharField):
         'max_digits': _("This field requires 11 digits."),
     }
 
-    def __init__(self, max_length=11, min_length=11, *args, **kwargs):
-        super().__init__(max_length=max_length, min_length=min_length, *args, **kwargs)
+    def __init__(self, max_length=11, min_length=11, **kwargs):
+        super().__init__(max_length=max_length, min_length=min_length, **kwargs)
 
     def clean(self, value):
         """Value must be an 11-digit number."""
