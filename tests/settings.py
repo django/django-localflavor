@@ -8,6 +8,7 @@ DATABASES = {
 INSTALLED_APPS = [
     'localflavor',
     'tests.test_br',
+    'tests.test_by',
     'tests.test_au',
     'tests.test_ec',
     'tests.test_md',

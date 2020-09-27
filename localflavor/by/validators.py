@@ -1,13 +1,14 @@
-from django.core.validators import BaseValidator
+from django.core.validators import RegexValidator
+from django.utils.translation import ugettext_lazy as _
 
 
-class RangeValidator(BaseValidator):
-    '''
-    A validator which ensures that the value is in the provided range.
+PASS_NUMBER_VALIDATOR = RegexValidator(
+    r'[A-Z]{2}\d{7}',
+    message=_('Passport number format is: XX1234567')
+)
 
-    The tuple of min value and max value (not included in range) must be
-    specified in the validator's __init__.
-    '''
 
-    def compare(self, a, values):
-        return a in range(*values)
+PASS_ID_NUMBER_VALIDATOR = RegexValidator(
+    r'\d{7}[A-Z]\d{3}[A-Z]{2}\d',
+    message=_('ID format is: 1234567X123XX1')
+)
