@@ -21,6 +21,7 @@ Authors
 * André Ramos
 * Andres Torres Marroquin
 * Andrew Godwin
+* Anton Zhyltsou
 * Arthur de Jong
 * Aymeric Augustin
 * baffolobill
