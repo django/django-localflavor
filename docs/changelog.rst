@@ -6,7 +6,7 @@ Changelog
 
 New flavors:
 
-- None
+- Belarus local flavor
 
 New fields for existing flavors:
 

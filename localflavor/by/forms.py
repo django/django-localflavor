@@ -86,9 +86,9 @@ class BYPassIdNumberField(BaseKwargsUpdatedField, UpperValueMixin, forms.RegexFi
     }
 
 
-class ByZIPCodeField(BaseKwargsUpdatedField, forms.CharField):
+class ByPostalCodeField(BaseKwargsUpdatedField, forms.CharField):
     """
-    A form field that validates its input is a valid ZIP code (6 digits).
+    A form field that validates its input is a valid Postal code (6 digits).
     """
 
     initial_options = {
@@ -96,7 +96,7 @@ class ByZIPCodeField(BaseKwargsUpdatedField, forms.CharField):
         'min_length': 6,
         'empty_value': None,
         'error_messages': {
-            'max_length': _('ZIP code length must not be more than 6 digits.'),
-            'min_length': _('ZIP code length must not be less than 6 digits.')
+            'max_length': _('Postal code length must not be more than 6 digits.'),
+            'min_length': _('Postal code length must not be less than 6 digits.')
         }
     }

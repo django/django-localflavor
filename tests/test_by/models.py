@@ -7,4 +7,4 @@ class BYTestModel(models.Model):
     region = md.BYRegionField(null=True, blank=True)
     pass_num = md.BYPassNumberField(null=True, blank=True)
     pass_id = md.BYPassIdNumberField(null=True, blank=True)
-    zip_code = md.BYZIPCodeField(null=True, blank=True)
+    postal_code = md.BYPostalCodeField(null=True, blank=True)

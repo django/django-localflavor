@@ -49,7 +49,7 @@ class BYLocalFlavorTests(TestCase):
         self.assertIsInstance(fields.get('region'), forms.BYRegionField)
         self.assertIsInstance(fields.get('pass_num'), forms.BYPassNumberField)
         self.assertIsInstance(fields.get('pass_id'), forms.BYPassIdNumberField)
-        self.assertIsInstance(fields.get('zip_code'), forms.ByZIPCodeField)
+        self.assertIsInstance(fields.get('postal_code'), forms.ByPostalCodeField)
 
     def test_BYRegions_select(self):
         """Test that BYRegionField has valid choices"""
@@ -113,9 +113,9 @@ class BYLocalFlavorTests(TestCase):
             forms.BYPassIdNumberField, valid, invalid, empty_value=None
         )
 
-    def test_BY_zip_code(self):
-        max_len = self.form.fields.get('zip_code').error_messages.get('max_length')
-        min_len = self.form.fields.get('zip_code').error_messages.get('min_length')
+    def test_BY_Postal_code(self):
+        max_len = self.form.fields.get('postal_code').error_messages.get('max_length')
+        min_len = self.form.fields.get('postal_code').error_messages.get('min_length')
 
         valid = {
             '210001': '210001',
@@ -132,5 +132,5 @@ class BYLocalFlavorTests(TestCase):
         }
 
         self.assertFieldOutput(
-            forms.ByZIPCodeField, valid, invalid, empty_value=None
+            forms.ByPostalCodeField, valid, invalid, empty_value=None
         )

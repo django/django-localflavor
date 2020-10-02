@@ -6,7 +6,7 @@ from .by_regions import BY_REGIONS_CHOICES
 from .forms import BYRegionField as BYRegionFormField
 from .forms import BYPassNumberField as BYPassNumberFormField
 from .forms import BYPassIdNumberField as BYPassIdNumberFormField
-from .forms import ByZIPCodeField as BYZIPCodeFormField
+from .forms import ByPostalCodeField as BYPostalCodeFormField
 from .validators import (
     PASS_NUMBER_VALIDATOR, PASS_ID_NUMBER_VALIDATOR,
 )
@@ -95,14 +95,14 @@ class BYPassIdNumberField(BaseModelFieldUpdated, CharField):
         return super().formfield(**defaults)
 
 
-class BYZIPCodeField(BaseModelFieldUpdated, CharField):
+class BYPostalCodeField(BaseModelFieldUpdated, CharField):
     """
-    A model field that stores Belarusian ZIP code.
+    A model field that stores Belarusian Postal code.
 
-    Form represents it as a ``forms.BYZIPCodeField`` field.
+    Form represents it as a ``forms.BYPostalCodeField`` field.
     """
 
-    description = _('Belarusian ZIP code (6 digits).')
+    description = _('Belarusian Postal code (6 digits).')
 
     initial_options = {
         'max_length': 6,
@@ -110,6 +110,6 @@ class BYZIPCodeField(BaseModelFieldUpdated, CharField):
     }
 
     def formfield(self, **kwargs):
-        defaults = {'form_class': BYZIPCodeFormField}
+        defaults = {'form_class': BYPostalCodeFormField}
         defaults.update(kwargs)
         return super().formfield(**defaults)
