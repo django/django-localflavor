@@ -53,7 +53,7 @@ instructions on how to suppress this warning once the migration has been complet
 
 New flavors:
 
-- None
+- Belarus local flavor
 
 New fields for existing flavors:
 
