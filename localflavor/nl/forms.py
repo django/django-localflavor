@@ -43,9 +43,9 @@ class NLBSNFormField(forms.CharField):
 
     default_validators = [NLBSNFieldValidator()]
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs['max_length'] = 9
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
 
 class NLLicensePlateFormField(forms.CharField):
@@ -82,9 +82,9 @@ class NLLicensePlateFormField(forms.CharField):
         "sidecode_voertuig_binnen_of_buiten_nederland_brengen": re.compile(r"^(Z)([0-9]{2})([0-9]{2})$"),  # Z-99-99
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs['max_length'] = 8
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
     def clean(self, value):
         value = super().clean(value)

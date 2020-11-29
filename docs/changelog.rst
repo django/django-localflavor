@@ -19,6 +19,10 @@ Modifications to existing flavors:
 Other changes:
 
 - Extended validation of BICs to match official SEPA regulations
+- Removed positional arguments (`*args`) from form fields that inherit from Django's
+  `forms.CharField` and `forms.Field`. Positional arguments are not supported in the
+  the parent form and did not work.
+  `gh-421 <https://github.com/django/django-localflavor/pull/421>`_)
 
 
 3.0   (2020-02-19)

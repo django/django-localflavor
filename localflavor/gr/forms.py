@@ -36,9 +36,9 @@ class GRTaxNumberCodeField(Field):
         'invalid': _('Enter a valid greek tax number (9 digits).'),
     }
 
-    def __init__(self, allow_test_value=False, *args, **kwargs):
+    def __init__(self, allow_test_value=False, **kwargs):
         self.allow_test_value = allow_test_value
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
     def clean(self, value):
         value = super().clean(value)

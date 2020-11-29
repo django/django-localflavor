@@ -13,7 +13,7 @@ class AUBusinessNumberFieldValidator(RegexValidator):
     error_message = _('Enter a valid ABN.')
 
     def __init__(self):
-        eleven_digits = '^\d{11}$'
+        eleven_digits = r'^\d{11}$'
         super().__init__(regex=eleven_digits, message=self.error_message)
 
     def _is_valid(self, value):
@@ -57,7 +57,7 @@ class AUCompanyNumberFieldValidator(RegexValidator):
     error_message = _('Enter a valid ACN.')
 
     def __init__(self):
-        nine_digits = '^\d{9}$'
+        nine_digits = r'^\d{9}$'
         super().__init__(regex=nine_digits, message=self.error_message)
 
     def _is_valid(self, value):
@@ -101,7 +101,7 @@ class AUTaxFileNumberFieldValidator(RegexValidator):
 
     def __init__(self):
         """Regex for 8 to 9 digits."""
-        super().__init__(regex='^\d{8,9}$', message=self.error_message)
+        super().__init__(regex=r'^\d{8,9}$', message=self.error_message)
 
     def _is_valid(self, value):
         """

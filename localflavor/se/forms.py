@@ -102,10 +102,10 @@ class SEPersonalIdentityNumberField(forms.CharField):
     The cleaned value will always have the format YYYYMMDDXXXX.
     """
 
-    def __init__(self, coordination_number=True, interim_number=False, *args, **kwargs):
+    def __init__(self, coordination_number=True, interim_number=False, **kwargs):
         self.coordination_number = coordination_number
         self.interim_number = interim_number
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
     default_error_messages = {
         'invalid': _('Enter a valid Swedish personal identity number.'),

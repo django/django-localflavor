@@ -13,7 +13,7 @@ class NLZipCodeFieldValidator(RegexValidator):
     error_message = _('Enter a valid zip code.')
 
     def __init__(self):
-        super().__init__(regex='^\d{4} ?[A-Z]{2}$', message=self.error_message)
+        super().__init__(regex=r'^\d{4} ?[A-Z]{2}$', message=self.error_message)
 
     def __call__(self, value):
         super().__call__(value)
@@ -32,7 +32,7 @@ class NLBSNFieldValidator(RegexValidator):
     error_message = _('Enter a valid BSN.')
 
     def __init__(self):
-        super().__init__(regex='^\d{9}$', message=self.error_message)
+        super().__init__(regex=r'^\d{9}$', message=self.error_message)
 
     def bsn_checksum_ok(self, value):
         checksum = 0

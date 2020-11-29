@@ -57,9 +57,9 @@ class MAProvinceField(CharField):
 
     widget = MAProvinceSelect
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs.setdefault('label', _('Select Province'))
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
 
 class MARegionField(CharField):
@@ -71,6 +71,6 @@ class MARegionField(CharField):
 
     widget = MARegionSelect
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs.setdefault('label', _('Select Region'))
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)

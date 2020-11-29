@@ -73,9 +73,9 @@ class FRDepartmentField(CharField):
 
     widget = FRDepartmentSelect
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs.setdefault('label', _('Select Department'))
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
 
 class FRRegionField(CharField):
@@ -83,9 +83,9 @@ class FRRegionField(CharField):
 
     widget = FRRegionSelect
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs.setdefault('label', _('Select Region'))
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
 
 class FRNationalIdentificationNumber(CharField):

@@ -79,11 +79,11 @@ class IBANFormField(forms.CharField):
     .. versionadded:: 1.1
     """
 
-    def __init__(self, use_nordea_extensions=False, include_countries=None, *args, **kwargs):
+    def __init__(self, use_nordea_extensions=False, include_countries=None, **kwargs):
         kwargs.setdefault('min_length', IBAN_MIN_LENGTH)
         kwargs.setdefault('max_length', 34)
         self.default_validators = [IBANValidator(use_nordea_extensions, include_countries)]
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
     def to_python(self, value):
         value = super().to_python(value)
@@ -113,9 +113,9 @@ class BICFormField(forms.CharField):
 
     default_validators = [BICValidator()]
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         kwargs.setdefault('max_length', 11)
-        super().__init__(*args, **kwargs)
+        super().__init__(**kwargs)
 
     def to_python(self, value):
         # BIC is always written in upper case.
