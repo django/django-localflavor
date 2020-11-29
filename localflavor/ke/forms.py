@@ -85,7 +85,13 @@ class KECompanyRegNumber(RegexField):
     """
     Kenya Companies Reg. Number
     """
+    ...
 
+class KEPayBillNumber(RegexField):
+    """
+    MPESA PayBill 
+    """
+    ...
 
 class KECountySelect(Select):
     """
