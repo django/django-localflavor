@@ -5,11 +5,11 @@ from django.utils.translation import gettext_lazy as _
 from .forms import (
     KECompanyRegNumber as KECompanyRegNumberFormField,
     KECountySelect,
-    KEIDNumber,
-    KEKraPinNumber,
-    KENHIFNumber,
-    KENSSFNumber,
-    KEPassportNumber,
+    KEIDNumberField,
+    KEKraPinNumberField,
+    KENHIFNumberField,
+    KENSSFNumberField,
+    KEPassportNumberField,
     KEPostalCodeField as KEPostalCodeFormField,
 )
 
