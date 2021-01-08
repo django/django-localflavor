@@ -3,7 +3,7 @@
 import re
 
 from django.forms import ValidationError
-from django.forms.fields import RegexField, Select
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .ke_counties import COUNTY_CHOICES
@@ -11,7 +11,7 @@ from .ke_counties import COUNTY_CHOICES
 ke_id_re = re.compile(r"^\d{7}(?:\d{1})?$")
 ke_po_box_re = re.compile(r"\A\d{5,5}\Z")
 
-class KEPostalCodeField(RegexField):
+class KEPostalCodeField(CharField):
     """
     A form field that validates its input as a Kenyan Postal Code.
 
@@ -36,7 +36,7 @@ class KEPostalCodeField(RegexField):
 
 
 
-class KEKraPinNumber(RegexField):
+class KEKraPinNumberField(CharField):
     """
     TODO
 
@@ -52,7 +52,7 @@ class KEKraPinNumber(RegexField):
     ...
 
 
-class KEIDNumber(RegexField):
+class KEIDNumberField(CharField):
     """
     TODO
 
@@ -80,7 +80,7 @@ class KEIDNumber(RegexField):
         return value
 
 
-class KEPassportNumber(RegexField):
+class KEPassportNumberField(RegexField):
     """
     TODO
 
@@ -90,7 +90,7 @@ class KEPassportNumber(RegexField):
     ...
 
 
-class KENSSFNumber(RegexField):
+class KENSSFNumberField(RegexField):
     """
     TODO
 
@@ -100,7 +100,7 @@ class KENSSFNumber(RegexField):
     ...
 
 
-class KENHIFNumber(RegexField):
+class KENHIFNumberField(RegexField):
     """
     TODO
 
@@ -110,7 +110,7 @@ class KENHIFNumber(RegexField):
     ...
 
 
-class KECompanyRegNumber(RegexField):
+class KECompanyRegNumberField(RegexField):
     """
     Kenya Companies Reg. Number
     """
@@ -126,7 +126,7 @@ class KEPayBillNumber(RegexField):
     ...
 
 
-class KECountySelect(Select):
+class KECountySelectField(Select):
     """
     A Select widget listing Kenyan Counties as the choices
     """
