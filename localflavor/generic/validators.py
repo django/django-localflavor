@@ -124,7 +124,7 @@ NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
                               'CM': 27,  # Cameroon
                               'CV': 25,  # Cape Verde
                               'DZ': 24,  # Algeria
-                              'EG': 27,  # Egypt
+                              'EG': 29,  # Egypt
                               'GA': 27,  # Gabon
                               'IR': 26,  # Iran
                               'MG': 27,  # Madagascar
