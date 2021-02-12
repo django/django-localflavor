@@ -15,6 +15,7 @@ New fields for existing flavors:
 Modifications to existing flavors:
 
 - Fix `FRNationalIdentificationNumber` validation for people born overseas
+- Updated Indian states and union territories names and code as per iso 3166 (https://www.iso.org/obp/ui/#iso:code:3166:IN)
 
 Other changes:
 
