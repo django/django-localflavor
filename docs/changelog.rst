@@ -15,6 +15,12 @@ New fields for existing flavors:
 Modifications to existing flavors:
 
 - Fix `FRNationalIdentificationNumber` validation for people born overseas
+- Updated Indian states and union territories names and code as per iso 3166 (https://www.iso.org/obp/ui/#iso:code:3166:IN)
+- Breaking data changes: The key for Chattisgarh has been changed from CG to CT, the key for Uttarakhand has been changed from UA to UT, 
+  and the keys DD (Dadra and Nagar Haveli) and DN (Daman and Diu) have been removed and combined into DH (Dadra and Nagar Haveli and Daman and Diu)
+  Previous State Jammu and Kashmir (JK) is now under Union Territories, Ladakh (LA) is the new addition in the Union Territories.
+  Few modificication in the States and Union Territories names: Orissa (OR) is now Odisha (OR), Pondicherry (PY) is now Puducherry (PY)
+  Andaman and Nicobar (AN) is now Andaman and Nicobar Islands (AN).
 
 Other changes:
 
