@@ -21,6 +21,9 @@ Modifications to existing flavors:
   Previous State Jammu and Kashmir (JK) is now under Union Territories, Ladakh (LA) is the new addition in the Union Territories.
   Few modificication in the States and Union Territories names: Orissa (OR) is now Odisha (OR), Pondicherry (PY) is now Puducherry (PY)
   Andaman and Nicobar (AN) is now Andaman and Nicobar Islands (AN).
+- Correct sorting of US_STATES to sort by full name rather than code
+  (`gh-424 <https://github.com/django/django-localflavor/issues/424>`_
+  `gh-428 <https://github.com/django/django-localflavor/pull/428>`_).
 
 Other changes:
 
