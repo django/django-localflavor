@@ -15,6 +15,10 @@ New fields for existing flavors:
 Modifications to existing flavors:
 
 - Fix `FRNationalIdentificationNumber` validation for people born overseas
+- Correct sorting of US_STATES to sort by full name rather than code
+  (`gh-424 <https://github.com/django/django-localflavor/issues/424>`_
+  `gh-xxx <https://github.com/django/django-localflavor/pull/xxx>`_).
+
 
 Other changes:
 
