@@ -22,6 +22,7 @@ class CLLocalFlavorTests(SimpleTestCase):
 <option value="XII">Regi\xf3n de Magallanes y la Ant\xe1rtica Chilena</option>
 <option value="XIV">Regi\xf3n de Los R\xedos</option>
 <option value="XV">Regi\xf3n de Arica-Parinacota</option>
+<option value="XV">Regi\xf3n de \xd1uble</option>
 </select>'''
         self.assertHTMLEqual(f.render('foo', 'bar'), out)
 
