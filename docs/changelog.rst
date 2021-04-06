@@ -24,6 +24,7 @@ Modifications to existing flavors:
 - Correct sorting of US_STATES to sort by full name rather than code
   (`gh-424 <https://github.com/django/django-localflavor/issues/424>`_
   `gh-428 <https://github.com/django/django-localflavor/pull/428>`_).
+- Added new region for CL (`gh-432 <https://github.com/django/django-localflavor/issues/432>`_, `gh-433 <https://github.com/django/django-localflavor/pull/433>`_).
 
 Other changes:
 
