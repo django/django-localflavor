@@ -22,4 +22,4 @@ INSTALLED_APPS = [
 
 SECRET_KEY = 'spam-spam-spam-spam'
 
-SILENCED_SYSTEM_CHECKS = ('1_7.W001',)
+SILENCED_SYSTEM_CHECKS = ('1_7.W001', 'models.W042')
