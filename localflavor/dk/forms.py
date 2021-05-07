@@ -22,7 +22,5 @@ class DKPostalCodeField(fields.CharField):
 class DKMunicipalitySelect(widgets.Select):
     """A Select widget that uses a list of Danish municipalities (kommuner) as its choices."""
 
-    # TODO Fix this in localflavor 4.0.
-    # pylint: disable=keyword-arg-before-vararg
-    def __init__(self, attrs=None, *args, **kwargs):
-        super().__init__(attrs, choices=DK_MUNICIPALITIES, *args, **kwargs)
+    def __init__(self, attrs=None):
+        super().__init__(attrs, choices=DK_MUNICIPALITIES)
