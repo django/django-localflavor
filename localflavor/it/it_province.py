@@ -113,4 +113,4 @@ PROVINCES = (
 PROVINCE_CHOICES = tuple((p[0], p[1]) for p in PROVINCES)
 
 #: A dictionary of provinces mapped to regions
-PROVINCE_REGIONS = dict([(p[0], p[2]) for p in PROVINCES])
+PROVINCE_REGIONS = {p[0]: p[2] for p in PROVINCES}

@@ -97,8 +97,7 @@ class CHIdentityCardNumberField(Field):
         result = match.groupdict()
         idnumber, pos9, checksum = result['idnumber'], result['pos9'], result['checksum']
 
-        if (idnumber == '00000000' or
-                idnumber == 'A0000000'):
+        if idnumber in ('00000000', 'A0000000'):
             raise ValidationError(self.error_messages['invalid'])
 
         all_digits = "%s%s%s" % (idnumber, pos9, checksum)

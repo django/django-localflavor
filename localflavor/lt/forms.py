@@ -70,7 +70,7 @@ class LTIDCodeField(RegexField):
             k = second_sum % 11
             k = 0 if k == 10 else k
 
-        return True if k == int(value[-1]) else False
+        return k == int(value[-1])
 
     def valid_date(self, value):
         """

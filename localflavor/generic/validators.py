@@ -184,7 +184,7 @@ class IBANValidator:
         https://en.wikipedia.org/wiki/International_Bank_Account_Number#Validating_the_IBAN
         """
         if value is None:
-            return value
+            return
 
         value = value.upper().replace(' ', '').replace('-', '')
 
@@ -221,13 +221,13 @@ class BICValidator:
 
     def __call__(self, value):
         if value is None:
-            return value
+            return
 
         value = value.upper()
 
         # Length is 8 or 11.
         bic_length = len(value)
-        if bic_length != 8 and bic_length != 11:
+        if bic_length not in (8, 11):
             raise ValidationError(_('BIC codes have either 8 or 11 characters.'))
 
         # BIC is alphanumeric
@@ -246,7 +246,7 @@ class BICValidator:
 
         # Letters 7 and 8 are a "location" code. As per ISO20022 Payments
         # Maintenance 2009 document, they may only be from the charset [A-Z2-9][A-NP-Z0-9]
-        if '1' == value[6] or 'O' == value[7]:
+        if value[6] == '1' or value[7] == 'O':
             raise ValidationError(_('%s is not a valid location code.') % value[6:8])
 
 
@@ -271,7 +271,7 @@ class EANValidator:
 
     def __call__(self, value):
         if value is None:
-            return value
+            return
         if self.strip_nondigits:
             value = re.compile(r'[^\d]+').sub('', value)
         if not ean.is_valid(value):

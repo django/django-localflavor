@@ -58,7 +58,7 @@ class KWCivilIDNumberField(RegexField):
             return self.empty_value
 
         cc = value[0]  # Century value
-        yy, mm, dd = textwrap.wrap(value[1:7], 2)  # Date parts
+        yy, mm, dd = textwrap.wrap(value[1:7], 2)  # pylint: disable=unbalanced-tuple-unpacking
 
         # Fix the dates so that those born
         # in 2000+ pass the validation check

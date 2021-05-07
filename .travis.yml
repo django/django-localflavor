@@ -7,7 +7,7 @@ matrix:
   include:
     - python: 3.9
       env: TOXENV=docs
-    - python: 3.5
+    - python: 3.8
       env: TOXENV=prospector
     - python: 3.5
       env: TOXENV=py35-2.2
