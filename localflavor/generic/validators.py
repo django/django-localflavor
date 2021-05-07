@@ -15,8 +15,8 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 #
 # https://www.swift.com/standards/data-standards/iban
 #
-# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 78 of the IBAN Registry document which was published
-# in August 2017.
+# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 89 of the IBAN Registry document which was published
+# in March 2021.
 #
 # Other Resources:
 #
@@ -44,6 +44,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'DK': 18,  # Denmark
                             'DO': 28,  # Dominican Republic
                             'EE': 20,  # Estonia
+                            'EG': 29,  # Egypt
                             'ES': 24,  # Spain
                             'FI': 18,  # Finland
                             'FO': 18,  # Faroe Islands
@@ -74,6 +75,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'LT': 20,  # Lithuania
                             'LU': 20,  # Luxembourg
                             'LV': 21,  # Latvia
+                            'LY': 25,  # Libya
                             'MC': 27,  # Monaco
                             'MD': 24,  # Moldova
                             'ME': 22,  # Montenegro
@@ -121,7 +123,6 @@ NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
                               'CM': 27,  # Cameroon
                               'CV': 25,  # Cape Verde
                               'DZ': 24,  # Algeria
-                              'EG': 27,  # Egypt
                               'GA': 27,  # Gabon
                               'IR': 26,  # Iran
                               'MG': 27,  # Madagascar

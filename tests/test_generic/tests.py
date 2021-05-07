@@ -184,8 +184,8 @@ class IBANTests(TestCase):
                 'Ensure this value has at most 34 characters (it has 35).'],
 
             # This IBAN should only be valid only if the Nordea extensions are turned on.
-            'EG1100006001880800100014553': ['EG is not a valid country code for IBAN.'],
-            'EG11 0000 6001 8808 0010 0014 553': ['EG is not a valid country code for IBAN.']
+            'BJ11B00610100400271101192591': ['BJ is not a valid country code for IBAN.'],
+            'BJ11 B006 1010 0400 2711 0119 2591': ['BJ is not a valid country code for IBAN.']
         }
 
         self.assertFieldOutput(IBANFormField, valid=valid, invalid=invalid)
@@ -209,10 +209,10 @@ class IBANTests(TestCase):
         """Test a valid IBAN in the Nordea extensions."""
         iban_validator = IBANValidator(use_nordea_extensions=True)
         # Run the validator to ensure there are no ValidationErrors raised.
-        iban_validator('Eg1100006001880800100014553')
+        iban_validator('Bj11B00610100400271101192591')
 
     def test_use_nordea_extensions_formfield(self):
-        form = UseNordeaExtensionsForm({'iban': 'EG1100006001880800100014553'})
+        form = UseNordeaExtensionsForm({'iban': 'BJ11B00610100400271101192591'})
         self.assertFalse(form.errors)
 
     def test_include_countries_formfield(self):
