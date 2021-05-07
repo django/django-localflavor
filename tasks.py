@@ -13,7 +13,7 @@ def clean(c):
 @task
 def test(c, country='all'):
     print('Python version: ' + sys.version)
-    test_cmd = 'coverage run `which django-admin.py` test --settings=tests.settings'
+    test_cmd = 'coverage run `which django-admin` test --settings=tests.settings'
     country = os.environ.get('COUNTRY', country)
 
     # Fix issue #49
@@ -34,7 +34,7 @@ def test(c, country='all'):
 
 @task
 def compile_translations(c):
-    c.run('cd localflavor; django-admin.py compilemessages; cd ..')
+    c.run('cd localflavor; django-admin compilemessages; cd ..')
 
 
 @task(post=[compile_translations])
@@ -56,9 +56,9 @@ def pull_translations(c, locale=None):
 def make_translations(c, locale='en'):
     with c.cd('localflavor'):
         if locale == 'all':
-            c.run('django-admin.py makemessages -a')
+            c.run('django-admin makemessages -a')
         else:
-            c.run('django-admin.py makemessages -l {locale}'.format(locale=locale))
+            c.run('django-admin makemessages -l {locale}'.format(locale=locale))
 
 
 @task
