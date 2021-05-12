@@ -40,8 +40,8 @@ Modifications to existing flavors:
   will be required for models that use this field (i.e. users will need to run
   "manage.py makemigrations" after updating django-localflavor).
   (`gh-235 <https://github.com/django/django-localflavor/issues/235>`_,
-   `gh-400 <https://github.com/django/django-localflavor/issues/400>`_,
-   `gh-438 <https://github.com/django/django-localflavor/issues/438>`_)
+  `gh-400 <https://github.com/django/django-localflavor/issues/400>`_,
+  `gh-438 <https://github.com/django/django-localflavor/issues/438>`_)
 
 Other changes:
 
