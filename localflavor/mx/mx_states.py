@@ -1,16 +1,16 @@
 from django.utils.translation import gettext_lazy as _
 
-#: All 31 states, plus the `Distrito Federal`.
+#: All 31 states, plus the `Ciudad de México`.
 STATE_CHOICES = (
     ('AGU', _('Aguascalientes')),
     ('BCN', _('Baja California')),
     ('BCS', _('Baja California Sur')),
     ('CAM', _('Campeche')),
+    ('CDMX', _('Ciudad de México')),
     ('CHH', _('Chihuahua')),
     ('CHP', _('Chiapas')),
     ('COA', _('Coahuila')),
     ('COL', _('Colima')),
-    ('DIF', _('Distrito Federal')),
     ('DUR', _('Durango')),
     ('GRO', _('Guerrero')),
     ('GUA', _('Guanajuato')),

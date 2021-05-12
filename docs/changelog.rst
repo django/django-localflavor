@@ -4,6 +4,11 @@ Changelog
 3.1   (unreleased)
 ------------------
 
+Breaking changes:
+
+Data and schema migrations are required for users of `mx.models.MXStateField`. See
+details in the Changelog section "Modifications to existing flavors" for this release.
+
 New flavors:
 
 - None
@@ -27,6 +32,16 @@ Modifications to existing flavors:
 - Added new region for CL (`gh-432 <https://github.com/django/django-localflavor/issues/432>`_, `gh-433 <https://github.com/django/django-localflavor/pull/433>`_).
 - Updated IBAN validation for changes in IBAN Registry release 89, March 2021
   (`gh-436 <https://github.com/django/django-localflavor/issues/436>`_).
+- MX localflavor: `STATE_CHOICES` has been updated to change DIF/Distrito Federal to
+  CDMX/Ciudad de México, the legal name for this state as of 29 January 2016.
+  Applications using the `MXStateField` model field will need to create a data migration
+  to change "DIF" to "CDMX". The max_length of the `MXStateField` model field has been
+  updated from 3 to 4 to accommodate the new abbreviation. As such a schema migration
+  will be required for models that use this field (i.e. users will need to run
+  "manage.py makemigrations" after updating django-localflavor).
+  (`gh-235 <https://github.com/django/django-localflavor/issues/235>`_,
+   `gh-400 <https://github.com/django/django-localflavor/issues/400>`_,
+   `gh-xxx <https://github.com/django/django-localflavor/issues/xxx>`_)
 
 Other changes:
 
