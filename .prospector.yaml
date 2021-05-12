@@ -15,8 +15,6 @@ pylint:
 pep8:
   options:
     max-line-length: 120
-  disable:
-    - E722  # Do not use bare 'except'.
 
 mccabe:
   options:

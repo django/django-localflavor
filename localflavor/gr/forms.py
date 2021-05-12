@@ -83,7 +83,7 @@ class GRSocialSecurityNumberCodeField(RegexField):
     def check_date(self, val):
         try:
             datetime.datetime.strptime(val[:6], '%d%m%y')
-        except:
+        except ValueError:
             raise ValidationError(self.error_messages['invalid'])
 
     def clean(self, value):
