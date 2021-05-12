@@ -60,6 +60,7 @@ class MDLicensePlateValidator(RegexValidator):
         if not any(x in value for x, y in LICENSE_PLATE_POLICE):
             pattern = r'^[A-Z]{3} \d{1,3}$'
             return re.match(pattern, value) is not None
+        return False
 
     @staticmethod
     def _is_gov_format(value):

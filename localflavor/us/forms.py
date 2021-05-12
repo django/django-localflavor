@@ -76,6 +76,7 @@ class USSocialSecurityNumberField(CharField):
             raise ValidationError(self.error_messages['invalid'])
 
         # Second pass: promotional and otherwise permanently invalid numbers.
+        # pylint: disable=too-many-boolean-expressions
         if (area == '666' or
                 area.startswith('9') or
                 (area == '078' and group == '05' and serial == '1120') or

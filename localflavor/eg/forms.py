@@ -35,7 +35,7 @@ class EGNationalIDNumberField(RegexField):
             return self.empty_value
 
         century = value[0]
-        year, month, day = textwrap.wrap(value[1:7], 2)
+        year, month, day = textwrap.wrap(value[1:7], 2)  # pylint: disable=unbalanced-tuple-unpacking
         governorate_code = value[7:9]
 
         # is valid century?

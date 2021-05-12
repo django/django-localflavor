@@ -60,7 +60,7 @@ class BRStateChoiceField(Field):
         value = force_str(value)
         if value == '':
             return value
-        valid_values = set([force_str(entry[0]) for entry in self.widget.choices])
+        valid_values = {force_str(entry[0]) for entry in self.widget.choices}
         if value not in valid_values:
             raise ValidationError(self.error_messages['invalid'])
         return value
