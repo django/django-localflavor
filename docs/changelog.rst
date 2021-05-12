@@ -41,7 +41,7 @@ Modifications to existing flavors:
   "manage.py makemigrations" after updating django-localflavor).
   (`gh-235 <https://github.com/django/django-localflavor/issues/235>`_,
    `gh-400 <https://github.com/django/django-localflavor/issues/400>`_,
-   `gh-xxx <https://github.com/django/django-localflavor/issues/xxx>`_)
+   `gh-438 <https://github.com/django/django-localflavor/issues/438>`_)
 
 Other changes:
 
