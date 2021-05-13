@@ -1,3 +1,5 @@
+import warnings
+
 from django.db.models import CharField
 from django.utils.translation import gettext_lazy as _
 
@@ -14,6 +16,7 @@ class INStateField(CharField):
     description = _("Indian state (two uppercase letters)")
 
     def __init__(self, *args, **kwargs):
+        warnings.warn("Choices have changed for INStateField in localflavor 3.1. See changelog for details.")
         kwargs['choices'] = STATE_CHOICES
         kwargs['max_length'] = 2
         super().__init__(*args, **kwargs)

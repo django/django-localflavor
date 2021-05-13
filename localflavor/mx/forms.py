@@ -1,5 +1,6 @@
 """Mexican-specific form helpers."""
 import re
+import warnings
 
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
@@ -44,6 +45,7 @@ class MXStateSelect(Select):
     """A Select widget that uses a list of Mexican states as its choices."""
 
     def __init__(self, attrs=None):
+        warnings.warn("Choices have changed for MXStateSelect in localflavor 3.1. See changelog for details.")
         super().__init__(attrs, choices=STATE_CHOICES)
 
 

@@ -1,6 +1,7 @@
 """India-specific Form helpers."""
 
 import re
+import warnings
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -117,7 +118,12 @@ class INStateSelect(Select):
        Added Telangana to list of states. More details at
        https://en.wikipedia.org/wiki/Telangana#Bifurcation_of_Andhra_Pradesh
 
+    .. versionchanged:: 3.1
+
+       Updated Indian states and union territories names and code as per iso 3166
+       (https://www.iso.org/obp/ui/#iso:code:3166:IN)
     """
 
     def __init__(self, attrs=None):
+        warnings.warn("Choices have changed for INStateSelect in localflavor 3.1. See changelog for details.")
         super().__init__(attrs, choices=STATE_CHOICES)
