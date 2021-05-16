@@ -49,10 +49,10 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'FI': 18,  # Finland
                             'FO': 18,  # Faroe Islands
                             'FR': 27,  # France + French Guiana (GF), Guadeloupe (GP), Martinique (MQ), Réunion (RE),
-                            #          French Polynesia (PF), French Southern Territories (TF), Mayotte (YT),
-                            #          New Caledonia (NC), Saint Barthélemy (BL),
-                            #          Saint Martin - French part (MF), Saint-Pierre and Miquelon (PM),
-                            #          Wallis and Futuna (WF)
+                                       #          French Polynesia (PF), French Southern Territories (TF), Mayotte (YT),
+                                       #          New Caledonia (NC), Saint Barthélemy (BL),
+                                       #          Saint Martin - French part (MF), Saint-Pierre and Miquelon (PM),
+                                       #          Wallis and Futuna (WF)
                             'GB': 22,  # United Kingdom + Guernsey (GG), Isle of Man (IM), Jersey (JE)
                             'GE': 22,  # Georgia
                             'GI': 23,  # Gibraltar
