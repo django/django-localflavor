@@ -66,7 +66,7 @@ Other changes:
   the parent form and did not work
   `gh-421 <https://github.com/django/django-localflavor/pull/421>`_).
 - Add error codes to all `ValidationError`s as recommended by
-  `Django's form validation documentation <https://docs.djangoproject.com/en/3.2/ref/forms/validation/#raising-validationerror>`_
+  `Django's form validation documentation <https://docs.djangoproject.com/en/stable/ref/forms/validation/#raising-validationerror>`_
   (`gh-440 <https://github.com/django/django-localflavor/issues/440>`_).
 
 
