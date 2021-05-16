@@ -67,7 +67,7 @@ Other changes:
   `gh-421 <https://github.com/django/django-localflavor/pull/421>`_).
 - Add error codes to all `ValidationError`s as recommended by
   `Django's form validation documentation <https://docs.djangoproject.com/en/3.2/ref/forms/validation/#raising-validationerror>`_
-  (`gh-xxx <https://github.com/django/django-localflavor/issues/xxx>`_).
+  (`gh-440 <https://github.com/django/django-localflavor/issues/440>`_).
 
 
 3.0   (2020-02-19)
