@@ -41,12 +41,12 @@ class UYCIField(RegexField):
             return self.empty_value
         match = self.regex.match(value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         number = int(match.group('num').replace('.', ''))
         validation_digit = int(match.group('val'))
 
         if validation_digit != get_validation_digit(number):
-            raise ValidationError(self.error_messages['invalid_validation_digit'])
+            raise ValidationError(self.error_messages['invalid_validation_digit'], code='invalid_validation_digit')
 
         return value

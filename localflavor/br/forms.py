@@ -62,7 +62,7 @@ class BRStateChoiceField(Field):
             return value
         valid_values = {force_str(entry[0]) for entry in self.widget.choices}
         if value not in valid_values:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value
 
 
@@ -168,13 +168,13 @@ class BRProcessoField(CharField):
             if process_number:
                 value = ''.join(process_number.groups())
             else:
-                raise ValidationError(self.error_messages['invalid'])
+                raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         orig_dv = value[7:9]
 
         value_without_digits = int(value[0:7] + value[9:])
 
         if str(mod_97_base10(value_without_digits)).zfill(2) != orig_dv:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return orig_value

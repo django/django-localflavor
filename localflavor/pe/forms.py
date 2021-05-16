@@ -31,9 +31,9 @@ class PEDNIField(CharField):
         if value in self.empty_values:
             return self.empty_value
         if not value.isdigit():
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if len(value) != 8:
-            raise ValidationError(self.error_messages['max_digits'])
+            raise ValidationError(self.error_messages['max_digits'], code='max_digits')
 
         return value
 
@@ -59,7 +59,7 @@ class PERUCField(CharField):
         if value in self.empty_values:
             return self.empty_value
         if not value.isdigit():
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if len(value) != 11:
-            raise ValidationError(self.error_messages['max_digits'])
+            raise ValidationError(self.error_messages['max_digits'], code='max_digits')
         return value

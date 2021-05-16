@@ -45,7 +45,7 @@ class PTCitizenCardNumberField(Field):
         match = CITIZEN_CARD_NUMBER_REGEX.match(value)
 
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         number, checkdigits = match.groups()
 
@@ -56,7 +56,7 @@ class PTCitizenCardNumberField(Field):
                         for index, decoded_value in enumerate(decoded)])
 
         if not checksum % 10 == 0:
-            raise ValidationError(self.error_messages['badchecksum'])
+            raise ValidationError(self.error_messages['badchecksum'], code='badchecksum')
 
         return '{0}-{1}'.format(number, checkdigits)
 
@@ -103,7 +103,7 @@ class PTSocialSecurityNumberField(Field):
         match = SOCIAL_SECURITY_NUMBER_REGEX.search(value)
 
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         digits = [int(digit) for digit in value]
 
@@ -114,7 +114,7 @@ class PTSocialSecurityNumberField(Field):
         checkdigit = int(value[-1])
 
         if not checksum == checkdigit:
-            raise ValidationError(self.error_messages['badchecksum'])
+            raise ValidationError(self.error_messages['badchecksum'], code='badchecksum')
 
         return int(value)
 

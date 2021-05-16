@@ -40,7 +40,7 @@ class EGNationalIDNumberField(RegexField):
 
         # is valid century?
         if century not in ('2', '3'):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Complete year (19XX, 20XX)
         if int(century) == 3:
@@ -51,13 +51,13 @@ class EGNationalIDNumberField(RegexField):
         try:
             date(int(year), int(month), int(day))
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # is valid governorate code?
         governorate_codes = ('01', '02', '03', '04', '11', '12', '13', '14', '15', '16', '17', '18', '19', '21', '22',
                              '23', '24', '25', '26', '27', '28', '29', '31', '32', '33', '34', '35', '88')
         if governorate_code not in governorate_codes:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 

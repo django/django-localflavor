@@ -30,10 +30,10 @@ class TRPostalCodeField(RegexField):
         if value in self.empty_values:
             return self.empty_value
         if len(value) != 5:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         province_code = int(value[:2])
         if province_code == 0 or province_code > 81:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value
 
 
@@ -64,13 +64,13 @@ class TRIdentificationNumberField(Field):
             return ''
 
         if len(value) != 11:
-            raise ValidationError(self.error_messages['not_11'])
+            raise ValidationError(self.error_messages['not_11'], code='not_11')
 
         if not re.match(r'^\d{11}$', value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         if int(value[0]) == 0:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         chksum = (sum([int(value[i]) for i in range(0, 9, 2)]) * 7 -
                   sum([int(value[i]) for i in range(1, 9, 2)])) % 10
@@ -78,7 +78,7 @@ class TRIdentificationNumberField(Field):
         if (chksum != int(value[9]) or
                 (sum([int(value[i])
                       for i in range(10)]) % 10) != int(value[10])):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 

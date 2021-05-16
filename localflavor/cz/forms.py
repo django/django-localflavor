@@ -62,7 +62,7 @@ class CZBirthNumberField(Field):
 
         match = re.match(birth_number, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid_format'])
+            raise ValidationError(self.error_messages['invalid_format'], code='invalid_format')
 
         birth, id = match.groupdict()['birth'], match.groupdict()['id']
 
@@ -76,11 +76,11 @@ class CZBirthNumberField(Field):
         month = int(birth[2:4])
         if (not 1 <= month <= 12) and (not 21 <= month <= 32) and \
                 (not 51 <= month <= 62) and (not 71 <= month <= 82):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         day = int(birth[4:6])
         if not (1 <= day <= 31):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Fourth digit has been added since 1. January 1954.
         # It is modulo of dividing birth number and verification number by 11.
@@ -93,7 +93,7 @@ class CZBirthNumberField(Field):
         if (modulo == int(id[-1])) or (modulo == 10 and id[-1] == '0'):
             return '%s' % value
         else:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class CZICNumberField(Field):
@@ -111,7 +111,7 @@ class CZICNumberField(Field):
 
         match = re.match(ic_number, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         number, check = match.groupdict()[
             'number'], int(match.groupdict()['check'])
@@ -134,4 +134,4 @@ class CZICNumberField(Field):
                 (check == (11 - remainder)):
             return '%s' % value
 
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')

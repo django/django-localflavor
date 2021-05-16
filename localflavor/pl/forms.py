@@ -53,9 +53,9 @@ class PLPESELField(RegexField):
         if value in self.empty_values:
             return self.empty_value
         if not self.has_valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         if not self.has_valid_birth_date(value):
-            raise ValidationError(self.error_messages['birthdate'])
+            raise ValidationError(self.error_messages['birthdate'], code='birthdate')
         return '%s' % value
 
     def has_valid_checksum(self, number):
@@ -113,7 +113,7 @@ class PLNationalIDCardNumberField(RegexField):
         value = value.upper()
 
         if not self.has_valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return '%s' % value
 
     def has_valid_checksum(self, number):
@@ -164,7 +164,7 @@ class PLNIPField(RegexField):
             return self.empty_value
         value = re.sub("[-]", "", value)
         if not self.has_valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return '%s' % value
 
     def has_valid_checksum(self, number):
@@ -199,7 +199,7 @@ class PLREGONField(RegexField):
         if value in self.empty_values:
             return self.empty_value
         if not self.has_valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return '%s' % value
 
     def has_valid_checksum(self, number):

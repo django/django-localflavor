@@ -32,7 +32,7 @@ class LVPostalCodeField(Field):
 
         match = re.match(zipcode, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return 'LV-' + match.group('code')
 
@@ -67,17 +67,17 @@ class LVPersonalCodeField(Field):
 
         match = re.match(idcode, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid_format'])
+            raise ValidationError(self.error_messages['invalid_format'], code='invalid_format')
 
         day, month, year, century, check = map(int, match.groups())
 
         if check != self.lv_checksum(value[0:6] + value[7:11]):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         year += 1800 + 100 * century
         try:
             date(year, month, day)
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value

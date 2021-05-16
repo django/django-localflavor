@@ -46,7 +46,7 @@ class NOSocialSecurityNumber(Field):
             return ''
 
         if not re.match(r'^\d{11}$', value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         self.birthday = self._get_birthday(value)
         self.gender = self._get_gender(value)
@@ -59,9 +59,9 @@ class NOSocialSecurityNumber(Field):
             return sum([(a * b) for (a, b) in zip(aval, bval)])
 
         if multiply_reduce(digits, weight_1) % 11 != 0:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if multiply_reduce(digits, weight_2) % 11 != 0:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 
@@ -89,7 +89,7 @@ class NOSocialSecurityNumber(Field):
             if 900 <= inum < 1000 and year2 > 39:
                 birthday = datetime.date(1900 + year2, month, day)
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return birthday
 
 
@@ -126,11 +126,11 @@ class NOBankAccountNumber(CharField):
             return
         elif not value.isdigit():
             # You must only contain decimals.
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         elif len(value) != 11:
             # They only have one length: the number is 10!
             # That being said, you always store them with the check digit included, so 11.
-            raise ValidationError(self.error_messages['invalid_length'])
+            raise ValidationError(self.error_messages['invalid_length'], code='invalid_length')
 
         # The control/check digit is the last digit
         check_digit = int(value[-1])
@@ -145,7 +145,7 @@ class NOBankAccountNumber(CharField):
         checksum = 0 if remainder == 0 else 11 - remainder
 
         if checksum != check_digit:
-            raise ValidationError(self.error_messages['invalid_checksum'])
+            raise ValidationError(self.error_messages['invalid_checksum'], code='invalid_checksum')
 
     def to_python(self, value):
         value = super().to_python(value)

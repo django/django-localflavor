@@ -70,10 +70,10 @@ class KWCivilIDNumberField(RegexField):
         try:
             date(int(yy), int(mm), int(dd))
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         if not is_valid_kw_civilid_checksum(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 

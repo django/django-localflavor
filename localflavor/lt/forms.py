@@ -51,10 +51,10 @@ class LTIDCodeField(RegexField):
             return self.empty_value
 
         if not self.valid_date(value):
-            raise ValidationError(self.error_messages['date'])
+            raise ValidationError(self.error_messages['date'], code='date')
 
         if not self.valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return value
 
     def valid_checksum(self, value):
@@ -107,6 +107,6 @@ class LTPostalCodeField(Field):
 
         match = re.match(postalcode, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return 'LT-' + match.group('code')

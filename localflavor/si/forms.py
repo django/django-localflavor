@@ -45,7 +45,7 @@ class SIEMSOField(CharField):
     def _regex_match(self, value):
         m = self.emso_regex.match(value)
         if m is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return m
 
     def _validate_birthday(self, day, month, year):
@@ -56,9 +56,9 @@ class SIEMSOField(CharField):
         try:
             birthday = datetime.date(year, month, day)
         except ValueError:
-            raise ValidationError(self.error_messages['date'])
+            raise ValidationError(self.error_messages['date'], code='date')
         if datetime.date.today() < birthday:
-            raise ValidationError(self.error_messages['date'])
+            raise ValidationError(self.error_messages['date'], code='date')
         return birthday
 
     def _validate_emso(self, checksum, value):
@@ -72,7 +72,7 @@ class SIEMSOField(CharField):
         else:
             k = 11 - chk
         if k == 10 or checksum != k:
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
 
 
 class SITaxNumberField(CharField):
@@ -96,7 +96,7 @@ class SITaxNumberField(CharField):
 
         m = self.sitax_regex.match(value)
         if m is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         value = m.groups()[0]
 
         # Validate Tax number
@@ -109,7 +109,7 @@ class SITaxNumberField(CharField):
             chk = 0
 
         if int_values[-1] != chk:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 

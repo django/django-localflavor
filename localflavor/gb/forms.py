@@ -35,7 +35,7 @@ class GBPostcodeField(CharField):
         # Put a single space before the incode (second part).
         postcode = self.space_regex.sub(r' \1', postcode)
         if not self.postcode_regex.search(postcode):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return postcode
 
 

@@ -56,15 +56,15 @@ class ATSocialSecurityNumberField(Field):
         if value in EMPTY_VALUES:
             return ""
         if not re_ssn.search(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         sqnr, date = value.split(" ")
         sqnr, check = (sqnr[:3], (sqnr[3]))
         if int(sqnr) < 100:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         res = (int(sqnr[0]) * 3 + int(sqnr[1]) * 7 + int(sqnr[2]) * 9 +
                int(date[0]) * 5 + int(date[1]) * 8 + int(date[2]) * 4 +
                int(date[3]) * 2 + int(date[4]) * 1 + int(date[5]) * 6)
         res = res % 11
         if res != int(check):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return '%s%s %s' % (sqnr, check, date)

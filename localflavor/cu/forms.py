@@ -28,7 +28,7 @@ class CURegionField(Field):
             return REGION_NORMALIZED[value.strip().lower()]
         except KeyError:
             pass
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class CURegionSelect(Select):
@@ -64,7 +64,7 @@ class CUProvinceField(Field):
             return PROVINCE_NORMALIZED[value.strip().lower()]
         except KeyError:
             pass
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class CUProvinceSelect(Select):
