@@ -206,38 +206,6 @@ number (e.g. x.0 releases).
 .. _`Django's release process`: https://docs.djangoproject.com/en/dev/internals/release-process/
 .. _semver: http://semver.org/
 
-How to migrate
-==============
-
-If you've used the old ``django.contrib.localflavor`` package or one of the
-temporary ``django-localflavor-*`` releases, follow these two easy steps to
-update your code:
-
-1. Install the third-party ``django-localflavor`` package.
-
-2. Change your app's import statements to reference the new packages.
-
-   For example, change this::
-
-       from django.contrib.localflavor.gr.forms import GRPostalCodeField
-
-   ...to this::
-
-       from localflavor.gr.forms import GRPostalCodeField
-
-   Or if you used one of the shortlived ``django-localflavor-*`` packages
-   change::
-
-       from django_localflavor_gr.forms import GRPostalCodeField
-
-   ...to this::
-
-       from localflavor.gr.forms import GRPostalCodeField
-
-The code in the new package is the same (it was copied directly from Django),
-so you don't have to worry about backwards compatibility in terms of
-functionality. Only the imports have changed.
-
 Backwards compatibility
 =======================
 
