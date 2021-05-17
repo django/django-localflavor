@@ -65,6 +65,9 @@ Other changes:
   `forms.CharField` and `forms.Field`. Positional arguments are not supported in the
   the parent form and did not work
   `gh-421 <https://github.com/django/django-localflavor/pull/421>`_).
+- Added error codes to all `ValidationError`s as recommended by
+  `Django's form validation documentation <https://docs.djangoproject.com/en/stable/ref/forms/validation/#raising-validationerror>`_
+  (`gh-440 <https://github.com/django/django-localflavor/issues/440>`_).
 
 
 3.0   (2020-02-19)

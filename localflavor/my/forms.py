@@ -26,7 +26,7 @@ class MyKadFormField(CharField):
 
         if nric.is_valid(value):
             return value
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def to_python(self, value):
         value = super().to_python(value)

@@ -68,12 +68,12 @@ class EEPersonalIdentificationCode(Field):
 
         match = re.match(idcode, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid_format'])
+            raise ValidationError(self.error_messages['invalid_format'], code='invalid_format')
 
         century, year, month, day, check = map(int, match.groups())
 
         if check != self.ee_checksum(value[:10]):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Century digit also encodes gender:
         # 1 - male born in 18xx
@@ -84,7 +84,7 @@ class EEPersonalIdentificationCode(Field):
         try:
             date(year, month, day)
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 
@@ -108,11 +108,11 @@ class EEBusinessRegistryCode(Field):
 
         match = re.match(bregcode, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid_format'])
+            raise ValidationError(self.error_messages['invalid_format'], code='invalid_format')
 
         check = int(value[7])
 
         if check != EEPersonalIdentificationCode.ee_checksum(value[:7]):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value

@@ -35,7 +35,7 @@ class CAPostalCodeField(CharField):
         postcode = value.upper().strip()
         m = self.postcode_regex.match(postcode)
         if not m:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return "%s %s" % (m.group(1), m.group(2))
 
 
@@ -66,7 +66,7 @@ class CAProvinceField(Field):
                 return PROVINCES_NORMALIZED[value.strip().lower()]
             except KeyError:
                 pass
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class CAProvinceSelect(Select):
@@ -103,7 +103,7 @@ class CASocialInsuranceNumberField(Field):
 
         match = re.match(sin_re, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         number = '%s-%s-%s' % (match.group(1), match.group(2), match.group(3))
         check_number = '%s%s%s' % (
@@ -111,5 +111,5 @@ class CASocialInsuranceNumberField(Field):
             match.group(2),
             match.group(3))
         if not luhn.is_valid(check_number):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return number

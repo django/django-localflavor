@@ -35,7 +35,7 @@ class MDLicensePlateValidator(RegexValidator):
     def __call__(self, value):
         value = value.upper()
         if not self._is_valid(value):
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
     def _is_valid(self, value):
         return any([

@@ -35,14 +35,14 @@ class IDPostCodeField(Field):
 
         value = value.strip()
         if not postcode_re.search(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         if int(value) < 10110:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # 1xxx0
         if value[0] == '1' and value[4] != '0':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s' % (value,)
 
@@ -106,7 +106,7 @@ class IDLicensePlateField(Field):
     def _validate_regex_match(self, plate_number):
         matches = plate_re.search(plate_number)
         if matches is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         prefix = matches.group('prefix')
         suffix = matches.group('suffix')
         number = matches.group('number')
@@ -115,41 +115,41 @@ class IDLicensePlateField(Field):
     def _validate_number(self, number):
         # Number can't be zero.
         if number == '0':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def _validate_known_codes_range(self, number, prefix, suffix):
         # Known codes range is 12-124
         if prefix in self.foreign_vehicles_prefixes and not (12 <= int(number) <= 124):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if len(number) == 5 and not (12 <= int(suffix) <= 124):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def _validate_numeric_suffix(self, suffix):
         # suffix must be numeric and non-empty
         if re.match(r'^\d+$', suffix) is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def _validate_non_numeric_suffix(self, suffix):
         # suffix must be non-numeric
         if suffix is not None and re.match(r'^[A-Z]{,3}$', suffix) is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def _validate_prefix(self, prefix):
         # Load data in memory only when it is required, see also #17275
         from .id_choices import LICENSE_PLATE_PREFIX_CHOICES
         # Make sure prefix is in the list of known codes.
         if prefix not in [choice[0] for choice in LICENSE_PLATE_PREFIX_CHOICES]:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def _validate_ri(self, prefix, suffix):
         # RI plates don't have suffix.
         if prefix == 'RI' and suffix is not None and suffix != '':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def _validate_jakarta(self, prefix, suffix):
         # Only Jakarta (prefix B) can have 3 letter suffix.
         if suffix is not None and len(suffix) == 3 and prefix != 'B':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class IDNationalIdentityNumberField(Field):
@@ -174,10 +174,10 @@ class IDNationalIdentityNumberField(Field):
         value = re.sub(r'[\s.]', '', force_str(value))
 
         if not nik_re.search(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         if int(value) == 0:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         year = int(value[10:12])
         month = int(value[8:10])
@@ -189,12 +189,12 @@ class IDNationalIdentityNumberField(Field):
         current_year = time.localtime().tm_year
         if year < int(str(current_year)[-2:]):
             if not IDNationalIdentityNumberField._valid_nik_date(2000 + int(year), month, day):
-                raise ValidationError(self.error_messages['invalid'])
+                raise ValidationError(self.error_messages['invalid'], code='invalid')
         elif not IDNationalIdentityNumberField._valid_nik_date(1900 + int(year), month, day):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         if value[:6] == '000000' or value[12:] == '0000':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s.%s.%s.%s' % (value[:2], value[2:6], value[6:12], value[12:])
 

@@ -173,7 +173,10 @@ class IBANValidator:
             elif 'A' <= x <= 'Z':
                 value_digits += str(ord(x) - 55)
             else:
-                raise ValidationError(_('%s is not a valid character for IBAN.') % x)
+                raise ValidationError(
+                    _('%(character)s is not a valid character for IBAN.'),
+                    code='invalid',
+                    params={'character': x})
 
         # 3. The remainder of the number above when divided by 97 is then subtracted from 98.
         return '%02d' % (98 - int(value_digits) % 97)
@@ -194,16 +197,27 @@ class IBANValidator:
         if country_code in self.validation_countries:
 
             if self.validation_countries[country_code] != len(value):
-                msg_params = {'country_code': country_code, 'number': self.validation_countries[country_code]}
-                raise ValidationError(_('%(country_code)s IBANs must contain %(number)s characters.') % msg_params)
+                raise ValidationError(
+                    _('%(country_code)s IBANs must contain %(number)s characters.'),
+                    code='invalid',
+                    params={'country_code': country_code, 'number': self.validation_countries[country_code]},
+                )
 
         else:
-            raise ValidationError(_('%s is not a valid country code for IBAN.') % country_code)
+            raise ValidationError(
+                _('%(country_code)s is not a valid country code for IBAN.'),
+                code='invalid',
+                params={'country_code': country_code},
+            )
         if self.include_countries and country_code not in self.include_countries:
-            raise ValidationError(_('%s IBANs are not allowed in this field.') % country_code)
+            raise ValidationError(
+                _('%(country_code)s IBANs are not allowed in this field.'),
+                code='invalid',
+                params={'country_code': country_code},
+            )
 
         if self.iban_checksum(value) != value[2:4]:
-            raise ValidationError(_('Not a valid IBAN.'))
+            raise ValidationError(_('Not a valid IBAN.'), code='invalid')
 
 
 @deconstructible
@@ -229,26 +243,38 @@ class BICValidator:
         # Length is 8 or 11.
         bic_length = len(value)
         if bic_length not in (8, 11):
-            raise ValidationError(_('BIC codes have either 8 or 11 characters.'))
+            raise ValidationError(_('BIC codes have either 8 or 11 characters.'), code='invalid')
 
         # BIC is alphanumeric
         if any(char not in string.ascii_uppercase + string.digits for char in value):
-            raise ValidationError(_('BIC codes only contain alphabet letters and digits.'))
+            raise ValidationError(_('BIC codes only contain alphabet letters and digits.'), code='invalid')
 
         # First 4 letters are A - Z.
         institution_code = value[:4]
         if any(char not in string.ascii_uppercase for char in institution_code):
-            raise ValidationError(_('%s is not a valid institution code.') % institution_code)
+            raise ValidationError(
+                _('%(institution_code)s is not a valid institution code.'),
+                code='invalid',
+                params={'institution_code': institution_code},
+            )
 
         # Letters 5 and 6 consist of an ISO 3166-1 alpha-2 country code.
         country_code = value[4:6]
         if country_code not in ISO_3166_1_ALPHA2_COUNTRY_CODES:
-            raise ValidationError(_('%s is not a valid country code.') % country_code)
+            raise ValidationError(
+                _('%(country_code)s is not a valid country code.'),
+                code='invalid',
+                params={'country_code': country_code},
+            )
 
         # Letters 7 and 8 are a "location" code. As per ISO20022 Payments
         # Maintenance 2009 document, they may only be from the charset [A-Z2-9][A-NP-Z0-9]
         if value[6] == '1' or value[7] == 'O':
-            raise ValidationError(_('%s is not a valid location code.') % value[6:8])
+            raise ValidationError(
+                _('%(location_code)s is not a valid location code.'),
+                code='invalid',
+                params={'location_code': value[6:8]},
+            )
 
 
 @deconstructible

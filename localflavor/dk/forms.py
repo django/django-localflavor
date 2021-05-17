@@ -10,7 +10,7 @@ from .dk_postalcodes import DK_POSTALCODES
 
 def postal_code_validator(value):
     if value not in [entry[0] for entry in DK_POSTALCODES]:
-        raise ValidationError(_('Enter a postal code in the format XXXX.'))
+        raise ValidationError(_('Enter a postal code in the format XXXX.'), code='invalid')
 
 
 class DKPostalCodeField(fields.CharField):

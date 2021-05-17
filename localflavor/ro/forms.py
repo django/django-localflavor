@@ -56,7 +56,7 @@ class ROCIFField(RegexField):
             checksum = 0
 
         if checksum != int(value[0]):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value[::-1]
 
@@ -93,7 +93,7 @@ class ROCNPField(RegexField):
         try:
             datetime.date(int(value[1:3]), int(value[3:5]), int(value[5:7]))
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # checksum
         key = '279146358279'
@@ -109,7 +109,7 @@ class ROCNPField(RegexField):
             checksum = 1
 
         if checksum != int(value[12]):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 
@@ -162,7 +162,7 @@ class ROCountyField(Field):
             if entry[1] == value:
                 return entry[0]
 
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class ROCountySelect(Select):

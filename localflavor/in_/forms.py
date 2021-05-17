@@ -64,7 +64,7 @@ class INStateField(Field):
                 return force_str(STATES_NORMALIZED[value.strip().lower()])
             except KeyError:
                 pass
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class INAadhaarNumberField(Field):
@@ -99,12 +99,12 @@ class INAadhaarNumberField(Field):
 
         match = re.match(aadhaar_re, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         part1, part2, part3 = match.groupdict()['part1'], match.groupdict()['part2'], match.groupdict()['part3']
 
         # all the parts can't be zero
         if part1 == '0000' and part2 == '0000' and part3 == '0000':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s %s %s' % (part1, part2, part3)
 

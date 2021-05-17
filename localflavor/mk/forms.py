@@ -71,11 +71,11 @@ class UMCNField(RegexField):
             return self.empty_value
 
         if not self._validate_date_part(value):
-            raise ValidationError(self.error_messages['date'])
+            raise ValidationError(self.error_messages['date'], code='date')
         if self._validate_checksum(value):
             return value
         else:
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
 
     def _validate_checksum(self, value):
         a, b, c, d, e, f, g, h, i, j, k, l, checksum = [int(digit) for digit in value]

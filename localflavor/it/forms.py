@@ -81,13 +81,13 @@ class ITSocialSecurityNumberField(RegexField):
             try:
                 return vat_number_validation(value)
             except ValueError:
-                raise ValidationError(self.error_messages['invalid'])
+                raise ValidationError(self.error_messages['invalid'], code='invalid')
         # Person SSN
         else:
             try:
                 return ssn_validation(value)
             except (ValueError, IndexError):
-                raise ValidationError(self.error_messages['invalid'])
+                raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class ITVatNumberField(Field):
@@ -104,4 +104,4 @@ class ITVatNumberField(Field):
         try:
             return vat_number_validation(value)
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')

@@ -91,4 +91,4 @@ class NZBankAccountNumberField(Field):
             last = '0%s' % match.group(4) if len(match.group(4)) == 2 else match.group(4)
             return '%s-%s-%s-%s' % (match.group(1),
                                     match.group(2), match.group(3), last)
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')

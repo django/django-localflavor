@@ -34,7 +34,7 @@ class ZAIDField(CharField):
         match = re.match(id_re, value)
 
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         g = match.groupdict()
 
@@ -44,10 +44,10 @@ class ZAIDField(CharField):
             # There is no way to guess the century of a ZA ID number
             date(int(g['yy']) + 2000, int(g['mm']), int(g['dd']))
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         if not luhn.is_valid(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 

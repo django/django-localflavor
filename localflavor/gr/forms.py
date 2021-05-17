@@ -47,11 +47,11 @@ class GRTaxNumberCodeField(Field):
 
         val = re.sub(r'[\-\s\(\)]', '', force_str(value))
         if len(val) < 9:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if not all(char.isdigit() for char in val):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if not self.allow_test_value and val == '000000000':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         digits = list(map(int, val))
         digits1 = digits[:-1]
         digits1.reverse()
@@ -60,7 +60,7 @@ class GRTaxNumberCodeField(Field):
         if mod == 10:
             mod = 0
         if mod != check:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return val
 
 
@@ -84,7 +84,7 @@ class GRSocialSecurityNumberCodeField(RegexField):
         try:
             datetime.datetime.strptime(val[:6], '%d%m%y')
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def clean(self, value):
         value = super().clean(value)
@@ -92,14 +92,14 @@ class GRSocialSecurityNumberCodeField(RegexField):
             return self.empty_value
         val = re.sub(r'[\-\s]', '', force_str(value))
         if not val or len(val) < 11:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if self.allow_test_value and val == '00000000000':
             return val
         if not all(char.isdigit() for char in val):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         self.check_date(val)
         if not luhn.is_valid(val):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return val
