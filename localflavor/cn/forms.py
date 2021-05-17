@@ -112,17 +112,17 @@ class CNIDCardField(CharField):
             return self.empty_value
         # Check whether this ID card number has valid format
         if not re.match(ID_CARD_RE, value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         # Check the birthday of the ID card number.
         if not self.has_valid_birthday(value):
-            raise ValidationError(self.error_messages['birthday'])
+            raise ValidationError(self.error_messages['birthday'], code='birthday' )
         # Check the location of the ID card number.
         if not self.has_valid_location(value):
-            raise ValidationError(self.error_messages['location'])
+            raise ValidationError(self.error_messages['location'], code='location')
         # Check the checksum of the ID card number.
         value = value.upper()
         if not self.has_valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return '%s' % value
 
     def has_valid_birthday(self, value):

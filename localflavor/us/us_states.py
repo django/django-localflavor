@@ -112,7 +112,7 @@ OBSOLETE_STATES = (
 
 US_STATES = lazy(lambda: tuple(sorted(
     CONTIGUOUS_STATES + NON_CONTIGUOUS_STATES,
-    key=operator.itemgetter(0))), tuple)()
+    key=operator.itemgetter(1))), tuple)()
 """
 This docstring is not read by Sphinx, so it has been copied to
 docs/localflavor/us.rst.

@@ -18,12 +18,11 @@ class INLocalFlavorTests(SimpleTestCase):
 <option value="GJ">Gujarat</option>
 <option value="RJ">Rajasthan</option>
 <option value="HP">Himachal Pradesh</option>
-<option value="JK">Jammu and Kashmir</option>
 <option value="TG">Telangana</option>
 <option value="AR">Arunachal Pradesh</option>
 <option value="AS">Assam</option>
 <option value="BR">Bihar</option>
-<option value="CG">Chattisgarh</option>
+<option value="CT">Chattisgarh</option>
 <option value="HR">Haryana</option>
 <option value="JH">Jharkhand</option>
 <option value="MP">Madhya Pradesh</option>
@@ -31,19 +30,20 @@ class INLocalFlavorTests(SimpleTestCase):
 <option value="ML">Meghalaya</option>
 <option value="MZ">Mizoram</option>
 <option value="NL">Nagaland</option>
-<option value="OR">Orissa</option>
+<option value="OR">Odisha</option>
 <option value="PB">Punjab</option>
 <option value="SK">Sikkim</option>
 <option value="TR">Tripura</option>
-<option value="UA">Uttarakhand</option>
+<option value="UT">Uttarakhand</option>
 <option value="WB">West Bengal</option>
-<option value="AN">Andaman and Nicobar</option>
+<option value="AN">Andaman and Nicobar Islands</option>
 <option value="CH">Chandigarh</option>
-<option value="DN">Dadra and Nagar Haveli</option>
-<option value="DD">Daman and Diu</option>
+<option value="DH">Dadra and Nagar Haveli and Daman and Diu</option>
 <option value="DL">Delhi</option>
+<option value="JK">Jammu and Kashmir</option>
 <option value="LD">Lakshadweep</option>
-<option value="PY">Pondicherry</option>
+<option value="LA">Ladakh</option>
+<option value="PY">Puducherry</option>
 </select>'''
         self.assertHTMLEqual(f.render('state', 'AP'), out)
 

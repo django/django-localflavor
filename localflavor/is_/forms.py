@@ -36,7 +36,7 @@ class ISIdNumberField(RegexField):
         if self._validate(value):
             return self._format(value)
         else:
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
 
     def _canonify(self, value):
         """Returns the value as only digits."""

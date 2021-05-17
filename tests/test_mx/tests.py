@@ -56,11 +56,11 @@ class MXLocalFlavorTests(TestCase):
 <option value="BCN">Baja California</option>
 <option value="BCS">Baja California Sur</option>
 <option value="CAM">Campeche</option>
+<option value="CDMX">Ciudad de México</option>
 <option value="CHH">Chihuahua</option>
 <option value="CHP">Chiapas</option>
 <option value="COA">Coahuila</option>
 <option value="COL">Colima</option>
-<option value="DIF">Distrito Federal</option>
 <option value="DUR">Durango</option>
 <option value="GRO">Guerrero</option>
 <option value="GUA">Guanajuato</option>
@@ -94,11 +94,11 @@ class MXLocalFlavorTests(TestCase):
 <option value="BCN">Baja California</option>
 <option value="BCS">Baja California Sur</option>
 <option value="CAM">Campeche</option>
+<option value="CDMX">Ciudad de México</option>
 <option value="CHH">Chihuahua</option>
 <option value="CHP">Chiapas</option>
 <option value="COA">Coahuila</option>
 <option value="COL">Colima</option>
-<option value="DIF">Distrito Federal</option>
 <option value="DUR">Durango</option>
 <option value="GRO">Guerrero</option>
 <option value="GUA">Guanajuato</option>

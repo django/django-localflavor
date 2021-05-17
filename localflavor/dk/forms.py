@@ -10,7 +10,7 @@ from .dk_postalcodes import DK_POSTALCODES
 
 def postal_code_validator(value):
     if value not in [entry[0] for entry in DK_POSTALCODES]:
-        raise ValidationError(_('Enter a postal code in the format XXXX.'))
+        raise ValidationError(_('Enter a postal code in the format XXXX.'), code='invalid')
 
 
 class DKPostalCodeField(fields.CharField):
@@ -22,5 +22,5 @@ class DKPostalCodeField(fields.CharField):
 class DKMunicipalitySelect(widgets.Select):
     """A Select widget that uses a list of Danish municipalities (kommuner) as its choices."""
 
-    def __init__(self, attrs=None, *args, **kwargs):
-        super().__init__(attrs, choices=DK_MUNICIPALITIES, *args, **kwargs)
+    def __init__(self, attrs=None):
+        super().__init__(attrs, choices=DK_MUNICIPALITIES)

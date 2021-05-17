@@ -1,15 +1,20 @@
 inherits:
-  - strictness_high
+  - strictness_low
+
+uses:
+  - django
 
 pylint:
   options:
     max-line-length: 120
+  disable:
+    - import-outside-toplevel
+    - no-else-return
+    - no-else-raise
 
 pep8:
   options:
     max-line-length: 120
-  disable:
-    - N802
 
 mccabe:
   options:

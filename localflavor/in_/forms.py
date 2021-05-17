@@ -1,6 +1,7 @@
 """India-specific Form helpers."""
 
 import re
+import warnings
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -63,7 +64,7 @@ class INStateField(Field):
                 return force_str(STATES_NORMALIZED[value.strip().lower()])
             except KeyError:
                 pass
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class INAadhaarNumberField(Field):
@@ -98,12 +99,12 @@ class INAadhaarNumberField(Field):
 
         match = re.match(aadhaar_re, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         part1, part2, part3 = match.groupdict()['part1'], match.groupdict()['part2'], match.groupdict()['part3']
 
         # all the parts can't be zero
         if part1 == '0000' and part2 == '0000' and part3 == '0000':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s %s %s' % (part1, part2, part3)
 
@@ -117,7 +118,12 @@ class INStateSelect(Select):
        Added Telangana to list of states. More details at
        https://en.wikipedia.org/wiki/Telangana#Bifurcation_of_Andhra_Pradesh
 
+    .. versionchanged:: 3.1
+
+       Updated Indian states and union territories names and code as per iso 3166
+       (https://www.iso.org/obp/ui/#iso:code:3166:IN)
     """
 
     def __init__(self, attrs=None):
+        warnings.warn("Choices have changed for INStateSelect in localflavor 3.1. See changelog for details.")
         super().__init__(attrs, choices=STATE_CHOICES)

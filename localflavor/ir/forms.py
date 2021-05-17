@@ -77,7 +77,7 @@ class IRIDNumberField(Field):
 
         match = self.id_number_re.match(value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         check = int(value[9])
         s = sum([int(value[x]) * (10 - x) for x in range(9)]) % 11
@@ -85,4 +85,4 @@ class IRIDNumberField(Field):
         if (2 > s == check) or (s >= 2 and check + s == 11):
             return value
         else:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')

@@ -51,7 +51,7 @@ class CLRutField(RegexField):
         if self._algorithm(rut) == verificador:
             return self._format(rut, verificador)
         else:
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
 
     def _algorithm(self, rut):
         """Takes RUT in pure canonical form, calculates the verifier digit."""

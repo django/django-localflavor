@@ -1,13 +1,13 @@
 sudo: false
 language: python
 cache: pip
-dist: xenial
+dist: bionic
 
 matrix:
   include:
-    - python: 3.6
+    - python: 3.9
       env: TOXENV=docs
-    - python: 3.5
+    - python: 3.8
       env: TOXENV=prospector
     - python: 3.5
       env: TOXENV=py35-2.2
@@ -36,22 +36,34 @@ matrix:
     - python: pypy3
       env: TOXENV=pypy3-3.1
     - python: 3.6
-      env: TOXENV=py36-master
+      env: TOXENV=py36-3.2
     - python: 3.7
-      env: TOXENV=py37-master
+      env: TOXENV=py37-3.2
     - python: 3.8
-      env: TOXENV=py38-master
+      env: TOXENV=py38-3.2
+    - python: 3.9
+      env: TOXENV=py39-3.2
     - python: pypy3
-      env: TOXENV=pypy3-master
+      env: TOXENV=pypy3-3.2
+    - python: 3.8
+      env: TOXENV=py38-main
+    - python: 3.9
+      env: TOXENV=py39-main
+# TODO: Enable when Python 3.10 is released.
+#    - python: 3.10
+#      env: TOXENV=py310-main
+    - python: pypy3
+      env: TOXENV=pypy3-main
   allow_failures:
-    - python: 3.6
-      env: TOXENV=py36-master
-    - python: 3.7
-      env: TOXENV=py37-master
     - python: 3.8
-      env: TOXENV=py38-master
+      env: TOXENV=py38-main
+    - python: 3.9
+      env: TOXENV=py39-main
+# TODO: Enable when Python 3.10 is released.
+#    - python: 3.10
+#      env: TOXENV=py10-main
     - python: pypy3
-      env: TOXENV=pypy3-master
+      env: TOXENV=pypy3-main
 install:
     - pip wheel -r tests/requirements.txt codecov
     - pip install virtualenv codecov tox

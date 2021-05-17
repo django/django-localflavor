@@ -68,19 +68,20 @@ class USSocialSecurityNumberField(CharField):
             return self.empty_value
         match = re.match(ssn_re, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         area, group, serial = match.groupdict()['area'], match.groupdict()['group'], match.groupdict()['serial']
 
         # First pass: no blocks of all zeroes.
         if area == '000' or group == '00' or serial == '0000':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Second pass: promotional and otherwise permanently invalid numbers.
+        # pylint: disable=too-many-boolean-expressions
         if (area == '666' or
                 area.startswith('9') or
                 (area == '078' and group == '05' and serial == '1120') or
                 (area == '219' and group == '09' and serial == '9999')):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return '%s-%s-%s' % (area, group, serial)
 
 
@@ -111,7 +112,7 @@ class USStateField(Field):
                 return STATES_NORMALIZED[value.strip().lower()]
             except KeyError:
                 pass
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class USStateSelect(Select):

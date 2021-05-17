@@ -65,7 +65,7 @@ class HRJMBGField(Field):
 
         matches = jmbg_re.search(value)
         if matches is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Make sure the date part is correct.
         dd = int(matches.group('dd'))
@@ -74,7 +74,7 @@ class HRJMBGField(Field):
         try:
             datetime.date(yyy, mm, dd)
         except ValueError:
-            raise ValidationError(self.error_messages['date'])
+            raise ValidationError(self.error_messages['date'], code='date')
 
         # Validate checksum.
         k = matches.group('k')
@@ -83,11 +83,11 @@ class HRJMBGField(Field):
             checksum += i * (int(value[j]) + int(value[13 - i]))
         m = 11 - checksum % 11
         if m == 10:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if m == 11 and k != '0':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if not str(m) == k:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s' % (value, )
 
@@ -148,17 +148,17 @@ class HRLicensePlateField(Field):
 
         matches = plate_re.search(value)
         if matches is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Make sure the prefix is in the list of known codes.
         prefix = matches.group('prefix')
         if prefix not in [choice[0] for choice in HR_LICENSE_PLATE_PREFIX_CHOICES]:
-            raise ValidationError(self.error_messages['area'])
+            raise ValidationError(self.error_messages['area'], code='area')
 
         # Make sure the number portion is not zero.
         number = matches.group('number')
         if int(number) == 0:
-            raise ValidationError(self.error_messages['number'])
+            raise ValidationError(self.error_messages['number'], code='number')
 
         return '%s %s-%s' % (prefix, number, matches.group('suffix'))
 
@@ -183,11 +183,11 @@ class HRPostalCodeField(Field):
 
         value = value.strip()
         if not postal_code_re.search(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Make sure the number is in valid range.
         if not 9999 < int(value) < 60000:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s' % value
 
@@ -215,14 +215,14 @@ class HRJMBAGField(Field):
 
         matches = jmbag_re.search(value)
         if matches is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Make sure the issue number is not zero.
         if matches.group('copy') == '0':
-            raise ValidationError(self.error_messages['copy'])
+            raise ValidationError(self.error_messages['copy'], code='copy')
 
         # Validate checksum using Luhn algorithm.
         if not luhn.is_valid(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s' % value

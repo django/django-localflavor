@@ -63,7 +63,7 @@ class SGNRICFINField(CharField):
         value = re.sub(r'(\s+)', '', force_str(value.upper()))
         match = NRIC_FIN_RE.search(value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         value = match.group()
         digit_list = list(value[1:-1])
@@ -78,4 +78,4 @@ class SGNRICFINField(CharField):
         if checksum == value[len(value) - 1]:
             return value
 
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')

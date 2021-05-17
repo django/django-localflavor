@@ -43,7 +43,7 @@ class CONITField(RegexField):
             return self.empty_value
         value, cd = self._canon(value)
         if self._calc_cd(value) != cd:
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return self._format(value, cd)
 
     def _canon(self, nit):

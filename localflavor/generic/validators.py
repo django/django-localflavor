@@ -15,8 +15,8 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 #
 # https://www.swift.com/standards/data-standards/iban
 #
-# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 78 of the IBAN Registry document which was published
-# in August 2017.
+# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 89 of the IBAN Registry document which was published
+# in March 2021.
 #
 # Other Resources:
 #
@@ -44,6 +44,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'DK': 18,  # Denmark
                             'DO': 28,  # Dominican Republic
                             'EE': 20,  # Estonia
+                            'EG': 29,  # Egypt
                             'ES': 24,  # Spain
                             'FI': 18,  # Finland
                             'FO': 18,  # Faroe Islands
@@ -74,6 +75,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'LT': 20,  # Lithuania
                             'LU': 20,  # Luxembourg
                             'LV': 21,  # Latvia
+                            'LY': 25,  # Libya
                             'MC': 27,  # Monaco
                             'MD': 24,  # Moldova
                             'ME': 22,  # Montenegro
@@ -121,7 +123,6 @@ NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
                               'CM': 27,  # Cameroon
                               'CV': 25,  # Cape Verde
                               'DZ': 24,  # Algeria
-                              'EG': 27,  # Egypt
                               'GA': 27,  # Gabon
                               'IR': 26,  # Iran
                               'MG': 27,  # Madagascar
@@ -172,7 +173,10 @@ class IBANValidator:
             elif 'A' <= x <= 'Z':
                 value_digits += str(ord(x) - 55)
             else:
-                raise ValidationError(_('%s is not a valid character for IBAN.') % x)
+                raise ValidationError(
+                    _('%(character)s is not a valid character for IBAN.'),
+                    code='invalid',
+                    params={'character': x})
 
         # 3. The remainder of the number above when divided by 97 is then subtracted from 98.
         return '%02d' % (98 - int(value_digits) % 97)
@@ -184,7 +188,7 @@ class IBANValidator:
         https://en.wikipedia.org/wiki/International_Bank_Account_Number#Validating_the_IBAN
         """
         if value is None:
-            return value
+            return
 
         value = value.upper().replace(' ', '').replace('-', '')
 
@@ -193,16 +197,27 @@ class IBANValidator:
         if country_code in self.validation_countries:
 
             if self.validation_countries[country_code] != len(value):
-                msg_params = {'country_code': country_code, 'number': self.validation_countries[country_code]}
-                raise ValidationError(_('%(country_code)s IBANs must contain %(number)s characters.') % msg_params)
+                raise ValidationError(
+                    _('%(country_code)s IBANs must contain %(number)s characters.'),
+                    code='invalid',
+                    params={'country_code': country_code, 'number': self.validation_countries[country_code]},
+                )
 
         else:
-            raise ValidationError(_('%s is not a valid country code for IBAN.') % country_code)
+            raise ValidationError(
+                _('%(country_code)s is not a valid country code for IBAN.'),
+                code='invalid',
+                params={'country_code': country_code},
+            )
         if self.include_countries and country_code not in self.include_countries:
-            raise ValidationError(_('%s IBANs are not allowed in this field.') % country_code)
+            raise ValidationError(
+                _('%(country_code)s IBANs are not allowed in this field.'),
+                code='invalid',
+                params={'country_code': country_code},
+            )
 
         if self.iban_checksum(value) != value[2:4]:
-            raise ValidationError(_('Not a valid IBAN.'))
+            raise ValidationError(_('Not a valid IBAN.'), code='invalid')
 
 
 @deconstructible
@@ -221,33 +236,45 @@ class BICValidator:
 
     def __call__(self, value):
         if value is None:
-            return value
+            return
 
         value = value.upper()
 
         # Length is 8 or 11.
         bic_length = len(value)
-        if bic_length != 8 and bic_length != 11:
-            raise ValidationError(_('BIC codes have either 8 or 11 characters.'))
+        if bic_length not in (8, 11):
+            raise ValidationError(_('BIC codes have either 8 or 11 characters.'), code='invalid')
 
         # BIC is alphanumeric
         if any(char not in string.ascii_uppercase + string.digits for char in value):
-            raise ValidationError(_('BIC codes only contain alphabet letters and digits.'))
+            raise ValidationError(_('BIC codes only contain alphabet letters and digits.'), code='invalid')
 
         # First 4 letters are A - Z.
         institution_code = value[:4]
         if any(char not in string.ascii_uppercase for char in institution_code):
-            raise ValidationError(_('%s is not a valid institution code.') % institution_code)
+            raise ValidationError(
+                _('%(institution_code)s is not a valid institution code.'),
+                code='invalid',
+                params={'institution_code': institution_code},
+            )
 
         # Letters 5 and 6 consist of an ISO 3166-1 alpha-2 country code.
         country_code = value[4:6]
         if country_code not in ISO_3166_1_ALPHA2_COUNTRY_CODES:
-            raise ValidationError(_('%s is not a valid country code.') % country_code)
+            raise ValidationError(
+                _('%(country_code)s is not a valid country code.'),
+                code='invalid',
+                params={'country_code': country_code},
+            )
 
         # Letters 7 and 8 are a "location" code. As per ISO20022 Payments
         # Maintenance 2009 document, they may only be from the charset [A-Z2-9][A-NP-Z0-9]
-        if '1' == value[6] or 'O' == value[7]:
-            raise ValidationError(_('%s is not a valid location code.') % value[6:8])
+        if value[6] == '1' or value[7] == 'O':
+            raise ValidationError(
+                _('%(location_code)s is not a valid location code.'),
+                code='invalid',
+                params={'location_code': value[6:8]},
+            )
 
 
 @deconstructible
@@ -271,7 +298,7 @@ class EANValidator:
 
     def __call__(self, value):
         if value is None:
-            return value
+            return
         if self.strip_nondigits:
             value = re.compile(r'[^\d]+').sub('', value)
         if not ean.is_valid(value):

@@ -60,9 +60,9 @@ class ILIDNumberField(Field):
 
         match = id_number_re.match(value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         value = match.group('number') + match.group('check')
         if not luhn.is_valid(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value

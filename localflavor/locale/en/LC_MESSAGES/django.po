@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-25 22:48+0100\n"
+"POT-Creation-Date: 2021-05-13 11:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -524,7 +524,7 @@ msgid ""
 "1234567890 format."
 msgstr ""
 
-#: ch/forms.py:127
+#: ch/forms.py:126
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
 
@@ -4858,15 +4858,15 @@ msgstr ""
 msgid "Select Region"
 msgstr ""
 
-#: fr/forms.py:101
+#: fr/forms.py:105
 msgid "Enter a valid French National Identification number."
 msgstr ""
 
-#: fr/forms.py:199
+#: fr/forms.py:214
 msgid "Enter a valid French SIREN number."
 msgstr ""
 
-#: fr/forms.py:222
+#: fr/forms.py:237
 msgid "Enter a valid French SIRET number."
 msgstr ""
 
@@ -5482,58 +5482,63 @@ msgstr ""
 msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:175
+#: generic/validators.py:176
 #, python-format
 msgid "%s is not a valid character for IBAN."
 msgstr ""
 
-#: generic/validators.py:197
+#: generic/validators.py:198
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
-#: generic/validators.py:200
+#: generic/validators.py:201
 #, python-format
 msgid "%s is not a valid country code for IBAN."
 msgstr ""
 
-#: generic/validators.py:202
+#: generic/validators.py:203
 #, python-format
 msgid "%s IBANs are not allowed in this field."
 msgstr ""
 
-#: generic/validators.py:205
+#: generic/validators.py:206
 msgid "Not a valid IBAN."
 msgstr ""
 
-#: generic/validators.py:231
+#: generic/validators.py:232
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#: generic/validators.py:235
+#: generic/validators.py:236
 msgid "BIC codes only contain alphabet letters and digits."
 msgstr ""
 
-#: generic/validators.py:240
+#: generic/validators.py:241
 #, python-format
 msgid "%s is not a valid institution code."
 msgstr ""
 
-#: generic/validators.py:245
+#: generic/validators.py:246
 #, python-format
 msgid "%s is not a valid country code."
 msgstr ""
 
-#: generic/validators.py:256
+#: generic/validators.py:251
+#, python-format
+msgid "%s is not a valid location code."
+msgstr ""
+
+#: generic/validators.py:262
 msgid "Not a valid EAN code."
 msgstr ""
 
-#: generic/validators.py:331
+#: generic/validators.py:337
 #, python-format
 msgid "%(country_code)s is not a valid country code."
 msgstr ""
 
-#: generic/validators.py:332
+#: generic/validators.py:338
 #, python-format
 msgid "%(vatin)s is not a valid VAT identification number."
 msgstr ""
@@ -6283,24 +6288,24 @@ msgstr ""
 msgid "Zanjan"
 msgstr ""
 
-#: is_/forms.py:21
+#: is_/forms.py:19
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
 msgstr ""
 
-#: is_/forms.py:22
+#: is_/forms.py:20
 msgid "The Icelandic identification number is not valid."
 msgstr ""
 
-#: it/forms.py:24 nl/validators.py:13
+#: it/forms.py:22 nl/validators.py:13
 msgid "Enter a valid zip code."
 msgstr ""
 
-#: it/forms.py:69
+#: it/forms.py:66
 msgid "Enter a valid Tax code."
 msgstr ""
 
-#: it/forms.py:100 ua/forms.py:31
+#: it/forms.py:97 ua/forms.py:31
 msgid "Enter a valid VAT number."
 msgstr ""
 
@@ -10750,7 +10755,7 @@ msgstr ""
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr ""
 
-#: us/forms.py:97
+#: us/forms.py:98
 msgid "Enter a U.S. state or territory."
 msgstr ""
 

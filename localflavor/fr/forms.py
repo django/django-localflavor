@@ -114,7 +114,7 @@ class FRNationalIdentificationNumber(CharField):
 
         match = nin_re.match(value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Extract all parts of social number
         gender = match.group('gender')
@@ -133,10 +133,10 @@ class FRNationalIdentificationNumber(CharField):
                                                                                      year_of_birth)
 
         if person_unique_number == '000':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         if control_key > 97:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         control_number = int(gender + year_of_birth + month_of_birth +
                              department_of_origin.replace('A', '0').replace('B', '0') +
@@ -144,7 +144,7 @@ class FRNationalIdentificationNumber(CharField):
         if (97 - control_number % 97) == control_key:
             return value
         else:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def _clean_department_and_commune(self, commune_of_origin, current_year, department_of_origin, year_of_birth):
         if department_of_origin in ['20', '2A', '2B']:
@@ -159,21 +159,21 @@ class FRNationalIdentificationNumber(CharField):
         """Departments number 20, 2A and 2B represent Corsica"""
         # For people born before 1976, Corsica number was 20
         if current_year < int(year_of_birth) < 76 and department_of_origin != '20':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         # For people born from 1976, Corsica dep number is either 2A or 2B
         if (int(year_of_birth) > 75 and department_of_origin not in ['2A', '2B']):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def _check_overseas(self, commune_of_origin, current_year, department_of_origin, year_of_birth):
         """Overseas department numbers starts with 97 or 98 and are 3 digits long"""
         overseas_department_of_origin = department_of_origin + commune_of_origin[:1]
         overseas_commune_of_origin = commune_of_origin[1:]
         if department_of_origin == '97' and int(overseas_department_of_origin) not in range(971, 978):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         elif department_of_origin == '98' and int(overseas_department_of_origin) not in range(984, 989):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if int(overseas_commune_of_origin) < 1 or int(overseas_commune_of_origin) > 90:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def _check_foreign_countries(self, commune_of_origin, current_year, department_of_origin, year_of_birth):
         """
@@ -181,7 +181,7 @@ class FRNationalIdentificationNumber(CharField):
         In this case, commune_of_origin is the INSEE country code, must be [001-990]
         """
         if int(commune_of_origin) < 1 or int(commune_of_origin) > 990:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class FRSIRENENumberMixin:
@@ -194,7 +194,7 @@ class FRSIRENENumberMixin:
 
         value = value.replace(' ', '').replace('-', '')
         if not self.r_valid.match(value) or not luhn.is_valid(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value
 
 
@@ -245,7 +245,7 @@ class FRSIRETField(FRSIRENENumberMixin, CharField):
         value = value.replace(' ', '').replace('-', '')
 
         if not luhn.is_valid(value[:9]):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value
 
     def prepare_value(self, value):

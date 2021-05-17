@@ -1,5 +1,6 @@
 """Mexican-specific form helpers."""
 import re
+import warnings
 
 from django.forms import ValidationError
 from django.forms.fields import RegexField, Select
@@ -44,6 +45,7 @@ class MXStateSelect(Select):
     """A Select widget that uses a list of Mexican states as its choices."""
 
     def __init__(self, attrs=None):
+        warnings.warn("Choices have changed for MXStateSelect in localflavor 3.1. See changelog for details.")
         super().__init__(attrs, choices=STATE_CHOICES)
 
 
@@ -116,9 +118,9 @@ class MXRFCField(RegexField):
         value = value.upper()
         if self._has_homoclave(value):
             if not value[-1] == self._checksum(value[:-1]):
-                raise ValidationError(self.error_messages['invalid_checksum'])
+                raise ValidationError(self.error_messages['invalid_checksum'], code='invalid_checksum')
         if self._has_inconvenient_word(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value
 
     def _has_homoclave(self, rfc):
@@ -196,9 +198,9 @@ class MXCLABEField(RegexField):
         if value in self.empty_values:
             return self.empty_value
         if not value.isdigit():
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if not self._checksum(value):
-            raise ValidationError(self.error_messages['invalid_checksum'])
+            raise ValidationError(self.error_messages['invalid_checksum'], code='invalid_checksum')
 
         return value
 
@@ -248,9 +250,9 @@ class MXCURPField(RegexField):
             return self.empty_value
         value = value.upper()
         if value[-1] != self._checksum(value[:-1]):
-            raise ValidationError(self.error_messages['invalid_checksum'])
+            raise ValidationError(self.error_messages['invalid_checksum'], code='invalid_checksum')
         if self._has_inconvenient_word(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value
 
     def _checksum(self, value):
@@ -305,7 +307,7 @@ class MXSocialSecurityNumberField(RegexField):
         if value in self.empty_values:
             return self.empty_value
         if value[-1] != self.__checksum(value[:-1]):
-            raise ValidationError(self.error_messages['invalid_checksum'])
+            raise ValidationError(self.error_messages['invalid_checksum'], code='invalid_checksum')
         return value
 
     def __checksum(self, value):

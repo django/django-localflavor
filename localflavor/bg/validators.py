@@ -31,7 +31,7 @@ class EGNValidator:
 
     def __call__(self, egn):
         if not (len(egn) == 10 and self._check_checksum(egn) and self._check_valid_date(egn)):
-            raise ValidationError(_("The EGN is not valid"))
+            raise ValidationError(_("The EGN is not valid"), code='invalid')
 
 
 @deconstructible
@@ -48,13 +48,13 @@ class EIKValidator:
         try:
             value = list(map(int, value))
         except ValueError:
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
         if not (len(value) in [9, 13] and self._check_eik_base(value)):
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
         if len(value) == 13 and not self._check_eik_extra(value):
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
     def _get_checksum(self, weights, digits):
         checksum = sum(weight * digit for weight, digit in zip(weights, digits))
