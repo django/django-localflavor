@@ -8,15 +8,16 @@ Authors
 * Adrian Holovaty
 * Agustín Scaramuzza
 * Ahmad Zolfaghari
+* Ahmed Shahwan
 * Alex Butum
+* Alexey Kotlyarov
 * Alex Gaynor
 * Alex Hill
 * Alex Zhang
-* Alexey Kotlyarov
 * Alix Martineau
 * Alonisser
-* André Ramos
 * Andreas Pelme
+* André Ramos
 * Andres Torres Marroquin
 * Andrew Godwin
 * Arthur de Jong
@@ -34,8 +35,8 @@ Authors
 * Daniel Roschka
 * Didier 'OdyX' Raboud
 * Diederik van der Boor
-* Dmitry Dygalo
 * d.merc
+* Dmitry Dygalo
 * Douglas Miranda
 * Elliott Fawcett
 * Erik Romijn
@@ -86,6 +87,7 @@ Authors
 * Michał Sałaban
 * Mike Lissner
 * Morgane Alonso
+* Nishit Shah
 * Olivier Sels
 * Olle Vidner
 * Paul Cunnane
@@ -110,9 +112,6 @@ Authors
 * Tom Forbes
 * Trey Hunner
 * Tyler Ball
-* Tom Forbes
 * Vaclav Rehak
 * Venelin Stoykov
 * Vladimir Nani
-* Ahmed Shahwan
-* Nishit Shah
