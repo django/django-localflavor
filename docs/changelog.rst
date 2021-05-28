@@ -68,6 +68,8 @@ Other changes:
 - Added error codes to all `ValidationError`s as recommended by
   `Django's form validation documentation <https://docs.djangoproject.com/en/stable/ref/forms/validation/#raising-validationerror>`_
   (`gh-440 <https://github.com/django/django-localflavor/issues/440>`_).
+- Renamed zh_CN and zh_TW locales to zh_Hans and zh_Hant respectively to match
+  the Django locale names.
 
 
 3.0   (2020-02-19)
