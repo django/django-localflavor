@@ -8,7 +8,7 @@ class BaseKwargsUpdatedField:
     """
     Abstract base class made to conform the DRY principle.
 
-    The initial_options is overrided by the dict in the subclasses and then
+    The initial_options is overridden by the dict in the subclasses and then
     automatically passed to kwargs in the FormField.__init__() method.
     """
 
@@ -28,21 +28,21 @@ class UpperValueMixin:
 
     def to_python(self, value):
         value = super().to_python(value)
-        if value is None:
-            return value
+        if value in self.empty_values:
+            return self.empty_value
         else:
             return value.upper()
 
 
-class BYRegionField(BaseKwargsUpdatedField, forms.TypedChoiceField):
+class BYRegionSelect(forms.Select):
     """
-    A form field that ensures the input is a number representing the region.
+    A Select widget that uses a list of Belarusian regions as its choices.
+
+    .. versionadded:: 4.0
     """
 
-    initial_options = {
-        'choices': BY_REGIONS_CHOICES,
-        'empty_value': None
-    }
+    def __init__(self, attrs=None):
+        super().__init__(attrs, choices=BY_REGIONS_CHOICES)
 
 
 class BYPassNumberField(BaseKwargsUpdatedField, UpperValueMixin, forms.RegexField):
@@ -53,15 +53,15 @@ class BYPassNumberField(BaseKwargsUpdatedField, UpperValueMixin, forms.RegexFiel
     the format of belarussian pass number needs that to be right.
 
     The valid input format is: XX1234567.
+
+    .. versionadded:: 4.0
     """
 
     initial_options = {
-        'regex': r'[A-Z]{2}\d{7}',
-        'max_length': 9,
+        'regex': r'^[A-Z]{2}\d{7}$',
         'error_messages': {
             'invalid': _('Passport number format is: XX1234567')
         },
-        'empty_value': None,
     }
 
 
@@ -74,29 +74,28 @@ class BYPassIdNumberField(BaseKwargsUpdatedField, UpperValueMixin, forms.RegexFi
     to be valid.
 
     The valid input format is: 1234567X123XX1.
+
+    .. versionadded:: 4.0
     """
 
     initial_options = {
-        'regex': r'\d{7}[A-Z]\d{3}[A-Z]{2}\d',
-        'max_length': 14,
+        'regex': r'^\d{7}[A-Z]\d{3}[A-Z]{2}\d$',
         'error_messages': {
             'invalid': _('ID format is: 1234567X123XX1')
         },
-        'empty_value': None
     }
 
 
-class ByPostalCodeField(BaseKwargsUpdatedField, forms.CharField):
+class BYPostalCodeField(BaseKwargsUpdatedField, forms.RegexField):
     """
     A form field that validates its input is a valid Postal code (6 digits).
+
+    .. versionadded:: 4.0
     """
 
     initial_options = {
-        'max_length': 6,
-        'min_length': 6,
-        'empty_value': None,
+        'regex': r'^\d{6}$',
         'error_messages': {
-            'max_length': _('Postal code length must not be more than 6 digits.'),
-            'min_length': _('Postal code length must not be less than 6 digits.')
-        }
+            'invalid': _('Postal code format is: 123456')
+        },
     }

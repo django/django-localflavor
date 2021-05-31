@@ -1,7 +1,6 @@
 import random
 import string
 
-from django.core.validators import MaxLengthValidator
 from django.test import TestCase
 
 from localflavor.by import forms
@@ -46,35 +45,30 @@ class BYLocalFlavorTests(TestCase):
     def test_form_fields(self):
         """Test that ModelForm creates valid field types for model fields."""
         fields = self.form.fields
-        self.assertIsInstance(fields.get('region'), forms.BYRegionField)
         self.assertIsInstance(fields.get('pass_num'), forms.BYPassNumberField)
         self.assertIsInstance(fields.get('pass_id'), forms.BYPassIdNumberField)
-        self.assertIsInstance(fields.get('postal_code'), forms.ByPostalCodeField)
+        self.assertIsInstance(fields.get('postal_code'), forms.BYPostalCodeField)
 
     def test_BYRegions_select(self):
         """Test that BYRegionField has valid choices"""
         choices = self.form.fields.get('region').choices
-        self.assertEqual(tuple(choices), forms.BY_REGIONS_CHOICES)
+        self.assertEqual(tuple(choices[1:]), forms.BY_REGIONS_CHOICES)
 
-    def test_BYRegions_test(self):
-        """Test that BYRegionField properly validates its unput"""
-        error_message = self.form.fields.get('region').error_messages.get(
-            'invalid_choice'
-        )
-        valid = {
-            '1': '1',
-            2: '2',
-            3: '3',
-            '4': '4',
-            '5': '5',
-        }
-        nums = (10, '11', '22', 17, '1222', 1345)
-        invalid = {
-            num: [error_message % {'value': num}] for num in nums
-        }
-        self.assertFieldOutput(
-            forms.BYRegionField, valid, invalid, empty_value=None
-        )
+    def test_BYRegionSelect(self):
+        self.maxDiff = None
+        form = forms.BYRegionSelect()
+        expected = '''
+        <select name="regions">
+            <option value="1" selected="selected">Brest Region</option>
+            <option value="2">Vitebsk Region</option>
+            <option value="3">Gomel Region</option>
+            <option value="4">Grodno Region</option>
+            <option value="5">Minsk Region</option>
+            <option value="6">Mogilev Region</option>
+            <option value="7">City of Minsk</option>
+        </select>'''
+        regions_form = form.render('regions', '1')
+        self.assertHTMLEqual(expected, regions_form)
 
     def test_BY_pass_num(self):
         """Test that ByPassNumberField properly validates its input."""
@@ -93,7 +87,7 @@ class BYLocalFlavorTests(TestCase):
         }
 
         self.assertFieldOutput(
-            forms.BYPassNumberField, valid, invalid, empty_value=None
+            forms.BYPassNumberField, valid, invalid, empty_value=""
         )
 
     def test_BY_pass_id_num(self):
@@ -110,12 +104,11 @@ class BYLocalFlavorTests(TestCase):
             value: [invalid_regex] for value in self._gen_pass_id(False)
         }
         self.assertFieldOutput(
-            forms.BYPassIdNumberField, valid, invalid, empty_value=None
+            forms.BYPassIdNumberField, valid, invalid, empty_value=""
         )
 
     def test_BY_Postal_code(self):
-        max_len = self.form.fields.get('postal_code').error_messages.get('max_length')
-        min_len = self.form.fields.get('postal_code').error_messages.get('min_length')
+        invalid = self.form.fields.get('postal_code').error_messages.get('invalid')
 
         valid = {
             '210001': '210001',
@@ -126,11 +119,11 @@ class BYLocalFlavorTests(TestCase):
             225370: '225370'
         }
         invalid = {
-            2100001: [max_len],
-            '111222333': [max_len],
-            '131': [min_len],
+            2100001: [invalid],
+            '111222333': [invalid],
+            '131': [invalid],
         }
 
         self.assertFieldOutput(
-            forms.ByPostalCodeField, valid, invalid, empty_value=None
+            forms.BYPostalCodeField, valid, invalid, empty_value=""
         )

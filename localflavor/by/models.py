@@ -3,10 +3,9 @@ from django.core.validators import MinLengthValidator
 from django.utils.translation import ugettext_lazy as _
 
 from .by_regions import BY_REGIONS_CHOICES
-from .forms import BYRegionField as BYRegionFormField
 from .forms import BYPassNumberField as BYPassNumberFormField
 from .forms import BYPassIdNumberField as BYPassIdNumberFormField
-from .forms import ByPostalCodeField as BYPostalCodeFormField
+from .forms import BYPostalCodeField as BYPostalCodeFormField
 from .validators import (
     PASS_NUMBER_VALIDATOR, PASS_ID_NUMBER_VALIDATOR,
 )
@@ -16,7 +15,7 @@ class BaseModelFieldUpdated:
     """
     Abstract base class made to conform the DRY principle.
 
-    The initial_options is overrided by the dict in the subclasses and then
+    The initial_options is overridden by the dict in the subclasses and then
     automatically passed to kwargs in the ModelField.__init__() method.
     After, the parameters defined in the initial_options are deleted in
     the ModelField.deconstruct() method.
@@ -42,19 +41,14 @@ class BYRegionField(BaseModelFieldUpdated, CharField):
 
     The regional data is stored in ``by_regions.BY_REGIONS_CHOICES``.
 
-    Form represents it as a ``forms.BYRegionField`` field.
+    .. versionadded:: 4.0
     """
 
-    description = _('Belarusian Regions (one integer value in range 1-7).')
+    description = _('Belarusian Regions (one integer value in the range 1-7).')
     initial_options = {
         'choices': BY_REGIONS_CHOICES,
         'max_length': 1,
     }
-
-    def formfield(self, **kwargs):
-        defaults = {'choices_form_class': BYRegionFormField}
-        defaults.update(kwargs)
-        return super().formfield(**defaults)
 
 
 class BYPassNumberField(BaseModelFieldUpdated, CharField):
@@ -62,6 +56,8 @@ class BYPassNumberField(BaseModelFieldUpdated, CharField):
     A model field that stores the number of Belarusian passport.
 
     Form represents it as a ``forms.BYPassNumberField`` field.
+
+    .. versionadded:: 4.0
     """
 
     description = _('Belarusian passport number (2 letters followed by 7 digits')
@@ -81,6 +77,8 @@ class BYPassIdNumberField(BaseModelFieldUpdated, CharField):
     A model field that stores the ID number.
 
     Form represents it as a ``forms.BYPassIdNumberField`` field.
+
+    .. versionadded:: 4.0
     """
 
     description = _('Belarusian passport ID number (14 letters and digits).')
@@ -100,6 +98,8 @@ class BYPostalCodeField(BaseModelFieldUpdated, CharField):
     A model field that stores Belarusian Postal code.
 
     Form represents it as a ``forms.BYPostalCodeField`` field.
+
+    .. versionadded:: 4.0
     """
 
     description = _('Belarusian Postal code (6 digits).')
