@@ -1,7 +1,6 @@
 """India-specific Form helpers."""
 
 import re
-import warnings
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -125,5 +124,4 @@ class INStateSelect(Select):
     """
 
     def __init__(self, attrs=None):
-        warnings.warn("Choices have changed for INStateSelect in localflavor 3.1. See changelog for details.")
         super().__init__(attrs, choices=STATE_CHOICES)

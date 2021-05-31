@@ -1,5 +1,3 @@
-import warnings
-
 from django.db.models import CharField
 from django.utils.translation import gettext_lazy as _
 
@@ -17,7 +15,6 @@ class MXStateField(CharField):
     description = _("Mexico state (three or four uppercase letters)")
 
     def __init__(self, *args, **kwargs):
-        warnings.warn("Choices have changed for MXStateField in localflavor 3.1. See changelog for details.")
         kwargs['choices'] = STATE_CHOICES
         kwargs['max_length'] = 4
         super().__init__(*args, **kwargs)
