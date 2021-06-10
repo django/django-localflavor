@@ -40,3 +40,21 @@ class FRSIRETField(CharField):
         defaults = {'form_class': forms.FRSIRETField}
         defaults.update(kwargs)
         return super().formfield(**defaults)
+
+
+class FRRNAField(CharField):
+    """
+    A :class:`~django.db.models.CharField` that checks that the value is a valid French RNA number.
+    """
+
+    description = _("RNA Number")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 10
+        super().__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        from . import forms
+        defaults = {'form_class': forms.FRRNAField}
+        defaults.update(kwargs)
+        return super().formfield(**defaults)
