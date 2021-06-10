@@ -22,6 +22,7 @@ Authors
 * Andrew Godwin
 * Arthur de Jong
 * Aymeric Augustin
+* babastienne
 * baffolobill
 * Baptiste Darthenay
 * Ben Davis

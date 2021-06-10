@@ -1,6 +1,14 @@
 Changelog
 =========
 
+3.2 (dev)
+------------------
+
+New fields for existing flavors:
+
+- Added `fr.forms.FRRNAField` models field
+  (`gh-443 <https://github.com/django/django-localflavor/pull/443>`_).
+
 3.1   (2021-05-28)
 ------------------
 

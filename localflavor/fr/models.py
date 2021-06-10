@@ -45,6 +45,8 @@ class FRSIRETField(CharField):
 class FRRNAField(CharField):
     """
     A :class:`~django.db.models.CharField` that checks that the value is a valid French RNA number.
+
+    .. versionadded:: 3.2
     """
 
     description = _("RNA Number")
