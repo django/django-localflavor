@@ -1,6 +1,23 @@
 Changelog
 =========
 
+3.2   (unreleased)
+------------------
+
+New flavors:
+
+- None
+
+New fields for existing flavors:
+
+- None
+
+Modifications to existing flavors:
+
+- Fix spelling of the India state of Chhattisgarh
+  (`gh-444 <https://github.com/django/django-localflavor/pull/444>`_).
+
+
 3.1   (2021-05-28)
 ------------------
 
