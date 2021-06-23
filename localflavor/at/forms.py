@@ -52,7 +52,7 @@ class ATSocialSecurityNumberField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if not re_ssn.search(value):
             raise ValidationError(self.error_messages['invalid'], code='invalid')
         sqnr, date = value.split(" ")

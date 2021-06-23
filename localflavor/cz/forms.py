@@ -63,7 +63,7 @@ class CZBirthNumberField(CharField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = re.match(birth_number, value)
         if not match:
@@ -117,7 +117,7 @@ class CZICNumberField(CharField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = re.match(ic_number, value)
         if not match:

@@ -37,6 +37,12 @@ Modifications to existing flavors:
   - `ch.forms.CHIdentityCardNumberField`
   - `cz.forms.CZBirthNumberField`
   - `cz.forms.CZICNumberField`
+  - `cu.forms.CURegionField`
+  - `cu.forms.CUProvinceField`
+  - `de.forms.DEIdentityCardNumberField`
+  - `ee.forms.EEPersonalIdentificationCode`
+  - `ee.forms.EEBusinessRegistryCode`
+  - `gr.forms.GRTaxNumberCodeField`
 
 Other changes:
 

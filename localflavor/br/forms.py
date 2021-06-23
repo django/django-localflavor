@@ -52,7 +52,7 @@ class BRStateChoiceField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         valid_values = {force_str(entry[0]) for entry in self.widget.choices}
         if value not in valid_values:
             raise ValidationError(self.error_messages['invalid'], code='invalid')

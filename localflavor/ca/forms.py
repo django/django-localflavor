@@ -46,19 +46,20 @@ class CAProvinceField(CharField):
     It normalizes the input to the standard two-leter postal service
     abbreviation for the given province.
     """
-    def __init__(self, **kwargs):
-        if "strip" in kwargs and kwargs["strip"] is False:
-            raise ImproperlyConfigured("strip cannot be set to False")
-        super().__init__(**kwargs)
 
     default_error_messages = {
         'invalid': _('Enter a Canadian province or territory.'),
     }
 
+    def __init__(self, **kwargs):
+        if "strip" in kwargs and kwargs["strip"] is False:
+            raise ImproperlyConfigured("strip cannot be set to False")
+        super().__init__(**kwargs)
+
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         try:
             # Load data in memory only when it is required, see also #17275
             from .ca_provinces import PROVINCES_NORMALIZED
@@ -98,7 +99,7 @@ class CASocialInsuranceNumberField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = re.match(sin_re, value)
         if not match:

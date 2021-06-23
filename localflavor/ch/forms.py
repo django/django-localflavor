@@ -2,6 +2,7 @@
 
 import re
 
+from django.core.exceptions import ImproperlyConfigured
 from django.core.validators import RegexValidator
 from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
@@ -55,6 +56,11 @@ class CHIdentityCardNumberField(CharField):
         'invalid': _('Enter a valid Swiss identity or passport card number in X1234567<0 or 1234567890 format.'),
     }
 
+    def __init__(self, **kwargs):
+        if "strip" in kwargs and kwargs["strip"] is False:
+            raise ImproperlyConfigured("strip cannot be set to False")
+        super().__init__(**kwargs)
+
     def has_valid_checksum(self, number):
         given_number, given_checksum = number[:-1], number[-1]
         new_number = given_number
@@ -88,7 +94,7 @@ class CHIdentityCardNumberField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = re.match(id_re, value)
         if not match:

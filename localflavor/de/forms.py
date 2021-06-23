@@ -2,9 +2,9 @@
 
 import re
 
-from django.core.validators import EMPTY_VALUES
+from django.core.exceptions import ImproperlyConfigured
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .de_states import STATE_CHOICES
@@ -35,7 +35,7 @@ class DEStateSelect(Select):
         super().__init__(attrs, choices=STATE_CHOICES)
 
 
-class DEIdentityCardNumberField(Field):
+class DEIdentityCardNumberField(CharField):
     """A German identity card number.
 
     Checks the following rules to determine whether the number is valid:
@@ -51,6 +51,11 @@ class DEIdentityCardNumberField(Field):
         'invalid': _('Enter a valid German identity card number in '
                      'XXXXXXXXXXX-XXXXXXX-XXXXXXX-X format.'),
     }
+
+    def __init__(self, **kwargs):
+        if "strip" in kwargs and kwargs["strip"] is False:
+            raise ImproperlyConfigured("strip cannot be set to False")
+        super().__init__(**kwargs)
 
     def has_valid_checksum(self, number):
         given_number, given_checksum = number[:-1], number[-1]
@@ -72,8 +77,8 @@ class DEIdentityCardNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
         match = re.match(ID_RE, value)
         if not match:
             raise ValidationError(self.error_messages['invalid'], code='invalid')

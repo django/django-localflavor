@@ -1,12 +1,12 @@
-from django.core.exceptions import ValidationError
-from django.forms import Field, RegexField, Select
+from django.core.exceptions import ValidationError, ImproperlyConfigured
+from django.forms import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .choices import PROVINCE_CHOICES, PROVINCE_NORMALIZED, REGION_CHOICES, REGION_NORMALIZED
 from .validators import CUIdentityCardNumberBirthdayValidator
 
 
-class CURegionField(Field):
+class CURegionField(CharField):
     """
     A form field for a Cuban region.
     The input is validated against a dictionary which includes names and abbreviations.
@@ -20,12 +20,17 @@ class CURegionField(Field):
         'invalid': _('Enter a Cuban region.'),
     }
 
+    def __init__(self, **kwargs):
+        if "strip" in kwargs and kwargs["strip"] is False:
+            raise ImproperlyConfigured("strip cannot be set to False")
+        super().__init__(**kwargs)
+
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return ''
+            return value
         try:
-            return REGION_NORMALIZED[value.strip().lower()]
+            return REGION_NORMALIZED[value.lower()]
         except KeyError:
             pass
         raise ValidationError(self.error_messages['invalid'], code='invalid')
@@ -42,7 +47,7 @@ class CURegionSelect(Select):
         super().__init__(attrs, choices=REGION_CHOICES)
 
 
-class CUProvinceField(Field):
+class CUProvinceField(CharField):
     """
     A form field for a Cuban province.
     The input is validated against a dictionary which includes names and abbreviations.
@@ -56,12 +61,17 @@ class CUProvinceField(Field):
         'invalid': _('Enter a Cuban province.'),
     }
 
+    def __init__(self, **kwargs):
+        if "strip" in kwargs and kwargs["strip"] is False:
+            raise ImproperlyConfigured("strip cannot be set to False")
+        super().__init__(**kwargs)
+
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return ''
+            return value
         try:
-            return PROVINCE_NORMALIZED[value.strip().lower()]
+            return PROVINCE_NORMALIZED[value.lower()]
         except KeyError:
             pass
         raise ValidationError(self.error_messages['invalid'], code='invalid')
