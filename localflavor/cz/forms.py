@@ -2,9 +2,9 @@
 
 import re
 
-from django.core.validators import EMPTY_VALUES
+from django.core.exceptions import ImproperlyConfigured
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .cz_regions import REGION_CHOICES
@@ -46,7 +46,7 @@ class CZPostalCodeField(RegexField):
         return value.replace(' ', '')
 
 
-class CZBirthNumberField(Field):
+class CZBirthNumberField(CharField):
     """Czech birth number form field."""
 
     default_error_messages = {
@@ -54,11 +54,16 @@ class CZBirthNumberField(Field):
         'invalid': _('Enter a valid birth number.'),
     }
 
+    def __init__(self, **kwargs):
+        if "strip" in kwargs and kwargs["strip"] is False:
+            raise ImproperlyConfigured("strip cannot be set to False")
+        super().__init__(**kwargs)
+
     def clean(self, value):
         value = super().clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         match = re.match(birth_number, value)
         if not match:
@@ -96,18 +101,23 @@ class CZBirthNumberField(Field):
             raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
-class CZICNumberField(Field):
+class CZICNumberField(CharField):
     """Czech IC number form field."""
 
     default_error_messages = {
         'invalid': _('Enter a valid IC number.'),
     }
 
+    def __init__(self, **kwargs):
+        if "strip" in kwargs and kwargs["strip"] is False:
+            raise ImproperlyConfigured("strip cannot be set to False")
+        super().__init__(**kwargs)
+
     def clean(self, value):
         value = super().clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return self.empty_value
 
         match = re.match(ic_number, value)
         if not match:

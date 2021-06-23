@@ -4,7 +4,7 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import CharField, Field, Select
+from django.forms.fields import CharField, Select
 from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
@@ -37,7 +37,7 @@ class BRStateSelect(Select):
         super().__init__(attrs, choices=STATE_CHOICES)
 
 
-class BRStateChoiceField(Field):
+class BRStateChoiceField(CharField):
     """A choice field that uses a list of Brazilian states as its choices."""
 
     widget = Select
@@ -51,11 +51,8 @@ class BRStateChoiceField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            value = ''
-        value = force_str(value)
-        if value == '':
-            return value
+        if value in self.empty_values:
+            return self.empty_value
         valid_values = {force_str(entry[0]) for entry in self.widget.choices}
         if value not in valid_values:
             raise ValidationError(self.error_messages['invalid'], code='invalid')

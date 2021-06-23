@@ -27,6 +27,16 @@ Modifications to existing flavors:
   (`gh-444 <https://github.com/django/django-localflavor/pull/444>`_).
 - Fix CURP regex for MX flavor
   (`gh-449 <https://github.com/django/django-localflavor/pull/449>`_).
+- Change text based fields that inherited from `django.forms.Field` to inherit from `django.forms.CharField`. The
+  following fields have been updated:
+
+  - `at.forms.ATSocialSecurityNumberField`
+  - `br.forms.BRStateChoiceField`
+  - `ca.forms.CAProvinceField`
+  - `ca.forms.CASocialInsuranceNumberField`
+  - `ch.forms.CHIdentityCardNumberField`
+  - `cz.forms.CZBirthNumberField`
+  - `cz.forms.CZICNumberField`
 
 Other changes:
 
