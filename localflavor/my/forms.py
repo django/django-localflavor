@@ -1,7 +1,7 @@
-from stdnum.my import nric
-from django.forms.fields import CharField
 from django.forms import ValidationError
+from django.forms.fields import CharField
 from django.utils.translation import gettext_lazy as _
+from stdnum.my import nric
 
 
 class MyKadFormField(CharField):
