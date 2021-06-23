@@ -3,6 +3,7 @@
 import re
 
 from django.core.exceptions import ImproperlyConfigured
+
 from django.forms import ValidationError
 from django.forms.fields import CharField, Select
 from django.utils.translation import gettext_lazy as _

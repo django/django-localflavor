@@ -4,8 +4,7 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 from stdnum.ar import cbu
-from stdnum.exceptions import InvalidChecksum, InvalidLength
-from stdnum.exceptions import ValidationError as StdnumValidationError
+from stdnum.exceptions import InvalidLength, InvalidChecksum, ValidationError as StdnumValidationError
 
 from .ar_provinces import PROVINCE_CHOICES
 

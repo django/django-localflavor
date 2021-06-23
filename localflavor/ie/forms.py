@@ -1,6 +1,6 @@
 """IE-specific Form helpers."""
 
-from django.forms.fields import RegexField, Select
+from django.forms.fields import Select, RegexField
 from django.utils.translation import gettext_lazy as _
 
 from .ie_counties import IE_COUNTY_CHOICES
