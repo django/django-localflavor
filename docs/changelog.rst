@@ -1,6 +1,26 @@
 Changelog
 =========
 
+4.0   (unreleased)
+------------------
+
+New flavors:
+
+- None
+
+New fields for existing flavors:
+
+- None
+
+Modifications to existing flavors:
+
+- None
+
+Other changes:
+
+- None
+
+
 3.1   (2021-05-28)
 ------------------
 
