@@ -2,7 +2,7 @@
 import re
 
 from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError, CharField, RegexField, Select
+from django.forms import CharField, RegexField, Select, ValidationError
 from django.utils.translation import gettext_lazy as _
 
 from .at_states import STATE_CHOICES
