@@ -52,7 +52,7 @@ class CAProvinceField(CharField):
     }
 
     def __init__(self, **kwargs):
-        if "strip" in kwargs and kwargs["strip"] is False:
+        if "strip" in kwargs and not kwargs["strip"]:
             raise ImproperlyConfigured("strip cannot be set to False")
         super().__init__(**kwargs)
 

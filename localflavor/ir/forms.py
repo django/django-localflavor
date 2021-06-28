@@ -1,8 +1,8 @@
 """Iranian-specific form helpers."""
 import re
 
-from django.core.exceptions import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.core.exceptions import ImproperlyConfigured, ValidationError
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .ir_provinces import PROVINCE_CHOICES
@@ -48,7 +48,7 @@ class IRPostalCodeField(RegexField):
         return super().clean(value)
 
 
-class IRIDNumberField(Field):
+class IRIDNumberField(CharField):
     """
     A form field that validates its input as an Iranian identification number.
 
@@ -67,13 +67,17 @@ class IRIDNumberField(Field):
     default_error_messages = {
         'invalid': _('Enter a valid ID number.'),
     }
-    empty_value = ''
+
+    def __init__(self, **kwargs):
+        if "strip" in kwargs and not kwargs["strip"]:
+            raise ImproperlyConfigured("strip cannot be set to False")
+        super().__init__(**kwargs)
 
     def clean(self, value):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = self.id_number_re.match(value)
         if not match:

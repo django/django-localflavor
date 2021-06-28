@@ -1,9 +1,8 @@
 import re
 from datetime import date
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.core.exceptions import ImproperlyConfigured, ValidationError
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .lt_choices import COUNTY_CHOICES, MUNICIPALITY_CHOICES
@@ -87,7 +86,7 @@ class LTIDCodeField(RegexField):
             return False
 
 
-class LTPostalCodeField(Field):
+class LTPostalCodeField(CharField):
     """
     A form field that validates and normalizes Lithanuan postal codes.
 
@@ -100,10 +99,15 @@ class LTPostalCodeField(Field):
         'invalid': _('Enter a postal code in the format XXXXX or LT-XXXXX.'),
     }
 
+    def __init__(self, **kwargs):
+        if "strip" in kwargs and not kwargs["strip"]:
+            raise ImproperlyConfigured("strip cannot be set to False")
+        super().__init__(**kwargs)
+
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = re.match(postalcode, value)
         if not match:

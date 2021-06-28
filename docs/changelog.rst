@@ -35,14 +35,27 @@ Modifications to existing flavors:
   - `ca.forms.CAProvinceField`
   - `ca.forms.CASocialInsuranceNumberField`
   - `ch.forms.CHIdentityCardNumberField`
+  - `cu.forms.CUProvinceField`
+  - `cu.forms.CURegionField`
   - `cz.forms.CZBirthNumberField`
   - `cz.forms.CZICNumberField`
-  - `cu.forms.CURegionField`
-  - `cu.forms.CUProvinceField`
   - `de.forms.DEIdentityCardNumberField`
-  - `ee.forms.EEPersonalIdentificationCode`
   - `ee.forms.EEBusinessRegistryCode`
+  - `ee.forms.EEPersonalIdentificationCode`
+  - `fi.forms.FISocialSecurityNumber`
   - `gr.forms.GRTaxNumberCodeField`
+  - `hr.forms.HRJMBAGField`
+  - `hr.forms.HRJMBGField`
+  - `hr.forms.HRLicensePlateField`
+  - `hr.forms.HRPostalCodeField`
+  - `il.forms.ILIDNumberField`
+  - `ir.forms.IRIDNumberField`
+  - `it.forms.ITVatNumberField`
+  - `lt.forms.LTPostalCodeField`
+  - `no.forms.NOSocialSecurityNumber`
+  - `ro.forms.ROCountyField`
+  - `tr.forms.TRIdentificationNumberField`
+  - `us.forms.USStateField`
 
 Other changes:
 

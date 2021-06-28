@@ -1,4 +1,4 @@
-from django.core.exceptions import ValidationError, ImproperlyConfigured
+from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.forms import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
@@ -21,7 +21,7 @@ class CURegionField(CharField):
     }
 
     def __init__(self, **kwargs):
-        if "strip" in kwargs and kwargs["strip"] is False:
+        if "strip" in kwargs and not kwargs["strip"]:
             raise ImproperlyConfigured("strip cannot be set to False")
         super().__init__(**kwargs)
 
@@ -62,7 +62,7 @@ class CUProvinceField(CharField):
     }
 
     def __init__(self, **kwargs):
-        if "strip" in kwargs and kwargs["strip"] is False:
+        if "strip" in kwargs and not kwargs["strip"]:
             raise ImproperlyConfigured("strip cannot be set to False")
         super().__init__(**kwargs)
 

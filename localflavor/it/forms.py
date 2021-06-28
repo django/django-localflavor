@@ -1,9 +1,8 @@
 """IT-specific Form helpers."""
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .it_province import PROVINCE_CHOICES
@@ -90,7 +89,7 @@ class ITSocialSecurityNumberField(RegexField):
                 raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
-class ITVatNumberField(Field):
+class ITVatNumberField(CharField):
     """A form field that validates Italian VAT numbers (partita IVA)."""
 
     default_error_messages = {
@@ -99,8 +98,8 @@ class ITVatNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
         try:
             return vat_number_validation(value)
         except ValueError:
