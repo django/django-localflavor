@@ -18,16 +18,12 @@ process_digits_re = re.compile(
 
 class BRZipCodeField(CharField):
     """
-    A form field that validates input as a Brazilian zip code, with the format XXXXX-XXX.
+    A form field that validates input as a Brazilian zip code, with the format 00000-000.
 
     .. versionchanged:: 2.2
         Use BRPostalCodeValidator to centralize validation logic and share with equivalent model field.
         More details at: https://github.com/django/django-localflavor/issues/334
     """
-
-    default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXXX-XXX.'),
-    }
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
