@@ -137,6 +137,7 @@ class IDLicensePlateField(Field):
     def _validate_prefix(self, prefix):
         # Load data in memory only when it is required, see also #17275
         from .id_choices import LICENSE_PLATE_PREFIX_CHOICES
+
         # Make sure prefix is in the list of known codes.
         if prefix not in [choice[0] for choice in LICENSE_PLATE_PREFIX_CHOICES]:
             raise ValidationError(self.error_messages['invalid'], code='invalid')
