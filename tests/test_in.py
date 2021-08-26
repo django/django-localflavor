@@ -4,6 +4,7 @@ from localflavor.in_.forms import INAadhaarNumberField, INStateField, INStateSel
 
 
 class INLocalFlavorTests(SimpleTestCase):
+    maxDiff = None
 
     def test_INPStateSelect(self):
         f = INStateSelect()
@@ -22,7 +23,7 @@ class INLocalFlavorTests(SimpleTestCase):
 <option value="AR">Arunachal Pradesh</option>
 <option value="AS">Assam</option>
 <option value="BR">Bihar</option>
-<option value="CT">Chattisgarh</option>
+<option value="CT">Chhattisgarh</option>
 <option value="HR">Haryana</option>
 <option value="JH">Jharkhand</option>
 <option value="MP">Madhya Pradesh</option>
@@ -96,7 +97,7 @@ class INLocalFlavorTests(SimpleTestCase):
             'bihar': 'BR',
             'br': 'BR',
             'cg': 'CG',
-            'chattisgarh': 'CG',
+            'chhattisgarh': 'CG',
             'ch': 'CH',
             'chandigarh': 'CH',
             'daman and diu': 'DD',
