@@ -17,6 +17,7 @@ Authors
 * Alix Martineau
 * Alonisser
 * Andreas Pelme
+* André Niero Setti
 * André Ramos
 * Andres Torres Marroquin
 * Andrew Godwin

@@ -14,6 +14,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
+- Fix error code for BRPostalCodeValidator
+  (`gh-448 <https://github.com/django/django-localflavor/pull/448>`_).
 - Fix spelling of the India state of Chhattisgarh
   (`gh-444 <https://github.com/django/django-localflavor/pull/444>`_).
 - Fix CURP regex for MX flavor
