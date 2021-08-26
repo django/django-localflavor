@@ -16,6 +16,7 @@ Modifications to existing flavors:
 
 - Fix spelling of the India state of Chhattisgarh
   (`gh-444 <https://github.com/django/django-localflavor/pull/444>`_).
+- Fix CURP regex for MX flavor
 
 Other changes:
 

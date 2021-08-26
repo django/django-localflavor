@@ -73,6 +73,7 @@ Authors
 * Julien Phalip
 * Justin Bronn
 * Karen Tracey
+* Kevin Ramirez Zavalza
 * László Ratskó
 * Lefteris Nikoltsios
 * Luis Alberto Santana
