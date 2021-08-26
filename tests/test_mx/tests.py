@@ -194,6 +194,7 @@ class MXLocalFlavorTests(TestCase):
             'TOMA880125HMNRRNO2': 'TOMA880125HMNRRNO2',
             'OOMG890727HMNRSR06': 'OOMG890727HMNRSR06',
             'AAAA000101HDFCCC09': 'AAAA000101HDFCCC09',
+            'OXCJ810522MQRYHL08': 'OXCJ810522MQRYHL08',
         }
         invalid = {
             'AAAA000000HDFCCC09': error_format,
