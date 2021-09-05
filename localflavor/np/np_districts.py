@@ -1,13 +1,11 @@
 """
-There are fourteen zones in Nepal( As of 01-09-2021 )
-And each zone has some no. of districts.
-Below is the list of districts for each zone.
+Zone wise list of districts of Nepal.
 
 Source: https://en.wikipedia.org/wiki/List_of_zones_of_Nepal
 
 Choices for districts are in this format:
 
-    ('name_of_district', _('Name of district')),
+    (('name_of_district'), _('Name of district')),
 """
 
 from django.utils.translation import gettext_lazy as _
@@ -33,7 +31,7 @@ BHERI_DISTRICTS = [
     (('surkhet'), _('Surkhet')),
 ]
 
-# list of districts in Dhawalgiri Zone
+# list of districts in Dhawalagiri Zone
 DHAWALAGIRI_DISTRICTS = [
     (('baglung'), _('Baglung')),
     (('mustang'), _('Mustang')),

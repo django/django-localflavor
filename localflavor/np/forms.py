@@ -8,7 +8,7 @@ from .np_districts import ALL_DISTRICTS
 
 class NPPostalCodeFormField(RegexField):
     """
-        A form field that accepts Nepali postal code, 
+        A form field that accepts Nepali postal code.
         Format : XXXXX
 
         Postal codes: https://en.wikipedia.org/wiki/List_of_postal_codes_in_Nepal
@@ -37,7 +37,7 @@ class NPZoneSelect(Select):
 
 class NPProvinceSelect(Select):
     """
-    A Select widget with a list of all zones of Nepal.
+    A Select widget with a list of all provinces of Nepal.
     """
 
     def __init__(self, attrs=None):

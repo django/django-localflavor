@@ -1,11 +1,11 @@
 """
-List of Zones in Nepal.
+List of Zones of Nepal.
 
 Source: https://en.wikipedia.org/wiki/List_of_zones_of_Nepal
 
-Nepali zones list choices are in format:
+Nepali zones list choices are in this format:
 
-    ('Name of zone',_('Name of zone')),
+    (('Name of zone'),_('Name of zone')),
 
 eg.
     ('Bagmati', _('Bagmati')),

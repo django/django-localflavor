@@ -3,9 +3,9 @@ List of Provinces in Nepal.
 
 Source: https://en.wikipedia.org/wiki/Provinces_of_Nepal
 
-Nepali province list choices are in format:
+Nepali province list choices are in this format:
 
-    ('Name of province',_('Name of province')),
+    (('Name of province'),_('Name of province')),
 
 eg.
     (('Bagmati'), _('Bagmati')),
