@@ -23,7 +23,7 @@ class NPPostalCodeValidator(RegexValidator):
 
 class NPPostalCodeField(models.CharField):
     """
-        A model field which accepts Nepali postal code of length five.
+        A model field that accepts Nepali postal codes.
         Format: XXXXX
         Source: https://en.wikipedia.org/wiki/List_of_postal_codes_in_Nepal
         .. versionadded:: 4.0
@@ -41,7 +41,7 @@ class NPPostalCodeField(models.CharField):
 
 class NPDistrictField(models.CharField):
     """
-        A Modelfield which provides an option to select 
+        A Modelfield that provides an option to select 
         a district from the list of all Nepali districts.
         .. versionadded:: 4.0
     """
@@ -58,7 +58,7 @@ class NPDistrictField(models.CharField):
         
 class NPZoneField(models.CharField):
     """
-        A Modelfield which provides an option to select 
+        A Modelfield that provides an option to select 
         a zone from the list of all Nepali zones.
         .. versionadded:: 4.0
     """
@@ -75,7 +75,7 @@ class NPZoneField(models.CharField):
 
 class NPProvinceField(models.CharField):
     """
-        A Modelfield which provides an option to select 
+        A Modelfield that provides an option to select 
         a province from the list of all Nepali provinces.
         .. versionadded:: 4.0
     """

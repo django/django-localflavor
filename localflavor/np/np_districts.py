@@ -141,7 +141,7 @@ SETI_DISTRICTS = [
     (('kailali'), _('Kailali')),
 ]
 
-# tuple of lists of all the districts of Nepal.
+# list of all districts of Nepal.
 ALL_DISTRICTS = (
       BAGMATI_DISTRICTS
     + BHERI_DISTRICTS

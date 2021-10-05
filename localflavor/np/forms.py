@@ -1,4 +1,5 @@
 """Nepal specific form helpers."""
+
 from django.forms.fields import RegexField
 from django.utils.translation import gettext_lazy as _
 from django.forms.fields import Select
@@ -29,7 +30,8 @@ class NPPostalCodeFormField(RegexField):
 
 class NPZoneSelect(Select):
     """
-    A Select widget with a list of all zones of Nepal.
+    A Select widget with option to select a zone from 
+    list of all zones of Nepal.
     """
 
     def __init__(self, attrs=None):
@@ -37,7 +39,8 @@ class NPZoneSelect(Select):
 
 class NPProvinceSelect(Select):
     """
-    A Select widget with a list of all provinces of Nepal.
+    A Select widget with option to select a province from 
+    list of all provinces of Nepal.
     """
 
     def __init__(self, attrs=None):
@@ -45,7 +48,8 @@ class NPProvinceSelect(Select):
 
 class NPDistrictSelect(Select):
     """
-    A Select widget with a list of all districts of Nepal.
+    A Select widget with option to select a district from 
+    list of all districts of Nepal.
     """
 
     def __init__(self, attrs=None):

@@ -5,16 +5,16 @@ Source: https://en.wikipedia.org/wiki/List_of_zones_of_Nepal
 
 Nepali zones list choices are in this format:
 
-    (('Name of zone'),_('Name of zone')),
+    (('name_of_zone'),_('Name of zone')),
 
 eg.
-    ('Bagmati', _('Bagmati')),
+    ('bagmati', _('Bagmati')),
 
 """
 
 from django.utils.translation import gettext_lazy as _
 
-# list of zones in nepal
+# list of zones of nepal
 ZONES = [
     (('bagmati'), _('Bagmati')),
     (('bheri'), _('Bheri')),
