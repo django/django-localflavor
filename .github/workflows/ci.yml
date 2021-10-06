@@ -1,0 +1,85 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      # By default, GitHub will maximize the number of jobs run in parallel
+      # depending on the available runners on GitHub-hosted virtual machines.
+      # max-parallel: 8
+      fail-fast: false
+      matrix:
+        include:
+          - python-version: 3.9
+            tox-env: docs
+          - python-version: 3.8
+            tox-env: prospector
+          - python-version: 3.5
+            tox-env: py35-2.2
+          - python-version: 3.6
+            tox-env: py36-2.2
+          - python-version: 3.7
+            tox-env: py37-2.2
+          - python-version: 3.8
+            tox-env: py38-2.2
+          - python-version: pypy3
+            tox-env: pypy3-2.2
+          - python-version: 3.6
+            tox-env: py36-3.0
+          - python-version: 3.7
+            tox-env: py37-3.0
+          - python-version: 3.8
+            tox-env: py38-3.0
+          - python-version: pypy3
+            tox-env: pypy3-3.0
+          - python-version: 3.6
+            tox-env: py36-3.1
+          - python-version: 3.7
+            tox-env: py37-3.1
+          - python-version: 3.8
+            tox-env: py38-3.1
+          - python-version: pypy3
+            tox-env: pypy3-3.1
+          - python-version: 3.6
+            tox-env: py36-3.2
+          - python-version: 3.7
+            tox-env: py37-3.2
+          - python-version: 3.8
+            tox-env: py38-3.2
+          - python-version: 3.9
+            tox-env: py39-3.2
+          - python-version: pypy3
+            tox-env: pypy3-3.2
+          - python-version: 3.8
+            tox-env: py38-main
+          - python-version: 3.9
+            tox-env: py39-main
+          # TODO: Enable when Python 3.10 is released.
+          # - python-version: 3.10
+          #   tox-env: py310-main
+          - python-version: pypy3
+            tox-env: pypy3-main
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Upgrade pip version
+        run: |
+          python -m pip install -U pip
+
+      - name: Install requirements
+        run: |
+          python -m pip wheel -r tests/requirements.txt codecov
+          python -m pip install virtualenv codecov tox
+      
+      - name: Run tox
+        run: |
+          tox
+          codecov
