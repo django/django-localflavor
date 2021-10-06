@@ -76,6 +76,7 @@ jobs:
 
       - name: Install requirements
         run: |
+          python -m pip install wheel
           python -m pip wheel -r tests/requirements.txt codecov
           python -m pip install virtualenv codecov tox
       
