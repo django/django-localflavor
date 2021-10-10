@@ -1,4 +1,4 @@
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.functional import Promise
 
 from sphinx.util.inspect import object_description
@@ -23,7 +23,7 @@ def lazy_repr(obj):
         return values
     else:
         if isinstance(obj, Promise):
-            obj = force_text(obj)
+            obj = force_str(obj)
         return obj
 
 
