@@ -10,5 +10,5 @@ Forms
 Data
 ----
 .. autodata:: localflavor.np.np_provinces.PROVINCES
-.. autodata:: localflavor.np.zones.ZONES
+.. autodata:: localflavor.np.np_zones.ZONES
 .. autodata:: localflavor.np.np_districts.ALL_DISTRICTS
