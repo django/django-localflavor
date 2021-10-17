@@ -8,7 +8,7 @@ from django.core.validators import RegexValidator
 from .forms import NPPostalCodeFormField
 from .np_zones import ZONES
 from .np_provinces import PROVINCES
-from .np_districts import ALL_DISTRICTS
+from .np_districts import DISTRICTS
 
 class NPPostalCodeValidator(RegexValidator):
     """
@@ -47,7 +47,7 @@ class NPDistrictField(models.CharField):
     """
 
     def __init__(self, *args, **kwargs):
-        kwargs['choices'] = ALL_DISTRICTS
+        kwargs['choices'] = DISTRICTS
         kwargs['max_length'] = 255
         super().__init__(*args, **kwargs)
 

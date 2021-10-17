@@ -1,6 +1,6 @@
 """Option for all select box fields"""
 
-all_districts_select = """<select name="district">
+districts_select = """<select name="district">
   <option value="achham" selected>Achham</option>
   <option value="arghakhanchi">Arghakhanchi</option>
   <option value="baglung">Baglung</option>

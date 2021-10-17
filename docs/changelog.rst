@@ -15,7 +15,7 @@ New fields for existing flavors:
 Modifications to existing flavors:
 
 - Nepal LocalFlavor: Support for Nepal added
-  (`gh-450 <https://github.com/django/django-localflavor/pull/450>`_).
+  (`gh-451 <https://github.com/django/django-localflavor/pull/451>`_).
 - Fix error code for BRPostalCodeValidator
   (`gh-448 <https://github.com/django/django-localflavor/pull/448>`_).
 - Fix spelling of the India state of Chhattisgarh

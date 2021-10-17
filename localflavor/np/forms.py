@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 from django.forms.fields import Select
 from .np_zones import ZONES
 from .np_provinces import PROVINCES
-from .np_districts import ALL_DISTRICTS
+from .np_districts import DISTRICTS
 
 class NPPostalCodeFormField(RegexField):
     """
@@ -53,4 +53,4 @@ class NPDistrictSelect(Select):
     """
 
     def __init__(self, attrs=None):
-        super().__init__(attrs, choices=ALL_DISTRICTS)
+        super().__init__(attrs, choices=DISTRICTS)

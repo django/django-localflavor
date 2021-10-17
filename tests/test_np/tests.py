@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 from localflavor.np.forms import NPDistrictSelect , NPProvinceSelect, NPZoneSelect, NPPostalCodeFormField
-from .selectfields_html import  all_districts_select, provinces_select, zones_select
+from .selectfields_html import  districts_select, provinces_select, zones_select
 
 class NepalDetails(SimpleTestCase):
     """
@@ -9,7 +9,7 @@ class NepalDetails(SimpleTestCase):
     """
     def test_NPDistrictSelect(self):
         field = NPDistrictSelect()
-        self.assertHTMLEqual(field.render('district', 'achham'), all_districts_select)
+        self.assertHTMLEqual(field.render('district', 'achham'), districts_select)
 
     def test_NPProvinceSelect(self):
         field = NPProvinceSelect()
