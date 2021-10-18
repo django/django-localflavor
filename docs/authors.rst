@@ -116,5 +116,6 @@ Authors
 * Tyler Ball
 * Vaclav Rehak
 * Venelin Stoykov
+* Vishal Pandey
 * Vladimir Nani
 * Abhineet Tamrakar
