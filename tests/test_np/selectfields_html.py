@@ -15,7 +15,7 @@ districts_select = """<select name="district">
   <option value="chitwan">Chitwan</option>
   <option value="dadeldhura">Dadeldhura</option>
   <option value="dailekh">Dailekh</option>
-  <option value="dang Deukhuri">Dang Deukhuri</option>
+  <option value="dang_deukhuri">Dang Deukhuri</option>
   <option value="darchula">Darchula</option>
   <option value="dhading">Dhading</option>
   <option value="dhankuta">Dhankuta</option>

@@ -41,14 +41,14 @@ class NPPostalCodeField(models.CharField):
 
 class NPDistrictField(models.CharField):
     """
-        A Modelfield that provides an option to select 
+        A model field that provides an option to select 
         a district from the list of all Nepali districts.
         .. versionadded:: 4.0
     """
 
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = DISTRICTS
-        kwargs['max_length'] = 255
+        kwargs['max_length'] = 15
         super().__init__(*args, **kwargs)
 
     def deconstruct(self):
@@ -58,14 +58,14 @@ class NPDistrictField(models.CharField):
         
 class NPZoneField(models.CharField):
     """
-        A Modelfield that provides an option to select 
+        A model field that provides an option to select 
         a zone from the list of all Nepali zones.
         .. versionadded:: 4.0
     """
 
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = ZONES
-        kwargs['max_length'] = 255
+        kwargs['max_length'] = 11
         super().__init__(*args, **kwargs)
 
     def deconstruct(self):
@@ -75,14 +75,14 @@ class NPZoneField(models.CharField):
 
 class NPProvinceField(models.CharField):
     """
-        A Modelfield that provides an option to select 
+        A model field that provides an option to select 
         a province from the list of all Nepali provinces.
         .. versionadded:: 4.0
     """
 
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = PROVINCES
-        kwargs['max_length'] = 255
+        kwargs['max_length'] = 12
         super().__init__(*args, **kwargs)
 
     def deconstruct(self):
