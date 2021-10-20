@@ -125,3 +125,32 @@ class INStateSelect(Select):
 
     def __init__(self, attrs=None):
         super().__init__(attrs, choices=STATE_CHOICES)
+
+class INPANCardNumberFormField(RegexField):
+    """
+        A form field that accepts Indian Permanent account number(PAN) Card Number.
+
+        Rules:
+        It should be ten characters long.
+        The first five characters should be any upper case alphabets.
+        The next four-characters should be any number from 0 to 9.
+        The last(tenth) character should be any upper case alphabet.
+
+        .. versionadded:: 4.0
+    """
+
+    default_error_messages = {
+        'invalid': _('Please enter a valid Indian PAN card number.'),
+    }
+
+    def __init__(self, **kwargs):
+        super().__init__(r'[A-Z]{5}[0-9]{4}[A-Z]{1}', **kwargs)
+
+    def clean(self, value):
+        value = super().clean(value)
+        # remove any white spaces, if present
+        if value is not None:
+            value = value.replace(' ','')
+        if value in self.empty_values:
+            return self.empty_value
+        return value

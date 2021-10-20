@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 
-from localflavor.in_.forms import INAadhaarNumberField, INStateField, INStateSelect, INZipCodeField
+from localflavor.in_.forms import INAadhaarNumberField, INStateField, INStateSelect, INZipCodeField, INPANCardNumberFormField
 
 
 class INLocalFlavorTests(SimpleTestCase):
@@ -174,3 +174,25 @@ class INLocalFlavorTests(SimpleTestCase):
             'FL': error_format,
         }
         self.assertFieldOutput(INStateField, valid, invalid)
+
+    def test_INPANCardNumberField(self):
+        invalid_pan_error = ['Please enter a valid Indian PAN card number.']
+        required_pan_error = ['This field is required.']
+
+        valid = {
+            'AAAAA1234T': 'AAAAA1234T',
+            'BNZAA2318J':'BNZAA2318J',
+            'ABCDE1234E':'ABCDE1234E',
+        }
+        invalid = {
+            '23ZAABN18J': invalid_pan_error,
+            '6060-1234': invalid_pan_error,
+            'BNZAA 23184':invalid_pan_error,
+            '60606-': invalid_pan_error,
+            'ASSS':invalid_pan_error,
+            '4000': invalid_pan_error,
+            '6060-1234': invalid_pan_error,
+            '60606-': invalid_pan_error,
+            'ASSS':invalid_pan_error,
+        }
+        self.assertFieldOutput(INPANCardNumberFormField, valid, invalid)
