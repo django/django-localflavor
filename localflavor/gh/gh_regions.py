@@ -9,7 +9,7 @@ eg.
 
 from django.utils.translation import gettext_lazy as _
 
-PROVINCES = [
+REGIONS = [
     ('ahafo', _('Ahafo')),
     ('ashanti', _('Ashanti')),
     ('bono_east', _('Bono East')),
