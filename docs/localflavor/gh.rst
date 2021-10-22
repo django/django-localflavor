@@ -9,4 +9,4 @@ Forms
 
 Data
 ----
-.. autodata:: localflavor.gh.gh_provinces.REGIONS
+.. autodata:: localflavor.gh.gh_regions.REGIONS
