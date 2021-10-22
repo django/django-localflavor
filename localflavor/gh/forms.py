@@ -14,7 +14,7 @@ class GHPostalCodeFormField(RegexField):
     """
 
     default_error_messages = {
-        'invalid': _('Enter a postal code in format XX'),
+        'invalid': _('Enter a postal code in format XXXXX'),
     }
 
     def __init__(self, **kwargs):
