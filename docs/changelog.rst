@@ -8,11 +8,14 @@ New flavors:
 
 - Nepal LocalFlavor: Support for Nepal added
   (`gh-451 <https://github.com/django/django-localflavor/pull/451>`_).
+- Belarus localflavor
+  (`gh-422 <https://github.com/django/django-localflavor/pull/422>`_,
+  `gh-442 <https://github.com/django/django-localflavor/pull/442>`_).
 
 New fields for existing flavors:
 
 - Added permanent account number(PAN) field in Indian flavor.
-  (`gh-452 <https://github.com/django/django-localflavor/pull/452>`_).
+  (`gh-457 <https://github.com/django/django-localflavor/pull/457>`_).
 
 Modifications to existing flavors:
 
