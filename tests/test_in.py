@@ -177,7 +177,6 @@ class INLocalFlavorTests(SimpleTestCase):
 
     def test_INPANCardNumberField(self):
         invalid_pan_error = ['Please enter a valid Indian PAN card number.']
-        required_pan_error = ['This field is required.']
 
         valid = {
             'AAAAA1234T': 'AAAAA1234T',
@@ -186,7 +185,7 @@ class INLocalFlavorTests(SimpleTestCase):
         }
         invalid = {
             '23ZAABN18J': invalid_pan_error,
-            '6060-1234': invalid_pan_error,
+            '6060-1234-': invalid_pan_error,
             'BNZAA 23184':invalid_pan_error,
             '60606-': invalid_pan_error,
             'ASSS':invalid_pan_error,
