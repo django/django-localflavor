@@ -1,6 +1,6 @@
 from django.db.models import CharField
 from django.core.validators import MinLengthValidator
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .by_regions import BY_REGIONS_CHOICES
 from .forms import BYPassNumberField as BYPassNumberFormField
