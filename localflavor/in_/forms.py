@@ -144,7 +144,8 @@ class INPANCardNumberFormField(RegexField):
             J — Artificial juridical person
             P — Person (Individual)
             T — Trust (AOP)
-        4. The fifth character is first letter of lastname of the PAN Card holder.
+        4. The fifth character is first letter of lastname of the PAN Card holder in case of Individual
+            or the first letter of first name in case of non-individual.
         5. The next four-characters must be any number from 0000 to 9999.
         6. The last(tenth) character which is a check-sum character must be any upper case alphabet.
 
