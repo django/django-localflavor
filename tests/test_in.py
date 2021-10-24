@@ -180,8 +180,8 @@ class INLocalFlavorTests(SimpleTestCase):
 
         valid = {
             'AAAAA1234T':'AAAAA1234T',
-            'BNZAB2318J':'BNZAA2318J',
-            'ABCDC1234E':'ABCDE1234E',
+            'BNZAB2318J':'BNZAB2318J',
+            'ABCFC1234E':'ABCFC1234E',
             'PQRLY1034T':'PQRLY1034T',
             'ABHGA1234T':'ABHGA1234T',
             'UMZJB2318J':'UMZJB2318J',

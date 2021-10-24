@@ -39,11 +39,11 @@ class INPANCardNumberValidator(RegexValidator):
 
 class INPANCardNumberField(models.CharField):
     """
-        A model field that accepts indian PAN Card number.
+    A model field that accepts indian PAN Card number.
 
-        Forms represent it as a ``forms.INPANCardNumberFormField`` field.
+    Forms represent it as a ``forms.INPANCardNumberFormField`` field.
 
-        .. versionadded:: 4.0
+    .. versionadded:: 4.0
     """
     description = _("PAN Card number field")
     def __init__(self, *args, **kwargs):

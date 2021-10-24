@@ -128,9 +128,9 @@ class INStateSelect(Select):
 
 class INPANCardNumberFormField(RegexField):
     """
-        A form field that accepts Indian Permanent account number(PAN) Card Number.
+    A form field that accepts Indian Permanent account number(PAN) Card Number.
 
-        Rules:
+    Rules:
         1. It should be ten characters long.
         2. The first three characters must be any upper case alphabets.
         3. The fourth character of PAN must be one of the following characters.
@@ -148,17 +148,17 @@ class INPANCardNumberFormField(RegexField):
         5. The next four-characters must be any number from 0000 to 9999.
         6. The last(tenth) character which is a check-sum character must be any upper case alphabet.
 
-        Note:
+    Note:
         1. The validation of the fifth character must be done by the developer themselves,
             as this validation is out of the scope of this project.
         2. The validation for the last digit (i.e check-sum character) is not available
             in public domain, hence it is not implemented.
 
-        More Information at: 
-            https://en.wikipedia.org/wiki/Permanent_account_number
-            https://www.incometaxindia.gov.in/tutorials/1.permanent%20account%20number%20(pan).pdf
+    More Information at: 
+        1. https://en.wikipedia.org/wiki/Permanent_account_number
+        2. https://www.incometaxindia.gov.in/tutorials/1.permanent%20account%20number%20(pan).pdf
 
-        .. versionadded:: 4.0
+    .. versionadded:: 4.0
     """
 
     default_error_messages = {
