@@ -1,4 +1,3 @@
-import re
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.core.validators import RegexValidator
@@ -28,24 +27,22 @@ class INStateField(models.CharField):
 class INPANCardNumberValidator(RegexValidator):
     """
     A validator for Indian Permanent Account Number(PAN) Card field.
-
-    Rules:
-        It should be ten characters long.
-        The first five characters should be any upper case alphabets.
-        The next four-characters should be any number from 0 to 9.
-        The last(tenth) character should be any upper case alphabet.
     """
+
     default_error_messages = {
         'invalid': _('Please enter a valid Indian PAN card number.'),
     }
 
     def __init__(self,*args, **kwargs):
-        super().__init__(regex = re.compile('[A-Z]{5}[0-9]{4}[A-Z]{1}'), *args,**kwargs)
+        # documentation for validation rules are available in ``forms.INPANCardNumberFormField``
+        super().__init__(regex = r'^[A-Z]{3}[ABCFGHLJPT][A-Z][0-9]{4}[A-Z]$', *args,**kwargs)
 
 class INPANCardNumberField(models.CharField):
     """
         A model field that accepts indian PAN Card number.
-        Source: https://en.wikipedia.org/wiki/Permanent_account_number
+
+        Forms represent it as a ``forms.INPANCardNumberFormField`` field.
+
         .. versionadded:: 4.0
     """
     description = _("PAN Card number field")

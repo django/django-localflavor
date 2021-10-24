@@ -179,11 +179,22 @@ class INLocalFlavorTests(SimpleTestCase):
         invalid_pan_error = ['Please enter a valid Indian PAN card number.']
 
         valid = {
-            'AAAAA1234T': 'AAAAA1234T',
-            'BNZAA2318J':'BNZAA2318J',
-            'ABCDE1234E':'ABCDE1234E',
+            'AAAAA1234T':'AAAAA1234T',
+            'BNZAB2318J':'BNZAA2318J',
+            'ABCDC1234E':'ABCDE1234E',
+            'PQRLY1034T':'PQRLY1034T',
+            'ABHGA1234T':'ABHGA1234T',
+            'UMZJB2318J':'UMZJB2318J',
+            'AOCPC1964E':'AOCPC1964E',
+            'PERTY1934T':'PERTY1934T',
         }
         invalid = {
+            'AAADA1234T':invalid_pan_error,
+            'BNZEB2318J':invalid_pan_error,
+            'ABCIC1234E':invalid_pan_error,
+            'PQRQY1034T':invalid_pan_error,
+            'ABHRA1234T':invalid_pan_error,
+            'UMZSB2318J':invalid_pan_error,
             '23ZAABN18J': invalid_pan_error,
             '6060-1234-': invalid_pan_error,
             'BNZAA 23184':invalid_pan_error,

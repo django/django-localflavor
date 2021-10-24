@@ -131,10 +131,32 @@ class INPANCardNumberFormField(RegexField):
         A form field that accepts Indian Permanent account number(PAN) Card Number.
 
         Rules:
-        It should be ten characters long.
-        The first five characters should be any upper case alphabets.
-        The next four-characters should be any number from 0 to 9.
-        The last(tenth) character should be any upper case alphabet.
+        1. It should be ten characters long.
+        2. The first three characters must be any upper case alphabets.
+        3. The fourth character of PAN must be one of the following characters.
+            A — Association of persons (AOP)
+            B — Body of individuals (BOI)
+            C — Company
+            F — Firm
+            G — Government
+            H — HUF (Hindu undivided family)
+            L — Local authority
+            J — Artificial juridical person
+            P — Person (Individual)
+            T — Trust (AOP)
+        4. The fifth character is first letter of lastname of the PAN Card holder.
+        5. The next four-characters must be any number from 0000 to 9999.
+        6. The last(tenth) character which is a check-sum character must be any upper case alphabet.
+
+        Note:
+        1. The validation of the fifth character must be done by the developer themselves,
+            as this validation is out of the scope of this project.
+        2. The validation for the last digit (i.e check-sum character) is not available
+            in public domain, hence it is not implemented.
+
+        More Information at: 
+            https://en.wikipedia.org/wiki/Permanent_account_number
+            https://www.incometaxindia.gov.in/tutorials/1.permanent%20account%20number%20(pan).pdf
 
         .. versionadded:: 4.0
     """
@@ -144,12 +166,12 @@ class INPANCardNumberFormField(RegexField):
     }
 
     def __init__(self, **kwargs):
-        super().__init__(r'[A-Z]{5}[0-9]{4}[A-Z]{1}', **kwargs)
+        super().__init__(r'^[A-Z]{3}[ABCFGHLJPT][A-Z][0-9]{4}[A-Z]$', **kwargs)
 
     def clean(self, value):
         value = super().clean(value)
         # remove any white spaces, if present
-        if value is not None:
+        if isinstance(value, str) and value is not None:
             value = value.replace(' ','')
         if value in self.empty_values:
             return self.empty_value
