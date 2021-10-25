@@ -12,7 +12,7 @@ New flavors:
   (`gh-422 <https://github.com/django/django-localflavor/pull/422>`_,
   `gh-442 <https://github.com/django/django-localflavor/pull/442>`_).
 - Ghana localflavor
-  (`gh-459 <https://github.com/django/django-localflavor/pull/459>`_).
+  (`gh-460 <https://github.com/django/django-localflavor/pull/460>`_).
 
 New fields for existing flavors:
 
