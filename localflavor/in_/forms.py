@@ -172,7 +172,7 @@ class INPANCardNumberFormField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         # remove any white spaces, if present
-        if isinstance(value, str) and value is not None:
+        if value and isinstance(value, str):
             value = value.replace(' ','')
         if value in self.empty_values:
             return self.empty_value

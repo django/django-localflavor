@@ -1,9 +1,9 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django.core.validators import RegexValidator
 
 from .in_states import STATE_CHOICES
 from .forms import INPANCardNumberFormField
+from .validators import INPANCardNumberValidator
 
 class INStateField(models.CharField):
     """
@@ -23,19 +23,6 @@ class INStateField(models.CharField):
         name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
         return name, path, args, kwargs
-
-class INPANCardNumberValidator(RegexValidator):
-    """
-    A validator for Indian Permanent Account Number(PAN) Card field.
-    """
-
-    default_error_messages = {
-        'invalid': _('Please enter a valid Indian PAN card number.'),
-    }
-
-    def __init__(self,*args, **kwargs):
-        # documentation for validation rules are available in ``forms.INPANCardNumberFormField``
-        super().__init__(regex = r'^[A-Z]{3}[ABCFGHLJPT][A-Z][0-9]{4}[A-Z]$', *args,**kwargs)
 
 class INPANCardNumberField(models.CharField):
     """
