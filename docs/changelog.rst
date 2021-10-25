@@ -14,7 +14,8 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- Added permanent account number(PAN) field in Indian flavor.
+  (`gh-457 <https://github.com/django/django-localflavor/pull/457>`_).
 
 Modifications to existing flavors:
 

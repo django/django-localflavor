@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 
-from localflavor.in_.forms import INAadhaarNumberField, INStateField, INStateSelect, INZipCodeField
+from localflavor.in_.forms import INAadhaarNumberField, INStateField, INStateSelect, INZipCodeField, INPANCardNumberFormField
 
 
 class INLocalFlavorTests(SimpleTestCase):
@@ -174,3 +174,35 @@ class INLocalFlavorTests(SimpleTestCase):
             'FL': error_format,
         }
         self.assertFieldOutput(INStateField, valid, invalid)
+
+    def test_INPANCardNumberField(self):
+        invalid_pan_error = ['Please enter a valid Indian PAN card number.']
+
+        valid = {
+            'AAAAA1234T':'AAAAA1234T',
+            'BNZAB2318J':'BNZAB2318J',
+            'ABCFC1234E':'ABCFC1234E',
+            'PQRLY1034T':'PQRLY1034T',
+            'ABHGA1234T':'ABHGA1234T',
+            'UMZJB2318J':'UMZJB2318J',
+            'AOCPC1964E':'AOCPC1964E',
+            'PERTY1934T':'PERTY1934T',
+        }
+        invalid = {
+            'AAADA1234T':invalid_pan_error,
+            'BNZEB2318J':invalid_pan_error,
+            'ABCIC1234E':invalid_pan_error,
+            'PQRQY1034T':invalid_pan_error,
+            'ABHRA1234T':invalid_pan_error,
+            'UMZSB2318J':invalid_pan_error,
+            '23ZAABN18J': invalid_pan_error,
+            '6060-1234-': invalid_pan_error,
+            'BNZAA 23184':invalid_pan_error,
+            '60606-': invalid_pan_error,
+            'ASSS':invalid_pan_error,
+            '4000': invalid_pan_error,
+            '6060-1234': invalid_pan_error,
+            '60606-': invalid_pan_error,
+            'ASSS':invalid_pan_error,
+        }
+        self.assertFieldOutput(INPANCardNumberFormField, valid, invalid)
