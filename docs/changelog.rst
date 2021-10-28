@@ -28,7 +28,8 @@ Modifications to existing flavors:
 - Fix CURP regex for MX flavor
   (`gh-449 <https://github.com/django/django-localflavor/pull/449>`_).
 - Change text based fields that inherited from `django.forms.Field` to inherit from `django.forms.CharField`. The
-  following fields have been updated:
+  following fields have been updated
+  (`gh-446 <https://github.com/django/django-localflavor/pull/446>`_):
 
   - `at.forms.ATSocialSecurityNumberField`
   - `br.forms.BRStateChoiceField`
@@ -70,7 +71,6 @@ Modifications to existing flavors:
 Other changes:
 
 - None
-
 
 
 3.1   (2021-05-28)
