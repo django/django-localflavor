@@ -48,11 +48,21 @@ Modifications to existing flavors:
   - `hr.forms.HRJMBGField`
   - `hr.forms.HRLicensePlateField`
   - `hr.forms.HRPostalCodeField`
+  - `id_.forms.IDLicensePlateField`
+  - `id_.forms.IDNationalIdentityNumberField`
+  - `id_.forms.IDPostCodeField`
   - `il.forms.ILIDNumberField`
+  - `in_.forms.INAadhaarNumberField`
+  - `in_.forms.INStateField`
   - `ir.forms.IRIDNumberField`
   - `it.forms.ITVatNumberField`
   - `lt.forms.LTPostalCodeField`
+  - `lv.forms.LVPersonalCodeField`
+  - `lv.forms.LVPostalCodeField`
   - `no.forms.NOSocialSecurityNumber`
+  - `nz.forms.NZBankAccountNumberField`
+  - `pt.forms.PTCitizenCardNumberField`
+  - `pt.forms.PTSocialSecurityNumberField`
   - `ro.forms.ROCountyField`
   - `tr.forms.TRIdentificationNumberField`
   - `us.forms.USStateField`
