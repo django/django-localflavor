@@ -126,6 +126,7 @@ class INStateSelect(Select):
     def __init__(self, attrs=None):
         super().__init__(attrs, choices=STATE_CHOICES)
 
+
 class INPANCardNumberFormField(RegexField):
     """
     A form field that accepts Indian Permanent account number(PAN) Card Number.
@@ -155,7 +156,7 @@ class INPANCardNumberFormField(RegexField):
         2. The validation for the last digit (i.e check-sum character) is not available
             in public domain, hence it is not implemented.
 
-    More Information at: 
+    More Information at:
         1. https://en.wikipedia.org/wiki/Permanent_account_number
         2. https://www.incometaxindia.gov.in/tutorials/1.permanent%20account%20number%20(pan).pdf
 
@@ -168,12 +169,3 @@ class INPANCardNumberFormField(RegexField):
 
     def __init__(self, **kwargs):
         super().__init__(r'^[A-Z]{3}[ABCFGHLJPT][A-Z][0-9]{4}[A-Z]$', **kwargs)
-
-    def clean(self, value):
-        value = super().clean(value)
-        # remove any white spaces, if present
-        if value and isinstance(value, str):
-            value = value.replace(' ','')
-        if value in self.empty_values:
-            return self.empty_value
-        return value
