@@ -1,14 +1,12 @@
-from django.db.models import CharField
 from django.core.validators import MinLengthValidator
+from django.db.models import CharField
 from django.utils.translation import gettext_lazy as _
 
 from .by_regions import BY_REGIONS_CHOICES
-from .forms import BYPassNumberField as BYPassNumberFormField
 from .forms import BYPassIdNumberField as BYPassIdNumberFormField
+from .forms import BYPassNumberField as BYPassNumberFormField
 from .forms import BYPostalCodeField as BYPostalCodeFormField
-from .validators import (
-    PASS_NUMBER_VALIDATOR, PASS_ID_NUMBER_VALIDATOR,
-)
+from .validators import PASS_ID_NUMBER_VALIDATOR, PASS_NUMBER_VALIDATOR
 
 
 class BaseModelFieldUpdated:

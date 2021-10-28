@@ -1,9 +1,10 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from .in_states import STATE_CHOICES
 from .forms import INPANCardNumberFormField
+from .in_states import STATE_CHOICES
 from .validators import INPANCardNumberValidator
+
 
 class INStateField(models.CharField):
     """

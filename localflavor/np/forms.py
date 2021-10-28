@@ -1,11 +1,12 @@
 """Nepal specific form helpers."""
 
-from django.forms.fields import RegexField
+from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
-from django.forms.fields import Select
-from .np_zones import ZONES
-from .np_provinces import PROVINCES
+
 from .np_districts import DISTRICTS
+from .np_provinces import PROVINCES
+from .np_zones import ZONES
+
 
 class NPPostalCodeFormField(RegexField):
     """

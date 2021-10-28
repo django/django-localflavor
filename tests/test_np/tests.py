@@ -1,6 +1,9 @@
 from django.test import SimpleTestCase
-from localflavor.np.forms import NPDistrictSelect , NPProvinceSelect, NPZoneSelect, NPPostalCodeFormField
-from .selectfields_html import  districts_select, provinces_select, zones_select
+
+from localflavor.np.forms import NPDistrictSelect, NPPostalCodeFormField, NPProvinceSelect, NPZoneSelect
+
+from .selectfields_html import districts_select, provinces_select, zones_select
+
 
 class NepalDetails(SimpleTestCase):
     """

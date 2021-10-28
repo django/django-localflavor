@@ -1,7 +1,9 @@
 from django.test import TransactionTestCase
+
 from localflavor.gh.forms import GHRegionSelect
-from .selectfields_html import regions_select
+
 from .models import GHPlace
+from .selectfields_html import regions_select
 
 
 class GhanaDetails(TransactionTestCase):

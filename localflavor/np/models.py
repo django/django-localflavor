@@ -1,14 +1,16 @@
 """Nepal specific Model fields"""
 
 import re
+
+from django.core.validators import RegexValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django.core.validators import RegexValidator
 
 from .forms import NPPostalCodeFormField
-from .np_zones import ZONES
-from .np_provinces import PROVINCES
 from .np_districts import DISTRICTS
+from .np_provinces import PROVINCES
+from .np_zones import ZONES
+
 
 class NPPostalCodeValidator(RegexValidator):
     """

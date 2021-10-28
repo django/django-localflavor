@@ -1,6 +1,7 @@
 from django.test import SimpleTestCase
 
-from localflavor.in_.forms import INAadhaarNumberField, INStateField, INStateSelect, INZipCodeField, INPANCardNumberFormField
+from localflavor.in_.forms import (INAadhaarNumberField, INPANCardNumberFormField, INStateField, INStateSelect,
+                                   INZipCodeField)
 
 
 class INLocalFlavorTests(SimpleTestCase):
