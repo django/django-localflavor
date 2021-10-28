@@ -1,13 +1,10 @@
-import re
 from django.db import models
-from django.utils.translation import gettext_lazy as _
-from django.core.validators import RegexValidator
 from .gh_regions import REGIONS
 
 
 class GHRegionField(models.CharField):
     """
-        A model field that provides an option to select 
+        A model field that provides an option to select
         a region from the list of all Ghana regions.
         .. versionadded:: 4.0
     """
@@ -20,4 +17,4 @@ class GHRegionField(models.CharField):
     def deconstruct(self):
         name, path, args, kwargs = super().deconstruct()
         del kwargs['choices']
-        return name, path, args, kwargs 
+        return name, path, args, kwargs

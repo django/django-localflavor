@@ -1,13 +1,12 @@
 """Ghana specific form helpers."""
 
-from django.forms.fields import RegexField
-from django.utils.translation import gettext_lazy as _
 from django.forms.fields import Select
 from .gh_regions import REGIONS
 
+
 class GHRegionSelect(Select):
     """
-    A Select widget with option to select a region from 
+    A Select widget with option to select a region from
     list of all regions of Ghana.
     """
 
