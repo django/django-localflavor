@@ -29,9 +29,8 @@ class UpperValueMixin:
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
-        else:
-            return value.upper()
+            return value
+        return value.upper()
 
 
 class BYRegionSelect(forms.Select):

@@ -109,7 +109,7 @@ class CNIDCardField(CharField):
         # Check the length of the ID card number.
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         # Check whether this ID card number has valid format
         if not re.match(ID_CARD_RE, value):
             raise ValidationError(self.error_messages['invalid'], code='invalid')

@@ -112,7 +112,7 @@ class HROIBField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         return '%s' % (value, )
 

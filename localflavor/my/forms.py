@@ -22,7 +22,7 @@ class MyKadFormField(CharField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         if nric.is_valid(value):
             return value
@@ -32,7 +32,7 @@ class MyKadFormField(CharField):
         value = super().to_python(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return nric.compact(value)
 
     def prepare_value(self, value):

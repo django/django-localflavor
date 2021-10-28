@@ -30,7 +30,7 @@ class GBPostcodeField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         postcode = value.upper()
         # Put a single space before the incode (second part).
         postcode = self.space_regex.sub(r' \1', postcode)

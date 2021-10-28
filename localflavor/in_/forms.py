@@ -26,7 +26,7 @@ class INZipCodeField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         # Convert to "NNNNNN" if "NNN NNN" given
         value = re.sub(r'^(\d{3})\s(\d{3})$', r'\1\2', value)
         return value

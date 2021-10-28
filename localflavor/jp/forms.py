@@ -26,7 +26,7 @@ class JPPostalCodeField(RegexField):
         """
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.replace('-', '')
 
 

@@ -38,7 +38,7 @@ class UYCIField(RegexField):
         """
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         match = self.regex.match(value)
         if not match:
             raise ValidationError(self.error_messages['invalid'], code='invalid')

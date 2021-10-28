@@ -31,7 +31,7 @@ class CAPostalCodeField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         postcode = value.upper().strip()
         m = self.postcode_regex.match(postcode)
         if not m:

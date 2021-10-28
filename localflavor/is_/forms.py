@@ -30,7 +30,7 @@ class ISIdNumberField(RegexField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = self._canonify(value)
         if self._validate(value):

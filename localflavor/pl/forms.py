@@ -51,7 +51,7 @@ class PLPESELField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if not self.has_valid_checksum(value):
             raise ValidationError(self.error_messages['checksum'], code='checksum')
         if not self.has_valid_birth_date(value):
@@ -108,7 +108,7 @@ class PLNationalIDCardNumberField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = value.upper()
 
@@ -161,7 +161,7 @@ class PLNIPField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         value = re.sub("[-]", "", value)
         if not self.has_valid_checksum(value):
             raise ValidationError(self.error_messages['checksum'], code='checksum')
@@ -197,7 +197,7 @@ class PLREGONField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if not self.has_valid_checksum(value):
             raise ValidationError(self.error_messages['checksum'], code='checksum')
         return '%s' % value

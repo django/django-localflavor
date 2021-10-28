@@ -48,7 +48,7 @@ class LTIDCodeField(RegexField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         if not self.valid_date(value):
             raise ValidationError(self.error_messages['date'], code='date')

@@ -85,13 +85,6 @@ class BRCPFField(CharField):
         super().__init__(max_length=max_length, min_length=min_length, **kwargs)
         self.validators.append(BRCPFValidator())
 
-    def clean(self, value):
-        """Value can be either a string in the format XXX.XXX.XXX-XX or an 11-digit number."""
-        value = super().clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        return value
-
 
 class BRCNPJField(CharField):
     """
@@ -124,13 +117,6 @@ class BRCNPJField(CharField):
         super().__init__(max_length=max_length, min_length=min_length, **kwargs)
         self.validators.append(BRCNPJValidator())
 
-    def clean(self, value):
-        """Value can be either a string in the format XX.XXX.XXX/XXXX-XX or a group of 14 characters."""
-        value = super().clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        return value
-
 
 def mod_97_base10(value):
     return 98 - ((value * 100 % 97) % 97)
@@ -156,7 +142,7 @@ class BRProcessoField(CharField):
         """Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or an 20-digit number."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         orig_value = value[:]
         if not value.isdigit():

@@ -73,7 +73,7 @@ class IRIDNumberField(Field):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = self.id_number_re.match(value)
         if not match:

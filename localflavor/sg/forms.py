@@ -59,7 +59,7 @@ class SGNRICFINField(CharField):
         """
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         value = re.sub(r'(\s+)', '', force_str(value.upper()))
         match = NRIC_FIN_RE.search(value)
         if not match:

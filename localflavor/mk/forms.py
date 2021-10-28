@@ -68,7 +68,7 @@ class UMCNField(RegexField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         if not self._validate_date_part(value):
             raise ValidationError(self.error_messages['date'], code='date')

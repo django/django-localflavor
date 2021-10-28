@@ -89,7 +89,7 @@ class GRSocialSecurityNumberCodeField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         val = re.sub(r'[\-\s]', '', force_str(value))
         if not val or len(val) < 11:
             raise ValidationError(self.error_messages['invalid'], code='invalid')
