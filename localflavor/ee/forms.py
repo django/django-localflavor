@@ -1,9 +1,9 @@
 import re
 from datetime import date
 
-from django.core.validators import EMPTY_VALUES
+from django.core.exceptions import ImproperlyConfigured
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .ee_counties import COUNTY_CHOICES
@@ -35,7 +35,7 @@ class EECountySelect(Select):
         super().__init__(attrs, choices=COUNTY_CHOICES)
 
 
-class EEPersonalIdentificationCode(Field):
+class EEPersonalIdentificationCode(CharField):
     """A form field that validates input as an Estonian personal identification code.
 
     See: https://www.riigiteataja.ee/akt/106032012004
@@ -63,8 +63,8 @@ class EEPersonalIdentificationCode(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = re.match(idcode, value)
         if not match:
@@ -89,7 +89,7 @@ class EEPersonalIdentificationCode(Field):
         return value
 
 
-class EEBusinessRegistryCode(Field):
+class EEBusinessRegistryCode(CharField):
     """A form field that validates input as an Estonian business registration code.
 
     .. versionadded:: 1.2
@@ -102,9 +102,8 @@ class EEBusinessRegistryCode(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = value.strip()
+        if value in self.empty_values:
+            return value
 
         match = re.match(bregcode, value)
         if not match:

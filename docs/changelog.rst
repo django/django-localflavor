@@ -27,12 +27,51 @@ Modifications to existing flavors:
   (`gh-444 <https://github.com/django/django-localflavor/pull/444>`_).
 - Fix CURP regex for MX flavor
   (`gh-449 <https://github.com/django/django-localflavor/pull/449>`_).
+- Change text based fields that inherited from `django.forms.Field` to inherit from `django.forms.CharField`. The
+  following fields have been updated
+  (`gh-446 <https://github.com/django/django-localflavor/pull/446>`_):
+
+  - `at.forms.ATSocialSecurityNumberField`
+  - `br.forms.BRStateChoiceField`
+  - `ca.forms.CAProvinceField`
+  - `ca.forms.CASocialInsuranceNumberField`
+  - `ch.forms.CHIdentityCardNumberField`
+  - `cu.forms.CUProvinceField`
+  - `cu.forms.CURegionField`
+  - `cz.forms.CZBirthNumberField`
+  - `cz.forms.CZICNumberField`
+  - `de.forms.DEIdentityCardNumberField`
+  - `ee.forms.EEBusinessRegistryCode`
+  - `ee.forms.EEPersonalIdentificationCode`
+  - `fi.forms.FISocialSecurityNumber`
+  - `gr.forms.GRTaxNumberCodeField`
+  - `hr.forms.HRJMBAGField`
+  - `hr.forms.HRJMBGField`
+  - `hr.forms.HRLicensePlateField`
+  - `hr.forms.HRPostalCodeField`
+  - `id_.forms.IDLicensePlateField`
+  - `id_.forms.IDNationalIdentityNumberField`
+  - `id_.forms.IDPostCodeField`
+  - `il.forms.ILIDNumberField`
+  - `in_.forms.INAadhaarNumberField`
+  - `in_.forms.INStateField`
+  - `ir.forms.IRIDNumberField`
+  - `it.forms.ITVatNumberField`
+  - `lt.forms.LTPostalCodeField`
+  - `lv.forms.LVPersonalCodeField`
+  - `lv.forms.LVPostalCodeField`
+  - `no.forms.NOSocialSecurityNumber`
+  - `nz.forms.NZBankAccountNumberField`
+  - `pt.forms.PTCitizenCardNumberField`
+  - `pt.forms.PTSocialSecurityNumberField`
+  - `ro.forms.ROCountyField`
+  - `tr.forms.TRIdentificationNumberField`
+  - `us.forms.USStateField`
 
 Other changes:
 
 - Use 'return value' when value is in the empty_values list
   (`gh-461 <https://github.com/django/django-localflavor/pull/461>`_).
-
 
 3.1   (2021-05-28)
 ------------------

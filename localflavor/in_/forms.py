@@ -2,10 +2,9 @@
 
 import re
 
-from django.core.validators import EMPTY_VALUES
+from django.core.exceptions import ImproperlyConfigured
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
-from django.utils.encoding import force_str
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .in_states import STATE_CHOICES, STATES_NORMALIZED
@@ -32,7 +31,7 @@ class INZipCodeField(RegexField):
         return value
 
 
-class INStateField(Field):
+class INStateField(CharField):
     """
     A form field that validates its input is a Indian state name or abbreviation.
 
@@ -52,21 +51,18 @@ class INStateField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
+
+        value = value.lower()
         try:
-            value = value.strip().lower()
-        except AttributeError:
+            return STATES_NORMALIZED[value.lower()]
+        except KeyError:
             pass
-        else:
-            try:
-                return force_str(STATES_NORMALIZED[value.strip().lower()])
-            except KeyError:
-                pass
         raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
-class INAadhaarNumberField(Field):
+class INAadhaarNumberField(CharField):
     """
     A form field for Aadhaar number issued by Unique Identification Authority of India (UIDAI).
 
@@ -93,8 +89,8 @@ class INAadhaarNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = re.match(aadhaar_re, value)
         if not match:
