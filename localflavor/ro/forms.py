@@ -1,8 +1,8 @@
 """Romanian specific form helpers."""
 import datetime
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import Field, RegexField, Select, ValidationError
+from django.core.exceptions import ImproperlyConfigured
+from django.forms import CharField, RegexField, Select, ValidationError
 from django.utils.translation import gettext_lazy as _
 
 from .ro_counties import COUNTIES_CHOICES
@@ -114,7 +114,7 @@ class ROCNPField(RegexField):
         return value
 
 
-class ROCountyField(Field):
+class ROCountyField(CharField):
     """
     A form field that validates its input is a Romanian county name or abbreviation.
 
@@ -140,13 +140,10 @@ class ROCountyField(Field):
     def clean(self, value):
         value = super().clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        try:
-            value = value.strip().upper()
-        except AttributeError:
-            pass
+        value = value.upper()
 
         # search for county code
         for entry in COUNTIES_CHOICES:

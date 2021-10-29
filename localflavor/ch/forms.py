@@ -2,9 +2,10 @@
 
 import re
 
-from django.core.validators import EMPTY_VALUES, RegexValidator
+from django.core.exceptions import ImproperlyConfigured
+from django.core.validators import RegexValidator
 from django.forms import ValidationError
-from django.forms.fields import CharField, Field, RegexField, Select
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from ..generic import validators
@@ -40,7 +41,7 @@ class CHStateSelect(Select):
         super().__init__(attrs, choices=STATE_CHOICES)
 
 
-class CHIdentityCardNumberField(Field):
+class CHIdentityCardNumberField(CharField):
     """
     A Swiss identity card number.
 
@@ -87,8 +88,8 @@ class CHIdentityCardNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = re.match(id_re, value)
         if not match:

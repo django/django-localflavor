@@ -1,8 +1,7 @@
 import re
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.core.exceptions import ImproperlyConfigured, ValidationError
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .tr_provinces import PROVINCE_CHOICES
@@ -37,7 +36,7 @@ class TRPostalCodeField(RegexField):
         return value
 
 
-class TRIdentificationNumberField(Field):
+class TRIdentificationNumberField(CharField):
     """
     A Turkey Identification Number number.
 
@@ -60,8 +59,8 @@ class TRIdentificationNumberField(Field):
     def clean(self, value):
         value = super().clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         if len(value) != 11:
             raise ValidationError(self.error_messages['not_11'], code='not_11')

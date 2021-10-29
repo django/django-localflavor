@@ -6,9 +6,8 @@ Contains PT-specific Django form helpers.
 
 from re import compile as regex_compile
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .pt_regions import REGION_CHOICES
@@ -19,7 +18,7 @@ SOCIAL_SECURITY_NUMBER_REGEX = regex_compile(r'^[12]\d{10}$')
 ZIP_CODE_REGEX = regex_compile(r'^[1-9]\d{3}-\d{3}$')
 
 
-class PTCitizenCardNumberField(Field):
+class PTCitizenCardNumberField(CharField):
     """
     A field which validates Portuguese Citizen Card numbers (locally CC - 'Cartão do Cidadão').
 
@@ -38,9 +37,8 @@ class PTCitizenCardNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = CITIZEN_CARD_NUMBER_REGEX.match(value)
 
@@ -80,7 +78,7 @@ class PTRegionSelect(Select):
         super().__init__(attrs, choices=REGION_CHOICES)
 
 
-class PTSocialSecurityNumberField(Field):
+class PTSocialSecurityNumberField(CharField):
     """
     A field which validates Portuguese Social Security numbers.
 
@@ -96,9 +94,8 @@ class PTSocialSecurityNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = SOCIAL_SECURITY_NUMBER_REGEX.search(value)
 

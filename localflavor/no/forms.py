@@ -3,9 +3,8 @@
 import datetime
 import re
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-from django.forms.fields import CharField, Field, RegexField, Select
+from django.core.exceptions import ImproperlyConfigured, ValidationError
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .no_municipalities import MUNICIPALITY_CHOICES
@@ -33,7 +32,7 @@ class NOMunicipalitySelect(Select):
         super().__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 
-class NOSocialSecurityNumber(Field):
+class NOSocialSecurityNumber(CharField):
     """Algorithm is documented at http://no.wikipedia.org/wiki/Personnummer."""
 
     default_error_messages = {
@@ -42,8 +41,8 @@ class NOSocialSecurityNumber(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         if not re.match(r'^\d{11}$', value):
             raise ValidationError(self.error_messages['invalid'], code='invalid')
