@@ -36,7 +36,7 @@ class USZipCodeField(RegexField):
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.strip()
 
 
@@ -65,7 +65,7 @@ class USSocialSecurityNumberField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         match = re.match(ssn_re, value)
         if not match:
             raise ValidationError(self.error_messages['invalid'], code='invalid')

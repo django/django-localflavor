@@ -34,7 +34,7 @@ class ROCIFField(RegexField):
         """
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = value.strip()
 
@@ -87,7 +87,7 @@ class ROCNPField(RegexField):
         """
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         # check birthdate digits
         try:

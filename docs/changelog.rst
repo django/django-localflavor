@@ -30,8 +30,8 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
-
+- Use 'return value' when value is in the empty_values list
+  (`gh-461 <https://github.com/django/django-localflavor/pull/461>`_).
 
 
 3.1   (2021-05-28)

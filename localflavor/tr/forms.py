@@ -28,7 +28,7 @@ class TRPostalCodeField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if len(value) != 5:
             raise ValidationError(self.error_messages['invalid'], code='invalid')
         province_code = int(value[:2])

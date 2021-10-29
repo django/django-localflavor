@@ -32,7 +32,7 @@ class EGNationalIDNumberField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         century = value[0]
         year, month, day = textwrap.wrap(value[1:7], 2)  # pylint: disable=unbalanced-tuple-unpacking

@@ -54,7 +54,7 @@ class KWCivilIDNumberField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         cc = value[0]  # Century value
         yy, mm, dd = textwrap.wrap(value[1:7], 2)  # pylint: disable=unbalanced-tuple-unpacking

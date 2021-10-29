@@ -38,7 +38,7 @@ class UAVatNumberField(RegexField):
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.strip()
 
 
@@ -64,5 +64,5 @@ class UAPostalCodeField(RegexField):
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.strip()

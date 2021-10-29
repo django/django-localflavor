@@ -43,7 +43,7 @@ class AUBusinessNumberField(CharField):
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.upper().replace(' ', '')
 
     def prepare_value(self, value):
@@ -67,7 +67,7 @@ class AUCompanyNumberField(CharField):
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.upper().replace(' ', '')
 
     def prepare_value(self, value):

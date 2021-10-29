@@ -27,7 +27,7 @@ class SIEMSOField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         m = self._regex_match(value)
         day, month, year, nationality, gender, checksum = [int(i) for i in m.groups()]
@@ -92,7 +92,7 @@ class SITaxNumberField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         m = self.sitax_regex.match(value)
         if m is None:

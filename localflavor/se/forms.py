@@ -51,7 +51,7 @@ class SEOrganisationNumberField(forms.CharField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = SWEDISH_ID_NUMBER.match(value)
         if not match:
@@ -116,7 +116,7 @@ class SEPersonalIdentityNumberField(forms.CharField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = SWEDISH_ID_NUMBER.match(value)
         if match is None:
@@ -173,5 +173,5 @@ class SEPostalCodeField(forms.RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.replace(' ', '')

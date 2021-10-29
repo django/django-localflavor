@@ -150,11 +150,11 @@ class NOBankAccountNumber(CharField):
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.replace('.', '').replace(' ', '')
 
     def prepare_value(self, value):
         value = self.to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return '{}.{}.{}'.format(value[0:4], value[4:6], value[6:11])

@@ -40,7 +40,7 @@ class ARPostalCodeField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if len(value) not in (4, 8):
             raise ValidationError(self.error_messages['invalid'], code='invalid')
         if len(value) == 8:
@@ -63,7 +63,7 @@ class ARDNIField(CharField):
         """Value can be a string either in the [X]X.XXX.XXX or [X]XXXXXXX formats."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if not value.isdigit():
             value = value.replace('.', '')
         if not value.isdigit():
@@ -104,7 +104,7 @@ class ARCUITField(RegexField):
         """Value can be either a string in the format XX-XXXXXXXX-X or an 11-digit number."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         value, cd = self._canon(value)
         if not value[:2] in ['27', '20', '30', '23', '24', '33', '34']:
             raise ValidationError(self.error_messages['legal_type'], code='legal_type')
@@ -160,7 +160,7 @@ class ARCBUField(CharField):
         """Value must be a 22 digits long number."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         try:
             return cbu.validate(value)
         except InvalidLength:
