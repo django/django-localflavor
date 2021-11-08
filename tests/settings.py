@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     'tests.test_pk',
     'tests.test_cu',
     'tests.test_gh',
+    'tests.test_np',
     'tests.test_generic',
 ]
 

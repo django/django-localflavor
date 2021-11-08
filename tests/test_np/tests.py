@@ -1,11 +1,13 @@
-from django.test import SimpleTestCase
+from django.test import TransactionTestCase
 
 from localflavor.np.forms import NPDistrictSelect, NPPostalCodeFormField, NPProvinceSelect, NPZoneSelect
 
 from .selectfields_html import districts_select, provinces_select, zones_select
 
+from .models import NepalianPlace
 
-class NepalDetails(SimpleTestCase):
+
+class NepalDetails(TransactionTestCase):
     """
         This Test class tests all the selectbox
         fields and Postal Code Fields.
@@ -37,3 +39,28 @@ class NepalDetails(SimpleTestCase):
             '-123': error_format,
         }
         self.assertFieldOutput(NPPostalCodeFormField, valid, invalid)
+
+
+    def test_NPDistrictField(self):
+        place = NepalianPlace()
+        place.district = 'achham'
+        place.clean_fields()
+        place.save()
+        self.assertEqual(place.get_district_display(), 'Achham')
+
+    def test_NPZoneField(self):
+        place = NepalianPlace()
+        place.zone = 'mahakali'
+        place.clean_fields()
+        place.save()
+        self.assertEqual(place.get_zone_display(), 'Mahakali')
+
+    def test_NPProvinceField(self):
+        place = NepalianPlace()
+        place.province = 'bagmati'
+        place.clean_fields()
+        place.save()
+        self.assertEqual(place.get_province_display(), 'Bagmati')
+
+
+
