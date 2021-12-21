@@ -14,7 +14,6 @@ class CALocalFlavorTests(TestCase):
         self.form = CAPlaceForm({
             'province': 'QC',
             'province_req': 'ON',
-            'province_default': 'AB',
             'postal_code': 'H0H 0H0',
             'name': 'impossible',
             'ssn': '046-454-286'
