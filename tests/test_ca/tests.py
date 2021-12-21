@@ -1,16 +1,34 @@
-from django.test.testcases import SimpleTestCase
+from django.test import TestCase
 from django.utils.translation import activate, deactivate, get_language
 
 from localflavor.ca.forms import CAPostalCodeField, CAProvinceField, CAProvinceSelect, CASocialInsuranceNumberField
 
+from .forms import CAPlaceForm
 
-class CALocalFlavorTests(SimpleTestCase):
+
+class CALocalFlavorTests(TestCase):
+
     def setUp(self):
         self.original_language = get_language()
         deactivate()
+        self.form = CAPlaceForm({
+            'province': 'QC',
+            'province_req': 'ON',
+            'province_default': 'AB',
+            'postal_code': 'H0H 0H0',
+            'name': 'impossible',
+            'ssn': '046-454-286'
+        })
 
     def tearDown(self):
         activate(self.original_language)
+
+    def test_get_display_methods(self):
+        """Test that the get_*_display() methods are added to the model instances."""
+        place = self.form.save()
+        self.assertEqual(place.get_province_display(), 'Quebec')
+        self.assertEqual(place.get_province_req_display(), 'Ontario')
+        self.assertEqual(place.get_province_default_display(), 'Alberta')
 
     def test_CAProvinceSelect(self):
         f = CAProvinceSelect()
