@@ -11,6 +11,8 @@ class CAProvinceField(CharField):
     A model field that stores the two-letter Canadian province abbreviation in the database.
 
     Forms represent it as a ``forms.CAProvinceField`` field.
+
+    .. versionadded:: 4.0
     """
 
     description = _("Canadian Province (two uppercase letters)")
@@ -31,6 +33,8 @@ class CAPostalCodeField(CharField):
     A model field that stores the Canadian Postal code in the database.
 
     Forms represent it as a :class:`~localflavor.ca.forms.CAPostalCodeField` field.
+
+    .. versionadded:: 4.0
     """
 
     description = _("Canadian Postal Code")
@@ -50,6 +54,8 @@ class CASocialInsuranceNumberField(CharField):
     A model field that stores  the security number in the format ``XXX-XXX-XXX``.
 
     Forms represent it as ``forms.CASocialInsuranceNumberField`` field.
+
+    .. versionadded:: 4.0
     """
 
     description = _("Social security number")
