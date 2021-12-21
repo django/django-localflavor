@@ -39,6 +39,7 @@ Authors
 * Diederik van der Boor
 * d.merc
 * Dmitry Dygalo
+* Dominick Rivard
 * Douglas Miranda
 * Elliott Fawcett
 * Erik Romijn
