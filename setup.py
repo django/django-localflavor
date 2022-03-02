@@ -112,6 +112,9 @@ setup(
     name="django-localflavor",
     version=find_version("localflavor", "__init__.py"),
     url='https://django-localflavor.readthedocs.io/en/latest/',
+    project_urls={
+        'Source': 'https://github.com/django/django-localflavor',
+    },
     license='BSD',
     description="Country-specific Django helpers",
     long_description=read('README.rst'),
