@@ -34,6 +34,7 @@ Authors
 * Daniel Ampuero
 * Daniela Ponader
 * Danielle Madeley
+* David Smith
 * Daniel Roschka
 * Didier 'OdyX' Raboud
 * Diederik van der Boor
