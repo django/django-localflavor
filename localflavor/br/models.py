@@ -69,3 +69,15 @@ class BRPostalCodeField(CharField):
         kwargs['max_length'] = 9
         super().__init__(*args, **kwargs)
         self.validators.append(validators.BRPostalCodeValidator())
+
+class BRLandLineField(CharField): 
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 14
+        super().__init__(*args, **kwargs)
+        self.validators.append(validators.BRLandLineValidator())
+
+class BRCellPhoneField(CharField): 
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 15
+        super().__init__(*args, **kwargs)
+        self.validators.append(validators.BRMobilePhoneValidator())

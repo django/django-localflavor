@@ -7,6 +7,8 @@ from django.utils.translation import gettext_lazy as _
 postal_code_re = re.compile(r'^\d{5}-\d{3}$')
 cnpj_digits_re = re.compile(r'^(\d{2})[.-]?(\d{3})[.-]?(\d{3})/(\d{4})-(\d{2})$')
 cpf_digits_re = re.compile(r'^(\d{3})\.(\d{3})\.(\d{3})-(\d{2})$')
+telefone_re = re.compile(r'^[(][0-9][0-9][)] \d{4}-\d{4}$')
+celular_re = re.compile(r'^[(][0-9][0-9][)] \d{5}-\d{4}$')
 
 
 def dv_maker(v):
@@ -103,4 +105,15 @@ class BRCPFValidator(RegexValidator):
         if value[-2:] != orig_dv:
             raise ValidationError(self.message, code='invalid')
         if value.count(value[0]) == 11:
-            raise ValidationError(self.message, code='invalid')
+            raise ValidationError(self.message, code='invalid') 
+
+
+class BRLandLineValidator(RegexValidator): 
+    def __init__(self, *args, **kwargs):
+        self.message = 'Telefone precisa ser no formato (00) 0000-0000.' 
+        super().__init__(telefone_re, *args, **kwargs)
+
+class BRMobilePhoneValidator(RegexValidator): 
+    def __init__(self, *args, **kwargs):
+        self.message = 'Telefone precisa ser no formato (00) 00000-0000.' 
+        super().__init__(celular_re, *args, **kwargs)
