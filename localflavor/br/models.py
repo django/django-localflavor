@@ -71,13 +71,17 @@ class BRPostalCodeField(CharField):
         self.validators.append(validators.BRPostalCodeValidator())
 
 class BRLandLineField(CharField): 
+    description = _("Landline Number")
+
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 14
         super().__init__(*args, **kwargs)
         self.validators.append(validators.BRLandLineValidator())
 
 class BRCellPhoneField(CharField): 
+    description = _("Cell Phone Number")
+
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 15
         super().__init__(*args, **kwargs)
-        self.validators.append(validators.BRMobilePhoneValidator())
+        self.validators.append(validators.BRCellPhoneValidator())
