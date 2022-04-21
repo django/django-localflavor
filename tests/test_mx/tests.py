@@ -195,6 +195,7 @@ class MXLocalFlavorTests(TestCase):
             'OOMG890727HMNRSR06': 'OOMG890727HMNRSR06',
             'AAAA000101HDFCCC09': 'AAAA000101HDFCCC09',
             'OXCJ810522MQRYHL08': 'OXCJ810522MQRYHL08',
+            'VACA711211HYNRMN02': 'VACA711211HYNRMN02',
         }
         invalid = {
             'AAAA000000HDFCCC09': error_format,

@@ -69,6 +69,7 @@ Modifications to existing flavors:
   - `ro.forms.ROCountyField`
   - `tr.forms.TRIdentificationNumberField`
   - `us.forms.USStateField`
+- Removed inconvenient word from CURP_INCONVENIENT_WORDS for MX flavor
 
 Other changes:
 
