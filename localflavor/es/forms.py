@@ -63,7 +63,7 @@ class ESIdentityCardNumberField(RegexField):
         self.only_nif = only_nif
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
-        self.cif_types = 'ABCDEFGHJKLMNPQRSVW'
+        self.cif_types = 'ABCDEFGHJKLMNPQRSUVW'
         self.nie_types = 'XYZ'
         self.id_card_pattern = r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$'
         id_card_re = re.compile(self.id_card_pattern %

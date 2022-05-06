@@ -23,6 +23,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
+- CIF spanish starting with 'U' bug resolved
+  (`gh-469 <https://github.com/django/django-localflavor/pull/469>`_).
 - Fix error code for BRPostalCodeValidator
   (`gh-448 <https://github.com/django/django-localflavor/pull/448>`_).
 - Fix spelling of the India state of Chhattisgarh
