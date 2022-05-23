@@ -159,6 +159,11 @@ class BRProcessoField(CharField):
         return orig_value 
 
 class BRCellPhoneField(CharField):
+    """
+    A form field that validates a Cell Phone number.
+
+    """
+
     default_error_messages = {
         'invalid': _("Invalid Cell Phone, number needs to be in the format (XX)XXXXX-XXXX."),
     }
@@ -168,6 +173,10 @@ class BRCellPhoneField(CharField):
         self.validators.append(BRCellPhoneValidator())
 
 class BRLandLineField(CharField):
+    """
+    A form field that validates a Landline number.
+    
+    """
     default_error_messages = {
         'invalid': _("Invalid Landline, number needs to be in the format (XX)XXXX-XXXX."),
     }

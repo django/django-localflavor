@@ -71,6 +71,10 @@ class BRPostalCodeField(CharField):
         self.validators.append(validators.BRPostalCodeValidator())
 
 class BRLandLineField(CharField): 
+    """
+    A model field for brazilian LandLine number
+
+    """
     description = _("Landline Number")
 
     def __init__(self, *args, **kwargs):
@@ -79,6 +83,10 @@ class BRLandLineField(CharField):
         self.validators.append(validators.BRLandLineValidator())
 
 class BRCellPhoneField(CharField): 
+    """
+    A model field for brazilian Cell Phone number
+
+    """
     description = _("Cell Phone Number")
 
     def __init__(self, *args, **kwargs):

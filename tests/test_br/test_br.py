@@ -231,6 +231,7 @@ class BRLocalFlavorTests(SimpleTestCase):
         }
         invalid = {
             '(08)99919-2696': error_format,
+            '(11)89919-2696': error_format,
             '(ab)cdefg-hijk': error_format,
             '(11)99919 2696': error_format,
             '(11) 99919-2696': error_format,
@@ -244,7 +245,7 @@ class BRLocalFlavorTests(SimpleTestCase):
         }
         invalid = {
             '(08)99919-2696': error_format,
-            '(11)9919-2696': error_format,
+            '(11)6919-2696': error_format,
             '(ab)cdefg-hijk': error_format,
             '(11)3919 2696': error_format,
             '(11) 3919-2696': error_format,
