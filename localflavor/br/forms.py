@@ -9,7 +9,7 @@ from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
 from .br_states import STATE_CHOICES
-from .validators import BRCNPJValidator, BRCPFValidator, BRPostalCodeValidator
+from .validators import BRCNPJValidator, BRCPFValidator, BRLandLineValidator, BRPostalCodeValidator, BRCellPhoneValidator
 
 process_digits_re = re.compile(
     r'^(\d{7})-?(\d{2})\.?(\d{4})\.?(\d)\.?(\d{2})\.?(\d{4})$'
@@ -156,4 +156,22 @@ class BRProcessoField(CharField):
         if str(mod_97_base10(value_without_digits)).zfill(2) != orig_dv:
             raise ValidationError(self.error_messages['invalid'], code='invalid')
 
-        return orig_value
+        return orig_value 
+
+class BRCellPhoneField(CharField):
+    default_error_messages = {
+        'invalid': _("Invalid Cell Phone, number needs to be in the format (XX)XXXXX-XXXX."),
+    }
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.validators.append(BRCellPhoneValidator())
+
+class BRLandLineField(CharField):
+    default_error_messages = {
+        'invalid': _("Invalid Landline, number needs to be in the format (XX)XXXX-XXXX."),
+    }
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.validators.append(BRLandLineValidator())
