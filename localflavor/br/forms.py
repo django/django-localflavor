@@ -162,6 +162,8 @@ class BRCellPhoneField(CharField):
     """
     A form field that validates a Cell Phone number.
 
+    More information:
+    https://www.gov.br/anatel/pt-br/regulado/numeracao/tabela-servico-movel-celular
     """
 
     default_error_messages = {
@@ -176,6 +178,8 @@ class BRLandLineField(CharField):
     """
     A form field that validates a Landline number.
     
+    More information: 
+    https://www.gov.br/anatel/pt-br/regulado/numeracao/tabela-servico-telefonico-fixo-comutado
     """
     default_error_messages = {
         'invalid': _("Invalid Landline, number needs to be in the format (XX)XXXX-XXXX."),
