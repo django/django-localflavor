@@ -160,7 +160,7 @@ class BRProcessoField(CharField):
 
 class BRCellPhoneField(CharField):
     default_error_messages = {
-        'invalid': _("Invalid Cell Phone, number needs to be in the format (XX) 9XXXX-XXXX."),
+        'invalid': _("Invalid Cell Phone, number needs to be in the format (XX)XXXXX-XXXX."),
     }
 
     def __init__(self, **kwargs):
@@ -169,7 +169,7 @@ class BRCellPhoneField(CharField):
 
 class BRLandLineField(CharField):
     default_error_messages = {
-        'invalid': _("Invalid Landline, number needs to be in the format (XX) XXXX-XXXX."),
+        'invalid': _("Invalid Landline, number needs to be in the format (XX)XXXX-XXXX."),
     }
 
     def __init__(self, **kwargs):
