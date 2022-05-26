@@ -20,6 +20,8 @@ New fields for existing flavors:
   (`gh-457 <https://github.com/django/django-localflavor/pull/457>`_).
 - Added the Canadian Models fields.
   (`gh-465 <https://github.com/django/django-localflavor/pull/465>`_).
+- Added Cellphone and Landline fields in Brazilian flavor.
+  (`gh-471 <https://github.com/django/django-localflavor/pull/471>`_)
 
 Modifications to existing flavors:
 
