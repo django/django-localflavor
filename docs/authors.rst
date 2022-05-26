@@ -122,3 +122,4 @@ Authors
 * Vishal Pandey
 * Vladimir Nani
 * Abhineet Tamrakar
+* Leonardo Paz Estevam
