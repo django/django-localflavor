@@ -16,15 +16,16 @@ msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2020-02-16 17:42+0000\n"
+"PO-Revision-Date: 2022-12-02 17:05+0100\n"
 "Last-Translator: Bruce Röttgers <bruce.roet@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/django/django-localflavor/"
 "language/de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 
 msgid "Buenos Aires"
 msgstr "Buenos Aires"
@@ -118,13 +119,13 @@ msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
 msgstr ""
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
-msgstr "Geben sie eine korrekte CBU im XXXXXXXXXXXXXXXXXXXXXX Format ein."
+msgstr "Bitte eine korrekte CBU im XXXXXXXXXXXXXXXXXXXXXX Format eingeben."
 
 msgid "CBU must be exactly 22 digits long."
-msgstr "Die CBU sollte 22 Zeichen lang sein"
+msgstr "Die CBU sollte 22 Zeichen lang sein."
 
 msgid "Invalid CBU."
-msgstr "Falsche CBU"
+msgstr "Ungültige CBU."
 
 msgid "Burgenland"
 msgstr "Burgenland"
@@ -162,31 +163,31 @@ msgstr ""
 "XXXXXX eingeben."
 
 msgid "Enter a 4 digit postcode."
-msgstr "Bitte eine 4-stellig Postleitzahl eingeben."
+msgstr "Bitte eine 4-stellige Postleitzahl eingeben."
 
 msgid "Australian State"
 msgstr "Australischer Bundesstaat"
 
 msgid "Australian Postcode"
-msgstr "Australisch Postleitzahl"
+msgstr "Australische Postleitzahl"
 
 msgid "Australian Business Number"
-msgstr "Australische Geschäftsnummer"
+msgstr "Australische Geschäftsnummer (ABN)"
 
 msgid "Australian Company Number"
-msgstr "Australische Geschäftsnummer"
+msgstr "Australische Geschäftsnummer (ACN)"
 
 msgid "Australian Tax File Number"
 msgstr ""
 
 msgid "Enter a valid ABN."
-msgstr "Geben Sie eine korrekte ABN ein."
+msgstr "Bitte eine gültige ABN eingeben."
 
 msgid "Enter a valid ACN."
-msgstr "Geben Sie eine korrekte ACN ein."
+msgstr "Bitte eine gültige ACN eingeben."
 
 msgid "Enter a valid TFN."
-msgstr "Geben Sie eine korrekte TFN ein."
+msgstr "Bitte eine gültige TFN eingeben."
 
 msgid "Antwerp"
 msgstr "Antwerpen"
@@ -234,10 +235,10 @@ msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Bitte eine gültige Postleitzahl im Format 1XXX bis 9XXX eingeben."
 
 msgid "The EGN is not valid"
-msgstr "Die eingegebene EGN ist nicht korrekt."
+msgstr "Die eingegebene EGN ist nicht gültig"
 
 msgid "EIK/BULSTAT is not valid"
-msgstr "Die eingegebene EIK/BULSTAT ist nicht korrekt."
+msgstr "Die eingegebene EIK/BULSTAT ist nicht gültig"
 
 msgid "Enter a zip code in the format XXXXX-XXX."
 msgstr "Bitte eine gültige Postleitzahl im Format XXXXX-XXX eingeben."
@@ -260,10 +261,10 @@ msgid "This field requires at least 14 digits"
 msgstr "Dieses Feld benötigt mindestens 14 Ziffern"
 
 msgid "Invalid Process number."
-msgstr "Die Prozessnummer ist nicht korrekt."
+msgstr "Die Prozessnummer ist nicht gültig."
 
 msgid "State of Brazil (two uppercase letters)"
-msgstr ""
+msgstr "Brasilianischer Bundesstaat (zwei Großbuchstaben)"
 
 msgid "Alberta"
 msgstr "Alberta"
@@ -308,7 +309,7 @@ msgid "Enter a postal code in the format XXX XXX."
 msgstr "Bitte eine gültige Postleitzahl im Format XXX XXX eingeben."
 
 msgid "Enter a Canadian province or territory."
-msgstr "Geben Sie einen kanadischen Bundesstaat oder Territorium ein."
+msgstr "Bitte einen kanadischen Bundesstaat oder Territorium auswählen."
 
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr ""
@@ -397,11 +398,13 @@ msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr ""
-"Bitte eine gültige Schweizer Identifikations- oder Reisepassnummer im "
-"FormatX1234567<0 oder 1234567890 eingeben."
+"Bitte eine gültige Schweizer Identifikations- oder Reisepassnummer im Format "
+"X1234567<0 oder 1234567890 eingeben."
 
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
+"Bitte eine gültige Schweizer Sozialversicherungsnummer (AHV-Nummer) im "
+"Format 756.XXXX.XXXX.XX eingeben."
 
 msgid "Enter a valid Chilean RUT."
 msgstr "Bitte eine gültige chilenische RUT eingeben."
@@ -429,9 +432,10 @@ msgstr "Ungültige Ausweisnummer: Falsche Ortskennzahl"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
 msgstr ""
+"Bitte eine gültige NIT im Format XXXXXXXXXXX-Y oder XXXXXXXXXXXY eingeben."
 
 msgid "Invalid NIT."
-msgstr ""
+msgstr "Ungültige NIT."
 
 msgid "Occidental"
 msgstr ""
@@ -491,33 +495,35 @@ msgid "Isla de la Juventud"
 msgstr ""
 
 msgid "Enter a Cuban region."
-msgstr ""
+msgstr "Bitte eine kubanische Region eingeben."
 
 msgid "Enter a Cuban province."
-msgstr ""
+msgstr "Bitte eine kubanische Provinz eingeben."
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr ""
+msgstr "Bitte eine gültige Postleitzahl im Format XXXXX eingeben."
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
-msgstr ""
+msgstr "Bitte eine gültige Ausweisnummer im Format XXXXXXXXXXX eingeben."
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr ""
+msgstr "Kubanische Region (drei Großbuchstaben)"
 
 msgid "Cuban provinces (three uppercase letters)"
-msgstr ""
+msgstr "Kubanische Provinzen (drei Großbuchstaben)"
 
 msgid "Cuban postal code"
-msgstr ""
+msgstr "Kubanische Postleitzahl"
 
 msgid "Cuban identity card number"
-msgstr ""
+msgstr "Kubanische Ausweisnummer"
 
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
 msgstr ""
+"Bitte ein gültiges Datum (JJMMTT) für die ersten 6 Stellen der Ausweisnummer "
+"eingeben."
 
 msgid "Prague"
 msgstr "Prag"
@@ -3057,10 +3063,10 @@ msgid "Sumba"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
+msgstr "Bitte eine Postleitzahl im Format XXXX eingeben."
 
 msgid "Ecuadorian province"
-msgstr ""
+msgstr "Equadorianische Provinz"
 
 msgid "Harju County"
 msgstr ""
@@ -3360,18 +3366,19 @@ msgstr "Region wählen"
 
 msgid "Enter a valid French National Identification number."
 msgstr ""
+"Bitte eine gültige französische Nationale Identifikationsnummer eingeben."
 
 msgid "Enter a valid French SIREN number."
-msgstr ""
+msgstr "Bitte eine gültige französische SIREN-Nummer eingeben."
 
 msgid "Enter a valid French SIRET number."
-msgstr ""
+msgstr "Bitte eine gültige französische SIRET-Nummer eingeben."
 
 msgid "SIREN Number"
-msgstr ""
+msgstr "SIREN-Nummer"
 
 msgid "SIRET Number"
-msgstr ""
+msgstr "SIRET-Nummer"
 
 msgid "Enter a valid postcode."
 msgstr "Bitte eine gültige Postleitzahl eingeben."
@@ -3821,7 +3828,7 @@ msgid "Scotland"
 msgstr "Schottland"
 
 msgid "An International Bank Account Number"
-msgstr ""
+msgstr "Eine Internationale Bankkontonummer (IBAN)"
 
 msgid "Business Identifier Code"
 msgstr ""
@@ -3854,13 +3861,13 @@ msgstr "%s ist kein gültiger Institutions-Code."
 
 #, python-format
 msgid "%s is not a valid country code."
-msgstr "%s ist kein gültiger Länder-Code. "
+msgstr "%s ist kein gültiger Länder-Code."
 
 msgid "Not a valid EAN code."
-msgstr ""
+msgstr "Kein gültiger EAN-Code."
 
 msgid "Enter a valid 5-digit greek postal code."
-msgstr "Bitte eine gültige 5-stellige griechische Postleitzahl eingeben"
+msgstr "Bitte eine gültige 5-stellige griechische Postleitzahl eingeben."
 
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr "Bitte eine gültige griechische Steuernummer (9 Stellen) eingeben."
@@ -3869,7 +3876,7 @@ msgid "Enter a valid 13 digit JMBG"
 msgstr "Bitte eine gültige 13-stellige JMBG eingeben"
 
 msgid "Error in date segment"
-msgstr "Fehler im Datums-Segment"
+msgstr "Fehler im Datumssegment"
 
 msgid "Enter a valid 11 digit OIB"
 msgstr "Bitte eine gültige 11-stellige OIB eingeben"
@@ -3887,7 +3894,7 @@ msgid "Enter a valid 5 digit postal code"
 msgstr "Bitte eine gültige 5-stellige Postleitzahl eingeben"
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
-msgstr "Geben Sie eine gültige 19-stellige JMBAG beginnend mit 601983 ein"
+msgstr "Bitte eine gültige 19-stellige JMBAG beginnend mit 601983 eingeben"
 
 msgid "Card issue number cannot be zero"
 msgstr "Die Ausstellungsnummer der Karte darf nicht Null sein"
@@ -4016,7 +4023,7 @@ msgid "Enter a valid post code"
 msgstr "Bitte eine gültige Postleitzahl eingeben"
 
 msgid "Enter a valid NIK/KTP number"
-msgstr "Bitte eine gültige NIK/KTP-Nummer eingeben."
+msgstr "Bitte eine gültige NIK/KTP-Nummer eingeben"
 
 msgid "Aceh"
 msgstr ""
@@ -4296,8 +4303,8 @@ msgstr ""
 
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
 msgstr ""
-"Bitte eine gültige Postleitzahl im Format XXXXXXX oder XXXXX eingeben. Es "
-"sind nur Ziffern erlaubt."
+"Bitte eine gültige Postleitzahl im Format XXXXXXX oder XXXXX eingeben (nur "
+"Ziffern)"
 
 msgid "Enter a valid ID number."
 msgstr "Bitte eine gültige Ausweisnummer eingeben."
@@ -4307,13 +4314,13 @@ msgstr ""
 "Bitte eine gültige Postleitzahl im Format XXXXXX oder XXX XXX eingeben."
 
 msgid "Enter an Indian state or territory."
-msgstr "Geben Sie einen indischen Bundesstaat oder Territorium ein."
+msgstr "Bitte einen indischen Bundesstaat oder Territorium eingeben."
 
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
 msgstr ""
-"Geben Sie eine gültige Aadhaar-Nummer im Format XXXX XXXX XXXX oder XXXX-"
-"XXXX-XXXX ein."
+"Bitte eine gültige Aadhaar-Nummer im Format XXXX XXXX XXXX oder XXXX-XXXX-"
+"XXXX eingeben."
 
 msgid "Indian state (two uppercase letters)"
 msgstr ""
@@ -4863,10 +4870,10 @@ msgid "ID Code consists of exactly 11 decimal digits."
 msgstr "Die Ausweisnummer muss aus 11 Ziffern bestehen."
 
 msgid "Wrong ID Code checksum."
-msgstr "Ungültige Ausweisnummer: Falsche Prüfsumme"
+msgstr "Ungültige Ausweisnummer: Falsche Prüfsumme."
 
 msgid "ID Code contains invalid date."
-msgstr "Ungültige Ausweisnummer: Ungültiges Datum"
+msgstr "Ungültige Ausweisnummer: Ungültiges Datum."
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
 msgstr ""
@@ -5083,13 +5090,13 @@ msgid "Zarasai district"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXX or LV-XXXX."
-msgstr ""
+msgstr "Bitte eine Postleitzahl im Format XXXX oder LV-XXXX eingeben."
 
 msgid "Enter a Latvian personal code in format XXXXXX-XXXXX."
-msgstr ""
+msgstr "Bitte eine lettische Personennummer im Format XXXXXX-XXXXX eingeben."
 
 msgid "Enter a valid Latvian personal code."
-msgstr ""
+msgstr "Bitte eine gültige lettische Personennummer eingeben."
 
 msgid "Daugavpils"
 msgstr ""
@@ -5449,13 +5456,13 @@ msgid "Zilupe municipality"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXX."
-msgstr "Geben Sie eine Postleitzahl im Format XXXXX ein."
+msgstr "Bitte eine Postleitzahl im Format XXXXX eingeben."
 
 msgid "Postal code"
-msgstr ""
+msgstr "Postleitzahl"
 
 msgid "Select Province"
-msgstr ""
+msgstr "Provinz auswählen"
 
 msgid "Al Hoceima"
 msgstr ""
@@ -5722,8 +5729,8 @@ msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
 msgstr ""
-"Ausweisnummern muss entweder 4 bis 7 Ziffern oder einen Großbuchstaben und 7 "
-"Ziffern enthalten."
+"Ausweisnummern müssen entweder 4 bis 7 Ziffern oder einen Großbuchstaben und "
+"7 Ziffern enthalten."
 
 msgid "This field should contain exactly 13 digits."
 msgstr "Dieses Feld sollte genau 13 Ziffern enthalten."
@@ -5998,7 +6005,7 @@ msgid "Unique master citizen number (13 digits)"
 msgstr "Eindeutige Bürger-Nummer (13 Ziffern)"
 
 msgid "Enter a valid postal code in format AAA 0000."
-msgstr ""
+msgstr "Bitte eine gültige Postleitzahl im Format AAA 0000 eingeben."
 
 msgid "Enter a valid zip code in the format XXXXX."
 msgstr "Bitte eine gültige Postleitzahl im Format XXXXX eingeben."
@@ -6010,10 +6017,10 @@ msgid "Invalid checksum for RFC."
 msgstr "Ungültige Prüfsumme für RFC-Nummer."
 
 msgid "Enter a valid CLABE."
-msgstr ""
+msgstr "Bitte eine gültige CLABE eingeben."
 
 msgid "Invalid checksum for CLABE."
-msgstr ""
+msgstr "Ungültige CLABE-Prüfziffer."
 
 msgid "Enter a valid CURP."
 msgstr "Bitte gültige CURP eingeben."
@@ -6037,7 +6044,7 @@ msgid "Mexican RFC"
 msgstr "Mexikanische RFC"
 
 msgid "Mexican CLABE"
-msgstr ""
+msgstr "Mexikanische CLABE"
 
 msgid "Mexican CURP"
 msgstr "Mexikanische CURP"
@@ -6142,13 +6149,13 @@ msgid "Zacatecas"
 msgstr ""
 
 msgid "Dutch zipcode"
-msgstr ""
+msgstr "Niederländische Postleitzahl"
 
 msgid "Dutch province"
-msgstr ""
+msgstr "Niederländische Provinz"
 
 msgid "Dutch social security number (BSN)"
-msgstr ""
+msgstr "Niederländische Sozialversicherungsnummer (BSDN)"
 
 msgid "Drenthe"
 msgstr "Drente"
@@ -6184,25 +6191,26 @@ msgid "Zuid-Holland"
 msgstr "Südholland"
 
 msgid "Enter a valid BSN."
-msgstr ""
+msgstr "Bitte eine gültige BSN eingeben."
 
 msgid "Enter a valid Norwegian social security number."
 msgstr "Bitte eine gültige norwegische Sozialversicherungsnummer eingeben."
 
 msgid "Enter a valid Norwegian bank account number."
-msgstr ""
+msgstr "Bitte eine gültige norwegische Kontonummer eingeben."
 
 msgid "Invalid control digit. Enter a valid Norwegian bank account number."
 msgstr ""
+"Ungültige Prüfziffer. Bitte eine gültige norwegische Kontonummer eingeben."
 
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
-msgstr ""
+msgstr "Ungültige Länge, norwegische Kontonummern sind elfstellig."
 
 msgid "Invalid post code."
-msgstr ""
+msgstr "Ungültige Postleitzahl."
 
 msgid "Invalid bank account number."
-msgstr ""
+msgstr "Ungültige Kontonummer."
 
 msgid "Far North District"
 msgstr ""
@@ -6457,13 +6465,13 @@ msgid "This field requires 11 digits."
 msgstr "Dieses Feld benötigt 11 Zeichen."
 
 msgid "Enter a 5 digit postcode."
-msgstr ""
+msgstr "Bitte eine 5-stellige Postleitzahl eingeben."
 
 msgid "Pakistani State"
-msgstr ""
+msgstr "Pakistanischer Bundesstaat"
 
 msgid "Pakistani Postcode"
-msgstr ""
+msgstr "Pakistanische Postleitzahl"
 
 msgid "Azad Jammu & Kashmir"
 msgstr ""
@@ -6490,13 +6498,14 @@ msgid "Sindh"
 msgstr ""
 
 msgid "National Identification Number consists of 11 digits."
-msgstr "Nationale Identifikationsnummer besteht aus 11 Ziffern."
+msgstr "Due Nationale Identifikationsnummer muss aus 11 Ziffern bestehen."
 
 msgid "Wrong checksum for the National Identification Number."
-msgstr "Falsche Prüfsumme für die nationale Identifikationsnummer."
+msgstr "Die nationale Identifikationsnummer enthält eine ungültige Prüfsumme."
 
 msgid "The National Identification Number contains an invalid birth date."
 msgstr ""
+"Die Nationale Identifikationsnummer enthält ein ungültiges Geburtsdatum."
 
 msgid "National ID Card Number consists of 3 letters and 6 digits."
 msgstr "Die nationale Ausweisnummer  besteht aus 3 Buchstaben und 6 Ziffern."
@@ -6516,12 +6525,13 @@ msgstr "Falsche Prüfsumme für die Steuernummer (NIP)."
 
 msgid "National Business Register Number (REGON) consists of 9 or 14 digits."
 msgstr ""
-"Nationale Geschäftsregistrierungsnummer (REGON) besteht aus 9 oder 14 "
-"Zeichen."
+"Die Nationale Geschäftsregistrierungsnummer (REGON) muss aus 9 oder 14 "
+"Zeichen bestehen."
 
 msgid "Wrong checksum for the National Business Register Number (REGON)."
 msgstr ""
-"Falsche Prüfsumme für die nationale Geschäftsregistrierungsnummer (REGON)."
+"Die nationale Geschäftsregistrierungsnummer (REGON) enthält eine ungültige "
+"Prüfsumme."
 
 msgid "Enter a postal code in the format XX-XXX."
 msgstr "Bitte eine gültige Postleitzahl im Format XX-XXX eingeben."
@@ -6947,7 +6957,7 @@ msgid "Yamalo-Neneckiy avtonomnyy okrug"
 msgstr "Autonomer Kreis der Jamal-Nenzen"
 
 msgid "Enter a valid Swedish organisation number."
-msgstr "Bitte eine gültige Schwedische Organisationsnummer eingeben."
+msgstr "Bitte eine gültige schwedische Organisationsnummer eingeben."
 
 msgid "Enter a valid Swedish personal identity number."
 msgstr "Bitte eine gültige schwedische Personenidentifikationsnummer eingeben."
@@ -7029,8 +7039,8 @@ msgstr ""
 
 msgid "The first 7 digits of the EMSO must represent a valid past date."
 msgstr ""
-"Die ersten 7 Stellen der EMSO Ziffer muss einem vergangenen Datum "
-"entsprichen. "
+"Die ersten 7 Stellen der EMSO-Nummer müssen einem Datum in der Vergangenheit "
+"entsprichen."
 
 msgid "The EMSO is not valid."
 msgstr "EMSO ungültig."
@@ -7369,22 +7379,22 @@ msgid "Zaghouan"
 msgstr ""
 
 msgid "Enter a valid Turkish Identification number."
-msgstr "Geben Sie eine valide Türkische Identifikationsnummer ein."
+msgstr "Bitte eine gültige türkische Identifikationsnummer eingeben."
 
 msgid "Turkish Identification number must be 11 digits."
-msgstr "Türkische Identifikationsnummern benötigen 11 Zeichen."
+msgstr "Die türkische Identifikationsnummer muss aus 11 Zeichen bestehen."
 
 msgid "Enter a valid postal code."
-msgstr ""
+msgstr "Bitte eine gültige Postleitzahl eingeben."
 
 msgid "Ukrainian region"
-msgstr ""
+msgstr "Ukrainische Region"
 
 msgid "Ukrainian VAT number"
-msgstr ""
+msgstr "Ukrainische Umsatzsteuernummer"
 
 msgid "Ukrainian postal code"
-msgstr ""
+msgstr "Ukrainischce Postleitzahl"
 
 msgid "Cherkasy Oblast"
 msgstr ""
@@ -7477,7 +7487,7 @@ msgstr ""
 "XX-XXXX eingeben."
 
 msgid "Enter a U.S. state or territory."
-msgstr "Geben Sie einen US-Bundesstaat oder Territorium ein."
+msgstr "Bitte einen US-Bundesstaat oder Territorium eingeben."
 
 msgid "U.S. state (two uppercase letters)"
 msgstr "U.S.-Bundesstaat (zwei Großbuchstaben)"
@@ -7489,7 +7499,7 @@ msgid "U.S. ZIP code"
 msgstr "US-Postleitzahl"
 
 msgid "Social security number"
-msgstr ""
+msgstr "Sozialversicherungsnummer"
 
 msgid "Alabama"
 msgstr ""
