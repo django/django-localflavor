@@ -6,6 +6,7 @@ Authors
 * Adnane Belmadiaf
 * Adonys Alea Boffill
 * Adrian Holovaty
+* Adrián Matejov
 * Agustín Scaramuzza
 * Ahmad Zolfaghari
 * Ahmed Shahwan

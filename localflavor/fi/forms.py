@@ -48,7 +48,7 @@ class FISocialSecurityNumber(CharField):
             (?P<date>([0-2]\d|3[01])
             (0\d|1[012])
             (\d{2}))
-            [A+-]
+            [ABCDEFUVWXY+\-]
             (?P<serial>(\d{3}))
             (?P<checksum>[%s])$""" % checkmarks, value, re.VERBOSE | re.IGNORECASE)
         if not result:
