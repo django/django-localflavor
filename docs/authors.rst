@@ -92,6 +92,7 @@ Authors
 * Michał Sałaban
 * Mike Lissner
 * Morgane Alonso
+* Naglis Jonaitis
 * Nishit Shah
 * Olivier Sels
 * Olle Vidner
