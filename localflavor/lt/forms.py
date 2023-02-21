@@ -88,7 +88,7 @@ class LTIDCodeField(RegexField):
 
 class LTPostalCodeField(CharField):
     """
-    A form field that validates and normalizes Lithanuan postal codes.
+    A form field that validates and normalizes Lithuanian postal codes.
 
     Lithuanian postal codes in following forms accepted:
         * XXXXX
