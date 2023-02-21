@@ -23,6 +23,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
+- Fix typo in Marijampolė county name in LTCountySelect
+  (`gh-480 <https://github.com/django/django-localflavor/pull/480>`_).
 - CIF spanish starting with 'U' bug resolved
   (`gh-469 <https://github.com/django/django-localflavor/pull/469>`_).
 - Fix error code for BRPostalCodeValidator
