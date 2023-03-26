@@ -63,7 +63,7 @@ class ESIdentityCardNumberField(RegexField):
         self.only_nif = only_nif
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
-        self.cif_types = 'ABCDEFGHJKLMNPQRSVW'
+        self.cif_types = 'ABCDEFGHJKLMNPQRSUVW'
         self.nie_types = 'XYZ'
         self.id_card_pattern = r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$'
         id_card_re = re.compile(self.id_card_pattern %
@@ -82,7 +82,7 @@ class ESIdentityCardNumberField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = value.upper().replace(' ', '').replace('-', '')
         m = re.match(self.id_card_pattern %
@@ -96,13 +96,13 @@ class ESIdentityCardNumberField(RegexField):
             if letter2 == self.nif_get_checksum(number):
                 return value
             else:
-                raise ValidationError(self.error_messages['invalid_nif'])
+                raise ValidationError(self.error_messages['invalid_nif'], code='invalid_nif')
         elif letter1 in self.nie_types and letter2:
             # NIE
             if letter2 == self.nif_get_checksum(str(self.nie_types.index(letter1)) + number):
                 return value
             else:
-                raise ValidationError(self.error_messages['invalid_nie'])
+                raise ValidationError(self.error_messages['invalid_nie'], code='invalid_nie')
         elif not self.only_nif and letter1 in self.cif_types and len(number) in [7, 8]:
             # CIF
             if not letter2:
@@ -111,9 +111,9 @@ class ESIdentityCardNumberField(RegexField):
             if letter2 in (checksum, self.cif_control[checksum]):
                 return value
             else:
-                raise ValidationError(self.error_messages['invalid_cif'])
+                raise ValidationError(self.error_messages['invalid_cif'], code='invalid_cif')
         else:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def nif_get_checksum(self, d):
         return self.nif_control[int(d) % 23]
@@ -151,13 +151,13 @@ class ESCCCField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         m = re.match(r'^(\d{4})[ -]?(\d{4})[ -]?(\d{2})[ -]?(\d{10})$', value)
         entity, office, checksum, account = m.groups()
         if get_checksum('00' + entity + office) + get_checksum(account) == checksum:
             return value
         else:
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
 
 
 def get_checksum(d):

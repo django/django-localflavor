@@ -2,9 +2,9 @@
 
 import re
 
-from django.core.validators import EMPTY_VALUES
+from django.core.exceptions import ImproperlyConfigured
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .de_states import STATE_CHOICES
@@ -35,7 +35,7 @@ class DEStateSelect(Select):
         super().__init__(attrs, choices=STATE_CHOICES)
 
 
-class DEIdentityCardNumberField(Field):
+class DEIdentityCardNumberField(CharField):
     """A German identity card number.
 
     Checks the following rules to determine whether the number is valid:
@@ -72,11 +72,11 @@ class DEIdentityCardNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
         match = re.match(ID_RE, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         id_parts = match.groupdict()
         residence = id_parts['residence']
@@ -88,14 +88,14 @@ class DEIdentityCardNumberField(Field):
         if (residence == '0000000000' or
                 birthday == '0000000' or
                 validity == '0000000'):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         all_digits = "%s%s%s%s" % (residence, birthday, validity, checksum)
         if (not self.has_valid_checksum(residence) or
                 not self.has_valid_checksum(birthday) or
                 not self.has_valid_checksum(validity) or
                 not self.has_valid_checksum(all_digits)):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s%s-%s-%s-%s' % (residence,
                                   origin,

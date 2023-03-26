@@ -1,8 +1,7 @@
 import re
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.core.exceptions import ImproperlyConfigured, ValidationError
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .tr_provinces import PROVINCE_CHOICES
@@ -28,16 +27,16 @@ class TRPostalCodeField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if len(value) != 5:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         province_code = int(value[:2])
         if province_code == 0 or province_code > 81:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value
 
 
-class TRIdentificationNumberField(Field):
+class TRIdentificationNumberField(CharField):
     """
     A Turkey Identification Number number.
 
@@ -60,17 +59,17 @@ class TRIdentificationNumberField(Field):
     def clean(self, value):
         value = super().clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         if len(value) != 11:
-            raise ValidationError(self.error_messages['not_11'])
+            raise ValidationError(self.error_messages['not_11'], code='not_11')
 
         if not re.match(r'^\d{11}$', value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         if int(value[0]) == 0:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         chksum = (sum([int(value[i]) for i in range(0, 9, 2)]) * 7 -
                   sum([int(value[i]) for i in range(1, 9, 2)])) % 10
@@ -78,7 +77,7 @@ class TRIdentificationNumberField(Field):
         if (chksum != int(value[9]) or
                 (sum([int(value[i])
                       for i in range(10)]) % 10) != int(value[10])):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 

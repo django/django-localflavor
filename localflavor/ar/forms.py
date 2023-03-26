@@ -4,7 +4,8 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 from stdnum.ar import cbu
-from stdnum.exceptions import InvalidLength, InvalidChecksum, ValidationError as StdnumValidationError
+from stdnum.exceptions import InvalidChecksum, InvalidLength
+from stdnum.exceptions import ValidationError as StdnumValidationError
 
 from .ar_provinces import PROVINCE_CHOICES
 
@@ -39,9 +40,9 @@ class ARPostalCodeField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if len(value) not in (4, 8):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if len(value) == 8:
             return '%s%s%s' % (value[0].upper(), value[1:5], value[5:].upper())
         return value
@@ -62,13 +63,13 @@ class ARDNIField(CharField):
         """Value can be a string either in the [X]X.XXX.XXX or [X]XXXXXXX formats."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if not value.isdigit():
             value = value.replace('.', '')
         if not value.isdigit():
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if len(value) not in (7, 8):
-            raise ValidationError(self.error_messages['max_digits'])
+            raise ValidationError(self.error_messages['max_digits'], code='max_digits')
 
         return value
 
@@ -103,12 +104,12 @@ class ARCUITField(RegexField):
         """Value can be either a string in the format XX-XXXXXXXX-X or an 11-digit number."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         value, cd = self._canon(value)
         if not value[:2] in ['27', '20', '30', '23', '24', '33', '34']:
-            raise ValidationError(self.error_messages['legal_type'])
+            raise ValidationError(self.error_messages['legal_type'], code='legal_type')
         if self._calc_cd(value) != cd:
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return self._format(value, cd)
 
     def _canon(self, cuit):
@@ -159,12 +160,12 @@ class ARCBUField(CharField):
         """Value must be a 22 digits long number."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         try:
             return cbu.validate(value)
         except InvalidLength:
-            raise ValidationError(self.error_messages['max_length'])
+            raise ValidationError(self.error_messages['max_length'], code='max_length')
         except InvalidChecksum:
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         except StdnumValidationError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')

@@ -44,7 +44,7 @@ class AUBusinessNumberFieldValidator(RegexValidator):
     def __call__(self, value):
         super().__call__(value)
         if not self._is_valid(value):
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
 
 class AUCompanyNumberFieldValidator(RegexValidator):
@@ -86,7 +86,7 @@ class AUCompanyNumberFieldValidator(RegexValidator):
     def __call__(self, value):
         super().__call__(value)
         if not self._is_valid(value):
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
 
 class AUTaxFileNumberFieldValidator(RegexValidator):
@@ -134,4 +134,4 @@ class AUTaxFileNumberFieldValidator(RegexValidator):
         value = value.replace(' ', '')
         super().__call__(value)
         if not self._is_valid(value):
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')

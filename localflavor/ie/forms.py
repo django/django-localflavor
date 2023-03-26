@@ -1,6 +1,6 @@
 """IE-specific Form helpers."""
 
-from django.forms.fields import Select, RegexField
+from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .ie_counties import IE_COUNTY_CHOICES
@@ -37,12 +37,12 @@ class EircodeField(RegexField):
         # https://www.eircode.ie/docs/default-source/Common/prepareyourbusinessforeircode-edition3published.pdf?sfvrsn=2
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.upper().replace(" ", "")
 
     def prepare_value(self, value):
         # Display the Eircode with a space.
         value = self.to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return '{} {}'.format(value[0:3], value[3:8])

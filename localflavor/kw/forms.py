@@ -10,7 +10,6 @@ from django.utils.translation import gettext_lazy as _
 from .kw_areas import AREA_CHOICES
 from .kw_governorates import GOVERNORATE_CHOICES
 
-
 id_re = re.compile(r'''^(?P<initial>\d)
                        (?P<yy>\d\d)
                        (?P<mm>\d\d)
@@ -55,10 +54,10 @@ class KWCivilIDNumberField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         cc = value[0]  # Century value
-        yy, mm, dd = textwrap.wrap(value[1:7], 2)  # Date parts
+        yy, mm, dd = textwrap.wrap(value[1:7], 2)  # pylint: disable=unbalanced-tuple-unpacking
 
         # Fix the dates so that those born
         # in 2000+ pass the validation check
@@ -70,10 +69,10 @@ class KWCivilIDNumberField(RegexField):
         try:
             date(int(yy), int(mm), int(dd))
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         if not is_valid_kw_civilid_checksum(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 

@@ -1,5 +1,6 @@
 from django.test import SimpleTestCase
 from django.utils.translation import gettext_lazy as _
+
 from localflavor.id_.forms import (IDLicensePlateField, IDLicensePlatePrefixSelect, IDNationalIdentityNumberField,
                                    IDPostCodeField, IDProvinceSelect)
 

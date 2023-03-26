@@ -19,7 +19,7 @@ class NLZipCodeFieldValidator(RegexValidator):
         super().__call__(value)
 
         if int(value[:4]) < 1000:
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
 
 class NLBSNFieldValidator(RegexValidator):
@@ -46,10 +46,10 @@ class NLBSNFieldValidator(RegexValidator):
         super().__call__(value)
 
         if int(value) == 0:
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
         if not self.bsn_checksum_ok(value):
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
 
 class NLLicensePlateFieldValidator(RegexValidator):

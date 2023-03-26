@@ -29,11 +29,11 @@ class PEDNIField(CharField):
         """Value must be a string in the XXXXXXXX formats."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if not value.isdigit():
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if len(value) != 8:
-            raise ValidationError(self.error_messages['max_digits'])
+            raise ValidationError(self.error_messages['max_digits'], code='max_digits')
 
         return value
 
@@ -57,9 +57,9 @@ class PERUCField(CharField):
         """Value must be an 11-digit number."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if not value.isdigit():
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if len(value) != 11:
-            raise ValidationError(self.error_messages['max_digits'])
+            raise ValidationError(self.error_messages['max_digits'], code='max_digits')
         return value

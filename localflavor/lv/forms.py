@@ -1,9 +1,8 @@
 import re
 from datetime import date
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, Select
+from django.forms.fields import CharField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .lv_choices import MUNICIPALITY_CHOICES
@@ -12,7 +11,7 @@ zipcode = re.compile(r'^(LV\s?-\s?)?(?P<code>[1-5]\d{3})$', re.IGNORECASE)
 idcode = re.compile(r'^(\d\d)(\d\d)(\d\d)-([0-2])(?:\d{3})(\d)$')
 
 
-class LVPostalCodeField(Field):
+class LVPostalCodeField(CharField):
     """
     A form field that validates and normalizes Latvian postal codes.
 
@@ -27,12 +26,12 @@ class LVPostalCodeField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = re.match(zipcode, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return 'LV-' + match.group('code')
 
@@ -44,7 +43,7 @@ class LVMunicipalitySelect(Select):
         super().__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 
-class LVPersonalCodeField(Field):
+class LVPersonalCodeField(CharField):
     """A form field that validates input as a Latvian personal code."""
 
     default_error_messages = {
@@ -62,22 +61,22 @@ class LVPersonalCodeField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = re.match(idcode, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid_format'])
+            raise ValidationError(self.error_messages['invalid_format'], code='invalid_format')
 
         day, month, year, century, check = map(int, match.groups())
 
         if check != self.lv_checksum(value[0:6] + value[7:11]):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         year += 1800 + 100 * century
         try:
             date(year, month, day)
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value

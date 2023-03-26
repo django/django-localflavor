@@ -2,9 +2,9 @@
 
 import re
 
-from django.core.validators import EMPTY_VALUES
+from django.core.exceptions import ImproperlyConfigured
 from django.forms import ValidationError
-from django.forms.fields import CharField, Field, Select
+from django.forms.fields import CharField, Select
 from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
@@ -31,15 +31,15 @@ class CAPostalCodeField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         postcode = value.upper().strip()
         m = self.postcode_regex.match(postcode)
         if not m:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return "%s %s" % (m.group(1), m.group(2))
 
 
-class CAProvinceField(Field):
+class CAProvinceField(CharField):
     """
     A form field that validates its input is a Canadian province name or abbreviation.
 
@@ -53,20 +53,15 @@ class CAProvinceField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
         try:
-            value = value.strip().lower()
-        except AttributeError:
-            pass
-        else:
             # Load data in memory only when it is required, see also #17275
             from .ca_provinces import PROVINCES_NORMALIZED
-            try:
-                return PROVINCES_NORMALIZED[value.strip().lower()]
-            except KeyError:
-                pass
-        raise ValidationError(self.error_messages['invalid'])
+            return PROVINCES_NORMALIZED[value.lower()]
+        except KeyError:
+            pass
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class CAProvinceSelect(Select):
@@ -78,7 +73,7 @@ class CAProvinceSelect(Select):
         super().__init__(attrs, choices=PROVINCE_CHOICES)
 
 
-class CASocialInsuranceNumberField(Field):
+class CASocialInsuranceNumberField(CharField):
     """
     A Canadian Social Insurance Number (SIN).
 
@@ -98,12 +93,12 @@ class CASocialInsuranceNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = re.match(sin_re, value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         number = '%s-%s-%s' % (match.group(1), match.group(2), match.group(3))
         check_number = '%s%s%s' % (
@@ -111,5 +106,5 @@ class CASocialInsuranceNumberField(Field):
             match.group(2),
             match.group(3))
         if not luhn.is_valid(check_number):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return number

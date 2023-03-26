@@ -3,9 +3,8 @@
 import datetime
 import re
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-from django.forms.fields import CharField, Field, RegexField, Select
+from django.core.exceptions import ImproperlyConfigured, ValidationError
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .no_municipalities import MUNICIPALITY_CHOICES
@@ -33,7 +32,7 @@ class NOMunicipalitySelect(Select):
         super().__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 
-class NOSocialSecurityNumber(Field):
+class NOSocialSecurityNumber(CharField):
     """Algorithm is documented at http://no.wikipedia.org/wiki/Personnummer."""
 
     default_error_messages = {
@@ -42,11 +41,11 @@ class NOSocialSecurityNumber(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         if not re.match(r'^\d{11}$', value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         self.birthday = self._get_birthday(value)
         self.gender = self._get_gender(value)
@@ -59,9 +58,9 @@ class NOSocialSecurityNumber(Field):
             return sum([(a * b) for (a, b) in zip(aval, bval)])
 
         if multiply_reduce(digits, weight_1) % 11 != 0:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if multiply_reduce(digits, weight_2) % 11 != 0:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 
@@ -89,7 +88,7 @@ class NOSocialSecurityNumber(Field):
             if 900 <= inum < 1000 and year2 > 39:
                 birthday = datetime.date(1900 + year2, month, day)
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return birthday
 
 
@@ -126,11 +125,11 @@ class NOBankAccountNumber(CharField):
             return
         elif not value.isdigit():
             # You must only contain decimals.
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         elif len(value) != 11:
             # They only have one length: the number is 10!
             # That being said, you always store them with the check digit included, so 11.
-            raise ValidationError(self.error_messages['invalid_length'])
+            raise ValidationError(self.error_messages['invalid_length'], code='invalid_length')
 
         # The control/check digit is the last digit
         check_digit = int(value[-1])
@@ -145,16 +144,16 @@ class NOBankAccountNumber(CharField):
         checksum = 0 if remainder == 0 else 11 - remainder
 
         if checksum != check_digit:
-            raise ValidationError(self.error_messages['invalid_checksum'])
+            raise ValidationError(self.error_messages['invalid_checksum'], code='invalid_checksum')
 
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.replace('.', '').replace(' ', '')
 
     def prepare_value(self, value):
         value = self.to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return '{}.{}.{}'.format(value[0:4], value[4:6], value[6:11])

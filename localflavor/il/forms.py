@@ -1,9 +1,8 @@
 """Israeli-specific form helpers."""
 import re
 
-from django.core.exceptions import ValidationError
-from django.core.validators import EMPTY_VALUES
-from django.forms.fields import Field, RegexField
+from django.core.exceptions import ImproperlyConfigured, ValidationError
+from django.forms.fields import CharField, RegexField
 from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
@@ -30,7 +29,7 @@ class ILPostalCodeField(RegexField):
         return super().clean(value)
 
 
-class ILIDNumberField(Field):
+class ILIDNumberField(CharField):
     """
     A form field that validates its input as an Israeli identification number.
 
@@ -55,14 +54,14 @@ class ILIDNumberField(Field):
     def clean(self, value):
         value = super().clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
         match = id_number_re.match(value)
         if not match:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         value = match.group('number') + match.group('check')
         if not luhn.is_valid(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value

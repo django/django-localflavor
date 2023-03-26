@@ -51,11 +51,11 @@ class PLPESELField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if not self.has_valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         if not self.has_valid_birth_date(value):
-            raise ValidationError(self.error_messages['birthdate'])
+            raise ValidationError(self.error_messages['birthdate'], code='birthdate')
         return '%s' % value
 
     def has_valid_checksum(self, number):
@@ -108,12 +108,12 @@ class PLNationalIDCardNumberField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = value.upper()
 
         if not self.has_valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return '%s' % value
 
     def has_valid_checksum(self, number):
@@ -161,10 +161,10 @@ class PLNIPField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         value = re.sub("[-]", "", value)
         if not self.has_valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return '%s' % value
 
     def has_valid_checksum(self, number):
@@ -197,9 +197,9 @@ class PLREGONField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         if not self.has_valid_checksum(value):
-            raise ValidationError(self.error_messages['checksum'])
+            raise ValidationError(self.error_messages['checksum'], code='checksum')
         return '%s' % value
 
     def has_valid_checksum(self, number):

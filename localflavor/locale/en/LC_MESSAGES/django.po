@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-25 22:48+0100\n"
+"POT-Creation-Date: 2021-05-21 09:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -524,7 +524,7 @@ msgid ""
 "1234567890 format."
 msgstr ""
 
-#: ch/forms.py:127
+#: ch/forms.py:126
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
 
@@ -4858,15 +4858,15 @@ msgstr ""
 msgid "Select Region"
 msgstr ""
 
-#: fr/forms.py:101
+#: fr/forms.py:105
 msgid "Enter a valid French National Identification number."
 msgstr ""
 
-#: fr/forms.py:199
+#: fr/forms.py:214
 msgid "Enter a valid French SIREN number."
 msgstr ""
 
-#: fr/forms.py:222
+#: fr/forms.py:237
 msgid "Enter a valid French SIRET number."
 msgstr ""
 
@@ -5482,58 +5482,58 @@ msgstr ""
 msgid "Business Identifier Code"
 msgstr ""
 
-#: generic/validators.py:175
+#: generic/validators.py:177
 #, python-format
-msgid "%s is not a valid character for IBAN."
+msgid "%(character)s is not a valid character for IBAN."
 msgstr ""
 
-#: generic/validators.py:197
+#: generic/validators.py:201
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
-#: generic/validators.py:200
+#: generic/validators.py:208
 #, python-format
-msgid "%s is not a valid country code for IBAN."
+msgid "%(country_code)s is not a valid country code for IBAN."
 msgstr ""
 
-#: generic/validators.py:202
+#: generic/validators.py:214
 #, python-format
-msgid "%s IBANs are not allowed in this field."
+msgid "%(country_code)s IBANs are not allowed in this field."
 msgstr ""
 
-#: generic/validators.py:205
+#: generic/validators.py:220
 msgid "Not a valid IBAN."
 msgstr ""
 
-#: generic/validators.py:231
+#: generic/validators.py:246
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#: generic/validators.py:235
+#: generic/validators.py:250
 msgid "BIC codes only contain alphabet letters and digits."
 msgstr ""
 
-#: generic/validators.py:240
-#, python-format
-msgid "%s is not a valid institution code."
-msgstr ""
-
-#: generic/validators.py:245
-#, python-format
-msgid "%s is not a valid country code."
-msgstr ""
-
 #: generic/validators.py:256
-msgid "Not a valid EAN code."
+#, python-format
+msgid "%(institution_code)s is not a valid institution code."
 msgstr ""
 
-#: generic/validators.py:331
+#: generic/validators.py:265 generic/validators.py:363
 #, python-format
 msgid "%(country_code)s is not a valid country code."
 msgstr ""
 
-#: generic/validators.py:332
+#: generic/validators.py:274
+#, python-format
+msgid "%(location_code)s is not a valid location code."
+msgstr ""
+
+#: generic/validators.py:288
+msgid "Not a valid EAN code."
+msgstr ""
+
+#: generic/validators.py:364
 #, python-format
 msgid "%(vatin)s is not a valid VAT identification number."
 msgstr ""
@@ -6138,20 +6138,20 @@ msgstr ""
 msgid "Enter a valid ID number."
 msgstr ""
 
-#: in_/forms.py:20
+#: in_/forms.py:21
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
 msgstr ""
 
-#: in_/forms.py:50
+#: in_/forms.py:51
 msgid "Enter an Indian state or territory."
 msgstr ""
 
-#: in_/forms.py:90
+#: in_/forms.py:91
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
 msgstr ""
 
-#: in_/models.py:14
+#: in_/models.py:16
 msgid "Indian state (two uppercase letters)"
 msgstr ""
 
@@ -6283,24 +6283,24 @@ msgstr ""
 msgid "Zanjan"
 msgstr ""
 
-#: is_/forms.py:21
+#: is_/forms.py:19
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
 msgstr ""
 
-#: is_/forms.py:22
+#: is_/forms.py:20
 msgid "The Icelandic identification number is not valid."
 msgstr ""
 
-#: it/forms.py:24 nl/validators.py:13
+#: it/forms.py:22 nl/validators.py:13
 msgid "Enter a valid zip code."
 msgstr ""
 
-#: it/forms.py:69
+#: it/forms.py:66
 msgid "Enter a valid Tax code."
 msgstr ""
 
-#: it/forms.py:100 ua/forms.py:31
+#: it/forms.py:97 ua/forms.py:31
 msgid "Enter a valid VAT number."
 msgstr ""
 
@@ -8786,63 +8786,63 @@ msgstr ""
 msgid "Enter a valid postal code in format AAA 0000."
 msgstr ""
 
-#: mx/forms.py:59
+#: mx/forms.py:61
 msgid "Enter a valid zip code in the format XXXXX."
 msgstr ""
 
-#: mx/forms.py:103
+#: mx/forms.py:105
 msgid "Enter a valid RFC."
 msgstr ""
 
-#: mx/forms.py:104
+#: mx/forms.py:106
 msgid "Invalid checksum for RFC."
 msgstr ""
 
-#: mx/forms.py:176
+#: mx/forms.py:178
 msgid "Enter a valid CLABE."
 msgstr ""
 
-#: mx/forms.py:177
+#: mx/forms.py:179
 msgid "Invalid checksum for CLABE."
 msgstr ""
 
-#: mx/forms.py:232
+#: mx/forms.py:234
 msgid "Enter a valid CURP."
 msgstr ""
 
-#: mx/forms.py:233
+#: mx/forms.py:235
 msgid "Invalid checksum for CURP."
 msgstr ""
 
-#: mx/forms.py:294
+#: mx/forms.py:296
 msgid "Enter a valid Social Security Number."
 msgstr ""
 
-#: mx/forms.py:295
+#: mx/forms.py:297
 msgid "Invalid checksum for Social Security Number."
 msgstr ""
 
-#: mx/models.py:15
-msgid "Mexico state (three uppercase letters)"
+#: mx/models.py:17
+msgid "Mexico state (three or four uppercase letters)"
 msgstr ""
 
-#: mx/models.py:31
+#: mx/models.py:34
 msgid "Mexico zip code"
 msgstr ""
 
-#: mx/models.py:46
+#: mx/models.py:49
 msgid "Mexican RFC"
 msgstr ""
 
-#: mx/models.py:65
+#: mx/models.py:68
 msgid "Mexican CLABE"
 msgstr ""
 
-#: mx/models.py:80
+#: mx/models.py:83
 msgid "Mexican CURP"
 msgstr ""
 
-#: mx/models.py:99
+#: mx/models.py:102
 msgid "Mexican Social Security Number"
 msgstr ""
 
@@ -8863,23 +8863,23 @@ msgid "Campeche"
 msgstr ""
 
 #: mx/mx_states.py:9
-msgid "Chihuahua"
+msgid "Ciudad de México"
 msgstr ""
 
 #: mx/mx_states.py:10
-msgid "Chiapas"
+msgid "Chihuahua"
 msgstr ""
 
 #: mx/mx_states.py:11
-msgid "Coahuila"
+msgid "Chiapas"
 msgstr ""
 
 #: mx/mx_states.py:12
-msgid "Colima"
+msgid "Coahuila"
 msgstr ""
 
 #: mx/mx_states.py:13
-msgid "Distrito Federal"
+msgid "Colima"
 msgstr ""
 
 #: mx/mx_states.py:14
@@ -10750,7 +10750,7 @@ msgstr ""
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr ""
 
-#: us/forms.py:97
+#: us/forms.py:98
 msgid "Enter a U.S. state or territory."
 msgstr ""
 

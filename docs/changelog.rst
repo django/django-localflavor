@@ -1,8 +1,113 @@
 Changelog
 =========
 
-3.1   (unreleased)
+4.0   (unreleased)
 ------------------
+
+New flavors:
+
+- Nepal LocalFlavor: Support for Nepal added
+  (`gh-451 <https://github.com/django/django-localflavor/pull/451>`_).
+- Belarus localflavor
+  (`gh-422 <https://github.com/django/django-localflavor/pull/422>`_,
+  `gh-442 <https://github.com/django/django-localflavor/pull/442>`_).
+- Ghana localflavor
+  (`gh-460 <https://github.com/django/django-localflavor/pull/460>`_).
+
+New fields for existing flavors:
+
+- Added permanent account number(PAN) field in Indian flavor.
+  (`gh-457 <https://github.com/django/django-localflavor/pull/457>`_).
+- Added the Canadian Models fields.
+  (`gh-465 <https://github.com/django/django-localflavor/pull/465>`_).
+
+Modifications to existing flavors:
+
+- Fix typo in Marijampolė county name in LTCountySelect
+  (`gh-480 <https://github.com/django/django-localflavor/pull/480>`_).
+- Add support for new Finnish identity codes
+  (`gh-478 <https://github.com/django/django-localflavor/pull/478>`_).
+- CIF spanish starting with 'U' bug resolved
+  (`gh-469 <https://github.com/django/django-localflavor/pull/469>`_).
+- Fix error code for BRPostalCodeValidator
+  (`gh-448 <https://github.com/django/django-localflavor/pull/448>`_).
+- Fix spelling of the India state of Chhattisgarh
+  (`gh-444 <https://github.com/django/django-localflavor/pull/444>`_).
+- Fix CURP regex for MX flavor
+  (`gh-449 <https://github.com/django/django-localflavor/pull/449>`_).
+- Change text based fields that inherited from `django.forms.Field` to inherit from `django.forms.CharField`. The
+  following fields have been updated
+  (`gh-446 <https://github.com/django/django-localflavor/pull/446>`_):
+
+  - `at.forms.ATSocialSecurityNumberField`
+  - `br.forms.BRStateChoiceField`
+  - `ca.forms.CAProvinceField`
+  - `ca.forms.CASocialInsuranceNumberField`
+  - `ch.forms.CHIdentityCardNumberField`
+  - `cu.forms.CUProvinceField`
+  - `cu.forms.CURegionField`
+  - `cz.forms.CZBirthNumberField`
+  - `cz.forms.CZICNumberField`
+  - `de.forms.DEIdentityCardNumberField`
+  - `ee.forms.EEBusinessRegistryCode`
+  - `ee.forms.EEPersonalIdentificationCode`
+  - `fi.forms.FISocialSecurityNumber`
+  - `gr.forms.GRTaxNumberCodeField`
+  - `hr.forms.HRJMBAGField`
+  - `hr.forms.HRJMBGField`
+  - `hr.forms.HRLicensePlateField`
+  - `hr.forms.HRPostalCodeField`
+  - `id_.forms.IDLicensePlateField`
+  - `id_.forms.IDNationalIdentityNumberField`
+  - `id_.forms.IDPostCodeField`
+  - `il.forms.ILIDNumberField`
+  - `in_.forms.INAadhaarNumberField`
+  - `in_.forms.INStateField`
+  - `ir.forms.IRIDNumberField`
+  - `it.forms.ITVatNumberField`
+  - `lt.forms.LTPostalCodeField`
+  - `lv.forms.LVPersonalCodeField`
+  - `lv.forms.LVPostalCodeField`
+  - `no.forms.NOSocialSecurityNumber`
+  - `nz.forms.NZBankAccountNumberField`
+  - `pt.forms.PTCitizenCardNumberField`
+  - `pt.forms.PTSocialSecurityNumberField`
+  - `ro.forms.ROCountyField`
+  - `tr.forms.TRIdentificationNumberField`
+  - `us.forms.USStateField`
+- Removed inconvenient word VACA from CURP_INCONVENIENT_WORDS for MX flavor
+
+Other changes:
+
+- Use 'return value' when value is in the empty_values list
+  (`gh-461 <https://github.com/django/django-localflavor/pull/461>`_).
+
+- Support for Python 3.5 and 3.6 was dropped.
+
+- Support for Python 3.10 was added.
+
+3.1   (2021-05-28)
+------------------
+
+Breaking data changes:
+
+A schema and data migration are required for users of `mx.models.MXStateField` and `mx.forms.MXStateSelect`. The
+following steps are required:
+
+    - run `manage.py makemigrations` to generate a schema migration
+    - migrate `DIF` to `CDMX` with a data migration
+
+A data migration is required for users of `in_.models.INStateField` and `in_.forms.INStateSelect`. The following data
+migrations are required:
+
+    - Migrate `CG` to `CT` for Chattisgarh
+    - Migrate `UA` to `UT` for Uttarakhand
+    - Migrate `DD` and `DN` to `DH` for Dadra and Nagar Haveli and Daman and Diu
+
+A warning message will be displayed when `mx.models.MXStateField`, `mx.forms.MXStateSelect`, `in_.models.INStateField`
+or `in_.forms.INStateSelect` are used. See the
+`localflavor online docs <https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility>`_ for
+instructions on how to suppress this warning once the migration has been completed.
 
 New flavors:
 
@@ -14,15 +119,42 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- Fix `FRNationalIdentificationNumber` validation for people born overseas
+- Fix `fr.forms.FRNationalIdentificationNumber` validation for people born overseas
+  (`gh-415 <https://github.com/django/django-localflavor/issues/415>`_).
+- Breaking data change: Updated Indian states and union territories names and code as per iso 3166
+  (https://www.iso.org/obp/ui/#iso:code:3166:IN). The key for Chattisgarh has been changed from CG to CT, the key for
+  Uttarakhand has been changed from UA to UT, and the keys DD (Dadra and Nagar Haveli) and DN (Daman and Diu) have been
+  removed and combined into DH (Dadra and Nagar Haveli and Daman and Diu). Ladakh (LA) is the new addition in the Union
+  Territories. There are also a few modifications in the States and Union Territories names: Orissa (OR) is now Odisha
+  (OR), Pondicherry (PY) is now Puducherry (PY) Andaman and Nicobar (AN) is now Andaman and Nicobar Islands (AN).
+  (`gh-427 <https://github.com/django/django-localflavor/issues/427>`_).
+- Correct sorting of US_STATES to sort by full name rather than code
+  (`gh-424 <https://github.com/django/django-localflavor/issues/424>`_
+  `gh-428 <https://github.com/django/django-localflavor/pull/428>`_).
+- Added new region for CL
+  (`gh-432 <https://github.com/django/django-localflavor/issues/432>`_,
+  `gh-433 <https://github.com/django/django-localflavor/pull/433>`_).
+- Updated IBAN validation for changes in IBAN Registry release 89, March 2021
+  (`gh-436 <https://github.com/django/django-localflavor/issues/436>`_).
+- Breaking data change: `mx.mx_states.STATE_CHOICES` has been updated to change DIF/Distrito Federal to CDMX/Ciudad de
+  México, the legal name for this state as of 29 January 2016
+  (`gh-235 <https://github.com/django/django-localflavor/issues/235>`_,
+  `gh-400 <https://github.com/django/django-localflavor/issues/400>`_,
+  `gh-438 <https://github.com/django/django-localflavor/issues/438>`_).
 
 Other changes:
 
 - Extended validation of BICs to match official SEPA regulations
+  (`gh-418 <https://github.com/django/django-localflavor/issues/418>`_).
 - Removed positional arguments (`*args`) from form fields that inherit from Django's
   `forms.CharField` and `forms.Field`. Positional arguments are not supported in the
-  the parent form and did not work.
-  `gh-421 <https://github.com/django/django-localflavor/pull/421>`_)
+  the parent form and did not work
+  `gh-421 <https://github.com/django/django-localflavor/pull/421>`_).
+- Added error codes to all `ValidationError`s as recommended by
+  `Django's form validation documentation <https://docs.djangoproject.com/en/stable/ref/forms/validation/#raising-validationerror>`_
+  (`gh-440 <https://github.com/django/django-localflavor/issues/440>`_).
+- Renamed zh_CN and zh_TW locales to zh_Hans and zh_Hant respectively to match
+  the Django locale names.
 
 
 3.0   (2020-02-19)

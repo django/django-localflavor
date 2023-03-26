@@ -6,19 +6,21 @@
 # Daniel Duan <DaNmarner@gmail.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Lele Long <schemacs@gmail.com>, 2011
-# pylemon <leeway1985@gmail.com>, 2015
+# li xiushan <lixiushan@aliyun.com>, 2020
+# Lemon Li <leeway1985@gmail.com>, 2015
 # Ray Wang <pivstone@gmail.com>, 2017
 # slene <vslene@gmail.com>, 2011
-# 发城 张 <zhangfccn@gmail.com>, 2018
+# 张发城 <zhangfccn@gmail.com>, 2018
+# fangjiaqi77 <370358679@qq.com>, 2020
 # kkkkhu <tracis@wodiga.com>, 2017
 # Yang Zeyu (扩散性百万甜面包) <Himself6565@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2018-04-26 15:41+0000\n"
-"Last-Translator: Yang Zeyu (扩散性百万甜面包) <Himself6565@gmail.com>\n"
+"POT-Creation-Date: 2021-05-21 09:38+0200\n"
+"PO-Revision-Date: 2021-05-21 09:17+0000\n"
+"Last-Translator: Transifex Bot <>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-"
 "localflavor/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -114,7 +116,7 @@ msgstr "以 XX-XXXXXXXX-X 或 XXXXXXXXXXXX 的格式输入一个有效的 CUIT�
 msgid "Invalid CUIT."
 msgstr "无效 CUIT。"
 
-msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
 msgstr ""
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
@@ -124,7 +126,7 @@ msgid "CBU must be exactly 22 digits long."
 msgstr ""
 
 msgid "Invalid CBU."
-msgstr ""
+msgstr "无效 CBU"
 
 msgid "Burgenland"
 msgstr "布尔根兰州"
@@ -232,7 +234,7 @@ msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "请输入有效的邮政编码，范围和格式为 1XXX - 9XXX"
 
 msgid "The EGN is not valid"
-msgstr ""
+msgstr "EGN 无效"
 
 msgid "EIK/BULSTAT is not valid"
 msgstr ""
@@ -258,10 +260,25 @@ msgid "This field requires at least 14 digits"
 msgstr "这个字段要求至少 14 位数字"
 
 msgid "Invalid Process number."
-msgstr ""
+msgstr "无效的进程号。"
 
 msgid "State of Brazil (two uppercase letters)"
 msgstr ""
+
+msgid "CPF Document"
+msgstr ""
+
+msgid "CNPJ Document"
+msgstr ""
+
+msgid "Postal Code"
+msgstr "邮政编码"
+
+msgid "Enter a postal code in the format 00000-000."
+msgstr "以 000000-000 的格式输入一个邮政编码"
+
+msgid "Invalid Postal Code"
+msgstr "无效邮政编码"
 
 msgid "Alberta"
 msgstr ""
@@ -935,6 +952,9 @@ msgstr ""
 msgid "Scanning"
 msgstr ""
 
+msgid "Facility"
+msgstr ""
+
 msgid "Høje Taastrup"
 msgstr ""
 
@@ -1253,6 +1273,12 @@ msgstr ""
 msgid "Rude"
 msgstr ""
 
+msgid "Agersø"
+msgstr ""
+
+msgid "Omø"
+msgstr ""
+
 msgid "Fuglebjerg"
 msgstr ""
 
@@ -1278,6 +1304,9 @@ msgid "Stenlille"
 msgstr ""
 
 msgid "Nyrup"
+msgstr ""
+
+msgid "Orø"
 msgstr ""
 
 msgid "Hvalsø"
@@ -1508,10 +1537,16 @@ msgstr ""
 msgid "Bandholm"
 msgstr ""
 
+msgid "Askø og Lilleø"
+msgstr ""
+
 msgid "Torrig L"
 msgstr ""
 
 msgid "Fejø"
+msgstr ""
+
+msgid "Femø"
 msgstr ""
 
 msgid "Nørreballe"
@@ -1640,6 +1675,15 @@ msgstr ""
 msgid "Faaborg"
 msgstr ""
 
+msgid "Lyø"
+msgstr ""
+
+msgid "Avernakø"
+msgstr ""
+
+msgid "Bjørnø"
+msgstr ""
+
 msgid "Glamsbjerg"
 msgstr ""
 
@@ -1715,10 +1759,16 @@ msgstr ""
 msgid "Bagenkop"
 msgstr ""
 
+msgid "Strynø"
+msgstr ""
+
 msgid "Tranekær"
 msgstr ""
 
 msgid "Marstal"
+msgstr ""
+
+msgid "Birkholm"
 msgstr ""
 
 msgid "Ærøskøbing"
@@ -1752,6 +1802,9 @@ msgid "Sjølund"
 msgstr ""
 
 msgid "Hejls"
+msgstr ""
+
+msgid "Barsø"
 msgstr ""
 
 msgid "Rødekro"
@@ -2346,6 +2399,12 @@ msgid "Stenderup"
 msgstr ""
 
 msgid "Hornsyld"
+msgstr ""
+
+msgid "Endelave"
+msgstr ""
+
+msgid "Tunø"
 msgstr ""
 
 msgid "Tjele"
@@ -3110,6 +3169,90 @@ msgstr ""
 msgid "Enter a valid Estonian business registry code."
 msgstr ""
 
+msgid "Dakahlia"
+msgstr ""
+
+msgid "Red Sea"
+msgstr ""
+
+msgid "Beheira"
+msgstr ""
+
+msgid "Faiyum"
+msgstr ""
+
+msgid "Gharbia"
+msgstr ""
+
+msgid "Alexandria"
+msgstr ""
+
+msgid "Ismailia"
+msgstr ""
+
+msgid "Giza"
+msgstr ""
+
+msgid "Monufia"
+msgstr ""
+
+msgid "Minya"
+msgstr ""
+
+msgid "Cairo"
+msgstr ""
+
+msgid "Qalyubia"
+msgstr ""
+
+msgid "Luxor"
+msgstr ""
+
+msgid "New Valley"
+msgstr ""
+
+msgid "Suez"
+msgstr ""
+
+msgid "Al Sharqia"
+msgstr ""
+
+msgid "Aswan"
+msgstr ""
+
+msgid "Asyut"
+msgstr ""
+
+msgid "Beni Suef"
+msgstr ""
+
+msgid "Port Said"
+msgstr ""
+
+msgid "Damietta"
+msgstr ""
+
+msgid "South Sinai"
+msgstr ""
+
+msgid "Kafr el-Sheikh"
+msgstr ""
+
+msgid "Matrouh"
+msgstr ""
+
+msgid "Qena"
+msgstr ""
+
+msgid "North Sinai"
+msgstr ""
+
+msgid "Sohag"
+msgstr ""
+
+msgid "Enter a valid Egyptian National ID number"
+msgstr ""
+
 msgid "Araba"
 msgstr ""
 
@@ -3335,6 +3478,12 @@ msgstr "请输入一个有效的银行帐号，格式为 XXXX-XXXX-XX-XXXXXXXXXX
 
 msgid "Invalid checksum for bank account number."
 msgstr "无效的银行帐号校验和。"
+
+msgid "Spain postal code (five numbers)"
+msgstr ""
+
+msgid "Identification National Document"
+msgstr ""
 
 msgid "Enter a valid Finnish social security number."
 msgstr "输入一个有效的芬兰社会保障号码。"
@@ -3817,7 +3966,7 @@ msgid "Business Identifier Code"
 msgstr ""
 
 #, python-format
-msgid "%s is not a valid character for IBAN."
+msgid "%(character)s is not a valid character for IBAN."
 msgstr ""
 
 #, python-format
@@ -3825,11 +3974,11 @@ msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
 #, python-format
-msgid "%s is not a valid country code for IBAN."
+msgid "%(country_code)s is not a valid country code for IBAN."
 msgstr ""
 
 #, python-format
-msgid "%s IBANs are not allowed in this field."
+msgid "%(country_code)s IBANs are not allowed in this field."
 msgstr ""
 
 msgid "Not a valid IBAN."
@@ -3838,21 +3987,35 @@ msgstr ""
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#, python-format
-msgid "%s is not a valid institution code."
+msgid "BIC codes only contain alphabet letters and digits."
 msgstr ""
 
 #, python-format
-msgid "%s is not a valid country code."
+msgid "%(institution_code)s is not a valid institution code."
+msgstr ""
+
+#, python-format
+msgid "%(country_code)s is not a valid country code."
+msgstr ""
+
+#, python-format
+msgid "%(location_code)s is not a valid location code."
 msgstr ""
 
 msgid "Not a valid EAN code."
+msgstr ""
+
+#, python-format
+msgid "%(vatin)s is not a valid VAT identification number."
 msgstr ""
 
 msgid "Enter a valid 5-digit greek postal code."
 msgstr ""
 
 msgid "Enter a valid greek tax number (9 digits)."
+msgstr ""
+
+msgid "Enter a valid greek social security number (AMKA - 11 digits)."
 msgstr ""
 
 msgid "Enter a valid 13 digit JMBG"
@@ -4053,6 +4216,9 @@ msgstr "中加里曼丹"
 msgid "Kalimantan Timur"
 msgstr "东加里曼丹"
 
+msgid "Kalimantan Utara"
+msgstr ""
+
 msgid "Kepulauan Bangka-Belitung"
 msgstr "邦加勿里洞群岛"
 
@@ -4206,6 +4372,9 @@ msgstr ""
 msgid "Garut"
 msgstr ""
 
+msgid "Enter a valid Eircode."
+msgstr ""
+
 msgid "Carlow"
 msgstr ""
 
@@ -4301,6 +4470,102 @@ msgid ""
 msgstr ""
 
 msgid "Indian state (two uppercase letters)"
+msgstr ""
+
+msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
+msgstr ""
+
+msgid "Alborz"
+msgstr ""
+
+msgid "Ardabil"
+msgstr ""
+
+msgid "Azerbaijan East"
+msgstr ""
+
+msgid "Azerbaijan Wast"
+msgstr ""
+
+msgid "Bushehr"
+msgstr ""
+
+msgid "Chahar Mahaal and Bakhtiari"
+msgstr ""
+
+msgid "Fars"
+msgstr ""
+
+msgid "Gilan"
+msgstr ""
+
+msgid "Golestan"
+msgstr ""
+
+msgid "Hamadan"
+msgstr ""
+
+msgid "Hormozgan"
+msgstr ""
+
+msgid "Ilam"
+msgstr ""
+
+msgid "Isfahan"
+msgstr ""
+
+msgid "Kerman"
+msgstr ""
+
+msgid "Kermanshah"
+msgstr ""
+
+msgid "Khorasan North"
+msgstr ""
+
+msgid "Khorasan Razavi"
+msgstr ""
+
+msgid "Khorasan South"
+msgstr ""
+
+msgid "Khuzestan"
+msgstr ""
+
+msgid "Kohgiluyeh and Boyer-Ahmad"
+msgstr ""
+
+msgid "Kurdistan"
+msgstr ""
+
+msgid "Lorestan"
+msgstr ""
+
+msgid "Markazi"
+msgstr ""
+
+msgid "Mazandaran"
+msgstr ""
+
+msgid "Qazvin"
+msgstr ""
+
+msgid "Qom"
+msgstr ""
+
+msgid "Semnan"
+msgstr ""
+
+msgid "Sistan and Baluchestan"
+msgstr ""
+
+msgid "Tehran"
+msgstr ""
+
+msgid "Yazd"
+msgstr ""
+
+msgid "Zanjan"
 msgstr ""
 
 msgid ""
@@ -5699,6 +5964,210 @@ msgstr ""
 msgid "Dakhla-Oued Ed Dahab"
 msgstr ""
 
+msgid "Întreprindere Individuală"
+msgstr ""
+
+msgid "Societate pe acţiuni"
+msgstr ""
+
+msgid "Societate în nume colectiv"
+msgstr ""
+
+msgid "Societatea în comandită"
+msgstr ""
+
+msgid "Cooperativa de producţie"
+msgstr ""
+
+msgid "Cooperativa de întreprinzători"
+msgstr ""
+
+msgid "Societate cu răspundere limitată"
+msgstr ""
+
+msgid "Gospodăria ţărănească"
+msgstr ""
+
+msgid "Diplomatic Corps"
+msgstr ""
+
+msgid "Service Staff"
+msgstr ""
+
+msgid "Consular Staff"
+msgstr ""
+
+msgid "Administrative body"
+msgstr ""
+
+msgid "Ministry of Internal Affairs"
+msgstr ""
+
+msgid "Carabinieri Subdivision"
+msgstr ""
+
+msgid "Military Forces"
+msgstr ""
+
+msgid "Border Control"
+msgstr ""
+
+msgid "Parliament"
+msgstr ""
+
+msgid "Government"
+msgstr ""
+
+msgid "Chancellery"
+msgstr ""
+
+msgid "Anenii Noi"
+msgstr ""
+
+msgid "Tighina"
+msgstr ""
+
+msgid "Bălți"
+msgstr ""
+
+msgid "Briceni"
+msgstr ""
+
+msgid "Basarabeasca"
+msgstr ""
+
+msgid "Chișinău"
+msgstr ""
+
+msgid "Camenca"
+msgstr ""
+
+msgid "Ceadîr-Lunga"
+msgstr ""
+
+msgid "Cahul"
+msgstr ""
+
+msgid "Călărași"
+msgstr ""
+
+msgid "Cimișlia"
+msgstr ""
+
+msgid "Căinari"
+msgstr ""
+
+msgid "Comrat"
+msgstr ""
+
+msgid "Criuleni"
+msgstr ""
+
+msgid "Căușeni"
+msgstr ""
+
+msgid "Cantemir"
+msgstr ""
+
+msgid "Dubăsari"
+msgstr ""
+
+msgid "Dondușeni"
+msgstr ""
+
+msgid "Drochia"
+msgstr ""
+
+msgid "Edineț"
+msgstr ""
+
+msgid "Fălești"
+msgstr ""
+
+msgid "Florești"
+msgstr ""
+
+msgid "Gagauzia"
+msgstr ""
+
+msgid "Glodeni"
+msgstr ""
+
+msgid "Grigoriopol"
+msgstr ""
+
+msgid "Hîncești"
+msgstr ""
+
+msgid "Ialoveni"
+msgstr ""
+
+msgid "Leova"
+msgstr ""
+
+msgid "Nisporeni"
+msgstr ""
+
+msgid "Ocnița"
+msgstr ""
+
+msgid "Orhei"
+msgstr ""
+
+msgid "Rîbnița"
+msgstr ""
+
+msgid "Rîșcani"
+msgstr ""
+
+msgid "Rezina"
+msgstr ""
+
+msgid "Șoldănești"
+msgstr ""
+
+msgid "Sîngerei"
+msgstr ""
+
+msgid "Slobozia"
+msgstr ""
+
+msgid "Soroca"
+msgstr ""
+
+msgid "Strășeni"
+msgstr ""
+
+msgid "Ștefan Vodă"
+msgstr ""
+
+msgid "Taraclia"
+msgstr ""
+
+msgid "Telenești"
+msgstr ""
+
+msgid "Ungheni"
+msgstr ""
+
+msgid "Vulcănești"
+msgstr ""
+
+msgid "Moldavian identity number"
+msgstr ""
+
+msgid "Moldavian license plate number"
+msgstr ""
+
+msgid "Moldavian company types"
+msgstr ""
+
+msgid "Enter a valid IDNO number."
+msgstr ""
+
+msgid "Enter a valid license plate."
+msgstr ""
+
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
@@ -6004,7 +6473,7 @@ msgstr ""
 msgid "Invalid checksum for Social Security Number."
 msgstr ""
 
-msgid "Mexico state (three uppercase letters)"
+msgid "Mexico state (three or four uppercase letters)"
 msgstr ""
 
 msgid "Mexico zip code"
@@ -6034,6 +6503,9 @@ msgstr "巴哈加利福尼亚"
 msgid "Campeche"
 msgstr "坎佩切"
 
+msgid "Ciudad de México"
+msgstr ""
+
 msgid "Chihuahua"
 msgstr "奇瓦瓦"
 
@@ -6045,9 +6517,6 @@ msgstr "科阿韦拉"
 
 msgid "Colima"
 msgstr "科利马"
-
-msgid "Distrito Federal"
-msgstr "联邦区"
 
 msgid "Durango"
 msgstr "杜兰戈"
@@ -6118,6 +6587,9 @@ msgstr "尤卡坦"
 msgid "Zacatecas"
 msgstr "萨卡特卡斯"
 
+msgid "Invalid MyKad number."
+msgstr ""
+
 msgid "Dutch zipcode"
 msgstr "荷兰邮政编码"
 
@@ -6125,6 +6597,9 @@ msgid "Dutch province"
 msgstr ""
 
 msgid "Dutch social security number (BSN)"
+msgstr ""
+
+msgid "Dutch license plate"
 msgstr ""
 
 msgid "Drenthe"
@@ -6161,6 +6636,9 @@ msgid "Zuid-Holland"
 msgstr "南荷兰省"
 
 msgid "Enter a valid BSN."
+msgstr ""
+
+msgid "Enter a valid license plate"
 msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
@@ -7610,7 +8088,7 @@ msgid "Alaska"
 msgstr "阿拉斯加州"
 
 msgid "Hawaii"
-msgstr ""
+msgstr "夏威夷"
 
 msgid "American Samoa"
 msgstr ""

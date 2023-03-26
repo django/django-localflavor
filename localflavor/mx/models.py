@@ -10,13 +10,13 @@ from .mx_states import STATE_CHOICES
 
 
 class MXStateField(CharField):
-    """A model field that stores the three-letter Mexican state abbreviation in the database."""
+    """A model field that stores the three or four letter Mexican state abbreviation in the database."""
 
-    description = _("Mexico state (three uppercase letters)")
+    description = _("Mexico state (three or four uppercase letters)")
 
     def __init__(self, *args, **kwargs):
         kwargs['choices'] = STATE_CHOICES
-        kwargs['max_length'] = 3
+        kwargs['max_length'] = 4
         super().__init__(*args, **kwargs)
 
     def deconstruct(self):

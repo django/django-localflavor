@@ -3,26 +3,28 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Saibamen <saibamenppl@gmail.com>, 2015
+# Adam Stachowicz <saibamenppl@gmail.com>, 2015
 # Adrian Antończyk <linkedin@antonczyk.it>, 2015
 # angularcircle, 2011-2012
 # angularcircle, 2011
 # angularcircle, 2012
+# Filip Krynitzky <filip.krynicki@skriware.com>, 2020
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Jarek Kowalewski <jaroslaw.kowalewski@students.waw.pl>, 2016
-# konryd <inactive+konryd@transifex.com>, 2011
-# konryd <inactive+konryd@transifex.com>, 2011
+# 0d5641585fd67fbdb97037c19ab83e4c_18c98b0 <f6e7dac08616696bd890d93a38e13b13_5231>, 2011
+# 0d5641585fd67fbdb97037c19ab83e4c_18c98b0 <f6e7dac08616696bd890d93a38e13b13_5231>, 2011
 # lukaszkoziara <koziara.lukasz@gmail.com>, 2017
-# m_aciek <maciej.olko@gmail.com>, 2016-2017,2019-2020
+# m_aciek <maciej.olko@gmail.com>, 2016-2017,2019-2021
 # m_aciek <maciej.olko@gmail.com>, 2016
+# Michal, 2020
 # Roman Barczyński, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-08 10:42+0100\n"
-"PO-Revision-Date: 2020-03-10 22:58+0000\n"
-"Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
+"POT-Creation-Date: 2021-05-21 09:38+0200\n"
+"PO-Revision-Date: 2021-05-21 09:17+0000\n"
+"Last-Translator: Transifex Bot <>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-localflavor/"
 "language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -526,10 +528,10 @@ msgid "Enter a valid postal code in the format XXXXX."
 msgstr "Wprowadź poprawny kod pocztowy w formacie XXXXX."
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
-msgstr ""
+msgstr "Wprowadź prawidłowy numer dowodu osobistego w formacie XXXXXXXXXXX."
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr ""
+msgstr "Kubańskie regiony (trzy wielkie litery)"
 
 msgid "Cuban provinces (three uppercase letters)"
 msgstr ""
@@ -1051,28 +1053,28 @@ msgid "Brøndby Strand"
 msgstr ""
 
 msgid "Vallensbæk Strand"
-msgstr ""
+msgstr "Vallensbæk Strand"
 
 msgid "Solrød Strand"
-msgstr ""
+msgstr "Solrød Strand"
 
 msgid "Karlslunde"
-msgstr ""
+msgstr "Karlslunde"
 
 msgid "Brønshøj"
-msgstr ""
+msgstr "Brønshøj"
 
 msgid "Vanløse"
-msgstr ""
+msgstr "Vanløse"
 
 msgid "Skovlunde"
-msgstr ""
+msgstr "Skovlunde"
 
 msgid "Måløv"
-msgstr ""
+msgstr "Måløv"
 
 msgid "Smørum"
-msgstr ""
+msgstr "Smørum"
 
 msgid "Kastrup"
 msgstr ""
@@ -3286,7 +3288,7 @@ msgid "Avila"
 msgstr ""
 
 msgid "Badajoz"
-msgstr ""
+msgstr "Badajoz"
 
 msgid "Illes Balears"
 msgstr "Baleary"
@@ -3984,8 +3986,8 @@ msgid "Business Identifier Code"
 msgstr ""
 
 #, python-format
-msgid "%s is not a valid character for IBAN."
-msgstr "%s nie jest poprawnym znakiem dla IBAN."
+msgid "%(character)s is not a valid character for IBAN."
+msgstr ""
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
@@ -3993,12 +3995,12 @@ msgstr ""
 "IBAN dla kraju o kodzie %(country_code)s musi zawierać %(number)s znaków."
 
 #, python-format
-msgid "%s is not a valid country code for IBAN."
-msgstr "%s nie jest poprawnym kodem kraju IBAN"
+msgid "%(country_code)s is not a valid country code for IBAN."
+msgstr ""
 
 #, python-format
-msgid "%s IBANs are not allowed in this field."
-msgstr "Numery IBAN %s nie są dopuszczone dla tego pola."
+msgid "%(country_code)s IBANs are not allowed in this field."
+msgstr ""
 
 msgid "Not a valid IBAN."
 msgstr "Niepoprawny IBAN."
@@ -4010,19 +4012,19 @@ msgid "BIC codes only contain alphabet letters and digits."
 msgstr ""
 
 #, python-format
-msgid "%s is not a valid institution code."
-msgstr "%s nie jest poprawnym kodem instytucji."
-
-#, python-format
-msgid "%s is not a valid country code."
-msgstr "%s nie jest poprawnym kodem kraju."
-
-msgid "Not a valid EAN code."
-msgstr "Niepoprawny kod EAN."
+msgid "%(institution_code)s is not a valid institution code."
+msgstr ""
 
 #, python-format
 msgid "%(country_code)s is not a valid country code."
 msgstr ""
+
+#, python-format
+msgid "%(location_code)s is not a valid location code."
+msgstr ""
+
+msgid "Not a valid EAN code."
+msgstr "Niepoprawny kod EAN."
 
 #, python-format
 msgid "%(vatin)s is not a valid VAT identification number."
@@ -6484,7 +6486,7 @@ msgid "Invalid checksum for CLABE."
 msgstr ""
 
 msgid "Enter a valid CURP."
-msgstr "Wpisz porpawny CURP."
+msgstr "Wpisz poprawny CURP."
 
 msgid "Invalid checksum for CURP."
 msgstr "Niepoprawna suma kontrolna CURP."
@@ -6495,8 +6497,8 @@ msgstr "Wpisz poprawny numer ubezpieczenia społecznego."
 msgid "Invalid checksum for Social Security Number."
 msgstr "Niepoprawna suma kontrolna numeru ubezpieczenia społecznego."
 
-msgid "Mexico state (three uppercase letters)"
-msgstr "Stan (trzy duże litery)"
+msgid "Mexico state (three or four uppercase letters)"
+msgstr ""
 
 msgid "Mexico zip code"
 msgstr "Kod pocztowy"
@@ -6525,6 +6527,9 @@ msgstr "Kalifornia Dolna Południowa"
 msgid "Campeche"
 msgstr ""
 
+msgid "Ciudad de México"
+msgstr ""
+
 msgid "Chihuahua"
 msgstr ""
 
@@ -6536,9 +6541,6 @@ msgstr ""
 
 msgid "Colima"
 msgstr ""
-
-msgid "Distrito Federal"
-msgstr "Meksyk (miasto)"
 
 msgid "Durango"
 msgstr ""
@@ -6658,7 +6660,7 @@ msgid "Zuid-Holland"
 msgstr "Holandia Południowa"
 
 msgid "Enter a valid BSN."
-msgstr ""
+msgstr "Wpisz prawidłowy numer BSN."
 
 msgid "Enter a valid license plate"
 msgstr ""
@@ -7457,7 +7459,7 @@ msgid "Östergötland"
 msgstr ""
 
 msgid "Jönköping"
-msgstr ""
+msgstr "Jönköping"
 
 msgid "Kronoberg"
 msgstr ""
@@ -7967,25 +7969,25 @@ msgid "Social security number"
 msgstr "Numer ubezpieczenia społecznego"
 
 msgid "Alabama"
-msgstr ""
+msgstr "Alabama"
 
 msgid "Arizona"
-msgstr ""
+msgstr "Arizona"
 
 msgid "Arkansas"
-msgstr ""
+msgstr "Arkansas"
 
 msgid "California"
-msgstr ""
+msgstr "Kalifornia"
 
 msgid "Colorado"
-msgstr ""
+msgstr "Kolorado"
 
 msgid "Connecticut"
-msgstr ""
+msgstr "Connecticut"
 
 msgid "Delaware"
-msgstr ""
+msgstr "Delaware"
 
 msgid "District of Columbia"
 msgstr "Dystrykt Kolumbii"
@@ -7995,64 +7997,64 @@ msgstr "Floryda"
 
 msgctxt "US state"
 msgid "Georgia"
-msgstr ""
+msgstr "Georgia"
 
 msgid "Idaho"
-msgstr ""
+msgstr "Idaho"
 
 msgid "Illinois"
-msgstr ""
+msgstr "Illinois"
 
 msgid "Indiana"
-msgstr ""
+msgstr "Indiana"
 
 msgid "Iowa"
-msgstr ""
+msgstr "Iowa"
 
 msgid "Kansas"
-msgstr ""
+msgstr "Kansas"
 
 msgid "Kentucky"
-msgstr ""
+msgstr "Kentucky"
 
 msgid "Louisiana"
-msgstr ""
+msgstr "Luizjana"
 
 msgid "Maine"
-msgstr ""
+msgstr "Maine"
 
 msgid "Maryland"
-msgstr ""
+msgstr "Maryland"
 
 msgid "Massachusetts"
-msgstr ""
+msgstr "Massachusetts"
 
 msgid "Michigan"
-msgstr ""
+msgstr "Michigan"
 
 msgid "Minnesota"
-msgstr ""
+msgstr "Minnesota"
 
 msgid "Mississippi"
-msgstr ""
+msgstr "Missisipi"
 
 msgid "Missouri"
-msgstr ""
+msgstr "Missouri"
 
 msgid "Montana"
-msgstr ""
+msgstr "Montana"
 
 msgid "Nebraska"
-msgstr ""
+msgstr "Nebraska"
 
 msgid "Nevada"
-msgstr ""
+msgstr "Nevada"
 
 msgid "New Hampshire"
-msgstr ""
+msgstr "New Hampshire"
 
 msgid "New Jersey"
-msgstr ""
+msgstr "New Jersey"
 
 msgid "New Mexico"
 msgstr "Nowy Meksyk"
@@ -8061,76 +8063,76 @@ msgid "New York"
 msgstr "Nowy Jork"
 
 msgid "North Carolina"
-msgstr ""
+msgstr "Karolina Północna"
 
 msgid "North Dakota"
-msgstr ""
+msgstr "Dakota Północna"
 
 msgid "Ohio"
-msgstr ""
+msgstr "Ohio"
 
 msgid "Oklahoma"
-msgstr ""
+msgstr "Oklahoma"
 
 msgid "Oregon"
 msgstr "Oregon"
 
 msgid "Pennsylvania"
-msgstr ""
+msgstr "Pensylwania"
 
 msgid "Rhode Island"
 msgstr "Rhode Island"
 
 msgid "South Carolina"
-msgstr ""
+msgstr "Karolina Południowa"
 
 msgid "South Dakota"
-msgstr ""
+msgstr "Dakota Południowa"
 
 msgid "Tennessee"
-msgstr ""
+msgstr "Tennessee"
 
 msgid "Texas"
-msgstr ""
+msgstr "Teksas"
 
 msgid "Utah"
-msgstr ""
+msgstr "Utah"
 
 msgid "Vermont"
-msgstr ""
+msgstr "Vermont"
 
 msgid "Virginia"
-msgstr ""
+msgstr "Wirginia"
 
 msgid "Washington"
-msgstr ""
+msgstr "Waszyngton"
 
 msgid "West Virginia"
-msgstr ""
+msgstr "Wirginia Zachodnia"
 
 msgid "Wisconsin"
-msgstr ""
+msgstr "Wisconsin"
 
 msgid "Wyoming"
-msgstr ""
+msgstr "Wyoming"
 
 msgid "Alaska"
-msgstr ""
+msgstr "Alaska"
 
 msgid "Hawaii"
-msgstr ""
+msgstr "Hawaje"
 
 msgid "American Samoa"
-msgstr ""
+msgstr "Samoa Amerykańskie"
 
 msgid "Guam"
-msgstr ""
+msgstr "Guam"
 
 msgid "Northern Mariana Islands"
-msgstr ""
+msgstr "Mariany Północne"
 
 msgid "Puerto Rico"
-msgstr ""
+msgstr "Portoryko"
 
 msgid "Virgin Islands"
 msgstr ""
@@ -8257,7 +8259,7 @@ msgid "Nueva Esparta"
 msgstr ""
 
 msgid "Portuguesa"
-msgstr ""
+msgstr "portugalski"
 
 msgid "Sucre"
 msgstr ""

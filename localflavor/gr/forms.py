@@ -2,8 +2,7 @@
 import datetime
 import re
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import Field, RegexField, ValidationError
+from django.forms import CharField, RegexField, ValidationError
 from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
@@ -24,7 +23,7 @@ class GRPostalCodeField(RegexField):
         super().__init__(r'^[12345678]\d{4}$', **kwargs)
 
 
-class GRTaxNumberCodeField(Field):
+class GRTaxNumberCodeField(CharField):
     """
     Greek tax number field.
 
@@ -42,16 +41,16 @@ class GRTaxNumberCodeField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        val = re.sub(r'[\-\s\(\)]', '', force_str(value))
+        val = re.sub(r'[\-\s\(\)]', '', value)
         if len(val) < 9:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if not all(char.isdigit() for char in val):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if not self.allow_test_value and val == '000000000':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         digits = list(map(int, val))
         digits1 = digits[:-1]
         digits1.reverse()
@@ -60,7 +59,7 @@ class GRTaxNumberCodeField(Field):
         if mod == 10:
             mod = 0
         if mod != check:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return val
 
 
@@ -83,23 +82,23 @@ class GRSocialSecurityNumberCodeField(RegexField):
     def check_date(self, val):
         try:
             datetime.datetime.strptime(val[:6], '%d%m%y')
-        except:
-            raise ValidationError(self.error_messages['invalid'])
+        except ValueError:
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         val = re.sub(r'[\-\s]', '', force_str(value))
         if not val or len(val) < 11:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if self.allow_test_value and val == '00000000000':
             return val
         if not all(char.isdigit() for char in val):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         self.check_date(val)
         if not luhn.is_valid(val):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return val

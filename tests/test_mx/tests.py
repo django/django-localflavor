@@ -56,11 +56,11 @@ class MXLocalFlavorTests(TestCase):
 <option value="BCN">Baja California</option>
 <option value="BCS">Baja California Sur</option>
 <option value="CAM">Campeche</option>
+<option value="CDMX">Ciudad de México</option>
 <option value="CHH">Chihuahua</option>
 <option value="CHP">Chiapas</option>
 <option value="COA">Coahuila</option>
 <option value="COL">Colima</option>
-<option value="DIF">Distrito Federal</option>
 <option value="DUR">Durango</option>
 <option value="GRO">Guerrero</option>
 <option value="GUA">Guanajuato</option>
@@ -94,11 +94,11 @@ class MXLocalFlavorTests(TestCase):
 <option value="BCN">Baja California</option>
 <option value="BCS">Baja California Sur</option>
 <option value="CAM">Campeche</option>
+<option value="CDMX">Ciudad de México</option>
 <option value="CHH">Chihuahua</option>
 <option value="CHP">Chiapas</option>
 <option value="COA">Coahuila</option>
 <option value="COL">Colima</option>
-<option value="DIF">Distrito Federal</option>
 <option value="DUR">Durango</option>
 <option value="GRO">Guerrero</option>
 <option value="GUA">Guanajuato</option>
@@ -194,6 +194,8 @@ class MXLocalFlavorTests(TestCase):
             'TOMA880125HMNRRNO2': 'TOMA880125HMNRRNO2',
             'OOMG890727HMNRSR06': 'OOMG890727HMNRSR06',
             'AAAA000101HDFCCC09': 'AAAA000101HDFCCC09',
+            'OXCJ810522MQRYHL08': 'OXCJ810522MQRYHL08',
+            'VACA711211HYNRMN02': 'VACA711211HYNRMN02',
         }
         invalid = {
             'AAAA000000HDFCCC09': error_format,

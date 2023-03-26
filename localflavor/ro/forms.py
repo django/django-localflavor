@@ -1,8 +1,8 @@
 """Romanian specific form helpers."""
 import datetime
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import Field, RegexField, Select, ValidationError
+from django.core.exceptions import ImproperlyConfigured
+from django.forms import CharField, RegexField, Select, ValidationError
 from django.utils.translation import gettext_lazy as _
 
 from .ro_counties import COUNTIES_CHOICES
@@ -34,7 +34,7 @@ class ROCIFField(RegexField):
         """
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = value.strip()
 
@@ -56,7 +56,7 @@ class ROCIFField(RegexField):
             checksum = 0
 
         if checksum != int(value[0]):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value[::-1]
 
@@ -87,13 +87,13 @@ class ROCNPField(RegexField):
         """
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         # check birthdate digits
         try:
             datetime.date(int(value[1:3]), int(value[3:5]), int(value[5:7]))
         except ValueError:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # checksum
         key = '279146358279'
@@ -109,12 +109,12 @@ class ROCNPField(RegexField):
             checksum = 1
 
         if checksum != int(value[12]):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return value
 
 
-class ROCountyField(Field):
+class ROCountyField(CharField):
     """
     A form field that validates its input is a Romanian county name or abbreviation.
 
@@ -140,13 +140,10 @@ class ROCountyField(Field):
     def clean(self, value):
         value = super().clean(value)
 
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        try:
-            value = value.strip().upper()
-        except AttributeError:
-            pass
+        value = value.upper()
 
         # search for county code
         for entry in COUNTIES_CHOICES:
@@ -162,7 +159,7 @@ class ROCountyField(Field):
             if entry[1] == value:
                 return entry[0]
 
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class ROCountySelect(Select):

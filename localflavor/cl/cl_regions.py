@@ -15,4 +15,5 @@ REGION_CHOICES = (
     ('XII', 'Región de Magallanes y la Antártica Chilena'),
     ('XIV', 'Región de Los Ríos'),
     ('XV', 'Región de Arica-Parinacota'),
+    ('XVI', 'Región del Ñuble')
 )

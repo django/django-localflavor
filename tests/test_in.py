@@ -1,9 +1,11 @@
 from django.test import SimpleTestCase
 
-from localflavor.in_.forms import INAadhaarNumberField, INStateField, INStateSelect, INZipCodeField
+from localflavor.in_.forms import (INAadhaarNumberField, INPANCardNumberFormField, INStateField, INStateSelect,
+                                   INZipCodeField)
 
 
 class INLocalFlavorTests(SimpleTestCase):
+    maxDiff = None
 
     def test_INPStateSelect(self):
         f = INStateSelect()
@@ -18,12 +20,11 @@ class INLocalFlavorTests(SimpleTestCase):
 <option value="GJ">Gujarat</option>
 <option value="RJ">Rajasthan</option>
 <option value="HP">Himachal Pradesh</option>
-<option value="JK">Jammu and Kashmir</option>
 <option value="TG">Telangana</option>
 <option value="AR">Arunachal Pradesh</option>
 <option value="AS">Assam</option>
 <option value="BR">Bihar</option>
-<option value="CG">Chattisgarh</option>
+<option value="CT">Chhattisgarh</option>
 <option value="HR">Haryana</option>
 <option value="JH">Jharkhand</option>
 <option value="MP">Madhya Pradesh</option>
@@ -31,19 +32,20 @@ class INLocalFlavorTests(SimpleTestCase):
 <option value="ML">Meghalaya</option>
 <option value="MZ">Mizoram</option>
 <option value="NL">Nagaland</option>
-<option value="OR">Orissa</option>
+<option value="OR">Odisha</option>
 <option value="PB">Punjab</option>
 <option value="SK">Sikkim</option>
 <option value="TR">Tripura</option>
-<option value="UA">Uttarakhand</option>
+<option value="UT">Uttarakhand</option>
 <option value="WB">West Bengal</option>
-<option value="AN">Andaman and Nicobar</option>
+<option value="AN">Andaman and Nicobar Islands</option>
 <option value="CH">Chandigarh</option>
-<option value="DN">Dadra and Nagar Haveli</option>
-<option value="DD">Daman and Diu</option>
+<option value="DH">Dadra and Nagar Haveli and Daman and Diu</option>
 <option value="DL">Delhi</option>
+<option value="JK">Jammu and Kashmir</option>
 <option value="LD">Lakshadweep</option>
-<option value="PY">Pondicherry</option>
+<option value="LA">Ladakh</option>
+<option value="PY">Puducherry</option>
 </select>'''
         self.assertHTMLEqual(f.render('state', 'AP'), out)
 
@@ -96,7 +98,7 @@ class INLocalFlavorTests(SimpleTestCase):
             'bihar': 'BR',
             'br': 'BR',
             'cg': 'CG',
-            'chattisgarh': 'CG',
+            'chhattisgarh': 'CG',
             'ch': 'CH',
             'chandigarh': 'CH',
             'daman and diu': 'DD',
@@ -173,3 +175,35 @@ class INLocalFlavorTests(SimpleTestCase):
             'FL': error_format,
         }
         self.assertFieldOutput(INStateField, valid, invalid)
+
+    def test_INPANCardNumberField(self):
+        invalid_pan_error = ['Please enter a valid Indian PAN card number.']
+
+        valid = {
+            'AAAAA1234T':'AAAAA1234T',
+            'BNZAB2318J':'BNZAB2318J',
+            'ABCFC1234E':'ABCFC1234E',
+            'PQRLY1034T':'PQRLY1034T',
+            'ABHGA1234T':'ABHGA1234T',
+            'UMZJB2318J':'UMZJB2318J',
+            'AOCPC1964E':'AOCPC1964E',
+            'PERTY1934T':'PERTY1934T',
+        }
+        invalid = {
+            'AAADA1234T':invalid_pan_error,
+            'BNZEB2318J':invalid_pan_error,
+            'ABCIC1234E':invalid_pan_error,
+            'PQRQY1034T':invalid_pan_error,
+            'ABHRA1234T':invalid_pan_error,
+            'UMZSB2318J':invalid_pan_error,
+            '23ZAABN18J': invalid_pan_error,
+            '6060-1234-': invalid_pan_error,
+            'BNZAA 23184':invalid_pan_error,
+            '60606-': invalid_pan_error,
+            'ASSS':invalid_pan_error,
+            '4000': invalid_pan_error,
+            '6060-1234': invalid_pan_error,
+            '60606-': invalid_pan_error,
+            'ASSS':invalid_pan_error,
+        }
+        self.assertFieldOutput(INPANCardNumberFormField, valid, invalid)

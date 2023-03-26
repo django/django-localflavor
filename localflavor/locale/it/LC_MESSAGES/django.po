@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Carlo Miron <C8E@miron.it>, 2020
+# Carlo Miron <carlo@miron.it>, 2020
 # David Costa <david@zarel.net>, 2015
 # Denis Darii <denis.darii@gmail.com>, 2011
 # Guybrush88 <erpizzo@alice.it>, 2014
@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-08 10:42+0100\n"
-"PO-Revision-Date: 2020-03-13 13:55+0000\n"
-"Last-Translator: Carlo Miron <C8E@miron.it>\n"
+"POT-Creation-Date: 2021-05-21 09:38+0200\n"
+"PO-Revision-Date: 2021-05-21 09:17+0000\n"
+"Last-Translator: Transifex Bot <>\n"
 "Language-Team: Italian (http://www.transifex.com/django/django-localflavor/"
 "language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -3985,20 +3985,20 @@ msgid "Business Identifier Code"
 msgstr "Business Identifier Code"
 
 #, python-format
-msgid "%s is not a valid character for IBAN."
-msgstr "%s non è un carattere valido per l'IBAN"
+msgid "%(character)s is not a valid character for IBAN."
+msgstr ""
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr "Gli IBAN %(country_code)s devono contenere %(number)s caratteri."
 
 #, python-format
-msgid "%s is not a valid country code for IBAN."
-msgstr "%s non è un codice nazione valido per l'IBAN."
+msgid "%(country_code)s is not a valid country code for IBAN."
+msgstr ""
 
 #, python-format
-msgid "%s IBANs are not allowed in this field."
-msgstr "Questo campo non accetta gli IBAN %s."
+msgid "%(country_code)s IBANs are not allowed in this field."
+msgstr ""
 
 msgid "Not a valid IBAN."
 msgstr "Codice IBAN non valido."
@@ -4010,19 +4010,19 @@ msgid "BIC codes only contain alphabet letters and digits."
 msgstr "BIC codes only contain alphabet letters and digits."
 
 #, python-format
-msgid "%s is not a valid institution code."
-msgstr "%s non è un codice di istituto valido."
-
-#, python-format
-msgid "%s is not a valid country code."
-msgstr "%s non è un codice nazione valido."
-
-msgid "Not a valid EAN code."
-msgstr "Codice EAN non valido."
+msgid "%(institution_code)s is not a valid institution code."
+msgstr ""
 
 #, python-format
 msgid "%(country_code)s is not a valid country code."
 msgstr "%(country_code)s is not a valid country code."
+
+#, python-format
+msgid "%(location_code)s is not a valid location code."
+msgstr ""
+
+msgid "Not a valid EAN code."
+msgstr "Codice EAN non valido."
 
 #, python-format
 msgid "%(vatin)s is not a valid VAT identification number."
@@ -6499,8 +6499,8 @@ msgstr "Enter a valid Social Security Number."
 msgid "Invalid checksum for Social Security Number."
 msgstr "Invalid checksum for Social Security Number."
 
-msgid "Mexico state (three uppercase letters)"
-msgstr "Stato del Messico (tre lettere maiuscole)"
+msgid "Mexico state (three or four uppercase letters)"
+msgstr ""
 
 msgid "Mexico zip code"
 msgstr "CAP messicano"
@@ -6529,6 +6529,9 @@ msgstr "Bassa California del Sud"
 msgid "Campeche"
 msgstr "Campeche"
 
+msgid "Ciudad de México"
+msgstr ""
+
 msgid "Chihuahua"
 msgstr "Chihuahua"
 
@@ -6540,9 +6543,6 @@ msgstr "Coahuila"
 
 msgid "Colima"
 msgstr "Colima"
-
-msgid "Distrito Federal"
-msgstr "Distretto Federale"
 
 msgid "Durango"
 msgstr "Durango"

@@ -1,7 +1,7 @@
-from stdnum.my import nric
-from django.forms.fields import CharField
 from django.forms import ValidationError
+from django.forms.fields import CharField
 from django.utils.translation import gettext_lazy as _
+from stdnum.my import nric
 
 
 class MyKadFormField(CharField):
@@ -22,17 +22,17 @@ class MyKadFormField(CharField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         if nric.is_valid(value):
             return value
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')
 
     def to_python(self, value):
         value = super().to_python(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return nric.compact(value)
 
     def prepare_value(self, value):

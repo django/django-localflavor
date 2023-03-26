@@ -2,10 +2,9 @@
 import datetime
 import re
 
-from django.core.validators import EMPTY_VALUES
+from django.core.exceptions import ImproperlyConfigured
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
-from django.utils.encoding import force_str
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
@@ -35,7 +34,7 @@ class HRLicensePlatePrefixSelect(Select):
         super().__init__(attrs, choices=HR_LICENSE_PLATE_PREFIX_CHOICES)
 
 
-class HRJMBGField(Field):
+class HRJMBGField(CharField):
     """
     Unique Master Citizen Number (JMBG) field.
 
@@ -58,14 +57,12 @@ class HRJMBGField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        value = value.strip()
+        if value in self.empty_values:
+            return value
 
         matches = jmbg_re.search(value)
         if matches is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Make sure the date part is correct.
         dd = int(matches.group('dd'))
@@ -74,7 +71,7 @@ class HRJMBGField(Field):
         try:
             datetime.date(yyy, mm, dd)
         except ValueError:
-            raise ValidationError(self.error_messages['date'])
+            raise ValidationError(self.error_messages['date'], code='date')
 
         # Validate checksum.
         k = matches.group('k')
@@ -83,11 +80,11 @@ class HRJMBGField(Field):
             checksum += i * (int(value[j]) + int(value[13 - i]))
         m = 11 - checksum % 11
         if m == 10:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if m == 11 and k != '0':
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         if not str(m) == k:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s' % (value, )
 
@@ -112,12 +109,12 @@ class HROIBField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         return '%s' % (value, )
 
 
-class HRLicensePlateField(Field):
+class HRLicensePlateField(CharField):
     """
     Vehicle license plate of Croatia field.
 
@@ -141,29 +138,29 @@ class HRLicensePlateField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        value = re.sub(r'[\s\-]+', '', force_str(value.strip())).upper()
+        value = re.sub(r'[\s\-]+', '', value).upper()
 
         matches = plate_re.search(value)
         if matches is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Make sure the prefix is in the list of known codes.
         prefix = matches.group('prefix')
         if prefix not in [choice[0] for choice in HR_LICENSE_PLATE_PREFIX_CHOICES]:
-            raise ValidationError(self.error_messages['area'])
+            raise ValidationError(self.error_messages['area'], code='area')
 
         # Make sure the number portion is not zero.
         number = matches.group('number')
         if int(number) == 0:
-            raise ValidationError(self.error_messages['number'])
+            raise ValidationError(self.error_messages['number'], code='number')
 
         return '%s %s-%s' % (prefix, number, matches.group('suffix'))
 
 
-class HRPostalCodeField(Field):
+class HRPostalCodeField(CharField):
     """
     Postal code of Croatia field.
 
@@ -178,21 +175,20 @@ class HRPostalCodeField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        value = value.strip()
         if not postal_code_re.search(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Make sure the number is in valid range.
         if not 9999 < int(value) < 60000:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s' % value
 
 
-class HRJMBAGField(Field):
+class HRJMBAGField(CharField):
     """
     Unique Master Academic Citizen Number of Croatia (JMBAG) field.
 
@@ -208,21 +204,21 @@ class HRJMBAGField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        value = re.sub(r'[\-\s]', '', value.strip())
+        value = re.sub(r'[\-\s]', '', value)
 
         matches = jmbag_re.search(value)
         if matches is None:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Make sure the issue number is not zero.
         if matches.group('copy') == '0':
-            raise ValidationError(self.error_messages['copy'])
+            raise ValidationError(self.error_messages['copy'], code='copy')
 
         # Validate checksum using Luhn algorithm.
         if not luhn.is_valid(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
 
         return '%s' % value

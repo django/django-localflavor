@@ -35,7 +35,7 @@ class MDLicensePlateValidator(RegexValidator):
     def __call__(self, value):
         value = value.upper()
         if not self._is_valid(value):
-            raise ValidationError(self.error_message)
+            raise ValidationError(self.error_message, code='invalid')
 
     def _is_valid(self, value):
         return any([
@@ -60,6 +60,7 @@ class MDLicensePlateValidator(RegexValidator):
         if not any(x in value for x, y in LICENSE_PLATE_POLICE):
             pattern = r'^[A-Z]{3} \d{1,3}$'
             return re.match(pattern, value) is not None
+        return False
 
     @staticmethod
     def _is_gov_format(value):

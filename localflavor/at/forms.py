@@ -1,9 +1,7 @@
 """AT-specific Form helpers."""
 import re
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
+from django.forms import CharField, RegexField, Select, ValidationError
 from django.utils.translation import gettext_lazy as _
 
 from .at_states import STATE_CHOICES
@@ -33,7 +31,7 @@ class ATStateSelect(Select):
         super().__init__(attrs, choices=STATE_CHOICES)
 
 
-class ATSocialSecurityNumberField(Field):
+class ATSocialSecurityNumberField(CharField):
     """
     Austrian Social Security numbers are composed of a 4 digits and 6 digits field.
 
@@ -53,18 +51,18 @@ class ATSocialSecurityNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ""
+        if value in self.empty_values:
+            return value
         if not re_ssn.search(value):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         sqnr, date = value.split(" ")
         sqnr, check = (sqnr[:3], (sqnr[3]))
         if int(sqnr) < 100:
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         res = (int(sqnr[0]) * 3 + int(sqnr[1]) * 7 + int(sqnr[2]) * 9 +
                int(date[0]) * 5 + int(date[1]) * 8 + int(date[2]) * 4 +
                int(date[3]) * 2 + int(date[4]) * 1 + int(date[5]) * 6)
         res = res % 11
         if res != int(check):
-            raise ValidationError(self.error_messages['invalid'])
+            raise ValidationError(self.error_messages['invalid'], code='invalid')
         return '%s%s %s' % (sqnr, check, date)

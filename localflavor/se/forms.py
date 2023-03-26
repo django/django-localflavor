@@ -51,17 +51,17 @@ class SEOrganisationNumberField(forms.CharField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = SWEDISH_ID_NUMBER.match(value)
         if not match:
-            raise forms.ValidationError(self.error_messages['invalid'])
+            raise forms.ValidationError(self.error_messages['invalid'], code='invalid')
 
         gd = match.groupdict()
 
         # Compare the calculated value with the checksum
         if id_number_checksum(gd) != int(gd['checksum']):
-            raise forms.ValidationError(self.error_messages['invalid'])
+            raise forms.ValidationError(self.error_messages['invalid'], code='invalid')
 
         # First: check if this is a real organisation_number
         if valid_organisation(gd):
@@ -72,7 +72,7 @@ class SEOrganisationNumberField(forms.CharField):
             birth_day = validate_id_birthday(gd, False)
             return format_personal_id_number(birth_day, gd)
         except ValueError:
-            raise forms.ValidationError(self.error_messages['invalid'])
+            raise forms.ValidationError(self.error_messages['invalid'], code='invalid')
 
 
 class SEPersonalIdentityNumberField(forms.CharField):
@@ -116,11 +116,11 @@ class SEPersonalIdentityNumberField(forms.CharField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         match = SWEDISH_ID_NUMBER.match(value)
         if match is None:
-            raise forms.ValidationError(self.error_messages['invalid'])
+            raise forms.ValidationError(self.error_messages['invalid'], code='invalid')
 
         gd = match.groupdict()
         is_coordination_number = int(gd['day']) > 60
@@ -128,27 +128,27 @@ class SEPersonalIdentityNumberField(forms.CharField):
 
         # compare the calculated value with the checksum
         if id_number_checksum(gd) != int(gd['checksum']):
-            raise forms.ValidationError(self.error_messages['invalid'])
+            raise forms.ValidationError(self.error_messages['invalid'], code='invalid')
 
         # check for valid birthday
         try:
             birth_day = validate_id_birthday(gd)
         except ValueError:
-            raise forms.ValidationError(self.error_messages['invalid'])
+            raise forms.ValidationError(self.error_messages['invalid'], code='invalid')
 
         # make sure that co-ordination numbers do not pass if not allowed
         if not self.coordination_number and is_coordination_number:
-            raise forms.ValidationError(self.error_messages['coordination_number'])
+            raise forms.ValidationError(self.error_messages['coordination_number'], code='coordination_number')
 
         # make sure that interim numbers do not pass if not allowed. This is
         # reported as the number being plain invalid, as most people don't know
         # what an interim number is.
         if not self.interim_number and is_interim_number:
-            raise forms.ValidationError(self.error_messages['invalid'])
+            raise forms.ValidationError(self.error_messages['invalid'], code='invalid')
 
         # Combining the concepts of coordination and interim numbers is invalid.
         if is_coordination_number and is_interim_number:
-            raise forms.ValidationError(self.error_messages['invalid'])
+            raise forms.ValidationError(self.error_messages['invalid'], code='invalid')
 
         return format_personal_id_number(birth_day, gd)
 
@@ -173,5 +173,5 @@ class SEPostalCodeField(forms.RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.replace(' ', '')

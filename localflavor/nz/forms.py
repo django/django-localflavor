@@ -1,10 +1,8 @@
 """New Zealand specific form helpers."""
 import re
 
-from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
-from django.utils.encoding import force_str
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .nz_councils import NORTH_ISLAND_COUNCIL_CHOICES, SOUTH_ISLAND_COUNCIL_CHOICES
@@ -53,7 +51,7 @@ class NZPostCodeField(RegexField):
         super().__init__(r'^\d{4}$', **kwargs)
 
 
-class NZBankAccountNumberField(Field):
+class NZBankAccountNumberField(CharField):
     """
     A form field that validates its input as New Zealand bank account number.
 
@@ -82,13 +80,14 @@ class NZBankAccountNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        value = re.sub(r'(\s+|-)', '', force_str(value))
+        if value in self.empty_values:
+            return value
+
+        value = re.sub(r'(\s+|-)', '', value)
         match = BANK_ACCOUNT_NUMBER_RE.search(value)
         if match:
             # normalize the last part
             last = '0%s' % match.group(4) if len(match.group(4)) == 2 else match.group(4)
             return '%s-%s-%s-%s' % (match.group(1),
                                     match.group(2), match.group(3), last)
-        raise ValidationError(self.error_messages['invalid'])
+        raise ValidationError(self.error_messages['invalid'], code='invalid')

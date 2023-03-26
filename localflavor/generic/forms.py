@@ -88,7 +88,7 @@ class IBANFormField(forms.CharField):
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.upper().replace(' ', '').replace('-', '')
 
     def prepare_value(self, value):
@@ -122,7 +122,7 @@ class BICFormField(forms.CharField):
         # https://www2.swift.com/uhbonline/books/public/en_uk/bic_policy/bic_policy.pdf
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.upper().replace(" ", "")
 
     def prepare_value(self, value):
