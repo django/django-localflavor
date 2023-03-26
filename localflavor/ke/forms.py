@@ -11,6 +11,7 @@ from .ke_counties import COUNTY_CHOICES
 ke_id_re = re.compile(r"^\d{7}(?:\d{1})?$")
 ke_po_box_re = re.compile(r"\A\d{5,5}\Z")
 
+
 class KEPostalCodeField(CharField):
     """
     A form field that validates its input as a Kenyan Postal Code.
@@ -21,7 +22,18 @@ class KEPostalCodeField(CharField):
         "invalid": _("Enter a valid Kenyan Postal code in the format 12345")
     }
 
-    def clean(self, value):
+    def clean(self, value: str):
+        """Validates KE Postal Code
+
+        Args:
+            value (_type_): _description_
+
+        Raises:
+            ValidationError: _description_
+
+        Returns:
+            _type_: _description_
+        """
         value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
@@ -34,22 +46,55 @@ class KEPostalCodeField(CharField):
         return value
 
 
-
-
-class KEKraPinNumberField(CharField):
+class KEKRAPINField(CharField):
     """
     TODO
 
-    A form field that validates input as a Kenya Revenue Authority PIN Number
+    A form field that validates input as a Kenya Revenue Authority PIN
+    (Personal Identification Number) Number.
+
+    A Kenyan KRA (Kenya Revenue Authority) PIN (Personal Identification Number)
+
+    is typically 11 characters long, consisting of the letter 'A' or 'P' followed
+
+    by 9 digits and ending with a letter (e.g., A123456789B or P987654321C).
 
     Validates 2 different formats:
 
-        POXXXXXXXX - Company/Institutions
+        POXXXXXXXX - Company/Institution
 
         AXXXXXXXXX - Individuals
     """
 
-    ...
+    default_error_messages = {
+        "invalid": _(
+            "Enter a valid Kenyan KRA PIN Number in the format A123456789B or P987654321C"
+        ),
+    }
+
+    def clean(self, value):
+        """Runs the validation checks
+
+        Args:
+            value (_type_): _description_
+
+        Raises:
+            ValidationError: _description_
+
+        Returns:
+            _type_: _description_
+        """
+        value = super().clean(value)
+        if value in self.empty_values:
+            return self.empty_value
+
+        # Strip out spaces and dashes
+        value = value.replace(" ", "").replace("-", "")
+        kra_pin_regex = r"^(A|P)\d{9}[A-Z]$"
+        match = re.match(kra_pin_regex, value)
+        if not match:
+            raise ValidationError(self.error_messages.get("invalid"))
+        return value.upper()
 
 
 class KEIDNumberField(CharField):
