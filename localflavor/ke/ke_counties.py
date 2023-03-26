@@ -4,6 +4,7 @@ Kenya Counties Data
 
 from django.utils.translation import gettext_lazy as _
 
+# The 47 counties of Kenya
 COUNTY_CHOICES = (
     ("MOMBASA", _("MOMBASA")),
     ("KWALE", _("KWALE")),
