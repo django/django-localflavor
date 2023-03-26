@@ -8,8 +8,10 @@ from django.utils.translation import gettext_lazy as _
 
 from .ke_counties import COUNTY_CHOICES
 
-ke_id_re = re.compile(r"^\d{7}(?:\d{1})?$")
 ke_po_box_re = re.compile(r"\A\d{5,5}\Z")
+ke_kra_pin_regex = re.compile(r"^(A|P)\d{9}[A-Z]$")
+ke_passport_regex = re.compile(r"^[A-Z]\d{6,7}$")
+ke_national_id_regex = re.compile(r"^\d{7,8}$")
 
 
 class KEPostalCodeField(CharField):
@@ -90,49 +92,62 @@ class KEKRAPINField(CharField):
 
         # Strip out spaces and dashes
         value = value.replace(" ", "").replace("-", "")
-        kra_pin_regex = r"^(A|P)\d{9}[A-Z]$"
-        match = re.match(kra_pin_regex, value)
+        match = re.match(ke_kra_pin_regex, value)
         if not match:
             raise ValidationError(self.error_messages.get("invalid"))
         return value.upper()
 
 
-class KEIDNumberField(CharField):
+class KENationalIDNumberField(CharField):
     """
-    TODO
-
-    Kenya National ID Number
-
-    8 Digits
+    A form field that validates its input as a Kenyan National ID Number.
 
     """
 
     default_error_messages = {
-        "invalid": _("Enter a valid Kenyan ID Number"),
+        "invalid": _(
+            "Enter a valid Kenyan National ID Number in the format 1234567 or 12345678"
+        )
     }
 
     def clean(self, value):
+        """Runs the validation checks for KE National ID Number"""
         value = super().clean(value)
         if value in self.empty_values:
             return self.empty_value
 
         # Strip out spaces and dashes
         value = value.replace(" ", "").replace("-", "")
-        match = re.match(ke_id_re, value)
-
+        match = re.match(ke_national_id_regex, value)
         if not match:
             raise ValidationError(self.error_messages.get("invalid"))
         return value
 
 
-class KEPassportNumberField(RegexField):
+class KEPassportNumberField(CharField):
     """
-    TODO
+    A form field that validates its input as a Kenyan Passport Number.
 
-    Kenya Passport Number
     """
 
-    ...
+    default_error_messages = {
+        "invalid": _(
+            "Enter a valid Kenyan Passport Number in the format A123456 or B1234567"
+        )
+    }
+
+    def clean(self, value):
+        """Runs the validation checks for KE Passport Number"""
+        value = super().clean(value)
+        if value in self.empty_values:
+            return self.empty_value
+
+        # Strip out spaces and dashes
+        value = value.replace(" ", "").replace("-", "")
+        match = re.match(ke_passport_regex, value)
+        if not match:
+            raise ValidationError(self.error_messages.get("invalid"))
+        return value.upper()
 
 
 class KENSSFNumberField(RegexField):

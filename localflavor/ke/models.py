@@ -3,10 +3,8 @@ from django.db.models import CharField
 from django.utils.translation import gettext_lazy as _
 
 from .forms import (
-    KECompanyRegNumber as KECompanyRegNumberFormField,
-    KECountySelect,
-    KEIDNumberField,
-    KEKraPinNumberField,
+    KENationalIDNumberField,
+    KEKRAPINField,
     KENHIFNumberField,
     KENSSFNumberField,
     KEPassportNumberField,
