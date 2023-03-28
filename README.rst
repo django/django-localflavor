@@ -5,8 +5,8 @@ django-localflavor
 .. image:: https://img.shields.io/pypi/v/django-localflavor.svg
    :target: https://pypi.python.org/pypi/django-localflavor
 
-.. image:: https://img.shields.io/travis/django/django-localflavor.svg
-    :target: http://travis-ci.org/django/django-localflavor
+.. image:: https://github.com/django/django-localflavor/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/django/django-localflavor/actions/workflows/test.yml
 
 .. image:: https://img.shields.io/codecov/c/github/django/django-localflavor/master.svg
    :target: http://codecov.io/github/django/django-localflavor?branch=master
