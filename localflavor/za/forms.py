@@ -14,7 +14,7 @@ class ZAIDField(CharField):
     """
     A form field for South African ID numbers.
 
-    The checksum is validated using the Luhn checksum, and uses a simlistic (read: not entirely accurate)
+    The checksum is validated using the Luhn checksum, and uses a simplistic (read: not entirely accurate)
     check for the birth date.
     """
 
@@ -26,7 +26,7 @@ class ZAIDField(CharField):
         value = super().clean(value)
 
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         # strip spaces and dashes
         value = value.replace(' ', '').replace('-', '')

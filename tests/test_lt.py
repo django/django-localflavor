@@ -52,7 +52,7 @@ class LTLocalFlavorTests(SimpleTestCase):
             <option value="alytus">Alytus</option>
             <option value="kaunas">Kaunas</option>
             <option value="klaipeda">Klaipėda</option>
-            <option value="mariampole">Mariampolė</option>
+            <option value="marijampole">Marijampolė</option>
             <option value="panevezys">Panevėžys</option>
             <option value="siauliai">Šiauliai</option>
             <option value="taurage">Tauragė</option>

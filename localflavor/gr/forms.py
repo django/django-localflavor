@@ -2,8 +2,7 @@
 import datetime
 import re
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import Field, RegexField, ValidationError
+from django.forms import CharField, RegexField, ValidationError
 from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
@@ -24,7 +23,7 @@ class GRPostalCodeField(RegexField):
         super().__init__(r'^[12345678]\d{4}$', **kwargs)
 
 
-class GRTaxNumberCodeField(Field):
+class GRTaxNumberCodeField(CharField):
     """
     Greek tax number field.
 
@@ -42,10 +41,10 @@ class GRTaxNumberCodeField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        val = re.sub(r'[\-\s\(\)]', '', force_str(value))
+        val = re.sub(r'[\-\s\(\)]', '', value)
         if len(val) < 9:
             raise ValidationError(self.error_messages['invalid'], code='invalid')
         if not all(char.isdigit() for char in val):
@@ -89,7 +88,7 @@ class GRSocialSecurityNumberCodeField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         val = re.sub(r'[\-\s]', '', force_str(value))
         if not val or len(val) < 11:
             raise ValidationError(self.error_messages['invalid'], code='invalid')

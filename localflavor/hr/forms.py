@@ -2,10 +2,9 @@
 import datetime
 import re
 
-from django.core.validators import EMPTY_VALUES
+from django.core.exceptions import ImproperlyConfigured
 from django.forms import ValidationError
-from django.forms.fields import Field, RegexField, Select
-from django.utils.encoding import force_str
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 from stdnum import luhn
 
@@ -35,7 +34,7 @@ class HRLicensePlatePrefixSelect(Select):
         super().__init__(attrs, choices=HR_LICENSE_PLATE_PREFIX_CHOICES)
 
 
-class HRJMBGField(Field):
+class HRJMBGField(CharField):
     """
     Unique Master Citizen Number (JMBG) field.
 
@@ -58,10 +57,8 @@ class HRJMBGField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-
-        value = value.strip()
+        if value in self.empty_values:
+            return value
 
         matches = jmbg_re.search(value)
         if matches is None:
@@ -112,12 +109,12 @@ class HROIBField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         return '%s' % (value, )
 
 
-class HRLicensePlateField(Field):
+class HRLicensePlateField(CharField):
     """
     Vehicle license plate of Croatia field.
 
@@ -141,10 +138,10 @@ class HRLicensePlateField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        value = re.sub(r'[\s\-]+', '', force_str(value.strip())).upper()
+        value = re.sub(r'[\s\-]+', '', value).upper()
 
         matches = plate_re.search(value)
         if matches is None:
@@ -163,7 +160,7 @@ class HRLicensePlateField(Field):
         return '%s %s-%s' % (prefix, number, matches.group('suffix'))
 
 
-class HRPostalCodeField(Field):
+class HRPostalCodeField(CharField):
     """
     Postal code of Croatia field.
 
@@ -178,10 +175,9 @@ class HRPostalCodeField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        value = value.strip()
         if not postal_code_re.search(value):
             raise ValidationError(self.error_messages['invalid'], code='invalid')
 
@@ -192,7 +188,7 @@ class HRPostalCodeField(Field):
         return '%s' % value
 
 
-class HRJMBAGField(Field):
+class HRJMBAGField(CharField):
     """
     Unique Master Academic Citizen Number of Croatia (JMBAG) field.
 
@@ -208,10 +204,10 @@ class HRJMBAGField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        value = re.sub(r'[\-\s]', '', value.strip())
+        value = re.sub(r'[\-\s]', '', value)
 
         matches = jmbag_re.search(value)
         if matches is None:

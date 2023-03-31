@@ -4,7 +4,7 @@ import re
 
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
-from django.forms.fields import CharField, Field, Select
+from django.forms.fields import CharField, Select
 from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 
@@ -18,16 +18,12 @@ process_digits_re = re.compile(
 
 class BRZipCodeField(CharField):
     """
-    A form field that validates input as a Brazilian zip code, with the format XXXXX-XXX.
+    A form field that validates input as a Brazilian zip code, with the format 00000-000.
 
     .. versionchanged:: 2.2
         Use BRPostalCodeValidator to centralize validation logic and share with equivalent model field.
         More details at: https://github.com/django/django-localflavor/issues/334
     """
-
-    default_error_messages = {
-        'invalid': _('Enter a zip code in the format XXXXX-XXX.'),
-    }
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -41,7 +37,7 @@ class BRStateSelect(Select):
         super().__init__(attrs, choices=STATE_CHOICES)
 
 
-class BRStateChoiceField(Field):
+class BRStateChoiceField(CharField):
     """A choice field that uses a list of Brazilian states as its choices."""
 
     widget = Select
@@ -55,10 +51,7 @@ class BRStateChoiceField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            value = ''
-        value = force_str(value)
-        if value == '':
+        if value in self.empty_values:
             return value
         valid_values = {force_str(entry[0]) for entry in self.widget.choices}
         if value not in valid_values:
@@ -88,13 +81,6 @@ class BRCPFField(CharField):
     def __init__(self, max_length=14, min_length=11, **kwargs):
         super().__init__(max_length=max_length, min_length=min_length, **kwargs)
         self.validators.append(BRCPFValidator())
-
-    def clean(self, value):
-        """Value can be either a string in the format XXX.XXX.XXX-XX or an 11-digit number."""
-        value = super().clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        return value
 
 
 class BRCNPJField(CharField):
@@ -128,13 +114,6 @@ class BRCNPJField(CharField):
         super().__init__(max_length=max_length, min_length=min_length, **kwargs)
         self.validators.append(BRCNPJValidator())
 
-    def clean(self, value):
-        """Value can be either a string in the format XX.XXX.XXX/XXXX-XX or a group of 14 characters."""
-        value = super().clean(value)
-        if value in self.empty_values:
-            return self.empty_value
-        return value
-
 
 def mod_97_base10(value):
     return 98 - ((value * 100 % 97) % 97)
@@ -160,7 +139,7 @@ class BRProcessoField(CharField):
         """Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or an 20-digit number."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         orig_value = value[:]
         if not value.isdigit():

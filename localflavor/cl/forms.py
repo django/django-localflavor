@@ -46,7 +46,7 @@ class CLRutField(RegexField):
         """Check and clean the Chilean RUT."""
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         rut, verificador = self._canonify(value)
         if self._algorithm(rut) == verificador:
             return self._format(rut, verificador)

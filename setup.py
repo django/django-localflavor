@@ -78,9 +78,7 @@ def find_package_data(where='.', package='',
                     if (fnmatchcase(name, pattern) or fn.lower() == pattern.lower()):
                         bad_name = True
                         if show_ignored:
-                            print >> sys.stderr, (
-                                "Directory %s ignored by pattern %s"
-                                % (fn, pattern))
+                            print("Directory %s ignored by pattern %s" % (fn, pattern), file=sys.stderr)
                         break
                 if bad_name:
                     continue
@@ -99,9 +97,7 @@ def find_package_data(where='.', package='',
                     if (fnmatchcase(name, pattern) or fn.lower() == pattern.lower()):
                         bad_name = True
                         if show_ignored:
-                            print >> sys.stderr, (
-                                "File %s ignored by pattern %s"
-                                % (fn, pattern))
+                            print("File %s ignored by pattern %s" % (fn, pattern), file=sys.stderr)
                         break
                 if bad_name:
                     continue
@@ -112,6 +108,9 @@ setup(
     name="django-localflavor",
     version=find_version("localflavor", "__init__.py"),
     url='https://django-localflavor.readthedocs.io/en/latest/',
+    project_urls={
+        'Source': 'https://github.com/django/django-localflavor',
+    },
     license='BSD',
     description="Country-specific Django helpers",
     long_description=read('README.rst'),
@@ -120,27 +119,28 @@ setup(
     packages=find_packages(exclude=['tests', 'tests.*']),
     package_data=find_package_data(),
     install_requires=[
-        'django>=2.2',
+        'django>=3.2',
         'python-stdnum>=1.6',
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 2.2',
-        'Framework :: Django :: 3.0',
-        'Framework :: Django :: 3.1',
         'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4.0',
+        'Framework :: Django :: 4.1',
+        'Framework :: Django :: 4.2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Topic :: Internet :: WWW/HTTP',
     ],
     zip_safe=False,

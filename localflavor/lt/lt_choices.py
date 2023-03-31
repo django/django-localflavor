@@ -5,7 +5,7 @@ COUNTY_CHOICES = (
     ('alytus', _('Alytus')),
     ('kaunas', _('Kaunas')),
     ('klaipeda', _('Klaipėda')),
-    ('mariampole', _('Mariampolė')),
+    ('marijampole', _('Marijampolė')),
     ('panevezys', _('Panevėžys')),
     ('siauliai', _('Šiauliai')),
     ('taurage', _('Tauragė')),

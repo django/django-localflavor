@@ -52,7 +52,7 @@ INVALID_EIKS = (
     '1111111111111',
     '123456789',
     '1234567890123',
-    '176040024',  # Invalid cheksum
+    '176040024',  # Invalid checksum
     '1760400230152',  # Valid first checksum invalid second checksum
     'aaaaaaaaaa',
 )

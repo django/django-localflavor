@@ -6,6 +6,7 @@ Authors
 * Adnane Belmadiaf
 * Adonys Alea Boffill
 * Adrian Holovaty
+* Adrián Matejov
 * Agustín Scaramuzza
 * Ahmad Zolfaghari
 * Ahmed Shahwan
@@ -17,9 +18,11 @@ Authors
 * Alix Martineau
 * Alonisser
 * Andreas Pelme
+* André Niero Setti
 * André Ramos
 * Andres Torres Marroquin
 * Andrew Godwin
+* Anton Zhyltsou
 * Arthur de Jong
 * Aymeric Augustin
 * babastienne
@@ -33,11 +36,13 @@ Authors
 * Daniel Ampuero
 * Daniela Ponader
 * Danielle Madeley
+* David Smith
 * Daniel Roschka
 * Didier 'OdyX' Raboud
 * Diederik van der Boor
 * d.merc
 * Dmitry Dygalo
+* Dominick Rivard
 * Douglas Miranda
 * Elliott Fawcett
 * Erik Romijn
@@ -74,6 +79,7 @@ Authors
 * Julien Phalip
 * Justin Bronn
 * Karen Tracey
+* Kevin Ramirez Zavalza
 * László Ratskó
 * Lefteris Nikoltsios
 * Luis Alberto Santana
@@ -88,6 +94,7 @@ Authors
 * Michał Sałaban
 * Mike Lissner
 * Morgane Alonso
+* Naglis Jonaitis
 * Nishit Shah
 * Olivier Sels
 * Olle Vidner
@@ -100,6 +107,7 @@ Authors
 * Raphael Michel
 * Rolf Erik Lekang
 * Russell Keith-Magee
+* Sandeep N
 * Serafeim Papastefanos
 * Sergio Oliveira
 * Simonas Kazlauskas
@@ -115,4 +123,6 @@ Authors
 * Tyler Ball
 * Vaclav Rehak
 * Venelin Stoykov
+* Vishal Pandey
 * Vladimir Nani
+* Abhineet Tamrakar

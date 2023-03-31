@@ -108,7 +108,7 @@ class FRNationalIdentificationNumber(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = value.replace(' ', '').replace('-', '')
 
@@ -190,7 +190,7 @@ class FRSIRENENumberMixin:
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = value.replace(' ', '').replace('-', '')
         if not self.r_valid.match(value) or not luhn.is_valid(value):
@@ -240,7 +240,7 @@ class FRSIRETField(FRSIRENENumberMixin, CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = value.replace(' ', '').replace('-', '')
 

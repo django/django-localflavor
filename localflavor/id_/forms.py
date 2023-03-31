@@ -3,10 +3,9 @@
 import re
 import time
 
-from django.core.validators import EMPTY_VALUES
+from django.core.exceptions import ImproperlyConfigured
 from django.forms import ValidationError
-from django.forms.fields import Field, Select
-from django.utils.encoding import force_str
+from django.forms.fields import CharField, Select
 from django.utils.translation import gettext_lazy as _
 
 postcode_re = re.compile(r'^[1-9]\d{4}$')
@@ -17,7 +16,7 @@ nik_re = re.compile(r'^\d{16}$')
 WOMAN_IDENTIFIER = 40
 
 
-class IDPostCodeField(Field):
+class IDPostCodeField(CharField):
     """
     An Indonesian post code field.
 
@@ -30,10 +29,9 @@ class IDPostCodeField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        value = value.strip()
         if not postcode_re.search(value):
             raise ValidationError(self.error_messages['invalid'], code='invalid')
 
@@ -69,7 +67,7 @@ class IDLicensePlatePrefixSelect(Select):
         super().__init__(attrs, choices=LICENSE_PLATE_PREFIX_CHOICES)
 
 
-class IDLicensePlateField(Field):
+class IDLicensePlateField(CharField):
     """
     An Indonesian vehicle license plate field.
 
@@ -85,9 +83,10 @@ class IDLicensePlateField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
-        plate_number = re.sub(r'\s+', ' ', force_str(value.strip())).upper()
+        if value in self.empty_values:
+            return value
+
+        plate_number = re.sub(r'\s+', ' ', value).upper()
 
         number, prefix, suffix = self._validate_regex_match(plate_number)
         self._validate_prefix(prefix)
@@ -137,6 +136,7 @@ class IDLicensePlateField(Field):
     def _validate_prefix(self, prefix):
         # Load data in memory only when it is required, see also #17275
         from .id_choices import LICENSE_PLATE_PREFIX_CHOICES
+
         # Make sure prefix is in the list of known codes.
         if prefix not in [choice[0] for choice in LICENSE_PLATE_PREFIX_CHOICES]:
             raise ValidationError(self.error_messages['invalid'], code='invalid')
@@ -152,7 +152,7 @@ class IDLicensePlateField(Field):
             raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 
-class IDNationalIdentityNumberField(Field):
+class IDNationalIdentityNumberField(CharField):
     """
     An Indonesian national identity number (NIK/KTP#) field.
 
@@ -168,11 +168,11 @@ class IDNationalIdentityNumberField(Field):
 
     def clean(self, value):
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
 
-        value = re.sub(r'[\s.]', '', force_str(value))
-
+        # This replacement effectively means the value is always stripped.
+        value = re.sub(r'[\s.]', '', value)
         if not nik_re.search(value):
             raise ValidationError(self.error_messages['invalid'], code='invalid')
 

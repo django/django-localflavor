@@ -40,7 +40,7 @@ class CONITField(RegexField):
         """
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         value, cd = self._canon(value)
         if self._calc_cd(value) != cd:
             raise ValidationError(self.error_messages['checksum'], code='checksum')

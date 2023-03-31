@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 
-from localflavor.ie.forms import IECountySelect, EircodeField
+from localflavor.ie.forms import EircodeField, IECountySelect
 
 
 class IELocalFlavorTests(SimpleTestCase):

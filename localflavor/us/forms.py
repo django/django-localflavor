@@ -2,9 +2,8 @@
 
 import re
 
-from django.core.validators import EMPTY_VALUES
-from django.forms import ValidationError
-from django.forms.fields import CharField, Field, RegexField, Select
+from django.core.exceptions import ImproperlyConfigured, ValidationError
+from django.forms.fields import CharField, RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 ssn_re = re.compile(r"^(?P<area>\d{3})[-\ ]?(?P<group>\d{2})[-\ ]?(?P<serial>\d{4})$")
@@ -36,7 +35,7 @@ class USZipCodeField(RegexField):
     def to_python(self, value):
         value = super().to_python(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         return value.strip()
 
 
@@ -65,7 +64,7 @@ class USSocialSecurityNumberField(CharField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         match = re.match(ssn_re, value)
         if not match:
             raise ValidationError(self.error_messages['invalid'], code='invalid')
@@ -85,7 +84,7 @@ class USSocialSecurityNumberField(CharField):
         return '%s-%s-%s' % (area, group, serial)
 
 
-class USStateField(Field):
+class USStateField(CharField):
     """
     A form field that validates its input is a U.S. state, territory, or COFA territory.
     The input is validated against a dictionary which includes names and abbreviations.
@@ -101,17 +100,12 @@ class USStateField(Field):
     def clean(self, value):
         from .us_states import STATES_NORMALIZED
         value = super().clean(value)
-        if value in EMPTY_VALUES:
-            return ''
+        if value in self.empty_values:
+            return value
         try:
-            value = value.strip().lower()
-        except AttributeError:
+            return STATES_NORMALIZED[value.lower()]
+        except KeyError:
             pass
-        else:
-            try:
-                return STATES_NORMALIZED[value.strip().lower()]
-            except KeyError:
-                pass
         raise ValidationError(self.error_messages['invalid'], code='invalid')
 
 

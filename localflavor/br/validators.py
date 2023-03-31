@@ -24,7 +24,6 @@ class BRPostalCodeValidator(RegexValidator):
 
     def __init__(self, *args, **kwargs):
         self.message = _('Enter a postal code in the format 00000-000.')
-        self.code = _('Invalid Postal Code')
         super().__init__(postal_code_re, *args, **kwargs)
 
 

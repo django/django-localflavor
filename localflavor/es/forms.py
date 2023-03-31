@@ -63,7 +63,7 @@ class ESIdentityCardNumberField(RegexField):
         self.only_nif = only_nif
         self.nif_control = 'TRWAGMYFPDXBNJZSQVHLCKE'
         self.cif_control = 'JABCDEFGHI'
-        self.cif_types = 'ABCDEFGHJKLMNPQRSVW'
+        self.cif_types = 'ABCDEFGHJKLMNPQRSUVW'
         self.nie_types = 'XYZ'
         self.id_card_pattern = r'^([%s]?)[ -]?(\d+)[ -]?([%s]?)$'
         id_card_re = re.compile(self.id_card_pattern %
@@ -82,7 +82,7 @@ class ESIdentityCardNumberField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
 
         value = value.upper().replace(' ', '').replace('-', '')
         m = re.match(self.id_card_pattern %
@@ -151,7 +151,7 @@ class ESCCCField(RegexField):
     def clean(self, value):
         value = super().clean(value)
         if value in self.empty_values:
-            return self.empty_value
+            return value
         m = re.match(r'^(\d{4})[ -]?(\d{4})[ -]?(\d{2})[ -]?(\d{10})$', value)
         entity, office, checksum, account = m.groups()
         if get_checksum('00' + entity + office) + get_checksum(account) == checksum:
