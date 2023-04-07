@@ -262,11 +262,13 @@ class FRRNAField(CharField):
     It's under the authority of the French Minister of the Interior.
     See https://fr.wikipedia.org/wiki/R%C3%A9pertoire_national_des_associations for more information.
 
-    .. versionadded:: 3.2
+    .. versionadded:: 4.0
     """
     default_error_messages = {
         'invalid': _('Enter a valid French RNA number.'),
     }
+
+    regex = re.compile(r'^W\d{9}$')
 
     def clean(self, value):
         value = super().clean(value)
@@ -276,6 +278,6 @@ class FRRNAField(CharField):
 
         value = value.replace(' ', '').replace('-', '').replace('.', '')
 
-        if not re.compile(r'^W\d{9}$').match(value):
+        if not self.regex.match(value):
             raise ValidationError(self.error_messages['invalid'], code=['invalid'])
         return value

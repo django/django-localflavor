@@ -324,6 +324,7 @@ class FRLocalFlavorTests(SimpleTestCase):
         invalid = {
             '442010167': error_format,          # W Letter missing
             'W4420101671': error_format,        # Too many numbers
+            'W44201016': error_format,          # Too few numbers
             '5142010167': error_format,         # W Letter missing and too many numbers
         }
         self.assertFieldOutput(FRRNAField, valid, invalid)
