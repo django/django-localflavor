@@ -51,14 +51,14 @@ class CAPostalCodeField(CharField):
 
 class CASocialInsuranceNumberField(CharField):
     """
-    A model field that stores  the security number in the format ``XXX-XXX-XXX``.
+    A model field that stores a Canadian Social Insurance Number (SIN) in the format ``XXX-XXX-XXX``.
 
     Forms represent it as ``forms.CASocialInsuranceNumberField`` field.
 
     .. versionadded:: 4.0
     """
 
-    description = _("Social security number")
+    description = _("Canadian Social Insurance Number")
 
     def __init__(self, *args, **kwargs):
         kwargs['max_length'] = 11
