@@ -16,6 +16,8 @@ New flavors:
 
 New fields for existing flavors:
 
+- Added `fr.forms.FRRNAField` models field
+  (`gh-443 <https://github.com/django/django-localflavor/pull/443>`_).
 - Added permanent account number(PAN) field in Indian flavor.
   (`gh-457 <https://github.com/django/django-localflavor/pull/457>`_).
 - Added the Canadian Models fields.

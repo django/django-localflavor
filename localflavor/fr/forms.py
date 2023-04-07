@@ -253,3 +253,31 @@ class FRSIRETField(FRSIRENENumberMixin, CharField):
             return value
         value = value.replace(' ', '').replace('-', '')
         return ' '.join((value[:3], value[3:6], value[6:9], value[9:]))
+
+
+class FRRNAField(CharField):
+    """
+    RNA Stands for "Répertoire National des Associations"
+
+    It's under the authority of the French Minister of the Interior.
+    See https://fr.wikipedia.org/wiki/R%C3%A9pertoire_national_des_associations for more information.
+
+    .. versionadded:: 4.0
+    """
+    default_error_messages = {
+        'invalid': _('Enter a valid French RNA number.'),
+    }
+
+    regex = re.compile(r'^W\d{9}$')
+
+    def clean(self, value):
+        value = super().clean(value)
+
+        if value in self.empty_values:
+            return self.empty_value
+
+        value = value.replace(' ', '').replace('-', '').replace('.', '')
+
+        if not self.regex.match(value):
+            raise ValidationError(self.error_messages['invalid'], code=['invalid'])
+        return value
