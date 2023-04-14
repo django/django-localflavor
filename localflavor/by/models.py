@@ -58,7 +58,7 @@ class BYPassNumberField(BaseModelFieldUpdated, CharField):
     .. versionadded:: 4.0
     """
 
-    description = _('Belarusian passport number (2 letters followed by 7 digits')
+    description = _('Belarusian passport number (2 letters followed by 7 digits).')
     initial_options = {
         'max_length': 9,
         'validators': (PASS_NUMBER_VALIDATOR, )
