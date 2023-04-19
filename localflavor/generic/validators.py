@@ -4,7 +4,7 @@ import string
 from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.utils.deconstruct import deconstructible
 from django.utils.translation import gettext_lazy as _
-from stdnum import ean
+from stdnum import ean, iban
 
 from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 
@@ -15,8 +15,8 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 #
 # https://www.swift.com/standards/data-standards/iban
 #
-# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 89 of the IBAN Registry document which was published
-# in March 2021.
+# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 94 of the IBAN Registry document which was published
+# in April 2023.
 #
 # Other Resources:
 #
@@ -34,6 +34,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'BE': 16,  # Belgium
                             'BG': 22,  # Bulgaria
                             'BH': 22,  # Bahrain
+                            'BI': 27,  # Burundi
                             'BR': 29,  # Brazil
                             'BY': 28,  # Republic of Belarus
                             'CH': 21,  # Switzerland
@@ -41,6 +42,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'CY': 28,  # Cyprus
                             'CZ': 24,  # Czech Republic
                             'DE': 22,  # Germany
+                            'DJ': 27,  # Djibouti
                             'DK': 18,  # Denmark
                             'DO': 28,  # Dominican Republic
                             'EE': 20,  # Estonia
@@ -80,9 +82,11 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'MD': 24,  # Moldova
                             'ME': 22,  # Montenegro
                             'MK': 19,  # Macedonia
+                            'MN': 20,  # Mongolia
                             'MR': 27,  # Mauritania
                             'MT': 31,  # Malta
                             'MU': 30,  # Mauritius
+                            'NI': 28,  # Nicaragua
                             'NL': 18,  # Netherlands
                             'NO': 15,  # Norway
                             'PK': 24,  # Pakistan
@@ -92,8 +96,10 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'QA': 29,  # Qatar
                             'RO': 24,  # Romania
                             'RS': 22,  # Serbia
+                            'RU': 33,  # Russia
                             'SA': 24,  # Saudi Arabia
                             'SC': 31,  # Seychelles
+                            'SD': 18,  # Sudan
                             'SE': 24,  # Sweden
                             'SI': 19,  # Slovenia
                             'SK': 24,  # Slovakia
@@ -104,7 +110,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'TN': 24,  # Tunisia
                             'TR': 26,  # Turkey
                             'UA': 29,  # Ukraine
-                            'VA': 22,  # Vatican
+                            'VA': 22,  # Vatican City State
                             'VG': 24,  # British Virgin Islands
                             'XK': 20}  # Kosovo (user-assigned country code)
 
@@ -117,7 +123,6 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
 NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
                               'BJ': 28,  # Benin
                               'BF': 27,  # Burkina Faso
-                              'BI': 16,  # Burundi
                               'CI': 28,  # Ivory Coast
                               'CG': 27,  # Congo
                               'CM': 27,  # Cameroon
@@ -217,6 +222,12 @@ class IBANValidator:
             )
 
         if self.iban_checksum(value) != value[2:4]:
+            raise ValidationError(_('Not a valid IBAN.'), code='invalid')
+
+        # stdnum.iban checks the BBAN as well so we do a final check. stdnum doesn't include the Nordea extensions which
+        # is why we only run the stdnum check for regular IBANs.
+        # Care needs to be taken to keep supporting the Nordea IBANs when we replace more of this code with stdnum.iban.
+        if country_code not in NORDEA_COUNTRY_CODE_LENGTH and not iban.is_valid(value):
             raise ValidationError(_('Not a valid IBAN.'), code='invalid')
 
 
