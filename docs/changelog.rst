@@ -25,7 +25,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- Fix Belarus passport field description punctuation.
+- Fix Belarus passport field description punctuation
+  (`gh-484 <https://github.com/django/django-localflavor/pull/484>`_).
 - Fix typo in Marijampolė county name in LTCountySelect
   (`gh-480 <https://github.com/django/django-localflavor/pull/480>`_).
 - Add support for new Finnish identity codes
