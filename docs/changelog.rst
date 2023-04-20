@@ -25,6 +25,9 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
+- Properly validate IBANs using BBAN to ensure invalid IBANs cannot be entered,
+  updated IBAN_SEPA_COUNTRIES and IBAN_COUNTRY_CODE_LENGTH to latest data
+  (`gh-486 <https://github.com/django/django-localflavor/pull/486>`_).
 - Fix typo in Marijampolė county name in LTCountySelect
   (`gh-480 <https://github.com/django/django-localflavor/pull/480>`_).
 - Add support for new Finnish identity codes
