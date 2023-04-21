@@ -87,9 +87,11 @@ Other changes:
 - Use 'return value' when value is in the empty_values list
   (`gh-461 <https://github.com/django/django-localflavor/pull/461>`_).
 
-- Support for Python 3.5 and 3.6 was dropped.
+- Dropped support for Dajngo 2.2, 3.0 and 3.1.
 
-- Support for Python 3.10 was added.
+- Dropped support for Python 3.5.
+
+- Added support for Python 3.10 and 3.11.
 
 3.1   (2021-05-28)
 ------------------
