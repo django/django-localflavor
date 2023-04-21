@@ -5,6 +5,7 @@
 # Translators:
 # Carlo Miron <carlo@miron.it>, 2020
 # David Costa <david@zarel.net>, 2015
+# Davide Targa <davide.targa@gmail.com>, 2021
 # Denis Darii <denis.darii@gmail.com>, 2011
 # Guybrush88 <erpizzo@alice.it>, 2014
 # Jannis Leidel <jannis@leidel.info>, 2011
@@ -18,16 +19,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-21 09:38+0200\n"
-"PO-Revision-Date: 2021-05-21 09:17+0000\n"
-"Last-Translator: Transifex Bot <>\n"
-"Language-Team: Italian (http://www.transifex.com/django/django-localflavor/"
+"POT-Creation-Date: 2023-04-07 15:31+0200\n"
+"PO-Revision-Date: 2013-05-29 13:57+0000\n"
+"Last-Translator: Davide Targa <davide.targa@gmail.com>, 2021\n"
+"Language-Team: Italian (http://app.transifex.com/django/django-localflavor/"
 "language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
 
 msgid "Buenos Aires"
 msgstr "Buenos Aires"
@@ -242,9 +244,6 @@ msgstr "L'EGN non è valido."
 msgid "EIK/BULSTAT is not valid"
 msgstr "L'EIK/BULSTAT non è valido"
 
-msgid "Enter a zip code in the format XXXXX-XXX."
-msgstr "Inserisci un codice postale nel formato XXXXX-XXX ."
-
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
@@ -282,8 +281,47 @@ msgstr "Codice Postale"
 msgid "Enter a postal code in the format 00000-000."
 msgstr "Inserire un codice postale valido in formato 00000-000."
 
-msgid "Invalid Postal Code"
-msgstr "Codice Postale Non Valido"
+msgid "Brest Region"
+msgstr ""
+
+msgid "Vitebsk Region"
+msgstr ""
+
+msgid "Gomel Region"
+msgstr ""
+
+msgid "Grodno Region"
+msgstr ""
+
+msgid "Minsk Region"
+msgstr ""
+
+msgid "Mogilev Region"
+msgstr ""
+
+msgid "City of Minsk"
+msgstr ""
+
+msgid "Passport number format is: XX1234567"
+msgstr ""
+
+msgid "ID format is: 1234567X123XX1"
+msgstr ""
+
+msgid "Postal code format is: 123456"
+msgstr ""
+
+msgid "Belarusian Regions (one integer value in the range 1-7)."
+msgstr ""
+
+msgid "Belarusian passport number (2 letters followed by 7 digits"
+msgstr ""
+
+msgid "Belarusian passport ID number (14 letters and digits)."
+msgstr ""
+
+msgid "Belarusian Postal code (6 digits)."
+msgstr ""
 
 msgid "Alberta"
 msgstr "Alberta"
@@ -334,6 +372,15 @@ msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr ""
 "Inserisci un numero di Assicurazione Sociale Canadese valido nel formato XXX-"
 "XXX-XXX."
+
+msgid "Canadian Province (two uppercase letters)"
+msgstr ""
+
+msgid "Canadian Postal Code"
+msgstr ""
+
+msgid "Canadian Social Insurance Number"
+msgstr ""
 
 msgid "Aargau"
 msgstr "Argovia"
@@ -3525,11 +3572,17 @@ msgstr "Inserisci un numero SIREN Francese valido."
 msgid "Enter a valid French SIRET number."
 msgstr "Inserisci un numero SIRET Francese valido."
 
+msgid "Enter a valid French RNA number."
+msgstr ""
+
 msgid "SIREN Number"
 msgstr "SIREN Number"
 
 msgid "SIRET Number"
 msgstr "SIRET Number"
+
+msgid "RNA Number"
+msgstr ""
 
 msgid "Enter a valid postcode."
 msgstr "Inserisci un codice postale valido."
@@ -3986,7 +4039,7 @@ msgstr "Business Identifier Code"
 
 #, python-format
 msgid "%(character)s is not a valid character for IBAN."
-msgstr ""
+msgstr "%(character)s non è un carattere valido per l'IBAN."
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
@@ -3994,11 +4047,11 @@ msgstr "Gli IBAN %(country_code)s devono contenere %(number)s caratteri."
 
 #, python-format
 msgid "%(country_code)s is not a valid country code for IBAN."
-msgstr ""
+msgstr "%(country_code)s non è un prefisso internazionale valido per l'IBAN."
 
 #, python-format
 msgid "%(country_code)s IBANs are not allowed in this field."
-msgstr ""
+msgstr "%(country_code)s non sono permessi codici IBAN in questo campo."
 
 msgid "Not a valid IBAN."
 msgstr "Codice IBAN non valido."
@@ -4027,6 +4080,51 @@ msgstr "Codice EAN non valido."
 #, python-format
 msgid "%(vatin)s is not a valid VAT identification number."
 msgstr "%(vatin)s is not a valid VAT identification number."
+
+msgid "Ahafo"
+msgstr ""
+
+msgid "Ashanti"
+msgstr ""
+
+msgid "Bono East"
+msgstr ""
+
+msgid "Brong Ahafo"
+msgstr ""
+
+msgid "Eastern"
+msgstr ""
+
+msgid "Greater Accra"
+msgstr ""
+
+msgid "North East"
+msgstr ""
+
+msgid "Northern"
+msgstr ""
+
+msgid "Oti"
+msgstr ""
+
+msgid "Savannah"
+msgstr ""
+
+msgid "Upper East"
+msgstr ""
+
+msgid "Upper West"
+msgstr ""
+
+msgid "Western"
+msgstr ""
+
+msgid "Western North"
+msgstr ""
+
+msgid "Volta"
+msgstr ""
 
 msgid "Enter a valid 5-digit greek postal code."
 msgstr "Inserisci un codice postale greco di 5 cifre valido."
@@ -4490,8 +4588,14 @@ msgid ""
 msgstr ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
 
+msgid "Please enter a valid Indian PAN card number."
+msgstr ""
+
 msgid "Indian state (two uppercase letters)"
 msgstr "Indian state (two uppercase letters)"
+
+msgid "PAN Card number field"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
 msgstr "Enter a postal code in the format XXXXXXXXXX - digits only"
@@ -5150,8 +5254,8 @@ msgstr "Kaunas"
 msgid "Klaipėda"
 msgstr "Klaipėda"
 
-msgid "Mariampolė"
-msgstr "Mariampolė"
+msgid "Marijampolė"
+msgstr "Marijampolė"
 
 msgid "Panevėžys"
 msgstr "Panevėžys"
@@ -5242,9 +5346,6 @@ msgstr "Kupiškis district"
 
 msgid "Lazdijai district"
 msgstr "Lazdijai district"
-
-msgid "Marijampolė"
-msgstr "Marijampolė"
 
 msgid "Mažeikiai district"
 msgstr "Mažeikiai district"
@@ -6500,7 +6601,7 @@ msgid "Invalid checksum for Social Security Number."
 msgstr "Invalid checksum for Social Security Number."
 
 msgid "Mexico state (three or four uppercase letters)"
-msgstr ""
+msgstr "Stato del Messico (tre o quattro lettere maiuscole)"
 
 msgid "Mexico zip code"
 msgstr "CAP messicano"
@@ -6530,7 +6631,7 @@ msgid "Campeche"
 msgstr "Campeche"
 
 msgid "Ciudad de México"
-msgstr ""
+msgstr "Città del Messico"
 
 msgid "Chihuahua"
 msgstr "Chihuahua"
@@ -6678,6 +6779,282 @@ msgstr "Invalid control digit. Enter a valid Norwegian bank account number."
 
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr "Invalid length. Norwegian bank account numbers are 11 digits long."
+
+msgid "Enter a postal code in format XXXXX"
+msgstr ""
+
+msgid "Bhaktapur"
+msgstr ""
+
+msgid "Dhading"
+msgstr ""
+
+msgid "Kathmandu"
+msgstr ""
+
+msgid "Kavrepalanchok"
+msgstr ""
+
+msgid "Lalitpur"
+msgstr ""
+
+msgid "Nuwakot"
+msgstr ""
+
+msgid "Rasuwa"
+msgstr ""
+
+msgid "Sindhupalchok"
+msgstr ""
+
+msgid "Banke"
+msgstr ""
+
+msgid "Bardiya"
+msgstr ""
+
+msgid "Dailekh"
+msgstr ""
+
+msgid "Jajarkot"
+msgstr ""
+
+msgid "Surkhet"
+msgstr ""
+
+msgid "Baglung"
+msgstr ""
+
+msgid "Mustang"
+msgstr ""
+
+msgid "Myagdi"
+msgstr ""
+
+msgid "Parbat"
+msgstr ""
+
+msgid "Gorkha"
+msgstr ""
+
+msgid "Kaski"
+msgstr ""
+
+msgid "Lamjung"
+msgstr ""
+
+msgid "Manang"
+msgstr ""
+
+msgid "Syangja"
+msgstr ""
+
+msgid "Tanahu"
+msgstr ""
+
+msgid "Dhanusa"
+msgstr ""
+
+msgid "Dholkha"
+msgstr ""
+
+msgid "Mahottari"
+msgstr ""
+
+msgid "Ramechhap"
+msgstr ""
+
+msgid "Sarlahi"
+msgstr ""
+
+msgid "Sindhuli"
+msgstr ""
+
+msgid "Dolpa"
+msgstr ""
+
+msgid "Humla"
+msgstr ""
+
+msgid "Jumla"
+msgstr ""
+
+msgid "Kalikot"
+msgstr ""
+
+msgid "Mugu"
+msgstr ""
+
+msgid "Bhojpur"
+msgstr ""
+
+msgid "Dhankuta"
+msgstr ""
+
+msgid "Morang"
+msgstr ""
+
+msgid "Sankhuwasabha"
+msgstr ""
+
+msgid "Sunsari"
+msgstr ""
+
+msgid "Terhathum"
+msgstr ""
+
+msgid "Arghakhanchi"
+msgstr ""
+
+msgid "Gulmi"
+msgstr ""
+
+msgid "Kapilvastu"
+msgstr ""
+
+msgid "Nawalparasi"
+msgstr ""
+
+msgid "Palpa"
+msgstr ""
+
+msgid "Rupandehi"
+msgstr ""
+
+msgid "Baitadi"
+msgstr ""
+
+msgid "Dadeldhura"
+msgstr ""
+
+msgid "Darchula"
+msgstr ""
+
+msgid "Kanchanpur"
+msgstr ""
+
+msgid "Jhapa"
+msgstr ""
+
+msgid "Panchthar"
+msgstr ""
+
+msgid "Taplejung"
+msgstr ""
+
+msgid "Bara"
+msgstr ""
+
+msgid "Chitwan"
+msgstr ""
+
+msgid "Makwanpur"
+msgstr ""
+
+msgid "Parsa"
+msgstr ""
+
+msgid "Rautahat"
+msgstr ""
+
+msgid "Dang Deukhuri"
+msgstr ""
+
+msgid "Pyuthan"
+msgstr ""
+
+msgid "Rolpa"
+msgstr ""
+
+msgid "Rukum"
+msgstr ""
+
+msgid "Salyan"
+msgstr ""
+
+msgid "Khotang"
+msgstr ""
+
+msgid "Okhaldhunga"
+msgstr ""
+
+msgid "Saptari"
+msgstr ""
+
+msgid "Siraha"
+msgstr ""
+
+msgid "Solukhumbu"
+msgstr ""
+
+msgid "Udayapur"
+msgstr ""
+
+msgid "Achham"
+msgstr ""
+
+msgid "Bajhang"
+msgstr ""
+
+msgid "Bajura"
+msgstr ""
+
+msgid "Doti"
+msgstr ""
+
+msgid "Kailali"
+msgstr ""
+
+msgid "Bagmati"
+msgstr ""
+
+msgid "Gandaki"
+msgstr ""
+
+msgid "Karnali"
+msgstr ""
+
+msgid "Lumbini"
+msgstr ""
+
+msgid "Province 1"
+msgstr ""
+
+msgid "Province 2"
+msgstr ""
+
+msgid "Sudurpaschim"
+msgstr ""
+
+msgid "Bheri"
+msgstr ""
+
+msgid "Dhawalagiri"
+msgstr ""
+
+msgid "Janakpur"
+msgstr ""
+
+msgid "Koshi"
+msgstr ""
+
+msgid "Mahakali"
+msgstr ""
+
+msgid "Mechi"
+msgstr ""
+
+msgid "Narayani"
+msgstr ""
+
+msgid "Rapti"
+msgstr ""
+
+msgid "Sagarmatha"
+msgstr ""
+
+msgid "Seti"
+msgstr ""
 
 msgid "Invalid post code."
 msgstr "Invalid post code."

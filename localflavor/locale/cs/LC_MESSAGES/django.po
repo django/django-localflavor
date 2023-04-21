@@ -4,18 +4,19 @@
 #
 # Translators:
 # Jannis Leidel <jannis@leidel.info>, 2011
+# Jiří Podhorecký, 2022
 # Jirka Vejrazka <Jirka.Vejrazka@gmail.com>, 2011
-# trendspotter, 2020
+# Jiří Podhorecký, 2020
 # Václav Řehák, 2020
 # Vláďa Macek <macek@sandbox.cz>, 2011-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-21 09:38+0200\n"
-"PO-Revision-Date: 2021-05-21 09:17+0000\n"
-"Last-Translator: Transifex Bot <>\n"
-"Language-Team: Czech (http://www.transifex.com/django/django-localflavor/"
+"POT-Creation-Date: 2023-04-07 15:31+0200\n"
+"PO-Revision-Date: 2013-05-29 13:57+0000\n"
+"Last-Translator: Jiří Podhorecký, 2022\n"
+"Language-Team: Czech (http://app.transifex.com/django/django-localflavor/"
 "language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -168,13 +169,13 @@ msgid "Australian Postcode"
 msgstr "Australské poštovní číslo"
 
 msgid "Australian Business Number"
-msgstr ""
+msgstr "Australian Business Number"
 
 msgid "Australian Company Number"
-msgstr ""
+msgstr "Australian Company Number"
 
 msgid "Australian Tax File Number"
-msgstr ""
+msgstr "Australian Tax File Number"
 
 msgid "Enter a valid ABN."
 msgstr "Zadejte platné ABN."
@@ -236,9 +237,6 @@ msgstr "EGN není platné."
 msgid "EIK/BULSTAT is not valid"
 msgstr "EIK/BULSTAT není platné"
 
-msgid "Enter a zip code in the format XXXXX-XXX."
-msgstr "Zadejte poštovní směrovací číslo ve tvaru XXXXXX-XXX."
-
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
@@ -257,7 +255,7 @@ msgid "This field requires at least 14 digits"
 msgstr "Pole smí obsahovat nejméně 14 číslic."
 
 msgid "Invalid Process number."
-msgstr ""
+msgstr "Invalid Process number."
 
 msgid "State of Brazil (two uppercase letters)"
 msgstr "Stát Brazílie (dvě velká písmena)"
@@ -274,8 +272,47 @@ msgstr "PSČ"
 msgid "Enter a postal code in the format 00000-000."
 msgstr "Zadejte poštovní směrovací číslo ve formátu 00000-000"
 
-msgid "Invalid Postal Code"
-msgstr "Neplatné poštovní směrovací číslo"
+msgid "Brest Region"
+msgstr ""
+
+msgid "Vitebsk Region"
+msgstr ""
+
+msgid "Gomel Region"
+msgstr ""
+
+msgid "Grodno Region"
+msgstr ""
+
+msgid "Minsk Region"
+msgstr ""
+
+msgid "Mogilev Region"
+msgstr ""
+
+msgid "City of Minsk"
+msgstr ""
+
+msgid "Passport number format is: XX1234567"
+msgstr ""
+
+msgid "ID format is: 1234567X123XX1"
+msgstr ""
+
+msgid "Postal code format is: 123456"
+msgstr ""
+
+msgid "Belarusian Regions (one integer value in the range 1-7)."
+msgstr ""
+
+msgid "Belarusian passport number (2 letters followed by 7 digits"
+msgstr ""
+
+msgid "Belarusian passport ID number (14 letters and digits)."
+msgstr ""
+
+msgid "Belarusian Postal code (6 digits)."
+msgstr ""
 
 msgid "Alberta"
 msgstr "Alberta"
@@ -325,6 +362,15 @@ msgstr "Zadejte kanadskou provincii nebo teritorium"
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr ""
 "Zadejte platné kanadské číslo soc. pojištění (SID) ve tvaru XXX-XXX-XXX."
+
+msgid "Canadian Province (two uppercase letters)"
+msgstr ""
+
+msgid "Canadian Postal Code"
+msgstr ""
+
+msgid "Canadian Social Insurance Number"
+msgstr ""
 
 msgid "Aargau"
 msgstr "Aargau"
@@ -2020,10 +2066,10 @@ msgid "Ulfborg"
 msgstr "Ulfborg"
 
 msgid "Taulov Pakkecenter"
-msgstr ""
+msgstr "Taulov Pakkecenter"
 
 msgid "Pakker TLP"
-msgstr ""
+msgstr "Pakker TLP"
 
 msgid "Børkop"
 msgstr "Børkop"
@@ -2203,16 +2249,16 @@ msgid "Sydjylland/Fyn USF B"
 msgstr "Sydjylland/Fyn USF B"
 
 msgid "Fakturaservice"
-msgstr ""
+msgstr "Fakturaservice"
 
 msgid "Fakturascanning"
-msgstr ""
+msgstr "Fakturascanning"
 
 msgid "Statsservice"
-msgstr ""
+msgstr "Statistická služba"
 
 msgid "Kommunepost"
-msgstr ""
+msgstr "Kommunepost"
 
 msgid "Aarhus C"
 msgstr "Aarhus C"
@@ -2656,7 +2702,7 @@ msgid "Jylland USF B"
 msgstr "Jylland USF B"
 
 msgid "Borgerservice"
-msgstr ""
+msgstr "Borgerservice"
 
 msgid "Santa Claus/Julemanden"
 msgstr "Santa Claus/Julemanden"
@@ -3511,11 +3557,17 @@ msgstr "Zadejte platné francouzské číslo SIREN."
 msgid "Enter a valid French SIRET number."
 msgstr "Zadejte platné francouzské číslo SIRET."
 
+msgid "Enter a valid French RNA number."
+msgstr ""
+
 msgid "SIREN Number"
 msgstr "SIREN Číslo"
 
 msgid "SIRET Number"
 msgstr "SIRET Číslo"
+
+msgid "RNA Number"
+msgstr ""
 
 msgid "Enter a valid postcode."
 msgstr "Zadejte platné poštovní směrovací číslo."
@@ -3530,7 +3582,7 @@ msgid "Berkshire"
 msgstr "Berkshire"
 
 msgid "Blackburn with Darwen"
-msgstr ""
+msgstr "Blackburn with Darwen"
 
 msgid "Blackpool"
 msgstr "Blackpool"
@@ -3972,7 +4024,7 @@ msgstr "Obchodní identifikační kód"
 
 #, python-format
 msgid "%(character)s is not a valid character for IBAN."
-msgstr ""
+msgstr "%(character)s není platným znakem pro IBAN."
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
@@ -3980,11 +4032,11 @@ msgstr "%(country_code)s IBANy musí obsahovat %(number)s znaků."
 
 #, python-format
 msgid "%(country_code)s is not a valid country code for IBAN."
-msgstr ""
+msgstr "%(country_code)s není platný kód země pro IBAN."
 
 #, python-format
 msgid "%(country_code)s IBANs are not allowed in this field."
-msgstr ""
+msgstr "%(country_code)s IBAN nejsou v tomto poli povoleny."
 
 msgid "Not a valid IBAN."
 msgstr "Neplatný IBAN."
@@ -3997,7 +4049,7 @@ msgstr "Kódy BIC se skládají pouze z písmen a číslic."
 
 #, python-format
 msgid "%(institution_code)s is not a valid institution code."
-msgstr ""
+msgstr "%(institution_code)s is not a valid institution code."
 
 #, python-format
 msgid "%(country_code)s is not a valid country code."
@@ -4005,7 +4057,7 @@ msgstr "%(country_code)s není platný kód země."
 
 #, python-format
 msgid "%(location_code)s is not a valid location code."
-msgstr ""
+msgstr "%(location_code)snení platný kód polohy."
 
 msgid "Not a valid EAN code."
 msgstr "Není platný kód EAN."
@@ -4013,6 +4065,51 @@ msgstr "Není platný kód EAN."
 #, python-format
 msgid "%(vatin)s is not a valid VAT identification number."
 msgstr "%(vatin)s není platné identifikační číslo pro DPH."
+
+msgid "Ahafo"
+msgstr ""
+
+msgid "Ashanti"
+msgstr ""
+
+msgid "Bono East"
+msgstr ""
+
+msgid "Brong Ahafo"
+msgstr ""
+
+msgid "Eastern"
+msgstr ""
+
+msgid "Greater Accra"
+msgstr ""
+
+msgid "North East"
+msgstr ""
+
+msgid "Northern"
+msgstr ""
+
+msgid "Oti"
+msgstr ""
+
+msgid "Savannah"
+msgstr ""
+
+msgid "Upper East"
+msgstr ""
+
+msgid "Upper West"
+msgstr ""
+
+msgid "Western"
+msgstr ""
+
+msgid "Western North"
+msgstr ""
+
+msgid "Volta"
+msgstr ""
 
 msgid "Enter a valid 5-digit greek postal code."
 msgstr "Zadejte platné pětimístné řecké směrovací číslo."
@@ -4476,8 +4573,14 @@ msgid ""
 msgstr ""
 "Zadejte platné číslo Aadhaar ve formátu XXXX XXXX XXXX nebo XXXX-XXXX-XXXX."
 
+msgid "Please enter a valid Indian PAN card number."
+msgstr ""
+
 msgid "Indian state (two uppercase letters)"
 msgstr "Indický stát (dvě velká písmena)"
+
+msgid "PAN Card number field"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
 msgstr "Zadejte poštovní směrovací číslo ve formátu XXXXXXXXXX - pouze číslice"
@@ -4790,7 +4893,7 @@ msgid "Mirqab"
 msgstr "Mirqab"
 
 msgid "Mubarekiya Camps"
-msgstr ""
+msgstr "Mubarekiya Camps"
 
 msgid "Nahdha"
 msgstr "Nahdha"
@@ -4826,10 +4929,10 @@ msgid "Shuwaikh Administrative"
 msgstr "Shuwaikh Administrativní oblast"
 
 msgid "Shuwaikh Industrial"
-msgstr ""
+msgstr "Shuwaikh Industrial"
 
 msgid "Shuwaikh Residential"
-msgstr ""
+msgstr "Shuwaikh Residential"
 
 msgid "Sulaibikhat"
 msgstr "Sulaibikhat"
@@ -4865,10 +4968,10 @@ msgid "Ardiya"
 msgstr "Ardiya"
 
 msgid "Ardiya Small Industrial"
-msgstr ""
+msgstr "Ardiya Small Industrial"
 
 msgid "Ardiya Storage Zone"
-msgstr ""
+msgstr "Ardiya Storage Zone"
 
 msgid "Firdous"
 msgstr "Firdous"
@@ -4946,7 +5049,7 @@ msgid "South Wista"
 msgstr "Jižní  Wista"
 
 msgid "West Abu Fatira Small Industrial"
-msgstr ""
+msgstr "West Abu Fatira Small Industrial"
 
 msgid "Hawally"
 msgstr "Hawally"
@@ -5060,10 +5163,10 @@ msgid "Mina Abdullah"
 msgstr "Mina Abdullah"
 
 msgid "Shuaiba Block 1"
-msgstr ""
+msgstr "Shuaiba Block 1"
 
 msgid "West Industrial Shuaiba"
-msgstr ""
+msgstr "West Industrial Shuaiba"
 
 msgid "Zour"
 msgstr "Zour"
@@ -5072,13 +5175,13 @@ msgid "Jahra"
 msgstr "Jahra"
 
 msgid "Al Sulaibiya Industrial 1"
-msgstr ""
+msgstr "Al Sulaibiya Industrial 1"
 
 msgid "Al Sulaibiya Industrial 2"
-msgstr ""
+msgstr "Al Sulaibiya Industrial 2"
 
 msgid "Amgarah Industrial Area"
-msgstr ""
+msgstr "Amgarah Industrial Area"
 
 msgid "Naeem"
 msgstr "Naeem"
@@ -5134,8 +5237,8 @@ msgstr "Kaunas"
 msgid "Klaipėda"
 msgstr "Klaipėda"
 
-msgid "Mariampolė"
-msgstr "Mariampolė"
+msgid "Marijampolė"
+msgstr "Marijampolė"
 
 msgid "Panevėžys"
 msgstr "Panevėžys"
@@ -5226,9 +5329,6 @@ msgstr "Kraj Kupiškis"
 
 msgid "Lazdijai district"
 msgstr "Kraj Lazdijai"
-
-msgid "Marijampolė"
-msgstr "Marijampolė"
 
 msgid "Mažeikiai district"
 msgstr "Mažeikiai district"
@@ -5939,7 +6039,7 @@ msgid "Tanger-Tétouan-Al Hoceïma"
 msgstr "Tanger-Tétouan-Al Hoceïma"
 
 msgid "L’Oriental"
-msgstr ""
+msgstr "L’Oriental"
 
 msgid "Fès-Meknès"
 msgstr "Fès-Meknès"
@@ -6483,7 +6583,7 @@ msgid "Invalid checksum for Social Security Number."
 msgstr "Neplatný kontrolní součet čísla sociálního pojištění."
 
 msgid "Mexico state (three or four uppercase letters)"
-msgstr ""
+msgstr "stát Mexiko (tři nebo čtyři velká písmena)"
 
 msgid "Mexico zip code"
 msgstr "Mexické PSČ"
@@ -6513,7 +6613,7 @@ msgid "Campeche"
 msgstr "Campeche"
 
 msgid "Ciudad de México"
-msgstr ""
+msgstr "Mexiko City"
 
 msgid "Chihuahua"
 msgstr "Chihuahua"
@@ -6662,6 +6762,282 @@ msgstr ""
 
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr "Neplatná délka. Čísla norských bankovních účtů jsou dlouhá 11 číslic."
+
+msgid "Enter a postal code in format XXXXX"
+msgstr ""
+
+msgid "Bhaktapur"
+msgstr ""
+
+msgid "Dhading"
+msgstr ""
+
+msgid "Kathmandu"
+msgstr ""
+
+msgid "Kavrepalanchok"
+msgstr ""
+
+msgid "Lalitpur"
+msgstr ""
+
+msgid "Nuwakot"
+msgstr ""
+
+msgid "Rasuwa"
+msgstr ""
+
+msgid "Sindhupalchok"
+msgstr ""
+
+msgid "Banke"
+msgstr ""
+
+msgid "Bardiya"
+msgstr ""
+
+msgid "Dailekh"
+msgstr ""
+
+msgid "Jajarkot"
+msgstr ""
+
+msgid "Surkhet"
+msgstr ""
+
+msgid "Baglung"
+msgstr ""
+
+msgid "Mustang"
+msgstr ""
+
+msgid "Myagdi"
+msgstr ""
+
+msgid "Parbat"
+msgstr ""
+
+msgid "Gorkha"
+msgstr ""
+
+msgid "Kaski"
+msgstr ""
+
+msgid "Lamjung"
+msgstr ""
+
+msgid "Manang"
+msgstr ""
+
+msgid "Syangja"
+msgstr ""
+
+msgid "Tanahu"
+msgstr ""
+
+msgid "Dhanusa"
+msgstr ""
+
+msgid "Dholkha"
+msgstr ""
+
+msgid "Mahottari"
+msgstr ""
+
+msgid "Ramechhap"
+msgstr ""
+
+msgid "Sarlahi"
+msgstr ""
+
+msgid "Sindhuli"
+msgstr ""
+
+msgid "Dolpa"
+msgstr ""
+
+msgid "Humla"
+msgstr ""
+
+msgid "Jumla"
+msgstr ""
+
+msgid "Kalikot"
+msgstr ""
+
+msgid "Mugu"
+msgstr ""
+
+msgid "Bhojpur"
+msgstr ""
+
+msgid "Dhankuta"
+msgstr ""
+
+msgid "Morang"
+msgstr ""
+
+msgid "Sankhuwasabha"
+msgstr ""
+
+msgid "Sunsari"
+msgstr ""
+
+msgid "Terhathum"
+msgstr ""
+
+msgid "Arghakhanchi"
+msgstr ""
+
+msgid "Gulmi"
+msgstr ""
+
+msgid "Kapilvastu"
+msgstr ""
+
+msgid "Nawalparasi"
+msgstr ""
+
+msgid "Palpa"
+msgstr ""
+
+msgid "Rupandehi"
+msgstr ""
+
+msgid "Baitadi"
+msgstr ""
+
+msgid "Dadeldhura"
+msgstr ""
+
+msgid "Darchula"
+msgstr ""
+
+msgid "Kanchanpur"
+msgstr ""
+
+msgid "Jhapa"
+msgstr ""
+
+msgid "Panchthar"
+msgstr ""
+
+msgid "Taplejung"
+msgstr ""
+
+msgid "Bara"
+msgstr ""
+
+msgid "Chitwan"
+msgstr ""
+
+msgid "Makwanpur"
+msgstr ""
+
+msgid "Parsa"
+msgstr ""
+
+msgid "Rautahat"
+msgstr ""
+
+msgid "Dang Deukhuri"
+msgstr ""
+
+msgid "Pyuthan"
+msgstr ""
+
+msgid "Rolpa"
+msgstr ""
+
+msgid "Rukum"
+msgstr ""
+
+msgid "Salyan"
+msgstr ""
+
+msgid "Khotang"
+msgstr ""
+
+msgid "Okhaldhunga"
+msgstr ""
+
+msgid "Saptari"
+msgstr ""
+
+msgid "Siraha"
+msgstr ""
+
+msgid "Solukhumbu"
+msgstr ""
+
+msgid "Udayapur"
+msgstr ""
+
+msgid "Achham"
+msgstr ""
+
+msgid "Bajhang"
+msgstr ""
+
+msgid "Bajura"
+msgstr ""
+
+msgid "Doti"
+msgstr ""
+
+msgid "Kailali"
+msgstr ""
+
+msgid "Bagmati"
+msgstr ""
+
+msgid "Gandaki"
+msgstr ""
+
+msgid "Karnali"
+msgstr ""
+
+msgid "Lumbini"
+msgstr ""
+
+msgid "Province 1"
+msgstr ""
+
+msgid "Province 2"
+msgstr ""
+
+msgid "Sudurpaschim"
+msgstr ""
+
+msgid "Bheri"
+msgstr ""
+
+msgid "Dhawalagiri"
+msgstr ""
+
+msgid "Janakpur"
+msgstr ""
+
+msgid "Koshi"
+msgstr ""
+
+msgid "Mahakali"
+msgstr ""
+
+msgid "Mechi"
+msgstr ""
+
+msgid "Narayani"
+msgstr ""
+
+msgid "Rapti"
+msgstr ""
+
+msgid "Sagarmatha"
+msgstr ""
+
+msgid "Seti"
+msgstr ""
 
 msgid "Invalid post code."
 msgstr "Neplatné poštovní směrovací číslo."

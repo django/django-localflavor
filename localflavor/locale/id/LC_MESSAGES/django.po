@@ -3,9 +3,9 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Fery Setiawan <gembelweb@gmail.com>, 2015-2018
+# Fery Setiawan <gembelweb@gmail.com>, 2015-2018,2021
 # Jannis Leidel <jannis@leidel.info>, 2011
-# oon arfiandwi <oon.arfiandwi@gmail.com>, 2016
+# oon arfiandwi (OonID) <oon.arfiandwi@gmail.com>, 2016
 # rodin <romihardiyanto@gmail.com>, 2011
 # rodin <romihardiyanto@gmail.com>, 2012
 # Sakti Dwi Cahyono <54krpl@gmail.com>, 2014
@@ -13,10 +13,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2018-01-11 07:03+0000\n"
-"Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
-"Language-Team: Indonesian (http://www.transifex.com/django/django-"
+"POT-Creation-Date: 2023-04-07 15:31+0200\n"
+"PO-Revision-Date: 2013-05-29 13:57+0000\n"
+"Last-Translator: Fery Setiawan <gembelweb@gmail.com>, 2015-2018,2021\n"
+"Language-Team: Indonesian (http://app.transifex.com/django/django-"
 "localflavor/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,8 +111,8 @@ msgstr "Masukkan CUIT yang valid dalam format XX-XXXXXXXX-X atau XXXXXXXXXXXX."
 msgid "Invalid CUIT."
 msgstr "CUIT salah."
 
-msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
-msgstr "Jenis hukum tidak sah. Jenis harus 27, 20, 30, 23, 24 or 33."
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
+msgstr "Jenis tidak sah. Jenis harus berupa 27, 20, 30, 23, 24, 33 atau 34."
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
 msgstr "Masukkan CBU sah dalam bentuk XXXXXXXXXXXXXXXXXXXXXX."
@@ -236,9 +236,6 @@ msgstr "EGN tidak sah"
 msgid "EIK/BULSTAT is not valid"
 msgstr "EIK/BULSTAT tidak sah"
 
-msgid "Enter a zip code in the format XXXXX-XXX."
-msgstr "Masukkan kode pos dalam format XXXXX-XXX."
-
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
@@ -264,6 +261,60 @@ msgstr "Tidak sah mengolah angka."
 
 msgid "State of Brazil (two uppercase letters)"
 msgstr "Negara bagian dari Brasil (dua huruf besar)"
+
+msgid "CPF Document"
+msgstr "Dokumen CPF"
+
+msgid "CNPJ Document"
+msgstr "Dokumen CNPJ"
+
+msgid "Postal Code"
+msgstr "Kode Pos"
+
+msgid "Enter a postal code in the format 00000-000."
+msgstr "Masukkan kode pos dalam bentuk 00000-000."
+
+msgid "Brest Region"
+msgstr ""
+
+msgid "Vitebsk Region"
+msgstr ""
+
+msgid "Gomel Region"
+msgstr ""
+
+msgid "Grodno Region"
+msgstr ""
+
+msgid "Minsk Region"
+msgstr ""
+
+msgid "Mogilev Region"
+msgstr ""
+
+msgid "City of Minsk"
+msgstr ""
+
+msgid "Passport number format is: XX1234567"
+msgstr ""
+
+msgid "ID format is: 1234567X123XX1"
+msgstr ""
+
+msgid "Postal code format is: 123456"
+msgstr ""
+
+msgid "Belarusian Regions (one integer value in the range 1-7)."
+msgstr ""
+
+msgid "Belarusian passport number (2 letters followed by 7 digits"
+msgstr ""
+
+msgid "Belarusian passport ID number (14 letters and digits)."
+msgstr ""
+
+msgid "Belarusian Postal code (6 digits)."
+msgstr ""
 
 msgid "Alberta"
 msgstr "Alberta"
@@ -313,6 +364,15 @@ msgstr "Masukkan satu provinsi atau teritori di Kanada."
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr ""
 "Masukkan nomor Asuransi Sosial Kanada yang valid dalam format XXX-XXX-XXX."
+
+msgid "Canadian Province (two uppercase letters)"
+msgstr ""
+
+msgid "Canadian Postal Code"
+msgstr ""
+
+msgid "Canadian Social Insurance Number"
+msgstr ""
 
 msgid "Aargau"
 msgstr "Aargau"
@@ -945,6 +1005,9 @@ msgstr "Region Syddanmark"
 msgid "Scanning"
 msgstr "Memindai"
 
+msgid "Facility"
+msgstr "Fasilitas"
+
 msgid "Høje Taastrup"
 msgstr "Høje Taastrup"
 
@@ -1263,6 +1326,12 @@ msgstr "Boeslunde"
 msgid "Rude"
 msgstr "Rude"
 
+msgid "Agersø"
+msgstr "Agersø"
+
+msgid "Omø"
+msgstr "Omø"
+
 msgid "Fuglebjerg"
 msgstr "Fuglebjerg"
 
@@ -1289,6 +1358,9 @@ msgstr "Stenlille"
 
 msgid "Nyrup"
 msgstr "Nyrup"
+
+msgid "Orø"
+msgstr "Orø"
 
 msgid "Hvalsø"
 msgstr "Hvalsø"
@@ -1518,11 +1590,17 @@ msgstr "Maribo"
 msgid "Bandholm"
 msgstr "Bandholm"
 
+msgid "Askø og Lilleø"
+msgstr "Askø og Lilleø"
+
 msgid "Torrig L"
 msgstr "Torrig L"
 
 msgid "Fejø"
 msgstr "Fejø"
+
+msgid "Femø"
+msgstr "Femø"
 
 msgid "Nørreballe"
 msgstr "Nørreballe"
@@ -1650,6 +1728,15 @@ msgstr "Ejby"
 msgid "Faaborg"
 msgstr "Faaborg"
 
+msgid "Lyø"
+msgstr "Lyø"
+
+msgid "Avernakø"
+msgstr "Avernakø"
+
+msgid "Bjørnø"
+msgstr "Bjørnø"
+
 msgid "Glamsbjerg"
 msgstr "Glamsbjerg"
 
@@ -1725,11 +1812,17 @@ msgstr "Humble"
 msgid "Bagenkop"
 msgstr "Bagenkop"
 
+msgid "Strynø"
+msgstr "Strynø"
+
 msgid "Tranekær"
 msgstr "Tranekær"
 
 msgid "Marstal"
 msgstr "Marstal"
+
+msgid "Birkholm"
+msgstr "Birkholm"
 
 msgid "Ærøskøbing"
 msgstr "Ærøskøbing"
@@ -1763,6 +1856,9 @@ msgstr "Sjølund"
 
 msgid "Hejls"
 msgstr "Hejls"
+
+msgid "Barsø"
+msgstr "Barsø"
 
 msgid "Rødekro"
 msgstr "Rødekro"
@@ -2357,6 +2453,12 @@ msgstr "Stenderup"
 
 msgid "Hornsyld"
 msgstr "Hornsyld"
+
+msgid "Endelave"
+msgstr "Endelave"
+
+msgid "Tunø"
+msgstr "Tunø"
 
 msgid "Tjele"
 msgstr "Tjele"
@@ -3120,6 +3222,90 @@ msgstr "Masukkan 8-angka kode terdaftar bisnis Estonia."
 msgid "Enter a valid Estonian business registry code."
 msgstr "Masukkan kode terdaftar bisnis Estonia yang sah."
 
+msgid "Dakahlia"
+msgstr "Dakahlia"
+
+msgid "Red Sea"
+msgstr "Laut Merah"
+
+msgid "Beheira"
+msgstr "Beheira"
+
+msgid "Faiyum"
+msgstr "Faiyum"
+
+msgid "Gharbia"
+msgstr "Gharbia"
+
+msgid "Alexandria"
+msgstr "Alexandria"
+
+msgid "Ismailia"
+msgstr "Ismailia"
+
+msgid "Giza"
+msgstr "Giza"
+
+msgid "Monufia"
+msgstr "Monufia"
+
+msgid "Minya"
+msgstr "Minya"
+
+msgid "Cairo"
+msgstr "Kairo"
+
+msgid "Qalyubia"
+msgstr "Qalyubia"
+
+msgid "Luxor"
+msgstr "Luxor"
+
+msgid "New Valley"
+msgstr "New Valley"
+
+msgid "Suez"
+msgstr "Suez"
+
+msgid "Al Sharqia"
+msgstr "Al Sharqia"
+
+msgid "Aswan"
+msgstr "Aswan"
+
+msgid "Asyut"
+msgstr "Asyut"
+
+msgid "Beni Suef"
+msgstr "Beni Suef"
+
+msgid "Port Said"
+msgstr "Port Said"
+
+msgid "Damietta"
+msgstr "Damietta"
+
+msgid "South Sinai"
+msgstr "South Sinai"
+
+msgid "Kafr el-Sheikh"
+msgstr "Kafr el-Sheikh"
+
+msgid "Matrouh"
+msgstr "Matrouh"
+
+msgid "Qena"
+msgstr "Qena"
+
+msgid "North Sinai"
+msgstr "North Sinai"
+
+msgid "Sohag"
+msgstr "Sohag"
+
+msgid "Enter a valid Egyptian National ID number"
+msgstr "Masukkan nomor ID Nasional Mesir yang sah"
+
 msgid "Araba"
 msgstr "Araba"
 
@@ -3347,6 +3533,12 @@ msgstr ""
 msgid "Invalid checksum for bank account number."
 msgstr "Checksum untuk nomor akun bank salah."
 
+msgid "Spain postal code (five numbers)"
+msgstr "Kode pos Spanyol (lima angka)"
+
+msgid "Identification National Document"
+msgstr "Dokumen Nasional Pencirian"
+
 msgid "Enter a valid Finnish social security number."
 msgstr "Masukkan nomor identitas Finlandia yang valid."
 
@@ -3368,11 +3560,17 @@ msgstr "Masukkan nomor sah SIREN Perancis."
 msgid "Enter a valid French SIRET number."
 msgstr "Masukkan nomor sah SIRET Perancis."
 
+msgid "Enter a valid French RNA number."
+msgstr ""
+
 msgid "SIREN Number"
 msgstr "Nomor SIREN"
 
 msgid "SIRET Number"
 msgstr "Nomor SIRET"
+
+msgid "RNA Number"
+msgstr ""
 
 msgid "Enter a valid postcode."
 msgstr "Masukkan kode pos yang valid."
@@ -3828,8 +4026,8 @@ msgid "Business Identifier Code"
 msgstr "Kode Penciri Bisnis"
 
 #, python-format
-msgid "%s is not a valid character for IBAN."
-msgstr "%s bukan karakter sah untuk Angka Akun Bank Internasional."
+msgid "%(character)s is not a valid character for IBAN."
+msgstr "%(character)s bukan karakter sah untuk IBAN."
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
@@ -3838,12 +4036,12 @@ msgstr ""
 "%(number)s."
 
 #, python-format
-msgid "%s is not a valid country code for IBAN."
-msgstr "%s bukan kode negara sah untuk Angka Akun Bank Internasional."
+msgid "%(country_code)s is not a valid country code for IBAN."
+msgstr "%(country_code)s bukan kode negara sah untuk IBAN."
 
 #, python-format
-msgid "%s IBANs are not allowed in this field."
-msgstr "%s Angka Akun Bank Internasional tidak diizinkan di bidang ini."
+msgid "%(country_code)s IBANs are not allowed in this field."
+msgstr "%(country_code)s IBAN tidak diizinkan untuk bidang ini."
 
 msgid "Not a valid IBAN."
 msgstr "Angka Akun Bank Internasional tidak sah."
@@ -3851,22 +4049,81 @@ msgstr "Angka Akun Bank Internasional tidak sah."
 msgid "BIC codes have either 8 or 11 characters."
 msgstr "Kode BIC mempunyai baik 8 atau 11 karakter."
 
-#, python-format
-msgid "%s is not a valid institution code."
-msgstr "%s bukan kode lembaga yang sah."
+msgid "BIC codes only contain alphabet letters and digits."
+msgstr "Kode BIC hanya mengandung alfabet huruf dan angka."
 
 #, python-format
-msgid "%s is not a valid country code."
-msgstr "%s bukan kode negara yang sah."
+msgid "%(institution_code)s is not a valid institution code."
+msgstr "%(institution_code)s bukan kode lembaga yang sah."
+
+#, python-format
+msgid "%(country_code)s is not a valid country code."
+msgstr "%(country_code)s bukan kode negara yang sah."
+
+#, python-format
+msgid "%(location_code)s is not a valid location code."
+msgstr "%(location_code)s bukan kode tempat yang sah."
 
 msgid "Not a valid EAN code."
 msgstr "Bukan kode EAN sah."
+
+#, python-format
+msgid "%(vatin)s is not a valid VAT identification number."
+msgstr "%(vatin)s bukan nomor pencirian VAT yang sah."
+
+msgid "Ahafo"
+msgstr ""
+
+msgid "Ashanti"
+msgstr ""
+
+msgid "Bono East"
+msgstr ""
+
+msgid "Brong Ahafo"
+msgstr ""
+
+msgid "Eastern"
+msgstr ""
+
+msgid "Greater Accra"
+msgstr ""
+
+msgid "North East"
+msgstr ""
+
+msgid "Northern"
+msgstr ""
+
+msgid "Oti"
+msgstr ""
+
+msgid "Savannah"
+msgstr ""
+
+msgid "Upper East"
+msgstr ""
+
+msgid "Upper West"
+msgstr ""
+
+msgid "Western"
+msgstr ""
+
+msgid "Western North"
+msgstr ""
+
+msgid "Volta"
+msgstr ""
 
 msgid "Enter a valid 5-digit greek postal code."
 msgstr "Masukkan 5-angka sah kode pos yunani."
 
 msgid "Enter a valid greek tax number (9 digits)."
 msgstr "Masukkan angka sah pajak yunani (9 angka)."
+
+msgid "Enter a valid greek social security number (AMKA - 11 digits)."
+msgstr "Masukkan nomor keamanan sosial yunani yang sah (AMKA - 11 angka)."
 
 msgid "Enter a valid 13 digit JMBG"
 msgstr "Masukkan 13 angka JMBG"
@@ -4066,6 +4323,9 @@ msgstr "Kalimantan Tengah"
 msgid "Kalimantan Timur"
 msgstr "Kalimantan Timur"
 
+msgid "Kalimantan Utara"
+msgstr "Kalimantan Utara"
+
 msgid "Kepulauan Bangka-Belitung"
 msgstr "Kepulauan Bangka-Belitung"
 
@@ -4219,6 +4479,9 @@ msgstr "Sidoarjo"
 msgid "Garut"
 msgstr "Garut"
 
+msgid "Enter a valid Eircode."
+msgstr "Masukkan Eircode yang sah."
+
 msgid "Carlow"
 msgstr "Carlow"
 
@@ -4314,8 +4577,110 @@ msgid ""
 msgstr ""
 "Masukkan nomor sah Aadhaar dalam bentuk XXXX XXXX XXXX or XXXX-XXXX-XXXX."
 
+msgid "Please enter a valid Indian PAN card number."
+msgstr ""
+
 msgid "Indian state (two uppercase letters)"
 msgstr "Negara bagian Indian (dua huruf besar)"
+
+msgid "PAN Card number field"
+msgstr ""
+
+msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
+msgstr "Masukkan kode pos dalam bentuk XXXXXXXXXX - hanya angka"
+
+msgid "Alborz"
+msgstr "Alborz"
+
+msgid "Ardabil"
+msgstr "Ardabil"
+
+msgid "Azerbaijan East"
+msgstr "Azarbaijan Timur"
+
+msgid "Azerbaijan Wast"
+msgstr "Azarbaijan Barat"
+
+msgid "Bushehr"
+msgstr "Bushehr"
+
+msgid "Chahar Mahaal and Bakhtiari"
+msgstr "Chahar Mahaal dan Bakhtiari"
+
+msgid "Fars"
+msgstr "Fars"
+
+msgid "Gilan"
+msgstr "Gilan"
+
+msgid "Golestan"
+msgstr "Golestan"
+
+msgid "Hamadan"
+msgstr "Hamadan"
+
+msgid "Hormozgan"
+msgstr "Hormozgan"
+
+msgid "Ilam"
+msgstr "Ilam"
+
+msgid "Isfahan"
+msgstr "Isfahan"
+
+msgid "Kerman"
+msgstr "Kerman"
+
+msgid "Kermanshah"
+msgstr "Kermanshah"
+
+msgid "Khorasan North"
+msgstr "Khorasan Utara"
+
+msgid "Khorasan Razavi"
+msgstr "Razavi Khorasan"
+
+msgid "Khorasan South"
+msgstr "Khorasan Selatan"
+
+msgid "Khuzestan"
+msgstr "Khuzestan"
+
+msgid "Kohgiluyeh and Boyer-Ahmad"
+msgstr "Kohgiluyeh dan Boyer-Ahmad"
+
+msgid "Kurdistan"
+msgstr "Kurdistan"
+
+msgid "Lorestan"
+msgstr "Lorestan"
+
+msgid "Markazi"
+msgstr "Markazi"
+
+msgid "Mazandaran"
+msgstr "Mazandaran"
+
+msgid "Qazvin"
+msgstr "Qazvin"
+
+msgid "Qom"
+msgstr "Qom"
+
+msgid "Semnan"
+msgstr "Semnan"
+
+msgid "Sistan and Baluchestan"
+msgstr "Sistan dan Baluchestan"
+
+msgid "Tehran"
+msgstr "Teheran"
+
+msgid "Yazd"
+msgstr "Yazd"
+
+msgid "Zanjan"
+msgstr "Zanjan"
 
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
@@ -4877,8 +5242,8 @@ msgstr "Kaunas"
 msgid "Klaipėda"
 msgstr "Klaipėda"
 
-msgid "Mariampolė"
-msgstr "Mariampolė"
+msgid "Marijampolė"
+msgstr "Marijampolė"
 
 msgid "Panevėžys"
 msgstr "Panevėžys"
@@ -4969,9 +5334,6 @@ msgstr "Distrik Kupiškis"
 
 msgid "Lazdijai district"
 msgstr "Distrik Lazdijai"
-
-msgid "Marijampolė"
-msgstr "Marijampolė"
 
 msgid "Mažeikiai district"
 msgstr "Distrik Mažeikiai"
@@ -5714,6 +6076,210 @@ msgstr "Laâyoune-Sakia El Hamra"
 msgid "Dakhla-Oued Ed Dahab"
 msgstr "Dakhla-Oued Ed Dahab"
 
+msgid "Întreprindere Individuală"
+msgstr "Întreprindere Individuală"
+
+msgid "Societate pe acţiuni"
+msgstr "Societate pe acţiuni"
+
+msgid "Societate în nume colectiv"
+msgstr "Societate în nume colectiv"
+
+msgid "Societatea în comandită"
+msgstr "Societatea în comandită"
+
+msgid "Cooperativa de producţie"
+msgstr "Cooperativa de producţie"
+
+msgid "Cooperativa de întreprinzători"
+msgstr "Cooperativa de întreprinzători"
+
+msgid "Societate cu răspundere limitată"
+msgstr "Societate cu răspundere limitată"
+
+msgid "Gospodăria ţărănească"
+msgstr "Gospodăria ţărănească"
+
+msgid "Diplomatic Corps"
+msgstr "Korps diplomatik"
+
+msgid "Service Staff"
+msgstr "Staf Layanan"
+
+msgid "Consular Staff"
+msgstr "Staf Konsuler"
+
+msgid "Administrative body"
+msgstr "Badan administratif"
+
+msgid "Ministry of Internal Affairs"
+msgstr "Kementerian Dalam Negeri"
+
+msgid "Carabinieri Subdivision"
+msgstr "Subdivisi Carabinieri"
+
+msgid "Military Forces"
+msgstr "Pasukan Militer"
+
+msgid "Border Control"
+msgstr "Pengendalian Perbatasan"
+
+msgid "Parliament"
+msgstr "Parlemen"
+
+msgid "Government"
+msgstr "Pemerintah"
+
+msgid "Chancellery"
+msgstr "Tempat kanselir"
+
+msgid "Anenii Noi"
+msgstr "Anenii Noi"
+
+msgid "Tighina"
+msgstr "Tighina"
+
+msgid "Bălți"
+msgstr "Bălți"
+
+msgid "Briceni"
+msgstr "Briceni"
+
+msgid "Basarabeasca"
+msgstr "Basarabeasca"
+
+msgid "Chișinău"
+msgstr "Chișinău"
+
+msgid "Camenca"
+msgstr "Camenca"
+
+msgid "Ceadîr-Lunga"
+msgstr "Ceadîr-Lunga"
+
+msgid "Cahul"
+msgstr "Cahul"
+
+msgid "Călărași"
+msgstr "Călărași"
+
+msgid "Cimișlia"
+msgstr "Cimișlia"
+
+msgid "Căinari"
+msgstr "Căinari"
+
+msgid "Comrat"
+msgstr "Comrat"
+
+msgid "Criuleni"
+msgstr "Criuleni"
+
+msgid "Căușeni"
+msgstr "Căușeni"
+
+msgid "Cantemir"
+msgstr "Cantemir"
+
+msgid "Dubăsari"
+msgstr "Dubăsari"
+
+msgid "Dondușeni"
+msgstr "Dondușeni"
+
+msgid "Drochia"
+msgstr "Drochia"
+
+msgid "Edineț"
+msgstr "Edineț"
+
+msgid "Fălești"
+msgstr "Fălești"
+
+msgid "Florești"
+msgstr "Florești"
+
+msgid "Gagauzia"
+msgstr "Gagauzia"
+
+msgid "Glodeni"
+msgstr "Glodeni"
+
+msgid "Grigoriopol"
+msgstr "Grigoriopol"
+
+msgid "Hîncești"
+msgstr "Hîncești"
+
+msgid "Ialoveni"
+msgstr "Ialoveni"
+
+msgid "Leova"
+msgstr "Leova"
+
+msgid "Nisporeni"
+msgstr "Nisporeni"
+
+msgid "Ocnița"
+msgstr "Ocnița"
+
+msgid "Orhei"
+msgstr "Orhei"
+
+msgid "Rîbnița"
+msgstr "Rîbnița"
+
+msgid "Rîșcani"
+msgstr "Rîșcani"
+
+msgid "Rezina"
+msgstr "Rezina"
+
+msgid "Șoldănești"
+msgstr "Șoldănești"
+
+msgid "Sîngerei"
+msgstr "Sîngerei"
+
+msgid "Slobozia"
+msgstr "Slobozia"
+
+msgid "Soroca"
+msgstr "Soroca"
+
+msgid "Strășeni"
+msgstr "Strășeni"
+
+msgid "Ștefan Vodă"
+msgstr "Ștefan Vodă"
+
+msgid "Taraclia"
+msgstr "Taraclia"
+
+msgid "Telenești"
+msgstr "Telenești"
+
+msgid "Ungheni"
+msgstr "Ungheni"
+
+msgid "Vulcănești"
+msgstr "Vulcănești"
+
+msgid "Moldavian identity number"
+msgstr "Nomor pencirian Moldavia"
+
+msgid "Moldavian license plate number"
+msgstr "Nomor lisensi plat Moldavia"
+
+msgid "Moldavian company types"
+msgstr "Jenis perusahaan Moldavian company"
+
+msgid "Enter a valid IDNO number."
+msgstr "Masukkan nomor IDNO yang sah."
+
+msgid "Enter a valid license plate."
+msgstr "Masukkan lisensi plat yang sah."
+
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
@@ -6021,8 +6587,8 @@ msgstr "Masukkan Nomor Keamanan Sosial yang sah."
 msgid "Invalid checksum for Social Security Number."
 msgstr "Checksum tidak sah untuk Nomor Keamanan Sosial."
 
-msgid "Mexico state (three uppercase letters)"
-msgstr "Negara bagian Meksiko (tiga huruf besar)"
+msgid "Mexico state (three or four uppercase letters)"
+msgstr "Negara Meksiko (tiga atau huruf besar)"
 
 msgid "Mexico zip code"
 msgstr "Kode pos Meksiko"
@@ -6051,6 +6617,9 @@ msgstr "Baja California Sur"
 msgid "Campeche"
 msgstr "Campeche"
 
+msgid "Ciudad de México"
+msgstr "Ciudad de México"
+
 msgid "Chihuahua"
 msgstr "Chihuahua"
 
@@ -6062,9 +6631,6 @@ msgstr "Coahuila"
 
 msgid "Colima"
 msgstr "Colima"
-
-msgid "Distrito Federal"
-msgstr "Distrito Federal"
 
 msgid "Durango"
 msgstr "Durango"
@@ -6135,6 +6701,9 @@ msgstr "Yucatán"
 msgid "Zacatecas"
 msgstr "Zacatecas"
 
+msgid "Invalid MyKad number."
+msgstr "Nomor MyKad tidak sah."
+
 msgid "Dutch zipcode"
 msgstr "Kode zip Belanda"
 
@@ -6143,6 +6712,9 @@ msgstr "Propinsi Belanda"
 
 msgid "Dutch social security number (BSN)"
 msgstr "Dutch social security number (BSN)"
+
+msgid "Dutch license plate"
+msgstr "Lisensi plat Belanda"
 
 msgid "Drenthe"
 msgstr "Drenthe"
@@ -6180,6 +6752,9 @@ msgstr "Zuid-Holland"
 msgid "Enter a valid BSN."
 msgstr "Masukkan nilai sah BSN."
 
+msgid "Enter a valid license plate"
+msgstr "Masukkan lisensi plat yang sah"
+
 msgid "Enter a valid Norwegian social security number."
 msgstr "Masukkan nomor jaminan sosial Norwegia yang sah."
 
@@ -6192,6 +6767,282 @@ msgstr "Angka kendali tidak sah. Masukkan nomor akun bank Norwegia yang sah."
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr ""
 "Panjang tidak sah. Nomor akun bank Norwegia adalah panjangnya 11 angka."
+
+msgid "Enter a postal code in format XXXXX"
+msgstr ""
+
+msgid "Bhaktapur"
+msgstr ""
+
+msgid "Dhading"
+msgstr ""
+
+msgid "Kathmandu"
+msgstr ""
+
+msgid "Kavrepalanchok"
+msgstr ""
+
+msgid "Lalitpur"
+msgstr ""
+
+msgid "Nuwakot"
+msgstr ""
+
+msgid "Rasuwa"
+msgstr ""
+
+msgid "Sindhupalchok"
+msgstr ""
+
+msgid "Banke"
+msgstr ""
+
+msgid "Bardiya"
+msgstr ""
+
+msgid "Dailekh"
+msgstr ""
+
+msgid "Jajarkot"
+msgstr ""
+
+msgid "Surkhet"
+msgstr ""
+
+msgid "Baglung"
+msgstr ""
+
+msgid "Mustang"
+msgstr ""
+
+msgid "Myagdi"
+msgstr ""
+
+msgid "Parbat"
+msgstr ""
+
+msgid "Gorkha"
+msgstr ""
+
+msgid "Kaski"
+msgstr ""
+
+msgid "Lamjung"
+msgstr ""
+
+msgid "Manang"
+msgstr ""
+
+msgid "Syangja"
+msgstr ""
+
+msgid "Tanahu"
+msgstr ""
+
+msgid "Dhanusa"
+msgstr ""
+
+msgid "Dholkha"
+msgstr ""
+
+msgid "Mahottari"
+msgstr ""
+
+msgid "Ramechhap"
+msgstr ""
+
+msgid "Sarlahi"
+msgstr ""
+
+msgid "Sindhuli"
+msgstr ""
+
+msgid "Dolpa"
+msgstr ""
+
+msgid "Humla"
+msgstr ""
+
+msgid "Jumla"
+msgstr ""
+
+msgid "Kalikot"
+msgstr ""
+
+msgid "Mugu"
+msgstr ""
+
+msgid "Bhojpur"
+msgstr ""
+
+msgid "Dhankuta"
+msgstr ""
+
+msgid "Morang"
+msgstr ""
+
+msgid "Sankhuwasabha"
+msgstr ""
+
+msgid "Sunsari"
+msgstr ""
+
+msgid "Terhathum"
+msgstr ""
+
+msgid "Arghakhanchi"
+msgstr ""
+
+msgid "Gulmi"
+msgstr ""
+
+msgid "Kapilvastu"
+msgstr ""
+
+msgid "Nawalparasi"
+msgstr ""
+
+msgid "Palpa"
+msgstr ""
+
+msgid "Rupandehi"
+msgstr ""
+
+msgid "Baitadi"
+msgstr ""
+
+msgid "Dadeldhura"
+msgstr ""
+
+msgid "Darchula"
+msgstr ""
+
+msgid "Kanchanpur"
+msgstr ""
+
+msgid "Jhapa"
+msgstr ""
+
+msgid "Panchthar"
+msgstr ""
+
+msgid "Taplejung"
+msgstr ""
+
+msgid "Bara"
+msgstr ""
+
+msgid "Chitwan"
+msgstr ""
+
+msgid "Makwanpur"
+msgstr ""
+
+msgid "Parsa"
+msgstr ""
+
+msgid "Rautahat"
+msgstr ""
+
+msgid "Dang Deukhuri"
+msgstr ""
+
+msgid "Pyuthan"
+msgstr ""
+
+msgid "Rolpa"
+msgstr ""
+
+msgid "Rukum"
+msgstr ""
+
+msgid "Salyan"
+msgstr ""
+
+msgid "Khotang"
+msgstr ""
+
+msgid "Okhaldhunga"
+msgstr ""
+
+msgid "Saptari"
+msgstr ""
+
+msgid "Siraha"
+msgstr ""
+
+msgid "Solukhumbu"
+msgstr ""
+
+msgid "Udayapur"
+msgstr ""
+
+msgid "Achham"
+msgstr ""
+
+msgid "Bajhang"
+msgstr ""
+
+msgid "Bajura"
+msgstr ""
+
+msgid "Doti"
+msgstr ""
+
+msgid "Kailali"
+msgstr ""
+
+msgid "Bagmati"
+msgstr ""
+
+msgid "Gandaki"
+msgstr ""
+
+msgid "Karnali"
+msgstr ""
+
+msgid "Lumbini"
+msgstr ""
+
+msgid "Province 1"
+msgstr ""
+
+msgid "Province 2"
+msgstr ""
+
+msgid "Sudurpaschim"
+msgstr ""
+
+msgid "Bheri"
+msgstr ""
+
+msgid "Dhawalagiri"
+msgstr ""
+
+msgid "Janakpur"
+msgstr ""
+
+msgid "Koshi"
+msgstr ""
+
+msgid "Mahakali"
+msgstr ""
+
+msgid "Mechi"
+msgstr ""
+
+msgid "Narayani"
+msgstr ""
+
+msgid "Rapti"
+msgstr ""
+
+msgid "Sagarmatha"
+msgstr ""
+
+msgid "Seti"
+msgstr ""
 
 msgid "Invalid post code."
 msgstr "Kode pos tidak sah."
