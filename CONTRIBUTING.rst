@@ -37,11 +37,11 @@ the ``-l`` option::
     $ tox -l
     docs
     ...
-    py36-master
+    py311-master
 
 You can run each environment with the ``-e`` option::
 
-    $ tox -e py36-1.11  # runs the tests only on Python 3.6 and Django 1.11.x
+    $ tox -e py311-4.2  # runs the tests only on Python 3.11 and Django 4.2.x
 
 Optionally you can also specify a country whose tests you want to run::
 
