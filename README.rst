@@ -33,6 +33,8 @@ Package Index: https://pypi.python.org/pypi/django-localflavor
 You're encouraged to use the latest version of this package unless you need
 support for an unsupported version of Django.
 
+**2023-04-22 - 4.0**: Django 3.2, 4.0, 4.1 & 4.2
+
 **2021-05-28 - 3.1**: Django 2.2, 3.0, 3.1 & 3.2
 
 This release contains breaking data changes for the MX and IN flavors.

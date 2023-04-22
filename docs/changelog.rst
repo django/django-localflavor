@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.0   (unreleased)
+4.0   (2023-04-22)
 ------------------
 
 New flavors:
@@ -87,7 +87,7 @@ Other changes:
 - Use 'return value' when value is in the empty_values list
   (`gh-461 <https://github.com/django/django-localflavor/pull/461>`_).
 
-- Dropped support for Dajngo 2.2, 3.0 and 3.1.
+- Dropped support for Django 2.2, 3.0 and 3.1.
 
 - Dropped support for Python 3.5.
 
