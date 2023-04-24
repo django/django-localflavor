@@ -14,7 +14,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Fix Belarus passport field description punctuation
+  (`gh-484 <https://github.com/django/django-localflavor/pull/484>`_).
 
 Other changes:
 
