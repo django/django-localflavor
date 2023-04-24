@@ -1,7 +1,28 @@
 Changelog
 =========
 
-4.0   (unreleased)
+4.1   (unreleased)
+------------------
+
+New flavors:
+
+- None
+
+New fields for existing flavors:
+
+- None
+
+Modifications to existing flavors:
+
+- Fix Belarus passport field description punctuation
+  (`gh-484 <https://github.com/django/django-localflavor/pull/484>`_).
+
+Other changes:
+
+- None
+
+
+4.0   (2023-04-22)
 ------------------
 
 New flavors:
@@ -25,8 +46,9 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- Fix Belarus passport field description punctuation
-  (`gh-484 <https://github.com/django/django-localflavor/pull/484>`_).
+- Properly validate IBANs using BBAN to ensure invalid IBANs cannot be entered,
+  updated IBAN_SEPA_COUNTRIES and IBAN_COUNTRY_CODE_LENGTH to latest data
+  (`gh-486 <https://github.com/django/django-localflavor/pull/486>`_).
 - Fix typo in Marijampolė county name in LTCountySelect
   (`gh-480 <https://github.com/django/django-localflavor/pull/480>`_).
 - Add support for new Finnish identity codes
@@ -86,9 +108,12 @@ Other changes:
 - Use 'return value' when value is in the empty_values list
   (`gh-461 <https://github.com/django/django-localflavor/pull/461>`_).
 
-- Support for Python 3.5 and 3.6 was dropped.
+- Dropped support for Django 2.2, 3.0 and 3.1.
 
-- Support for Python 3.10 was added.
+- Dropped support for Python 3.5.
+
+- Added support for Python 3.10 and 3.11.
+
 
 3.1   (2021-05-28)
 ------------------

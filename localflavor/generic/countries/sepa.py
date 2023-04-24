@@ -1,6 +1,7 @@
 #: European Payments Council list of SEPA scheme countries as of 2 Sep 2015.
 #: http://www.europeanpaymentscouncil.eu/index.cfm/knowledge-bank/epc-documents/epc-list-of-sepa-scheme-countries/
 IBAN_SEPA_COUNTRIES = (
+    'AD',  # Andorra
     'AT',  # Austria
     'BE',  # Belgium
     'BG',  # Bulgaria
@@ -14,7 +15,7 @@ IBAN_SEPA_COUNTRIES = (
     'FI',  # Finland + Åland Islands
     'FR',  # France + French Guiana, Guadeloupe, Martinique, Mayotte, Réunion, Saint Barthélemy,
            #          Saint Martin (French part), Saint Pierre and Miquelon
-    'GB',  # United Kingdom
+    'GB',  # United Kingdom + Guernsey, Isle of Man, Jersey
     'GI',  # Gibraltar
     'GR',  # Greece
     'HR',  # Croatia
@@ -31,10 +32,11 @@ IBAN_SEPA_COUNTRIES = (
     'NL',  # Netherlands
     'NO',  # Norway
     'PL',  # Poland
-    'PT',  # Portugal + Azores + Madeira
+    'PT',  # Portugal + Azores, Madeira
     'RO',  # Romania
     'SE',  # Sweden
     'SI',  # Slovenia
     'SK',  # Slovakia
     'SM',  # San Marino
+    'VA',  # Vatican City State
 )
