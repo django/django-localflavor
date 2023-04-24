@@ -1,6 +1,26 @@
 Changelog
 =========
 
+4.1   (unreleased)
+------------------
+
+New flavors:
+
+- None
+
+New fields for existing flavors:
+
+- None
+
+Modifications to existing flavors:
+
+- None
+
+Other changes:
+
+- None
+
+
 4.0   (2023-04-22)
 ------------------
 
@@ -92,6 +112,7 @@ Other changes:
 - Dropped support for Python 3.5.
 
 - Added support for Python 3.10 and 3.11.
+
 
 3.1   (2021-05-28)
 ------------------
