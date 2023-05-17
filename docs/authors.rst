@@ -82,6 +82,7 @@ Authors
 * Kevin Ramirez Zavalza
 * László Ratskó
 * Lefteris Nikoltsios
+* Lucas Dantas Gueiros
 * Luis Alberto Santana
 * Łukasz Langa
 * Luke Benstead

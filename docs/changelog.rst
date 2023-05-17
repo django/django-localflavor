@@ -16,6 +16,9 @@ Modifications to existing flavors:
 
 - Fix Belarus passport field description punctuation
   (`gh-484 <https://github.com/django/django-localflavor/pull/484>`_).
+- Add min and max length to brazilian Postal Code form field
+- Brazilian model fields CPF, CNPJ and PostalCode create correct form
+  field when used by DjangoModelForm
 
 Other changes:
 
