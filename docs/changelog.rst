@@ -30,7 +30,11 @@ Modifications to existing flavors:
   (`gh-515 <https://github.com/django/django-localflavor/pull/515>`_).
 - Allow formatted values in `FRSIRENField` and `FRSIRETField` to be saved
   (`gh-518 <https://github.com/django/django-localflavor/pull/518>`_).
-
+- Add min and max length to brazilian Postal Code form field
+  (`gh-490 <https://github.com/django/django-localflavor/pull/490>`_).
+- Brazilian model fields CPF, CNPJ and PostalCode create correct form
+  field when used by DjangoModelForm
+  (`gh-490 <https://github.com/django/django-localflavor/pull/490>`_).
 
 Other changes:
 
