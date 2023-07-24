@@ -4,6 +4,7 @@ from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
 
 from .lk_provinces import PROVINCES
+from .lk_districts import DISTRICTS
 
 
 class LKPostalCodeFormField(RegexField):
@@ -30,3 +31,13 @@ class LKProvinceSelect(Select):
 
     def __init__(self, attrs=None):
         super().__init__(attrs, choices=PROVINCES)
+
+
+class LKDistrictsSelect(Select):
+    """
+    A Select widget with option to select a districts from
+    list of all districts of Sri Lanka.
+    """
+
+    def __init__(self, attrs=None):
+        super().__init__(attrs, choices=DISTRICTS)
