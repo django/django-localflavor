@@ -33,7 +33,7 @@ class LKProvinceSelect(Select):
         super().__init__(attrs, choices=PROVINCES)
 
 
-class LKDistrictsSelect(Select):
+class LKDistrictSelect(Select):
     """
     A Select widget with option to select a districts from
     list of all districts of Sri Lanka.
