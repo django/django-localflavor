@@ -74,3 +74,9 @@ WESTERN_DISTRICTS = [
     ('gampaha', _('Gampaha')),
     ('kaluthara', _('Kaluthara')),
 ]
+
+# Combining all the district lists from different provinces into a single list
+DISTRICTS =  CENTRAL_DISTRICTS + NORTH_CENTRAL_DISTRICTS + NORTHERN_DISTRICTS + EASTERN_DISTRICTS + NORTH_WESTERN_DISTRICTS + SOUTHERN_DISTRICTS + UVA_DISTRICTS + SABARAGAMUWA_DISTRICTS + WESTERN_DISTRICTS
+
+# Alphabetically sorting the list of all districts based on their names (first element of each tuple)
+DISTRICTS.sort(key=lambda district: district[0])
