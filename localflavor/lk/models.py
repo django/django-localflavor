@@ -7,6 +7,8 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from .forms import LKPostalCodeFormField
+from .lk_districts import DISTRICTS
+from .lk_provinces import PROVINCES
 
 
 class LKPostalCodeValidator(RegexValidator):
@@ -39,3 +41,39 @@ class LKPostalCodeField(models.CharField):
         defaults = {'form_class': LKPostalCodeFormField}
         defaults.update(kwargs)
         return super().formfield(**defaults)
+
+
+class LKDistrictField(models.CharField):
+    """
+        A model field that provides an option to select 
+        a district from the list of all Sri Lanka districts.
+        .. versionadded:: 4.0
+    """
+
+    def __init__(self, *args, **kwargs):
+        kwargs['choices'] = DISTRICTS
+        kwargs['max_length'] = 15
+        super().__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super().deconstruct()
+        del kwargs['choices']
+        return name, path, args, kwargs
+
+
+class LKProvinceField(models.CharField):
+    """
+        A model field that provides an option to select 
+        a province from the list of all Sri Lanka provinces.
+        .. versionadded:: 4.0
+    """
+
+    def __init__(self, *args, **kwargs):
+        kwargs['choices'] = PROVINCES
+        kwargs['max_length'] = 15
+        super().__init__(*args, **kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super().deconstruct()
+        del kwargs['choices']
+        return name, path, args, kwargs
