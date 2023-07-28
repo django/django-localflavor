@@ -94,8 +94,6 @@ Other changes:
 
 New flavors:
 
-- Sri Lanka LocalFlavor: Support for Sri Lanka added
-  (`gh-493 <https://github.com/django/django-localflavor/pull/493>`_).
 - Nepal LocalFlavor: Support for Nepal added
   (`gh-451 <https://github.com/django/django-localflavor/pull/451>`_).
 - Belarus localflavor
