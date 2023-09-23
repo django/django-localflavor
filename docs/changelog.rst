@@ -19,7 +19,7 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Dropped support for Python 3.6 and 3.7.
 
 
 4.0   (2023-04-22)
