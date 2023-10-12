@@ -17,7 +17,6 @@ ke_national_id_regex = re.compile(r"^\d{7,8}$")
 class KEPostalCodeField(CharField):
     """
     A form field that validates its input as a Kenyan Postal Code.
-
     """
 
     default_error_messages = {
@@ -66,6 +65,7 @@ class KEKRAPINField(CharField):
         POXXXXXXXX - Company/Institution
 
         AXXXXXXXXX - Individuals
+        
     """
 
     default_error_messages = {
