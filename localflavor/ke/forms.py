@@ -17,6 +17,7 @@ ke_national_id_regex = re.compile(r"^\d{7,8}$")
 class KEPostalCodeField(CharField):
     """
     A form field that validates its input as a Kenyan Postal Code.
+    .. versionadded:: 4.0
     """
 
     default_error_messages = {
@@ -65,6 +66,8 @@ class KEKRAPINField(CharField):
         POXXXXXXXX - Company/Institution
 
         AXXXXXXXXX - Individuals
+
+    .. versionadded:: 4.0
         
     """
 
@@ -101,7 +104,7 @@ class KEKRAPINField(CharField):
 class KENationalIDNumberField(CharField):
     """
     A form field that validates its input as a Kenyan National ID Number.
-
+    .. versionadded:: 4.0
     """
 
     default_error_messages = {
@@ -127,7 +130,7 @@ class KENationalIDNumberField(CharField):
 class KEPassportNumberField(CharField):
     """
     A form field that validates its input as a Kenyan Passport Number.
-
+    .. versionadded:: 4.0
     """
 
     default_error_messages = {
@@ -189,6 +192,7 @@ class KEPayBillNumber(RegexField):
 class KECountySelectField(Select):
     """
     A Select widget listing Kenyan Counties as the choices
+    .. versionadded:: 4.0
     """
 
     def __init__(self, attrs=None) -> None:

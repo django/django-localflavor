@@ -15,6 +15,7 @@ from .forms import (
 class KEPostalCodeField(CharField):
     """
     A model field that stores the Kenyan Postal Codes
+    .. versionadded:: 4.0
     """
     description = _("Kenya Postal Code")
 
