@@ -3046,7 +3046,7 @@ msgid "Sumba"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
+msgstr "Indtast et postnr. i format XXXX."
 
 msgid "Ecuadorian province"
 msgstr ""
