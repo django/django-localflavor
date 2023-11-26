@@ -53,7 +53,7 @@ class BYLocalFlavorTests(TestCase):
     def test_BYRegions_select(self):
         """Test that BYRegionField has valid choices"""
         choices = self.form.fields.get('region').choices
-        self.assertEqual(tuple(choices[1:]), forms.BY_REGIONS_CHOICES)
+        self.assertEqual(tuple(choices)[1:], forms.BY_REGIONS_CHOICES)
 
     def test_BYRegionSelect(self):
         self.maxDiff = None

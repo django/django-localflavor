@@ -98,6 +98,7 @@ Authors
 * Nishit Shah
 * Olivier Sels
 * Olle Vidner
+* Paolo Melchiorre
 * Paul Cunnane
 * Paul Donohue
 * Paulo Poiati
