@@ -20,6 +20,9 @@ Modifications to existing flavors:
 Other changes:
 
 - Dropped support for Python 3.6 and 3.7.
+- Dropped support for Django 4.0.
+- Added support for Python 3.12.
+- Added support for Django 5.0.
 
 
 4.0   (2023-04-22)
