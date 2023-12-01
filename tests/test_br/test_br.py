@@ -1,8 +1,8 @@
 from django.test import SimpleTestCase
 
 from localflavor.br import models
-from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
-                                  BRZipCodeField)
+from localflavor.br.forms import (BRCNPJField, BRCPFField, BRLandLineField, BRProcessoField, BRStateChoiceField, BRStateSelect,
+                                  BRZipCodeField, BRCellPhoneField)
 from tests.test_br.forms import BRPersonProfileForm
 
 
@@ -222,7 +222,36 @@ class BRLocalFlavorTests(SimpleTestCase):
 
         for case in data_to_test:
             form = BRPersonProfileForm(case)
-            self.assertTrue(form.is_valid())
+            self.assertTrue(form.is_valid()) 
+
+    def test_CellPhoneField(self):
+        error_format = ["Invalid Cell Phone, number needs to be in the format (XX)XXXXX-XXXX."]
+        valid = {
+            '(11)99919-2696': '(11)99919-2696',
+        }
+        invalid = {
+            '(08)99919-2696': error_format,
+            '(11)89919-2696': error_format,
+            '(ab)cdefg-hijk': error_format,
+            '(11)99919 2696': error_format,
+            '(11) 99919-2696': error_format,
+        }
+        self.assertFieldOutput(BRCellPhoneField, valid, invalid)
+    
+    def test_LandLineField(self):
+        error_format = ['Invalid Landline, number needs to be in the format (XX)XXXX-XXXX.']
+        valid = {
+            '(11)3223-3946': '(11)3223-3946',
+        }
+        invalid = {
+            '(08)99919-2696': error_format,
+            '(11)6919-2696': error_format,
+            '(ab)cdefg-hijk': error_format,
+            '(11)3919 2696': error_format,
+            '(11) 3919-2696': error_format,
+        }
+        self.assertFieldOutput(BRLandLineField, valid, invalid)
+        
 
 
 class BRLocalFlavorModelTests(SimpleTestCase):
