@@ -193,7 +193,8 @@ class FRSIRENENumberMixin:
             return value
 
         value = value.replace(' ', '').replace('-', '')
-        if not self.r_valid.match(value) or not luhn.is_valid(value):
+        if ((not self.r_valid.match(value) or not luhn.is_valid(value)) and not
+                (value.startswith("356000000") and sum(int(x) for x in value) % 5 == 0)):
             raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value
 
