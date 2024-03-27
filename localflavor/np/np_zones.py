@@ -19,7 +19,7 @@ ZONES = [
     ('bagmati', _('Bagmati')),
     ('bheri', _('Bheri')),
     ('dhawalagiri', _('Dhawalagiri')),
-    ('dandaki', _('Gandaki')),
+    ('gandaki', _('Gandaki')),
     ('janakpur', _('Janakpur')),
     ('karnali', _('Karnali')),
     ('koshi', _('Koshi')),
