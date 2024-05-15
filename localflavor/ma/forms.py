@@ -84,7 +84,7 @@ class MACinNumberField(RegexField):
            with the first digit not being zero.
 
          - as implemented in the official government site "https://www.cnie.ma/"
-
+        .. versionadded:: 4.1
     """
 
     default_error_messages = {
