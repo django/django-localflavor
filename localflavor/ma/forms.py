@@ -90,10 +90,10 @@ class MACinNumberField(RegexField):
     default_error_messages = {
         'invalid': _('Enter a valid Moroccan CIN number.'),
     }
-    cin_pattern = r'^[A-Za-z]{1,2}[1-9]\d{0,6}$'
+    cin_pattern = r'^[A-Za-z]{1,2}[1-9][0-9]{0,6}$'
 
     def __init__(self, **kwargs):
-        kwargs.setdefault('label', _('Cin Number'))
+        kwargs.setdefault('label', _('CIN Number'))
         kwargs['max_length'] = 8
         kwargs['min_length'] = 2
         super().__init__(self.cin_pattern, **kwargs)
