@@ -1,6 +1,7 @@
 from django.test import SimpleTestCase
 
-from localflavor.ma.forms import MAPostalCodeField, MAProvinceField, MAProvinceSelect, MARegionField, MARegionSelect
+from localflavor.ma.forms import MAPostalCodeField, MAProvinceField, MAProvinceSelect, MARegionField, MARegionSelect, \
+    MACinNumberField
 
 PROVINCE_SELECT_OUTPUT = '''
     <select name="province">
@@ -99,6 +100,7 @@ REGION_SELECT_OUTPUT = '''
     </select>
 '''
 
+
 class MALocalFlavorTests(SimpleTestCase):
     def test_MAPostalCodeField(self):
         error_format = ['Enter a postal code in the format XXXXX.']
@@ -128,3 +130,32 @@ class MALocalFlavorTests(SimpleTestCase):
     def test_MARegionSelect(self):
         f = MARegionSelect()
         self.assertHTMLEqual(f.render('region', '04'), REGION_SELECT_OUTPUT)
+
+    def test_MACinNumberField(self):
+        error_format = ['Enter a valid Moroccan CIN number.']
+        valid = {
+            'D1': 'D1',
+            'DZ1': 'DZ1',
+            'D23': 'D23',
+            'DR23': 'DR23',
+            'D345': 'D345',
+            'DR345': 'DR345',
+            'D3454': 'D3454',
+            'DT3454': 'DT3454',
+            'D34546': 'D34546',
+            'DG34546': 'DG34546',
+            'D345467': 'D345467',
+            'DH345467': 'DH345467',
+            'D3454673': 'D3454673',
+
+        }
+        invalid = {
+            '9': ['Ensure this value has at least 2 characters (it has 1).'] + error_format,
+            'T': ['Ensure this value has at least 2 characters (it has 1).'] + error_format,
+            '903': error_format,
+            'D034': error_format,
+            'DR034': error_format,
+            'RER45': error_format,
+            'T23456786': ['Ensure this value has at most 8 characters (it has 9).'] + error_format,
+        }
+        self.assertFieldOutput(MACinNumberField, valid, invalid)

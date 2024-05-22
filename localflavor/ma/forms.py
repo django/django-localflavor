@@ -74,3 +74,26 @@ class MARegionField(CharField):
     def __init__(self, **kwargs):
         kwargs.setdefault('label', _('Select Region'))
         super().__init__(**kwargs)
+
+
+class MACinNumberField(RegexField):
+    """
+        CIN number: (Numéro de la Carte D'Identité Nationale) The CIN represents the ID of a Moroccan citizen.
+
+         - It is an 8-max-length string that starts with one or two Latin letters followed by digits,
+           with the first digit not being zero.
+
+         - as implemented in the official government site "https://www.cnie.ma/"
+        .. versionadded:: 4.1
+    """
+
+    default_error_messages = {
+        'invalid': _('Enter a valid Moroccan CIN number.'),
+    }
+    cin_pattern = r'^[A-Za-z]{1,2}[1-9][0-9]{0,6}$'
+
+    def __init__(self, **kwargs):
+        kwargs.setdefault('label', _('CIN Number'))
+        kwargs['max_length'] = 8
+        kwargs['min_length'] = 2
+        super().__init__(self.cin_pattern, **kwargs)
