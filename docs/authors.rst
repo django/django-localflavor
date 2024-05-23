@@ -33,6 +33,7 @@ Authors
 * Ben Konrath
 * Bruno M. Custódio
 * Burhan Khalid
+* Célia Prat
 * Claude Paroz
 * Daniel Ampuero
 * Daniela Ponader

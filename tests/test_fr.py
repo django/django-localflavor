@@ -271,10 +271,12 @@ class FRLocalFlavorTests(SimpleTestCase):
             '752932715': '752932715',
             '752 932 715': '752932715',
             '752-932-715': '752932715',
+            '35600000014597' : '35600000014597'
         }
         invalid = {
             '1234': error_format,               # wrong size
             '752932712': error_format,     # Bad luhn on SIREN
+            '35600000014596' : error_format
         }
         self.assertFieldOutput(FRSIRENField, valid, invalid)
 
