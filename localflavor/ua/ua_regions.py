@@ -13,7 +13,7 @@ UA_REGION_CHOICES = (
     ('UA-65', _('Kherson Oblast')),
     ('UA-68', _('Khmelnytskyi Oblast')),
     ('UA-35', _('Kirovohrad Oblast')),
-    ('UA-32', _('Kiev Oblast')),
+    ('UA-32', _('Kyiv Oblast')),
     ('UA-09', _('Luhansk Oblast')),
     ('UA-46', _('Lviv Oblast')),
     ('UA-48', _('Mykolaiv Oblast')),
@@ -28,6 +28,6 @@ UA_REGION_CHOICES = (
     ('UA-23', _('Zaporizhia Oblast')),
     ('UA-18', _('Zhytomyr Oblast')),
     ('UA-43', _('Autonomous Republic of Crimea')),
-    ('UA-30', _('Kiev')),
+    ('UA-30', _('Kyiv')),
     ('UA-40', _('Sevastopol'))
 )

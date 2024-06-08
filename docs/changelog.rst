@@ -16,6 +16,7 @@ Modifications to existing flavors:
 
 - Fix Belarus passport field description punctuation
   (`gh-484 <https://github.com/django/django-localflavor/pull/484>`_).
+- Change `Kiev` to `Kyiv` 🇺🇦 according to ISO_3166-2:UA
 
 Other changes:
 

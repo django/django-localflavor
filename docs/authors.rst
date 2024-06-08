@@ -43,6 +43,7 @@ Authors
 * Diederik van der Boor
 * d.merc
 * Dmitry Dygalo
+* Dmytro Litvinov
 * Dominick Rivard
 * Douglas Miranda
 * Elliott Fawcett
