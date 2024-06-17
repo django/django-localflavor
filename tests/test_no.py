@@ -75,26 +75,22 @@ class NOLocalFlavorTests(SimpleTestCase):
         with override('en'):
             f = NOMunicipalitySelect()
             out = '''<select name="municipalities">
-    <option value="akershus" selected="selected">Akershus</option>
-    <option value="austagder">Aust-Agder</option>
+    <option value="agder" selected="selected">Agder</option>
+    <option value="akershus">Akershus</option>
     <option value="buskerud">Buskerud</option>
     <option value="finnmark">Finnmark</option>
-    <option value="hedmark">Hedmark</option>
-    <option value="hordaland">Hordaland</option>
+    <option value="innlandet">Innlandet</option>
     <option value="janmayen">Jan Mayen</option>
     <option value="moreogromsdal">Møre og Romsdal</option>
-    <option value="nordtrondelag">Nord-Trøndelag</option>
     <option value="nordland">Nordland</option>
-    <option value="oppland">Oppland</option>
     <option value="oslo">Oslo</option>
+    <option value="ostfold">Østfold</option>
     <option value="rogaland">Rogaland</option>
-    <option value="sognogfjordane">Sogn og Fjordane</option>
     <option value="svalbard">Svalbard</option>
-    <option value="sortrondelag">Sør-Trøndelag</option>
     <option value="telemark">Telemark</option>
     <option value="troms">Troms</option>
-    <option value="vestagder">Vest-Agder</option>
+    <option value="trondelag">Trøndelag</option>
     <option value="vestfold">Vestfold</option>
-    <option value="ostfold">Østfold</option>
+    <option value="vestland">Vestland</option>
 </select>'''
         self.assertHTMLEqual(f.render('municipalities', 'akershus'), out)
