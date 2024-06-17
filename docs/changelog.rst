@@ -48,6 +48,7 @@ Modifications to existing flavors:
   (`gh-490 <https://github.com/django/django-localflavor/pull/490>`_).
 - Update list of Latvia municipalities after municipal reform from 2021
   (`gh-519 <https://github.com/django/django-localflavor/pull/519>`_).
+- Update list of Norwegian counties(fylker) `according to changes at the start of 2024 <https://en.wikipedia.org/wiki/Counties_of_Norway#List_of_counties>`_
 
 Other changes:
 
