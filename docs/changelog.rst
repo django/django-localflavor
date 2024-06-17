@@ -49,6 +49,7 @@ Modifications to existing flavors:
 - Update list of Latvia municipalities after municipal reform from 2021
   (`gh-519 <https://github.com/django/django-localflavor/pull/519>`_).
 - Update list of Norwegian counties(fylker) `according to changes at the start of 2024 <https://en.wikipedia.org/wiki/Counties_of_Norway#List_of_counties>`_ (`gh-509 <https://github.com/django/django-localflavor/pull/509/files>`_)
+  The changed counties are as follows: austagder and vestagder has been removed and combined into agder. hordaland and sognogfjordane has been removed and combined into vestland. nordtrondelag and sortrondelag has been removed and combined into trondelag. hedmark and oppland has been removed and combined into innlandet
 
 Other changes:
 
