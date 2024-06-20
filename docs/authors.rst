@@ -130,3 +130,4 @@ Authors
 * Vladimir Nani
 * Xabi Bello
 * Abhineet Tamrakar
+* Leonardo Paz Estevam
