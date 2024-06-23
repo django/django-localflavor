@@ -6,7 +6,8 @@ Changelog
 
 New flavors:
 
-- None
+- Sri Lanka LocalFlavor: Support for Sri Lanka added
+  (`gh-493 <https://github.com/django/django-localflavor/pull/493>`_).
 
 New fields for existing flavors:
 
