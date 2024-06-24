@@ -18,7 +18,7 @@ PROVINCES = [
     ('gandaki', _('Gandaki')),
     ('karnali', _('Karnali')),
     ('lumbini', _('Lumbini')),
-    ('province1', _('Province 1')),
-    ('province2', _('Province 2')),
+    ('koshi', _('Koshi')),
+    ('madhesh', _('Madhesh')),
     ('sudurpaschim', _('Sudurpaschim')),
 ]
