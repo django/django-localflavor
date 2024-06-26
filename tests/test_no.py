@@ -93,4 +93,4 @@ class NOLocalFlavorTests(SimpleTestCase):
     <option value="vestfold">Vestfold</option>
     <option value="vestland">Vestland</option>
 </select>'''
-        self.assertHTMLEqual(f.render('municipalities', 'akershus'), out)
+        self.assertHTMLEqual(f.render('municipalities', 'agder'), out)
