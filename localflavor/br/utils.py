@@ -23,7 +23,7 @@ def get_states_of_brazil(federative_unit=None, capital_letter=False):
     if federative_unit is None:
         return state_choices_available
 
-    federative_unit = federative_unit.upper()
+    federative_unit = federative_unit.upper() if isinstance(federative_unit, str) else ""
 
     if federative_unit in state_choices_available:
         return state_choices_available[federative_unit]
