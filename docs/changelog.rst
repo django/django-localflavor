@@ -11,6 +11,8 @@ New flavors:
 New fields for existing flavors:
 
 - Added CIN Number field in Morocco flavor (`gh-705 <https://github.com/django/django-localflavor/pull/507>`_).
+- Added get_states_of_brazil to br.utils to return a state or all available options with some settings
+  ()
 
 Modifications to existing flavors:
 
