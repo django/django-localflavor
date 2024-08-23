@@ -271,10 +271,12 @@ class FRLocalFlavorTests(SimpleTestCase):
             '752932715': '752932715',
             '752 932 715': '752932715',
             '752-932-715': '752932715',
+            '356000000': '356000000'
         }
         invalid = {
             '1234': error_format,               # wrong size
             '752932712': error_format,     # Bad luhn on SIREN
+            '35600000014597' : error_format
         }
         self.assertFieldOutput(FRSIRENField, valid, invalid)
 
@@ -294,11 +296,13 @@ class FRLocalFlavorTests(SimpleTestCase):
             '75293271500010': '75293271500010',
             '752 932 715 00010': '75293271500010',
             '752-932-715-00010': '75293271500010',
+            '35600000014597' : '35600000014597', # Special case La Poste
         }
         invalid = {
             '1234': error_format,               # wrong size
             '75293271200017': error_format,     # Bad luhn on SIREN
             '75293271000010': error_format,     # Bad luhn on whole
+            '35600000014596' : error_format     # Special case La Poste
         }
         self.assertFieldOutput(FRSIRETField, valid, invalid)
 
