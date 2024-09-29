@@ -7,6 +7,8 @@ from django.utils.translation import gettext_lazy as _
 postal_code_re = re.compile(r'^\d{5}-\d{3}$')
 cnpj_digits_re = re.compile(r'^(\d{2})[.-]?(\d{3})[.-]?(\d{3})/(\d{4})-(\d{2})$')
 cpf_digits_re = re.compile(r'^(\d{3})\.(\d{3})\.(\d{3})-(\d{2})$')
+landline_number_re = re.compile(r'^[(][1-9][1-9][)][2-5]\d{3}-\d{4}$')
+cell_phone_number_re = re.compile(r'^[(][1-9][1-9][)]9\d{4}-\d{4}$')
 
 
 def dv_maker(v):
@@ -103,4 +105,27 @@ class BRCPFValidator(RegexValidator):
         if value[-2:] != orig_dv:
             raise ValidationError(self.message, code='invalid')
         if value.count(value[0]) == 11:
-            raise ValidationError(self.message, code='invalid')
+            raise ValidationError(self.message, code='invalid') 
+
+
+class BRLandLineValidator(RegexValidator): 
+    """
+    Validator for brazilian LandLine number.
+
+    """
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args,
+        regex = landline_number_re,
+        message = _("Invalid Landline, number needs to be in the format (XX)XXXX-XXXX."),  
+        **kwargs)
+
+class BRCellPhoneValidator(RegexValidator):
+    """
+    Validator for brazilian Cell Phone number.
+
+    """
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args,
+            regex = cell_phone_number_re,
+            message = _("Invalid Cell Phone, number needs to be in the format (XX)XXXXX-XXXX."),  
+            **kwargs)
