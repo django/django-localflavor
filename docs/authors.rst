@@ -96,6 +96,7 @@ Authors
 * Matias Dinota
 * Michał Sałaban
 * Mike Lissner
+* Mohammed Al-Abdulhadi
 * Morgane Alonso
 * Naglis Jonaitis
 * Nishit Shah

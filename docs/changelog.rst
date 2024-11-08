@@ -19,6 +19,8 @@ Modifications to existing flavors:
 - Change `Kiev` to `Kyiv` 🇺🇦 according to ISO_3166-2:UA
 - Accept French Postal Services identifiers in forms
   (`gh-505 <https://github.com/django/django-localflavor/pull/505>`_).
+- Extended validation of Kuwaiti Civil ID to avoid allowing invalid century Civil IDs
+- Added birthdate extraction function from Kuwaiti Civil ID
 
 Other changes:
 
