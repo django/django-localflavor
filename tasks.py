@@ -64,3 +64,12 @@ def make_translations(c, locale='en'):
 @task
 def docs(c):
     c.run('cd docs; make html; cd ..')
+
+@task
+def prospector(c):
+    c.run('prospector --profile .prospector.yaml localflavor')
+
+@task
+def prospector_pylint(c):
+    """ Outputs warnings in pylint format which is useful for getting clickable links to files in some IDEs. """
+    c.run('prospector --profile .prospector.yaml --output pylint localflavor')
