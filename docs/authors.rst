@@ -105,6 +105,7 @@ Authors
 * Paul Cunnane
 * Paul Donohue
 * Paulo Poiati
+* Pedro Henrique Vicente de Sousa
 * Peter J. Farrell
 * Rael Max
 * Ramiro Morales
