@@ -62,3 +62,18 @@ class RUAlienPassportNumberField(RegexField):
 
     def __init__(self, **kwargs):
         super().__init__(r'^\d{2} \d{7}$', **kwargs)
+
+
+class RUNewOMCNumberField(RegexField):
+    """
+    Russian insurance policy number format. 
+
+    XXXXXXXXXXXXXXXX (16 digits) where X - any digit.
+    """
+
+    default_error_messages = {
+        'invalid': _('Enter a OMC number in the format XXXXXXXXXXXXXXXX (16 digits.)')
+    }
+
+    def __init__(self, **kwargs): 
+        super().__init__(r'^\d{16}$', **kwargs)
