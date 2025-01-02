@@ -32,6 +32,7 @@ Other changes:
 ------------------
 
 New flavors:
+- Kenya localflavor
 
 - Nepal LocalFlavor: Support for Nepal added
   (`gh-451 <https://github.com/django/django-localflavor/pull/451>`_).
