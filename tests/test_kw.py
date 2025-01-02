@@ -1,10 +1,38 @@
+from datetime import date
+
 from django.test import SimpleTestCase
 
 from localflavor.kw.forms import KWAreaSelect, KWCivilIDNumberField, KWGovernorateSelect
+from localflavor.kw.utils import is_valid_civil_id, get_birthdate_from_civil_id
 
 
 class KWLocalFlavorTests(SimpleTestCase):
     maxDiff = None
+
+    def test_civil_id_checksum_valid(self):
+        self.assertTrue(is_valid_civil_id('286101901541'))
+        self.assertTrue(is_valid_civil_id('300092400929'))
+        self.assertTrue(is_valid_civil_id('282040701483'))
+
+    def test_civil_id_checksum_invalid(self):
+        self.assertFalse(is_valid_civil_id('486101910006'))
+        self.assertFalse(is_valid_civil_id('289332013455'))
+        self.assertFalse(is_valid_civil_id('286191911111'))
+
+    def test_get_birthdate_from_civil_id(self):
+        self.assertEqual(
+            get_birthdate_from_civil_id('286101901541'),
+            date(1986, 10, 19)
+        )
+        self.assertEqual(
+            get_birthdate_from_civil_id('304022600325'),
+            date(2004, 2, 26)
+        )
+
+    def test_get_birthdate_from_civil_id_invalid_century(self):
+        self.assertRaises(ValueError, get_birthdate_from_civil_id, '486101910006')
+        self.assertRaises(ValueError, get_birthdate_from_civil_id, '886101910006')
+
     def test_KWCivilIDNumberField(self):
         error_invalid = ['Enter a valid Kuwaiti Civil ID number']
         valid = {
@@ -17,6 +45,8 @@ class KWLocalFlavorTests(SimpleTestCase):
             '300000000005': error_invalid,
             '289332Ol3455': error_invalid,
             '2*9332013455': error_invalid,
+            '486101911111': error_invalid,
+            '286191911111': error_invalid,
         }
         self.assertFieldOutput(KWCivilIDNumberField, valid, invalid)
 
