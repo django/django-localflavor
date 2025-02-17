@@ -131,3 +131,4 @@ Authors
 * Vladimir Nani
 * Xabi Bello
 * Abhineet Tamrakar
+* Tudor Amariei

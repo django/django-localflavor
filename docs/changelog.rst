@@ -19,6 +19,8 @@ Modifications to existing flavors:
 - Change `Kiev` to `Kyiv` 🇺🇦 according to ISO_3166-2:UA
 - Accept French Postal Services identifiers in forms
   (`gh-505 <https://github.com/django/django-localflavor/pull/505>`_).
+- Fix validation of the Romanian CNP for years ending with `00`
+  (`gh-515 <https://github.com/django/django-localflavor/pull/515>`_).
 
 Other changes:
 
