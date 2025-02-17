@@ -1,7 +1,6 @@
 """Romanian specific form helpers."""
 import datetime
 
-from django.core.exceptions import ImproperlyConfigured
 from django.forms import CharField, RegexField, Select, ValidationError
 from django.utils.translation import gettext_lazy as _
 
@@ -91,7 +90,8 @@ class ROCNPField(RegexField):
 
         # check birthdate digits
         try:
-            datetime.date(int(value[1:3]), int(value[3:5]), int(value[5:7]))
+            # parse using the format YYMMDD
+            datetime.datetime.strptime(value[1:7], '%y%m%d')
         except ValueError:
             raise ValidationError(self.error_messages['invalid'], code='invalid')
 
