@@ -55,23 +55,3 @@ deprecation warnings appear and can be addressed. See changelog for details.
 **2018-08-24 - 2.1**: Django 1.11 - 2.1
 
 **2017-12-30 - 2.0**: Django 1.11 - 2.0
-
-All deprecated code has been removed in this release. See changelog for details.
-
-**2017-11-22 - 1.6**: Django 1.8 - 1.11
-
-All deprecated code will be removed in the next release. Please run your project's tests using `python -Wd` so that
-deprecation warnings appear and can be addressed.
-
-**2017-05-26 - 1.5**: Django 1.8 - 1.11
-
-**2017-01-03 - 1.4**: Django 1.8 - 1.10
-
-**2016-05-06 - 1.3**: Django 1.7 - 1.9
-
-**2015-11-27 - 1.2**: Django 1.5 - 1.9
-
-**2014-12-10 - 1.1**: Django 1.5 - 1.7
-
-**2013-07-29 - 1.0**: Django 1.5 - 1.6
-

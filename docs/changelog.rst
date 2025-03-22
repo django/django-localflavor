@@ -24,10 +24,10 @@ Modifications to existing flavors:
 
 Other changes:
 
-- Dropped support for Python 3.6 and 3.7.
-- Dropped support for Django 4.0.
-- Added support for Python 3.12.
-- Added support for Django 5.0.
+- Dropped support for Python < 3.8.
+- Dropped support for Django < 4.2.
+- Added support for Python 3.12 and 3.13.
+- Added support for Django 5.0 and 5.1.
 
 
 4.0   (2023-04-22)
