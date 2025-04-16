@@ -35,6 +35,7 @@ Modifications to existing flavors:
 - Brazilian model fields CPF, CNPJ and PostalCode create correct form
   field when used by DjangoModelForm
   (`gh-490 <https://github.com/django/django-localflavor/pull/490>`_).
+- Update list of Latvia municipalities after municipal reform from 2021
 
 Other changes:
 
