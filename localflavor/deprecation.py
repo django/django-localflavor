@@ -1,2 +1,2 @@
-class RemovedInLocalflavor30Warning(PendingDeprecationWarning):
+class RemovedInLocalflavor60Warning(PendingDeprecationWarning):
     pass
