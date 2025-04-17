@@ -23,6 +23,8 @@ Modifications to existing flavors:
   (`gh-511 <https://github.com/django/django-localflavor/pull/511>`_).
 - Added birthdate extraction function from Kuwaiti Civil ID
   (`gh-511 <https://github.com/django/django-localflavor/pull/511>`_).
+- Deprecated `kw.forms.is_valid_kw_civilid_checksum` in favor of `kw.utils.is_valid_civil_id`
+  (`gh-511 <https://github.com/django/django-localflavor/pull/511>`_).
 - Fix validation of the Romanian CNP for years ending with `00`
   (`gh-515 <https://github.com/django/django-localflavor/pull/515>`_).
 
