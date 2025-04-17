@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.1   (unreleased)
+5.0   (unreleased)
 ------------------
 
 New flavors:
@@ -10,7 +10,8 @@ New flavors:
 
 New fields for existing flavors:
 
-- Added CIN Number field in Morocco flavor (`gh-705 <https://github.com/django/django-localflavor/pull/507>`_).
+- Added CIN Number field in Morocco flavor
+  (`gh-705 <https://github.com/django/django-localflavor/pull/507>`_).
 
 Modifications to existing flavors:
 
