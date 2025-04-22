@@ -28,6 +28,9 @@ Modifications to existing flavors:
   (`gh-511 <https://github.com/django/django-localflavor/pull/511>`_).
 - Fix validation of the Romanian CNP for years ending with `00`
   (`gh-515 <https://github.com/django/django-localflavor/pull/515>`_).
+- Allow formatted values in `FRSIRENField` and `FRSIRETField` to be saved
+  (`gh-518 <https://github.com/django/django-localflavor/pull/518>`_).
+
 
 Other changes:
 
