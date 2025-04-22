@@ -1,8 +1,11 @@
-from django.test import SimpleTestCase
+from django.test import SimpleTestCase, TestCase
 
 from localflavor.fr.forms import (FRDepartmentField, FRDepartmentSelect, FRNationalIdentificationNumber,
-                                  FRRegion2016Select, FRRegionField, FRRegionSelect, FRSIRENField, FRSIRETField,
-                                  FRZipCodeField, FRRNAField)
+                                  FRRegion2016Select, FRRegionField, FRRegionSelect, FRRNAField, FRSIRENField,
+                                  FRSIRETField, FRZipCodeField)
+
+from .forms import FranceForm
+from .models import FranceModel
 
 DEP_SELECT_OUTPUT = '''
     <select name="dep">
@@ -332,3 +335,15 @@ class FRLocalFlavorTests(SimpleTestCase):
             '5142010167': error_format,         # W Letter missing and too many numbers
         }
         self.assertFieldOutput(FRRNAField, valid, invalid)
+
+
+class FRModelTests(TestCase):
+    def test_model_fields_allow_saving_formatted_values(self):
+        fr_form = FranceForm(     {
+            'siren': '752 932 715',
+            'siret': '752 932 715 00010',
+        })
+        fr_form.save()  # No validation error raised.
+        obj = FranceModel.objects.get()
+        self.assertEqual(obj.siren, '752932715')
+        self.assertEqual(obj.siret, '75293271500010')
