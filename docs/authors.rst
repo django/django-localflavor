@@ -33,6 +33,7 @@ Authors
 * Ben Konrath
 * Bruno M. Custódio
 * Burhan Khalid
+* Célia Prat
 * Claude Paroz
 * Daniel Ampuero
 * Daniela Ponader
@@ -84,6 +85,7 @@ Authors
 * Kevin Ramirez Zavalza
 * László Ratskó
 * Lefteris Nikoltsios
+* Lucas Dantas Gueiros
 * Luis Alberto Santana
 * Łukasz Langa
 * Luke Benstead
@@ -95,6 +97,7 @@ Authors
 * Matias Dinota
 * Michał Sałaban
 * Mike Lissner
+* Mohammed Al-Abdulhadi
 * Morgane Alonso
 * Naglis Jonaitis
 * Nishit Shah
@@ -131,3 +134,4 @@ Authors
 * Vladimir Nani
 * Xabi Bello
 * Abhineet Tamrakar
+* Tudor Amariei

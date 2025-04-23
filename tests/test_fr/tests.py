@@ -1,8 +1,11 @@
-from django.test import SimpleTestCase
+from django.test import SimpleTestCase, TestCase
 
 from localflavor.fr.forms import (FRDepartmentField, FRDepartmentSelect, FRNationalIdentificationNumber,
-                                  FRRegion2016Select, FRRegionField, FRRegionSelect, FRSIRENField, FRSIRETField,
-                                  FRZipCodeField, FRRNAField)
+                                  FRRegion2016Select, FRRegionField, FRRegionSelect, FRRNAField, FRSIRENField,
+                                  FRSIRETField, FRZipCodeField)
+
+from .forms import FranceForm
+from .models import FranceModel
 
 DEP_SELECT_OUTPUT = '''
     <select name="dep">
@@ -271,10 +274,12 @@ class FRLocalFlavorTests(SimpleTestCase):
             '752932715': '752932715',
             '752 932 715': '752932715',
             '752-932-715': '752932715',
+            '356000000': '356000000'
         }
         invalid = {
             '1234': error_format,               # wrong size
             '752932712': error_format,     # Bad luhn on SIREN
+            '35600000014597' : error_format
         }
         self.assertFieldOutput(FRSIRENField, valid, invalid)
 
@@ -294,11 +299,13 @@ class FRLocalFlavorTests(SimpleTestCase):
             '75293271500010': '75293271500010',
             '752 932 715 00010': '75293271500010',
             '752-932-715-00010': '75293271500010',
+            '35600000014597' : '35600000014597', # Special case La Poste
         }
         invalid = {
             '1234': error_format,               # wrong size
             '75293271200017': error_format,     # Bad luhn on SIREN
             '75293271000010': error_format,     # Bad luhn on whole
+            '35600000014596' : error_format     # Special case La Poste
         }
         self.assertFieldOutput(FRSIRETField, valid, invalid)
 
@@ -328,3 +335,15 @@ class FRLocalFlavorTests(SimpleTestCase):
             '5142010167': error_format,         # W Letter missing and too many numbers
         }
         self.assertFieldOutput(FRRNAField, valid, invalid)
+
+
+class FRModelTests(TestCase):
+    def test_model_fields_allow_saving_formatted_values(self):
+        fr_form = FranceForm(     {
+            'siren': '752 932 715',
+            'siret': '752 932 715 00010',
+        })
+        fr_form.save()  # No validation error raised.
+        obj = FranceModel.objects.get()
+        self.assertEqual(obj.siren, '752932715')
+        self.assertEqual(obj.siret, '75293271500010')

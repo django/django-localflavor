@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.1   (unreleased)
+5.0   (unreleased)
 ------------------
 
 New flavors:
@@ -13,19 +13,38 @@ New fields for existing flavors:
 - Added CIN Number field in Morocco flavor (`gh-705 <https://github.com/django/django-localflavor/pull/507>`_).
 - Added get_states_of_brazil to br.utils to return a state or all available options with some settings
   (`gh-510 <https://github.com/django/django-localflavor/pull/510>`_).
+- Added CIN Number field in Morocco flavor
+  (`gh-705 <https://github.com/django/django-localflavor/pull/507>`_).
 
 Modifications to existing flavors:
 
 - Fix Belarus passport field description punctuation
   (`gh-484 <https://github.com/django/django-localflavor/pull/484>`_).
 - Change `Kiev` to `Kyiv` 🇺🇦 according to ISO_3166-2:UA
+- Accept French Postal Services identifiers in forms
+  (`gh-505 <https://github.com/django/django-localflavor/pull/505>`_).
+- Extended validation of Kuwaiti Civil ID to avoid allowing invalid century Civil IDs
+  (`gh-511 <https://github.com/django/django-localflavor/pull/511>`_).
+- Added birthdate extraction function from Kuwaiti Civil ID
+  (`gh-511 <https://github.com/django/django-localflavor/pull/511>`_).
+- Deprecated `kw.forms.is_valid_kw_civilid_checksum` in favor of `kw.utils.is_valid_civil_id`
+  (`gh-511 <https://github.com/django/django-localflavor/pull/511>`_).
+- Fix validation of the Romanian CNP for years ending with `00`
+  (`gh-515 <https://github.com/django/django-localflavor/pull/515>`_).
+- Allow formatted values in `FRSIRENField` and `FRSIRETField` to be saved
+  (`gh-518 <https://github.com/django/django-localflavor/pull/518>`_).
+- Add min and max length to brazilian Postal Code form field
+  (`gh-490 <https://github.com/django/django-localflavor/pull/490>`_).
+- Brazilian model fields CPF, CNPJ and PostalCode create correct form
+  field when used by DjangoModelForm
+  (`gh-490 <https://github.com/django/django-localflavor/pull/490>`_).
 
 Other changes:
 
-- Dropped support for Python 3.6 and 3.7.
-- Dropped support for Django 4.0.
-- Added support for Python 3.12.
-- Added support for Django 5.0.
+- Dropped support for Python < 3.9.
+- Dropped support for Django < 4.2.
+- Added support for Python 3.12 and 3.13.
+- Added support for Django 5.0, 5.1, and 5.2.
 
 
 4.0   (2023-04-22)

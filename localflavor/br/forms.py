@@ -25,8 +25,8 @@ class BRZipCodeField(CharField):
         More details at: https://github.com/django/django-localflavor/issues/334
     """
 
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self, max_length=9, min_length=8, **kwargs):
+        super().__init__(max_length=max_length, min_length=min_length, **kwargs)
         self.validators.append(BRPostalCodeValidator())
 
 
