@@ -1,4 +1,4 @@
-from django.test import SimpleTestCase
+from django.test import SimpleTestCase, TestCase
 
 from localflavor.br import models
 from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
@@ -16,18 +16,18 @@ class BRLocalFlavorTests(SimpleTestCase):
             '12345_123': error_format,
             '1234-123': error_format,
             'abcde-abc': error_format,
-            '12345-': error_format,
-            '-123': error_format,
+            '12345-': ['Ensure this value has at least 8 characters (it has 6).'] + error_format,
+            '-123': ['Ensure this value has at least 8 characters (it has 4).'] + error_format,
         }
         self.assertFieldOutput(BRZipCodeField, valid, invalid)
 
-        for postal_code, _ in invalid.items():
+        for postal_code, error in invalid.items():
             form = BRPersonProfileForm({
                 'postal_code': postal_code
             })
 
             self.assertFalse(form.is_valid())
-            self.assertEqual(form.errors['postal_code'], error_format)
+            self.assertEqual(form.errors['postal_code'], error)
 
     def test_BRCNPJField(self):
         error_format = {
@@ -224,6 +224,37 @@ class BRLocalFlavorTests(SimpleTestCase):
             form = BRPersonProfileForm(case)
             self.assertTrue(form.is_valid())
 
+class BRLocalFlavorModelFormTests (TestCase):
+    def setUp(self):
+        self.form = BRPersonProfileForm({
+            'cpf':'111.111.111-11',
+            'cnpj':'64-132-916/0001-88',
+            'postal_code':'12345-123',
+        })
+
+    def test_BRCPFFiedlHtml(self):
+        name = 'cpf'
+        value = '111.111.111-11'
+        model_form_field = self.form.fields[name]
+        model_form_field_render = model_form_field.widget.render(name,value)
+        self.assertTrue('minlength="11"' in model_form_field_render)
+        self.assertTrue('maxlength="14"' in model_form_field_render)
+
+    def test_BRCNPJFiedlHtml(self):
+        name = 'cnpj'
+        value = '64-132-916/0001-88'
+        model_form_field = self.form.fields[name]
+        model_form_field_render = model_form_field.widget.render(name,value)
+        self.assertTrue('minlength="14"' in model_form_field_render)
+        self.assertTrue('maxlength="18"' in model_form_field_render)
+
+    def test_BRPostalCodeFiedlHtml(self):
+        name = 'postal_code'
+        value = '12345-123'
+        model_form_field = self.form.fields[name]
+        model_form_field_render = model_form_field.widget.render(name,value)
+        self.assertTrue('minlength="8"' in model_form_field_render)
+        self.assertTrue('maxlength="9"' in model_form_field_render)
 
 class BRLocalFlavorModelTests(SimpleTestCase):
 
