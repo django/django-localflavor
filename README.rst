@@ -3,7 +3,7 @@ django-localflavor
 ==================
 
 .. image:: https://img.shields.io/pypi/v/django-localflavor.svg
-   :target: https://pypi.python.org/pypi/django-localflavor
+   :target: https://pypi.org/project/django-localflavor/
 
 .. image:: https://github.com/django/django-localflavor/actions/workflows/test.yml/badge.svg
     :target: https://github.com/django/django-localflavor/actions/workflows/test.yml
@@ -26,7 +26,7 @@ For a full list of available localflavors, see
 https://django-localflavor.readthedocs.io/
 
 django-localflavor can also be found on and installed from the Python
-Package Index: https://pypi.python.org/pypi/django-localflavor
+Package Index: https://pypi.org/project/django-localflavor/
 
 **Release Overview**
 
