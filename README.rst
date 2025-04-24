@@ -22,6 +22,11 @@ This code used to live in Django proper -- in ``django.contrib.localflavor``
 -- but was separated into a standalone package in Django 1.5 to keep the
 framework's core clean.
 
+django-localflavor no longer includes country specific phone number fields. The django-phonenumber-field package has
+excellent support for validating phone numbers in many countries and we recommend this package.
+https://pypi.org/project/django-phonenumber-field/
+
+
 For a full list of available localflavors, see
 https://django-localflavor.readthedocs.io/
 
