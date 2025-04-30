@@ -277,9 +277,9 @@ class FRLocalFlavorTests(SimpleTestCase):
             '356000000': '356000000'
         }
         invalid = {
-            '1234': error_format,               # wrong size
-            '752932712': error_format,     # Bad luhn on SIREN
-            '35600000014597' : error_format
+            '1234': error_format,             # Wrong size
+            '752932712': error_format,        # Bad luhn on SIREN
+            '35600000014597' : error_format,  # Too long
         }
         self.assertFieldOutput(FRSIRENField, valid, invalid)
 
@@ -305,7 +305,8 @@ class FRLocalFlavorTests(SimpleTestCase):
             '1234': error_format,               # wrong size
             '75293271200017': error_format,     # Bad luhn on SIREN
             '75293271000010': error_format,     # Bad luhn on whole
-            '35600000014596' : error_format     # Special case La Poste
+            '35600000014596' : error_format,    # Special case La Poste
+            '356000000145966': error_format,    # Too long
         }
         self.assertFieldOutput(FRSIRETField, valid, invalid)
 
@@ -339,7 +340,7 @@ class FRLocalFlavorTests(SimpleTestCase):
 
 class FRModelTests(TestCase):
     def test_model_fields_allow_saving_formatted_values(self):
-        fr_form = FranceForm(     {
+        fr_form = FranceForm({
             'siren': '752 932 715',
             'siret': '752 932 715 00010',
         })
@@ -347,3 +348,11 @@ class FRModelTests(TestCase):
         obj = FranceModel.objects.get()
         self.assertEqual(obj.siren, '752932715')
         self.assertEqual(obj.siret, '75293271500010')
+
+    def test_model_form_input_max_length(self):
+        fr_form = FranceForm({
+            'siren': '752 932 715',
+            'siret': '752 932 715 00010',
+        })
+        self.assertEqual(11, fr_form.fields["siren"].max_length)
+        self.assertEqual(17, fr_form.fields["siret"].max_length)
