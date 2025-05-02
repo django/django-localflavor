@@ -78,7 +78,8 @@ Modifications to existing flavors:
   - `NPZoneSelect`: dandaki was corrected to gandaki (fixed typo).
 
   (`gh-506 <https://github.com/django/django-localflavor/pull/506/files>`_).
-
+- Allow formatted IBANs longer than 26 chars to be saved in `IBANField`
+  (`gh-522 <https://github.com/django/django-localflavor/pull/522>`_).
 
 Other changes:
 

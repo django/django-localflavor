@@ -180,12 +180,8 @@ class IBANTests(TestCase):
             'NL91ABNB0417164300': ['Not a valid IBAN.'],
             'NL91 ABNB 0417 1643 00': ['Not a valid IBAN.'],
 
-            'MU17BOMM0101101030300200000MUR12345': [
-                'MU IBANs must contain 30 characters.',
-                'Ensure this value has at most 34 characters (it has 35).'],
-            'MU17 BOMM 0101 1010 3030 0200 000M UR12 345': [
-                'MU IBANs must contain 30 characters.',
-                'Ensure this value has at most 34 characters (it has 35).'],
+            'MU17BOMM0101101030300200000MUR12345': ['MU IBANs must contain 30 characters.'],
+            'MU17 BOMM 0101 1010 3030 0200 000M UR12 345': ['MU IBANs must contain 30 characters.'],
 
             # This IBAN should only be valid only if the Nordea extensions are turned on.
             'BJ11B00610100400271101192591': ['BJ is not a valid country code for IBAN.'],
@@ -203,6 +199,17 @@ class IBANTests(TestCase):
         self.assertIsNone(iban_model_field.to_python(None))
 
         # Invalid inputs for model field.
+
+        # The model field has max_length set which means the max length validator is used, unlike the form.
+        invalid['MU17BOMM0101101030300200000MUR12345'] = [
+            'MU IBANs must contain 30 characters.',
+            'Ensure this value has at most 34 characters (it has 35).'
+        ]
+        invalid['MU17 BOMM 0101 1010 3030 0200 000M UR12 345'] = [
+            'MU IBANs must contain 30 characters.',
+            'Ensure this value has at most 34 characters (it has 35).',
+        ]
+
         for input, errors in invalid.items():
             with self.subTest(input=input, errors=errors):
                 with self.assertRaises(ValidationError) as context_manager:
@@ -306,6 +313,20 @@ class IBANTests(TestCase):
         for attr in ('include_countries', 'use_nordea_extensions'):
             with self.subTest(attr=attr):
                 self.assertEqual(getattr(test_instance, attr), getattr(new_instance, attr))
+
+    def test_model_form_input_max_length(self):
+        form = UseNordeaExtensionsForm({
+            "iban": "RU03 0445 2522 5408 1781 0538 0913 1041 9",
+        })
+        self.assertEqual(None, form.fields["iban"].max_length)
+        self.assertEqual(42, form.fields["iban"].widget.attrs["max_length"])
+
+        form.save()  # Not validation error raised.
+
+    def test_form_field_input_max_length_without_model_form(self):
+        form_field = IBANFormField()
+        self.assertEqual(None, form_field.max_length)
+        self.assertEqual(42, form_field.widget.attrs["max_length"])
 
 
 class BICTests(TestCase):
