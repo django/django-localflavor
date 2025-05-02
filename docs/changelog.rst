@@ -63,6 +63,7 @@ Modifications to existing flavors:
   - hordaland and sognogfjordane have been removed and combined into vestland.
   - nordtrondelag and sortrondelag have been removed and combined into trondelag.
   - hedmark and oppland have been removed and combined into innlandet.
+
   (`gh-509 <https://github.com/django/django-localflavor/pull/509/files>`_).
 
 Other changes:
