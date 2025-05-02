@@ -115,6 +115,7 @@ Authors
 * Raphael Michel
 * Rolf Erik Lekang
 * Russell Keith-Magee
+* Santosh Bhattarai
 * Sandeep N
 * Serafeim Papastefanos
 * Sergio Oliveira
