@@ -6,7 +6,13 @@ Changelog
 
 Breaking data changes:
 
-A data migration is required for users of `nl.forms.NOMunicipalitySelect`. `MUNICIPALITY_CHOICES` was updated to the
+A data migration is required for users of `np.forms.NPProvinceSelect` and `np.forms.NPZoneSelect`. The following was
+changed:
+
+- `NPProvinceSelect`: province1 and province2 were removed and replaced with koshi and madhesh.
+- `NPZoneSelect`: dandaki was corrected to gandaki (fixed typo).
+
+A data migration is required for users of `no.forms.NOMunicipalitySelect`. `MUNICIPALITY_CHOICES` was updated to the
 values in the 2024 update:
 
 - austagder and vestagder have been removed and combined into agder.
@@ -65,6 +71,13 @@ Modifications to existing flavors:
   - hedmark and oppland have been removed and combined into innlandet.
 
   (`gh-509 <https://github.com/django/django-localflavor/pull/509/files>`_).
+- Corrections in Nepal localflavor:
+
+  - `NPProvinceSelect`: province1 and province2 were removed and replaced with koshi and madhesh.
+  - `NPZoneSelect`: dandaki was corrected to gandaki (fixed typo).
+
+  (`gh-506 <https://github.com/django/django-localflavor/pull/506/files>`_).
+
 
 Other changes:
 

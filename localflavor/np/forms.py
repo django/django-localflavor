@@ -2,6 +2,7 @@
 
 from django.forms.fields import RegexField, Select
 from django.utils.translation import gettext_lazy as _
+import warnings
 
 from .np_districts import DISTRICTS
 from .np_provinces import PROVINCES
@@ -31,6 +32,7 @@ class NPZoneSelect(Select):
     """
 
     def __init__(self, attrs=None):
+        warnings.warn("Choices have changed for NPZoneSelect in localflavor 5.0. See changelog for details.")
         super().__init__(attrs, choices=ZONES)
 
 
@@ -41,6 +43,7 @@ class NPProvinceSelect(Select):
     """
 
     def __init__(self, attrs=None):
+        warnings.warn("Choices have changed for NPProvinceSelect in localflavor 5.0. See changelog for details.")
         super().__init__(attrs, choices=PROVINCES)
 
 
