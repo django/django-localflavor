@@ -3,6 +3,7 @@ Authors
 
 * Aaron Boman
 * Abdellah El Youssfi Alaoui
+* Adam Rurański
 * Adam Taylor
 * Adnane Belmadiaf
 * Adonys Alea Boffill

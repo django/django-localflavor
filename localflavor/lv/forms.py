@@ -1,5 +1,6 @@
 import re
 from datetime import date
+import warnings
 
 from django.forms import ValidationError
 from django.forms.fields import CharField, Select
@@ -40,6 +41,7 @@ class LVMunicipalitySelect(Select):
     """A select field of Latvian municipalities."""
 
     def __init__(self, attrs=None):
+        warnings.warn("Choices have changed for LVMunicipalitySelect in localflavor 5.0. See changelog for details.")
         super().__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 

@@ -4,6 +4,17 @@ Changelog
 5.0   (unreleased)
 ------------------
 
+Breaking data changes:
+
+A data migration is required for users of `lv.forms.LVMunicipalitySelect`. `MUNICIPALITY_CHOICES` was updated to the
+values in the 2021 municipal reform. Details of this change can be found here:
+
+https://en.wikipedia.org/wiki/ISO_3166-2:LV#Changes
+
+A warning message will be displayed when `lv.forms.LVMunicipalitySelect` is used. See the
+`localflavor online docs <https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility>`_ for
+instructions on how to suppress this warning once the migration has been completed.
+
 New flavors:
 
 - None
@@ -35,6 +46,8 @@ Modifications to existing flavors:
 - Brazilian model fields CPF, CNPJ and PostalCode create correct form
   field when used by DjangoModelForm
   (`gh-490 <https://github.com/django/django-localflavor/pull/490>`_).
+- Update list of Latvia municipalities after municipal reform from 2021
+  (`gh-519 <https://github.com/django/django-localflavor/pull/519>`_).
 
 Other changes:
 
