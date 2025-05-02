@@ -64,6 +64,7 @@ Authors
 * Heri Priyatno
 * Honza Král
 * Horst Gutmann
+* Håkon Osland
 * Igor Támara
 * Illia Volochii
 * Ivan Fisun

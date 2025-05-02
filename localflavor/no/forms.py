@@ -2,6 +2,7 @@
 
 import datetime
 import re
+import warnings
 
 from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.forms.fields import CharField, RegexField, Select
@@ -29,6 +30,7 @@ class NOMunicipalitySelect(Select):
     """A Select widget that uses a list of Norwegian municipalities (fylker) as its choices."""
 
     def __init__(self, attrs=None):
+        warnings.warn("Choices have changed for NOMunicipalitySelect in localflavor 5.0. See changelog for details.")
         super().__init__(attrs, choices=MUNICIPALITY_CHOICES)
 
 
