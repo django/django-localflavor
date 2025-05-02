@@ -195,10 +195,17 @@ class FRSIRENField(CharField):
     """
 
     r_valid = re.compile(r'^\d{9}$')
+    _invalid_error_message = _('Enter a valid French SIREN number.')
 
     default_error_messages = {
-        'invalid': _('Enter a valid French SIREN number.'),
+        'invalid': _invalid_error_message,
+        'max_length': _invalid_error_message,  # Overridden because the message isn't accurate.
     }
+
+    def __init__(self, **kwargs):
+        # Use max_length=11 instead of max_length=9 (from the model) to account for the spaces in the formatted value.
+        kwargs["max_length"] = 11
+        super().__init__(**kwargs)
 
     def prepare_value(self, value):
         if value is None:
@@ -233,10 +240,17 @@ class FRSIRETField(CharField):
     """
 
     r_valid = re.compile(r'^\d{14}$')
+    _invalid_error_message = _('Enter a valid French SIRET number.')
 
     default_error_messages = {
-        'invalid': _('Enter a valid French SIRET number.'),
+        'invalid': _invalid_error_message,
+        'max_length': _invalid_error_message,  # Overridden because the message isn't accurate.
     }
+
+    def __init__(self, **kwargs):
+        # Use max_length=17 instead of max_length=14 (from the model) to account for the spaces in the formatted value.
+        kwargs["max_length"] = 17
+        super().__init__(**kwargs)
 
     def clean(self, value):
         value = super().clean(value)
