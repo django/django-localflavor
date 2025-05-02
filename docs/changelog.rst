@@ -6,13 +6,21 @@ Changelog
 
 Breaking data changes:
 
+A data migration is required for users of `nl.forms.NOMunicipalitySelect`. `MUNICIPALITY_CHOICES` was updated to the
+values in the 2024 update:
+
+- austagder and vestagder have been removed and combined into agder.
+- hordaland and sognogfjordane have been removed and combined into vestland.
+- nordtrondelag and sortrondelag have been removed and combined into trondelag.
+- hedmark and oppland have been removed and combined into innlandet.
+
 A data migration is required for users of `lv.forms.LVMunicipalitySelect`. `MUNICIPALITY_CHOICES` was updated to the
 values in the 2021 municipal reform. Details of this change can be found here:
 
 https://en.wikipedia.org/wiki/ISO_3166-2:LV#Changes
 
-A warning message will be displayed when `lv.forms.LVMunicipalitySelect` is used. See the
-`localflavor online docs <https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility>`_ for
+A warning message will be displayed when `lv.forms.LVMunicipalitySelect` or `nl.forms.NOMunicipalitySelect` are used.
+See the `localflavor online docs <https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility>`_ for
 instructions on how to suppress this warning once the migration has been completed.
 
 New flavors:
@@ -49,7 +57,12 @@ Modifications to existing flavors:
 - Update list of Latvia municipalities after municipal reform from 2021
   (`gh-519 <https://github.com/django/django-localflavor/pull/519>`_).
 - Update list of Norwegian counties(fylker) `according to changes at the start of 2024 <https://en.wikipedia.org/wiki/Counties_of_Norway#List_of_counties>`_
-  The changed counties are as follows: austagder and vestagder has been removed and combined into agder. hordaland and sognogfjordane has been removed and combined into vestland. nordtrondelag and sortrondelag has been removed and combined into trondelag. hedmark and oppland has been removed and combined into innlandet
+  The changed counties are as follows:
+
+  - austagder and vestagder have been removed and combined into agder.
+  - hordaland and sognogfjordane have been removed and combined into vestland.
+  - nordtrondelag and sortrondelag have been removed and combined into trondelag.
+  - hedmark and oppland have been removed and combined into innlandet.
   (`gh-509 <https://github.com/django/django-localflavor/pull/509/files>`_).
 
 Other changes:
