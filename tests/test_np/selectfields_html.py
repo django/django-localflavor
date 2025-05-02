@@ -84,8 +84,8 @@ provinces_select = """
   <option value="gandaki">Gandaki</option>
   <option value="karnali">Karnali</option>
   <option value="lumbini">Lumbini</option>
-  <option value="province1">Province 1</option>
-  <option value="province2">Province 2</option>
+  <option value="koshi">Koshi</option>
+  <option value="madhesh">Madhesh</option>
   <option value="sudurpaschim">Sudurpaschim</option>
 </select>
 """
@@ -95,7 +95,7 @@ zones_select = """
   <option value="bagmati">Bagmati</option>
   <option value="bheri">Bheri</option>
   <option value="dhawalagiri">Dhawalagiri</option>
-  <option value="dandaki">Gandaki</option>
+  <option value="gandaki">Gandaki</option>
   <option value="janakpur">Janakpur</option>
   <option value="karnali">Karnali</option>
   <option value="koshi">Koshi</option>
