@@ -22,12 +22,13 @@ class BRLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(BRZipCodeField, valid, invalid)
 
         for postal_code, error in invalid.items():
-            form = BRPersonProfileForm({
-                'postal_code': postal_code
-            })
+            with self.subTest(postal_code=postal_code, error=error):
+                form = BRPersonProfileForm({
+                    'postal_code': postal_code
+                })
 
-            self.assertFalse(form.is_valid())
-            self.assertEqual(form.errors['postal_code'], error)
+                self.assertFalse(form.is_valid())
+                self.assertEqual(form.errors['postal_code'], error)
 
     def test_BRCNPJField(self):
         error_format = {
@@ -67,12 +68,13 @@ class BRLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(BRCNPJField, short_version_valid, invalid_long, field_kwargs={'max_length': 14})
 
         for cnpj, invalid_msg in invalid.items():
-            form = BRPersonProfileForm({
-                'cnpj': cnpj
-            })
+            with self.subTest(cnpj=cnpj, invalid_msg=invalid_msg):
+                form = BRPersonProfileForm({
+                    'cnpj': cnpj
+                })
 
-            self.assertFalse(form.is_valid())
-            self.assertEqual(form.errors['cnpj'], invalid_msg)
+                self.assertFalse(form.is_valid())
+                self.assertEqual(form.errors['cnpj'], invalid_msg)
 
     def test_BRCPFField(self):
         error_format = ['Invalid CPF number.']
@@ -102,12 +104,13 @@ class BRLocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(BRCPFField, valid, invalid)
 
         for cpf, invalid_msg in invalid.items():
-            form = BRPersonProfileForm({
-                'cpf': cpf
-            })
+            with self.subTest(cpf=cpf, invalid_msg=invalid_msg):
+                form = BRPersonProfileForm({
+                    'cpf': cpf
+                })
 
-            self.assertFalse(form.is_valid())
-            self.assertIn(form.errors['cpf'][0], invalid_msg)
+                self.assertFalse(form.is_valid())
+                self.assertIn(form.errors['cpf'][0], invalid_msg)
 
     def test_BRProcessoField(self):
         error_format = ['Invalid Process number.']
@@ -221,8 +224,9 @@ class BRLocalFlavorTests(SimpleTestCase):
         ]
 
         for case in data_to_test:
-            form = BRPersonProfileForm(case)
-            self.assertTrue(form.is_valid())
+            with self.subTest(case=case):
+                form = BRPersonProfileForm(case)
+                self.assertTrue(form.is_valid())
 
 class BRLocalFlavorModelFormTests (TestCase):
     def setUp(self):

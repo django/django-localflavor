@@ -65,25 +65,29 @@ class BGLocalFlavorValidatorsTests(TestCase):
 
     def test_egn_validator_with_valid_egns(self):
         for egn in VALID_EGNS:
-            try:
-                egn_validator(egn)
-            except ValidationError:
-                self.fail('egn_validator said that valid EGN %s is invalid' % egn)
+            with self.subTest(egn=egn):
+                try:
+                    egn_validator(egn)
+                except ValidationError:
+                    self.fail('egn_validator said that valid EGN %s is invalid' % egn)
 
     def test_egn_validator_with_invalid_egns(self):
         for egn in INVALID_EGNS:
-            self.assertRaises(ValidationError, egn_validator, egn)
+            with self.subTest(egn=egn):
+                self.assertRaises(ValidationError, egn_validator, egn)
 
     def test_eik_validator_with_valid_eiks(self):
         for eik in VALID_EIKS:
-            try:
-                eik_validator(eik)
-            except ValidationError:
-                self.fail('eik_validator fails for %s' % eik)
+            with self.subTest(eik=eik):
+                try:
+                    eik_validator(eik)
+                except ValidationError:
+                    self.fail('eik_validator fails for %s' % eik)
 
     def test_eik_validator_with_invalid_eiks(self):
         for eik in INVALID_EIKS:
-            self.assertRaises(ValidationError, eik_validator, eik)
+            with self.subTest(eik=eik):
+                self.assertRaises(ValidationError, eik_validator, eik)
 
 
 class BGLocalFlavorEGNFieldTests(TestCase):
@@ -105,13 +109,15 @@ class BGLocalFlavorEGNFieldTests(TestCase):
 
     def test_egn_form_with_valid_egns(self):
         for egn in VALID_EGNS:
-            form = self.EGNForm({'egn': egn})
-            self.assertTrue(form.is_valid())
+            with self.subTest(egn=egn):
+                form = self.EGNForm({'egn': egn})
+                self.assertTrue(form.is_valid())
 
     def test_egn_form_with_invalid_egns(self):
         for egn in INVALID_EGNS:
-            form = self.EGNForm({'egn': egn})
-            self.assertFalse(form.is_valid())
+            with self.subTest(egn=egn):
+                form = self.EGNForm({'egn': egn})
+                self.assertFalse(form.is_valid())
 
 
 class BGLocalFlavorEIKFieldTest(TestCase):
@@ -133,13 +139,15 @@ class BGLocalFlavorEIKFieldTest(TestCase):
 
     def test_eik_form_with_valid_eiks(self):
         for eik in VALID_EIKS:
-            form = self.EIKForm({'eik': eik})
-            self.assertTrue(form.is_valid())
+            with self.subTest(eik=eik):
+                form = self.EIKForm({'eik': eik})
+                self.assertTrue(form.is_valid())
 
     def test_eik_form_with_invalid_eiks(self):
         for eik in INVALID_EIKS:
-            form = self.EIKForm({'eik': eik})
-            self.assertFalse(form.is_valid())
+            with self.subTest(eik=eik):
+                form = self.EIKForm({'eik': eik})
+                self.assertFalse(form.is_valid())
 
 
 class BGLocaFlavorUtilsTest(TestCase):
