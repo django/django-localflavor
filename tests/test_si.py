@@ -51,9 +51,10 @@ class SILocalFlavorTests(SimpleTestCase):
             '1010985505402': {'nationality': 50, 'gender': 'female', 'birthdate': date(1985, 10, 10)},
         }
         for input, info in valid.items():
-            f = SIEMSOField()
-            f.clean(input)
-            self.assertEqual(f.info, info)
+            with self.subTest(input=input, info=info):
+                f = SIEMSOField()
+                f.clean(input)
+                self.assertEqual(f.info, info)
 
     def test_SIPostalCodeField(self):
         valid = {

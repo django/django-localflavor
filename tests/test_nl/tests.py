@@ -10,10 +10,12 @@ from .models import NLCar, NLPlace
 class NLLocalFlavorValidatorTests(SimpleTestCase):
     def assert_validator(self, validator, valid=(), invalid=()):
         for item in valid:
-            validator(item)
+            with self.subTest(item=item):
+                validator(item)
 
         for item in invalid:
-            self.assertRaises(ValidationError, lambda: validator(item))
+            with self.subTest(item=item):
+                self.assertRaises(ValidationError, lambda: validator(item))
 
     def test_NLZipCodeValidator(self):
         valid = [
