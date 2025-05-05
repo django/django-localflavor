@@ -10,6 +10,7 @@ class SriLanakDetailsTests(TransactionTestCase):
         This Test class tests all the selectbox
         fields and Postal Code Fields.
     """
+    maxDiff = None
 
     def test_LKDistrictSelect(self):
         field = LKDistrictSelect()
@@ -20,7 +21,7 @@ class SriLanakDetailsTests(TransactionTestCase):
         self.assertHTMLEqual(field.render('province', 'central'), provinces_select)
 
     def test_LKPostalCodeFieldTest(self):
-        error_format = ['Enter a postal code in format XXXXX']
+        error_format = ['Enter a postal code in format NNNNN']
         valid = {
             '12345': '12345',
             '00000': '00000',

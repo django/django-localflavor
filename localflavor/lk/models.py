@@ -16,19 +16,20 @@ class LKPostalCodeValidator(RegexValidator):
     A validator for Sri Lanka Postal Codes.
     """
     default_error_messages = {
-        'invalid': _('Enter a postal code in format XXXXX'),
+        'invalid': _('Enter a postal code in format NNNNN'),
     }
 
     def __init__(self, *args, **kwargs):
-        super().__init__(re.compile(r'^\d{5}$'), *args, **kwargs)
+        super().__init__(re.compile(r'^[0-9]{5}$'), *args, **kwargs)
 
 
 class LKPostalCodeField(models.CharField):
     """
-        A model field that accepts Sri Lanka postal codes.
-        Format: XXXXX
-        Source: https://en.wikipedia.org/wiki/Postal_codes_in_Sri_Lanka
-        .. versionadded:: 4.0
+    A model field that accepts Sri Lanka postal codes.
+    Format: NNNNN
+    Source: https://en.wikipedia.org/wiki/Postal_codes_in_Sri_Lanka
+
+    .. versionadded:: 5.0
     """
     description = _("Postal Code")
 
@@ -45,9 +46,10 @@ class LKPostalCodeField(models.CharField):
 
 class LKDistrictField(models.CharField):
     """
-        A model field that provides an option to select 
-        a district from the list of all Sri Lanka districts.
-        .. versionadded:: 4.0
+    A model field that provides an option to select
+    a district from the list of all Sri Lanka districts.
+
+    .. versionadded:: 5.0
     """
 
     def __init__(self, *args, **kwargs):
@@ -63,9 +65,10 @@ class LKDistrictField(models.CharField):
 
 class LKProvinceField(models.CharField):
     """
-        A model field that provides an option to select 
-        a province from the list of all Sri Lanka provinces.
-        .. versionadded:: 4.0
+    A model field that provides an option to select
+    a province from the list of all Sri Lanka provinces.
+
+    .. versionadded:: 5.0
     """
 
     def __init__(self, *args, **kwargs):

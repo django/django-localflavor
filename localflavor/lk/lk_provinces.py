@@ -7,7 +7,7 @@ Sri Lanka province list choices are in this format:
 
     ('name_of_province',_('Name of province')),
 
-eg.
+e.g.
     ('central', _('Central')),
 """
 
@@ -15,12 +15,12 @@ from django.utils.translation import gettext_lazy as _
 
 PROVINCES = [
     ('central', _('Central')),
-    ('north_central', _('North Central')),
-    ('northern', _('Northern')),
     ('eastern', _('Eastern')),
+    ('north_central', _('North Central')),
     ('north_western', _('North Western')),
+    ('northern', _('Northern')),
+    ('sabaragamuwa', _('Sabaragamuwa')),
     ('southern', _('Southern')),
     ('uva', _('Uva')),
-    ('sabaragamuwa', _('Sabaragamuwa')),
     ('western', _('Western')),
 ]
