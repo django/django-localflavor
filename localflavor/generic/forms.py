@@ -22,8 +22,6 @@ DEFAULT_DATETIME_INPUT_FORMATS = (
     '%d/%m/%y',              # '25/10/06'
 )
 
-IBAN_MIN_LENGTH = min(IBAN_COUNTRY_CODE_LENGTH.values())
-
 
 class DateField(forms.DateField):
     """A date input field which uses non-US date input formats by default."""
@@ -80,10 +78,14 @@ class IBANFormField(forms.CharField):
     """
 
     def __init__(self, use_nordea_extensions=False, include_countries=None, **kwargs):
-        kwargs.setdefault('min_length', IBAN_MIN_LENGTH)
-        kwargs.setdefault('max_length', 34)
+        # The IBANValidator handles the length check, so we don't need to use the form min and max length validators.
+        kwargs.pop("max_length", None)
         self.default_validators = [IBANValidator(use_nordea_extensions, include_countries)]
         super().__init__(**kwargs)
+
+        # We still need to use max_length=42 in the <input ...> instead of max_length=34 (from the model) to
+        # account for the spaces in the formatted value.
+        self.widget.attrs["max_length"] = 42
 
     def to_python(self, value):
         value = super().to_python(value)
