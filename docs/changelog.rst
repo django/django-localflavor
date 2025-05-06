@@ -6,24 +6,24 @@ Changelog
 
 Breaking data changes:
 
-A data migration is required for users of `np.forms.NPProvinceSelect` and `np.forms.NPZoneSelect`. The following was
-changed:
+- NP: A data migration is required for users of `np.forms.NPProvinceSelect` and `np.forms.NPZoneSelect`. The following was
+  changed:
 
-- `NPProvinceSelect`: province1 and province2 were removed and replaced with koshi and madhesh.
-- `NPZoneSelect`: dandaki was corrected to gandaki (fixed typo).
+  - `NPProvinceSelect`: province1 and province2 were removed and replaced with koshi and madhesh.
+  - `NPZoneSelect`: dandaki was corrected to gandaki (fixed typo).
 
-A data migration is required for users of `no.forms.NOMunicipalitySelect`. `MUNICIPALITY_CHOICES` was updated to the
-values in the 2024 update:
+- NO: A data migration is required for users of `no.forms.NOMunicipalitySelect`. `MUNICIPALITY_CHOICES` was updated to the
+  values in the 2024 update:
 
-- austagder and vestagder have been removed and combined into agder.
-- hordaland and sognogfjordane have been removed and combined into vestland.
-- nordtrondelag and sortrondelag have been removed and combined into trondelag.
-- hedmark and oppland have been removed and combined into innlandet.
+  - austagder and vestagder have been removed and combined into agder.
+  - hordaland and sognogfjordane have been removed and combined into vestland.
+  - nordtrondelag and sortrondelag have been removed and combined into trondelag.
+  - hedmark and oppland have been removed and combined into innlandet.
 
-A data migration is required for users of `lv.forms.LVMunicipalitySelect`. `MUNICIPALITY_CHOICES` was updated to the
-values in the 2021 municipal reform. Details of this change can be found here:
+- LV: A data migration is required for users of `lv.forms.LVMunicipalitySelect`. `MUNICIPALITY_CHOICES` was updated to the
+  values in the 2021 municipal reform. Details of this change can be found here:
 
-https://en.wikipedia.org/wiki/ISO_3166-2:LV#Changes
+  https://en.wikipedia.org/wiki/ISO_3166-2:LV#Changes
 
 A warning message will be displayed when `lv.forms.LVMunicipalitySelect` or `nl.forms.NOMunicipalitySelect` are used.
 See the `localflavor online docs <https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility>`_ for
