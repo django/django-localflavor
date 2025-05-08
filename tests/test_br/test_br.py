@@ -3,6 +3,7 @@ from django.test import SimpleTestCase, TestCase
 from localflavor.br import models
 from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
                                   BRZipCodeField)
+from localflavor.br.utils import get_states_of_brazil
 from tests.test_br.forms import BRPersonProfileForm
 
 
@@ -285,3 +286,35 @@ class BRLocalFlavorModelTests(SimpleTestCase):
         self.assertEqual(instance.max_length, new_instance.max_length)
         self.assertEqual(instance.description, new_instance.description)
         self.assertEqual(instance.validators, new_instance.validators)
+
+
+class GetStatesOfBrazil(SimpleTestCase):
+
+    ALL_EXPECTED_STATES = dict
+
+    def test_get_valid_state(self):
+        federative_unit = "pb"
+        state_of_brazil = get_states_of_brazil(federative_unit=federative_unit)
+        expected_value = "Paraíba"
+
+        self.assertEqual(state_of_brazil, expected_value)
+
+    def test_get_return_all_states_dict(self):
+        states_of_brazil_capital_letter = get_states_of_brazil(capital_letter=True)
+        states_of_brazil_without_capital_letter = get_states_of_brazil()
+        
+        self.assertEqual(
+            type(states_of_brazil_capital_letter),
+            self.ALL_EXPECTED_STATES
+        )
+        self.assertEqual(
+            type(states_of_brazil_without_capital_letter),
+            self.ALL_EXPECTED_STATES
+        )
+
+    def test_federative_unit_invalid(self):
+        invalid_inputs = [1, 1.0, "None", [None]]
+        
+        for invalid_input in invalid_inputs:
+            result = get_states_of_brazil(invalid_input)
+            self.assertIsInstance(result, self.ALL_EXPECTED_STATES)
