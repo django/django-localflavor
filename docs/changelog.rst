@@ -88,6 +88,7 @@ Other changes:
 - Dropped support for Django < 4.2.
 - Added support for Python 3.12 and 3.13.
 - Added support for Django 5.0, 5.1, and 5.2.
+- Switched to pyproject.toml based package build using the setuptools build backend.
 
 
 4.0   (2023-04-22)
