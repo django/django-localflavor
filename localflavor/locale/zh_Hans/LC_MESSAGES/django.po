@@ -5,15 +5,18 @@
 # Translators:
 # Daniel Duan <DaNmarner@gmail.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
+# Kaiqi Zhu, 2023
 # lanbla <lanlinwen@buaa.edu.cn>, 2021
 # Lele Long <schemacs@gmail.com>, 2011
 # li xiushan <lixiushan@aliyun.com>, 2020
 # Lemon Li <leeway1985@gmail.com>, 2015
 # Ray Wang <pivstone@gmail.com>, 2017
+# Scott Jiang, 2023
 # slene <vslene@gmail.com>, 2011
 # Jason Ren, 2022
+# Veoco <one@nomox.cn>, 2023
 # 张发城 <zhangfccn@gmail.com>, 2018
-# Fangjiaqi77 <370358679@qq.com>, 2020
+# LatteFang <370358679@qq.com>, 2020
 # kkkkhu <tracis@wodiga.com>, 2017
 # Yang Zeyu (扩散性百万甜面包) <Himself6565@gmail.com>, 2018
 # 高乐喆 <gaolezhe@outlook.com>, 2023
@@ -21,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-07 15:31+0200\n"
+"POT-Creation-Date: 2025-05-06 12:54+0200\n"
 "PO-Revision-Date: 2013-05-29 13:57+0000\n"
-"Last-Translator: 高乐喆 <gaolezhe@outlook.com>, 2023\n"
+"Last-Translator: Veoco <one@nomox.cn>, 2023\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-"
 "localflavor/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -278,85 +281,85 @@ msgid "Enter a postal code in the format 00000-000."
 msgstr "以 000000-000 的格式输入一个邮政编码"
 
 msgid "Brest Region"
-msgstr ""
+msgstr "布列斯特地区"
 
 msgid "Vitebsk Region"
-msgstr ""
+msgstr "维捷布斯克地区"
 
 msgid "Gomel Region"
-msgstr ""
+msgstr "戈梅利地区"
 
 msgid "Grodno Region"
-msgstr ""
+msgstr "格罗德诺地区"
 
 msgid "Minsk Region"
-msgstr ""
+msgstr "明斯克地区"
 
 msgid "Mogilev Region"
-msgstr ""
+msgstr "莫吉廖夫地区"
 
 msgid "City of Minsk"
-msgstr ""
+msgstr "明斯克市"
 
 msgid "Passport number format is: XX1234567"
-msgstr ""
+msgstr "护照号码的格式是：XX234567"
 
 msgid "ID format is: 1234567X123XX1"
-msgstr ""
+msgstr "证件号码的格式是：1234567X23XX1"
 
 msgid "Postal code format is: 123456"
-msgstr ""
+msgstr "邮政编码的格式是：12345"
 
 msgid "Belarusian Regions (one integer value in the range 1-7)."
-msgstr ""
+msgstr "白俄罗斯地区（1-7 范围内的整数值）。"
 
-msgid "Belarusian passport number (2 letters followed by 7 digits"
+msgid "Belarusian passport number (2 letters followed by 7 digits)."
 msgstr ""
 
 msgid "Belarusian passport ID number (14 letters and digits)."
-msgstr ""
+msgstr "白俄罗斯护照 ID 号码（14 个字母和数字）。"
 
 msgid "Belarusian Postal code (6 digits)."
-msgstr ""
+msgstr "白俄罗斯邮政编码（6 位数字）。"
 
 msgid "Alberta"
-msgstr ""
+msgstr "阿尔伯塔"
 
 msgid "British Columbia"
 msgstr "英属哥伦比亚"
 
 msgid "Manitoba"
-msgstr ""
+msgstr "曼尼托巴"
 
 msgid "New Brunswick"
-msgstr ""
+msgstr "新不伦瑞克"
 
 msgid "Newfoundland and Labrador"
-msgstr ""
+msgstr "纽芬兰与拉布拉多"
 
 msgid "Northwest Territories"
-msgstr ""
+msgstr "西北地区"
 
 msgid "Nova Scotia"
-msgstr ""
+msgstr "新斯科舍"
 
 msgid "Nunavut"
-msgstr ""
+msgstr "努纳武特"
 
 msgid "Ontario"
-msgstr ""
+msgstr "安大略"
 
 msgid "Prince Edward Island"
-msgstr ""
+msgstr "爱德华王子岛"
 
 msgid "Quebec"
-msgstr ""
+msgstr "魁北克"
 
 msgid "Saskatchewan"
-msgstr ""
+msgstr "萨斯喀彻温"
 
 msgid "Yukon"
-msgstr ""
+msgstr "育空"
 
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "以 XXX XXX 的格式输入一个邮政编码。"
@@ -368,91 +371,91 @@ msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr "以 XXX-XXX-XXX 的格式输入一个有效的加拿大社会保障号码。"
 
 msgid "Canadian Province (two uppercase letters)"
-msgstr ""
+msgstr "加拿大的省（两个大写字母）"
 
 msgid "Canadian Postal Code"
-msgstr ""
+msgstr "加拿大邮政编码"
 
 msgid "Canadian Social Insurance Number"
-msgstr ""
+msgstr "加拿大社保号码"
 
 msgid "Aargau"
-msgstr ""
+msgstr "阿尔高"
 
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "阿彭策尔内罗登州"
 
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "阿彭策尔外罗登州"
 
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "巴塞尔城市"
 
 msgid "Basel-Land"
-msgstr ""
+msgstr "巴塞尔乡村"
 
 msgid "Berne"
-msgstr ""
+msgstr "伯尔尼"
 
 msgid "Fribourg"
-msgstr ""
+msgstr "弗里堡"
 
 msgid "Geneva"
-msgstr ""
+msgstr "日内瓦"
 
 msgid "Glarus"
-msgstr ""
+msgstr "格拉鲁斯"
 
 msgid "Graubuenden"
-msgstr ""
+msgstr "格劳宾登"
 
 msgid "Jura"
-msgstr ""
+msgstr "汝拉"
 
 msgid "Lucerne"
-msgstr ""
+msgstr "卢塞恩"
 
 msgid "Neuchatel"
-msgstr ""
+msgstr "纳沙泰尔"
 
 msgid "Nidwalden"
-msgstr ""
+msgstr "尼德瓦尔登"
 
 msgid "Obwalden"
-msgstr ""
+msgstr "上瓦尔登"
 
 msgid "Schaffhausen"
-msgstr ""
+msgstr "沙夫豪森"
 
 msgid "Schwyz"
-msgstr ""
+msgstr "施维茨"
 
 msgid "Solothurn"
-msgstr ""
+msgstr "索洛图恩"
 
 msgid "St. Gallen"
-msgstr ""
+msgstr "圣加仑"
 
 msgid "Thurgau"
-msgstr ""
+msgstr "图尔高"
 
 msgid "Ticino"
-msgstr ""
+msgstr "提契诺"
 
 msgid "Uri"
-msgstr ""
+msgstr "乌里"
 
 msgid "Valais"
-msgstr ""
+msgstr "瓦莱州"
 
 msgid "Vaud"
-msgstr ""
+msgstr "沃州"
 
 msgid "Zug"
-msgstr ""
+msgstr "楚格"
 
 msgid "Zurich"
-msgstr ""
+msgstr "苏黎世"
 
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
@@ -493,90 +496,90 @@ msgid "Invalid NIT."
 msgstr "非法的 NIT。"
 
 msgid "Occidental"
-msgstr ""
+msgstr "西部"
 
 msgid "Central"
-msgstr ""
+msgstr "中部"
 
 msgid "Oriental"
-msgstr ""
+msgstr "东部"
 
 msgid "Pinar del Río"
-msgstr ""
+msgstr "比那尔德里奥"
 
 msgid "Artemisa"
-msgstr ""
+msgstr "阿特米萨"
 
 msgid "Mayabeque"
-msgstr ""
+msgstr "马亚贝克"
 
 msgid "La Habana"
-msgstr ""
+msgstr "哈瓦那"
 
 msgid "Matanzas"
-msgstr ""
+msgstr "马坦萨斯"
 
 msgid "Cienfuegos"
-msgstr ""
+msgstr "西恩富戈斯"
 
 msgid "Villa Clara"
-msgstr ""
+msgstr "比利亚克拉拉"
 
 msgid "Sancti Spíritus"
-msgstr ""
+msgstr "圣斯皮里图斯"
 
 msgid "Ciego de Ávila"
-msgstr ""
+msgstr "西恩富戈斯"
 
 msgid "Camagüey"
-msgstr ""
+msgstr "卡马圭伊"
 
 msgid "Las Tunas"
-msgstr ""
+msgstr "拉斯图纳斯"
 
 msgid "Holguín"
-msgstr ""
+msgstr "奥尔金"
 
 msgid "Granma"
-msgstr ""
+msgstr "格兰马"
 
 msgid "Santiago de Cuba"
-msgstr ""
+msgstr "圣地亚哥德古巴"
 
 msgid "Guantánamo"
-msgstr ""
+msgstr "关塔那摩"
 
 msgid "Isla de la Juventud"
-msgstr ""
+msgstr "青年岛"
 
 msgid "Enter a Cuban region."
-msgstr ""
+msgstr "输入一个古巴地区。"
 
 msgid "Enter a Cuban province."
-msgstr ""
+msgstr "输入一个古巴省份。"
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr ""
+msgstr "输入一个格式为 XXXXX 的有效邮政编码。"
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
-msgstr ""
+msgstr "输入一个格式为 XXXXXXXXXXX 的有效身份证号码。"
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr ""
+msgstr "古巴地区（三个大写字母）"
 
 msgid "Cuban provinces (three uppercase letters)"
-msgstr ""
+msgstr "古巴省份（三个大写字母）"
 
 msgid "Cuban postal code"
-msgstr ""
+msgstr "古巴邮政编码"
 
 msgid "Cuban identity card number"
-msgstr ""
+msgstr "古巴身份证号码"
 
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
-msgstr ""
+msgstr "输入有效的日期（yymmdd）作为身份证号码的前 6 位数字。"
 
 msgid "Prague"
 msgstr "布拉格"
@@ -689,157 +692,157 @@ msgid ""
 msgstr "以 XXXXXXXXXXX-XXXXXXX-XXXXXXX-X 的格式输入一个有效的德国身份证号码。"
 
 msgid "Albertslund"
-msgstr ""
+msgstr "阿尔伯特斯伦德"
 
 msgid "Allerød"
-msgstr ""
+msgstr "阿勒尔厄"
 
 msgid "Ballerup"
-msgstr ""
+msgstr "巴勒鲁普"
 
 msgid "Bornholm"
-msgstr ""
+msgstr "波恩霍尔姆"
 
 msgid "Brøndby"
-msgstr ""
+msgstr "布隆比"
 
 msgid "Dragør"
-msgstr ""
+msgstr "德拉戈尔"
 
 msgid "Egedal"
-msgstr ""
+msgstr "埃厄达尔"
 
 msgid "Fredensborg"
-msgstr ""
+msgstr "弗雷登斯堡"
 
 msgid "Frederiksberg"
-msgstr ""
+msgstr "弗雷德里克斯堡"
 
 msgid "Frederikssund"
-msgstr ""
+msgstr "弗雷德里克松"
 
 msgid "Furesø"
-msgstr ""
+msgstr "富勒瑟"
 
 msgid "Gentofte"
-msgstr ""
+msgstr "根托夫特"
 
 msgid "Gladsaxe"
-msgstr ""
+msgstr "格拉德萨克斯"
 
 msgid "Glostrup"
-msgstr ""
+msgstr "格洛斯特鲁普"
 
 msgid "Gribskov"
-msgstr ""
+msgstr "格里布斯科夫"
 
 msgid "Halsnæs"
-msgstr ""
+msgstr "哈尔斯内斯"
 
 msgid "Helsingør"
-msgstr ""
+msgstr "赫尔辛格"
 
 msgid "Herlev"
-msgstr ""
+msgstr "赫勒勒"
 
 msgid "Hillerød"
-msgstr ""
+msgstr "希勒勒德"
 
 msgid "Hvidovre"
-msgstr ""
+msgstr "赫维多夫"
 
 msgid "Høje-Taastrup"
-msgstr ""
+msgstr "胡厄-塔斯特鲁普"
 
 msgid "Hørsholm"
-msgstr ""
+msgstr "赫尔舒姆"
 
 msgid "Ishøj"
-msgstr ""
+msgstr "伊舒伊"
 
 msgid "København"
-msgstr ""
+msgstr "哥本哈根"
 
 msgid "Lyngby-Taarbæk"
-msgstr ""
+msgstr "林比-塔尔贝克"
 
 msgid "Rudersdal"
-msgstr ""
+msgstr "鲁德尔斯达尔"
 
 msgid "Rødovre"
-msgstr ""
+msgstr "罗杜夫"
 
 msgid "Tårnby"
-msgstr ""
+msgstr "坦比"
 
 msgid "Vallensbæk"
-msgstr ""
+msgstr "瓦伦斯贝克"
 
 msgid "Favrskov"
-msgstr ""
+msgstr "法夫斯科夫"
 
 msgid "Hedensted"
-msgstr ""
+msgstr "海登斯泰德"
 
 msgid "Herning"
-msgstr ""
+msgstr "赫尔宁"
 
 msgid "Holstebro"
-msgstr ""
+msgstr "霍尔斯特布罗"
 
 msgid "Horsens"
-msgstr ""
+msgstr "霍尔森斯"
 
 msgid "Ikast-Brande"
-msgstr ""
+msgstr "伊卡斯特-布兰德"
 
 msgid "Lemvig"
-msgstr ""
+msgstr "勒姆维格"
 
 msgid "Norddjurs"
-msgstr ""
+msgstr "诺德尤尔斯"
 
 msgid "Odder"
-msgstr ""
+msgstr "奥德"
 
 msgid "Randers"
-msgstr ""
+msgstr "兰德斯"
 
 msgid "Ringkøbing-Skjern"
-msgstr ""
+msgstr "林克宝-斯基恩"
 
 msgid "Samsø"
-msgstr ""
+msgstr "桑斯岛"
 
 msgid "Silkeborg"
-msgstr ""
+msgstr "锡尔克堡"
 
 msgid "Skanderborg"
-msgstr ""
+msgstr "斯坎德堡"
 
 msgid "Skive"
-msgstr ""
+msgstr "斯基夫"
 
 msgid "Struer"
-msgstr ""
+msgstr "斯特吕尔"
 
 msgid "Syddjurs"
-msgstr ""
+msgstr "西尤尔斯"
 
 msgid "Viborg"
-msgstr ""
+msgstr "维堡"
 
 msgid "Aarhus"
-msgstr ""
+msgstr "奥胡斯"
 
 msgid "Brønderslev"
-msgstr ""
+msgstr "布伦德斯勒夫"
 
 msgid "Frederikshavn"
-msgstr ""
+msgstr "腓特烈港"
 
 msgid "Hjørring"
-msgstr ""
+msgstr "约灵"
 
 msgid "Jammerbugt"
 msgstr ""
@@ -5211,6 +5214,102 @@ msgstr ""
 msgid "Hawalli"
 msgstr ""
 
+msgid "Enter a postal code in format NNNNN"
+msgstr ""
+
+msgid "Kandy"
+msgstr ""
+
+msgid "Matale"
+msgstr ""
+
+msgid "Nuwara Eliya"
+msgstr ""
+
+msgid "Anuradhapura"
+msgstr ""
+
+msgid "Polonnaruwa"
+msgstr ""
+
+msgid "Jaffna"
+msgstr ""
+
+msgid "Kilinochchi"
+msgstr ""
+
+msgid "Mannar"
+msgstr ""
+
+msgid "Vavuniya"
+msgstr ""
+
+msgid "Mullativu"
+msgstr ""
+
+msgid "Alambil"
+msgstr ""
+
+msgid "Ampara"
+msgstr ""
+
+msgid "Batticaloa"
+msgstr ""
+
+msgid "Trincomalee"
+msgstr ""
+
+msgid "Kurunagala"
+msgstr ""
+
+msgid "Puttalam"
+msgstr ""
+
+msgid "Galle"
+msgstr ""
+
+msgid "Hambanthota"
+msgstr ""
+
+msgid "Mathara"
+msgstr ""
+
+msgid "Badulla"
+msgstr ""
+
+msgid "Monaragala"
+msgstr ""
+
+msgid "Kegalle"
+msgstr ""
+
+msgid "Rathnapura"
+msgstr ""
+
+msgid "Colombo"
+msgstr ""
+
+msgid "Gampaha"
+msgstr ""
+
+msgid "Kaluthara"
+msgstr ""
+
+msgid "North Central"
+msgstr ""
+
+msgid "North Western"
+msgstr ""
+
+msgid "Sabaragamuwa"
+msgstr ""
+
+msgid "Southern"
+msgstr ""
+
+msgid "Uva"
+msgstr ""
+
 msgid "ID Code consists of exactly 11 decimal digits."
 msgstr ""
 
@@ -5445,9 +5544,6 @@ msgstr ""
 msgid "Jelgava"
 msgstr ""
 
-msgid "Jēkabpils"
-msgstr ""
-
 msgid "Jūrmala"
 msgstr ""
 
@@ -5460,52 +5556,16 @@ msgstr ""
 msgid "Riga"
 msgstr ""
 
-msgid "Valmiera"
-msgstr ""
-
 msgid "Ventspils"
-msgstr ""
-
-msgid "Aglona municipality"
 msgstr ""
 
 msgid "Aizkraukle municipality"
 msgstr ""
 
-msgid "Aizpute municipality"
-msgstr ""
-
-msgid "Aknīste municipality"
-msgstr ""
-
-msgid "Aloja municipality"
-msgstr ""
-
-msgid "Alsunga municipality"
-msgstr ""
-
 msgid "Alūksne municipality"
 msgstr ""
 
-msgid "Amata municipality"
-msgstr ""
-
-msgid "Ape municipality"
-msgstr ""
-
-msgid "Auce municipality"
-msgstr ""
-
 msgid "Ādaži municipality"
-msgstr ""
-
-msgid "Babīte municipality"
-msgstr ""
-
-msgid "Baldone municipality"
-msgstr ""
-
-msgid "Baltinava municipality"
 msgstr ""
 
 msgid "Balvi municipality"
@@ -5514,76 +5574,13 @@ msgstr ""
 msgid "Bauska municipality"
 msgstr ""
 
-msgid "Beverīna municipality"
-msgstr ""
-
-msgid "Brocēni municipality"
-msgstr ""
-
-msgid "Burtnieki municipality"
-msgstr ""
-
-msgid "Carnikava municipality"
-msgstr ""
-
-msgid "Cesvaine municipality"
-msgstr ""
-
 msgid "Cēsis municipality"
-msgstr ""
-
-msgid "Cibla municipality"
-msgstr ""
-
-msgid "Dagda municipality"
-msgstr ""
-
-msgid "Daugavpils municipality"
 msgstr ""
 
 msgid "Dobele municipality"
 msgstr ""
 
-msgid "Dundaga municipality"
-msgstr ""
-
-msgid "Durbe municipality"
-msgstr ""
-
-msgid "Engure municipality"
-msgstr ""
-
-msgid "Ērgļi municipality"
-msgstr ""
-
-msgid "Garkalne municipality"
-msgstr ""
-
-msgid "Grobiņa municipality"
-msgstr ""
-
 msgid "Gulbene municipality"
-msgstr ""
-
-msgid "Iecava municipality"
-msgstr ""
-
-msgid "Ikšķile municipality"
-msgstr ""
-
-msgid "Ilūkste municipality"
-msgstr ""
-
-msgid "Inčukalns municipality"
-msgstr ""
-
-msgid "Jaunjelgava municipality"
-msgstr ""
-
-msgid "Jaunpiebalga municipality"
-msgstr ""
-
-msgid "Jaunpils municipality"
 msgstr ""
 
 msgid "Jelgava municipality"
@@ -5592,49 +5589,19 @@ msgstr ""
 msgid "Jēkabpils municipality"
 msgstr ""
 
-msgid "Kandava municipality"
-msgstr ""
-
-msgid "Kārsava municipality"
-msgstr ""
-
-msgid "Kocēni municipality"
-msgstr ""
-
-msgid "Koknese municipality"
-msgstr ""
-
 msgid "Krāslava municipality"
-msgstr ""
-
-msgid "Krimulda municipality"
-msgstr ""
-
-msgid "Krustpils municipality"
 msgstr ""
 
 msgid "Kuldīga municipality"
 msgstr ""
 
-msgid "Ķegums municipality"
-msgstr ""
-
 msgid "Ķekava municipality"
-msgstr ""
-
-msgid "Lielvārde municipality"
 msgstr ""
 
 msgid "Limbaži municipality"
 msgstr ""
 
-msgid "Līgatne municipality"
-msgstr ""
-
 msgid "Līvāni municipality"
-msgstr ""
-
-msgid "Lubāna municipality"
 msgstr ""
 
 msgid "Ludza municipality"
@@ -5643,25 +5610,7 @@ msgstr ""
 msgid "Madona municipality"
 msgstr ""
 
-msgid "Mazsalaca municipality"
-msgstr ""
-
-msgid "Mālpils municipality"
-msgstr ""
-
 msgid "Mārupe municipality"
-msgstr ""
-
-msgid "Mērsrags municipality"
-msgstr ""
-
-msgid "Naukšēni municipality"
-msgstr ""
-
-msgid "Nereta municipality"
-msgstr ""
-
-msgid "Nīca municipality"
 msgstr ""
 
 msgid "Ogre municipality"
@@ -5670,58 +5619,13 @@ msgstr ""
 msgid "Olaine municipality"
 msgstr ""
 
-msgid "Ozolnieki municipality"
-msgstr ""
-
-msgid "Pārgauja municipality"
-msgstr ""
-
-msgid "Pāvilosta municipality"
-msgstr ""
-
-msgid "Pļaviņas municipality"
-msgstr ""
-
 msgid "Preiļi municipality"
-msgstr ""
-
-msgid "Priekule municipality"
-msgstr ""
-
-msgid "Priekuļi municipality"
-msgstr ""
-
-msgid "Rauna municipality"
 msgstr ""
 
 msgid "Rēzekne municipality"
 msgstr ""
 
-msgid "Riebiņi municipality"
-msgstr ""
-
-msgid "Roja municipality"
-msgstr ""
-
 msgid "Ropaži municipality"
-msgstr ""
-
-msgid "Rucava municipality"
-msgstr ""
-
-msgid "Rugāji municipality"
-msgstr ""
-
-msgid "Rundāle municipality"
-msgstr ""
-
-msgid "Rūjiena municipality"
-msgstr ""
-
-msgid "Sala municipality"
-msgstr ""
-
-msgid "Salacgrīva municipality"
 msgstr ""
 
 msgid "Salaspils municipality"
@@ -5733,37 +5637,16 @@ msgstr ""
 msgid "Saulkrasti municipality"
 msgstr ""
 
-msgid "Sēja municipality"
-msgstr ""
-
 msgid "Sigulda municipality"
-msgstr ""
-
-msgid "Skrīveri municipality"
-msgstr ""
-
-msgid "Skrunda municipality"
 msgstr ""
 
 msgid "Smiltene municipality"
 msgstr ""
 
-msgid "Stopiņi municipality"
-msgstr ""
-
-msgid "Strenči municipality"
-msgstr ""
-
 msgid "Talsi municipality"
 msgstr ""
 
-msgid "Tērvete municipality"
-msgstr ""
-
 msgid "Tukums municipality"
-msgstr ""
-
-msgid "Vaiņode municipality"
 msgstr ""
 
 msgid "Valka municipality"
@@ -5772,28 +5655,16 @@ msgstr ""
 msgid "Varakļāni municipality"
 msgstr ""
 
-msgid "Vārkava municipality"
-msgstr ""
-
-msgid "Vecpiebalga municipality"
-msgstr ""
-
-msgid "Vecumnieki municipality"
-msgstr ""
-
 msgid "Ventspils municipality"
 msgstr ""
 
-msgid "Viesīte municipality"
+msgid "Augšdaugava municipality"
 msgstr ""
 
-msgid "Viļaka municipality"
+msgid "Dienvidkurzeme municipality"
 msgstr ""
 
-msgid "Viļāni municipality"
-msgstr ""
-
-msgid "Zilupe municipality"
+msgid "Valmiera municipality"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXX."
@@ -5803,6 +5674,12 @@ msgid "Postal code"
 msgstr ""
 
 msgid "Select Province"
+msgstr ""
+
+msgid "Enter a valid Moroccan CIN number."
+msgstr ""
+
+msgid "CIN Number"
 msgstr ""
 
 msgid "Al Hoceima"
@@ -6992,10 +6869,10 @@ msgstr ""
 msgid "Lumbini"
 msgstr ""
 
-msgid "Province 1"
+msgid "Koshi"
 msgstr ""
 
-msgid "Province 2"
+msgid "Madhesh"
 msgstr ""
 
 msgid "Sudurpaschim"
@@ -7008,9 +6885,6 @@ msgid "Dhawalagiri"
 msgstr ""
 
 msgid "Janakpur"
-msgstr ""
-
-msgid "Koshi"
 msgstr ""
 
 msgid "Mahakali"
@@ -8242,7 +8116,7 @@ msgstr ""
 msgid "Kirovohrad Oblast"
 msgstr ""
 
-msgid "Kiev Oblast"
+msgid "Kyiv Oblast"
 msgstr ""
 
 msgid "Luhansk Oblast"
@@ -8287,7 +8161,7 @@ msgstr ""
 msgid "Autonomous Republic of Crimea"
 msgstr ""
 
-msgid "Kiev"
+msgid "Kyiv"
 msgstr ""
 
 msgid "Sevastopol"

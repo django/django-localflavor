@@ -3,302 +3,298 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# 534b44a19bf18d20b71ecc4eb77c572f_db336e9 <f8268c65f822ec11a3a2e5d482cd7ead_175>, 2011
-# Jannis Leidel <jannis@leidel.info>, 2011
-# Meir Kriheli <mkriheli@gmail.com>, 2013,2015,2023
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-06 12:54+0200\n"
 "PO-Revision-Date: 2013-05-29 13:57+0000\n"
-"Last-Translator: Meir Kriheli <mkriheli@gmail.com>, 2013,2015,2023\n"
-"Language-Team: Hebrew (http://app.transifex.com/django/django-localflavor/"
-"language/he/)\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Uyghur (http://app.transifex.com/django/django-localflavor/"
+"language/ug/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: he\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
-"1 == 0) ? 1: 2;\n"
+"Language: ug\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Buenos Aires"
-msgstr "בואנוס איירס"
+msgstr "بۇئېنۇس-ئايرېس"
 
 msgid "Catamarca"
-msgstr "קטמרקה"
+msgstr "كاتاماركا"
 
 msgid "Chaco"
-msgstr "צ'אקו"
+msgstr "چاكو"
 
 msgid "Chubut"
-msgstr "צ'ובוט"
+msgstr "چۇبۇت"
 
 msgid "Ciudad Autónoma de Buenos Aires"
-msgstr "בואנוס איירס"
+msgstr ""
 
 msgid "Córdoba"
-msgstr "קורדובה"
+msgstr "كوردوبا"
 
 msgid "Corrientes"
-msgstr "קוריינטס"
+msgstr "كورىيېنتېس"
 
 msgid "Entre Ríos"
-msgstr "אנטרה ריוס"
+msgstr "ئېنترې رىئوس"
 
 msgid "Formosa"
-msgstr "פורמוסה"
+msgstr "فورموسا"
 
 msgid "Jujuy"
-msgstr "חוחוי"
+msgstr "خۇخۇي"
 
 msgid "La Pampa"
-msgstr "לה פמפה"
+msgstr "لا پامپا"
 
 msgid "La Rioja"
-msgstr "לה ריוחה"
+msgstr "لا-رىئوخا"
 
 msgid "Mendoza"
-msgstr "מנדוסה"
+msgstr "مېندوزا"
 
 msgid "Misiones"
-msgstr "מיסיונס"
+msgstr "مىسىئونېس"
 
 msgid "Neuquén"
-msgstr "נאוקן"
+msgstr "نېۇقۇېن"
 
 msgid "Río Negro"
-msgstr "ריו נגרו"
+msgstr "رىئو-نېگرو"
 
 msgid "Salta"
-msgstr "סלטה"
+msgstr "سالتا"
 
 msgid "San Juan"
-msgstr "סן חואן"
+msgstr "سان-خۇئان"
 
 msgid "San Luis"
-msgstr "סן לואיס"
+msgstr "سان-لۇئىس"
 
 msgid "Santa Cruz"
-msgstr "סנטה קרוס"
+msgstr "سانتا-كرۇز"
 
 msgid "Santa Fe"
-msgstr "סנטה פה"
+msgstr "سانتا-فې"
 
 msgid "Santiago del Estero"
-msgstr "סנטיאגו דל אסטרו"
+msgstr "سانتىياگو دېل ئېستېرو"
 
 msgid "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
-msgstr "טיירה דל פואגו, אנטארקטיקה ואיי האוקיינוס האטלנטי הדרומי"
+msgstr ""
 
 msgid "Tucumán"
-msgstr "טוקומאן"
+msgstr "تۇكۇمان"
 
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
-msgstr "יש להזין קוד דואר בתבנית NNNN או ANNNNAAA."
+msgstr ""
 
 msgid "This field requires only numbers."
-msgstr "יש להזין רק ספרות בשדה זה."
+msgstr ""
 
 msgid "This field requires 7 or 8 digits."
-msgstr "שדה זה דורש 7 או 8 ספרות."
+msgstr ""
 
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
-msgstr "יש להזין מספר CUIT חוקי בתבנית XX-XXXXXXXX-X או XXXXXXXXXXXX."
+msgstr ""
 
 msgid "Invalid CUIT."
-msgstr "CUIT שגוי"
+msgstr ""
 
 msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
-msgstr "סוג חוקי שגוי. סוג חייב להיות 27, 20, 30, 23, 24, 33 או 34."
+msgstr ""
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
-msgstr "יש להזין CBU חוקי בתבנית XXXXXXXXXXXXXXXXXXXXXX."
+msgstr ""
 
 msgid "CBU must be exactly 22 digits long."
-msgstr "CBU חייב להיות 22 ספרות."
+msgstr ""
 
 msgid "Invalid CBU."
-msgstr "CBU שגוי."
+msgstr ""
 
 msgid "Burgenland"
-msgstr "\tבורגנלנד"
+msgstr "بۇرگېنلاند"
 
 msgid "Carinthia"
-msgstr "קרינתיה"
+msgstr "كارىنتىيا"
 
 msgid "Lower Austria"
-msgstr "אוסטריה התחתונה"
+msgstr "تۆۋەن ئاۋسترىيە"
 
 msgid "Upper Austria"
-msgstr "אוסטריה עילית"
+msgstr "يۇقىرى ئاۋسترىيە"
 
 msgid "Salzburg"
-msgstr "זלצבורג"
+msgstr "سالتزبۇرگ"
 
 msgid "Styria"
-msgstr "שטיריה"
+msgstr "سىتىرىيە"
 
 msgid "Tyrol"
-msgstr "טירול"
+msgstr "تىرول"
 
 msgid "Vorarlberg"
-msgstr "פורארלברג"
+msgstr "ۋورالبېرگ"
 
 msgid "Vienna"
-msgstr "וינה"
+msgstr "ۋىيېننا"
 
 msgid "Enter a zip code in the format XXXX."
-msgstr "יש להזין מיקוד בתבנית XXXX."
+msgstr ""
 
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
-msgstr "יש להזין מספר ביטוח לאומי אוסטרלי חוקי בתבנית XXXX XXXXXX."
+msgstr ""
 
 msgid "Enter a 4 digit postcode."
-msgstr "יש להזין מיקוד בן 4 ספרות."
+msgstr ""
 
 msgid "Australian State"
-msgstr "מדינה אוסטרלית"
+msgstr ""
 
 msgid "Australian Postcode"
-msgstr "מיקוד אוסטרלי"
+msgstr ""
 
 msgid "Australian Business Number"
-msgstr "מספר עסק אוסטרלי"
+msgstr ""
 
 msgid "Australian Company Number"
-msgstr "מספר חברה אוסטרלי"
+msgstr ""
 
 msgid "Australian Tax File Number"
-msgstr "מספר תיק מס אוסטרלי"
+msgstr ""
 
 msgid "Enter a valid ABN."
-msgstr "נא להזין ABN חוקי."
+msgstr ""
 
 msgid "Enter a valid ACN."
-msgstr "נא להזין ACN חוקי."
+msgstr ""
 
 msgid "Enter a valid TFN."
-msgstr "נא להזין TFN חוקי."
+msgstr ""
 
 msgid "Antwerp"
-msgstr "אנטוורפן"
+msgstr "ئانتۋېرپ"
 
 msgid "Brussels"
-msgstr "בריסל"
+msgstr "بىريۇسسېل"
 
 msgid "East Flanders"
-msgstr "מזרח פלנדריה"
+msgstr "شەرقىي فىلاندېرس"
 
 msgid "Flemish Brabant"
-msgstr "ברבנט הפלמית"
+msgstr "فلېمىش برابانت"
 
 msgid "Hainaut"
-msgstr "היינאוט"
+msgstr "ئېنو"
 
 msgid "Liege"
-msgstr "לייז'"
+msgstr "لىئېگې"
 
 msgid "Limburg"
-msgstr "לימבורג"
+msgstr "لىمبۇرگ"
 
 msgid "Luxembourg"
-msgstr "לוקסמבורג"
+msgstr "لىيۇكسېمبۇرگ"
 
 msgid "Namur"
-msgstr "נאמור"
+msgstr "نامۇر"
 
 msgid "Walloon Brabant"
-msgstr "ברבנט הוולונית"
+msgstr "ۋالۇن برابانت"
 
 msgid "West Flanders"
-msgstr "פלנדריה המערבית"
+msgstr "غەربىي فىلاندېرس"
 
 msgid "Brussels Capital Region"
-msgstr "מחוז הבירה בריסל"
+msgstr ""
 
 msgid "Flemish Region"
-msgstr "אזור פלמי"
+msgstr ""
 
 msgid "Wallonia"
-msgstr "ולוניה"
+msgstr ""
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
-msgstr "נא להזין מיקוד חוקי בטווח ובתבנית 1XXX - 9XXX."
+msgstr ""
 
 msgid "The EGN is not valid"
-msgstr "ה־EGN אינו חוקי"
+msgstr ""
 
 msgid "EIK/BULSTAT is not valid"
-msgstr "ה־EIK/BULSTAT אינו חוקי."
+msgstr ""
 
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
-msgstr "נא לבחור מדינה ברזילאית חוקית. מדינה זו אינה אחת מהמדינות האפשריות."
+msgstr ""
 
 msgid "Invalid CPF number."
-msgstr "מספר CPF לא חוקי"
+msgstr ""
 
 msgid "This field requires at most 11 digits or 14 characters."
-msgstr "שדה זה דורש 11 או 14 ספרות לכל היותר."
+msgstr ""
 
 msgid "Invalid CNPJ number."
-msgstr "מספר CNPJ לא חוקי"
+msgstr ""
 
 msgid "This field requires at least 14 digits"
-msgstr "שדה זה דורש לפחות 14 ספרות."
+msgstr ""
 
 msgid "Invalid Process number."
-msgstr "מספר Process לא חוקי."
+msgstr ""
 
 msgid "State of Brazil (two uppercase letters)"
-msgstr "מדינת ברזיל (שתי אותיות גדולות)"
+msgstr ""
 
 msgid "CPF Document"
-msgstr "מסמך CPF"
+msgstr ""
 
 msgid "CNPJ Document"
-msgstr "מסמך CNPJ"
+msgstr ""
 
 msgid "Postal Code"
-msgstr "מיקוד"
+msgstr ""
 
 msgid "Enter a postal code in the format 00000-000."
-msgstr "נא להזין מיקוד בתבנית 00000-000."
+msgstr ""
 
 msgid "Brest Region"
-msgstr "מחוז ברסט"
+msgstr ""
 
 msgid "Vitebsk Region"
-msgstr "מחוז ויטבסק"
+msgstr ""
 
 msgid "Gomel Region"
-msgstr "מחוז הומל"
+msgstr ""
 
 msgid "Grodno Region"
-msgstr "מחוז גרודנו"
+msgstr ""
 
 msgid "Minsk Region"
-msgstr " מחוז מינסק"
+msgstr ""
 
 msgid "Mogilev Region"
-msgstr "מחוז מוהילב"
+msgstr ""
 
 msgid "City of Minsk"
-msgstr "מינסק (העיר)"
+msgstr ""
 
 msgid "Passport number format is: XX1234567"
-msgstr "תבנית מספר הדרכון היא: XX1234567"
+msgstr ""
 
 msgid "ID format is: 1234567X123XX1"
 msgstr ""
 
 msgid "Postal code format is: 123456"
-msgstr "תבנית המיקוד היא: 123456"
+msgstr ""
 
 msgid "Belarusian Regions (one integer value in the range 1-7)."
-msgstr "מחוזות בלארוס (מספר שלם בטווח 1-7)."
+msgstr ""
 
 msgid "Belarusian passport number (2 letters followed by 7 digits)."
 msgstr ""
@@ -310,52 +306,52 @@ msgid "Belarusian Postal code (6 digits)."
 msgstr ""
 
 msgid "Alberta"
-msgstr "אלברטה"
+msgstr "ئالبېرتا"
 
 msgid "British Columbia"
-msgstr "קולומביה הבריטית"
+msgstr "ئەنگلىيە تەۋەلىكىدىكى كولومبىيە"
 
 msgid "Manitoba"
-msgstr "מניטובה"
+msgstr "مانىتوبا"
 
 msgid "New Brunswick"
-msgstr "ניו ברנזוויק"
+msgstr "نيۇ-بىرانسىۋىك"
 
 msgid "Newfoundland and Labrador"
-msgstr "ניופאונדלנד ולברדור"
+msgstr "نېۋفۇندلاند ۋە لابرادۇر"
 
 msgid "Northwest Territories"
-msgstr "הטריטוריות הצפון-מערביות"
+msgstr "غەربىي-شىمال تېررىتورىيىلىرى"
 
 msgid "Nova Scotia"
-msgstr "נובה סקוטיה"
+msgstr "نوۋا-شوتلاندىيە"
 
 msgid "Nunavut"
-msgstr "נונאווט"
+msgstr "نۇناۋۇت"
 
 msgid "Ontario"
-msgstr "אונטריו"
+msgstr "ئونتارىئو"
 
 msgid "Prince Edward Island"
-msgstr "אי הנסיך אדוארד"
+msgstr "پىرىنچې-ئېدۋارد ئارىلى"
 
 msgid "Quebec"
-msgstr "קוויבק"
+msgstr "كىۋېبېك"
 
 msgid "Saskatchewan"
-msgstr "ססקצ'ואן"
+msgstr "ساسكاچېۋان"
 
 msgid "Yukon"
-msgstr "יוקון"
+msgstr "يۇكون"
 
 msgid "Enter a postal code in the format XXX XXX."
-msgstr "יש להזין מיקוד בתבנית XXX XXX."
+msgstr ""
 
 msgid "Enter a Canadian province or territory."
-msgstr "יש להזין פרובינציה או טריטוריה קנדיים."
+msgstr ""
 
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
-msgstr "יש להזין מספר ביטוח לאומי קנדי חוקי בתבנית XXX-XXX-XXXX."
+msgstr ""
 
 msgid "Canadian Province (two uppercase letters)"
 msgstr ""
@@ -367,116 +363,114 @@ msgid "Canadian Social Insurance Number"
 msgstr ""
 
 msgid "Aargau"
-msgstr "ארגאו"
+msgstr ""
 
 msgid "Appenzell Innerrhoden"
-msgstr "אפנצל אינררודן"
+msgstr ""
 
 msgid "Appenzell Ausserrhoden"
-msgstr "אפנצל אוסר-רודן"
+msgstr ""
 
 msgid "Basel-Stadt"
-msgstr "בזל-שטאדט"
+msgstr ""
 
 msgid "Basel-Land"
-msgstr "בזל-לנד"
+msgstr ""
 
 msgid "Berne"
-msgstr "ברן"
+msgstr "بېرنې"
 
 msgid "Fribourg"
-msgstr "פריבור"
+msgstr "فىرىبورگ"
 
 msgid "Geneva"
-msgstr "ז'נבה"
+msgstr "جەنۋە"
 
 msgid "Glarus"
-msgstr "גלרוס"
+msgstr "گىلارۇس"
 
 msgid "Graubuenden"
-msgstr "גראובינדן"
+msgstr ""
 
 msgid "Jura"
-msgstr "ז'ורה"
+msgstr "جۇرا"
 
 msgid "Lucerne"
-msgstr "לוצרן"
+msgstr "لۇسېرن"
 
 msgid "Neuchatel"
-msgstr "נשאטל"
+msgstr ""
 
 msgid "Nidwalden"
-msgstr "נידוולדן"
+msgstr ""
 
 msgid "Obwalden"
-msgstr "אובוולדן"
+msgstr ""
 
 msgid "Schaffhausen"
-msgstr "שפהאוזן"
+msgstr "شافخائۇسېن"
 
 msgid "Schwyz"
-msgstr "שוויץ"
+msgstr "سىۋىز"
 
 msgid "Solothurn"
-msgstr "זולותורן"
+msgstr "سولوتۇرن"
 
 msgid "St. Gallen"
-msgstr "סנט גלן"
+msgstr "ساينىت-گاللېن"
 
 msgid "Thurgau"
-msgstr "תורגאו"
+msgstr ""
 
 msgid "Ticino"
-msgstr "טיצ'ינו"
+msgstr "تىسىنو"
 
 msgid "Uri"
-msgstr "אורי"
+msgstr "ئۈرى"
 
 msgid "Valais"
-msgstr "ואלה"
+msgstr "ۋالائىس"
 
 msgid "Vaud"
-msgstr "וו"
+msgstr "ۋائۇد"
 
 msgid "Zug"
-msgstr "צוג"
+msgstr "زۇگ"
 
 msgid "Zurich"
-msgstr "ציריך"
+msgstr "سىيۇرىخ"
 
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr ""
-"יש להזין מספר זהות או כרטיס פספורט שווייצריים בפורמט  X1234567<0 או "
-"1234567890."
 
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
 
 msgid "Enter a valid Chilean RUT."
-msgstr "יש להזין RUT צ'יליאני חוקי."
+msgstr ""
 
 msgid "Enter a valid Chilean RUT. The format is XX.XXX.XXX-X."
-msgstr "יש להזין RUT צ'יליאני חוקי. התבנית היא XX.XXX.XXX-X."
+msgstr ""
 
 msgid "The Chilean RUT is not valid."
-msgstr "שדה RUT צ'יליאני אינו חוקי."
+msgstr ""
 
 msgid "Enter a post code in the format XXXXXX."
-msgstr "יש להזין מיקוד בתבנית XXXXXX."
+msgstr ""
 
 msgid "ID Card Number consists of 15 or 18 digits."
-msgstr "מספר כרטיס זיהוי מורכב מ־15 או 18 ספרות."
+msgstr ""
 
 msgid "Invalid ID Card Number: Wrong checksum"
-msgstr "מספר כרטיס זיהוי לא חוקי: ספרת ביקורת שגויה"
+msgstr ""
 
 msgid "Invalid ID Card Number: Wrong birthdate"
-msgstr "מספר כרטיס זיהוי לא חוקי: תאריך לידה שגוי"
+msgstr ""
 
 msgid "Invalid ID Card Number: Wrong location code"
-msgstr "מספר כרטיס זיהוי לא חוקי: קוד מיקום שגוי"
+msgstr ""
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
 msgstr ""
@@ -485,16 +479,16 @@ msgid "Invalid NIT."
 msgstr ""
 
 msgid "Occidental"
-msgstr ""
+msgstr "ئىنتىرلىڭ تىلى ؛ ئىنتىرلىڭچە"
 
 msgid "Central"
-msgstr ""
+msgstr "ئوتتۇرا"
 
 msgid "Oriental"
 msgstr ""
 
 msgid "Pinar del Río"
-msgstr ""
+msgstr "پىناردېل رىئو"
 
 msgid "Artemisa"
 msgstr ""
@@ -503,43 +497,43 @@ msgid "Mayabeque"
 msgstr ""
 
 msgid "La Habana"
-msgstr ""
+msgstr "لا-خابانا"
 
 msgid "Matanzas"
-msgstr ""
+msgstr "ماتانزاس"
 
 msgid "Cienfuegos"
-msgstr ""
+msgstr "كىېنفۇېگوس"
 
 msgid "Villa Clara"
-msgstr ""
+msgstr "ۋىللا كلارا"
 
 msgid "Sancti Spíritus"
-msgstr ""
+msgstr "سانكت سپرىتۇس"
 
 msgid "Ciego de Ávila"
-msgstr ""
+msgstr "شىگو دې ئاۋىلا"
 
 msgid "Camagüey"
-msgstr ""
+msgstr "كاماگۋېي"
 
 msgid "Las Tunas"
-msgstr ""
+msgstr "لاس تۇناس"
 
 msgid "Holguín"
-msgstr ""
+msgstr "خولگۋىن"
 
 msgid "Granma"
-msgstr ""
+msgstr "گرانما"
 
 msgid "Santiago de Cuba"
-msgstr ""
+msgstr "سانتىئاگو دې كۇبا"
 
 msgid "Guantánamo"
-msgstr ""
+msgstr "گۇانتانامو"
 
 msgid "Isla de la Juventud"
-msgstr ""
+msgstr "ياشلار ئارىلى ئالاھىدە رايونى"
 
 msgid "Enter a Cuban region."
 msgstr ""
@@ -571,117 +565,117 @@ msgid ""
 msgstr ""
 
 msgid "Prague"
-msgstr "פראג"
+msgstr "پىراگا"
 
 msgid "Central Bohemian Region"
-msgstr "מרכז בוהמיה"
+msgstr ""
 
 msgid "South Bohemian Region"
-msgstr "דרום בוהמיה"
+msgstr ""
 
 msgid "Pilsen Region"
-msgstr "מחוז פילזן"
+msgstr ""
 
 msgid "Carlsbad Region"
-msgstr "מחוז או איזור קרלסבד"
+msgstr ""
 
 msgid "Usti Region"
-msgstr "מחוז אוסטי"
+msgstr ""
 
 msgid "Liberec Region"
-msgstr "מחוז ליברץ"
+msgstr ""
 
 msgid "Hradec Region"
-msgstr "מחוז חרדץ"
+msgstr ""
 
 msgid "Pardubice Region"
-msgstr "מחוז פרדוביצה"
+msgstr ""
 
 msgid "Vysocina Region"
-msgstr "מחוז ויסוצ'ינה"
+msgstr ""
 
 msgid "South Moravian Region"
-msgstr "דרום מורביה"
+msgstr ""
 
 msgid "Olomouc Region"
-msgstr "מחוז או איזור אולומוק"
+msgstr ""
 
 msgid "Zlin Region"
-msgstr "מחוז זלין"
+msgstr ""
 
 msgid "Moravian-Silesian Region"
-msgstr "איזור מורביה – שלזיה"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXX or XXX XX."
-msgstr "יש להזין קוד דואר בתבנית XXXXX או XXX XX."
+msgstr ""
 
 msgid "Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX."
-msgstr "הזן מספר לידה בתבנית XXXXXX/XXXX או XXXXXXXXXX."
+msgstr ""
 
 msgid "Enter a valid birth number."
-msgstr "הזן מספר לידה חוקי."
+msgstr ""
 
 msgid "Enter a valid IC number."
-msgstr "הזן מספר IC חוקי."
+msgstr ""
 
 msgid "Baden-Wuerttemberg"
-msgstr "באדן־וירטמברג"
+msgstr ""
 
 msgid "Bavaria"
-msgstr "באווריה"
+msgstr "باۋارىيە"
 
 msgid "Berlin"
-msgstr "ברלין"
+msgstr "بېرلىن"
 
 msgid "Brandenburg"
-msgstr "ברנדנבורג"
+msgstr "بىرادېنبۇرگ"
 
 msgid "Bremen"
-msgstr "ברמן"
+msgstr "بىرامەن"
 
 msgid "Hamburg"
-msgstr "המבורג"
+msgstr "ھامبۇرگ"
 
 msgid "Hessen"
-msgstr "הסה"
+msgstr ""
 
 msgid "Mecklenburg-Western Pomerania"
-msgstr "מקלנבורג-מערב פומרניה"
+msgstr "مېكلېنبۇرگ-ئالدى پوممېرنىيە"
 
 msgid "Lower Saxony"
-msgstr "סקסוניה התחתונה"
+msgstr "ئاستىن ساكسېن"
 
 msgid "North Rhine-Westphalia"
-msgstr "נורדריין־וסטפאליה"
+msgstr "شىمالىي رېين-ۋېستفالىيە"
 
 msgid "Rhineland-Palatinate"
-msgstr "ריינלנד־פאלץ"
+msgstr "رېئىنلاند-پفالز"
 
 msgid "Saarland"
-msgstr "חבל הסאר"
+msgstr "سائارلاند"
 
 msgid "Saxony"
-msgstr "סקסוניה"
+msgstr "ساكسېن"
 
 msgid "Saxony-Anhalt"
-msgstr "סקסוניה־אנהלט"
+msgstr "ساكسېن-ئانخالت"
 
 msgid "Schleswig-Holstein"
-msgstr "שלזוויג־הולשטיין"
+msgstr "شلېسۋىگ-خولستېين"
 
 msgid "Thuringia"
-msgstr "תורינגיה"
+msgstr "تۇرىنگىيە"
 
 msgid "Enter a zip code in the format XXXXX."
-msgstr "יש להזין מיקוד בתבנית XXXXX."
+msgstr ""
 
 msgid ""
 "Enter a valid German identity card number in XXXXXXXXXXX-XXXXXXX-XXXXXXX-X "
 "format."
-msgstr "יש להזין מספר זיהוי גרמני חוקי בתבנית XXXXXXXXXXX-XXXXXXX-XXXXXXX-X."
+msgstr ""
 
 msgid "Albertslund"
-msgstr "אלברטסלונד"
+msgstr ""
 
 msgid "Allerød"
 msgstr ""
@@ -690,7 +684,7 @@ msgid "Ballerup"
 msgstr ""
 
 msgid "Bornholm"
-msgstr ""
+msgstr "بورنخولم"
 
 msgid "Brøndby"
 msgstr ""
@@ -720,7 +714,7 @@ msgid "Gladsaxe"
 msgstr ""
 
 msgid "Glostrup"
-msgstr ""
+msgstr "گلوسترۇپ"
 
 msgid "Gribskov"
 msgstr ""
@@ -735,7 +729,7 @@ msgid "Herlev"
 msgstr ""
 
 msgid "Hillerød"
-msgstr ""
+msgstr "خىللېرود"
 
 msgid "Hvidovre"
 msgstr ""
@@ -819,7 +813,7 @@ msgid "Syddjurs"
 msgstr ""
 
 msgid "Viborg"
-msgstr ""
+msgstr "ۋىبورىگ"
 
 msgid "Aarhus"
 msgstr ""
@@ -882,7 +876,7 @@ msgid "Lolland"
 msgstr ""
 
 msgid "Næstved"
-msgstr ""
+msgstr "نېستۋېد"
 
 msgid "Odsherred"
 msgstr ""
@@ -891,7 +885,7 @@ msgid "Ringsted"
 msgstr ""
 
 msgid "Roskilde"
-msgstr ""
+msgstr "روسكىلدې"
 
 msgid "Slagelse"
 msgstr ""
@@ -900,7 +894,7 @@ msgid "Solrød"
 msgstr ""
 
 msgid "Sorø"
-msgstr ""
+msgstr "سورې"
 
 msgid "Stevns"
 msgstr ""
@@ -912,10 +906,10 @@ msgid "Assens"
 msgstr ""
 
 msgid "Billund"
-msgstr ""
+msgstr "بىللۇند"
 
 msgid "Esbjerg"
-msgstr ""
+msgstr "ئېسبيېرگ"
 
 msgid "Fanø"
 msgstr ""
@@ -948,7 +942,7 @@ msgid "Nyborg"
 msgstr ""
 
 msgid "Odense"
-msgstr ""
+msgstr "ئودېنسې"
 
 msgid "Svendborg"
 msgstr ""
@@ -966,13 +960,13 @@ msgid "Vejen"
 msgstr ""
 
 msgid "Vejle"
-msgstr ""
+msgstr "ۋېجلې"
 
 msgid "Ærø"
 msgstr ""
 
 msgid "Aabenraa"
-msgstr ""
+msgstr "Aabenraa"
 
 msgid "Region Hovedstaden"
 msgstr ""
@@ -990,7 +984,7 @@ msgid "Region Syddanmark"
 msgstr ""
 
 msgid "Scanning"
-msgstr ""
+msgstr "تەكشۈرۈۋاتىدۇ"
 
 msgid "Facility"
 msgstr ""
@@ -1098,7 +1092,7 @@ msgid "Smørum"
 msgstr ""
 
 msgid "Kastrup"
-msgstr ""
+msgstr "كاسترۇپ"
 
 msgid "Kongens Lyngby"
 msgstr ""
@@ -1236,7 +1230,7 @@ msgid "Veksø Sjælland"
 msgstr ""
 
 msgid "Rønne"
-msgstr ""
+msgstr "روننې"
 
 msgid "Aakirkeby"
 msgstr ""
@@ -1914,7 +1908,7 @@ msgid "Sommersted"
 msgstr ""
 
 msgid "Vamdrup"
-msgstr ""
+msgstr "ۋامدرۇپ"
 
 msgid "Gesten"
 msgstr ""
@@ -1971,7 +1965,7 @@ msgid "Agerbæk"
 msgstr ""
 
 msgid "Ribe"
-msgstr ""
+msgstr "رىبې"
 
 msgid "Gredstedbro"
 msgstr ""
@@ -2037,7 +2031,7 @@ msgid "Lem St"
 msgstr ""
 
 msgid "Ringkøbing"
-msgstr ""
+msgstr "رىڭكېبىڭ"
 
 msgid "Hvide Sande"
 msgstr ""
@@ -2403,7 +2397,7 @@ msgid "Låsby"
 msgstr ""
 
 msgid "Ry"
-msgstr ""
+msgstr "Ry"
 
 msgid "Daugård"
 msgstr ""
@@ -2682,7 +2676,7 @@ msgid "Ålbæk"
 msgstr ""
 
 msgid "Skagen"
-msgstr ""
+msgstr "سكاگېن"
 
 msgid "Jylland USF P"
 msgstr ""
@@ -2697,7 +2691,7 @@ msgid "Santa Claus/Julemanden"
 msgstr ""
 
 msgid "Nuuk"
-msgstr ""
+msgstr "نۇئۇك"
 
 msgid "Nuussuaq"
 msgstr ""
@@ -2715,7 +2709,7 @@ msgid "Tasiilaq"
 msgstr ""
 
 msgid "Kulusuk"
-msgstr ""
+msgstr "كۇلۇسۇك"
 
 msgid "Alluitsup Paa"
 msgstr ""
@@ -2730,7 +2724,7 @@ msgid "Nanortalik"
 msgstr ""
 
 msgid "Narsarsuaq"
-msgstr ""
+msgstr "نارسارسۇاق"
 
 msgid "Ikerasassuaq"
 msgstr ""
@@ -2772,7 +2766,7 @@ msgid "Pituffik"
 msgstr ""
 
 msgid "Qaanaaq"
-msgstr ""
+msgstr "قاناق"
 
 msgid "Station Nord"
 msgstr ""
@@ -2784,7 +2778,7 @@ msgid "Mestersvig"
 msgstr ""
 
 msgid "Danmarkshavn"
-msgstr ""
+msgstr "دانماركشاۋن"
 
 msgid "Constable Pynt"
 msgstr ""
@@ -2793,7 +2787,7 @@ msgid "Slædepatrulje Sirius"
 msgstr ""
 
 msgid "Tórshavn"
-msgstr ""
+msgstr "تورسخاۋن"
 
 msgid "Argir"
 msgstr ""
@@ -2808,7 +2802,7 @@ msgid "\"Sydradalur, Streymoy\""
 msgstr ""
 
 msgid "Nordradalur"
-msgstr ""
+msgstr "نوردرادالۇر"
 
 msgid "Kaldbak"
 msgstr ""
@@ -2883,7 +2877,7 @@ msgid "Midvágur"
 msgstr ""
 
 msgid "Sørvágur"
-msgstr ""
+msgstr "سورۋاگۇر"
 
 msgid "Vatnsoyrar"
 msgstr ""
@@ -2934,7 +2928,7 @@ msgid "Tjørnuvík"
 msgstr ""
 
 msgid "Oyri"
-msgstr ""
+msgstr "ئويرى"
 
 msgid "Nordskáli"
 msgstr ""
@@ -3021,7 +3015,7 @@ msgid "Æduvík"
 msgstr ""
 
 msgid "Toftir"
-msgstr ""
+msgstr "توفتىر"
 
 msgid "\"Nes, Eysturoy\""
 msgstr ""
@@ -3210,314 +3204,314 @@ msgid "Enter a valid Estonian business registry code."
 msgstr ""
 
 msgid "Dakahlia"
-msgstr ""
+msgstr "داكاخلىيە"
 
 msgid "Red Sea"
-msgstr ""
+msgstr "قىزىل دېڭىز"
 
 msgid "Beheira"
-msgstr ""
+msgstr "بېخېئىرا"
 
 msgid "Faiyum"
-msgstr ""
+msgstr "فائىيۇم"
 
 msgid "Gharbia"
-msgstr ""
+msgstr "غاربىيە"
 
 msgid "Alexandria"
-msgstr ""
+msgstr "ئالېكساندرىيە"
 
 msgid "Ismailia"
-msgstr ""
+msgstr "ئىسمائىلىيە"
 
 msgid "Giza"
-msgstr ""
+msgstr "گىزە"
 
 msgid "Monufia"
-msgstr ""
+msgstr "مونۇفىيە"
 
 msgid "Minya"
-msgstr ""
+msgstr "مىنيا"
 
 msgid "Cairo"
-msgstr ""
+msgstr "قاھىرە"
 
 msgid "Qalyubia"
-msgstr ""
+msgstr "كاليۇبىيە"
 
 msgid "Luxor"
-msgstr ""
+msgstr "لۇكسور"
 
 msgid "New Valley"
-msgstr ""
+msgstr "يېڭى ۋاللېي"
 
 msgid "Suez"
-msgstr ""
+msgstr "سۇيېز"
 
 msgid "Al Sharqia"
 msgstr ""
 
 msgid "Aswan"
-msgstr ""
+msgstr "ئاسۋان"
 
 msgid "Asyut"
-msgstr ""
+msgstr "ئاسيۇت"
 
 msgid "Beni Suef"
-msgstr ""
+msgstr "بېنى-سۇئېف"
 
 msgid "Port Said"
-msgstr ""
+msgstr "سەئىد پورتى"
 
 msgid "Damietta"
-msgstr ""
+msgstr "دامىئېتتا"
 
 msgid "South Sinai"
-msgstr ""
+msgstr "جەنۇبىي سىناي"
 
 msgid "Kafr el-Sheikh"
-msgstr ""
+msgstr "كافر-ئېل-شەيخ"
 
 msgid "Matrouh"
-msgstr ""
+msgstr "ماتروخ"
 
 msgid "Qena"
-msgstr ""
+msgstr "كېنا"
 
 msgid "North Sinai"
-msgstr ""
+msgstr "شىمالىي سىناي"
 
 msgid "Sohag"
-msgstr ""
+msgstr "سوخاگ"
 
 msgid "Enter a valid Egyptian National ID number"
 msgstr ""
 
 msgid "Araba"
-msgstr "אלבה"
+msgstr ""
 
 msgid "Albacete"
-msgstr "אלבסטה"
+msgstr "ئالباسېتې"
 
 msgid "Alacant"
-msgstr "אלאקאנט"
+msgstr ""
 
 msgid "Almeria"
-msgstr "אלמריה"
+msgstr ""
 
 msgid "Avila"
-msgstr "אווילה"
+msgstr ""
 
 msgid "Badajoz"
-msgstr "באדאג'וז"
+msgstr "باداجوز"
 
 msgid "Illes Balears"
-msgstr "האיים הבלאריים"
+msgstr ""
 
 msgid "Barcelona"
-msgstr "ברצלונה"
+msgstr "بارسېلونا"
 
 msgid "Burgos"
-msgstr "בורגוס"
+msgstr "بۇرگوس"
 
 msgid "Caceres"
-msgstr "קסרס"
+msgstr ""
 
 msgid "Cadiz"
-msgstr "קדיס"
+msgstr ""
 
 msgid "Castello"
-msgstr "קסטלו"
+msgstr ""
 
 msgid "Ciudad Real"
-msgstr "העיר הקולוניאלית"
+msgstr "رېئال شەھىرى"
 
 msgid "Cordoba"
-msgstr "קורדובה"
+msgstr "كوردوبا"
 
 msgid "A Coruna"
-msgstr "א קורוניה"
+msgstr ""
 
 msgid "Cuenca"
-msgstr "קואנקה"
+msgstr "كۇئېنكا"
 
 msgid "Girona"
-msgstr "ז'ירונה"
+msgstr "گىرونا"
 
 msgid "Granada"
-msgstr "גרנדה"
+msgstr "گىراندا"
 
 msgid "Guadalajara"
-msgstr "גוודלחרה"
+msgstr "گۇادالاخارا"
 
 msgid "Guipuzkoa"
-msgstr "גוויפוזקואה"
+msgstr ""
 
 msgid "Huelva"
-msgstr "אואלבה"
+msgstr "خۇيېلۋا"
 
 msgid "Huesca"
-msgstr "אואסקה"
+msgstr "خۇيېسكا"
 
 msgid "Jaen"
-msgstr "חאאן"
+msgstr ""
 
 msgid "Leon"
-msgstr "לאון"
+msgstr ""
 
 msgid "Lleida"
-msgstr "ליידה"
+msgstr "لېيدا"
 
 msgid "Lugo"
-msgstr "לוגו"
+msgstr "لۇگو"
 
 msgid "Madrid"
-msgstr "מדריד"
+msgstr "مادرىد"
 
 msgid "Malaga"
-msgstr "מאלאגה"
+msgstr ""
 
 msgid "Murcia"
-msgstr "מורסיה"
+msgstr "مۇرسىيا"
 
 msgid "Navarre"
-msgstr "נווארה"
+msgstr "ناۋارې"
 
 msgid "Ourense"
-msgstr "אוורנס"
+msgstr "ئورېنسې"
 
 msgid "Asturias"
-msgstr "אסטוריאס"
+msgstr "ئاستۇرىئاس"
 
 msgid "Palencia"
-msgstr "פלנסיה"
+msgstr "پالېنسىئا"
 
 msgid "Las Palmas"
-msgstr "לאס פאלמס"
+msgstr "لاس-پالماس"
 
 msgid "Pontevedra"
-msgstr "פונטוורדה"
+msgstr "پونتېۋېدرا"
 
 msgid "Salamanca"
-msgstr "סלמנקה"
+msgstr "سالامانكا"
 
 msgid "Santa Cruz de Tenerife"
-msgstr "סנטה קרוז דה טנריף"
+msgstr "سانتا-كىرۇز-دې-تېنېرىفې"
 
 msgid "Cantabria"
-msgstr "קנטבריה"
+msgstr "كانتابرىئا"
 
 msgid "Segovia"
-msgstr "סגוביה"
+msgstr "ساگوۋىيا"
 
 msgid "Seville"
-msgstr "סביליה"
+msgstr "سېۋىللې"
 
 msgid "Soria"
-msgstr "סוריה"
+msgstr "سورىيا"
 
 msgid "Tarragona"
-msgstr "טרגונה"
+msgstr "تارراگونا"
 
 msgid "Teruel"
-msgstr "טרואל"
+msgstr "تېرۇيېل"
 
 msgid "Toledo"
-msgstr "טולדו"
+msgstr "تولېدو"
 
 msgid "Valencia"
-msgstr "ולנסיה"
+msgstr "بالېنسىيا"
 
 msgid "Valladolid"
-msgstr "ויאדוליד"
+msgstr "ۋاللادولىد"
 
 msgid "Bizkaia"
-msgstr "ביסקאיה"
+msgstr ""
 
 msgid "Zamora"
-msgstr "סמורה"
+msgstr "زامورا"
 
 msgid "Zaragoza"
-msgstr "סראגוסה"
+msgstr "زاراگوسسا"
 
 msgid "Ceuta"
-msgstr "סאוטה"
+msgstr "سېيتا"
 
 msgid "Melilla"
-msgstr "מלייה"
+msgstr "مېلىللا"
 
 msgid "Andalusia"
-msgstr "אנדלוסיה"
+msgstr "ئاندالۇسىيە"
 
 msgid "Aragon"
-msgstr "אראגון"
+msgstr "ئاراگون"
 
 msgid "Principality of Asturias"
-msgstr "נסיכות אסטוריאס"
+msgstr ""
 
 msgid "Balearic Islands"
-msgstr "האיים הבלאריים"
+msgstr "بالېئارىك تاقىم ئاراللىرى"
 
 msgid "Basque Country"
-msgstr "חבל הבסקים"
+msgstr "باسكۇ دۆلىتى"
 
 msgid "Canary Islands"
-msgstr "האיים הקנריים"
+msgstr "كانارى تاقىم ئاراللىرى"
 
 msgid "Castile-La Mancha"
-msgstr "קסטיליה-לה מנצ'ה"
+msgstr "كاستىلې-لا مانچا"
 
 msgid "Castile and Leon"
-msgstr "קסטיליה ולאון"
+msgstr "كاستىلې ۋە لېئون"
 
 msgid "Catalonia"
-msgstr "קאטלוניה"
+msgstr "كاتالونىيا"
 
 msgid "Extremadura"
-msgstr "אקסטרמדורה"
+msgstr "ئېكىستېرمادۇرا"
 
 msgid "Galicia"
-msgstr "גאליציה"
+msgstr "گالىسىيە"
 
 msgid "Region of Murcia"
-msgstr "אזור מורסיה"
+msgstr ""
 
 msgid "Foral Community of Navarre"
-msgstr "הקהילה האוטונומית של נווארה"
+msgstr ""
 
 msgid "Valencian Community"
-msgstr "קהילת ולנסיה"
+msgstr "ۋالېنسىيە مەھەللىسى"
 
 msgid "Autonomous city of Ceuta"
-msgstr "העיר האוטונומית של סאוטה"
+msgstr ""
 
 msgid "Autonomous city of Mellila"
-msgstr "העיר האוטונומית של מלייה"
+msgstr ""
 
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
-msgstr "נא להזין מיקוד חוקי בתחום ובתבנית 01XXX - 52XXX."
+msgstr ""
 
 msgid "Please enter a valid NIF, NIE, or CIF."
-msgstr "נא להזין NIF, NIE, או CIF חוקי."
+msgstr ""
 
 msgid "Please enter a valid NIF or NIE."
-msgstr "נא להזין NIF או NIE חוקי."
+msgstr ""
 
 msgid "Invalid checksum for NIF."
-msgstr "סיכום ביקורת שגוי עבור NIF."
+msgstr ""
 
 msgid "Invalid checksum for NIE."
-msgstr "סיכום ביקורת שגוי עבור NIE."
+msgstr ""
 
 msgid "Invalid checksum for CIF."
-msgstr "סיכום ביקורת שגוי עבור CIF."
+msgstr ""
 
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
-msgstr "נא להזין מספר חשבון בנק חוקי בתבנית XXXX-XXXX-XX-XXXXXXXXXX."
+msgstr ""
 
 msgid "Invalid checksum for bank account number."
-msgstr "סיכום ביקורת שגוי עבור מספר חשבון בנק."
+msgstr ""
 
 msgid "Spain postal code (five numbers)"
 msgstr ""
@@ -3526,16 +3520,16 @@ msgid "Identification National Document"
 msgstr ""
 
 msgid "Enter a valid Finnish social security number."
-msgstr "יש להזין מספר ביטוח לאומי פיני חוקי."
+msgstr ""
 
 msgid "Zip code"
-msgstr "מיקוד"
+msgstr "پوچتا نومۇرى"
 
 msgid "Select Department"
-msgstr "בחר מחלקה"
+msgstr "تارماق تاللىنىدۇ"
 
 msgid "Select Region"
-msgstr "בחר מחוז"
+msgstr "رايون تاللىنىدۇ"
 
 msgid "Enter a valid French National Identification number."
 msgstr ""
@@ -3559,37 +3553,37 @@ msgid "RNA Number"
 msgstr ""
 
 msgid "Enter a valid postcode."
-msgstr "יש להזין מיקוד חוקי."
+msgstr ""
 
 msgid "Bath and North East Somerset"
 msgstr ""
 
 msgid "Bedford"
-msgstr ""
+msgstr "بېدفورد"
 
 msgid "Berkshire"
-msgstr "ברקשייר"
+msgstr "بېركشىر"
 
 msgid "Blackburn with Darwen"
 msgstr ""
 
 msgid "Blackpool"
-msgstr ""
+msgstr "بلاككپۇل"
 
 msgid "Bournemouth"
-msgstr ""
+msgstr "بۇرنېمۇت"
 
 msgid "Brighton & Hove"
 msgstr ""
 
 msgid "Bristol"
-msgstr "בריסטול"
+msgstr "بىرىستول"
 
 msgid "Buckinghamshire"
-msgstr "באקינגהמשייר"
+msgstr "بۇككىڭخامشىر"
 
 msgid "Cambridgeshire"
-msgstr "קיימברידג'שייר"
+msgstr "كامبرىجشىر"
 
 msgid "Central Bedfordshire"
 msgstr ""
@@ -3601,91 +3595,91 @@ msgid "Cheshire West and Chester"
 msgstr ""
 
 msgid "Cornwall"
-msgstr "קורנוול"
+msgstr "كورىنۋال"
 
 msgid "Cumbria"
-msgstr " קאמבריה"
+msgstr ""
 
 msgid "Darlington"
-msgstr ""
+msgstr "دارلىڭتون"
 
 msgid "Derby"
-msgstr ""
+msgstr "دېربى"
 
 msgid "Derbyshire"
-msgstr "דרבישייר"
+msgstr "دېربىشىر"
 
 msgid "Devon"
-msgstr " דבון"
+msgstr "دېۋون"
 
 msgid "Dorset"
-msgstr "דורסט"
+msgstr "دورسېت"
 
 msgid "Durham"
-msgstr ""
+msgstr "دۇرھام"
 
 msgid "East Riding of Yorkshire"
-msgstr "מזרח רידינג של יורקשייר"
+msgstr ""
 
 msgid "East Sussex"
-msgstr "מזרח אסקס"
+msgstr ""
 
 msgid "Essex"
-msgstr "אסקס"
+msgstr "ئېسسېكس"
 
 msgid "Gloucestershire"
-msgstr "גלוסטרשייר"
+msgstr "گىلوسىستېرشىر"
 
 msgid "Greater Manchester"
-msgstr "מנצ'סטר רבתי"
+msgstr ""
 
 msgid "Halton"
 msgstr ""
 
 msgid "Hampshire"
-msgstr "המפשייר"
+msgstr "خامپىشىر"
 
 msgid "Hartlepool"
 msgstr ""
 
 msgid "Herefordshire"
-msgstr "הרפורדשייר"
+msgstr "خېرېفوردشىر"
 
 msgid "Hertfordshire"
-msgstr "הארטפורדשייר"
+msgstr "خارتفوردشىر"
 
 msgid "Isle of Wight"
-msgstr "האי וייט"
+msgstr ""
 
 msgid "Kent"
-msgstr "קנט"
+msgstr "كېنت"
 
 msgid "Kingston upon Hull"
 msgstr ""
 
 msgid "Lancashire"
-msgstr "לנקשייר"
+msgstr "لانكاشىر"
 
 msgid "Leicester"
 msgstr ""
 
 msgid "Leicestershire"
-msgstr "ליסטרשייר"
+msgstr "لېسېستېرشىر"
 
 msgid "Lincolnshire"
-msgstr " לינקולנשייר"
+msgstr "لىنكولىنشىر"
 
 msgid "London"
-msgstr ""
+msgstr "لوندون"
 
 msgid "Luton"
-msgstr ""
+msgstr "لۇتون"
 
 msgid "Medway"
 msgstr ""
 
 msgid "Merseyside"
-msgstr "מרסיסייד"
+msgstr ""
 
 msgid "Middlesbrough"
 msgstr ""
@@ -3694,7 +3688,7 @@ msgid "Milton Keynes"
 msgstr ""
 
 msgid "Norfolk"
-msgstr "נורפולק"
+msgstr "نورفولك"
 
 msgid "North East Lincolnshire"
 msgstr ""
@@ -3706,61 +3700,61 @@ msgid "North Somerset"
 msgstr ""
 
 msgid "North Yorkshire"
-msgstr "צפון יורקשייר"
+msgstr ""
 
 msgid "Northamptonshire"
-msgstr "נורת'המפטונשייר"
+msgstr "شىمالىي ئامپتونشىر"
 
 msgid "Northumberland"
-msgstr "נורת'אמברלנד"
+msgstr "نوسۇمبېرلاند"
 
 msgid "Nottingham"
 msgstr ""
 
 msgid "Nottinghamshire"
-msgstr "נוטינגהאמשייר"
+msgstr "نوتتىڭخامشىر"
 
 msgid "Oxfordshire"
-msgstr "אוקספורדשייר"
+msgstr "ئوكسفوردشىر"
 
 msgid "Peterborough"
-msgstr ""
+msgstr "پېتېربورۇگخ"
 
 msgid "Plymouth"
-msgstr ""
+msgstr "پىلىموئۇت"
 
 msgid "Poole"
 msgstr ""
 
 msgid "Portsmouth"
-msgstr ""
+msgstr "پورتىسماس"
 
 msgid "Redcar and Cleveland"
 msgstr ""
 
 msgid "Rutland"
-msgstr "ראטלנד"
+msgstr "رۇتلاندشىر"
 
 msgid "Shropshire"
-msgstr "שרופשייר"
+msgstr "شىروپشىر"
 
 msgid "Somerset"
-msgstr "סומרסט"
+msgstr "سومېرسېت"
 
 msgid "South Gloucestershire"
 msgstr ""
 
 msgid "South Yorkshire"
-msgstr "דרום יורקשייר"
+msgstr ""
 
 msgid "Southampton"
-msgstr ""
+msgstr "سۇتامپتون"
 
 msgid "Southend-on-Sea"
 msgstr ""
 
 msgid "Staffordshire"
-msgstr "סטאפורדשייר"
+msgstr "ستاففوردشىر"
 
 msgid "Stockton-on-Tees"
 msgstr ""
@@ -3769,10 +3763,10 @@ msgid "Stoke-on-Trent"
 msgstr ""
 
 msgid "Suffolk"
-msgstr " סאפוק"
+msgstr "ساففولىك"
 
 msgid "Surrey"
-msgstr "סוריי"
+msgstr "سۇررېي"
 
 msgid "Swindon"
 msgstr ""
@@ -3787,31 +3781,31 @@ msgid "Torbay"
 msgstr ""
 
 msgid "Tyne and Wear"
-msgstr "טיין ו־וויר"
+msgstr ""
 
 msgid "Warrington"
 msgstr ""
 
 msgid "Warwickshire"
-msgstr " וורוויקשייר"
+msgstr "ۋارۋىكشىر"
 
 msgid "West Midlands"
-msgstr "מערב המידלנדס"
+msgstr ""
 
 msgid "West Sussex"
-msgstr "מערב סאסקס"
+msgstr ""
 
 msgid "West Yorkshire"
-msgstr "מערב יורקשייר"
+msgstr ""
 
 msgid "Wiltshire"
-msgstr " ווילטשייר"
+msgstr "ۋىلتشىر"
 
 msgid "Worcestershire"
-msgstr " ווסטרשייר"
+msgstr ""
 
 msgid "York"
-msgstr ""
+msgstr "يورك"
 
 msgid "Antrim"
 msgstr ""
@@ -3841,10 +3835,10 @@ msgid "Caerphilly"
 msgstr ""
 
 msgid "Cardiff"
-msgstr ""
+msgstr "كاردىف"
 
 msgid "Carmarthenshire"
-msgstr ""
+msgstr "كارمارسېنشىر"
 
 msgid "Ceredigion"
 msgstr ""
@@ -3853,13 +3847,13 @@ msgid "Conwy"
 msgstr ""
 
 msgid "Denbighshire"
-msgstr ""
+msgstr "دېنبىگشىر"
 
 msgid "Flintshire"
-msgstr ""
+msgstr "فىلىنتشىر"
 
 msgid "Gwynedd"
-msgstr "גווינד"
+msgstr ""
 
 msgid "Isle of Anglesey"
 msgstr ""
@@ -3868,19 +3862,19 @@ msgid "Merthyr Tydfil"
 msgstr ""
 
 msgid "Monmouthshire"
-msgstr ""
+msgstr "مونموسشىر"
 
 msgid "Neath Port Talbot"
 msgstr ""
 
 msgid "Newport"
-msgstr ""
+msgstr "نيۇپورت"
 
 msgid "Pembrokeshire"
-msgstr ""
+msgstr "پېمبروكېشىر"
 
 msgid "Powys"
-msgstr "ַפואיס"
+msgstr ""
 
 msgid "Rhondda Cynon Taf"
 msgstr ""
@@ -3901,19 +3895,19 @@ msgid "Aberdeen City"
 msgstr ""
 
 msgid "Aberdeenshire"
-msgstr ""
+msgstr "ئابېردېنشىر"
 
 msgid "Angus"
-msgstr ""
+msgstr "ئانگۇس"
 
 msgid "Argyll and Bute"
 msgstr ""
 
 msgid "Clackmannanshire"
-msgstr ""
+msgstr "كىلاكماننانشىر"
 
 msgid "Dumfries and Galloway"
-msgstr "דמפרייס וגאלוויי"
+msgstr ""
 
 msgid "Dundee City"
 msgstr ""
@@ -3925,7 +3919,7 @@ msgid "East Dunbartonshire"
 msgstr ""
 
 msgid "East Lothian"
-msgstr ""
+msgstr "شەرقىي لوسىئان"
 
 msgid "East Renfrewshire"
 msgstr ""
@@ -3937,19 +3931,19 @@ msgid "Falkirk"
 msgstr ""
 
 msgid "Fife"
-msgstr "פייף"
+msgstr "فىف"
 
 msgid "Glasgow City"
 msgstr ""
 
 msgid "Highland"
-msgstr "רמה"
+msgstr ""
 
 msgid "Inverclyde"
 msgstr ""
 
 msgid "Midlothian"
-msgstr ""
+msgstr "مىدلوتىئان"
 
 msgid "Moray"
 msgstr ""
@@ -3964,7 +3958,7 @@ msgid "Perth and Kinross"
 msgstr ""
 
 msgid "Renfrewshire"
-msgstr ""
+msgstr "رېنفىرېۋشىر"
 
 msgid "Scottish Borders"
 msgstr ""
@@ -3976,34 +3970,34 @@ msgid "South Lanarkshire"
 msgstr ""
 
 msgid "Stirling"
-msgstr ""
+msgstr "سىتىرلىڭ"
 
 msgid "West Dunbartonshire"
 msgstr ""
 
 msgid "West Lothian"
-msgstr ""
+msgstr "غەربىي لوسىئان"
 
 msgid "Na h-Eileanan Siar"
 msgstr ""
 
 msgid "Orkney Islands"
-msgstr "איי אורקיי"
+msgstr "ئوركنىي ئارىلى"
 
 msgid "Shetland Islands"
-msgstr "איי שטלנד"
+msgstr ""
 
 msgid "England"
-msgstr "אנגליה"
+msgstr "ئەنگلىيە"
 
 msgid "Northern Ireland"
-msgstr "צפון אירלנד"
+msgstr "شىمالىي ئىرېلاندىيە"
 
 msgid "Wales"
-msgstr "וויילס"
+msgstr "ۋېيلىس"
 
 msgid "Scotland"
-msgstr "סקוטלנד"
+msgstr "شوتلاندىيە"
 
 msgid "An International Bank Account Number"
 msgstr ""
@@ -4059,7 +4053,7 @@ msgid "Ahafo"
 msgstr ""
 
 msgid "Ashanti"
-msgstr ""
+msgstr "ئاشانتى"
 
 msgid "Bono East"
 msgstr ""
@@ -4068,22 +4062,22 @@ msgid "Brong Ahafo"
 msgstr ""
 
 msgid "Eastern"
-msgstr ""
+msgstr "شەرقىي"
 
 msgid "Greater Accra"
 msgstr ""
 
 msgid "North East"
-msgstr ""
+msgstr "شەرقىي شىمال"
 
 msgid "Northern"
-msgstr ""
+msgstr "شىمالىي"
 
 msgid "Oti"
 msgstr ""
 
 msgid "Savannah"
-msgstr ""
+msgstr "ساۋاننا"
 
 msgid "Upper East"
 msgstr ""
@@ -4092,469 +4086,469 @@ msgid "Upper West"
 msgstr ""
 
 msgid "Western"
-msgstr ""
+msgstr "غەربچە"
 
 msgid "Western North"
-msgstr ""
+msgstr "غەربىي شىمال"
 
 msgid "Volta"
-msgstr ""
+msgstr "ۋولتا"
 
 msgid "Enter a valid 5-digit greek postal code."
-msgstr "יש להזין מיקוד יווני חוקי בן 5 ספרות."
+msgstr ""
 
 msgid "Enter a valid greek tax number (9 digits)."
-msgstr "יש להזין מספר מס יווני חוקי (9 ספרות)."
+msgstr ""
 
 msgid "Enter a valid greek social security number (AMKA - 11 digits)."
 msgstr ""
 
 msgid "Enter a valid 13 digit JMBG"
-msgstr "הזן JMBG חוקי המכיל 13 ספרות"
+msgstr ""
 
 msgid "Error in date segment"
-msgstr "שגיאה במקטע תאריך"
+msgstr ""
 
 msgid "Enter a valid 11 digit OIB"
-msgstr "יש להזין OIB חוקי בן 11 ספרות"
+msgstr ""
 
 msgid "Enter a valid vehicle license plate number"
-msgstr "יש להזין מספר רישוי רכב חוקי"
+msgstr ""
 
 msgid "Enter a valid location code"
-msgstr "יש להזין קוד מיקום חוקי"
+msgstr ""
 
 msgid "Number part cannot be zero"
-msgstr "חלק מספרי לא יכול להיות אפס"
+msgstr ""
 
 msgid "Enter a valid 5 digit postal code"
-msgstr "יש להזין מיקוד חוקי המכיל 5 ספרות"
+msgstr ""
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
-msgstr "יש להזין JMBAG חוקי המכיל 19 ספרות ומתחיל ב־601983"
+msgstr ""
 
 msgid "Card issue number cannot be zero"
-msgstr "מספר הנפקת כרטיס אינו יכול להיות אפס"
+msgstr ""
 
 msgid "Grad Zagreb"
-msgstr "גראד זאגרב"
+msgstr ""
 
 msgid "Bjelovarsko-bilogorska županija"
-msgstr "מחוז ביילובר-ביילוגורה"
+msgstr ""
 
 msgid "Brodsko-posavska županija"
-msgstr "מחוז ברוד-פוסבינה"
+msgstr ""
 
 msgid "Dubrovačko-neretvanska županija"
-msgstr "מחוז דוברובניק-נרטבה"
+msgstr ""
 
 msgid "Istarska županija"
-msgstr "מחוז איסטריה"
+msgstr ""
 
 msgid "Karlovačka županija"
-msgstr "מחוז קרלובץ"
+msgstr ""
 
 msgid "Koprivničko-križevačka županija"
-msgstr "מחוז קופריבניצה-קריז'בצ'י"
+msgstr ""
 
 msgid "Krapinsko-zagorska županija"
-msgstr "מחוז קרפינה-זגוריה"
+msgstr ""
 
 msgid "Ličko-senjska županija"
-msgstr "מחוז ליקה-סני"
+msgstr ""
 
 msgid "Međimurska županija"
-msgstr "מחוז מדימוריה"
+msgstr ""
 
 msgid "Osječko-baranjska županija"
-msgstr "מחוז אוסייק-ברניה"
+msgstr ""
 
 msgid "Požeško-slavonska županija"
-msgstr "מחוז פוז'גה-סלבוניה"
+msgstr ""
 
 msgid "Primorsko-goranska županija"
-msgstr "מחוז פרימוריה-גורה"
+msgstr ""
 
 msgid "Sisačko-moslavačka županija"
-msgstr "מחוז סיסאק-מוסלבינה"
+msgstr ""
 
 msgid "Splitsko-dalmatinska županija"
-msgstr "מחוז ספליט-דלמטיה"
+msgstr ""
 
 msgid "Šibensko-kninska županija"
-msgstr "מחוז שיבניק-קנין"
+msgstr ""
 
 msgid "Varaždinska županija"
-msgstr "מחוז ואראז'דין"
+msgstr ""
 
 msgid "Virovitičko-podravska županija"
-msgstr "מחוז וירובויטיצה-פודרבינה"
+msgstr ""
 
 msgid "Vukovarsko-srijemska županija"
-msgstr "מחוז ווקובאר-סריימיה"
+msgstr ""
 
 msgid "Zadarska županija"
-msgstr "מחוז זאדר"
+msgstr ""
 
 msgid "Zagrebačka županija"
-msgstr "מחוז זגרב"
+msgstr ""
 
 msgid "Bács-Kiskun"
-msgstr ""
+msgstr "باچى-كىسكۇن"
 
 msgid "Baranya"
-msgstr ""
+msgstr "بارانيا"
 
 msgid "Békés"
-msgstr ""
+msgstr "بېكېس"
 
 msgid "Borsod-Abaúj-Zemplén"
-msgstr ""
+msgstr "بورسود-ئابائۇج-زېمپلېن"
 
 msgid "Csongrád"
-msgstr ""
+msgstr "كىسوڭراد"
 
 msgid "Fejér"
-msgstr ""
+msgstr "فېجېر"
 
 msgid "Győr-Moson-Sopron"
-msgstr ""
+msgstr "گىيور-موسون-سوپرون"
 
 msgid "Hajdú-Bihar"
-msgstr ""
+msgstr "خايدۇ-بىخار"
 
 msgid "Heves"
-msgstr ""
+msgstr "خېۋېس"
 
 msgid "Jász-Nagykun-Szolnok"
-msgstr ""
+msgstr "جاسز-ناگىكۇن-سىزولنوك"
 
 msgid "Komárom-Esztergom"
-msgstr ""
+msgstr "كوماروم-ئېستېرگوم"
 
 msgid "Nógrád"
-msgstr ""
+msgstr "نوگراد"
 
 msgid "Pest"
-msgstr ""
+msgstr "پېست"
 
 msgid "Somogy"
-msgstr ""
+msgstr "سوموگى"
 
 msgid "Szabolcs-Szatmár-Bereg"
-msgstr ""
+msgstr "سىزابولېس-سىزاتمار-بېرېگ"
 
 msgid "Tolna"
-msgstr ""
+msgstr "تولنا"
 
 msgid "Vas"
-msgstr ""
+msgstr "ۋاس"
 
 msgid "Veszprém"
-msgstr ""
+msgstr "ۋېسپرېم"
 
 msgid "Zala"
-msgstr ""
+msgstr "زالا"
 
 msgid "Enter a valid post code"
-msgstr "יש להזין מיקוד חוקי."
+msgstr ""
 
 msgid "Enter a valid NIK/KTP number"
-msgstr "הזן מספר NIK/KTP חוקי."
+msgstr ""
 
 msgid "Aceh"
-msgstr "אצ 'ה"
+msgstr ""
 
 msgid "Bali"
-msgstr "באלי"
+msgstr "بالى ئارىلى"
 
 msgid "Banten"
-msgstr "בנטן"
+msgstr "بانتېن"
 
 msgid "Bengkulu"
-msgstr "בנגולו"
+msgstr "بېڭكۇلۇ"
 
 msgid "Yogyakarta"
-msgstr "ג'וקיירטה"
+msgstr "ياگياكارتا"
 
 msgid "Jakarta"
-msgstr "ג'קרטה"
+msgstr "جاكارتا"
 
 msgid "Gorontalo"
-msgstr "גורנטלו"
+msgstr "گورونتالو"
 
 msgid "Jambi"
-msgstr "ג'מבי"
+msgstr "جامبى"
 
 msgid "Jawa Barat"
-msgstr "ג'אווה מערב"
+msgstr "جاۋا بارات"
 
 msgid "Jawa Tengah"
-msgstr "ג'אווה מרכז"
+msgstr "جاۋا تېنگاھ"
 
 msgid "Jawa Timur"
-msgstr "ג'אווה מזרח"
+msgstr "جاۋا تىمۇر"
 
 msgid "Kalimantan Barat"
-msgstr "בורנאו מערב"
+msgstr "كالىمانتان بارات"
 
 msgid "Kalimantan Selatan"
-msgstr "בורנאו דרום"
+msgstr ""
 
 msgid "Kalimantan Tengah"
-msgstr "בורנאו מרכז"
+msgstr ""
 
 msgid "Kalimantan Timur"
-msgstr "בורנאו מזרח"
+msgstr ""
 
 msgid "Kalimantan Utara"
 msgstr ""
 
 msgid "Kepulauan Bangka-Belitung"
-msgstr "איי בנגקה בליטונג"
+msgstr ""
 
 msgid "Kepulauan Riau"
-msgstr "איי ריאאו"
+msgstr ""
 
 msgid "Lampung"
-msgstr "למפונג"
+msgstr "لامپۇڭ"
 
 msgid "Maluku"
-msgstr "מאלוקו"
+msgstr "مالۇكۇ"
 
 msgid "Maluku Utara"
-msgstr "מאלוקו צפון"
+msgstr ""
 
 msgid "Nusa Tenggara Barat"
-msgstr "איי סונדה הקטנים - מערב"
+msgstr ""
 
 msgid "Nusa Tenggara Timur"
-msgstr "איי סונדה הקטנים - מזרח"
+msgstr ""
 
 msgid "Papua"
-msgstr "פפוא"
+msgstr "پاپۇئا"
 
 msgid "Papua Barat"
-msgstr "פפוא מערב"
+msgstr ""
 
 msgid "Riau"
-msgstr "ריאאו"
+msgstr "رىئائۇ"
 
 msgid "Sulawesi Barat"
-msgstr "סולבסי מערב"
+msgstr "سۇلاۋېسى بارات"
 
 msgid "Sulawesi Selatan"
-msgstr "סולבסי דרום"
+msgstr "سۇلاۋېسى سېلاتان"
 
 msgid "Sulawesi Tengah"
-msgstr "סולבסי מרכז"
+msgstr "سۇلاۋېسى تېنگاھ"
 
 msgid "Sulawesi Tenggara"
-msgstr "סולבסי דרום־מזרח"
+msgstr ""
 
 msgid "Sulawesi Utara"
-msgstr "סולבסי צפון"
+msgstr ""
 
 msgid "Sumatera Barat"
-msgstr "סומטרה מערב"
+msgstr ""
 
 msgid "Sumatera Selatan"
-msgstr "סומטרה דרום"
+msgstr ""
 
 msgid "Sumatera Utara"
-msgstr "סומטרה צפון"
+msgstr ""
 
 msgid "Magelang"
-msgstr "מאגלנג"
+msgstr ""
 
 msgid "Surakarta - Solo"
-msgstr "סורקרטה - סולו"
+msgstr ""
 
 msgid "Madiun"
-msgstr "מדיון"
+msgstr ""
 
 msgid "Kediri"
-msgstr "קדירי"
+msgstr ""
 
 msgid "Tapanuli"
-msgstr "טפנולי"
+msgstr ""
 
 msgid "Nanggroe Aceh Darussalam"
-msgstr "נגרוא אסה דרוסלם"
+msgstr "ناڭگىروئې ئاسېخ دارۇسسالام"
 
 msgid "Kepulauan Bangka Belitung"
-msgstr "בנגה-מליטנג"
+msgstr ""
 
 msgid "Corps Consulate"
-msgstr "קונסוליות"
+msgstr ""
 
 msgid "Corps Diplomatic"
-msgstr "שגרירויות"
+msgstr ""
 
 msgid "Bandung"
-msgstr "בנדונג"
+msgstr "باندۇڭ"
 
 msgid "Sulawesi Utara Daratan"
-msgstr "סולאוסי צפון"
+msgstr ""
 
 msgid "NTT - Timor"
-msgstr "NTT - טימור"
+msgstr ""
 
 msgid "Sulawesi Utara Kepulauan"
-msgstr "איי סולבסי צפון"
+msgstr ""
 
 msgid "NTB - Lombok"
-msgstr "NTB - לומבוק"
+msgstr ""
 
 msgid "Papua dan Papua Barat"
-msgstr "פאפו ופאפו מערב"
+msgstr ""
 
 msgid "Cirebon"
-msgstr "סיירבון"
+msgstr ""
 
 msgid "NTB - Sumbawa"
-msgstr "NTB - סומבאווה"
+msgstr ""
 
 msgid "NTT - Flores"
-msgstr "NTT - פלורס"
+msgstr ""
 
 msgid "NTT - Sumba"
-msgstr "NTT - סומבה"
+msgstr ""
 
 msgid "Bogor"
-msgstr "בוגור"
+msgstr ""
 
 msgid "Pekalongan"
-msgstr "פקלונגאן"
+msgstr ""
 
 msgid "Semarang"
-msgstr "סמרנג"
+msgstr "سېماراڭ"
 
 msgid "Pati"
-msgstr "פאטי"
+msgstr ""
 
 msgid "Surabaya"
-msgstr "סורביה"
+msgstr "سۇرابايا"
 
 msgid "Madura"
-msgstr "מדורה"
+msgstr ""
 
 msgid "Malang"
-msgstr "מאלאנג"
+msgstr ""
 
 msgid "Jember"
-msgstr "ג'מבר"
+msgstr ""
 
 msgid "Banyumas"
-msgstr "בניומס"
+msgstr ""
 
 msgid "Federal Government"
-msgstr "ממשל פדרלי"
+msgstr ""
 
 msgid "Bojonegoro"
-msgstr "בוג'ונגורו"
+msgstr ""
 
 msgid "Purwakarta"
-msgstr "פורקוורטה"
+msgstr ""
 
 msgid "Sidoarjo"
-msgstr "סידוארג'ו"
+msgstr ""
 
 msgid "Garut"
-msgstr "גארוט"
+msgstr ""
 
 msgid "Enter a valid Eircode."
 msgstr ""
 
 msgid "Carlow"
-msgstr "קארלאו"
+msgstr "كارلوۋ"
 
 msgid "Cavan"
-msgstr "קאוובן"
+msgstr "كاۋان"
 
 msgid "Clare"
-msgstr "קלייר"
+msgstr "كىلار"
 
 msgid "Cork"
-msgstr "קורק"
+msgstr "قاپقاق"
 
 msgid "Donegal"
-msgstr "דונגאל"
+msgstr "دونېگال"
 
 msgid "Dublin"
-msgstr "דבלין"
+msgstr "دۇبلىن"
 
 msgid "Galway"
-msgstr "גולוויי"
+msgstr "گالۋېي"
 
 msgid "Kerry"
-msgstr "קרי"
+msgstr "كېررى"
 
 msgid "Kildare"
-msgstr "קילדאר"
+msgstr "كىلدار"
 
 msgid "Kilkenny"
-msgstr "קילקני"
+msgstr "كىلكېننى"
 
 msgid "Laois"
-msgstr "ליש"
+msgstr "لائويىس"
 
 msgid "Leitrim"
-msgstr "לייטרים"
+msgstr "لېئىترىم"
 
 msgid "Limerick"
-msgstr "לימריק"
+msgstr "لىمېرىك"
 
 msgid "Longford"
-msgstr "לונגפורד"
+msgstr "لوڭفورد"
 
 msgid "Louth"
-msgstr "לאות'"
+msgstr "لوس"
 
 msgid "Mayo"
-msgstr "מאיו"
+msgstr "مايو"
 
 msgid "Meath"
-msgstr "מית'"
+msgstr "مىس"
 
 msgid "Monaghan"
-msgstr "מונהאן"
+msgstr "موناگخان"
 
 msgid "Offaly"
-msgstr "אופלי"
+msgstr "ئوففالى"
 
 msgid "Roscommon"
-msgstr "רוסקומון"
+msgstr "روسكوممون"
 
 msgid "Sligo"
-msgstr "סלייגו"
+msgstr "سىلىگو"
 
 msgid "Tipperary"
-msgstr "טיפררי"
+msgstr ""
 
 msgid "Waterford"
-msgstr "ווטפורד"
+msgstr "ۋوتېرفورد"
 
 msgid "Westmeath"
-msgstr "וסטמית'"
+msgstr "غەربىي مىس"
 
 msgid "Wexford"
-msgstr "וקספורד"
+msgstr "ۋېكىسفورد"
 
 msgid "Wicklow"
-msgstr "ויקלו"
+msgstr "ۋىكلوۋ"
 
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
-msgstr "הזן קוד מיקוד בפורמט XXXXXXX (או XXXXX) - ספרות בלבד"
+msgstr ""
 
 msgid "Enter a valid ID number."
-msgstr "יש להזין מספר זהות תקף."
+msgstr ""
 
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
-msgstr "יש להזין מיקוד חוקי בתבנית XXXXXX או XXX XXX."
+msgstr ""
 
 msgid "Enter an Indian state or territory."
-msgstr "יש להזין מדינה או טריטוריה הודית."
+msgstr ""
 
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
@@ -4576,7 +4570,7 @@ msgid "Alborz"
 msgstr ""
 
 msgid "Ardabil"
-msgstr ""
+msgstr "ئەردەبىل"
 
 msgid "Azerbaijan East"
 msgstr ""
@@ -4585,37 +4579,37 @@ msgid "Azerbaijan Wast"
 msgstr ""
 
 msgid "Bushehr"
-msgstr ""
+msgstr "بۇشېر"
 
 msgid "Chahar Mahaal and Bakhtiari"
 msgstr ""
 
 msgid "Fars"
-msgstr ""
+msgstr "فارس"
 
 msgid "Gilan"
-msgstr ""
+msgstr "گىلان"
 
 msgid "Golestan"
-msgstr ""
+msgstr "گولېستان"
 
 msgid "Hamadan"
-msgstr ""
+msgstr "خامادان"
 
 msgid "Hormozgan"
-msgstr ""
+msgstr "خورمۇزگان"
 
 msgid "Ilam"
-msgstr ""
+msgstr "ئىلام"
 
 msgid "Isfahan"
 msgstr ""
 
 msgid "Kerman"
-msgstr ""
+msgstr "كېرمان"
 
 msgid "Kermanshah"
-msgstr ""
+msgstr "كېرمانشاھ"
 
 msgid "Khorasan North"
 msgstr ""
@@ -4627,212 +4621,212 @@ msgid "Khorasan South"
 msgstr ""
 
 msgid "Khuzestan"
-msgstr ""
+msgstr "خۇزېستان"
 
 msgid "Kohgiluyeh and Boyer-Ahmad"
 msgstr ""
 
 msgid "Kurdistan"
-msgstr ""
+msgstr "كۇردىستان"
 
 msgid "Lorestan"
-msgstr ""
+msgstr "لورېستان"
 
 msgid "Markazi"
-msgstr ""
+msgstr "ماركازى"
 
 msgid "Mazandaran"
-msgstr ""
+msgstr "مازانداران"
 
 msgid "Qazvin"
-msgstr ""
+msgstr "قازۋىن"
 
 msgid "Qom"
-msgstr ""
+msgstr "قۇم"
 
 msgid "Semnan"
-msgstr ""
+msgstr "سېمنان"
 
 msgid "Sistan and Baluchestan"
 msgstr ""
 
 msgid "Tehran"
-msgstr ""
+msgstr "تېھران"
 
 msgid "Yazd"
-msgstr ""
+msgstr "يەزد"
 
 msgid "Zanjan"
-msgstr ""
+msgstr "زانجان"
 
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
-msgstr "יש להזין מספר זיהוי איסלנדי חוקי. התבנית היא XXXXXX-XXXX."
+msgstr ""
 
 msgid "The Icelandic identification number is not valid."
-msgstr "מספר הזיהוי האיסלנדי אינו חוקי"
+msgstr ""
 
 msgid "Enter a valid zip code."
-msgstr "יש להזין מיקוד חוקי."
+msgstr ""
 
 msgid "Enter a valid Tax code."
 msgstr ""
 
 msgid "Enter a valid VAT number."
-msgstr "יש להזין מספר מע\"מ חוקי"
+msgstr ""
 
 msgid "Check digit does not match."
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
-msgstr "יש להזין קוד דואר בתבנית XXXXXXX או XXX-XXXX."
+msgstr ""
 
 msgid "Hokkaido"
-msgstr "הוקאידו"
+msgstr "خوككايدو"
 
 msgid "Aomori"
-msgstr "אאומורי"
+msgstr "ئائومورى"
 
 msgid "Iwate"
-msgstr "איווטה"
+msgstr "ئىۋاتې"
 
 msgid "Miyagi"
-msgstr "מיאגי"
+msgstr "مىياگى"
 
 msgid "Akita"
-msgstr "אקיטה"
+msgstr "ئاكىتا"
 
 msgid "Yamagata"
-msgstr "יאמאגטה"
+msgstr "ياماگاتا"
 
 msgid "Fukushima"
-msgstr "פוקושימה"
+msgstr "فۇكۇشىما"
 
 msgid "Ibaraki"
-msgstr "איברקי"
+msgstr "ئىباراكى"
 
 msgid "Tochigi"
-msgstr "טושיגי"
+msgstr "توچىگى"
 
 msgid "Gunma"
-msgstr "גונמה"
+msgstr "گۇنما"
 
 msgid "Saitama"
-msgstr "סאיטאמה"
+msgstr "سائىتاما"
 
 msgid "Chiba"
-msgstr "צ'יבה"
+msgstr "چىبا"
 
 msgid "Tokyo"
-msgstr "טוקיו"
+msgstr "توكيو"
 
 msgid "Kanagawa"
-msgstr "קאנגאווה"
+msgstr "كاناگاۋا"
 
 msgid "Niigata"
-msgstr "נייגטה"
+msgstr "نىگاتا"
 
 msgid "Toyama"
-msgstr "טויאמה"
+msgstr "توياما"
 
 msgid "Ishikawa"
-msgstr "אישיקאוואה"
+msgstr "ئىشىكاۋا"
 
 msgid "Fukui"
-msgstr "פוקוי"
+msgstr "فۇكۇئى"
 
 msgid "Yamanashi"
-msgstr "יאמאנשי"
+msgstr "ياماناشى"
 
 msgid "Nagano"
-msgstr "נאגאנו"
+msgstr "ناگانو"
 
 msgid "Gifu"
-msgstr "גיפו"
+msgstr "گىفۇ"
 
 msgid "Shizuoka"
-msgstr "שיזואוקה"
+msgstr "شىزۇئوكا"
 
 msgid "Aichi"
-msgstr "אייצ'י"
+msgstr "ئائىچى"
 
 msgid "Mie"
-msgstr "מיי"
+msgstr "مىئې"
 
 msgid "Shiga"
-msgstr "שיגה"
+msgstr "شىگا"
 
 msgid "Kyoto"
-msgstr "קיוטו"
+msgstr "كيوتو"
 
 msgid "Osaka"
-msgstr "אוסקה"
+msgstr "ئوساكا"
 
 msgid "Hyogo"
-msgstr "הייוגו"
+msgstr "خىيوگو"
 
 msgid "Nara"
-msgstr "נארה"
+msgstr "نارا"
 
 msgid "Wakayama"
-msgstr "ווקאייאמה"
+msgstr "ۋاكاياما"
 
 msgid "Tottori"
-msgstr "טוטורי"
+msgstr "توتتورى"
 
 msgid "Shimane"
-msgstr "שימאנה"
+msgstr "شىمانې"
 
 msgid "Okayama"
-msgstr "אוקייאמה"
+msgstr "ئوكاياما"
 
 msgid "Hiroshima"
-msgstr "הירושימה"
+msgstr "خىروشىما"
 
 msgid "Yamaguchi"
-msgstr "יאמאגוצ'י"
+msgstr "ياماگۇچى"
 
 msgid "Tokushima"
-msgstr "טוקושימה"
+msgstr "توكۇشىما"
 
 msgid "Kagawa"
-msgstr "קאגאווה"
+msgstr "كاگاۋا"
 
 msgid "Ehime"
-msgstr "אהימה"
+msgstr "ئېخىمې"
 
 msgid "Kochi"
-msgstr "קוצ'י"
+msgstr "كۆچى"
 
 msgid "Fukuoka"
-msgstr "פוקוקה"
+msgstr "فۇكۇئوكا"
 
 msgid "Saga"
-msgstr "סגה"
+msgstr "ساگا"
 
 msgid "Nagasaki"
-msgstr "נגסקי"
+msgstr "ناگاساكى"
 
 msgid "Kumamoto"
-msgstr "קומאמוטו"
+msgstr "كۇماموتو"
 
 msgid "Oita"
-msgstr "אויטה"
+msgstr "ئويتا"
 
 msgid "Miyazaki"
-msgstr "מיאזאקי"
+msgstr "مىيازاكى"
 
 msgid "Kagoshima"
-msgstr "קגושימה"
+msgstr "كاگوشىما"
 
 msgid "Okinawa"
-msgstr "אוקינאווה"
+msgstr "ئوكىناۋا"
 
 msgid "Enter a valid Kuwaiti Civil ID number"
-msgstr "נא להזין מספר זיהוי כוויתי חוקי"
+msgstr ""
 
 msgid "Kuwait City"
-msgstr ""
+msgstr "كۇۋەيت شەھىرى"
 
 msgid "Abdullah Al-Salem"
 msgstr ""
@@ -4853,7 +4847,7 @@ msgid "Dasman"
 msgstr ""
 
 msgid "Doha"
-msgstr ""
+msgstr "دوھا"
 
 msgid "Faiha"
 msgstr ""
@@ -5300,223 +5294,223 @@ msgid "Uva"
 msgstr ""
 
 msgid "ID Code consists of exactly 11 decimal digits."
-msgstr "קוד זיהוי מורכב מ־11 ספרות עשרוניות בדיוק."
+msgstr ""
 
 msgid "Wrong ID Code checksum."
-msgstr "סכום ביקורת קוד זיהוי שגוי."
+msgstr ""
 
 msgid "ID Code contains invalid date."
-msgstr "קוד זיהוי מכיל תאריך לא חוקי."
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr "יש להזין מיקוד בתבנית XXXXX או LT-XXXXX."
+msgstr ""
 
 msgid "Alytus"
-msgstr "אליטא"
+msgstr "ئالىتۇس"
 
 msgid "Kaunas"
-msgstr "קובנה"
+msgstr "كائۇناس"
 
 msgid "Klaipėda"
-msgstr "קלייפדה"
+msgstr "كىلايپېدا"
 
 msgid "Marijampolė"
-msgstr "מאריאמפול"
+msgstr "مارىجامپولې"
 
 msgid "Panevėžys"
-msgstr "פוניבז'"
+msgstr "پانېۋېزىس"
 
 msgid "Šiauliai"
-msgstr "שאולאי"
+msgstr "شائۇلىئاي"
 
 msgid "Tauragė"
-msgstr "טאורגה"
+msgstr "تائۇراگې"
 
 msgid "Telšiai"
-msgstr "טלז"
+msgstr "تېلشىئاي"
 
 msgid "Utena"
-msgstr "אוטנה"
+msgstr "ئۇتېنا"
 
 msgid "Vilnius"
-msgstr "וילנה"
+msgstr "ۋىلنيۇس"
 
 msgid "Akmenė district"
-msgstr "נפת אקמיין"
+msgstr ""
 
 msgid "Alytus city"
-msgstr "אליטא סיטי"
+msgstr "ئالىتۇس شەھىرى"
 
 msgid "Alytus district"
-msgstr "מחוז אליטוס"
+msgstr ""
 
 msgid "Anykščiai district"
-msgstr "מחוז אניקשט"
+msgstr ""
 
 msgid "Birštonas"
-msgstr "בירשטונאס"
+msgstr "بىرىستوناس"
 
 msgid "Biržai district"
-msgstr "מחוז בירז'אי"
+msgstr ""
 
 msgid "Druskininkai"
-msgstr "דרוסקינינקאי"
+msgstr "دىرۇسكىنىنكاي"
 
 msgid "Elektrėnai"
-msgstr "אלקטריאניי"
+msgstr "ئېلېكترېناي"
 
 msgid "Ignalina district"
-msgstr "מחוז איגנלינה"
+msgstr ""
 
 msgid "Jonava district"
-msgstr "מחוז ליאנובה"
+msgstr ""
 
 msgid "Joniškis district"
-msgstr "מחוז יונישקיס"
+msgstr ""
 
 msgid "Jurbarkas district"
-msgstr "מחוז יורבורג"
+msgstr ""
 
 msgid "Kaišiadorys district"
-msgstr "מחוז קושידר"
+msgstr ""
 
 msgid "Kalvarija"
-msgstr "קלווריה"
+msgstr "كالۋاجىرا"
 
 msgid "Kaunas city"
-msgstr "קובנה סיטי"
+msgstr "كائۇناس شەھىرى"
 
 msgid "Kaunas district"
-msgstr "מחוז קובנה"
+msgstr "كائۇناس رايونى"
 
 msgid "Kazlų Rūda"
-msgstr "קאזלו רודה"
+msgstr "كازلۇ رۇدا"
 
 msgid "Kėdainiai district"
-msgstr "מחוז קדאייני"
+msgstr ""
 
 msgid "Kelmė district"
-msgstr "מחוז קלם"
+msgstr "كېلمې رايونى"
 
 msgid "Klaipėda city"
-msgstr "קלייפדה סיטי"
+msgstr "كىلايپېدا شەھىرى"
 
 msgid "Klaipėda district"
-msgstr "מחוז קלייפדה"
+msgstr ""
 
 msgid "Kretinga district"
-msgstr "מחוז קרטינגה"
+msgstr ""
 
 msgid "Kupiškis district"
-msgstr "מחוז קופיסקי"
+msgstr ""
 
 msgid "Lazdijai district"
-msgstr "מחוז לאזדיי"
+msgstr ""
 
 msgid "Mažeikiai district"
-msgstr "מחוז מאז'ייקיי"
+msgstr ""
 
 msgid "Molėtai district"
-msgstr "מחוז מולטאי"
+msgstr ""
 
 msgid "Neringa"
-msgstr "נרינגה"
+msgstr "نېرىنگا"
 
 msgid "Pagėgiai"
-msgstr "פאגגיי"
+msgstr "پاگېگىئاي"
 
 msgid "Pakruojis district"
-msgstr "מחוז  פוקרוי"
+msgstr ""
 
 msgid "Palanga city"
-msgstr "פלאנגה סיטי"
+msgstr "پالانگا شەھىرى"
 
 msgid "Panevėžys city"
-msgstr "פוניבז' סיטי"
+msgstr "پانېۋېزىس شەھىرى"
 
 msgid "Panevėžys district"
-msgstr "מחוז פוניבז'"
+msgstr ""
 
 msgid "Pasvalys district"
-msgstr "מחוז פּאָסוואָל"
+msgstr ""
 
 msgid "Plungė district"
-msgstr "מחוז פּלוּנגֶה"
+msgstr ""
 
 msgid "Prienai district"
-msgstr "מחוז פרינאי"
+msgstr ""
 
 msgid "Radviliškis district"
-msgstr "מחוז ראדבלישקיס"
+msgstr ""
 
 msgid "Raseiniai district"
-msgstr "מחוז ראסיין"
+msgstr ""
 
 msgid "Rietavas"
-msgstr " ריטובה"
+msgstr "رېتاۋاس"
 
 msgid "Rokiškis district"
-msgstr "מחוז רוקישקיס"
+msgstr ""
 
 msgid "Skuodas district"
-msgstr "מחוז שקוד"
+msgstr ""
 
 msgid "Šakiai district"
-msgstr "מחוז שאקי"
+msgstr ""
 
 msgid "Šalčininkai district"
-msgstr "מחוז שאלצ'ינינקאי"
+msgstr ""
 
 msgid "Šiauliai city"
-msgstr "שאולאי סיטי"
+msgstr "شائۇلىئاي شەھىرى"
 
 msgid "Šiauliai district"
-msgstr "מחוז שאולאי"
+msgstr "شائۇلىئاي رايونى"
 
 msgid "Šilalė district"
-msgstr "מחוז שילאלה"
+msgstr ""
 
 msgid "Šilutė district"
-msgstr "מחוז שילוטה"
+msgstr ""
 
 msgid "Širvintos district"
-msgstr "מחוז שירווינט"
+msgstr ""
 
 msgid "Švenčionys district"
-msgstr "מחוז שווינציאן"
+msgstr ""
 
 msgid "Tauragė district"
-msgstr "מחוז טאורגה"
+msgstr ""
 
 msgid "Telšiai district"
-msgstr "מחוז טלז"
+msgstr ""
 
 msgid "Trakai district"
-msgstr "מחוז טרקאי"
+msgstr ""
 
 msgid "Ukmergė district"
-msgstr "מחוז אוקמרגה"
+msgstr ""
 
 msgid "Utena district"
-msgstr "מחוז אוטנה"
+msgstr ""
 
 msgid "Varėna district"
-msgstr "מחוז ורנה"
+msgstr ""
 
 msgid "Vilkaviškis district"
-msgstr "מחוז וילקובישק"
+msgstr ""
 
 msgid "Vilnius city"
-msgstr "וילנה סיטי"
+msgstr "ۋىلنىيۇس شەھىرى"
 
 msgid "Vilnius district"
-msgstr "מחוז וילנה"
+msgstr ""
 
 msgid "Visaginas"
-msgstr "ויסאגינאס"
+msgstr "ۋىساگىناس"
 
 msgid "Zarasai district"
-msgstr "מחוז זאראסיי"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXX or LV-XXXX."
 msgstr ""
@@ -5528,25 +5522,25 @@ msgid "Enter a valid Latvian personal code."
 msgstr ""
 
 msgid "Daugavpils"
-msgstr ""
+msgstr "دائۇگاۋپىلىس"
 
 msgid "Jelgava"
-msgstr ""
+msgstr "يېلگاۋا"
 
 msgid "Jūrmala"
 msgstr ""
 
 msgid "Liepāja"
-msgstr ""
+msgstr "لىېپāجا"
 
 msgid "Rēzekne"
-msgstr ""
+msgstr "رېزېكنې"
 
 msgid "Riga"
-msgstr ""
+msgstr "رىگا"
 
 msgid "Ventspils"
-msgstr ""
+msgstr "ۋېنتىسپىلس"
 
 msgid "Aizkraukle municipality"
 msgstr ""
@@ -5657,10 +5651,10 @@ msgid "Valmiera municipality"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXX."
-msgstr "יש להזין מיקוד בתבנית XXXXX."
+msgstr ""
 
 msgid "Postal code"
-msgstr ""
+msgstr "پوچتا نومۇرى"
 
 msgid "Select Province"
 msgstr ""
@@ -5672,7 +5666,7 @@ msgid "CIN Number"
 msgstr ""
 
 msgid "Al Hoceima"
-msgstr ""
+msgstr "ئال خوكېىما"
 
 msgid "Larache"
 msgstr ""
@@ -5681,7 +5675,7 @@ msgid "M’Diq - Fnideq"
 msgstr ""
 
 msgid "Tetouan"
-msgstr ""
+msgstr "تېتۇان"
 
 msgid "Chefchaouene"
 msgstr ""
@@ -5699,7 +5693,7 @@ msgid "Driouch"
 msgstr ""
 
 msgid "Nador"
-msgstr ""
+msgstr "نادور"
 
 msgid "Berkan"
 msgstr ""
@@ -5750,7 +5744,7 @@ msgid "Khémisset"
 msgstr ""
 
 msgid "Rabat"
-msgstr ""
+msgstr "رابات"
 
 msgid "Skhirate - Temara"
 msgstr ""
@@ -5768,7 +5762,7 @@ msgid "Sidi Kacem"
 msgstr ""
 
 msgid "Casablanca"
-msgstr ""
+msgstr "كازابلانكا"
 
 msgid "Mohamedia"
 msgstr ""
@@ -5810,7 +5804,7 @@ msgid "Khénifra"
 msgstr ""
 
 msgid "Safi"
-msgstr ""
+msgstr "سافى"
 
 msgid "Al Haouz"
 msgstr ""
@@ -5825,7 +5819,7 @@ msgid "Youssoufia"
 msgstr ""
 
 msgid "Marrakech"
-msgstr ""
+msgstr "مارراكېچ"
 
 msgid "Chichaoua"
 msgstr ""
@@ -5846,7 +5840,7 @@ msgid "Tiznit"
 msgstr ""
 
 msgid "Tata"
-msgstr ""
+msgstr "تاتا"
 
 msgid "Taroudant"
 msgstr ""
@@ -5870,7 +5864,7 @@ msgid "Es -Semara"
 msgstr ""
 
 msgid "Laayoune"
-msgstr ""
+msgstr "لايوئۇن"
 
 msgid "Boujdour"
 msgstr ""
@@ -5891,7 +5885,7 @@ msgid "Sidi Ifni"
 msgstr ""
 
 msgid "Tantan"
-msgstr ""
+msgstr "تانتان"
 
 msgid "Guelmim"
 msgstr ""
@@ -6098,7 +6092,7 @@ msgid "Sîngerei"
 msgstr ""
 
 msgid "Slobozia"
-msgstr ""
+msgstr "سىلوبوزىئا"
 
 msgid "Soroca"
 msgstr ""
@@ -6139,289 +6133,289 @@ msgstr ""
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
-msgstr "מספרי כרטיס זיהוי חייבים להכיל 4 עד 7 ספרות או אות גדולה ו־7 ספרות"
+msgstr ""
 
 msgid "This field should contain exactly 13 digits."
-msgstr "שדה זה דורש 13 ספרות בדיוק."
+msgstr ""
 
 msgid "The first 7 digits of the UMCN must represent a valid past date."
-msgstr "7 הספרות הראשונות של ה־UMCN חייבות לייצג תאריך חוקי בעבר."
+msgstr ""
 
 msgid "The UMCN is not valid."
-msgstr "ה־UMCN אינו חוקי."
+msgstr ""
 
 msgid "Aerodrom"
-msgstr "איירודרום"
+msgstr ""
 
 msgid "Aračinovo"
-msgstr "אראצ'ינובו"
+msgstr ""
 
 msgid "Berovo"
-msgstr "ברובו"
+msgstr ""
 
 msgid "Bitola"
-msgstr "ביטולה"
+msgstr ""
 
 msgid "Bogdanci"
-msgstr "בוגדאנצי"
+msgstr ""
 
 msgid "Bogovinje"
-msgstr "בוגובנייה"
+msgstr ""
 
 msgid "Bosilovo"
-msgstr "בוסילובו"
+msgstr ""
 
 msgid "Brvenica"
-msgstr "ברווניצה"
+msgstr ""
 
 msgid "Butel"
-msgstr "בוטל"
+msgstr ""
 
 msgid "Valandovo"
-msgstr "ולנדובו"
+msgstr ""
 
 msgid "Vasilevo"
-msgstr "ואסילבו"
+msgstr ""
 
 msgid "Vevčani"
-msgstr "ובצ'אני"
+msgstr ""
 
 msgid "Veles"
-msgstr "ולס"
+msgstr ""
 
 msgid "Vinica"
-msgstr "ויניצה"
+msgstr ""
 
 msgid "Vraneštica"
-msgstr "ורנשטיצה"
+msgstr ""
 
 msgid "Vrapčište"
-msgstr "וראפצ'ישטה"
+msgstr ""
 
 msgid "Gazi Baba"
-msgstr "גזי בבה"
+msgstr ""
 
 msgid "Gevgelija"
-msgstr "גבגליה"
+msgstr ""
 
 msgid "Gostivar"
-msgstr "גוסטיבר"
+msgstr ""
 
 msgid "Gradsko"
-msgstr "גראדסקו"
+msgstr ""
 
 msgid "Debar"
-msgstr "דבר"
+msgstr ""
 
 msgid "Debarca"
-msgstr "דבארצה"
+msgstr ""
 
 msgid "Delčevo"
-msgstr "דלצ'ובו"
+msgstr ""
 
 msgid "Demir Kapija"
-msgstr "דמיר קאפייה"
+msgstr ""
 
 msgid "Demir Hisar"
-msgstr "דמיר היסר"
+msgstr ""
 
 msgid "Dolneni"
-msgstr "דולנני"
+msgstr ""
 
 msgid "Drugovo"
-msgstr "דרוגובו"
+msgstr ""
 
 msgid "Gjorče Petrov"
-msgstr "יורצ'ה פטרוב"
+msgstr ""
 
 msgid "Želino"
-msgstr "ז'לינו"
+msgstr ""
 
 msgid "Zajas"
-msgstr "זאייאס"
+msgstr ""
 
 msgid "Zelenikovo"
-msgstr "זלניקובו"
+msgstr ""
 
 msgid "Zrnovci"
-msgstr "זרנובצי"
+msgstr ""
 
 msgid "Ilinden"
-msgstr "יילינדן"
+msgstr ""
 
 msgid "Jegunovce"
-msgstr "יגונובצה"
+msgstr ""
 
 msgid "Kavadarci"
-msgstr "קבדרצי"
+msgstr ""
 
 msgid "Karbinci"
-msgstr "קרבינצי"
+msgstr ""
 
 msgid "Karpoš"
-msgstr "קרפוש"
+msgstr ""
 
 msgid "Kisela Voda"
-msgstr "קיסלה וודה"
+msgstr ""
 
 msgid "Kičevo"
-msgstr "קיצ'בו"
+msgstr ""
 
 msgid "Konče"
-msgstr "קונצ'ה"
+msgstr ""
 
 msgid "Koćani"
-msgstr "קוצ'אני"
+msgstr ""
 
 msgid "Kratovo"
-msgstr "קראטובו"
+msgstr ""
 
 msgid "Kriva Palanka"
-msgstr "קריבה פאלאנקה"
+msgstr ""
 
 msgid "Krivogaštani"
-msgstr "קריבוגאשטאני"
+msgstr ""
 
 msgid "Kruševo"
-msgstr "קרושבו"
+msgstr ""
 
 msgid "Kumanovo"
-msgstr "קומאנובו"
+msgstr ""
 
 msgid "Lipkovo"
-msgstr "ליפקובו"
+msgstr ""
 
 msgid "Lozovo"
-msgstr "לוזובו"
+msgstr ""
 
 msgid "Mavrovo i Rostuša"
-msgstr "מאברובו אי רוסטושה"
+msgstr ""
 
 msgid "Makedonska Kamenica"
-msgstr "מקדונסקה קמניצה"
+msgstr ""
 
 msgid "Makedonski Brod"
-msgstr "מקדונסקי ברוד"
+msgstr ""
 
 msgid "Mogila"
-msgstr "מוגילה"
+msgstr ""
 
 msgid "Negotino"
-msgstr "נגוטינו"
+msgstr ""
 
 msgid "Novaci"
-msgstr "נובאצי"
+msgstr ""
 
 msgid "Novo Selo"
-msgstr "נובו סלו"
+msgstr ""
 
 msgid "Oslomej"
-msgstr "אוסלומיי"
+msgstr ""
 
 msgid "Ohrid"
-msgstr "אוחריד"
+msgstr "ئوخرىد"
 
 msgid "Petrovec"
-msgstr "פטרובץ"
+msgstr ""
 
 msgid "Pehčevo"
-msgstr "פחצ'בו"
+msgstr ""
 
 msgid "Plasnica"
-msgstr "פלאסניצה"
+msgstr ""
 
 msgid "Prilep"
-msgstr "פרילפ"
+msgstr ""
 
 msgid "Probištip"
-msgstr "פרובישטיפ"
+msgstr ""
 
 msgid "Radoviš"
-msgstr "ראדוביש"
+msgstr ""
 
 msgid "Rankovce"
-msgstr "ראנקובצה"
+msgstr ""
 
 msgid "Resen"
-msgstr "רסן"
+msgstr ""
 
 msgid "Rosoman"
-msgstr "רוסומן"
+msgstr ""
 
 msgid "Saraj"
-msgstr "סאראיי"
+msgstr ""
 
 msgid "Sveti Nikole"
-msgstr "סבטי ניקולה"
+msgstr ""
 
 msgid "Sopište"
-msgstr "סופישטה"
+msgstr ""
 
 msgid "Star Dojran"
-msgstr "סטאר דויירן"
+msgstr ""
 
 msgid "Staro Nagoričane"
-msgstr "סטראו נאגוריצ'נה"
+msgstr ""
 
 msgid "Struga"
-msgstr "סטרוגה"
+msgstr ""
 
 msgid "Strumica"
-msgstr "סטרומיצה"
+msgstr ""
 
 msgid "Studeničani"
-msgstr "סטודניצ'אני"
+msgstr ""
 
 msgid "Tearce"
-msgstr "טיארצה"
+msgstr ""
 
 msgid "Tetovo"
-msgstr "טטובו"
+msgstr ""
 
 msgid "Centar"
-msgstr "סנטאר"
+msgstr ""
 
 msgid "Centar-Župa"
-msgstr "סנטאר ז'ופה"
+msgstr ""
 
 msgid "Čair"
-msgstr "צ'איר"
+msgstr ""
 
 msgid "Čaška"
-msgstr "צ'אשקה"
+msgstr ""
 
 msgid "Češinovo-Obleševo"
-msgstr "צ'שינובו-אובלשבו"
+msgstr ""
 
 msgid "Čučer-Sandevo"
-msgstr "צ'וצ'ר סנדבו"
+msgstr ""
 
 msgid "Štip"
-msgstr "שטיפ"
+msgstr ""
 
 msgid "Šuto Orizari"
-msgstr "שוטו אוריזרי"
+msgstr ""
 
 msgid "Macedonian identity card number"
-msgstr "מספר תעודת זיהוי מקדוני"
+msgstr ""
 
 msgid "A Macedonian municipality (2 character code)"
-msgstr "עירייה מקדונית (קוד בן 2 תווים)"
+msgstr ""
 
 msgid "Unique master citizen number (13 digits)"
-msgstr "מספר אזרח ראשי ייחודי (13 ספרות)"
+msgstr ""
 
 msgid "Enter a valid postal code in format AAA 0000."
 msgstr ""
 
 msgid "Enter a valid zip code in the format XXXXX."
-msgstr "יש להזין מיקוד חוקי בתבנית XXXXX."
+msgstr ""
 
 msgid "Enter a valid RFC."
-msgstr "יש להזין RFC חוקי."
+msgstr ""
 
 msgid "Invalid checksum for RFC."
-msgstr "סיכום ביקורת שגוי עבור RFC."
+msgstr ""
 
 msgid "Enter a valid CLABE."
 msgstr ""
@@ -6430,130 +6424,130 @@ msgid "Invalid checksum for CLABE."
 msgstr ""
 
 msgid "Enter a valid CURP."
-msgstr "יש להזין CURP חוקי."
+msgstr ""
 
 msgid "Invalid checksum for CURP."
-msgstr "סיכום ביקורת שגוי עבור CURP."
+msgstr ""
 
 msgid "Enter a valid Social Security Number."
-msgstr "יש להזין מספר ביטוח לאומי חוקי."
+msgstr ""
 
 msgid "Invalid checksum for Social Security Number."
-msgstr "סיכום ביקורת שגוי עבור מספר ביטוח לאומי."
+msgstr ""
 
 msgid "Mexico state (three or four uppercase letters)"
 msgstr ""
 
 msgid "Mexico zip code"
-msgstr "מיקוד מקסיקני"
+msgstr ""
 
 msgid "Mexican RFC"
-msgstr "RFC מקסיקני"
+msgstr ""
 
 msgid "Mexican CLABE"
 msgstr ""
 
 msgid "Mexican CURP"
-msgstr "CURP מקסיקני"
+msgstr ""
 
 msgid "Mexican Social Security Number"
-msgstr "מספר ביטוח לאומי מקסיקני"
+msgstr ""
 
 msgid "Aguascalientes"
-msgstr "אגואסקליינטס"
+msgstr "ئاگۇئاسكالىيېنتېس"
 
 msgid "Baja California"
-msgstr "באחה קליפורניה"
+msgstr "باخا كالىفورنىيە"
 
 msgid "Baja California Sur"
-msgstr "באחה קליפורניה הדרומית"
+msgstr "باخا كالىفورنىيە-سۇر"
 
 msgid "Campeche"
-msgstr "קמפצ'ה"
+msgstr "كامپېچې"
 
 msgid "Ciudad de México"
 msgstr ""
 
 msgid "Chihuahua"
-msgstr "צ'יוואוה"
+msgstr "چىۋاۋا"
 
 msgid "Chiapas"
-msgstr "צ'יאפס"
+msgstr "چىئاپاس"
 
 msgid "Coahuila"
-msgstr "קואהווילה"
+msgstr "كوئاۋىلا"
 
 msgid "Colima"
-msgstr "קולימה"
+msgstr "كولىما"
 
 msgid "Durango"
-msgstr "דוראנגו"
+msgstr "دۇرانگو"
 
 msgid "Guerrero"
-msgstr "גררו"
+msgstr "گۇيەررو"
 
 msgid "Guanajuato"
-msgstr "גואנחואטו"
+msgstr "گىۋانايۇتو"
 
 msgid "Hidalgo"
-msgstr "אידלגו"
+msgstr "ھىدالگو"
 
 msgid "Jalisco"
-msgstr "חליסקו"
+msgstr "خالىسكو"
 
 msgid "Estado de México"
-msgstr "אסטאדו דה מקסיקו"
+msgstr ""
 
 msgid "Michoacán"
-msgstr "מיצ'ואקן"
+msgstr "مىچوئاكان"
 
 msgid "Morelos"
-msgstr "מורלוס"
+msgstr "مورېلوس"
 
 msgid "Nayarit"
-msgstr "נייארית"
+msgstr "نايارىت"
 
 msgid "Nuevo León"
-msgstr "נואבו ליאון"
+msgstr "نۇيەۋو-لېئون"
 
 msgid "Oaxaca"
-msgstr "אואסקה"
+msgstr "ئوئاخاكا"
 
 msgid "Puebla"
-msgstr "פואבלה"
+msgstr "پۇيېبلا"
 
 msgid "Querétaro"
-msgstr "קוורטארו"
+msgstr "كۇيېرېتارو"
 
 msgid "Quintana Roo"
-msgstr "קינטאנה רו"
+msgstr "قۇيىنتانا-رو"
 
 msgid "Sinaloa"
-msgstr "סינאלוה"
+msgstr "سىنالوئا"
 
 msgid "San Luis Potosí"
-msgstr "סאן לואי פוטוסי"
+msgstr "سان-لۇئىس Potosí"
 
 msgid "Sonora"
-msgstr "סונורה"
+msgstr "سونورا"
 
 msgid "Tabasco"
-msgstr "טבסקו"
+msgstr "تاباسكو"
 
 msgid "Tamaulipas"
-msgstr "טמפוליפס"
+msgstr "تۇمائۇلىپاس"
 
 msgid "Tlaxcala"
-msgstr "טלקסקאלה"
+msgstr "تىلاكسكالا"
 
 msgid "Veracruz"
-msgstr "ורקרוז"
+msgstr "ۋېراكرۇز"
 
 msgid "Yucatán"
-msgstr "יוקטן"
+msgstr "يۇكاتان"
 
 msgid "Zacatecas"
-msgstr "זאקאטקס"
+msgstr "زاكاتېكاس"
 
 msgid "Invalid MyKad number."
 msgstr ""
@@ -6571,37 +6565,37 @@ msgid "Dutch license plate"
 msgstr ""
 
 msgid "Drenthe"
-msgstr "דרנתה"
+msgstr "دىرېنتې"
 
 msgid "Flevoland"
-msgstr "פלבולנד"
+msgstr "فىلېۋولاند"
 
 msgid "Fryslân"
-msgstr "פריסלנד"
+msgstr ""
 
 msgid "Gelderland"
-msgstr "חלדרלנד"
+msgstr "گېلدېرلاند"
 
 msgid "Groningen"
-msgstr "חרונינגן"
+msgstr "گىرونىنگېن"
 
 msgid "Noord-Brabant"
-msgstr "צפון בראבנט"
+msgstr ""
 
 msgid "Noord-Holland"
-msgstr "צפון הולנד"
+msgstr ""
 
 msgid "Overijssel"
-msgstr "אובראיסל"
+msgstr "يۇقىرى ئىجسسېل"
 
 msgid "Utrecht"
-msgstr "אוטרכט"
+msgstr "ئۇترېچىت"
 
 msgid "Zeeland"
-msgstr "זילנד"
+msgstr "زېلاند"
 
 msgid "Zuid-Holland"
-msgstr "דרום הולנד"
+msgstr ""
 
 msgid "Enter a valid BSN."
 msgstr ""
@@ -6610,7 +6604,7 @@ msgid "Enter a valid license plate"
 msgstr ""
 
 msgid "Enter a valid Norwegian social security number."
-msgstr "יש להזין מספר ביטוח לאומי נורבגי חוקי."
+msgstr ""
 
 msgid "Enter a valid Norwegian bank account number."
 msgstr ""
@@ -6631,7 +6625,7 @@ msgid "Dhading"
 msgstr ""
 
 msgid "Kathmandu"
-msgstr ""
+msgstr "كاتماندۇ"
 
 msgid "Kavrepalanchok"
 msgstr ""
@@ -6811,7 +6805,7 @@ msgid "Rukum"
 msgstr ""
 
 msgid "Salyan"
-msgstr ""
+msgstr "ساليان"
 
 msgid "Khotang"
 msgstr ""
@@ -6847,19 +6841,19 @@ msgid "Kailali"
 msgstr ""
 
 msgid "Bagmati"
-msgstr ""
+msgstr "باگماتى"
 
 msgid "Gandaki"
-msgstr ""
+msgstr "گانداكى"
 
 msgid "Karnali"
-msgstr ""
+msgstr "كارنالى"
 
 msgid "Lumbini"
-msgstr ""
+msgstr "لۇمبىنى"
 
 msgid "Koshi"
-msgstr ""
+msgstr "كوشى"
 
 msgid "Madhesh"
 msgstr ""
@@ -6868,31 +6862,31 @@ msgid "Sudurpaschim"
 msgstr ""
 
 msgid "Bheri"
-msgstr ""
+msgstr "بىخېرى"
 
 msgid "Dhawalagiri"
-msgstr ""
+msgstr "دىخاۋالاگىرى"
 
 msgid "Janakpur"
-msgstr ""
+msgstr "جاناكپۇر"
 
 msgid "Mahakali"
-msgstr ""
+msgstr "ماخاكالى"
 
 msgid "Mechi"
-msgstr ""
+msgstr "مېچى"
 
 msgid "Narayani"
-msgstr ""
+msgstr "نارايانى"
 
 msgid "Rapti"
-msgstr ""
+msgstr "راپتى"
 
 msgid "Sagarmatha"
-msgstr ""
+msgstr "ساگارماتخا"
 
 msgid "Seti"
-msgstr ""
+msgstr "سېتى"
 
 msgid "Invalid post code."
 msgstr ""
@@ -6910,7 +6904,7 @@ msgid "Kaipara District"
 msgstr ""
 
 msgid "Auckland"
-msgstr ""
+msgstr "ئاۋكلاند"
 
 msgid "Thames-Coromandel District"
 msgstr ""
@@ -6925,7 +6919,7 @@ msgid "Matamata-Piako District"
 msgstr ""
 
 msgid "Hamilton"
-msgstr ""
+msgstr "ھامىلتون"
 
 msgid "Waipa District"
 msgstr ""
@@ -7027,13 +7021,13 @@ msgid "Hutt"
 msgstr ""
 
 msgid "Wellington"
-msgstr ""
+msgstr "ۋېللىڭتون"
 
 msgid "Tasman District"
 msgstr ""
 
 msgid "Nelson"
-msgstr ""
+msgstr "نېلسون"
 
 msgid "Marlborough District"
 msgstr ""
@@ -7060,7 +7054,7 @@ msgid "Waimakariri District"
 msgstr ""
 
 msgid "Christchurch"
-msgstr ""
+msgstr "چرىستچۇرچ"
 
 msgid "Ashburton District"
 msgstr ""
@@ -7084,7 +7078,7 @@ msgid "Central Otago District"
 msgstr ""
 
 msgid "Dunedin"
-msgstr ""
+msgstr "دۇنېدىن"
 
 msgid "Clutha District"
 msgstr ""
@@ -7099,16 +7093,16 @@ msgid "Invercargill"
 msgstr ""
 
 msgid "Taranaki"
-msgstr ""
+msgstr "تاراناكى"
 
 msgid "Hawke's Bay"
-msgstr ""
+msgstr "خاۋكېس باي"
 
 msgid "Marlborough"
-msgstr ""
+msgstr "مارىلبورو"
 
 msgid "Canterbury"
-msgstr ""
+msgstr "گانتېربۇرى"
 
 msgid "South Canterbury"
 msgstr ""
@@ -7117,40 +7111,40 @@ msgid "Westland"
 msgstr ""
 
 msgid "Otago"
-msgstr ""
+msgstr "ئوتاگو"
 
 msgid "Southland"
-msgstr ""
+msgstr "جەنۇبىي زېمىن"
 
 msgid "Chatham Islands"
-msgstr ""
+msgstr "چاتام تاقىم ئاراللىرى"
 
 msgid "Northland"
-msgstr ""
+msgstr "شىمالىي زېمىن"
 
 msgid "Waikato"
-msgstr ""
+msgstr "ۋايكاتو"
 
 msgid "Bay of Plenty"
-msgstr ""
+msgstr "باي-ئوف-پىلېنتى"
 
 msgid "Gisborne"
-msgstr ""
+msgstr "گىسبورنې"
 
 msgid "Manawatu-Wanganui"
-msgstr ""
+msgstr "ماناۋاتۇ-ۋانگانۇي"
 
 msgid "Tasman"
-msgstr ""
+msgstr "تاسمان"
 
 msgid "West Coast"
-msgstr ""
+msgstr "غەربىي كوست"
 
 msgid "This field requires 8 digits."
-msgstr "שדה זה דורש 8 ספרות."
+msgstr ""
 
 msgid "This field requires 11 digits."
-msgstr "שדה זה דורש 11 ספרות."
+msgstr ""
 
 msgid "Enter a 5 digit postcode."
 msgstr ""
@@ -7165,559 +7159,552 @@ msgid "Azad Jammu & Kashmir"
 msgstr ""
 
 msgid "Balochistan"
-msgstr ""
+msgstr "بالوچىستان"
 
 msgid "Federally Administered Tribal Areas"
-msgstr ""
+msgstr "فىدېراتسىيە باشقۇرۇشىدىكى قابىلە رايونلىرى"
 
 msgid "Gilgit-Baltistan"
-msgstr ""
+msgstr "گىلگىت-بالتىستان"
 
 msgid "Islamabad"
-msgstr ""
+msgstr "ئىسلامئاباد"
 
 msgid "Khyber Pakhtunkhwa"
-msgstr ""
+msgstr "كخىبېر پاكخىتۇنكىخۋا"
 
 msgid "Punjab"
-msgstr ""
+msgstr "پۇنجاب"
 
 msgid "Sindh"
-msgstr ""
+msgstr "سىندىخى"
 
 msgid "National Identification Number consists of 11 digits."
-msgstr "מספר זיהוי לאומי מורכב מ-11 ספרות."
+msgstr ""
 
 msgid "Wrong checksum for the National Identification Number."
-msgstr "סכום ביקורת שגוי עבור מספר הזיהוי הלאומי."
+msgstr ""
 
 msgid "The National Identification Number contains an invalid birth date."
 msgstr ""
 
 msgid "National ID Card Number consists of 3 letters and 6 digits."
-msgstr "מספר תעודת זהות לאומי מורכב מ־3 אותיות ו־6 ספרות."
+msgstr ""
 
 msgid "Wrong checksum for the National ID Card Number."
-msgstr "סיכום ביקורת שגוי עבור מספר תעודת הזהות הלאומי."
+msgstr ""
 
 msgid ""
 "Enter a tax number field (NIP) in the format XXX-XXX-XX-XX, XXX-XX-XX-XXX or "
 "XXXXXXXXXX."
 msgstr ""
-"יש להזין שדה מספר מס (NIP) בתבנית XXX-XXX-XX-XX, XXX-XX-XX-XXX or XXXXXXXXXX."
 
 msgid "Wrong checksum for the Tax Number (NIP)."
-msgstr "סיכום ביקורת שגוי עבור מספר מס (NIP)."
+msgstr ""
 
 msgid "National Business Register Number (REGON) consists of 9 or 14 digits."
-msgstr "מספר רשומת בית עסק ארצי(REGON) מכיל או תשע או ארבע עשרה ספרות."
+msgstr ""
 
 msgid "Wrong checksum for the National Business Register Number (REGON)."
-msgstr "סיכום שגוי National Business Register Number (REGON)."
+msgstr ""
 
 msgid "Enter a postal code in the format XX-XXX."
-msgstr "נא להזין מיקוד בתבנית XX-XXX."
+msgstr ""
 
 msgid "Lower Silesian"
-msgstr "סילסיה התחתונה"
+msgstr ""
 
 msgid "Kuyavian-Pomeranian"
-msgstr "קויאבויה - פומרניה"
+msgstr ""
 
 msgid "Lublin"
-msgstr "לובלין"
+msgstr "لۇبلىن"
 
 msgid "Lubusz"
-msgstr "לובוש"
+msgstr "لۇبۇسكو"
 
 msgid "Lodz"
-msgstr "לודז'"
+msgstr ""
 
 msgid "Lesser Poland"
-msgstr "פולין זוטא"
+msgstr "كىچىك پولشا"
 
 msgid "Masovian"
-msgstr "מזוביה"
+msgstr ""
 
 msgid "Opole"
-msgstr "אופולה"
+msgstr "ئوپولې"
 
 msgid "Subcarpathian"
-msgstr "תת קרפטיה"
+msgstr ""
 
 msgid "Podlasie"
-msgstr "פודלסיה"
+msgstr ""
 
 msgid "Pomeranian"
-msgstr "פומרניה"
+msgstr ""
 
 msgid "Silesian"
-msgstr "סילסיה"
+msgstr ""
 
 msgid "Swietokrzyskie"
-msgstr "סבייטוקזי'סקי"
+msgstr ""
 
 msgid "Warmian-Masurian"
-msgstr "וורמיה- מזוריה"
+msgstr ""
 
 msgid "Greater Poland"
-msgstr "פולין רבתי"
+msgstr "بۈيۈك پولشا"
 
 msgid "West Pomeranian"
-msgstr "מערב פומרניה"
+msgstr ""
 
 msgid "The specified value is not a valid Citizen Card number."
-msgstr "הערך שצוין אינו מספר כרטיס אזרח חוקי."
+msgstr ""
 
 msgid ""
 "Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X "
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
-"מספרי כרטיסי אזרח הם בתבנית XXXXXXXXXYYX או XXXXXXXX-XYYX (כאשר X הוא ספרה "
-"ו־Y הוא תו אלפא נומרי)."
 
 msgid "The specified number is not a valid Social Security number."
-msgstr "המספר שצוין אינו מספר ביטוח לאומי חוקי."
+msgstr ""
 
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either "
 "1 or 2 and Y is any other digit)."
 msgstr ""
-"מספרי ביטוח הלאומי חייבים להיות בתבנית XYYYYYYYYYY (כאשר X הוא 1 או 2 ו־Y "
-"הוא כל ספרות אחרת)."
 
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9 "
 "and Y is any other digit)."
 msgstr ""
-"מספרי מיקוד חייבים להיות בתבנית XYYY-YYY (כאשר X הוא ספרה בין 1 ל 9 ו־Y הוא "
-"כל ספרות אחרת)."
 
 msgid "Aveiro"
-msgstr "אביירו"
+msgstr "ئاۋېئىرو"
 
 msgid "Beja"
-msgstr "בז'ה"
+msgstr "بېجا"
 
 msgid "Braga"
-msgstr "בראגה"
+msgstr "بىراگا"
 
 msgid "Bragança"
-msgstr "ברגנסה"
+msgstr "باراگانچا"
 
 msgid "Castelo Branco"
-msgstr "קשטלו ברקו"
+msgstr "كاستېلو-بىرانكو"
 
 msgid "Coimbra"
-msgstr "קוימברה"
+msgstr "كوئىمبىرا"
 
 msgid "Évora"
-msgstr "אבורה"
+msgstr "ئېۋورا"
 
 msgid "Faro"
-msgstr "פארו"
+msgstr "فارو"
 
 msgid "Guarda"
-msgstr "גווארדה"
+msgstr "گۇئاردا"
 
 msgid "Leiria"
-msgstr "לייריה"
+msgstr "لېئىرىيە"
 
 msgid "Lisboa"
-msgstr "ליסבון"
+msgstr "لىسبوئا"
 
 msgid "Portalegre"
-msgstr "פורטלגרה"
+msgstr "پورتالېگرې"
 
 msgid "Porto"
-msgstr "פורטו"
+msgstr "پورتو"
 
 msgid "Santarém"
-msgstr "סנטרם"
+msgstr "سانتارېم"
 
 msgid "Setúbal"
-msgstr "סטובל"
+msgstr "سېتۇبال"
 
 msgid "Viana do Castelo"
-msgstr "ויאנה דו קשטלו"
+msgstr "ۋىئانا دو كاستېلو"
 
 msgid "Vila Real"
-msgstr "וילה ריאל"
+msgstr "ۋىلا رېئال"
 
 msgid "Viseu"
-msgstr "ויזאו"
+msgstr "ۋىسېۇ"
 
 msgid "Região Autónoma da Madeira"
-msgstr "מרחב מדיירה"
+msgstr ""
 
 msgid "Região Autónoma dos Açores"
-msgstr "מרחב האיים האזוריים"
+msgstr ""
 
 msgid "Enter a valid CIF."
-msgstr "יש להזין CIF חוקי."
+msgstr ""
 
 msgid "Enter a valid CNP."
-msgstr "יש להזין CNP חוקי."
+msgstr ""
 
 msgid "Enter a valid postal code in the format XXXXXX"
-msgstr "נא להזין מיקוד חוקי בתבנית XXXXXX"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXXX."
-msgstr "יש להזין מיקוד בתבנית XXXXXX."
+msgstr ""
 
 msgid "Enter a passport number in the format XXXX XXXXXX."
-msgstr "יש להזין מספר דרכון בתבנית XXXX XXXXXX."
+msgstr ""
 
 msgid "Enter a passport number in the format XX XXXXXXX."
-msgstr "יש להזין מספר דרכון בתבנית XX XXXXXXX."
+msgstr ""
 
 msgid "Central Federal County"
-msgstr "המחוז הפדרלי המרכזי"
+msgstr ""
 
 msgid "South Federal County"
-msgstr "המחוז הפדרלי הדרומי"
+msgstr ""
 
 msgid "North-West Federal County"
-msgstr "המחוז הפדרלי הצפון-מערבי"
+msgstr ""
 
 msgid "Far-East Federal County"
-msgstr "מחוז המזרח הרחוק הרוסי"
+msgstr ""
 
 msgid "Siberian Federal County"
-msgstr "המחוז הפדרלי הסיבירי"
+msgstr ""
 
 msgid "Ural Federal County"
-msgstr "המחוז הפדרלי של אורל"
+msgstr ""
 
 msgid "Privolzhsky Federal County"
-msgstr "המחוז הפדרלי פריבולז'סקי"
+msgstr ""
 
 msgid "North-Caucasian Federal County"
-msgstr "המחוז הפדרלי של צפון קווקז"
+msgstr ""
 
 msgid "Moskva"
-msgstr "מוסקבה"
+msgstr ""
 
 msgid "Saint-Peterburg"
-msgstr "סנקט פטרבורג"
+msgstr ""
 
 msgid "Moskovskaya oblast'"
-msgstr "מחוז מוסקבה"
+msgstr ""
 
 msgid "Adygeya, Respublika"
-msgstr "אדיגיה, רפובליקה"
+msgstr ""
 
 msgid "Bashkortostan, Respublika"
-msgstr "בשקיריה, רפובליקה"
+msgstr ""
 
 msgid "Buryatia, Respublika"
-msgstr "בוריאטיה, רפובליקה"
+msgstr ""
 
 msgid "Altay, Respublika"
-msgstr "אלטאי, רפובליקה"
+msgstr ""
 
 msgid "Dagestan, Respublika"
-msgstr "דאגסטן, רפובליקה"
+msgstr ""
 
 msgid "Ingushskaya Respublika"
-msgstr "אינגושטיה, רפובליקה"
+msgstr ""
 
 msgid "Kabardino-Balkarskaya Respublika"
-msgstr "קברדינו-בלקריה, רפובליקה"
+msgstr ""
 
 msgid "Kalmykia, Respublika"
-msgstr "קלמיקיה, רפובליקה"
+msgstr ""
 
 msgid "Karachaevo-Cherkesskaya Respublika"
-msgstr "קאראצ'אי-צ'רקסיה, רפובליקה"
+msgstr ""
 
 msgid "Karelia, Respublika"
-msgstr "קרליה, רפובליקה"
+msgstr ""
 
 msgid "Komi, Respublika"
-msgstr "קומי, רפובליקה"
+msgstr ""
 
 msgid "Mariy Ehl, Respublika"
-msgstr "מארי אל, רפובליקה"
+msgstr ""
 
 msgid "Mordovia, Respublika"
-msgstr "מורדוביה, רפובליקה"
+msgstr ""
 
 msgid "Sakha, Respublika (Yakutiya)"
-msgstr "סאחא (יקוטיה), רפובליקה"
+msgstr ""
 
 msgid "Severnaya Osetia, Respublika (Alania)"
-msgstr "צפון אוסטיה (אלניה), רפובליקה"
+msgstr ""
 
 msgid "Tatarstan, Respublika"
-msgstr "טטרסטן, רפובליקה"
+msgstr ""
 
 msgid "Tyva, Respublika (Tuva)"
-msgstr "טובה (טוּבה), רפובליקה"
+msgstr ""
 
 msgid "Udmurtskaya Respublika"
-msgstr "אודמורטיה, רפובליקה"
+msgstr ""
 
 msgid "Khakassiya, Respublika"
-msgstr "חקסיה, רפובליקה"
+msgstr ""
 
 msgid "Chechenskaya Respublika"
-msgstr "צ'צ'ניה, רפובליקה"
+msgstr ""
 
 msgid "Chuvashskaya Respublika"
-msgstr "צ'ובשיה, רפובליקה"
+msgstr ""
 
 msgid "Altayskiy Kray"
-msgstr "מחוז אלטאי"
+msgstr ""
 
 msgid "Zabaykalskiy Kray"
-msgstr "מחוז עבר הבאיקל"
+msgstr ""
 
 msgid "Kamchatskiy Kray"
-msgstr "מחוז קמצ'טקה"
+msgstr ""
 
 msgid "Krasnodarskiy Kray"
-msgstr "מחוז קרסנודאר"
+msgstr ""
 
 msgid "Krasnoyarskiy Kray"
-msgstr "מחוז קרסנויארסק"
+msgstr ""
 
 msgid "Permskiy Kray"
-msgstr "מחוז פרם"
+msgstr ""
 
 msgid "Primorskiy Kray"
-msgstr "מחוז פרימוריה"
+msgstr ""
 
 msgid "Stavropol'siyy Kray"
-msgstr "מחוז סטברופול"
+msgstr ""
 
 msgid "Khabarovskiy Kray"
-msgstr "מחוז חברובסק"
+msgstr ""
 
 msgid "Amurskaya oblast'"
-msgstr "מחוז אמור"
+msgstr ""
 
 msgid "Arkhangel'skaya oblast'"
-msgstr "מחוז ארכנגלסק"
+msgstr ""
 
 msgid "Astrakhanskaya oblast'"
-msgstr "מחוז אסטרחן"
+msgstr ""
 
 msgid "Belgorodskaya oblast'"
-msgstr "מחוז בלגורוד"
+msgstr ""
 
 msgid "Bryanskaya oblast'"
-msgstr "מחוז בריאנסק"
+msgstr ""
 
 msgid "Vladimirskaya oblast'"
-msgstr "מחוז ולדימיר"
+msgstr ""
 
 msgid "Volgogradskaya oblast'"
-msgstr "מחוז וולגוגרד"
+msgstr ""
 
 msgid "Vologodskaya oblast'"
-msgstr "מחוז וולוגדה"
+msgstr ""
 
 msgid "Voronezhskaya oblast'"
-msgstr "מחוז וורונז'"
+msgstr ""
 
 msgid "Ivanovskaya oblast'"
-msgstr "מחוז איבנובו"
+msgstr ""
 
 msgid "Irkutskaya oblast'"
-msgstr "מחוז אירקוטסק"
+msgstr ""
 
 msgid "Kaliningradskaya oblast'"
-msgstr "מחוז קלינינגרד"
+msgstr ""
 
 msgid "Kaluzhskaya oblast'"
-msgstr "מחוז קלוגה"
+msgstr ""
 
 msgid "Kemerovskaya oblast'"
-msgstr "מחוז קמרובו"
+msgstr ""
 
 msgid "Kirovskaya oblast'"
-msgstr "מחוז קירוב"
+msgstr ""
 
 msgid "Kostromskaya oblast'"
-msgstr "מחוז קוסטרומה"
+msgstr ""
 
 msgid "Kurganskaya oblast'"
-msgstr "מחוז קורגן"
+msgstr ""
 
 msgid "Kurskaya oblast'"
-msgstr "מחוז קורסק"
+msgstr ""
 
 msgid "Leningradskaya oblast'"
-msgstr "מחוז לנינגרד"
+msgstr ""
 
 msgid "Lipeckaya oblast'"
-msgstr "מחוז ליפצק"
+msgstr ""
 
 msgid "Magadanskaya oblast'"
-msgstr "מחוז מגדן"
+msgstr ""
 
 msgid "Murmanskaya oblast'"
-msgstr "מחוז מורמנסק"
+msgstr ""
 
 msgid "Nizhegorodskaja oblast'"
-msgstr "מחוז ניז'ני נובגורוד"
+msgstr ""
 
 msgid "Novgorodskaya oblast'"
-msgstr "מחוז נובגורוד"
+msgstr ""
 
 msgid "Novosibirskaya oblast'"
-msgstr "מחוז נובוסיבירסק"
+msgstr ""
 
 msgid "Omskaya oblast'"
-msgstr "מחוז אומסק"
+msgstr ""
 
 msgid "Orenburgskaya oblast'"
-msgstr "מחוז אורנבורג"
+msgstr ""
 
 msgid "Orlovskaya oblast'"
-msgstr "מחוז אוריול"
+msgstr ""
 
 msgid "Penzenskaya oblast'"
-msgstr "מחוז פנזה"
+msgstr ""
 
 msgid "Pskovskaya oblast'"
-msgstr "מחוז פסקוב"
+msgstr ""
 
 msgid "Rostovskaya oblast'"
-msgstr "מחוז רוסטוב"
+msgstr ""
 
 msgid "Rjazanskaya oblast'"
-msgstr "מחוז ריאזאן"
+msgstr ""
 
 msgid "Samarskaya oblast'"
-msgstr "מחוז סמרה"
+msgstr ""
 
 msgid "Saratovskaya oblast'"
-msgstr "מחוז סראטוב"
+msgstr ""
 
 msgid "Sakhalinskaya oblast'"
-msgstr "מחוז סחלין"
+msgstr ""
 
 msgid "Sverdlovskaya oblast'"
-msgstr "מחוז סברדלובסק"
+msgstr ""
 
 msgid "Smolenskaya oblast'"
-msgstr "מחוז סמולנסק"
+msgstr ""
 
 msgid "Tambovskaya oblast'"
-msgstr "מחוז טמבוב"
+msgstr ""
 
 msgid "Tverskaya oblast'"
-msgstr "מחוז טבר"
+msgstr ""
 
 msgid "Tomskaya oblast'"
-msgstr "מחוז טומסק"
+msgstr ""
 
 msgid "Tul'skaya oblast'"
-msgstr "מחוז טולה"
+msgstr ""
 
 msgid "Tyumenskaya oblast'"
-msgstr "מחוז טיומן"
+msgstr ""
 
 msgid "Ul'ianovskaya oblast'"
-msgstr "מחוז אולייאנובסק"
+msgstr ""
 
 msgid "Chelyabinskaya oblast'"
-msgstr "מחוז צ'ליאבינסק"
+msgstr ""
 
 msgid "Yaroslavskaya oblast'"
-msgstr "מחוז ירוסלבל"
+msgstr ""
 
 msgid "Evreyskaya avtonomnaja oblast'"
-msgstr "המחוז היהודי האוטונומי"
+msgstr ""
 
 msgid "Neneckiy autonomnyy okrug"
-msgstr "המחוז האוטונומי של הניינץ"
+msgstr ""
 
 msgid "Khanty-Mansiyskiy avtonomnyy okrug - Yugra"
-msgstr "המחוז האוטונומי חנטי ומנסי - אוגרה"
+msgstr ""
 
 msgid "Chukotskiy avtonomnyy okrug"
-msgstr "המחוז האוטונומי צ'וקוטקה"
+msgstr ""
 
 msgid "Yamalo-Neneckiy avtonomnyy okrug"
-msgstr "המחוז האוטונומי של ימלו-ננץ"
+msgstr ""
 
 msgid "Enter a valid Swedish organisation number."
-msgstr "הזן מספר ארגון שוודי חוקי."
+msgstr ""
 
 msgid "Enter a valid Swedish personal identity number."
-msgstr "יש להזין מספר זיהוי אישי שוודי חוקי."
+msgstr ""
 
 msgid "Co-ordination numbers are not allowed."
-msgstr "מספרי שיתוף פעולה אינם מותרים בשימוש"
+msgstr ""
 
 msgid "Enter a Swedish postal code in the format XXXXX."
-msgstr "נא להזין מיקוד שוודי בתבנית XXXXX."
+msgstr ""
 
 msgid "Stockholm"
-msgstr "סטוקהולם"
+msgstr "سىتوكھولم"
 
 msgid "Västerbotten"
-msgstr "וסטרבוטן"
+msgstr ""
 
 msgid "Norrbotten"
-msgstr "נורבוטן"
+msgstr ""
 
 msgid "Uppsala"
-msgstr "אופסלה"
+msgstr "ئۇپسالا"
 
 msgid "Södermanland"
-msgstr "סדרמאנלנד"
+msgstr ""
 
 msgid "Östergötland"
-msgstr "אסטריֶטלנד"
+msgstr ""
 
 msgid "Jönköping"
-msgstr "ינשפין"
+msgstr "جۆنكۆپىڭ"
 
 msgid "Kronoberg"
-msgstr "קרונוברג"
+msgstr ""
 
 msgid "Kalmar"
-msgstr "קאלמאר"
+msgstr "كالمار"
 
 msgid "Gotland"
-msgstr "גוטלנד"
+msgstr ""
 
 msgid "Blekinge"
-msgstr "בלשיניה"
+msgstr ""
 
 msgid "Skåne"
-msgstr "סקונה"
+msgstr ""
 
 msgid "Halland"
-msgstr "הלנד"
+msgstr ""
 
 msgid "Västra Götaland"
-msgstr "יטאלנד המערבית"
+msgstr ""
 
 msgid "Värmland"
-msgstr "ורמלנד"
+msgstr ""
 
 msgid "Örebro"
-msgstr "ארברו"
+msgstr "ئۆرېبرو"
 
 msgid "Västmanland"
-msgstr "וסטמנלנד"
+msgstr ""
 
 msgid "Dalarna"
-msgstr "דלארנה"
+msgstr ""
 
 msgid "Gävleborg"
-msgstr "יבלבורג"
+msgstr ""
 
 msgid "Västernorrland"
-msgstr "וסטרנורלנד"
+msgstr ""
 
 msgid "Jämtland"
-msgstr "ימטלנד"
+msgstr ""
 
 msgid "Enter a 6-digit postal code."
 msgstr ""
@@ -7726,274 +7713,274 @@ msgid "Invalid NRIC/FIN."
 msgstr ""
 
 msgid "The first 7 digits of the EMSO must represent a valid past date."
-msgstr "7 הספרות הראשונות של EMSO חייבת לייצג תאריך חוקי בעבר."
+msgstr ""
 
 msgid "The EMSO is not valid."
-msgstr "ה־EMSO אינו חוקי."
+msgstr ""
 
 msgid "Enter a valid tax number in form SIXXXXXXXX"
-msgstr "יש להזין מספר מס חוקי בתבנית SIXXXXXXXX"
+msgstr ""
 
 msgid "Banska Bystrica"
-msgstr " בנסקה ביסטריצה"
+msgstr ""
 
 msgid "Banska Stiavnica"
-msgstr "בנסקה שטיאבניצה"
+msgstr ""
 
 msgid "Bardejov"
-msgstr "ברדיוב"
+msgstr ""
 
 msgid "Banovce nad Bebravou"
-msgstr "בנובץ ע\"מ בברבו"
+msgstr ""
 
 msgid "Brezno"
-msgstr "ברזנו"
+msgstr ""
 
 msgid "Bratislava I"
-msgstr "ברטיסלאבה 1"
+msgstr ""
 
 msgid "Bratislava II"
-msgstr "ברטיסלאבה 2"
+msgstr ""
 
 msgid "Bratislava III"
-msgstr "ברטיסלאבה 3"
+msgstr ""
 
 msgid "Bratislava IV"
-msgstr "ברטיסלאבה 4"
+msgstr ""
 
 msgid "Bratislava V"
-msgstr "ברטיסלאבה 5"
+msgstr ""
 
 msgid "Bytca"
-msgstr "ביטצ'ה"
+msgstr ""
 
 msgid "Cadca"
-msgstr "צ'דקה"
+msgstr ""
 
 msgid "Detva"
-msgstr "דטבה"
+msgstr ""
 
 msgid "Dolny Kubin"
-msgstr "דולני קובין"
+msgstr ""
 
 msgid "Dunajska Streda"
-msgstr "דונאייסקה סטרדה"
+msgstr ""
 
 msgid "Galanta"
-msgstr "גלנטה"
+msgstr ""
 
 msgid "Gelnica"
-msgstr "גלניקה"
+msgstr ""
 
 msgid "Hlohovec"
-msgstr "הלוהובץ"
+msgstr ""
 
 msgid "Humenne"
-msgstr "הומנה"
+msgstr ""
 
 msgid "Ilava"
-msgstr "אילבה"
+msgstr ""
 
 msgid "Kezmarok"
-msgstr "קזמרוק"
+msgstr ""
 
 msgid "Komarno"
-msgstr "קומרנו"
+msgstr ""
 
 msgid "Kosice I"
-msgstr "קושיצה 1"
+msgstr ""
 
 msgid "Kosice II"
-msgstr "קושיצה 2"
+msgstr ""
 
 msgid "Kosice III"
-msgstr "קושיצה 3"
+msgstr ""
 
 msgid "Kosice IV"
-msgstr "קושיצה 4"
+msgstr ""
 
 msgid "Kosice - okolie"
-msgstr "קושיצ'ה - אוקולי"
+msgstr ""
 
 msgid "Krupina"
-msgstr "קרופינה"
+msgstr ""
 
 msgid "Kysucke Nove Mesto"
-msgstr "קיוסקה נובה מסטו"
+msgstr ""
 
 msgid "Levice"
-msgstr "לביצה"
+msgstr ""
 
 msgid "Levoca"
-msgstr "לבוצ'ה"
+msgstr ""
 
 msgid "Liptovsky Mikulas"
-msgstr "ליפטובסקי מיקולס"
+msgstr ""
 
 msgid "Lucenec"
-msgstr "לוצ'נץ'"
+msgstr ""
 
 msgid "Malacky"
-msgstr "מאלאקי"
+msgstr ""
 
 msgid "Martin"
-msgstr "מרטין"
+msgstr "مارتېن"
 
 msgid "Medzilaborce"
-msgstr "מדזילבורצה"
+msgstr ""
 
 msgid "Michalovce"
-msgstr "מיחלובצה"
+msgstr ""
 
 msgid "Myjava"
-msgstr "מיאווה"
+msgstr ""
 
 msgid "Namestovo"
-msgstr "נמסטובו"
+msgstr ""
 
 msgid "Nitra"
-msgstr "ניטרה"
+msgstr "نىترا"
 
 msgid "Nove Mesto nad Vahom"
-msgstr "נובה מסטו ע\"נ וה"
+msgstr ""
 
 msgid "Nove Zamky"
-msgstr "נווי־זאמקי"
+msgstr ""
 
 msgid "Partizanske"
-msgstr "פרטיזנסקה"
+msgstr ""
 
 msgid "Pezinok"
-msgstr "פזינוק"
+msgstr ""
 
 msgid "Piestany"
-msgstr "פיאסטאני"
+msgstr ""
 
 msgid "Poltar"
-msgstr "פולטר"
+msgstr ""
 
 msgid "Poprad"
-msgstr "פופרד"
+msgstr "پوپراد"
 
 msgid "Povazska Bystrica"
-msgstr "פובסקה ביסטריצ'ה"
+msgstr ""
 
 msgid "Presov"
-msgstr "פרשוב"
+msgstr ""
 
 msgid "Prievidza"
-msgstr "פרבידזה"
+msgstr "پرىېۋىدزا"
 
 msgid "Puchov"
-msgstr "פוצ'וב"
+msgstr ""
 
 msgid "Revuca"
-msgstr "ריץ"
+msgstr ""
 
 msgid "Rimavska Sobota"
-msgstr "רימובסקה סובוטה"
+msgstr ""
 
 msgid "Roznava"
-msgstr "רוזנבה"
+msgstr ""
 
 msgid "Ruzomberok"
-msgstr "רוזומברוק"
+msgstr ""
 
 msgid "Sabinov"
-msgstr "סבינוב"
+msgstr ""
 
 msgid "Senec"
-msgstr "סנץ"
+msgstr ""
 
 msgid "Senica"
-msgstr "סניצ'ה"
+msgstr ""
 
 msgid "Skalica"
-msgstr "סקליצ'ה"
+msgstr ""
 
 msgid "Snina"
-msgstr "סנינה"
+msgstr ""
 
 msgid "Sobrance"
-msgstr "סוברנס"
+msgstr ""
 
 msgid "Spisska Nova Ves"
-msgstr "ספישסקה נובה וס"
+msgstr ""
 
 msgid "Stara Lubovna"
-msgstr "סטרה לובובנה"
+msgstr ""
 
 msgid "Stropkov"
-msgstr "סרטופקוב"
+msgstr ""
 
 msgid "Svidnik"
-msgstr "סבידניק"
+msgstr ""
 
 msgid "Sala"
-msgstr "סאלה"
+msgstr ""
 
 msgid "Topolcany"
-msgstr "טופולצ'ני"
+msgstr ""
 
 msgid "Trebisov"
-msgstr "טרביסוב"
+msgstr ""
 
 msgid "Trencin"
-msgstr "טרנצ'ין"
+msgstr ""
 
 msgid "Trnava"
-msgstr "טרנאוה"
+msgstr "تىرناۋا"
 
 msgid "Turcianske Teplice"
-msgstr "טורצינסק טפליץ"
+msgstr ""
 
 msgid "Tvrdosin"
-msgstr "טברודוסין"
+msgstr ""
 
 msgid "Velky Krtis"
-msgstr "ולקי קריץ"
+msgstr ""
 
 msgid "Vranov nad Toplou"
-msgstr "טרנוב ע\"נ טופולו"
+msgstr ""
 
 msgid "Zlate Moravce"
-msgstr "זלטה מורבצה"
+msgstr ""
 
 msgid "Zvolen"
-msgstr "זבולן"
+msgstr ""
 
 msgid "Zarnovica"
-msgstr "זרנוביקה"
+msgstr ""
 
 msgid "Ziar nad Hronom"
-msgstr "ז'יר ע\"נ הרון"
+msgstr ""
 
 msgid "Zilina"
-msgstr "ז'ילינה"
+msgstr ""
 
 msgid "Banska Bystrica region"
-msgstr "מחוז בטנסקה ביסטריקה"
+msgstr ""
 
 msgid "Bratislava region"
-msgstr "מחוז ברטיסלבה"
+msgstr ""
 
 msgid "Kosice region"
-msgstr "מחוז קושיצ'ה"
+msgstr ""
 
 msgid "Nitra region"
-msgstr "מחוז ניטרה"
+msgstr ""
 
 msgid "Presov region"
-msgstr "מחוז פראסוב"
+msgstr ""
 
 msgid "Trencin region"
-msgstr "מחוז טראנצין"
+msgstr ""
 
 msgid "Trnava region"
-msgstr "מחוז טרנאוה"
+msgstr ""
 
 msgid "Zilina region"
-msgstr "מחוז ז'ילינה"
+msgstr ""
 
 msgid "Ariana"
 msgstr ""
@@ -8005,16 +7992,16 @@ msgid "Bizert"
 msgstr ""
 
 msgid "Gabes"
-msgstr ""
+msgstr "گابېس"
 
 msgid "Gafsa"
-msgstr ""
+msgstr "گافسا"
 
 msgid "Jendouba"
-msgstr ""
+msgstr "جېندۇبا"
 
 msgid "Kairouan"
-msgstr ""
+msgstr "كاىرۇان"
 
 msgid "Kasserine"
 msgstr ""
@@ -8026,7 +8013,7 @@ msgid "Kef"
 msgstr ""
 
 msgid "Mahdia"
-msgstr ""
+msgstr "ماخدىئا"
 
 msgid "Manouba"
 msgstr ""
@@ -8035,13 +8022,13 @@ msgid "Medenine"
 msgstr ""
 
 msgid "Monastir"
-msgstr ""
+msgstr "موناستىر"
 
 msgid "Nabeul"
 msgstr ""
 
 msgid "Sfax"
-msgstr ""
+msgstr "سفاكس"
 
 msgid "Sidi Bouzid"
 msgstr ""
@@ -8056,19 +8043,19 @@ msgid "Tataouine"
 msgstr ""
 
 msgid "Tozeur"
-msgstr ""
+msgstr "توزېۇر"
 
 msgid "Tunis"
-msgstr ""
+msgstr "تۇنىس"
 
 msgid "Zaghouan"
 msgstr ""
 
 msgid "Enter a valid Turkish Identification number."
-msgstr "יש להזין מספר זיהות טורקי תקף."
+msgstr ""
 
 msgid "Turkish Identification number must be 11 digits."
-msgstr "מספר זיהות טורקי חייב להיות 11 מספרים."
+msgstr ""
 
 msgid "Enter a valid postal code."
 msgstr ""
@@ -8155,7 +8142,7 @@ msgid "Zhytomyr Oblast"
 msgstr ""
 
 msgid "Autonomous Republic of Crimea"
-msgstr ""
+msgstr "قىرىم ئاپتونوم جۇمھۇرىيىتى"
 
 msgid "Kyiv"
 msgstr ""
@@ -8164,19 +8151,19 @@ msgid "Sevastopol"
 msgstr ""
 
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
-msgstr "יש להזין מיקוד חוקי בתבנית XXXXX או XXXXX-XXXX."
+msgstr ""
 
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
-msgstr "יש להזין מספר ביטוח לאומי אמריקאי בתבנית XXX-XX-XXXX."
+msgstr ""
 
 msgid "Enter a U.S. state or territory."
-msgstr "יש להזין מדינה או טריטרויה בארה\"ב"
+msgstr ""
 
 msgid "U.S. state (two uppercase letters)"
-msgstr "מדינה בארה\"ב (שתי אותיות גדולות)"
+msgstr ""
 
 msgid "U.S. postal code (two uppercase letters)"
-msgstr "מיקוד בארה\"ב (שתי אותיות גדולות)"
+msgstr ""
 
 msgid "U.S. ZIP code"
 msgstr ""
@@ -8185,173 +8172,173 @@ msgid "Social security number"
 msgstr ""
 
 msgid "Alabama"
-msgstr ""
+msgstr "ئالاباما شتاتى"
 
 msgid "Arizona"
-msgstr ""
+msgstr "ئارىزونا شتاتى"
 
 msgid "Arkansas"
-msgstr ""
+msgstr "ئاركانزاس شتاتى"
 
 msgid "California"
-msgstr ""
+msgstr "كالىفورنىيە شتاتى"
 
 msgid "Colorado"
-msgstr ""
+msgstr "كولورادو شتاتى"
 
 msgid "Connecticut"
-msgstr ""
+msgstr "كوننېكتىكات شتاتى"
 
 msgid "Delaware"
-msgstr ""
+msgstr "دېلاۋارېچە"
 
 msgid "District of Columbia"
-msgstr ""
+msgstr "كولومبىيە ئالاھىدە رايونى"
 
 msgid "Florida"
-msgstr ""
+msgstr "فىلورىدا شتاتى"
 
 msgctxt "US state"
 msgid "Georgia"
-msgstr ""
+msgstr "جورجىيە"
 
 msgid "Idaho"
-msgstr ""
+msgstr "ئايداخو شتاتى"
 
 msgid "Illinois"
-msgstr ""
+msgstr "ئىللىنويىز شتاتى"
 
 msgid "Indiana"
-msgstr ""
+msgstr "ئىندىئانا"
 
 msgid "Iowa"
-msgstr ""
+msgstr "ئىوۋا شتاتى"
 
 msgid "Kansas"
-msgstr ""
+msgstr "Kansas"
 
 msgid "Kentucky"
-msgstr ""
+msgstr "كېنتۇككى"
 
 msgid "Louisiana"
-msgstr ""
+msgstr "لويىزاننا شتاتى"
 
 msgid "Maine"
-msgstr ""
+msgstr "مېئانې شتاتى"
 
 msgid "Maryland"
-msgstr ""
+msgstr "ماريلاند شتاتى"
 
 msgid "Massachusetts"
-msgstr ""
+msgstr "ماسساچۇسېتس شتاتى"
 
 msgid "Michigan"
-msgstr ""
+msgstr "مىچىگان شتاتى"
 
 msgid "Minnesota"
-msgstr ""
+msgstr "مىننېسوتا شتاتى"
 
 msgid "Mississippi"
-msgstr ""
+msgstr "مىسسىسىپى شتاتى"
 
 msgid "Missouri"
-msgstr ""
+msgstr "مىسسورى شتاتى"
 
 msgid "Montana"
-msgstr ""
+msgstr "مونتانا شتاتى"
 
 msgid "Nebraska"
-msgstr ""
+msgstr "نېبراسكا شتاتى"
 
 msgid "Nevada"
-msgstr ""
+msgstr "نېۋادا شتاتى"
 
 msgid "New Hampshire"
-msgstr ""
+msgstr "يېڭى خامپىشىر شتاتى"
 
 msgid "New Jersey"
-msgstr ""
+msgstr "يېڭى جېرسېي شتاتى"
 
 msgid "New Mexico"
-msgstr ""
+msgstr "يېڭى مېكسىكا شتاتى"
 
 msgid "New York"
-msgstr ""
+msgstr "نيۇ-يورك"
 
 msgid "North Carolina"
-msgstr ""
+msgstr "شىمالىي كارولىنا"
 
 msgid "North Dakota"
-msgstr ""
+msgstr "شىمالىي داكوتا"
 
 msgid "Ohio"
-msgstr ""
+msgstr "ئوخايو شتاتى"
 
 msgid "Oklahoma"
-msgstr ""
+msgstr "ئوكلاخوما شتاتى"
 
 msgid "Oregon"
-msgstr ""
+msgstr "ئورېگون شتاتى"
 
 msgid "Pennsylvania"
-msgstr ""
+msgstr "پېنسىلۋانىيە شتاتى"
 
 msgid "Rhode Island"
-msgstr ""
+msgstr "رودې ئارىلى شتاتى"
 
 msgid "South Carolina"
-msgstr ""
+msgstr "جەنۇبىي كارولىنا"
 
 msgid "South Dakota"
-msgstr ""
+msgstr "جەنۇبىي داكوتا شتاتى"
 
 msgid "Tennessee"
-msgstr ""
+msgstr "تېننېسسى شتاتى"
 
 msgid "Texas"
-msgstr ""
+msgstr "تېكساس شتاتى"
 
 msgid "Utah"
-msgstr ""
+msgstr "يۇتا شتاتى"
 
 msgid "Vermont"
-msgstr ""
+msgstr "ۋېرمونت شتاتى"
 
 msgid "Virginia"
-msgstr ""
+msgstr "ۋىرگىنىيە شتاتى"
 
 msgid "Washington"
-msgstr ""
+msgstr "ۋاشىنگتون"
 
 msgid "West Virginia"
-msgstr ""
+msgstr "غەربىي ۋىرگىنىيە شتاتى"
 
 msgid "Wisconsin"
-msgstr ""
+msgstr "ۋىسكونسىن شتاتى"
 
 msgid "Wyoming"
-msgstr ""
+msgstr "ۋيومىڭ"
 
 msgid "Alaska"
-msgstr ""
+msgstr "ئالياسكا شتاتى"
 
 msgid "Hawaii"
-msgstr ""
+msgstr "ھاۋاي شتاتى"
 
 msgid "American Samoa"
-msgstr ""
+msgstr "ئامېرىكا تەۋەلىكىدىكى ساموئا"
 
 msgid "Guam"
-msgstr ""
+msgstr "گۇئام ئارىلى"
 
 msgid "Northern Mariana Islands"
-msgstr ""
+msgstr "شىمالىي مارىيانا تاقىم ئاراللىرى"
 
 msgid "Puerto Rico"
-msgstr ""
+msgstr "پۇئېرتو-رىكو"
 
 msgid "Virgin Islands"
-msgstr ""
+msgstr "ۋىرجىن تاقىم ئاراللىرى"
 
 msgid "Armed Forces Americas"
 msgstr ""
@@ -8363,19 +8350,19 @@ msgid "Armed Forces Pacific"
 msgstr ""
 
 msgid "Federated States of Micronesia"
-msgstr ""
+msgstr "مىكرونېزىيە فېدېراتسىيەسى"
 
 msgid "Marshall Islands"
-msgstr ""
+msgstr "مارشال تاقىم ئاراللىرى"
 
 msgid "Palau"
-msgstr ""
+msgstr "پالاۋ"
 
 msgid "Commonwealth of the Northern Mariana Islands"
-msgstr ""
+msgstr "شىمالىي مارىيانا ئىتتىپاقى"
 
 msgid "Panama Canal Zone"
-msgstr ""
+msgstr "پاناما قانال رايونى"
 
 msgid "Philippine Islands"
 msgstr ""
@@ -8384,10 +8371,10 @@ msgid "Trust Territory of the Pacific Islands"
 msgstr ""
 
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
-msgstr "יש להזין מספר CI חוקי בתבנית X.XXX.XXX-X,XXXXXXX-X או XXXXXXXX."
+msgstr ""
 
 msgid "Enter a valid CI number."
-msgstr "יש להזין מספר CI חוקי."
+msgstr ""
 
 msgid "Región Capital"
 msgstr ""
@@ -8420,31 +8407,31 @@ msgid "Región Sur Occidental"
 msgstr ""
 
 msgid "Amazonas"
-msgstr ""
+msgstr "ئامازوناس"
 
 msgid "Anzoátegui"
-msgstr ""
+msgstr "ئانزۇئاتېگۇي"
 
 msgid "Apure"
-msgstr ""
+msgstr "ئاپۇرې"
 
 msgid "Aragua"
-msgstr ""
+msgstr "ئاراگۇئا"
 
 msgid "Barinas"
-msgstr ""
+msgstr "بارىناس"
 
 msgid "Bolívar"
-msgstr ""
+msgstr "بولىۋار"
 
 msgid "Carabobo"
-msgstr ""
+msgstr "كارابوبو"
 
 msgid "Cojedes"
-msgstr ""
+msgstr "كوخېدېس"
 
 msgid "Delta Amacuro"
-msgstr ""
+msgstr "ئاماكۇرو دىلتىسى"
 
 msgid "Dependencias Federales"
 msgstr ""
@@ -8453,76 +8440,76 @@ msgid "Distrito Capital"
 msgstr ""
 
 msgid "Falcón"
-msgstr ""
+msgstr "فالكون"
 
 msgid "Guárico"
-msgstr ""
+msgstr "گۇئارىكا"
 
 msgid "Lara"
-msgstr ""
+msgstr "لارا"
 
 msgid "Mérida"
-msgstr ""
+msgstr "مېرىدا"
 
 msgid "Miranda"
-msgstr ""
+msgstr "مېراندا"
 
 msgid "Monagas"
-msgstr ""
+msgstr "موناگاس"
 
 msgid "Nueva Esparta"
-msgstr ""
+msgstr "يېڭى ئىسپارتا"
 
 msgid "Portuguesa"
-msgstr ""
+msgstr "پورتۇگېسا"
 
 msgid "Sucre"
-msgstr ""
+msgstr "سۇكرې"
 
 msgid "Táchira"
-msgstr ""
+msgstr "تاچېرا"
 
 msgid "Trujillo"
-msgstr ""
+msgstr "ترۇجىللو"
 
 msgid "Vargas"
-msgstr ""
+msgstr "ۋارگاس"
 
 msgid "Yaracuy"
-msgstr ""
+msgstr "ياراكۇي"
 
 msgid "Zulia"
-msgstr ""
+msgstr "زۇلىيە"
 
 msgid "Enter a valid South African ID number"
-msgstr "נא להזין מספר זיהוי דרום אפריקאי חוקי"
+msgstr ""
 
 msgid "Enter a valid South African postal code"
-msgstr "נא להזין מיקוד דרום אפריקאי חוקי"
+msgstr ""
 
 msgid "Eastern Cape"
-msgstr "הכף המזרחי"
+msgstr "شەرقىي كاپې"
 
 msgid "Free State"
-msgstr "המדינה החופשית"
+msgstr "ئەركىن ئۆلكە"
 
 msgid "Gauteng"
-msgstr "גאוטנג"
+msgstr "گائۇتېڭ"
 
 msgid "KwaZulu-Natal"
-msgstr "קווזולו־נאטאל"
+msgstr "كىۋازۇلۇ-ناتال"
 
 msgid "Limpopo"
-msgstr "לימפופו"
+msgstr "لىمپوپو"
 
 msgid "Mpumalanga"
-msgstr "מפומלנגה"
+msgstr "مىپۇمالانگا"
 
 msgid "Northern Cape"
-msgstr "כף צפוני"
+msgstr "شىمالىي كاپې"
 
 msgid "North West"
-msgstr "דרום מערב"
+msgstr "غەربىي شىمال"
 
 msgid "Western Cape"
-msgstr "כף מערבי"
+msgstr "غەربىي كاپې"
