@@ -1,7 +1,7 @@
 Changelog
 =========
 
-5.0   (unreleased)
+5.0   (2025-05-21)
 ------------------
 
 Breaking data changes:
