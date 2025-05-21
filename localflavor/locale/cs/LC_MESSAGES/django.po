@@ -4,18 +4,19 @@
 #
 # Translators:
 # Jannis Leidel <jannis@leidel.info>, 2011
-# Jiří Podhorecký, 2022
+# Jiří Podhorecký <jirka.p@volny.cz>, 2024
+# Jiří Podhorecký <jirka.p@volny.cz>, 2022
 # Jirka Vejrazka <Jirka.Vejrazka@gmail.com>, 2011
-# Jiří Podhorecký, 2020
+# Jiří Podhorecký <jirka.p@volny.cz>, 2020
 # Václav Řehák, 2020
 # Vláďa Macek <macek@sandbox.cz>, 2011-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-07 15:31+0200\n"
+"POT-Creation-Date: 2025-05-06 12:54+0200\n"
 "PO-Revision-Date: 2013-05-29 13:57+0000\n"
-"Last-Translator: Jiří Podhorecký, 2022\n"
+"Last-Translator: Jiří Podhorecký <jirka.p@volny.cz>, 2024\n"
 "Language-Team: Czech (http://app.transifex.com/django/django-localflavor/"
 "language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -273,46 +274,46 @@ msgid "Enter a postal code in the format 00000-000."
 msgstr "Zadejte poštovní směrovací číslo ve formátu 00000-000"
 
 msgid "Brest Region"
-msgstr ""
+msgstr "Brest Region"
 
 msgid "Vitebsk Region"
-msgstr ""
+msgstr "Vitebsk Region"
 
 msgid "Gomel Region"
-msgstr ""
+msgstr "Gomel Region"
 
 msgid "Grodno Region"
-msgstr ""
+msgstr "Grodno Region"
 
 msgid "Minsk Region"
-msgstr ""
+msgstr "Minsk Region"
 
 msgid "Mogilev Region"
-msgstr ""
+msgstr "Mogilev Region"
 
 msgid "City of Minsk"
-msgstr ""
+msgstr "Město Minsk"
 
 msgid "Passport number format is: XX1234567"
-msgstr ""
+msgstr "Formát čísla pasu je: XX1234567"
 
 msgid "ID format is: 1234567X123XX1"
-msgstr ""
+msgstr "Formát ID je: 1234567X123XX1"
 
 msgid "Postal code format is: 123456"
-msgstr ""
+msgstr "Formát poštovního směrovacího čísla je: 123456"
 
 msgid "Belarusian Regions (one integer value in the range 1-7)."
-msgstr ""
+msgstr "Běloruské regiony (jedna celočíselná hodnota v rozsahu 1-7)."
 
-msgid "Belarusian passport number (2 letters followed by 7 digits"
+msgid "Belarusian passport number (2 letters followed by 7 digits)."
 msgstr ""
 
 msgid "Belarusian passport ID number (14 letters and digits)."
-msgstr ""
+msgstr "Identifikační číslo běloruského pasu (14 písmen a číslic)."
 
 msgid "Belarusian Postal code (6 digits)."
-msgstr ""
+msgstr "Běloruské poštovní směrovací číslo (6 číslic)."
 
 msgid "Alberta"
 msgstr "Alberta"
@@ -364,13 +365,13 @@ msgstr ""
 "Zadejte platné kanadské číslo soc. pojištění (SID) ve tvaru XXX-XXX-XXX."
 
 msgid "Canadian Province (two uppercase letters)"
-msgstr ""
+msgstr "Provincie Kanady (dvě velká písmena)"
 
 msgid "Canadian Postal Code"
-msgstr ""
+msgstr "Kanadské poštovní směrovací číslo"
 
 msgid "Canadian Social Insurance Number"
-msgstr ""
+msgstr "Číslo sociálního pojištění v Kanadě"
 
 msgid "Aargau"
 msgstr "Aargau"
@@ -3558,7 +3559,7 @@ msgid "Enter a valid French SIRET number."
 msgstr "Zadejte platné francouzské číslo SIRET."
 
 msgid "Enter a valid French RNA number."
-msgstr ""
+msgstr "Zadejte platné francouzské číslo RNA."
 
 msgid "SIREN Number"
 msgstr "SIREN Číslo"
@@ -3567,7 +3568,7 @@ msgid "SIRET Number"
 msgstr "SIRET Číslo"
 
 msgid "RNA Number"
-msgstr ""
+msgstr "RNA číslo"
 
 msgid "Enter a valid postcode."
 msgstr "Zadejte platné poštovní směrovací číslo."
@@ -4067,49 +4068,49 @@ msgid "%(vatin)s is not a valid VAT identification number."
 msgstr "%(vatin)s není platné identifikační číslo pro DPH."
 
 msgid "Ahafo"
-msgstr ""
+msgstr "Ahafo"
 
 msgid "Ashanti"
-msgstr ""
+msgstr "Ashanti"
 
 msgid "Bono East"
-msgstr ""
+msgstr "Východní Bono"
 
 msgid "Brong Ahafo"
-msgstr ""
+msgstr "Brong Ahafo"
 
 msgid "Eastern"
-msgstr ""
+msgstr "Východní"
 
 msgid "Greater Accra"
-msgstr ""
+msgstr "Greater Accra"
 
 msgid "North East"
-msgstr ""
+msgstr "Severovýchodní"
 
 msgid "Northern"
-msgstr ""
+msgstr "Severní"
 
 msgid "Oti"
-msgstr ""
+msgstr "Oti"
 
 msgid "Savannah"
-msgstr ""
+msgstr "Savannah"
 
 msgid "Upper East"
-msgstr ""
+msgstr "Horní východní"
 
 msgid "Upper West"
-msgstr ""
+msgstr "Horní západní "
 
 msgid "Western"
-msgstr ""
+msgstr "Západní"
 
 msgid "Western North"
-msgstr ""
+msgstr "Severozápadní "
 
 msgid "Volta"
-msgstr ""
+msgstr "Volta"
 
 msgid "Enter a valid 5-digit greek postal code."
 msgstr "Zadejte platné pětimístné řecké směrovací číslo."
@@ -4574,13 +4575,13 @@ msgstr ""
 "Zadejte platné číslo Aadhaar ve formátu XXXX XXXX XXXX nebo XXXX-XXXX-XXXX."
 
 msgid "Please enter a valid Indian PAN card number."
-msgstr ""
+msgstr "Zadejte prosím platné indické číslo karty PAN."
 
 msgid "Indian state (two uppercase letters)"
 msgstr "Indický stát (dvě velká písmena)"
 
 msgid "PAN Card number field"
-msgstr ""
+msgstr "Pole pro číslo karty PAN"
 
 msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
 msgstr "Zadejte poštovní směrovací číslo ve formátu XXXXXXXXXX - pouze číslice"
@@ -5216,6 +5217,102 @@ msgstr "Capital"
 msgid "Hawalli"
 msgstr "Hawalli"
 
+msgid "Enter a postal code in format NNNNN"
+msgstr ""
+
+msgid "Kandy"
+msgstr ""
+
+msgid "Matale"
+msgstr ""
+
+msgid "Nuwara Eliya"
+msgstr ""
+
+msgid "Anuradhapura"
+msgstr ""
+
+msgid "Polonnaruwa"
+msgstr ""
+
+msgid "Jaffna"
+msgstr ""
+
+msgid "Kilinochchi"
+msgstr ""
+
+msgid "Mannar"
+msgstr ""
+
+msgid "Vavuniya"
+msgstr ""
+
+msgid "Mullativu"
+msgstr ""
+
+msgid "Alambil"
+msgstr ""
+
+msgid "Ampara"
+msgstr ""
+
+msgid "Batticaloa"
+msgstr ""
+
+msgid "Trincomalee"
+msgstr ""
+
+msgid "Kurunagala"
+msgstr ""
+
+msgid "Puttalam"
+msgstr ""
+
+msgid "Galle"
+msgstr ""
+
+msgid "Hambanthota"
+msgstr ""
+
+msgid "Mathara"
+msgstr ""
+
+msgid "Badulla"
+msgstr ""
+
+msgid "Monaragala"
+msgstr ""
+
+msgid "Kegalle"
+msgstr ""
+
+msgid "Rathnapura"
+msgstr ""
+
+msgid "Colombo"
+msgstr ""
+
+msgid "Gampaha"
+msgstr ""
+
+msgid "Kaluthara"
+msgstr ""
+
+msgid "North Central"
+msgstr ""
+
+msgid "North Western"
+msgstr ""
+
+msgid "Sabaragamuwa"
+msgstr ""
+
+msgid "Southern"
+msgstr ""
+
+msgid "Uva"
+msgstr ""
+
 msgid "ID Code consists of exactly 11 decimal digits."
 msgstr "ID kód tvoří přesně 11 číslic."
 
@@ -5450,9 +5547,6 @@ msgstr "Daugavpils"
 msgid "Jelgava"
 msgstr "Jelgava"
 
-msgid "Jēkabpils"
-msgstr "Jēkabpils"
-
 msgid "Jūrmala"
 msgstr "Jūrmala"
 
@@ -5465,53 +5559,17 @@ msgstr "Rēzekne"
 msgid "Riga"
 msgstr "Riga"
 
-msgid "Valmiera"
-msgstr "Valmiera"
-
 msgid "Ventspils"
 msgstr "Ventspils"
-
-msgid "Aglona municipality"
-msgstr "obec Aglona "
 
 msgid "Aizkraukle municipality"
 msgstr "obec Aizkraukle "
 
-msgid "Aizpute municipality"
-msgstr "obec Aizpute"
-
-msgid "Aknīste municipality"
-msgstr "obec Aknīste "
-
-msgid "Aloja municipality"
-msgstr "obec Aloja "
-
-msgid "Alsunga municipality"
-msgstr "obec Alsunga "
-
 msgid "Alūksne municipality"
 msgstr "obec Alūksne"
 
-msgid "Amata municipality"
-msgstr "obec Amata "
-
-msgid "Ape municipality"
-msgstr "obec Ape"
-
-msgid "Auce municipality"
-msgstr "obec Auce"
-
 msgid "Ādaži municipality"
 msgstr "obec Ādaži"
-
-msgid "Babīte municipality"
-msgstr "obec Babīte"
-
-msgid "Baldone municipality"
-msgstr "obec Baldone"
-
-msgid "Baltinava municipality"
-msgstr "obec Baltinava"
 
 msgid "Balvi municipality"
 msgstr "obec Balvi"
@@ -5519,77 +5577,14 @@ msgstr "obec Balvi"
 msgid "Bauska municipality"
 msgstr "obec Bauska"
 
-msgid "Beverīna municipality"
-msgstr "obec Beverīna"
-
-msgid "Brocēni municipality"
-msgstr "obec Brocēni"
-
-msgid "Burtnieki municipality"
-msgstr "obec Burtnieki"
-
-msgid "Carnikava municipality"
-msgstr "obec Carnikava"
-
-msgid "Cesvaine municipality"
-msgstr "obec Cesvaine"
-
 msgid "Cēsis municipality"
 msgstr "obec Cēsis"
-
-msgid "Cibla municipality"
-msgstr "obec Cibla"
-
-msgid "Dagda municipality"
-msgstr "obec Dagda"
-
-msgid "Daugavpils municipality"
-msgstr "obec Daugavpils"
 
 msgid "Dobele municipality"
 msgstr "obec Dobele"
 
-msgid "Dundaga municipality"
-msgstr "obec Dundaga"
-
-msgid "Durbe municipality"
-msgstr "obec Durbe"
-
-msgid "Engure municipality"
-msgstr "obec Engure"
-
-msgid "Ērgļi municipality"
-msgstr "obec Ērgļi"
-
-msgid "Garkalne municipality"
-msgstr "Obec Garkalne"
-
-msgid "Grobiņa municipality"
-msgstr "Obec Grobiņa"
-
 msgid "Gulbene municipality"
 msgstr "obec Gulbene"
-
-msgid "Iecava municipality"
-msgstr "obec Iecava"
-
-msgid "Ikšķile municipality"
-msgstr "obec Ikšķile"
-
-msgid "Ilūkste municipality"
-msgstr "obec Ilūkste"
-
-msgid "Inčukalns municipality"
-msgstr "Obec Inčukalns"
-
-msgid "Jaunjelgava municipality"
-msgstr "obec Jaunjelgava"
-
-msgid "Jaunpiebalga municipality"
-msgstr "obec Jaunpiebalga"
-
-msgid "Jaunpils municipality"
-msgstr "obec Jaunpils"
 
 msgid "Jelgava municipality"
 msgstr "obec Jelgava"
@@ -5597,50 +5592,20 @@ msgstr "obec Jelgava"
 msgid "Jēkabpils municipality"
 msgstr "obec Jēkabpils"
 
-msgid "Kandava municipality"
-msgstr "obec Kandava"
-
-msgid "Kārsava municipality"
-msgstr "obec Kārsava"
-
-msgid "Kocēni municipality"
-msgstr "obec Kocēni"
-
-msgid "Koknese municipality"
-msgstr "obec Koknese"
-
 msgid "Krāslava municipality"
 msgstr "obec Krāslava"
-
-msgid "Krimulda municipality"
-msgstr "obec Krimulda"
-
-msgid "Krustpils municipality"
-msgstr "obec Krustpils"
 
 msgid "Kuldīga municipality"
 msgstr "obec Kuldīga"
 
-msgid "Ķegums municipality"
-msgstr "obec Ķegums"
-
 msgid "Ķekava municipality"
 msgstr "obec Ķekava"
-
-msgid "Lielvārde municipality"
-msgstr "obec Lielvārde"
 
 msgid "Limbaži municipality"
 msgstr "obec Limbaži"
 
-msgid "Līgatne municipality"
-msgstr "obec Līgatne"
-
 msgid "Līvāni municipality"
 msgstr "obec Līvāni"
-
-msgid "Lubāna municipality"
-msgstr "obec Lubāna"
 
 msgid "Ludza municipality"
 msgstr "obec Ludza"
@@ -5648,26 +5613,8 @@ msgstr "obec Ludza"
 msgid "Madona municipality"
 msgstr "obec Madona"
 
-msgid "Mazsalaca municipality"
-msgstr "obec Mazsalaca"
-
-msgid "Mālpils municipality"
-msgstr "obec Mālpils"
-
 msgid "Mārupe municipality"
 msgstr "obec Mārupe"
-
-msgid "Mērsrags municipality"
-msgstr "obec Mērsrags"
-
-msgid "Naukšēni municipality"
-msgstr "obec Naukšēni"
-
-msgid "Nereta municipality"
-msgstr "obec Nereta"
-
-msgid "Nīca municipality"
-msgstr "obec Nīca"
 
 msgid "Ogre municipality"
 msgstr "obec Ogre"
@@ -5675,59 +5622,14 @@ msgstr "obec Ogre"
 msgid "Olaine municipality"
 msgstr "obec Olaine"
 
-msgid "Ozolnieki municipality"
-msgstr "obec Ozolnieki"
-
-msgid "Pārgauja municipality"
-msgstr "obec Pārgauja"
-
-msgid "Pāvilosta municipality"
-msgstr "obec Pāvilosta"
-
-msgid "Pļaviņas municipality"
-msgstr "obec Pļaviņas"
-
 msgid "Preiļi municipality"
 msgstr "obec Preiļi"
-
-msgid "Priekule municipality"
-msgstr "obec Priekule"
-
-msgid "Priekuļi municipality"
-msgstr "obec Priekuļi"
-
-msgid "Rauna municipality"
-msgstr "obec Rauna"
 
 msgid "Rēzekne municipality"
 msgstr "obec Rēzekne"
 
-msgid "Riebiņi municipality"
-msgstr "obec Riebiņi"
-
-msgid "Roja municipality"
-msgstr "obec Roja"
-
 msgid "Ropaži municipality"
 msgstr "obec Ropaži"
-
-msgid "Rucava municipality"
-msgstr "obec Rucava"
-
-msgid "Rugāji municipality"
-msgstr "obec Rugāji"
-
-msgid "Rundāle municipality"
-msgstr "obec Rundāle"
-
-msgid "Rūjiena municipality"
-msgstr "obec Rūjiena"
-
-msgid "Sala municipality"
-msgstr "obec Sala"
-
-msgid "Salacgrīva municipality"
-msgstr "obec Salacgrīva"
 
 msgid "Salaspils municipality"
 msgstr "obec Salaspils"
@@ -5738,38 +5640,17 @@ msgstr "obec Saldus"
 msgid "Saulkrasti municipality"
 msgstr "obec Saulkrasti"
 
-msgid "Sēja municipality"
-msgstr "obec Sēja"
-
 msgid "Sigulda municipality"
 msgstr "obec Sigulda"
-
-msgid "Skrīveri municipality"
-msgstr "obec Skrīveri"
-
-msgid "Skrunda municipality"
-msgstr "obec Skrunda"
 
 msgid "Smiltene municipality"
 msgstr "obec Smiltene"
 
-msgid "Stopiņi municipality"
-msgstr "obec Stopiņi"
-
-msgid "Strenči municipality"
-msgstr "obec Strenči"
-
 msgid "Talsi municipality"
 msgstr "obec Talsi"
 
-msgid "Tērvete municipality"
-msgstr "obec Tērvete"
-
 msgid "Tukums municipality"
 msgstr "obec Tukums"
-
-msgid "Vaiņode municipality"
-msgstr "obec Vaiņode"
 
 msgid "Valka municipality"
 msgstr "obec Valka"
@@ -5777,29 +5658,17 @@ msgstr "obec Valka"
 msgid "Varakļāni municipality"
 msgstr "obec Varakļāni"
 
-msgid "Vārkava municipality"
-msgstr "obec Vārkava"
-
-msgid "Vecpiebalga municipality"
-msgstr "obec Vecpiebalga"
-
-msgid "Vecumnieki municipality"
-msgstr "obec Vecumnieki"
-
 msgid "Ventspils municipality"
 msgstr "obec Ventspils"
 
-msgid "Viesīte municipality"
-msgstr "obec Viesīte"
+msgid "Augšdaugava municipality"
+msgstr ""
 
-msgid "Viļaka municipality"
-msgstr "obec Viļaka"
+msgid "Dienvidkurzeme municipality"
+msgstr ""
 
-msgid "Viļāni municipality"
-msgstr "obec Viļāni"
-
-msgid "Zilupe municipality"
-msgstr "obec Zilupe"
+msgid "Valmiera municipality"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXX."
 msgstr "Zadejte poštovní směrovací číslo ve tvaru XXXXX."
@@ -5809,6 +5678,12 @@ msgstr "Poštovní směrovací číslo"
 
 msgid "Select Province"
 msgstr "Vyberte provincii"
+
+msgid "Enter a valid Moroccan CIN number."
+msgstr ""
+
+msgid "CIN Number"
+msgstr ""
 
 msgid "Al Hoceima"
 msgstr "Al Hoceima"
@@ -6764,280 +6639,277 @@ msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr "Neplatná délka. Čísla norských bankovních účtů jsou dlouhá 11 číslic."
 
 msgid "Enter a postal code in format XXXXX"
-msgstr ""
+msgstr "Zadejte PSČ ve formátu XXXXX"
 
 msgid "Bhaktapur"
-msgstr ""
+msgstr "Bhaktapur"
 
 msgid "Dhading"
-msgstr ""
+msgstr "Dhading"
 
 msgid "Kathmandu"
-msgstr ""
+msgstr "Kathmandu"
 
 msgid "Kavrepalanchok"
-msgstr ""
+msgstr "Kavrepalanchok"
 
 msgid "Lalitpur"
-msgstr ""
+msgstr "Lalitpur"
 
 msgid "Nuwakot"
-msgstr ""
+msgstr "Nuwakot"
 
 msgid "Rasuwa"
-msgstr ""
+msgstr "Rasuwa"
 
 msgid "Sindhupalchok"
-msgstr ""
+msgstr "Sindhupalchok"
 
 msgid "Banke"
-msgstr ""
+msgstr "Banke"
 
 msgid "Bardiya"
-msgstr ""
+msgstr "Bardiya"
 
 msgid "Dailekh"
-msgstr ""
+msgstr "Dailekh"
 
 msgid "Jajarkot"
-msgstr ""
+msgstr "Jajarkot"
 
 msgid "Surkhet"
-msgstr ""
+msgstr "Surkhet"
 
 msgid "Baglung"
-msgstr ""
+msgstr "Baglung"
 
 msgid "Mustang"
-msgstr ""
+msgstr "Mustang"
 
 msgid "Myagdi"
-msgstr ""
+msgstr "Myagdi"
 
 msgid "Parbat"
-msgstr ""
+msgstr "Parbat"
 
 msgid "Gorkha"
-msgstr ""
+msgstr "Gorkha"
 
 msgid "Kaski"
-msgstr ""
+msgstr "Kaski"
 
 msgid "Lamjung"
-msgstr ""
+msgstr "Lamjung"
 
 msgid "Manang"
-msgstr ""
+msgstr "Manang"
 
 msgid "Syangja"
-msgstr ""
+msgstr "Syangja"
 
 msgid "Tanahu"
-msgstr ""
+msgstr "Tanahu"
 
 msgid "Dhanusa"
-msgstr ""
+msgstr "Dhanusa"
 
 msgid "Dholkha"
-msgstr ""
+msgstr "Dholkha"
 
 msgid "Mahottari"
-msgstr ""
+msgstr "Mahottari"
 
 msgid "Ramechhap"
-msgstr ""
+msgstr "Ramechhap"
 
 msgid "Sarlahi"
-msgstr ""
+msgstr "Sarlahi"
 
 msgid "Sindhuli"
-msgstr ""
+msgstr "Sindhuli"
 
 msgid "Dolpa"
-msgstr ""
+msgstr "Dolpa"
 
 msgid "Humla"
-msgstr ""
+msgstr "Humla"
 
 msgid "Jumla"
-msgstr ""
+msgstr "Jumla"
 
 msgid "Kalikot"
-msgstr ""
+msgstr "Kalikot"
 
 msgid "Mugu"
-msgstr ""
+msgstr "Mugu"
 
 msgid "Bhojpur"
-msgstr ""
+msgstr "Bhojpur"
 
 msgid "Dhankuta"
-msgstr ""
+msgstr "Dhankuta"
 
 msgid "Morang"
-msgstr ""
+msgstr "Morang"
 
 msgid "Sankhuwasabha"
-msgstr ""
+msgstr "Sankhuwasabha"
 
 msgid "Sunsari"
-msgstr ""
+msgstr "Sunsari"
 
 msgid "Terhathum"
-msgstr ""
+msgstr "Terhathum"
 
 msgid "Arghakhanchi"
-msgstr ""
+msgstr "Arghakhanchi"
 
 msgid "Gulmi"
-msgstr ""
+msgstr "Gulmi"
 
 msgid "Kapilvastu"
-msgstr ""
+msgstr "Kapilvastu"
 
 msgid "Nawalparasi"
-msgstr ""
+msgstr "Nawalparasi"
 
 msgid "Palpa"
-msgstr ""
+msgstr "Palpa"
 
 msgid "Rupandehi"
-msgstr ""
+msgstr "Rupandehi"
 
 msgid "Baitadi"
-msgstr ""
+msgstr "Baitadi"
 
 msgid "Dadeldhura"
-msgstr ""
+msgstr "Dadeldhura"
 
 msgid "Darchula"
-msgstr ""
+msgstr "Darchula"
 
 msgid "Kanchanpur"
-msgstr ""
+msgstr "Kanchanpur"
 
 msgid "Jhapa"
-msgstr ""
+msgstr "Jhapa"
 
 msgid "Panchthar"
-msgstr ""
+msgstr "Panchthar"
 
 msgid "Taplejung"
-msgstr ""
+msgstr "Taplejung"
 
 msgid "Bara"
-msgstr ""
+msgstr "Bara"
 
 msgid "Chitwan"
-msgstr ""
+msgstr "Chitwan"
 
 msgid "Makwanpur"
-msgstr ""
+msgstr "Makwanpur"
 
 msgid "Parsa"
-msgstr ""
+msgstr "Parsa"
 
 msgid "Rautahat"
-msgstr ""
+msgstr "Rautahat"
 
 msgid "Dang Deukhuri"
-msgstr ""
+msgstr "Dang Deukhuri"
 
 msgid "Pyuthan"
-msgstr ""
+msgstr "Pyuthan"
 
 msgid "Rolpa"
-msgstr ""
+msgstr "Rolpa"
 
 msgid "Rukum"
-msgstr ""
+msgstr "Rukum"
 
 msgid "Salyan"
-msgstr ""
+msgstr "Salyan"
 
 msgid "Khotang"
-msgstr ""
+msgstr "Khotang"
 
 msgid "Okhaldhunga"
-msgstr ""
+msgstr "Okhaldhunga"
 
 msgid "Saptari"
-msgstr ""
+msgstr "Saptari"
 
 msgid "Siraha"
-msgstr ""
+msgstr "Siraha"
 
 msgid "Solukhumbu"
-msgstr ""
+msgstr "Solukhumbu"
 
 msgid "Udayapur"
-msgstr ""
+msgstr "Udayapur"
 
 msgid "Achham"
-msgstr ""
+msgstr "Achham"
 
 msgid "Bajhang"
-msgstr ""
+msgstr "Bajhang"
 
 msgid "Bajura"
-msgstr ""
+msgstr "Bajura"
 
 msgid "Doti"
-msgstr ""
+msgstr "Doti"
 
 msgid "Kailali"
-msgstr ""
+msgstr "Kailali"
 
 msgid "Bagmati"
-msgstr ""
+msgstr "Bagmati"
 
 msgid "Gandaki"
-msgstr ""
+msgstr "Gandaki"
 
 msgid "Karnali"
-msgstr ""
+msgstr "Karnali"
 
 msgid "Lumbini"
-msgstr ""
+msgstr "Lumbini"
 
-msgid "Province 1"
-msgstr ""
+msgid "Koshi"
+msgstr "Koshi"
 
-msgid "Province 2"
+msgid "Madhesh"
 msgstr ""
 
 msgid "Sudurpaschim"
-msgstr ""
+msgstr "Sudurpaschim"
 
 msgid "Bheri"
-msgstr ""
+msgstr "Bheri"
 
 msgid "Dhawalagiri"
-msgstr ""
+msgstr "Dhawalagiri"
 
 msgid "Janakpur"
-msgstr ""
-
-msgid "Koshi"
-msgstr ""
+msgstr "Janakpur"
 
 msgid "Mahakali"
-msgstr ""
+msgstr "Mahakali"
 
 msgid "Mechi"
-msgstr ""
+msgstr "Mechi"
 
 msgid "Narayani"
-msgstr ""
+msgstr "Narayani"
 
 msgid "Rapti"
-msgstr ""
+msgstr "Rapti"
 
 msgid "Sagarmatha"
-msgstr ""
+msgstr "Sagarmatha"
 
 msgid "Seti"
-msgstr ""
+msgstr "Seti"
 
 msgid "Invalid post code."
 msgstr "Neplatné poštovní směrovací číslo."
@@ -8258,8 +8130,8 @@ msgstr "Chmelnyckyj kraj"
 msgid "Kirovohrad Oblast"
 msgstr "Kirovohradská oblast"
 
-msgid "Kiev Oblast"
-msgstr "Kievská oblast"
+msgid "Kyiv Oblast"
+msgstr ""
 
 msgid "Luhansk Oblast"
 msgstr "Luhanská oblast"
@@ -8303,8 +8175,8 @@ msgstr "Žitomírská oblast"
 msgid "Autonomous Republic of Crimea"
 msgstr "Krymská autonomní republika"
 
-msgid "Kiev"
-msgstr "Kiev"
+msgid "Kyiv"
+msgstr ""
 
 msgid "Sevastopol"
 msgstr "Sevastopol"

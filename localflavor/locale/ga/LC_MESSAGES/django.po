@@ -3,6 +3,8 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Aindriú Mac Giolla Eoin, 2024
+# Aindriú Mac Giolla Eoin, 2024
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Luke Blaney <transifex@lukeblaney.co.uk>, 2019
 # Michael Thornhill <michael@maithu.com>, 2011-2012
@@ -10,10 +12,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2019-06-22 21:57+0000\n"
-"Last-Translator: Luke Blaney <transifex@lukeblaney.co.uk>\n"
-"Language-Team: Irish (http://www.transifex.com/django/django-localflavor/"
+"POT-Creation-Date: 2025-05-06 12:54+0200\n"
+"PO-Revision-Date: 2013-05-29 13:57+0000\n"
+"Last-Translator: Luke Blaney <transifex@lukeblaney.co.uk>, 2019\n"
+"Language-Team: Irish (http://app.transifex.com/django/django-localflavor/"
 "language/ga/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,79 +25,79 @@ msgstr ""
 "4);\n"
 
 msgid "Buenos Aires"
-msgstr ""
+msgstr "Buenos Aires"
 
 msgid "Catamarca"
-msgstr ""
+msgstr "Catamarca"
 
 msgid "Chaco"
-msgstr ""
+msgstr "Chaco"
 
 msgid "Chubut"
-msgstr ""
+msgstr "Chubut"
 
 msgid "Ciudad Autónoma de Buenos Aires"
-msgstr ""
+msgstr "Cathair Uathrialach Buenos Aires"
 
 msgid "Córdoba"
-msgstr ""
+msgstr "Cordova"
 
 msgid "Corrientes"
-msgstr ""
+msgstr "Sruthanna"
 
 msgid "Entre Ríos"
-msgstr ""
+msgstr "Idir Aibhneacha"
 
 msgid "Formosa"
-msgstr ""
+msgstr "Formosa"
 
 msgid "Jujuy"
-msgstr ""
+msgstr "Jujuy"
 
 msgid "La Pampa"
-msgstr ""
+msgstr "An Pampa"
 
 msgid "La Rioja"
-msgstr ""
+msgstr "Rioja"
 
 msgid "Mendoza"
-msgstr ""
+msgstr "Mendoza"
 
 msgid "Misiones"
-msgstr ""
+msgstr "Misin"
 
 msgid "Neuquén"
-msgstr ""
+msgstr "Neuquen"
 
 msgid "Río Negro"
-msgstr ""
+msgstr "Abhainn Dubh"
 
 msgid "Salta"
-msgstr ""
+msgstr "Salta"
 
 msgid "San Juan"
-msgstr ""
+msgstr "San Eoin"
 
 msgid "San Luis"
-msgstr ""
+msgstr "Naomh Louis"
 
 msgid "Santa Cruz"
-msgstr ""
+msgstr "Crois Naofa"
 
 msgid "Santa Fe"
-msgstr ""
+msgstr "Santa Fe"
 
 msgid "Santiago del Estero"
-msgstr ""
+msgstr "Santiago del Estero"
 
 msgid "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
-msgstr ""
+msgstr "Tierra del Fuego, Antartaice agus Oileáin an Atlantaigh Theas"
 
 msgid "Tucumán"
-msgstr ""
+msgstr "Tucuman"
 
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
-msgstr "Cuir isteach cód póstal ins an formáid NNNN nó ANNNNAAA"
+msgstr "Cuir isteach cód poist san fhormáid NNNN nó ANNNNAAA."
 
 msgid "This field requires only numbers."
 msgstr "Teastaíonn an réimse seo uimhreacha amháin."
@@ -107,25 +109,27 @@ msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
 msgstr "Cuir isteach CUIT bailí i formáid XX-XXXXXXXX-X nó XXXXXXXXXXXX."
 
 msgid "Invalid CUIT."
-msgstr "CUIT neamhbailí"
+msgstr "CUIT neamhbhailí."
 
-msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
 msgstr ""
+"Cineál dlíthiúil neamhbhailí. Ní mór don chineál a bheith 27, 20, 30, 23, "
+"24, 33 nó 34."
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
-msgstr ""
+msgstr "Cuir isteach CBU bailí i bhformáid XXXXXXXXXXXXXXXXXXX."
 
 msgid "CBU must be exactly 22 digits long."
-msgstr ""
+msgstr "Caithfidh CBU a bheith díreach 22 dhigit ar fad."
 
 msgid "Invalid CBU."
-msgstr ""
+msgstr "CBU neamhbhailí."
 
 msgid "Burgenland"
-msgstr ""
+msgstr "Burgenland"
 
 msgid "Carinthia"
-msgstr ""
+msgstr "Carinthia"
 
 msgid "Lower Austria"
 msgstr "An Ostair íochtarach"
@@ -134,13 +138,13 @@ msgid "Upper Austria"
 msgstr "An Ostair uachtarach"
 
 msgid "Salzburg"
-msgstr ""
+msgstr "Salzburg"
 
 msgid "Styria"
-msgstr ""
+msgstr "Stiria"
 
 msgid "Tyrol"
-msgstr ""
+msgstr "Tirol"
 
 msgid "Vorarlberg"
 msgstr "Tyrol"
@@ -165,25 +169,25 @@ msgid "Australian Postcode"
 msgstr "Postchód Astráil"
 
 msgid "Australian Business Number"
-msgstr ""
+msgstr "Líon Gnó na hAstráile"
 
 msgid "Australian Company Number"
-msgstr ""
+msgstr "Uimhir Cuideachta Astráile"
 
 msgid "Australian Tax File Number"
-msgstr ""
+msgstr "Uimhir Chomhad Cánach na h"
 
 msgid "Enter a valid ABN."
-msgstr ""
+msgstr "Cuir isteach ABN bailí."
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "Cuir isteach ACN bailí."
 
 msgid "Enter a valid TFN."
-msgstr ""
+msgstr "Cuir isteach TFN bailí."
 
 msgid "Antwerp"
-msgstr ""
+msgstr "Antwerp"
 
 msgid "Brussels"
 msgstr "An Bhruiséil"
@@ -195,25 +199,25 @@ msgid "Flemish Brabant"
 msgstr "Brabant Pléimeannach"
 
 msgid "Hainaut"
-msgstr ""
+msgstr "Hainaut"
 
 msgid "Liege"
-msgstr ""
+msgstr "Liege"
 
 msgid "Limburg"
-msgstr ""
+msgstr "Limburg"
 
 msgid "Luxembourg"
 msgstr "Lucsamburg"
 
 msgid "Namur"
-msgstr ""
+msgstr "Namur"
 
 msgid "Walloon Brabant"
-msgstr ""
+msgstr "Walloon Brabant"
 
 msgid "West Flanders"
-msgstr ""
+msgstr "Iarthar na Flanders"
 
 msgid "Brussels Capital Region"
 msgstr "Caipitil Réigiún na Bhruiséil"
@@ -222,19 +226,16 @@ msgid "Flemish Region"
 msgstr "Réigiún Pléimeannach"
 
 msgid "Wallonia"
-msgstr ""
+msgstr "Wallonia"
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "Cuir isteach cód poist bailí sa raon agus formáid 1XXX - 9XXX."
 
 msgid "The EGN is not valid"
-msgstr ""
+msgstr "Níl an EGN bailí"
 
 msgid "EIK/BULSTAT is not valid"
-msgstr ""
-
-msgid "Enter a zip code in the format XXXXX-XXX."
-msgstr "Iontráil zip-cód i bhformáid XXXXX-XXX."
+msgstr "Níl EIK/BULSTAT bailí"
 
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
@@ -257,145 +258,212 @@ msgid "This field requires at least 14 digits"
 msgstr "Éilíonn an réimse seo ar a laghad 14 digití"
 
 msgid "Invalid Process number."
-msgstr ""
+msgstr "Uimhir Próisis neamhbhailí."
 
 msgid "State of Brazil (two uppercase letters)"
+msgstr "Stát na Brasaíle (dhá litreacha uachtaracha)"
+
+msgid "CPF Document"
+msgstr "Doiciméad CPF"
+
+msgid "CNPJ Document"
+msgstr "Doiciméad CNPJ"
+
+msgid "Postal Code"
+msgstr "Cód Poist"
+
+msgid "Enter a postal code in the format 00000-000."
+msgstr "Cuir isteach cód poist san fhormáid 00000-000."
+
+msgid "Brest Region"
+msgstr "Réigiún Brest"
+
+msgid "Vitebsk Region"
+msgstr "Réigiún Vitebsk"
+
+msgid "Gomel Region"
+msgstr "Réigiún Gomel"
+
+msgid "Grodno Region"
+msgstr "Réigiún Grodno"
+
+msgid "Minsk Region"
+msgstr "Réigiún Minsk"
+
+msgid "Mogilev Region"
+msgstr "Réigiún Mogilev"
+
+msgid "City of Minsk"
+msgstr "Cathair Minsk"
+
+msgid "Passport number format is: XX1234567"
+msgstr "Is é formáid uimhir phas: XX1234567"
+
+msgid "ID format is: 1234567X123XX1"
+msgstr "Is é formáid ID: 1234567X123XX1"
+
+msgid "Postal code format is: 123456"
+msgstr "Is é formáid an chód poist: 123456"
+
+msgid "Belarusian Regions (one integer value in the range 1-7)."
+msgstr "Réigiúin na Bealarúise (luach sláimhir amháin sa raon 1-7)."
+
+msgid "Belarusian passport number (2 letters followed by 7 digits)."
 msgstr ""
+
+msgid "Belarusian passport ID number (14 letters and digits)."
+msgstr "Uimhir aitheantais pas na Bealarúise (14 litir agus digití)."
+
+msgid "Belarusian Postal code (6 digits)."
+msgstr "Cód Poist na Bealarúise (6 dhigit)."
 
 msgid "Alberta"
-msgstr ""
+msgstr "Alberta"
 
 msgid "British Columbia"
-msgstr ""
+msgstr "Columbia na Breataine"
 
 msgid "Manitoba"
-msgstr ""
+msgstr "Manitoba"
 
 msgid "New Brunswick"
-msgstr ""
+msgstr "Nua-Brunswick"
 
 msgid "Newfoundland and Labrador"
-msgstr ""
+msgstr "Newfoundland agus Labrador"
 
 msgid "Northwest Territories"
-msgstr ""
+msgstr "Críocha an Iarth"
 
 msgid "Nova Scotia"
-msgstr ""
+msgstr "An Nua-Albain"
 
 msgid "Nunavut"
-msgstr ""
+msgstr "Nunavut"
 
 msgid "Ontario"
-msgstr ""
+msgstr "Ontario"
 
 msgid "Prince Edward Island"
-msgstr ""
+msgstr "Oileán an Phrionsa Edward"
 
 msgid "Quebec"
-msgstr ""
+msgstr "Québec"
 
 msgid "Saskatchewan"
-msgstr ""
+msgstr "Saskatchewan"
 
 msgid "Yukon"
-msgstr ""
+msgstr "Yukon"
 
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "Iontráil cód poist i bhformáid XXX XXX."
 
 msgid "Enter a Canadian province or territory."
-msgstr ""
+msgstr "Cuir isteach i gcúige nó i gcríoch Cheanada."
 
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr ""
 "Iontráil uimhir Cheanada Árachais Shóisialaigh bailí i bhformáid XXX-XXX-XXX."
 
+msgid "Canadian Province (two uppercase letters)"
+msgstr "Cúige Cheanada (dhá litir uachtaracha)"
+
+msgid "Canadian Postal Code"
+msgstr "Cód Poist Cheanada"
+
+msgid "Canadian Social Insurance Number"
+msgstr "Uimhir Árachais Shóisialaigh"
+
 msgid "Aargau"
-msgstr ""
+msgstr "Aargau"
 
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "Appenzell Innerrhoden"
 
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "Appenzell Ausserrhoden"
 
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "Basel-Stadt"
 
 msgid "Basel-Land"
-msgstr ""
+msgstr "Basel-Land"
 
 msgid "Berne"
-msgstr ""
+msgstr "Berne"
 
 msgid "Fribourg"
-msgstr ""
+msgstr "Fribourg"
 
 msgid "Geneva"
-msgstr ""
+msgstr "An Ghinéiv"
 
 msgid "Glarus"
-msgstr ""
+msgstr "Glarus"
 
 msgid "Graubuenden"
-msgstr ""
+msgstr "Graubuenden"
 
 msgid "Jura"
-msgstr ""
+msgstr "Jura"
 
 msgid "Lucerne"
-msgstr ""
+msgstr "Lucerne"
 
 msgid "Neuchatel"
-msgstr ""
+msgstr "Neuchatel"
 
 msgid "Nidwalden"
-msgstr ""
+msgstr "Nidwalden"
 
 msgid "Obwalden"
-msgstr ""
+msgstr "Obwalden"
 
 msgid "Schaffhausen"
-msgstr ""
+msgstr "Schaffhausen"
 
 msgid "Schwyz"
-msgstr ""
+msgstr "Schwyz"
 
 msgid "Solothurn"
-msgstr ""
+msgstr "Solothurn"
 
 msgid "St. Gallen"
-msgstr ""
+msgstr "Naomh Gallen"
 
 msgid "Thurgau"
-msgstr ""
+msgstr "Thurgau"
 
 msgid "Ticino"
-msgstr ""
+msgstr "Ticino"
 
 msgid "Uri"
-msgstr ""
+msgstr "Type"
 
 msgid "Valais"
-msgstr ""
+msgstr "Valais"
 
 msgid "Vaud"
-msgstr ""
+msgstr "Vaud"
 
 msgid "Zug"
-msgstr ""
+msgstr "Zug"
 
 msgid "Zurich"
-msgstr ""
+msgstr "Zurich"
 
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr ""
+"Cuir isteach uimhir chárta aitheantais nó pas bailí na hEilvéise i bhformáid "
+"X1234567<0 nó 1234567890."
 
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
+"Cuir isteach uimhir bhailí Slándála Sóisialta na hEilvéise i bhformáid 756."
+"XXXX.XXXX.XX."
 
 msgid "Enter a valid Chilean RUT."
 msgstr "Iontráil RUT Chilean bailí."
@@ -413,108 +481,110 @@ msgid "ID Card Number consists of 15 or 18 digits."
 msgstr "Uimhir Aitheantais Carta comhdhéanta de 15 nó 18 digití."
 
 msgid "Invalid ID Card Number: Wrong checksum"
-msgstr "Uimhir Aitheantais Carta neamhbhailí: checksum mícheart "
+msgstr "Uimhir Chárta Aitheantais Neamhbhailí: Seiceáil mícheart"
 
 msgid "Invalid ID Card Number: Wrong birthdate"
-msgstr "Carta ID neamhbhailí: breith lá mícheart "
+msgstr "Uimhir Chárta Aitheantais Neamhbhailí: Dáta breithe mícheart"
 
 msgid "Invalid ID Card Number: Wrong location code"
-msgstr "Carta ID neamhbhailí: cód na háite mícheart "
+msgstr "Uimhir Chárta Aitheantais Neamhbhailí: Cód suímh mícheart"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
-msgstr ""
+msgstr "Cuir isteach NIT bailí i bhformáid XXXXXXXXXXX-Y nó XXXXXXXXXXXY."
 
 msgid "Invalid NIT."
-msgstr ""
+msgstr "NIT neamhbhailí."
 
 msgid "Occidental"
-msgstr ""
+msgstr "Iarthar"
 
 msgid "Central"
-msgstr ""
+msgstr "Lárnach"
 
 msgid "Oriental"
-msgstr ""
+msgstr "Oirthear"
 
 msgid "Pinar del Río"
-msgstr ""
+msgstr "Pinar del Río"
 
 msgid "Artemisa"
-msgstr ""
+msgstr "Artemisa"
 
 msgid "Mayabeque"
-msgstr ""
+msgstr "Mayabeque"
 
 msgid "La Habana"
-msgstr ""
+msgstr "La Habana"
 
 msgid "Matanzas"
-msgstr ""
+msgstr "Matanzas"
 
 msgid "Cienfuegos"
-msgstr ""
+msgstr "Cienfuegos"
 
 msgid "Villa Clara"
-msgstr ""
+msgstr "Villa Clara"
 
 msgid "Sancti Spíritus"
-msgstr ""
+msgstr "Sancti Spíritus"
 
 msgid "Ciego de Ávila"
-msgstr ""
+msgstr "Ciego de Ávila"
 
 msgid "Camagüey"
-msgstr ""
+msgstr "Camaguey"
 
 msgid "Las Tunas"
-msgstr ""
+msgstr "Las Tunas"
 
 msgid "Holguín"
-msgstr ""
+msgstr "Holguín"
 
 msgid "Granma"
-msgstr ""
+msgstr "Granma"
 
 msgid "Santiago de Cuba"
-msgstr ""
+msgstr "Santiago de Cúba"
 
 msgid "Guantánamo"
-msgstr ""
+msgstr "Guantanamo"
 
 msgid "Isla de la Juventud"
-msgstr ""
+msgstr "Oileán de la Juventud"
 
 msgid "Enter a Cuban region."
-msgstr ""
+msgstr "Téigh isteach i réigiún Cúba."
 
 msgid "Enter a Cuban province."
-msgstr ""
+msgstr "Téigh isteach i gcúige Cúba."
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr ""
+msgstr "Cuir isteach cód poist bailí san fhormáid XXXXX."
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
-msgstr ""
+msgstr "Cuir isteach uimhir chárta aitheantais bailí san fhormáid XXXXXXXXXXX."
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr ""
+msgstr "Réigiúin Chúba (trí litreacha uachtaracha)"
 
 msgid "Cuban provinces (three uppercase letters)"
-msgstr ""
+msgstr "Cúige Cúba (trí litreacha uachtaracha)"
 
 msgid "Cuban postal code"
-msgstr ""
+msgstr "Cód poist Cúba"
 
 msgid "Cuban identity card number"
-msgstr ""
+msgstr "Uimhir chárta aitheantais Ch"
 
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
 msgstr ""
+"Cuir isteach dáta bailí (yymmdd) don chéad 6 dhigit den Uimhir Cárta "
+"Aitheantais."
 
 msgid "Prague"
-msgstr ""
+msgstr "Prág"
 
 msgid "Central Bohemian Region"
 msgstr "Réigiún Central Bohemian"
@@ -568,7 +638,7 @@ msgid "Enter a valid IC number."
 msgstr "Cuir isteach uimhir IC bailí."
 
 msgid "Baden-Wuerttemberg"
-msgstr ""
+msgstr "Baden-Wuerttemberg"
 
 msgid "Bavaria"
 msgstr "An Bhaváir"
@@ -577,16 +647,16 @@ msgid "Berlin"
 msgstr "Beirlín"
 
 msgid "Brandenburg"
-msgstr ""
+msgstr "Brandenburg"
 
 msgid "Bremen"
-msgstr ""
+msgstr "Bremen"
 
 msgid "Hamburg"
-msgstr ""
+msgstr "Hamburg"
 
 msgid "Hessen"
-msgstr ""
+msgstr "Hessen"
 
 msgid "Mecklenburg-Western Pomerania"
 msgstr "Mecklenburg-Pomerania Thiar"
@@ -601,7 +671,7 @@ msgid "Rhineland-Palatinate"
 msgstr "Dúiche na Réine-Palatinate"
 
 msgid "Saarland"
-msgstr ""
+msgstr "An Sárthír"
 
 msgid "Saxony"
 msgstr "An tSacsain"
@@ -610,10 +680,10 @@ msgid "Saxony-Anhalt"
 msgstr "An tSacsain-Anhalt"
 
 msgid "Schleswig-Holstein"
-msgstr ""
+msgstr "Schléaswig-Holstein"
 
 msgid "Thuringia"
-msgstr ""
+msgstr "Thuringia"
 
 msgid "Enter a zip code in the format XXXXX."
 msgstr "Iontráil zip-cód i bhformáid XXXXX."
@@ -626,2518 +696,2644 @@ msgstr ""
 "XXXXXXX-XXXXXXX-X."
 
 msgid "Albertslund"
-msgstr ""
+msgstr "Albertslund"
 
 msgid "Allerød"
-msgstr ""
+msgstr "Allerød"
 
 msgid "Ballerup"
-msgstr ""
+msgstr "Ballerup"
 
 msgid "Bornholm"
-msgstr ""
+msgstr "Bornholm"
 
 msgid "Brøndby"
-msgstr ""
+msgstr "Bréndby"
 
 msgid "Dragør"
-msgstr ""
+msgstr "Drawer"
 
 msgid "Egedal"
-msgstr ""
+msgstr "Egedal"
 
 msgid "Fredensborg"
-msgstr ""
+msgstr "Fredensborg"
 
 msgid "Frederiksberg"
-msgstr ""
+msgstr "Frederiksberg"
 
 msgid "Frederikssund"
-msgstr ""
+msgstr "Frederikssund"
 
 msgid "Furesø"
-msgstr ""
+msgstr "Furesø"
 
 msgid "Gentofte"
-msgstr ""
+msgstr "Gentofte"
 
 msgid "Gladsaxe"
-msgstr ""
+msgstr "Gladsaxe"
 
 msgid "Glostrup"
-msgstr ""
+msgstr "Glostrup"
 
 msgid "Gribskov"
-msgstr ""
+msgstr "Gríbskov"
 
 msgid "Halsnæs"
-msgstr ""
+msgstr "Bearing"
 
 msgid "Helsingør"
-msgstr ""
+msgstr "Helsingør"
 
 msgid "Herlev"
-msgstr ""
+msgstr "Herlev"
 
 msgid "Hillerød"
-msgstr ""
+msgstr "Hillerød"
 
 msgid "Hvidovre"
-msgstr ""
+msgstr "Hvidovre"
 
 msgid "Høje-Taastrup"
-msgstr ""
+msgstr "Ard-Athchóiriú"
 
 msgid "Hørsholm"
-msgstr ""
+msgstr "Hørsholm"
 
 msgid "Ishøj"
-msgstr ""
+msgstr "Ish"
 
 msgid "København"
-msgstr ""
+msgstr "Siopadóireacht"
 
 msgid "Lyngby-Taarbæk"
-msgstr ""
+msgstr "Lyngby Tearbox"
 
 msgid "Rudersdal"
-msgstr ""
+msgstr "Rudersdal"
 
 msgid "Rødovre"
-msgstr ""
+msgstr "Red Down"
 
 msgid "Tårnby"
-msgstr ""
+msgstr "Tårnby"
 
 msgid "Vallensbæk"
-msgstr ""
+msgstr "Vallensbaek"
 
 msgid "Favrskov"
-msgstr ""
+msgstr "Favrskov"
 
 msgid "Hedensted"
-msgstr ""
+msgstr "Hedensted"
 
 msgid "Herning"
-msgstr ""
+msgstr "Herning"
 
 msgid "Holstebro"
-msgstr ""
+msgstr "Holstebro"
 
 msgid "Horsens"
-msgstr ""
+msgstr "Horsens"
 
 msgid "Ikast-Brande"
-msgstr ""
+msgstr "Ikast-Brand"
 
 msgid "Lemvig"
-msgstr ""
+msgstr "Lemvig"
 
 msgid "Norddjurs"
-msgstr ""
+msgstr "North Djurs"
 
 msgid "Odder"
-msgstr ""
+msgstr "Oder"
 
 msgid "Randers"
-msgstr ""
+msgstr "Randers"
 
 msgid "Ringkøbing-Skjern"
-msgstr ""
+msgstr "Scáileán ceannaigh fáinne"
 
 msgid "Samsø"
-msgstr ""
+msgstr "Samso"
 
 msgid "Silkeborg"
-msgstr ""
+msgstr "Silkeborg"
 
 msgid "Skanderborg"
-msgstr ""
+msgstr "Scanderborg"
 
 msgid "Skive"
-msgstr ""
+msgstr "Skive"
 
 msgid "Struer"
-msgstr ""
+msgstr "Struer"
 
 msgid "Syddjurs"
-msgstr ""
+msgstr "Tuaiscirt"
 
 msgid "Viborg"
-msgstr ""
+msgstr "Viborg"
 
 msgid "Aarhus"
-msgstr ""
+msgstr "Aarhus"
 
 msgid "Brønderslev"
-msgstr ""
+msgstr "Clúdach na gairme"
 
 msgid "Frederikshavn"
-msgstr ""
+msgstr "Frederikshavn"
 
 msgid "Hjørring"
-msgstr ""
+msgstr "Hearring"
 
 msgid "Jammerbugt"
-msgstr ""
+msgstr "Jammerbugt"
 
 msgid "Læsø"
-msgstr ""
+msgstr "Reader"
 
 msgid "Mariagerfjord"
-msgstr ""
+msgstr "Mariager-fjord"
 
 msgid "Morsø"
-msgstr ""
+msgstr "Morso"
 
 msgid "Rebild"
-msgstr ""
+msgstr "Rebild"
 
 msgid "Thisted"
-msgstr ""
+msgstr "Thiosted"
 
 msgid "Vesthimmerland"
-msgstr ""
+msgstr "Earthimmerland"
 
 msgid "Aalborg"
-msgstr ""
+msgstr "Aalborg"
 
 msgid "Faxe"
-msgstr ""
+msgstr "Fax"
 
 msgid "Greve"
-msgstr ""
+msgstr "Greve"
 
 msgid "Guldborgsund"
-msgstr ""
+msgstr "Guldborgsund"
 
 msgid "Holbæk"
-msgstr ""
+msgstr "Holbaek"
 
 msgid "Kalundborg"
-msgstr ""
+msgstr "Kalundborg"
 
 msgid "Køge"
-msgstr ""
+msgstr "Cuiche"
 
 msgid "Lejre"
-msgstr ""
+msgstr "Lejre"
 
 msgid "Lolland"
-msgstr ""
+msgstr "Lolland"
 
 msgid "Næstved"
-msgstr ""
+msgstr "Næstved"
 
 msgid "Odsherred"
-msgstr ""
+msgstr "Scarded"
 
 msgid "Ringsted"
-msgstr ""
+msgstr "Ringsted"
 
 msgid "Roskilde"
-msgstr ""
+msgstr "Roskilde"
 
 msgid "Slagelse"
-msgstr ""
+msgstr "Battle"
 
 msgid "Solrød"
-msgstr ""
+msgstr "Solar Red"
 
 msgid "Sorø"
-msgstr ""
+msgstr "Sorø"
 
 msgid "Stevns"
-msgstr ""
+msgstr "Stevens"
 
 msgid "Vordingborg"
-msgstr ""
+msgstr "Vordingborg"
 
 msgid "Assens"
-msgstr ""
+msgstr "Assens"
 
 msgid "Billund"
-msgstr ""
+msgstr "Billund"
 
 msgid "Esbjerg"
-msgstr ""
+msgstr "Esbjerg"
 
 msgid "Fanø"
-msgstr ""
+msgstr "Fanø"
 
 msgid "Fredericia"
-msgstr ""
+msgstr "Fredericia"
 
 msgid "Faaborg-Midtfyn"
-msgstr ""
+msgstr "Faaborg-Middle"
 
 msgid "Haderslev"
-msgstr ""
+msgstr "Haderslev"
 
 msgid "Kerteminde"
-msgstr ""
+msgstr "Kerteminde"
 
 msgid "Kolding"
-msgstr ""
+msgstr "Kolding"
 
 msgid "Langeland"
-msgstr ""
+msgstr "Language"
 
 msgid "Middelfart"
-msgstr ""
+msgstr "Middle Fart"
 
 msgid "Nordfyn"
-msgstr ""
+msgstr "North Fine"
 
 msgid "Nyborg"
-msgstr ""
+msgstr "Nyborg"
 
 msgid "Odense"
-msgstr ""
+msgstr "Odense"
 
 msgid "Svendborg"
-msgstr ""
+msgstr "Svendborg"
 
 msgid "Sønderborg"
-msgstr ""
+msgstr "Sønderborg"
 
 msgid "Tønder"
-msgstr ""
+msgstr "Tønders"
 
 msgid "Varde"
-msgstr ""
+msgstr "Varde"
 
 msgid "Vejen"
-msgstr ""
+msgstr "Vejen"
 
 msgid "Vejle"
-msgstr ""
+msgstr "Vejle"
 
 msgid "Ærø"
-msgstr ""
+msgstr "Ear"
 
 msgid "Aabenraa"
-msgstr ""
+msgstr "Aabenraa"
 
 msgid "Region Hovedstaden"
-msgstr ""
+msgstr "Réigiún Headstaden"
 
 msgid "Region Midtjylland"
-msgstr ""
+msgstr "Réigiún Midtjylland"
 
 msgid "Region Nordjylland"
-msgstr ""
+msgstr "Réigiún Nordjylland"
 
 msgid "Region Sjælland"
-msgstr ""
+msgstr "Réigiún Sjælland"
 
 msgid "Region Syddanmark"
-msgstr ""
+msgstr "Réigiún Suid-Mharc"
 
 msgid "Scanning"
-msgstr ""
+msgstr "Scanadh"
+
+msgid "Facility"
+msgstr "Áis"
 
 msgid "Høje Taastrup"
-msgstr ""
+msgstr "High Recovery"
 
 msgid "København C"
-msgstr ""
+msgstr "Port Siopadóireachta C"
 
 msgid "Sjælland USF P"
-msgstr ""
+msgstr "Shalland USF P"
 
 msgid "Sjælland USF B"
-msgstr ""
+msgstr "Shalland USF B"
 
 msgid "Udbetaling"
-msgstr ""
+msgstr "Íocaíocht"
 
 msgid "eBrevsprækken"
-msgstr ""
+msgstr "eBrevsprækken"
 
 msgid "Kommuneservice"
-msgstr ""
+msgstr "Seirbhís Poilsiúil"
 
 msgid "Københavns Pakkecenter"
-msgstr ""
+msgstr "Ionad Pacáiste Siopadóireachta"
 
 msgid "Københavns Pakke BRC"
-msgstr ""
+msgstr "Pacáiste Siopadóireachta BRC"
 
 msgid "Returprint BRC"
-msgstr ""
+msgstr "Aisghabháil BRC"
 
 msgid "Internationalt Postcenter"
-msgstr ""
+msgstr "Ionad Poist Idirnáisiúnta"
 
 msgid "København K"
-msgstr ""
+msgstr "Siopadóireacht K"
 
 msgid "København V"
-msgstr ""
+msgstr "Port Siopadóireachta V"
 
 msgid "Returpost"
-msgstr ""
+msgstr "Returpost"
 
 msgid "Centraltastning"
-msgstr ""
+msgstr "Ceiliúint Lárnach"
 
 msgid "Frederiksberg C"
-msgstr ""
+msgstr "Frederiksberg C"
 
 msgid "København Ø"
-msgstr ""
+msgstr "Ceannabhar Ø"
 
 msgid "Nordhavn"
-msgstr ""
+msgstr "North Harbour"
 
 msgid "København N"
-msgstr ""
+msgstr "Siopadóireacht N"
 
 msgid "København S"
-msgstr ""
+msgstr "Siopadóireacht S"
 
 msgid "København NV"
-msgstr ""
+msgstr "Siopadóireacht NV"
 
 msgid "København SV"
-msgstr ""
+msgstr "Siopadóireacht SV"
 
 msgid "Valby"
-msgstr ""
+msgstr "Valby"
 
 msgid "Taastrup"
-msgstr ""
+msgstr "Recovery"
 
 msgid "Hedehusene"
-msgstr ""
+msgstr "Hidehusene"
 
 msgid "Brøndby Strand"
-msgstr ""
+msgstr "Brøndby Beach"
 
 msgid "Vallensbæk Strand"
-msgstr ""
+msgstr "Vallensbæk Beach"
 
 msgid "Solrød Strand"
-msgstr ""
+msgstr "Trá Solar"
 
 msgid "Karlslunde"
-msgstr ""
+msgstr "Carlslunde"
 
 msgid "Brønshøj"
-msgstr ""
+msgstr "Gearrthóg"
 
 msgid "Vanløse"
-msgstr ""
+msgstr "Vanlose"
 
 msgid "Skovlunde"
-msgstr ""
+msgstr "Scovlunde"
 
 msgid "Måløv"
-msgstr ""
+msgstr "Smaoiniú"
 
 msgid "Smørum"
-msgstr ""
+msgstr "Smoothroom"
 
 msgid "Kastrup"
-msgstr ""
+msgstr "Castle"
 
 msgid "Kongens Lyngby"
-msgstr ""
+msgstr "King Lyngby"
 
 msgid "Virum"
-msgstr ""
+msgstr "Virum"
 
 msgid "Holte"
-msgstr ""
+msgstr "Holte"
 
 msgid "Nærum"
-msgstr ""
+msgstr "Nearm"
 
 msgid "Søborg"
-msgstr ""
+msgstr "Souborg"
 
 msgid "Dyssegård"
-msgstr ""
+msgstr "Tréimhseachas"
 
 msgid "Bagsværd"
-msgstr ""
+msgstr "Bag Bearing"
 
 msgid "Hellerup"
-msgstr ""
+msgstr "Hellerup"
 
 msgid "Charlottenlund"
-msgstr ""
+msgstr "Charlottenlund"
 
 msgid "Klampenborg"
-msgstr ""
+msgstr "Klampenborg"
 
 msgid "Skodsborg"
-msgstr ""
+msgstr "Scodsborg"
 
 msgid "Vedbæk"
-msgstr ""
+msgstr "Weigh"
 
 msgid "Rungsted Kyst"
-msgstr ""
+msgstr "Rungsted Kist"
 
 msgid "Kokkedal"
-msgstr ""
+msgstr "Cócaidéal"
 
 msgid "Nivå"
-msgstr ""
+msgstr "Level"
 
 msgid "Humlebæk"
-msgstr ""
+msgstr "Humlebaek"
 
 msgid "Espergærde"
-msgstr ""
+msgstr "Experty"
 
 msgid "Snekkersten"
-msgstr ""
+msgstr "Sneakers"
 
 msgid "Tikøb"
-msgstr ""
+msgstr "Tickob"
 
 msgid "Hornbæk"
-msgstr ""
+msgstr "Hornbaek"
 
 msgid "Dronningmølle"
-msgstr ""
+msgstr "Royal Mill"
 
 msgid "Ålsgårde"
-msgstr ""
+msgstr "Gearing of the Earth"
 
 msgid "Hellebæk"
-msgstr ""
+msgstr "Hellebak"
 
 msgid "Helsinge"
-msgstr ""
+msgstr "Helsinge"
 
 msgid "Vejby"
-msgstr ""
+msgstr "Vejby"
 
 msgid "Tisvildeleje"
-msgstr ""
+msgstr "Tisvildelease"
 
 msgid "Græsted"
-msgstr ""
+msgstr "Greed"
 
 msgid "Gilleleje"
-msgstr ""
+msgstr "Gilleleje"
 
 msgid "Frederiksværk"
-msgstr ""
+msgstr "Frederiksvärk"
 
 msgid "Ølsted"
-msgstr ""
+msgstr "Oilside"
 
 msgid "Skævinge"
-msgstr ""
+msgstr "Scävinge"
 
 msgid "Gørløse"
-msgstr ""
+msgstr "Gearløse"
 
 msgid "Liseleje"
-msgstr ""
+msgstr "Liseleje"
 
 msgid "Melby"
-msgstr ""
+msgstr "Melby"
 
 msgid "Hundested"
-msgstr ""
+msgstr "Hundested"
 
 msgid "Birkerød"
-msgstr ""
+msgstr "Birkerød"
 
 msgid "Kvistgård"
-msgstr ""
+msgstr "Fearrthóireacht"
 
 msgid "Værløse"
-msgstr ""
+msgstr "Wearing"
 
 msgid "Farum"
-msgstr ""
+msgstr "Farum"
 
 msgid "Lynge"
-msgstr ""
+msgstr "Lynge"
 
 msgid "Slangerup"
-msgstr ""
+msgstr "Slangerup"
 
 msgid "Jægerspris"
-msgstr ""
+msgstr "Praghas Jæger"
 
 msgid "Ølstykke"
-msgstr ""
+msgstr "Píosaí uileog"
 
 msgid "Stenløse"
-msgstr ""
+msgstr "Stainless"
 
 msgid "Veksø Sjælland"
-msgstr ""
+msgstr "Veksø Sjælland"
 
 msgid "Rønne"
-msgstr ""
+msgstr "Rønne"
 
 msgid "Aakirkeby"
-msgstr ""
+msgstr "Aakirkeby"
 
 msgid "Nexø"
-msgstr ""
+msgstr "Nexø"
 
 msgid "Svaneke"
-msgstr ""
+msgstr "Svaneke"
 
 msgid "Østermarie"
-msgstr ""
+msgstr "Ostermarie"
 
 msgid "Gudhjem"
-msgstr ""
+msgstr "Guidhjem"
 
 msgid "Allinge"
-msgstr ""
+msgstr "Allinge"
 
 msgid "Klemensker"
-msgstr ""
+msgstr "Clemensker"
 
 msgid "Hasle"
-msgstr ""
+msgstr "Hasle"
 
 msgid "Tune"
-msgstr ""
+msgstr "Tiúin"
 
 msgid "Jyllinge"
-msgstr ""
+msgstr "Jyllinge"
 
 msgid "Skibby"
-msgstr ""
+msgstr "Skibby"
 
 msgid "Kirke Såby"
-msgstr ""
+msgstr "Church Såby"
 
 msgid "Kirke Hyllinge"
-msgstr ""
+msgstr "Church Hyllinge"
 
 msgid "Viby Sjælland"
-msgstr ""
+msgstr "Viby Sjælland"
 
 msgid "Borup"
-msgstr ""
+msgstr "Borup"
 
 msgid "Herlufmagle"
-msgstr ""
+msgstr "Airplane"
 
 msgid "Glumsø"
-msgstr ""
+msgstr "Glumsø"
 
 msgid "Fjenneslev"
-msgstr ""
+msgstr "Fjenneslev"
 
 msgid "Jystrup Midtsj"
-msgstr ""
+msgstr "Jystrup Midtsj"
 
 msgid "Munke Bjergby"
-msgstr ""
+msgstr "Munke Bjergby"
 
 msgid "Korsør"
-msgstr ""
+msgstr "Crossor"
 
 msgid "Skælskør"
-msgstr ""
+msgstr "Scrap Scooter"
 
 msgid "Vemmelev"
-msgstr ""
+msgstr "Vemmelev"
 
 msgid "Boeslunde"
-msgstr ""
+msgstr "Boeslunde"
 
 msgid "Rude"
-msgstr ""
+msgstr "Rubh"
+
+msgid "Agersø"
+msgstr "Agersø"
+
+msgid "Omø"
+msgstr "Omø"
 
 msgid "Fuglebjerg"
-msgstr ""
+msgstr "Fuglebjerg"
 
 msgid "Dalmose"
-msgstr ""
+msgstr "Dalmose"
 
 msgid "Sandved"
-msgstr ""
+msgstr "Sandved"
 
 msgid "Høng"
-msgstr ""
+msgstr "Høng"
 
 msgid "Gørlev"
-msgstr ""
+msgstr "Gørlev"
 
 msgid "Ruds Vedby"
-msgstr ""
+msgstr "Ruds Vedby"
 
 msgid "Dianalund"
-msgstr ""
+msgstr "Dianalund"
 
 msgid "Stenlille"
-msgstr ""
+msgstr "Stainless"
 
 msgid "Nyrup"
-msgstr ""
+msgstr "Nyrup"
+
+msgid "Orø"
+msgstr "Cathair"
 
 msgid "Hvalsø"
-msgstr ""
+msgstr "Hvalsø"
 
 msgid "Tølløse"
-msgstr ""
+msgstr "Dearing"
 
 msgid "Ugerløse"
-msgstr ""
+msgstr "Neamhréiteach"
 
 msgid "Kirke Eskilstrup"
-msgstr ""
+msgstr "Eaglais Eskilstrup"
 
 msgid "Store Merløse"
-msgstr ""
+msgstr "Store Merløse"
 
 msgid "Vipperød"
-msgstr ""
+msgstr "Vipperød"
 
 msgid "Regstrup"
-msgstr ""
+msgstr "Regstrup"
 
 msgid "Mørkøv"
-msgstr ""
+msgstr "Duch Shower"
 
 msgid "Jyderup"
-msgstr ""
+msgstr "Jyderup"
 
 msgid "Snertinge"
-msgstr ""
+msgstr "Snertinge"
 
 msgid "Svebølle"
-msgstr ""
+msgstr "Sponge"
 
 msgid "Store Fuglede"
-msgstr ""
+msgstr "Store Fuglede"
 
 msgid "Jerslev Sjælland"
-msgstr ""
+msgstr "Jerslev Sjælland"
 
 msgid "Nykøbing Sj"
-msgstr ""
+msgstr "Nykøbing Sj"
 
 msgid "Svinninge"
-msgstr ""
+msgstr "Scout"
 
 msgid "Gislinge"
-msgstr ""
+msgstr "Gislinge"
 
 msgid "Hørve"
-msgstr ""
+msgstr "Head"
 
 msgid "Fårevejle"
-msgstr ""
+msgstr "Fearing"
 
 msgid "Asnæs"
-msgstr ""
+msgstr "Assist"
 
 msgid "Vig"
-msgstr ""
+msgstr "Vig"
 
 msgid "Grevinge"
-msgstr ""
+msgstr "Grevinge"
 
 msgid "Nørre Asmindrup"
-msgstr ""
+msgstr "Asmindrup Nørre"
 
 msgid "Højby"
-msgstr ""
+msgstr "Højby"
 
 msgid "Rørvig"
-msgstr ""
+msgstr "Rørvig"
 
 msgid "Sjællands Odde"
-msgstr ""
+msgstr "Sjællands Odde"
 
 msgid "Føllenslev"
-msgstr ""
+msgstr "Follow Cord"
 
 msgid "Sejerø"
-msgstr ""
+msgstr "Sejero"
 
 msgid "Eskebjerg"
-msgstr ""
+msgstr "Eskebjerg"
 
 msgid "Gadstrup"
-msgstr ""
+msgstr "Gadstrup"
 
 msgid "Havdrup"
-msgstr ""
+msgstr "Sea Drain"
 
 msgid "Lille Skensved"
-msgstr ""
+msgstr "Little Skensved"
 
 msgid "Bjæverskov"
-msgstr ""
+msgstr "Bjöverskov"
 
 msgid "Hårlev"
-msgstr ""
+msgstr "Hair Leave"
 
 msgid "Karise"
-msgstr ""
+msgstr "Karrise"
 
 msgid "Faxe Ladeplads"
-msgstr ""
+msgstr "Fax Charging Plads"
 
 msgid "Store Heddinge"
-msgstr ""
+msgstr "Stóráil Heddinge"
 
 msgid "Strøby"
-msgstr ""
+msgstr "Strøby"
 
 msgid "Klippinge"
-msgstr ""
+msgstr "Clippers"
 
 msgid "Rødvig Stevns"
-msgstr ""
+msgstr "Reddvig Stevens"
 
 msgid "Herfølge"
-msgstr ""
+msgstr "Ag leanúint"
 
 msgid "Tureby"
-msgstr ""
+msgstr "Tureby"
 
 msgid "Rønnede"
-msgstr ""
+msgstr "Red"
 
 msgid "Holmegaard"
-msgstr ""
+msgstr "Holmegaard"
 
 msgid "Haslev"
-msgstr ""
+msgstr "Haslev"
 
 msgid "Præstø"
-msgstr ""
+msgstr "Préstø"
 
 msgid "Tappernøje"
-msgstr ""
+msgstr "Tappernøy"
 
 msgid "Mern"
-msgstr ""
+msgstr "Mern"
 
 msgid "Karrebæksminde"
-msgstr ""
+msgstr "Cuimhneamh Gairmeacha"
 
 msgid "Lundby"
-msgstr ""
+msgstr "Lundby"
 
 msgid "Kalvehave"
-msgstr ""
+msgstr "Kalveave"
 
 msgid "Langebæk"
-msgstr ""
+msgstr "Langeback"
 
 msgid "Stensved"
-msgstr ""
+msgstr "Stainless"
 
 msgid "Stege"
-msgstr ""
+msgstr "Stege"
 
 msgid "Borre"
-msgstr ""
+msgstr "Bearing"
 
 msgid "Askeby"
-msgstr ""
+msgstr "Askéby"
 
 msgid "Bogø By"
-msgstr ""
+msgstr "Bogø By"
 
 msgid "Nykøbing F"
-msgstr ""
+msgstr "Nykøbing F"
 
 msgid "Nørre Alslev"
-msgstr ""
+msgstr "Nørre Alslev"
 
 msgid "Stubbekøbing"
-msgstr ""
+msgstr "Stubbekøbing"
 
 msgid "Guldborg"
-msgstr ""
+msgstr "Guldborg"
 
 msgid "Eskilstrup"
-msgstr ""
+msgstr "Eskilstrup"
 
 msgid "Horbelev"
-msgstr ""
+msgstr "Horbelev"
 
 msgid "Idestrup"
-msgstr ""
+msgstr "Idestrup"
 
 msgid "Væggerløse"
-msgstr ""
+msgstr "Réiteach meáchain"
 
 msgid "Gedser"
-msgstr ""
+msgstr "Gedser"
 
 msgid "Nysted"
-msgstr ""
+msgstr "Nisted"
 
 msgid "Toreby L"
-msgstr ""
+msgstr "Toreby L"
 
 msgid "Kettinge"
-msgstr ""
+msgstr "Kettinge"
 
 msgid "Øster Ulslev"
-msgstr ""
+msgstr "East Ulslev"
 
 msgid "Errindlev"
-msgstr ""
+msgstr "Errindlev"
 
 msgid "Nakskov"
-msgstr ""
+msgstr "Nakskov"
 
 msgid "Harpelunde"
-msgstr ""
+msgstr "Harpelunde"
 
 msgid "Horslunde"
-msgstr ""
+msgstr "Horslunde"
 
 msgid "Søllested"
-msgstr ""
+msgstr "Suíomh idirlín"
 
 msgid "Maribo"
-msgstr ""
+msgstr "Maribo"
 
 msgid "Bandholm"
-msgstr ""
+msgstr "Bandholm"
+
+msgid "Askø og Lilleø"
+msgstr "Askø agus Lilleø"
 
 msgid "Torrig L"
-msgstr ""
+msgstr "Torry L"
 
 msgid "Fejø"
-msgstr ""
+msgstr "Feast"
+
+msgid "Femø"
+msgstr "Female"
 
 msgid "Nørreballe"
-msgstr ""
+msgstr "Nørreballe"
 
 msgid "Stokkemarke"
-msgstr ""
+msgstr "Stockemark"
 
 msgid "Vesterborg"
-msgstr ""
+msgstr "Vesterborg"
 
 msgid "Holeby"
-msgstr ""
+msgstr "Holeby"
 
 msgid "Rødby"
-msgstr ""
+msgstr "Redby"
 
 msgid "Dannemare"
-msgstr ""
+msgstr "Dannemare"
 
 msgid "Sakskøbing"
-msgstr ""
+msgstr "Sackøbing"
 
 msgid "Midtsjælland USF P"
-msgstr ""
+msgstr "An Middland USF P"
 
 msgid "Odense C"
-msgstr ""
+msgstr "Odense C"
 
 msgid "Odense V"
-msgstr ""
+msgstr "Odense V"
 
 msgid "Odense NV"
-msgstr ""
+msgstr "Odense NV"
 
 msgid "Odense SØ"
-msgstr ""
+msgstr "Lake Odense"
 
 msgid "Odense M"
-msgstr ""
+msgstr "Odense M"
 
 msgid "Odense NØ"
-msgstr ""
+msgstr "Odense NØ"
 
 msgid "Odense SV"
-msgstr ""
+msgstr "Odense SV"
 
 msgid "Odense S"
-msgstr ""
+msgstr "Odense S"
 
 msgid "Odense N"
-msgstr ""
+msgstr "Odense N"
 
 msgid "Marslev"
-msgstr ""
+msgstr "Marslev"
 
 msgid "Agedrup"
-msgstr ""
+msgstr "Agedrup"
 
 msgid "Munkebo"
-msgstr ""
+msgstr "Munkebo"
 
 msgid "Rynkeby"
-msgstr ""
+msgstr "Rynkeby"
 
 msgid "Mesinge"
-msgstr ""
+msgstr "Measing"
 
 msgid "Dalby"
-msgstr ""
+msgstr "Dalby"
 
 msgid "Martofte"
-msgstr ""
+msgstr "Martofte"
 
 msgid "Bogense"
-msgstr ""
+msgstr "Bogense"
 
 msgid "Otterup"
-msgstr ""
+msgstr "Otterup"
 
 msgid "Morud"
-msgstr ""
+msgstr "Morud"
 
 msgid "Harndrup"
-msgstr ""
+msgstr "Harndrup"
 
 msgid "Brenderup Fyn"
-msgstr ""
+msgstr "Branding Fyn"
 
 msgid "Asperup"
-msgstr ""
+msgstr "Asperup"
 
 msgid "Søndersø"
-msgstr ""
+msgstr "Søndersø"
 
 msgid "Veflinge"
-msgstr ""
+msgstr "Vefling"
 
 msgid "Skamby"
-msgstr ""
+msgstr "Scamby"
 
 msgid "Blommenslyst"
-msgstr ""
+msgstr "Bláthanna"
 
 msgid "Vissenbjerg"
-msgstr ""
+msgstr "Víssenbjerg"
 
 msgid "Ullerslev"
-msgstr ""
+msgstr "Ullerslev"
 
 msgid "Langeskov"
-msgstr ""
+msgstr "Langeskov"
 
 msgid "Aarup"
-msgstr ""
+msgstr "Aarup"
 
 msgid "Nørre Aaby"
-msgstr ""
+msgstr "Nørre Aaby"
 
 msgid "Gelsted"
-msgstr ""
+msgstr "Gelsted"
 
 msgid "Ejby"
-msgstr ""
+msgstr "Ejby"
 
 msgid "Faaborg"
-msgstr ""
+msgstr "Faaborg"
+
+msgid "Lyø"
+msgstr "Lyø"
+
+msgid "Avernakø"
+msgstr "Avernakø"
+
+msgid "Bjørnø"
+msgstr "Bjorno"
 
 msgid "Glamsbjerg"
-msgstr ""
+msgstr "Glamsbjerg"
 
 msgid "Ebberup"
-msgstr ""
+msgstr "Ebberup"
 
 msgid "Millinge"
-msgstr ""
+msgstr "Mhuilinge"
 
 msgid "Broby"
-msgstr ""
+msgstr "Broby"
 
 msgid "Haarby"
-msgstr ""
+msgstr "Hearby"
 
 msgid "Tommerup"
-msgstr ""
+msgstr "Tommerup"
 
 msgid "Ringe"
-msgstr ""
+msgstr "Ring"
 
 msgid "Vester Skerninge"
-msgstr ""
+msgstr "Vester Scáileán"
 
 msgid "Stenstrup"
-msgstr ""
+msgstr "Stenstrup"
 
 msgid "Kværndrup"
-msgstr ""
+msgstr "Wearing Printing"
 
 msgid "Årslev"
-msgstr ""
+msgstr "Annual"
 
 msgid "Ørbæk"
-msgstr ""
+msgstr "Ear Bag"
 
 msgid "Gislev"
-msgstr ""
+msgstr "Gislev"
 
 msgid "Ryslinge"
-msgstr ""
+msgstr "Raisling"
 
 msgid "Ferritslev Fyn"
-msgstr ""
+msgstr "Ferritslev Fyn"
 
 msgid "Frørup"
-msgstr ""
+msgstr "Froirup"
 
 msgid "Hesselager"
-msgstr ""
+msgstr "Hesselager"
 
 msgid "Skårup Fyn"
-msgstr ""
+msgstr "Scarrup Fyn"
 
 msgid "Vejstrup"
-msgstr ""
+msgstr "Weather Strup"
 
 msgid "Oure"
-msgstr ""
+msgstr "Our"
 
 msgid "Gudme"
-msgstr ""
+msgstr "Guide"
 
 msgid "Gudbjerg Sydfyn"
-msgstr ""
+msgstr "Guidbjerg Sydfyn"
 
 msgid "Rudkøbing"
-msgstr ""
+msgstr "Rudkøbing"
 
 msgid "Humble"
-msgstr ""
+msgstr "Uaimhneach"
 
 msgid "Bagenkop"
-msgstr ""
+msgstr "Bag Head"
+
+msgid "Strynø"
+msgstr "Strynø"
 
 msgid "Tranekær"
-msgstr ""
+msgstr "Tranekar"
 
 msgid "Marstal"
-msgstr ""
+msgstr "Marstal"
+
+msgid "Birkholm"
+msgstr "Birkholm"
 
 msgid "Ærøskøbing"
-msgstr ""
+msgstr "Earthquing"
 
 msgid "Søby Ærø"
-msgstr ""
+msgstr "Søby Eø"
 
 msgid "Egtved"
-msgstr ""
+msgstr "Egtved"
 
 msgid "Almind"
-msgstr ""
+msgstr "Almind"
 
 msgid "Viuf"
-msgstr ""
+msgstr "Vief"
 
 msgid "Jordrup"
-msgstr ""
+msgstr "Gróp"
 
 msgid "Christiansfeld"
-msgstr ""
+msgstr "Christiansfeld"
 
 msgid "Bjert"
-msgstr ""
+msgstr "Bjert"
 
 msgid "Sønder Stenderup"
-msgstr ""
+msgstr "Senders Stenderup"
 
 msgid "Sjølund"
-msgstr ""
+msgstr "Seolund"
 
 msgid "Hejls"
-msgstr ""
+msgstr "Hejls"
+
+msgid "Barsø"
+msgstr "Barsø"
 
 msgid "Rødekro"
-msgstr ""
+msgstr "Red Drain"
 
 msgid "Løgumkloster"
-msgstr ""
+msgstr "Clóistéar Soláthair"
 
 msgid "Bredebro"
-msgstr ""
+msgstr "Bredebro"
 
 msgid "Højer"
-msgstr ""
+msgstr "Hearts"
 
 msgid "Gråsten"
-msgstr ""
+msgstr "Grey"
 
 msgid "Broager"
-msgstr ""
+msgstr "Broager"
 
 msgid "Egernsund"
-msgstr ""
+msgstr "Egernsund"
 
 msgid "Padborg"
-msgstr ""
+msgstr "Padborg"
 
 msgid "Kruså"
-msgstr ""
+msgstr "Cruso"
 
 msgid "Tinglev"
-msgstr ""
+msgstr "Tinglev"
 
 msgid "Bylderup-Bov"
-msgstr ""
+msgstr "Bilderup-Bov"
 
 msgid "Bolderslev"
-msgstr ""
+msgstr "Bolderslev"
 
 msgid "Nordborg"
-msgstr ""
+msgstr "Nordborg"
 
 msgid "Augustenborg"
-msgstr ""
+msgstr "Augustenborg"
 
 msgid "Sydals"
-msgstr ""
+msgstr "Southern"
 
 msgid "Vojens"
-msgstr ""
+msgstr "Warriors"
 
 msgid "Gram"
-msgstr ""
+msgstr "Gram"
 
 msgid "Toftlund"
-msgstr ""
+msgstr "Toftlund"
 
 msgid "Agerskov"
-msgstr ""
+msgstr "Agerskov"
 
 msgid "Branderup J"
-msgstr ""
+msgstr "Branderup J"
 
 msgid "Bevtoft"
-msgstr ""
+msgstr "Bevtoft"
 
 msgid "Sommersted"
-msgstr ""
+msgstr "Suíomh an tsamhraidh"
 
 msgid "Vamdrup"
-msgstr ""
+msgstr "Vampire"
 
 msgid "Gesten"
-msgstr ""
+msgstr "Gesten"
 
 msgid "Bække"
-msgstr ""
+msgstr "Bag"
 
 msgid "Vorbasse"
-msgstr ""
+msgstr "Forbasse"
 
 msgid "Rødding"
-msgstr ""
+msgstr "Redding"
 
 msgid "Lunderskov"
-msgstr ""
+msgstr "Lunderskov"
 
 msgid "Brørup"
-msgstr ""
+msgstr "Brúróp"
 
 msgid "Lintrup"
-msgstr ""
+msgstr "Lintrup"
 
 msgid "Holsted"
-msgstr ""
+msgstr "Holsted"
 
 msgid "Hovborg"
-msgstr ""
+msgstr "Hovborg"
 
 msgid "Føvling"
-msgstr ""
+msgstr "Following"
 
 msgid "Gørding"
-msgstr ""
+msgstr "Gørding"
 
 msgid "Esbjerg Ø"
-msgstr ""
+msgstr "Esbjerg Ø"
 
 msgid "Esbjerg V"
-msgstr ""
+msgstr "Esbjerg V"
 
 msgid "Esbjerg N"
-msgstr ""
+msgstr "Esbjerg N"
 
 msgid "Tjæreborg"
-msgstr ""
+msgstr "Tjæreborg"
 
 msgid "Bramming"
-msgstr ""
+msgstr "Bramming"
 
 msgid "Glejbjerg"
-msgstr ""
+msgstr "Fearing"
 
 msgid "Agerbæk"
-msgstr ""
+msgstr "Agerbagk"
 
 msgid "Ribe"
-msgstr ""
+msgstr "Fish"
 
 msgid "Gredstedbro"
-msgstr ""
+msgstr "Gredstedbro"
 
 msgid "Skærbæk"
-msgstr ""
+msgstr "Scáileán"
 
 msgid "Rømø"
-msgstr ""
+msgstr "Rømø"
 
 msgid "Årre"
-msgstr ""
+msgstr "Annual"
 
 msgid "Ansager"
-msgstr ""
+msgstr "Fógraí"
 
 msgid "Nørre Nebel"
-msgstr ""
+msgstr "Nørre Nebel"
 
 msgid "Oksbøl"
-msgstr ""
+msgstr "Ocsbol"
 
 msgid "Janderup Vestj"
-msgstr ""
+msgstr "Janderup West"
 
 msgid "Billum"
-msgstr ""
+msgstr "Billum"
 
 msgid "Vejers Strand"
-msgstr ""
+msgstr "Strand Weather"
 
 msgid "Henne"
-msgstr ""
+msgstr "Hene"
 
 msgid "Outrup"
-msgstr ""
+msgstr "Output"
 
 msgid "Blåvand"
-msgstr ""
+msgstr "Blue"
 
 msgid "Tistrup"
-msgstr ""
+msgstr "Tistrup"
 
 msgid "Ølgod"
-msgstr ""
+msgstr "Oil God"
 
 msgid "Tarm"
-msgstr ""
+msgstr "Tarm"
 
 msgid "Hemmet"
-msgstr ""
+msgstr "Bearing"
 
 msgid "Skjern"
-msgstr ""
+msgstr "Screen"
 
 msgid "Videbæk"
-msgstr ""
+msgstr "Video Bag"
 
 msgid "Kibæk"
-msgstr ""
+msgstr "Kibaek"
 
 msgid "Lem St"
-msgstr ""
+msgstr "St Lem"
 
 msgid "Ringkøbing"
-msgstr ""
+msgstr "Ringkøbing"
 
 msgid "Hvide Sande"
-msgstr ""
+msgstr "White Sand"
 
 msgid "Spjald"
-msgstr ""
+msgstr "Spark"
 
 msgid "Ørnhøj"
-msgstr ""
+msgstr "Earth"
 
 msgid "Tim"
-msgstr ""
+msgstr "Tim"
 
 msgid "Ulfborg"
-msgstr ""
+msgstr "Ulfborg"
 
 msgid "Taulov Pakkecenter"
-msgstr ""
+msgstr "Ionad Pacáiste Taulov"
 
 msgid "Pakker TLP"
-msgstr ""
+msgstr "Pacáiste TLP"
 
 msgid "Børkop"
-msgstr ""
+msgstr "Børhead"
 
 msgid "Vejle Øst"
-msgstr ""
+msgstr "Vejle East"
 
 msgid "Juelsminde"
-msgstr ""
+msgstr "Meabhair na mbliana"
 
 msgid "Stouby"
-msgstr ""
+msgstr "Stouby"
 
 msgid "Barrit"
-msgstr ""
+msgstr "Barrit"
 
 msgid "Tørring"
-msgstr ""
+msgstr "Dearing"
 
 msgid "Uldum"
-msgstr ""
+msgstr "Uldum"
 
 msgid "Vonge"
-msgstr ""
+msgstr "Vongé"
 
 msgid "Bredsten"
-msgstr ""
+msgstr "Breastens"
 
 msgid "Randbøl"
-msgstr ""
+msgstr "Bowl"
 
 msgid "Vandel"
-msgstr ""
+msgstr "Vandel"
 
 msgid "Grindsted"
-msgstr ""
+msgstr "Grindsted"
 
 msgid "Hejnsvig"
-msgstr ""
+msgstr "Hejnsvig"
 
 msgid "Sønder Omme"
-msgstr ""
+msgstr "Maidir Omme"
 
 msgid "Stakroge"
-msgstr ""
+msgstr "Stainless"
 
 msgid "Sønder Felding"
-msgstr ""
+msgstr "Daoine Felding"
 
 msgid "Jelling"
-msgstr ""
+msgstr "Jelling"
 
 msgid "Gadbjerg"
-msgstr ""
+msgstr "Gadbjerg"
 
 msgid "Give"
-msgstr ""
+msgstr "Tabhair"
 
 msgid "Brande"
-msgstr ""
+msgstr "Brand"
 
 msgid "Ejstrupholm"
-msgstr ""
+msgstr "Ejstrupholm"
 
 msgid "Hampen"
-msgstr ""
+msgstr "Hampen"
 
 msgid "Ikast"
-msgstr ""
+msgstr "Icast"
 
 msgid "Bording"
-msgstr ""
+msgstr "Bording"
 
 msgid "Engesvang"
-msgstr ""
+msgstr "Enghesvang"
 
 msgid "Sunds"
-msgstr ""
+msgstr "Sunds"
 
 msgid "Karup J"
-msgstr ""
+msgstr "Carup J"
 
 msgid "Vildbjerg"
-msgstr ""
+msgstr "Vildbjerg"
 
 msgid "Aulum"
-msgstr ""
+msgstr "Aulum"
 
 msgid "Haderup"
-msgstr ""
+msgstr "Haderup"
 
 msgid "Sørvad"
-msgstr ""
+msgstr "South"
 
 msgid "Hjerm"
-msgstr ""
+msgstr "Heart"
 
 msgid "Vemb"
-msgstr ""
+msgstr "Vemb"
 
 msgid "Bøvlingbjerg"
-msgstr ""
+msgstr "Bearing Bearing"
 
 msgid "Bækmarksbro"
-msgstr ""
+msgstr "Bearkmarksbro"
 
 msgid "Harboøre"
-msgstr ""
+msgstr "Harbour"
 
 msgid "Thyborøn"
-msgstr ""
+msgstr "Thyborøn"
 
 msgid "Hanstholm"
-msgstr ""
+msgstr "Hanstholm"
 
 msgid "Frøstrup"
-msgstr ""
+msgstr "Frostrup"
 
 msgid "Vesløs"
-msgstr ""
+msgstr "Bearing"
 
 msgid "Snedsted"
-msgstr ""
+msgstr "Snudside"
 
 msgid "Bedsted Thy"
-msgstr ""
+msgstr "Bedsted Thy"
 
 msgid "Hurup Thy"
-msgstr ""
+msgstr "Hurup Thy"
 
 msgid "Vestervig"
-msgstr ""
+msgstr "Vestervig"
 
 msgid "Thyholm"
-msgstr ""
+msgstr "Thyholm"
 
 msgid "Vinderup"
-msgstr ""
+msgstr "Winderup"
 
 msgid "Højslev"
-msgstr ""
+msgstr "Hard Sleeve"
 
 msgid "Stoholm Jyll"
-msgstr ""
+msgstr "Stoholm Jyll"
 
 msgid "Spøttrup"
-msgstr ""
+msgstr "Scooter"
 
 msgid "Roslev"
-msgstr ""
+msgstr "Roslev"
 
 msgid "Fur"
-msgstr ""
+msgstr "Fionnaidh"
 
 msgid "Nykøbing M"
-msgstr ""
+msgstr "Nykøbing M"
 
 msgid "Erslev"
-msgstr ""
+msgstr "Erslev"
 
 msgid "Karby"
-msgstr ""
+msgstr "Carby"
 
 msgid "Redsted M"
-msgstr ""
+msgstr "Redsted M"
 
 msgid "Vils"
-msgstr ""
+msgstr "Vils"
 
 msgid "Øster Assels"
-msgstr ""
+msgstr "East Assels"
 
 msgid "Sydjylland/Fyn USF P"
-msgstr ""
+msgstr "Theas Jylland/Fyn USF P"
 
 msgid "Sydjylland/Fyn USF B"
-msgstr ""
+msgstr "Theas Jylland/Fyn USF B"
 
 msgid "Fakturaservice"
-msgstr ""
+msgstr "Seirbhís Fachtóireachta"
 
 msgid "Fakturascanning"
-msgstr ""
+msgstr "Scannáil Faktúrtha"
 
 msgid "Statsservice"
-msgstr ""
+msgstr "Seirbhís Stáit"
 
 msgid "Kommunepost"
-msgstr ""
+msgstr "Post Poist"
 
 msgid "Aarhus C"
-msgstr ""
+msgstr "Aarhus C"
 
 msgid "Aarhus N"
-msgstr ""
+msgstr "Aarhus N"
 
 msgid "Aarhus V"
-msgstr ""
+msgstr "Aarhus V"
 
 msgid "Brabrand"
-msgstr ""
+msgstr "Brabrand"
 
 msgid "Risskov Ø"
-msgstr ""
+msgstr "Riskov Ø"
 
 msgid "Åbyhøj"
-msgstr ""
+msgstr "Oscailte"
 
 msgid "Risskov"
-msgstr ""
+msgstr "Riskov"
 
 msgid "Egå"
-msgstr ""
+msgstr "Egg"
 
 msgid "Viby J"
-msgstr ""
+msgstr "Viby J"
 
 msgid "Højbjerg"
-msgstr ""
+msgstr "Head Bearing"
 
 msgid "Tranbjerg J"
-msgstr ""
+msgstr "Tranbjerg J"
 
 msgid "Mårslet"
-msgstr ""
+msgstr "Measurement"
 
 msgid "Beder"
-msgstr ""
+msgstr "Better"
 
 msgid "Malling"
-msgstr ""
+msgstr "Malling"
 
 msgid "Hundslund"
-msgstr ""
+msgstr "Dog Cinn"
 
 msgid "Solbjerg"
-msgstr ""
+msgstr "Solbjerg"
 
 msgid "Hasselager"
-msgstr ""
+msgstr "Hasselager"
 
 msgid "Hørning"
-msgstr ""
+msgstr "Clothing"
 
 msgid "Hadsten"
-msgstr ""
+msgstr "Hadsten"
 
 msgid "Trige"
-msgstr ""
+msgstr "Trige"
 
 msgid "Tilst"
-msgstr ""
+msgstr "Tilt"
 
 msgid "Hinnerup"
-msgstr ""
+msgstr "Innerup"
 
 msgid "Ebeltoft"
-msgstr ""
+msgstr "Ebeltoft"
 
 msgid "Rønde"
-msgstr ""
+msgstr "Dearg"
 
 msgid "Knebel"
-msgstr ""
+msgstr "Knebel"
 
 msgid "Balle"
-msgstr ""
+msgstr "Balle"
 
 msgid "Hammel"
-msgstr ""
+msgstr "Hammel"
 
 msgid "Harlev J"
-msgstr ""
+msgstr "Harlev J"
 
 msgid "Galten"
-msgstr ""
+msgstr "Galten"
 
 msgid "Sabro"
-msgstr ""
+msgstr "Sabro"
 
 msgid "Sporup"
-msgstr ""
+msgstr "Scorup"
 
 msgid "Grenaa"
-msgstr ""
+msgstr "Grenaa"
 
 msgid "Lystrup"
-msgstr ""
+msgstr "Lystrup"
 
 msgid "Hjortshøj"
-msgstr ""
+msgstr "Gearts Skin"
 
 msgid "Skødstrup"
-msgstr ""
+msgstr "Scodstrup"
 
 msgid "Hornslet"
-msgstr ""
+msgstr "Hornslet"
 
 msgid "Mørke"
-msgstr ""
+msgstr "Dark"
 
 msgid "Ryomgård"
-msgstr ""
+msgstr "Feirmeoireacht"
 
 msgid "Kolind"
-msgstr ""
+msgstr "Colind"
 
 msgid "Trustrup"
-msgstr ""
+msgstr "Trustrup"
 
 msgid "Nimtofte"
-msgstr ""
+msgstr "Nimtofte"
 
 msgid "Glesborg"
-msgstr ""
+msgstr "Glesborg"
 
 msgid "Ørum Djurs"
-msgstr ""
+msgstr "Earth Djurs"
 
 msgid "Anholt"
-msgstr ""
+msgstr "Anholt"
 
 msgid "Kjellerup"
-msgstr ""
+msgstr "Cellerup"
 
 msgid "Lemming"
-msgstr ""
+msgstr "Lemming"
 
 msgid "Sorring"
-msgstr ""
+msgstr "Scorring"
 
 msgid "Ans By"
-msgstr ""
+msgstr "Answer By"
 
 msgid "Them"
-msgstr ""
+msgstr "Tú"
 
 msgid "Bryrup"
-msgstr ""
+msgstr "Broupe"
 
 msgid "Låsby"
-msgstr ""
+msgstr "Låsby"
 
 msgid "Ry"
-msgstr ""
+msgstr "Ry"
 
 msgid "Daugård"
-msgstr ""
+msgstr "Dógárthas"
 
 msgid "Løsning"
-msgstr ""
+msgstr "Réiteach"
 
 msgid "Hovedgård"
-msgstr ""
+msgstr "Príomhfheidhmeannach"
 
 msgid "Brædstrup"
-msgstr ""
+msgstr "Strúpa Bathair"
 
 msgid "Gedved"
-msgstr ""
+msgstr "Gedved"
 
 msgid "Østbirk"
-msgstr ""
+msgstr "East Birk"
 
 msgid "Flemming"
-msgstr ""
+msgstr "Flemming"
 
 msgid "Rask Mølle"
-msgstr ""
+msgstr "Fast Mill"
 
 msgid "Klovborg"
-msgstr ""
+msgstr "Klovborg"
 
 msgid "Nørre Snede"
-msgstr ""
+msgstr "Nørre Snow"
 
 msgid "Stenderup"
-msgstr ""
+msgstr "Senderup"
 
 msgid "Hornsyld"
-msgstr ""
+msgstr "Hornsyld"
+
+msgid "Endelave"
+msgstr "Endelave"
+
+msgid "Tunø"
+msgstr "Tuno"
 
 msgid "Tjele"
-msgstr ""
+msgstr "Tile"
 
 msgid "Løgstrup"
-msgstr ""
+msgstr "Løgstrup"
 
 msgid "Skals"
-msgstr ""
+msgstr "Scales"
 
 msgid "Rødkærsbro"
-msgstr ""
+msgstr "Red Dearg Bread"
 
 msgid "Bjerringbro"
-msgstr ""
+msgstr "Bjerringbro"
 
 msgid "Ulstrup"
-msgstr ""
+msgstr "Ulstrup"
 
 msgid "Langå"
-msgstr ""
+msgstr "Long"
 
 msgid "Thorsø"
-msgstr ""
+msgstr "Thorsø"
 
 msgid "Fårvang"
-msgstr ""
+msgstr "Fårvang"
 
 msgid "Gjern"
-msgstr ""
+msgstr "Gjern"
 
 msgid "Randers C"
-msgstr ""
+msgstr "Randers C"
 
 msgid "Randers NV"
-msgstr ""
+msgstr "Randers NV"
 
 msgid "Randers NØ"
-msgstr ""
+msgstr "Randers NØ"
 
 msgid "Randers SV"
-msgstr ""
+msgstr "Randers SV"
 
 msgid "Ørsted"
-msgstr ""
+msgstr "Eastern"
 
 msgid "Randers SØ"
-msgstr ""
+msgstr "SRAITH Randers"
 
 msgid "Allingåbro"
-msgstr ""
+msgstr "Allingåbro"
 
 msgid "Auning"
-msgstr ""
+msgstr "Auning"
 
 msgid "Havndal"
-msgstr ""
+msgstr "Havndal"
 
 msgid "Spentrup"
-msgstr ""
+msgstr "Spentrup"
 
 msgid "Gjerlev J"
-msgstr ""
+msgstr "Germany J"
 
 msgid "Fårup"
-msgstr ""
+msgstr "Fårup"
 
 msgid "Aalborg SV"
-msgstr ""
+msgstr "Aalborg SV"
 
 msgid "Aalborg SØ"
-msgstr ""
+msgstr "Teach Aalborg"
 
 msgid "Aalborg Øst"
-msgstr ""
+msgstr "Aalborg East"
 
 msgid "Svenstrup J"
-msgstr ""
+msgstr "Svenstrup J"
 
 msgid "Nibe"
-msgstr ""
+msgstr "Nibe"
 
 msgid "Gistrup"
-msgstr ""
+msgstr "Gistrup"
 
 msgid "Klarup"
-msgstr ""
+msgstr "Clearup"
 
 msgid "Storvorde"
-msgstr ""
+msgstr "Storvorde"
 
 msgid "Kongerslev"
-msgstr ""
+msgstr "Royal Sleeve"
 
 msgid "Sæby"
-msgstr ""
+msgstr "Seasby"
 
 msgid "Vodskov"
-msgstr ""
+msgstr "Vodskov"
 
 msgid "Hjallerup"
-msgstr ""
+msgstr "Hearing"
 
 msgid "Dronninglund"
-msgstr ""
+msgstr "Queen Lund"
 
 msgid "Asaa"
-msgstr ""
+msgstr "Asaa"
 
 msgid "Dybvad"
-msgstr ""
+msgstr "Deep"
 
 msgid "Gandrup"
-msgstr ""
+msgstr "Gandrup"
 
 msgid "Hals"
-msgstr ""
+msgstr "Hals"
 
 msgid "Vestbjerg"
-msgstr ""
+msgstr "West Bjerg"
 
 msgid "Sulsted"
-msgstr ""
+msgstr "Sulsted"
 
 msgid "Tylstrup"
-msgstr ""
+msgstr "Tylstrup"
 
 msgid "Nørresundby"
-msgstr ""
+msgstr "Nørresundby"
 
 msgid "Vadum"
-msgstr ""
+msgstr "Vadum"
 
 msgid "Aabybro"
-msgstr ""
+msgstr "Abybro"
 
 msgid "Brovst"
-msgstr ""
+msgstr "Brovst"
 
 msgid "Løkken"
-msgstr ""
+msgstr "Lock"
 
 msgid "Pandrup"
-msgstr ""
+msgstr "Pendrup"
 
 msgid "Blokhus"
-msgstr ""
+msgstr "Blokhus"
 
 msgid "Saltum"
-msgstr ""
+msgstr "Saltum"
 
 msgid "Hobro"
-msgstr ""
+msgstr "Hobro"
 
 msgid "Arden"
-msgstr ""
+msgstr "Arden"
 
 msgid "Skørping"
-msgstr ""
+msgstr "Skørping"
 
 msgid "Støvring"
-msgstr ""
+msgstr "Dutting"
 
 msgid "Suldrup"
-msgstr ""
+msgstr "Suldrup"
 
 msgid "Mariager"
-msgstr ""
+msgstr "Mariager"
 
 msgid "Hadsund"
-msgstr ""
+msgstr "Hadsund"
 
 msgid "Bælum"
-msgstr ""
+msgstr "Bearing"
 
 msgid "Terndrup"
-msgstr ""
+msgstr "Terndrup"
 
 msgid "Aars"
-msgstr ""
+msgstr "Aars"
 
 msgid "Nørager"
-msgstr ""
+msgstr "Nørager"
 
 msgid "Aalestrup"
-msgstr ""
+msgstr "Aalestrup"
 
 msgid "Gedsted"
-msgstr ""
+msgstr "Gedsted"
 
 msgid "Møldrup"
-msgstr ""
+msgstr "Mold Printing"
 
 msgid "Farsø"
-msgstr ""
+msgstr "Farsø"
 
 msgid "Løgstør"
-msgstr ""
+msgstr "Méid an tsaoil"
 
 msgid "Ranum"
-msgstr ""
+msgstr "Ránum"
 
 msgid "Fjerritslev"
-msgstr ""
+msgstr "Tráchtáiste"
 
 msgid "Jerslev J"
-msgstr ""
+msgstr "Jersey J"
 
 msgid "Østervrå"
-msgstr ""
+msgstr "Eastern Blue"
 
 msgid "Vrå"
-msgstr ""
+msgstr "Bag"
 
 msgid "Tårs"
-msgstr ""
+msgstr "Teach"
 
 msgid "Hirtshals"
-msgstr ""
+msgstr "Hirtshals"
 
 msgid "Sindal"
-msgstr ""
+msgstr "Sindal"
 
 msgid "Bindslev"
-msgstr ""
+msgstr "Bindslev"
 
 msgid "Strandby"
-msgstr ""
+msgstr "Strandby"
 
 msgid "Jerup"
-msgstr ""
+msgstr "Jerup"
 
 msgid "Ålbæk"
-msgstr ""
+msgstr "Eastern"
 
 msgid "Skagen"
-msgstr ""
+msgstr "Skagen"
 
 msgid "Jylland USF P"
-msgstr ""
+msgstr "Jylland USF P"
 
 msgid "Jylland USF B"
-msgstr ""
+msgstr "Jylland USF B"
 
 msgid "Borgerservice"
-msgstr ""
+msgstr "Seirbhís na Cathaoirne"
 
 msgid "Santa Claus/Julemanden"
-msgstr ""
+msgstr "Santa Claus/na Nollag"
 
 msgid "Nuuk"
-msgstr ""
+msgstr "Nuuk"
 
 msgid "Nuussuaq"
-msgstr ""
+msgstr "Nuussuaq"
 
 msgid "Kangerlussuaq"
-msgstr ""
+msgstr "Cangerlussuaq"
 
 msgid "Sisimiut"
-msgstr ""
+msgstr "Sisimiut"
 
 msgid "Maniitsoq"
-msgstr ""
+msgstr "Maniitsoq"
 
 msgid "Tasiilaq"
-msgstr ""
+msgstr "Tasiilaq"
 
 msgid "Kulusuk"
-msgstr ""
+msgstr "Kulusuk"
 
 msgid "Alluitsup Paa"
-msgstr ""
+msgstr "Alluitsup Paa"
 
 msgid "Qaqortoq"
-msgstr ""
+msgstr "Qacortoq"
 
 msgid "Narsaq"
-msgstr ""
+msgstr "Narsaq"
 
 msgid "Nanortalik"
-msgstr ""
+msgstr "Nanortalik"
 
 msgid "Narsarsuaq"
-msgstr ""
+msgstr "Narsarsuaq"
 
 msgid "Ikerasassuaq"
-msgstr ""
+msgstr "Ikerassuaq"
 
 msgid "Kangilinnguit"
-msgstr ""
+msgstr "Kangilinghit"
 
 msgid "Arsuk"
-msgstr ""
+msgstr "Arsuk"
 
 msgid "Paamiut"
-msgstr ""
+msgstr "Pathroom"
 
 msgid "Aasiaat"
-msgstr ""
+msgstr "Aasiate"
 
 msgid "Qasigiannguit"
-msgstr ""
+msgstr "Qasigiannguit"
 
 msgid "Ilulissat"
-msgstr ""
+msgstr "Ilulissat"
 
 msgid "Qeqertarsuaq"
-msgstr ""
+msgstr "Qeqartarsuaq"
 
 msgid "Kangaatsiaq"
-msgstr ""
+msgstr "Kangaatsiac"
 
 msgid "Uummannaq"
-msgstr ""
+msgstr "Uummannaq"
 
 msgid "Upernavik"
-msgstr ""
+msgstr "Upernavic"
 
 msgid "Qaarsut"
-msgstr ""
+msgstr "Caircut"
 
 msgid "Pituffik"
-msgstr ""
+msgstr "Pituffic"
 
 msgid "Qaanaaq"
-msgstr ""
+msgstr "Qanaaq"
 
 msgid "Station Nord"
-msgstr ""
+msgstr "Stáisiún Tuaidh"
 
 msgid "Ittoqqortoormiit"
-msgstr ""
+msgstr "Ittoqqorthormiit"
 
 msgid "Mestersvig"
-msgstr ""
+msgstr "Mestersvig"
 
 msgid "Danmarkshavn"
-msgstr ""
+msgstr "Danmarkshavn"
 
 msgid "Constable Pynt"
-msgstr ""
+msgstr "Constaable Pynt"
 
 msgid "Slædepatrulje Sirius"
-msgstr ""
+msgstr "Slate Patrulle Sirius"
 
 msgid "Tórshavn"
-msgstr ""
+msgstr "Tórshavn"
 
 msgid "Argir"
-msgstr ""
+msgstr "Argir"
 
 msgid "Kirkjubøur"
-msgstr ""
+msgstr "Eaglais"
 
 msgid "Velbastadur"
-msgstr ""
+msgstr "Velbastadur"
 
 msgid "\"Sydradalur, Streymoy\""
-msgstr ""
+msgstr "“South Dakar, Streymoy”"
 
 msgid "Nordradalur"
-msgstr ""
+msgstr "Nordradalur"
 
 msgid "Kaldbak"
-msgstr ""
+msgstr "Kaldbak"
 
 msgid "Kaldbaksbotnur"
-msgstr ""
+msgstr "Choldback Bottle"
 
 msgid "Sund"
-msgstr ""
+msgstr "Sundle"
 
 msgid "Hvitanes"
-msgstr ""
+msgstr "Hvitanes"
 
 msgid "Hoyvík"
-msgstr ""
+msgstr "Hoyvík"
 
 msgid "Sandur"
-msgstr ""
+msgstr "Sandur"
 
 msgid "Skálavík"
-msgstr ""
+msgstr "Skálavík"
 
 msgid "Húsavík"
-msgstr ""
+msgstr "Húsavík"
 
 msgid "Dalur"
-msgstr ""
+msgstr "Dalur"
 
 msgid "Skarvanes"
-msgstr ""
+msgstr "Scarvanes"
 
 msgid "Skopun"
-msgstr ""
+msgstr "Scopen"
 
 msgid "Skúvoy"
-msgstr ""
+msgstr "Scuvoy"
 
 msgid "Nólsoy"
-msgstr ""
+msgstr "Nolsoy"
 
 msgid "Hestur"
-msgstr ""
+msgstr "Hestur"
 
 msgid "Koltur"
-msgstr ""
+msgstr "Koltur"
 
 msgid "Stóra Dimun"
-msgstr ""
+msgstr "Big Dimun"
 
 msgid "Stykkid"
-msgstr ""
+msgstr "Stickid"
 
 msgid "Leynar"
-msgstr ""
+msgstr "Leynar"
 
 msgid "Skællingur"
-msgstr ""
+msgstr "Screening"
 
 msgid "Kvívík"
-msgstr ""
+msgstr "Kvívík"
 
 msgid "Vestmanna"
-msgstr ""
+msgstr "West Manna"
 
 msgid "Válur"
-msgstr ""
+msgstr "Valur"
 
 msgid "Sandavágur"
-msgstr ""
+msgstr "Sandavágur"
 
 msgid "Midvágur"
-msgstr ""
+msgstr "Midvágur"
 
 msgid "Sørvágur"
-msgstr ""
+msgstr "Sørvágur"
 
 msgid "Vatnsoyrar"
-msgstr ""
+msgstr "Uisce Soil"
 
 msgid "Bøur"
-msgstr ""
+msgstr "Bør"
 
 msgid "Gásadalur"
-msgstr ""
+msgstr "Gásadal"
 
 msgid "Mykines"
-msgstr ""
+msgstr "Mykines"
 
 msgid "Oyrarbakki"
-msgstr ""
+msgstr "Oyrarbakki"
 
 msgid "Kollafjørdur"
-msgstr ""
+msgstr "Collafjørdur"
 
 msgid "Oyrareingir"
-msgstr ""
+msgstr "Oyrareingir"
 
 msgid "Signabøur"
-msgstr ""
+msgstr "Eagle Signal"
 
 msgid "Hósvík"
-msgstr ""
+msgstr "Hosvik"
 
 msgid "Hvalvík"
-msgstr ""
+msgstr "Hvalvik"
 
 msgid "Streymnes"
-msgstr ""
+msgstr "Streymnes"
 
 msgid "Saksun"
-msgstr ""
+msgstr "Saksun"
 
 msgid "Nesvík"
-msgstr ""
+msgstr "Nesvík"
 
 msgid "Langasandur"
-msgstr ""
+msgstr "Langasandur"
 
 msgid "Haldarsvík"
-msgstr ""
+msgstr "Haldarsvík"
 
 msgid "Tjørnuvík"
-msgstr ""
+msgstr "Tjørnuvík"
 
 msgid "Oyri"
-msgstr ""
+msgstr "Oyri"
 
 msgid "Nordskáli"
-msgstr ""
+msgstr "Nordscáli"
 
 msgid "Svináir"
-msgstr ""
+msgstr "Svináir"
 
 msgid "Ljósá"
-msgstr ""
+msgstr "Lighting"
 
 msgid "Eidi"
-msgstr ""
+msgstr "Eidi"
 
 msgid "Funningur"
-msgstr ""
+msgstr "Function"
 
 msgid "Gjógv"
-msgstr ""
+msgstr "Gjógv"
 
 msgid "Funningsfjørdur"
-msgstr ""
+msgstr "Feidhmíocht"
 
 msgid "Elduvík"
-msgstr ""
+msgstr "Elduvík"
 
 msgid "Skáli"
-msgstr ""
+msgstr "Scáli"
 
 msgid "Skálafjørdur"
-msgstr ""
+msgstr "Skálafjørdur"
 
 msgid "Strendur"
-msgstr ""
+msgstr "Strender"
 
 msgid "Innan Glyvur"
-msgstr ""
+msgstr "Roimh Glyvur"
 
 msgid "Kolbanargjógv"
-msgstr ""
+msgstr "Kolbanargjógv"
 
 msgid "Morskranes"
-msgstr ""
+msgstr "Morskranes"
 
 msgid "Selatrad"
-msgstr ""
+msgstr "Selatrad"
 
 msgid "Gøta"
-msgstr ""
+msgstr "Got"
 
 msgid "Gøtugjógv"
-msgstr ""
+msgstr "Gøtugjógv"
 
 msgid "Nordragøta"
-msgstr ""
+msgstr "Nordragøta"
 
 msgid "Sydrugøta"
-msgstr ""
+msgstr "South Drugøta"
 
 msgid "Leirvík"
-msgstr ""
+msgstr "Leirvík"
 
 msgid "Fuglafjørdur"
-msgstr ""
+msgstr "Fuglafjørder"
 
 msgid "Saltangará"
-msgstr ""
+msgstr "Saltangara"
 
 msgid "Runavík"
-msgstr ""
+msgstr "Runavík"
 
 msgid "Glyvrar"
-msgstr ""
+msgstr "Glyvrar"
 
 msgid "Lambareidi"
-msgstr ""
+msgstr "Lambareids"
 
 msgid "Lambi"
-msgstr ""
+msgstr "Lambi"
 
 msgid "Rituvík"
-msgstr ""
+msgstr "Rituvik"
 
 msgid "Æduvík"
-msgstr ""
+msgstr "Aduvik"
 
 msgid "Toftir"
-msgstr ""
+msgstr "Toftir"
 
 msgid "\"Nes, Eysturoy\""
-msgstr ""
+msgstr "“Níos, Eysturoy”"
 
 msgid "Saltnes"
-msgstr ""
+msgstr "Saltnes"
 
 msgid "Søldarfjørdur"
-msgstr ""
+msgstr "Søldarfjørdur"
 
 msgid "Skipanes"
-msgstr ""
+msgstr "Sceipanes"
 
 msgid "Gøtueidi"
-msgstr ""
+msgstr "Gøtueidi"
 
 msgid "Oyndarfjørdur"
-msgstr ""
+msgstr "Oyndarfjørdur"
 
 msgid "Hellur"
-msgstr ""
+msgstr "Hellur"
 
 msgid "Klaksvík"
-msgstr ""
+msgstr "Klaksvík"
 
 msgid "Nordoyri"
-msgstr ""
+msgstr "Nordoyri"
 
 msgid "Ánir"
-msgstr ""
+msgstr "Anir"
 
 msgid "Árnafjørdur"
-msgstr ""
+msgstr "Árnafjørdur"
 
 msgid "Norddepil"
-msgstr ""
+msgstr "Norddepil"
 
 msgid "Depil"
-msgstr ""
+msgstr "Depil"
 
 msgid "Nordtoftir"
-msgstr ""
+msgstr "Nordtoftir"
 
 msgid "Múli"
-msgstr ""
+msgstr "Muli"
 
 msgid "Hvannasund"
-msgstr ""
+msgstr "Hvannasund"
 
 msgid "Vidareidi"
-msgstr ""
+msgstr "Vidareids"
 
 msgid "Svinoy"
-msgstr ""
+msgstr "Svinoy"
 
 msgid "Kirkja"
-msgstr ""
+msgstr "Church"
 
 msgid "Hattarvík"
-msgstr ""
+msgstr "Hattarvík"
 
 msgid "Kunoy"
-msgstr ""
+msgstr "Kunoy"
 
 msgid "Haraldssund"
-msgstr ""
+msgstr "Haraldssund"
 
 msgid "\"Sydradalur, Kalsoy\""
-msgstr ""
+msgstr "“South Dakar, Kalsoy”"
 
 msgid "Húsar"
-msgstr ""
+msgstr "Hussars"
 
 msgid "Mikladalur"
-msgstr ""
+msgstr "Micladalur"
 
 msgid "Trøllanes"
-msgstr ""
+msgstr "Tröllanes"
 
 msgid "Tvøroyri"
-msgstr ""
+msgstr "Tvoroyri"
 
 msgid "Frodba"
-msgstr ""
+msgstr "Frodge"
 
 msgid "Trongisvágur"
-msgstr ""
+msgstr "Trongisvágur"
 
 msgid "Øravík"
-msgstr ""
+msgstr "Øravík"
 
 msgid "Hvalba"
-msgstr ""
+msgstr "Hvalba"
 
 msgid "Sandvík"
-msgstr ""
+msgstr "Sandvík"
 
 msgid "Fámjin"
-msgstr ""
+msgstr "Farmjin"
 
 msgid "Vágur"
-msgstr ""
+msgstr "Wagur"
 
 msgid "\"Nes, Vágur\""
-msgstr ""
+msgstr "“Nes, Vágur”"
 
 msgid "Lopra"
-msgstr ""
+msgstr "Lopra"
 
 msgid "Akrar"
-msgstr ""
+msgstr "Acrar"
 
 msgid "Vikarbyrgi"
-msgstr ""
+msgstr "Vicar Burgers"
 
 msgid "Porkeri"
-msgstr ""
+msgstr "Porkers"
 
 msgid "Hov"
-msgstr ""
+msgstr "Hov"
 
 msgid "Sumba"
-msgstr ""
+msgstr "Sumba"
 
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
+msgstr "Cuir isteach cód poist san fhormáid XXXX."
 
 msgid "Ecuadorian province"
-msgstr ""
+msgstr "Cúige Eacuadorian"
 
 msgid "Harju County"
-msgstr ""
+msgstr "Contae Harju"
 
 msgid "Hiiu County"
-msgstr ""
+msgstr "Contae Hiiu"
 
 msgid "Ida-Viru County"
-msgstr ""
+msgstr "Contae Ida-Viru"
 
 msgid "Jõgeva County"
-msgstr ""
+msgstr "Contae Jõgeva"
 
 msgid "Järva County"
-msgstr ""
+msgstr "Contae Järva"
 
 msgid "Lääne County"
-msgstr ""
+msgstr "Contae Lääne"
 
 msgid "Lääne-Viru County"
-msgstr ""
+msgstr "Contae Lääne-Viru"
 
 msgid "Põlva County"
-msgstr ""
+msgstr "Contae Põlva"
 
 msgid "Pärnu County"
-msgstr ""
+msgstr "Contae Pärnu"
 
 msgid "Rapla County"
-msgstr ""
+msgstr "Contae Rapla"
 
 msgid "Saare County"
-msgstr ""
+msgstr "Contae Saare"
 
 msgid "Tartu County"
-msgstr ""
+msgstr "Contae Tartu"
 
 msgid "Valga County"
-msgstr ""
+msgstr "Contae Valga"
 
 msgid "Viljandi County"
-msgstr ""
+msgstr "Contae Viljandi"
 
 msgid "Võru County"
-msgstr ""
+msgstr "Contae Vöru"
 
 msgid "Enter an 11-digit Estonian personal identification code."
-msgstr ""
+msgstr "Cuir isteach cód aitheantais phearsanta Eastóinis 11 dhigit."
 
 msgid "Enter a valid Estonian personal identification code."
-msgstr ""
+msgstr "Cuir isteach cód aitheantais phearsanta bailí Eastóinis."
 
 msgid "Enter an 8-digit Estonian business registry code."
-msgstr ""
+msgstr "Cuir isteach cód clárlann gnó Eastóinis 8 dhigit."
 
 msgid "Enter a valid Estonian business registry code."
-msgstr ""
+msgstr "Cuir isteach cód bailí clárlann gnó Eastóinis."
+
+msgid "Dakahlia"
+msgstr "Dakahlia"
+
+msgid "Red Sea"
+msgstr "Farraige Dearg"
+
+msgid "Beheira"
+msgstr "Beheira"
+
+msgid "Faiyum"
+msgstr "Faiyum"
+
+msgid "Gharbia"
+msgstr "Gharbia"
+
+msgid "Alexandria"
+msgstr "Alexandria"
+
+msgid "Ismailia"
+msgstr "Ismailia"
+
+msgid "Giza"
+msgstr "Giza"
+
+msgid "Monufia"
+msgstr "Monufia"
+
+msgid "Minya"
+msgstr "Minya"
+
+msgid "Cairo"
+msgstr "Cairó"
+
+msgid "Qalyubia"
+msgstr "Qalyubia"
+
+msgid "Luxor"
+msgstr "Luxor"
+
+msgid "New Valley"
+msgstr "Gleann Nua"
+
+msgid "Suez"
+msgstr "Suez"
+
+msgid "Al Sharqia"
+msgstr "Al Sharqia"
+
+msgid "Aswan"
+msgstr "Aswan"
+
+msgid "Asyut"
+msgstr "Asyut"
+
+msgid "Beni Suef"
+msgstr "Beni Suef"
+
+msgid "Port Said"
+msgstr "Port a dúirt"
+
+msgid "Damietta"
+msgstr "Damietta"
+
+msgid "South Sinai"
+msgstr "Sinai Theas"
+
+msgid "Kafr el-Sheikh"
+msgstr "Kafr el-Sheikh"
+
+msgid "Matrouh"
+msgstr "Matrouh"
+
+msgid "Qena"
+msgstr "Qena"
+
+msgid "North Sinai"
+msgstr "Sinai Thuaidh"
+
+msgid "Sohag"
+msgstr "Sohag"
+
+msgid "Enter a valid Egyptian National ID number"
+msgstr "Cuir isteach uimhir aitheantais Náisiúnta Éigipte"
 
 msgid "Araba"
-msgstr ""
+msgstr "Araba"
 
 msgid "Albacete"
-msgstr ""
+msgstr "Albacete"
 
 msgid "Alacant"
-msgstr ""
+msgstr "Alacant"
 
 msgid "Almeria"
-msgstr ""
+msgstr "Almería"
 
 msgid "Avila"
 msgstr "Ávila"
 
 msgid "Badajoz"
-msgstr ""
+msgstr "Badajoz"
 
 msgid "Illes Balears"
-msgstr ""
+msgstr "Oileáin Bhaile"
 
 msgid "Barcelona"
-msgstr ""
+msgstr "Barcelona"
 
 msgid "Burgos"
-msgstr ""
+msgstr "Burgos"
 
 msgid "Caceres"
 msgstr "Cáceres"
@@ -3146,49 +3342,49 @@ msgid "Cadiz"
 msgstr "Cádiz"
 
 msgid "Castello"
-msgstr ""
+msgstr "Castle"
 
 msgid "Ciudad Real"
-msgstr ""
+msgstr "Ciudad Real"
 
 msgid "Cordoba"
-msgstr ""
+msgstr "Cordoba"
 
 msgid "A Coruna"
 msgstr "A Coruña"
 
 msgid "Cuenca"
-msgstr ""
+msgstr "Cuenca"
 
 msgid "Girona"
-msgstr ""
+msgstr "Girona"
 
 msgid "Granada"
-msgstr ""
+msgstr "Granada"
 
 msgid "Guadalajara"
-msgstr ""
+msgstr "Guadalajara"
 
 msgid "Guipuzkoa"
-msgstr ""
+msgstr "Guipuzkoa"
 
 msgid "Huelva"
-msgstr ""
+msgstr "Huelva"
 
 msgid "Huesca"
-msgstr ""
+msgstr "Huesca"
 
 msgid "Jaen"
-msgstr ""
+msgstr "Jaen"
 
 msgid "Leon"
-msgstr ""
+msgstr "Leon"
 
 msgid "Lleida"
-msgstr ""
+msgstr "Lleida"
 
 msgid "Lugo"
-msgstr ""
+msgstr "Lugo"
 
 msgid "Madrid"
 msgstr "Maidrid"
@@ -3197,79 +3393,79 @@ msgid "Malaga"
 msgstr "Málaga"
 
 msgid "Murcia"
-msgstr ""
+msgstr "Murcia"
 
 msgid "Navarre"
-msgstr ""
+msgstr "Navarra"
 
 msgid "Ourense"
-msgstr ""
+msgstr "Ourense"
 
 msgid "Asturias"
-msgstr ""
+msgstr "Asturias"
 
 msgid "Palencia"
-msgstr ""
+msgstr "Palencia"
 
 msgid "Las Palmas"
-msgstr ""
+msgstr "Las Palmas"
 
 msgid "Pontevedra"
-msgstr ""
+msgstr "Pontevedra"
 
 msgid "Salamanca"
-msgstr ""
+msgstr "Salamanca"
 
 msgid "Santa Cruz de Tenerife"
-msgstr ""
+msgstr "Santa Cruz de Tenerife"
 
 msgid "Cantabria"
-msgstr ""
+msgstr "Cantabria"
 
 msgid "Segovia"
-msgstr ""
+msgstr "Segovia"
 
 msgid "Seville"
 msgstr "Sevilla"
 
 msgid "Soria"
-msgstr ""
+msgstr "Soria"
 
 msgid "Tarragona"
-msgstr ""
+msgstr "Tarragona"
 
 msgid "Teruel"
-msgstr ""
+msgstr "Teruel"
 
 msgid "Toledo"
-msgstr ""
+msgstr "Toledo"
 
 msgid "Valencia"
-msgstr ""
+msgstr "Valencia"
 
 msgid "Valladolid"
-msgstr ""
+msgstr "Valladolid"
 
 msgid "Bizkaia"
-msgstr ""
+msgstr "Biscaia"
 
 msgid "Zamora"
-msgstr ""
+msgstr "Zamora"
 
 msgid "Zaragoza"
-msgstr ""
+msgstr "Zaragoza"
 
 msgid "Ceuta"
-msgstr ""
+msgstr "Ceuta"
 
 msgid "Melilla"
-msgstr ""
+msgstr "Melilla"
 
 msgid "Andalusia"
-msgstr ""
+msgstr "Andalúsia"
 
 msgid "Aragon"
-msgstr ""
+msgstr "Aragon"
 
 msgid "Principality of Asturias"
 msgstr "Phrionsacht Asturias"
@@ -3293,10 +3489,10 @@ msgid "Catalonia"
 msgstr "An Chatalóin"
 
 msgid "Extremadura"
-msgstr ""
+msgstr "Extremadura"
 
 msgid "Galicia"
-msgstr ""
+msgstr "Galicia"
 
 msgid "Region of Murcia"
 msgstr "Réigiún de Murcia"
@@ -3305,13 +3501,13 @@ msgid "Foral Community of Navarre"
 msgstr "Chomhphobail Foral de Navarre"
 
 msgid "Valencian Community"
-msgstr ""
+msgstr "Pobal Valencian"
 
 msgid "Autonomous city of Ceuta"
-msgstr ""
+msgstr "Cathair uathrialach Ceuta"
 
 msgid "Autonomous city of Mellila"
-msgstr ""
+msgstr "Cathair uathrialach Mellila"
 
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
 msgstr "Iontráil cód poist bailí i raon agus formáid 01XXX - 52XXX."
@@ -3339,467 +3535,479 @@ msgstr ""
 msgid "Invalid checksum for bank account number."
 msgstr "Sheiceála neamhbhailí do uimhir cuntas bainc."
 
+msgid "Spain postal code (five numbers)"
+msgstr "Cód poist na Spáinne (cúig uimhir)"
+
+msgid "Identification National Document"
+msgstr "Doiciméad Náisiúnta Aithe"
+
 msgid "Enter a valid Finnish social security number."
 msgstr "Cuir isteach uimhir Fionlainne slándála sóisialta bailí."
 
 msgid "Zip code"
-msgstr ""
+msgstr "Cód Poist"
 
 msgid "Select Department"
-msgstr ""
+msgstr "Roghnaigh an Roinn"
 
 msgid "Select Region"
-msgstr ""
+msgstr "Roghnaigh Réigiún"
 
 msgid "Enter a valid French National Identification number."
-msgstr ""
+msgstr "Cuir isteach uimhir Aitheantais Náisiúnta bhailí na Fraince."
 
 msgid "Enter a valid French SIREN number."
-msgstr ""
+msgstr "Cuir isteach uimhir bailí SIREN na Fraince."
 
 msgid "Enter a valid French SIRET number."
-msgstr ""
+msgstr "Cuir isteach uimhir SIRET bailí na Fraince."
+
+msgid "Enter a valid French RNA number."
+msgstr "Cuir isteach uimhir RNA bailí na Fraince."
 
 msgid "SIREN Number"
-msgstr ""
+msgstr "Uimhir SIREN"
 
 msgid "SIRET Number"
-msgstr ""
+msgstr "Uimhir SIRET"
+
+msgid "RNA Number"
+msgstr "Uimhir RNA"
 
 msgid "Enter a valid postcode."
 msgstr "Iontráil postchód bailí."
 
 msgid "Bath and North East Somerset"
-msgstr ""
+msgstr "Folctha agus Thoir Thuaidh Somerset"
 
 msgid "Bedford"
-msgstr ""
+msgstr "Bedford"
 
 msgid "Berkshire"
-msgstr ""
+msgstr "Berkshire"
 
 msgid "Blackburn with Darwen"
-msgstr ""
+msgstr "Blackburn le Darwen"
 
 msgid "Blackpool"
-msgstr ""
+msgstr "Blackpool"
 
 msgid "Bournemouth"
-msgstr ""
+msgstr "Bournemouth"
 
 msgid "Brighton & Hove"
-msgstr ""
+msgstr "Brighton & Hove"
 
 msgid "Bristol"
-msgstr ""
+msgstr "Bristol"
 
 msgid "Buckinghamshire"
-msgstr ""
+msgstr "Buckinghamshire"
 
 msgid "Cambridgeshire"
-msgstr ""
+msgstr "Cambridgeshire"
 
 msgid "Central Bedfordshire"
-msgstr ""
+msgstr "Lár Bedfordshire"
 
 msgid "Cheshire East"
-msgstr ""
+msgstr "Thoir Cheshire"
 
 msgid "Cheshire West and Chester"
-msgstr ""
+msgstr "Cheshire West agus Chester"
 
 msgid "Cornwall"
-msgstr ""
+msgstr "Cornwall"
 
 msgid "Cumbria"
-msgstr ""
+msgstr "Cumbria"
 
 msgid "Darlington"
-msgstr ""
+msgstr "Darlington"
 
 msgid "Derby"
-msgstr ""
+msgstr "Derby"
 
 msgid "Derbyshire"
-msgstr ""
+msgstr "Derbyshire"
 
 msgid "Devon"
-msgstr ""
+msgstr "Devon"
 
 msgid "Dorset"
-msgstr ""
+msgstr "Dorset"
 
 msgid "Durham"
-msgstr ""
+msgstr "Durham"
 
 msgid "East Riding of Yorkshire"
-msgstr ""
+msgstr "Marcaíocht Thoir Yorkshire"
 
 msgid "East Sussex"
-msgstr ""
+msgstr "Sussex Thoir"
 
 msgid "Essex"
-msgstr ""
+msgstr "Essex"
 
 msgid "Gloucestershire"
-msgstr ""
+msgstr "Gloucestershire"
 
 msgid "Greater Manchester"
-msgstr ""
+msgstr "Mhanchain Mhór"
 
 msgid "Halton"
-msgstr ""
+msgstr "Halton"
 
 msgid "Hampshire"
-msgstr ""
+msgstr "Hampshire"
 
 msgid "Hartlepool"
-msgstr ""
+msgstr "Hartlepool"
 
 msgid "Herefordshire"
-msgstr ""
+msgstr "Herefordshire"
 
 msgid "Hertfordshire"
-msgstr ""
+msgstr "Hertfordshire"
 
 msgid "Isle of Wight"
-msgstr ""
+msgstr "Oileán Wight"
 
 msgid "Kent"
-msgstr ""
+msgstr "Caint"
 
 msgid "Kingston upon Hull"
-msgstr ""
+msgstr "Kingston ar Hull"
 
 msgid "Lancashire"
-msgstr ""
+msgstr "Lancashire"
 
 msgid "Leicester"
-msgstr ""
+msgstr "Leicester"
 
 msgid "Leicestershire"
-msgstr ""
+msgstr "Leicestershire"
 
 msgid "Lincolnshire"
-msgstr ""
+msgstr "Lincolnshire"
 
 msgid "London"
 msgstr "Londain"
 
 msgid "Luton"
-msgstr ""
+msgstr "Luton"
 
 msgid "Medway"
-msgstr ""
+msgstr "Medway"
 
 msgid "Merseyside"
-msgstr ""
+msgstr "Teach Mersey"
 
 msgid "Middlesbrough"
-msgstr ""
+msgstr "Middlesbrough"
 
 msgid "Milton Keynes"
-msgstr ""
+msgstr "Milton Keynes"
 
 msgid "Norfolk"
-msgstr ""
+msgstr "Norfolk"
 
 msgid "North East Lincolnshire"
-msgstr ""
+msgstr "Lincolnshire Thuaidh"
 
 msgid "North Lincolnshire"
-msgstr ""
+msgstr "Lincolnshire Thuaidh"
 
 msgid "North Somerset"
-msgstr ""
+msgstr "Somerset Thuaidh"
 
 msgid "North Yorkshire"
-msgstr ""
+msgstr "Yorkshire Thuaidh"
 
 msgid "Northamptonshire"
-msgstr ""
+msgstr "Northamptonshire"
 
 msgid "Northumberland"
-msgstr ""
+msgstr "Northumberland"
 
 msgid "Nottingham"
-msgstr ""
+msgstr "Nottingham"
 
 msgid "Nottinghamshire"
-msgstr ""
+msgstr "Nottinghamshire"
 
 msgid "Oxfordshire"
-msgstr ""
+msgstr "Oxfordshire"
 
 msgid "Peterborough"
-msgstr ""
+msgstr "Peterborough"
 
 msgid "Plymouth"
-msgstr ""
+msgstr "Plymouth"
 
 msgid "Poole"
-msgstr ""
+msgstr "Poole"
 
 msgid "Portsmouth"
-msgstr ""
+msgstr "Portsmouth"
 
 msgid "Redcar and Cleveland"
-msgstr ""
+msgstr "Redcar agus Cleveland"
 
 msgid "Rutland"
-msgstr ""
+msgstr "Rutland"
 
 msgid "Shropshire"
-msgstr ""
+msgstr "Shropshire"
 
 msgid "Somerset"
-msgstr ""
+msgstr "Somerset"
 
 msgid "South Gloucestershire"
-msgstr ""
+msgstr "Gloucestershire Theas"
 
 msgid "South Yorkshire"
-msgstr ""
+msgstr "Yorkshire Theas"
 
 msgid "Southampton"
-msgstr ""
+msgstr "Southampton"
 
 msgid "Southend-on-Sea"
-msgstr ""
+msgstr "Southend-on-Sea"
 
 msgid "Staffordshire"
-msgstr ""
+msgstr "Staffordshire"
 
 msgid "Stockton-on-Tees"
-msgstr ""
+msgstr "Stockton-on-Tees"
 
 msgid "Stoke-on-Trent"
-msgstr ""
+msgstr "Stoke-on-Trent"
 
 msgid "Suffolk"
-msgstr ""
+msgstr "Suffolk"
 
 msgid "Surrey"
-msgstr ""
+msgstr "Surrey"
 
 msgid "Swindon"
-msgstr ""
+msgstr "Swindon"
 
 msgid "Telford and Wrekin"
-msgstr ""
+msgstr "Telford agus Wreecin"
 
 msgid "Thurrock"
-msgstr ""
+msgstr "Thurrock"
 
 msgid "Torbay"
-msgstr ""
+msgstr "Torbay"
 
 msgid "Tyne and Wear"
-msgstr ""
+msgstr "Tyne agus Wear"
 
 msgid "Warrington"
-msgstr ""
+msgstr "Warrington"
 
 msgid "Warwickshire"
-msgstr ""
+msgstr "Warwickshire"
 
 msgid "West Midlands"
-msgstr ""
+msgstr "Iarthar na Láir na Tíre"
 
 msgid "West Sussex"
-msgstr ""
+msgstr "Iarthar Sussex"
 
 msgid "West Yorkshire"
-msgstr ""
+msgstr "Iarthar Yorkshire"
 
 msgid "Wiltshire"
-msgstr ""
+msgstr "Wiltshire"
 
 msgid "Worcestershire"
-msgstr ""
+msgstr "Worcestershire"
 
 msgid "York"
-msgstr ""
+msgstr "Eabhrac"
 
 msgid "Antrim"
-msgstr ""
+msgstr "Antrim"
 
 msgid "Armagh"
-msgstr ""
+msgstr "Armaigh"
 
 msgid "Down"
-msgstr ""
+msgstr "Síos"
 
 msgid "Fermanagh"
-msgstr ""
+msgstr "Fermanagh"
 
 msgid "Londonderry"
 msgstr "Doire"
 
 msgid "Tyrone"
-msgstr ""
+msgstr "Tyrone"
 
 msgid "Blaenau Gwent"
-msgstr ""
+msgstr "Blaenau Gwent"
 
 msgid "Bridgend"
-msgstr ""
+msgstr "Bridgend"
 
 msgid "Caerphilly"
-msgstr ""
+msgstr "Cairphilly"
 
 msgid "Cardiff"
-msgstr ""
+msgstr "Cardiff"
 
 msgid "Carmarthenshire"
-msgstr ""
+msgstr "Cathair Mharthenshire"
 
 msgid "Ceredigion"
-msgstr ""
+msgstr "Ceredigion"
 
 msgid "Conwy"
-msgstr ""
+msgstr "Conwy"
 
 msgid "Denbighshire"
-msgstr ""
+msgstr "Denbighshire"
 
 msgid "Flintshire"
-msgstr ""
+msgstr "An Flintshire"
 
 msgid "Gwynedd"
-msgstr ""
+msgstr "Gwinea"
 
 msgid "Isle of Anglesey"
-msgstr ""
+msgstr "Oileán MhÉireann"
 
 msgid "Merthyr Tydfil"
-msgstr ""
+msgstr "Merthyr Tydfil"
 
 msgid "Monmouthshire"
-msgstr ""
+msgstr "Monmouthshire"
 
 msgid "Neath Port Talbot"
-msgstr ""
+msgstr "Neath Port Talbot"
 
 msgid "Newport"
-msgstr ""
+msgstr "An Phoirt Nua"
 
 msgid "Pembrokeshire"
-msgstr ""
+msgstr "Penbrokeshire"
 
 msgid "Powys"
-msgstr ""
+msgstr "Powys"
 
 msgid "Rhondda Cynon Taf"
-msgstr ""
+msgstr "Rhondda Cynon Taf"
 
 msgid "Swansea"
-msgstr ""
+msgstr "Swansea"
 
 msgid "Torfaen"
-msgstr ""
+msgstr "Torfaen"
 
 msgid "Vale of Glamorgan"
-msgstr ""
+msgstr "Bale Glamorgan"
 
 msgid "Wrexham"
-msgstr ""
+msgstr "Wrexham"
 
 msgid "Aberdeen City"
-msgstr ""
+msgstr "Cathair Aberdeen"
 
 msgid "Aberdeenshire"
-msgstr ""
+msgstr "Aberdeenshire"
 
 msgid "Angus"
-msgstr ""
+msgstr "Angus"
 
 msgid "Argyll and Bute"
-msgstr ""
+msgstr "Argyll agus Bute"
 
 msgid "Clackmannanshire"
-msgstr ""
+msgstr "Clackmannanshire"
 
 msgid "Dumfries and Galloway"
 msgstr "Dumfries agus Galloway"
 
 msgid "Dundee City"
-msgstr ""
+msgstr "Cathair Dundee"
 
 msgid "East Ayrshire"
-msgstr ""
+msgstr "Thoir Ayrshire"
 
 msgid "East Dunbartonshire"
-msgstr ""
+msgstr "East Dunbartonshire"
 
 msgid "East Lothian"
-msgstr ""
+msgstr "Lothian Thoir"
 
 msgid "East Renfrewshire"
-msgstr ""
+msgstr "Renfrewshire Thoir"
 
 msgid "Edinburgh, City of"
 msgstr "Dún Éideann"
 
 msgid "Falkirk"
-msgstr ""
+msgstr "Falkirk"
 
 msgid "Fife"
-msgstr ""
+msgstr "Fife"
 
 msgid "Glasgow City"
-msgstr ""
+msgstr "Cathair Glaschú"
 
 msgid "Highland"
-msgstr ""
+msgstr "Ardtalamh"
 
 msgid "Inverclyde"
-msgstr ""
+msgstr "Inverclide"
 
 msgid "Midlothian"
-msgstr ""
+msgstr "Midlothian"
 
 msgid "Moray"
-msgstr ""
+msgstr "Moray"
 
 msgid "North Ayrshire"
-msgstr ""
+msgstr "Ayrshire Thuaidh"
 
 msgid "North Lanarkshire"
-msgstr ""
+msgstr "Lanarkshire Thuaidh"
 
 msgid "Perth and Kinross"
-msgstr ""
+msgstr "Perth agus Kinross"
 
 msgid "Renfrewshire"
-msgstr ""
+msgstr "Renfrewshire"
 
 msgid "Scottish Borders"
-msgstr ""
+msgstr "Teorainneacha Alban"
 
 msgid "South Ayrshire"
-msgstr ""
+msgstr "Ayrshire Theas"
 
 msgid "South Lanarkshire"
-msgstr ""
+msgstr "Lanarkshire Theas"
 
 msgid "Stirling"
-msgstr ""
+msgstr "Stirling"
 
 msgid "West Dunbartonshire"
-msgstr ""
+msgstr "West Dunbartonshire"
 
 msgid "West Lothian"
-msgstr ""
+msgstr "Iarthar Lothian"
 
 msgid "Na h-Eileanan Siar"
-msgstr ""
+msgstr "Na h-Oileáin Siar"
 
 msgid "Orkney Islands"
-msgstr "na hOiléain Orkney"
+msgstr "Inse Orc"
 
 msgid "Shetland Islands"
-msgstr "na hOiléain Shetland"
+msgstr "Inse Shealtainn"
 
 msgid "England"
 msgstr "Sasana"
@@ -3814,49 +4022,109 @@ msgid "Scotland"
 msgstr "Albain"
 
 msgid "An International Bank Account Number"
-msgstr ""
+msgstr "Uimhir Cuntas Bainc Idirnáisi"
 
 msgid "Business Identifier Code"
-msgstr ""
+msgstr "Cód Aitheantóir Gnó"
 
 #, python-format
-msgid "%s is not a valid character for IBAN."
-msgstr ""
+msgid "%(character)s is not a valid character for IBAN."
+msgstr "Ní carachtar bailí é %(character)s do IBAN."
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
-msgstr ""
+msgstr "Caithfidh %(number)s carachtar a bheith in IBANs %(country_code)s."
 
 #, python-format
-msgid "%s is not a valid country code for IBAN."
-msgstr ""
+msgid "%(country_code)s is not a valid country code for IBAN."
+msgstr "Ní cód tíre bailí é %(country_code)s do IBAN."
 
 #, python-format
-msgid "%s IBANs are not allowed in this field."
-msgstr ""
+msgid "%(country_code)s IBANs are not allowed in this field."
+msgstr "Ní cheadaítear IBANanna %(country_code)s sa réimse seo."
 
 msgid "Not a valid IBAN."
-msgstr ""
+msgstr "Ní IBAN bailí."
 
 msgid "BIC codes have either 8 or 11 characters."
-msgstr ""
+msgstr "Tá 8 nó 11 carachtar ag cóid BIC."
+
+msgid "BIC codes only contain alphabet letters and digits."
+msgstr "Ní chuimsíonn cóid BIC ach litreacha agus digití aibítir."
 
 #, python-format
-msgid "%s is not a valid institution code."
-msgstr ""
+msgid "%(institution_code)s is not a valid institution code."
+msgstr "Ní cód bailí institiúide é %(institution_code)s."
 
 #, python-format
-msgid "%s is not a valid country code."
-msgstr ""
+msgid "%(country_code)s is not a valid country code."
+msgstr "Ní cód tíre bailí é %(country_code)s."
+
+#, python-format
+msgid "%(location_code)s is not a valid location code."
+msgstr "Ní cód suímh bailí é %(location_code)s."
 
 msgid "Not a valid EAN code."
-msgstr ""
+msgstr "Ní cód EAN bailí."
+
+#, python-format
+msgid "%(vatin)s is not a valid VAT identification number."
+msgstr "Ní uimhir aitheantais bailí CBL é %(vatin)s."
+
+msgid "Ahafo"
+msgstr "Ahafo"
+
+msgid "Ashanti"
+msgstr "Ashanti"
+
+msgid "Bono East"
+msgstr "Bono Thoir"
+
+msgid "Brong Ahafo"
+msgstr "Brong Ahafo"
+
+msgid "Eastern"
+msgstr "Oirthear"
+
+msgid "Greater Accra"
+msgstr "Accra Mhór"
+
+msgid "North East"
+msgstr "Thoir Thuaidh"
+
+msgid "Northern"
+msgstr "Tuaiscirt"
+
+msgid "Oti"
+msgstr "Oti"
+
+msgid "Savannah"
+msgstr "Savannah"
+
+msgid "Upper East"
+msgstr "Thoir Uachtarach"
+
+msgid "Upper West"
+msgstr "Thiar Uachtarach"
+
+msgid "Western"
+msgstr "Iarthar"
+
+msgid "Western North"
+msgstr "Iarthar Thuaidh"
+
+msgid "Volta"
+msgstr "Volta"
 
 msgid "Enter a valid 5-digit greek postal code."
-msgstr ""
+msgstr "Cuir isteach cód poist 5 dhigit bailí Gréagach."
 
 msgid "Enter a valid greek tax number (9 digits)."
+msgstr "Cuir isteach uimhir chánach bailí na Gréige (9 dhigit)."
+
+msgid "Enter a valid greek social security number (AMKA - 11 digits)."
 msgstr ""
+"Cuir isteach uimhir bhailí slándála sóisialta na Gréige (AMKA - 11 dhigit)."
 
 msgid "Enter a valid 13 digit JMBG"
 msgstr "Iontráil JMBG 13 digit bailí"
@@ -3865,7 +4133,7 @@ msgid "Error in date segment"
 msgstr "Earráid sa deighleog dáta"
 
 msgid "Enter a valid 11 digit OIB"
-msgstr "Iontráil OIB 11 dhigit bailí "
+msgstr "Cuir isteach OIB bailí 11 dhigit"
 
 msgid "Enter a valid vehicle license plate number"
 msgstr "Cuir isteach uimhir feithicle bailí pláta cheadúnas"
@@ -3886,124 +4154,124 @@ msgid "Card issue number cannot be zero"
 msgstr "Ní féidir uimhir eisiúna cárta a bheith nialas"
 
 msgid "Grad Zagreb"
-msgstr ""
+msgstr "Zagreb Town"
 
 msgid "Bjelovarsko-bilogorska županija"
-msgstr ""
+msgstr "Bjelovarsko-Bilogorska County"
 
 msgid "Brodsko-posavska županija"
-msgstr ""
+msgstr "Brodsko-Posavska County"
 
 msgid "Dubrovačko-neretvanska županija"
-msgstr ""
+msgstr "Comhphointe Dubrovačko-Neretvanska"
 
 msgid "Istarska županija"
-msgstr ""
+msgstr "An Iostar County"
 
 msgid "Karlovačka županija"
-msgstr ""
+msgstr "Carlovac County"
 
 msgid "Koprivničko-križevačka županija"
-msgstr ""
+msgstr "An Chontae Críochnaitheach Coprívnico-Críochnaigh"
 
 msgid "Krapinsko-zagorska županija"
-msgstr ""
+msgstr "Krapinsko-Zagorsk County"
 
 msgid "Ličko-senjska županija"
-msgstr ""
+msgstr "Comhpháirt Lichco-Senic"
 
 msgid "Međimurska županija"
-msgstr ""
+msgstr "An Chontae Međimurska"
 
 msgid "Osječko-baranjska županija"
-msgstr ""
+msgstr "Comhphointe Osjecko-Baránach"
 
 msgid "Požeško-slavonska županija"
-msgstr ""
+msgstr "Požesko-Slavonska County"
 
 msgid "Primorsko-goranska županija"
-msgstr ""
+msgstr "Primorsko-Goran County"
 
 msgid "Sisačko-moslavačka županija"
-msgstr ""
+msgstr "Chontaine Sisacko-Moslavach"
 
 msgid "Splitsko-dalmatinska županija"
-msgstr ""
+msgstr "Splitsko-Dalmatine County"
 
 msgid "Šibensko-kninska županija"
-msgstr ""
+msgstr "An Chontaine Sibán-Kninsk"
 
 msgid "Varaždinska županija"
-msgstr ""
+msgstr "Comhpháiste Varaždinska"
 
 msgid "Virovitičko-podravska županija"
-msgstr ""
+msgstr "Virovitico-Podravtic Country"
 
 msgid "Vukovarsko-srijemska županija"
-msgstr ""
+msgstr "Chontae Vukovarsko-srijemska"
 
 msgid "Zadarska županija"
-msgstr ""
+msgstr "Cáipéine Cónaidhm"
 
 msgid "Zagrebačka županija"
-msgstr ""
+msgstr "An Chontae Zagreb"
 
 msgid "Bács-Kiskun"
-msgstr ""
+msgstr "Bács-Kiskun"
 
 msgid "Baranya"
-msgstr ""
+msgstr "Baranya"
 
 msgid "Békés"
-msgstr ""
+msgstr "Békés"
 
 msgid "Borsod-Abaúj-Zemplén"
-msgstr ""
+msgstr "Borsod-Abaúj-Zemplén"
 
 msgid "Csongrád"
-msgstr ""
+msgstr "Csongrád"
 
 msgid "Fejér"
-msgstr ""
+msgstr "Fejer"
 
 msgid "Győr-Moson-Sopron"
-msgstr ""
+msgstr "Gyor-Moson-Sopron"
 
 msgid "Hajdú-Bihar"
-msgstr ""
+msgstr "Hajdú-Bihar"
 
 msgid "Heves"
-msgstr ""
+msgstr "Heves"
 
 msgid "Jász-Nagykun-Szolnok"
-msgstr ""
+msgstr "Jász-Nagykun-Szolnok"
 
 msgid "Komárom-Esztergom"
-msgstr ""
+msgstr "Comárom-Estergom"
 
 msgid "Nógrád"
-msgstr ""
+msgstr "Nógrád"
 
 msgid "Pest"
-msgstr ""
+msgstr "Lotnaidí"
 
 msgid "Somogy"
-msgstr ""
+msgstr "Somogy"
 
 msgid "Szabolcs-Szatmár-Bereg"
-msgstr ""
+msgstr "Szabolcs-Szatmár-Bereg"
 
 msgid "Tolna"
-msgstr ""
+msgstr "Tolna"
 
 msgid "Vas"
-msgstr ""
+msgstr "Vas"
 
 msgid "Veszprém"
-msgstr ""
+msgstr "Veszprem"
 
 msgid "Zala"
-msgstr ""
+msgstr "Zala"
 
 msgid "Enter a valid post code"
 msgstr "Iontráil cód poist bailí"
@@ -4012,124 +4280,127 @@ msgid "Enter a valid NIK/KTP number"
 msgstr "Cuir isteach uimhir NIK/KTP bailí"
 
 msgid "Aceh"
-msgstr ""
+msgstr "Aceh"
 
 msgid "Bali"
-msgstr ""
+msgstr "Bali"
 
 msgid "Banten"
-msgstr ""
+msgstr "Banten"
 
 msgid "Bengkulu"
-msgstr ""
+msgstr "Bengkulu"
 
 msgid "Yogyakarta"
-msgstr ""
+msgstr "Yogyakarta"
 
 msgid "Jakarta"
-msgstr ""
+msgstr "Iacárta"
 
 msgid "Gorontalo"
-msgstr ""
+msgstr "Gorontalo"
 
 msgid "Jambi"
-msgstr ""
+msgstr "Jambi"
 
 msgid "Jawa Barat"
-msgstr ""
+msgstr "West Jawa"
 
 msgid "Jawa Tengah"
-msgstr ""
+msgstr "Jawa Middle"
 
 msgid "Jawa Timur"
-msgstr ""
+msgstr "Jawa Timur"
 
 msgid "Kalimantan Barat"
-msgstr ""
+msgstr "Iarthar Kalimantan"
 
 msgid "Kalimantan Selatan"
-msgstr ""
+msgstr "Kalimantan Theas"
 
 msgid "Kalimantan Tengah"
-msgstr ""
+msgstr "Kalimantan Meir"
 
 msgid "Kalimantan Timur"
-msgstr ""
+msgstr "Kalimantan Timur"
+
+msgid "Kalimantan Utara"
+msgstr "Kalimantan Thuaidh"
 
 msgid "Kepulauan Bangka-Belitung"
-msgstr ""
+msgstr "Oileáin Bhanga Beiltiung"
 
 msgid "Kepulauan Riau"
-msgstr ""
+msgstr "Oileáin Riau"
 
 msgid "Lampung"
-msgstr ""
+msgstr "Lampung"
 
 msgid "Maluku"
-msgstr ""
+msgstr "Maluku"
 
 msgid "Maluku Utara"
-msgstr ""
+msgstr "Maluku Thuaidh"
 
 msgid "Nusa Tenggara Barat"
-msgstr ""
+msgstr "Nusa Tenggara West"
 
 msgid "Nusa Tenggara Timur"
-msgstr ""
+msgstr "Nusa Tenggara Thoir"
 
 msgid "Papua"
-msgstr ""
+msgstr "Phapua"
 
 msgid "Papua Barat"
-msgstr ""
+msgstr "Iarthar Phapua"
 
 msgid "Riau"
-msgstr ""
+msgstr "Riau"
 
 msgid "Sulawesi Barat"
-msgstr ""
+msgstr "Sulawesi West"
 
 msgid "Sulawesi Selatan"
-msgstr ""
+msgstr "Sulawesi Theas"
 
 msgid "Sulawesi Tengah"
-msgstr ""
+msgstr "Sulawesi Central"
 
 msgid "Sulawesi Tenggara"
-msgstr ""
+msgstr "Sulawesi Tenggara"
 
 msgid "Sulawesi Utara"
-msgstr ""
+msgstr "Sulawesi Thuaidh"
 
 msgid "Sumatera Barat"
-msgstr ""
+msgstr "Sumatera West"
 
 msgid "Sumatera Selatan"
-msgstr ""
+msgstr "Sumatera Southern"
 
 msgid "Sumatera Utara"
-msgstr ""
+msgstr "Sumatera Thuaidh"
 
 msgid "Magelang"
-msgstr ""
+msgstr "Magelang"
 
 msgid "Surakarta - Solo"
-msgstr ""
+msgstr "Surakarta - Aonair"
 
 msgid "Madiun"
-msgstr ""
+msgstr "Madiun"
 
 msgid "Kediri"
-msgstr ""
+msgstr "Kediri"
 
 msgid "Tapanuli"
-msgstr ""
+msgstr "Tapanuli"
 
 msgid "Nanggroe Aceh Darussalam"
-msgstr ""
+msgstr "Nanggroe Aceh Darussalam"
 
 msgid "Kepulauan Bangka Belitung"
-msgstr ""
+msgstr "Oileáin Bangka Belitung"
 
 msgid "Corps Consulate"
 msgstr "Cór gconsalacht"
@@ -4138,76 +4409,79 @@ msgid "Corps Diplomatic"
 msgstr "Cór Taidhleoireachta"
 
 msgid "Bandung"
-msgstr ""
+msgstr "Bandung"
 
 msgid "Sulawesi Utara Daratan"
-msgstr ""
+msgstr "Sulawesi Thuaidh Daratan"
 
 msgid "NTT - Timor"
-msgstr ""
+msgstr "NTT - Timor"
 
 msgid "Sulawesi Utara Kepulauan"
-msgstr ""
+msgstr "Sulawesi Oileáin Thuaidh"
 
 msgid "NTB - Lombok"
-msgstr ""
+msgstr "NTB - Lombok"
 
 msgid "Papua dan Papua Barat"
-msgstr ""
+msgstr "Phapua agus Iarthar Phapua"
 
 msgid "Cirebon"
-msgstr ""
+msgstr "Cirebon"
 
 msgid "NTB - Sumbawa"
-msgstr ""
+msgstr "NTB - Sumbawa"
 
 msgid "NTT - Flores"
-msgstr ""
+msgstr "NTT - Bláthanna"
 
 msgid "NTT - Sumba"
-msgstr ""
+msgstr "NTT - Shumba"
 
 msgid "Bogor"
-msgstr ""
+msgstr "Bogor"
 
 msgid "Pekalongan"
-msgstr ""
+msgstr "Pequalongan"
 
 msgid "Semarang"
-msgstr ""
+msgstr "Semarang"
 
 msgid "Pati"
-msgstr ""
+msgstr "Pates"
 
 msgid "Surabaya"
-msgstr ""
+msgstr "Surabaya"
 
 msgid "Madura"
-msgstr ""
+msgstr "Madura"
 
 msgid "Malang"
-msgstr ""
+msgstr "Malang"
 
 msgid "Jember"
-msgstr ""
+msgstr "Jember"
 
 msgid "Banyumas"
-msgstr ""
+msgstr "Bathroom"
 
 msgid "Federal Government"
 msgstr "Rialtas Feidearálach"
 
 msgid "Bojonegoro"
-msgstr ""
+msgstr "Bojonegoro"
 
 msgid "Purwakarta"
-msgstr ""
+msgstr "Purwakarta"
 
 msgid "Sidoarjo"
-msgstr ""
+msgstr "Sidoarjo"
 
 msgid "Garut"
-msgstr ""
+msgstr "Gearts"
+
+msgid "Enter a valid Eircode."
+msgstr "Cuir isteach Eircode bailí."
 
 msgid "Carlow"
 msgstr "Ceatharlach"
@@ -4258,7 +4532,7 @@ msgid "Mayo"
 msgstr "Mhaigh Eo"
 
 msgid "Meath"
-msgstr "an Mhí"
+msgstr "An Mhí"
 
 msgid "Monaghan"
 msgstr "Muineachán"
@@ -4288,7 +4562,7 @@ msgid "Wicklow"
 msgstr "Cill Mhantáin"
 
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
-msgstr ""
+msgstr "Cuir isteach cód poist san fhormáid XXXXXXX (nó XXXXX) - digití amháin"
 
 msgid "Enter a valid ID number."
 msgstr "Cuir isteach uimhir aitheantais bailí."
@@ -4302,9 +4576,113 @@ msgstr "Cuir isteach an stát Indiach nó gcríoch."
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
 msgstr ""
+"Cuir isteach uimhir bhailí Aadhaar i bhformáid XXXX XXXX XXXX nó XXXX-XXXX-"
+"XXXX."
+
+msgid "Please enter a valid Indian PAN card number."
+msgstr "Cuir isteach uimhir bhailí cárta PAN Indiach le do thoil."
 
 msgid "Indian state (two uppercase letters)"
-msgstr ""
+msgstr "Stát Indiach (dhá litreacha uachtaracha)"
+
+msgid "PAN Card number field"
+msgstr "Réimse uimhir Cárta PAN"
+
+msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
+msgstr "Cuir isteach cód poist san fhormáid XXXXXXXXXX - digití amháin"
+
+msgid "Alborz"
+msgstr "Alborz"
+
+msgid "Ardabil"
+msgstr "Ardabil"
+
+msgid "Azerbaijan East"
+msgstr "An tAsarbaiseáin"
+
+msgid "Azerbaijan Wast"
+msgstr "Asarbaiseáin Wast"
+
+msgid "Bushehr"
+msgstr "Bushehr"
+
+msgid "Chahar Mahaal and Bakhtiari"
+msgstr "Chahar Mahaal agus Bakhtiari"
+
+msgid "Fars"
+msgstr "Fars"
+
+msgid "Gilan"
+msgstr "Gilan"
+
+msgid "Golestan"
+msgstr "Golestán"
+
+msgid "Hamadan"
+msgstr "Hamadan"
+
+msgid "Hormozgan"
+msgstr "Hormozgan"
+
+msgid "Ilam"
+msgstr "Ilam"
+
+msgid "Isfahan"
+msgstr "Isfahan"
+
+msgid "Kerman"
+msgstr "Kerman"
+
+msgid "Kermanshah"
+msgstr "Kermanshah"
+
+msgid "Khorasan North"
+msgstr "Khorasan Thuaidh"
+
+msgid "Khorasan Razavi"
+msgstr "Khorasan Razavi"
+
+msgid "Khorasan South"
+msgstr "Khorasan Theas"
+
+msgid "Khuzestan"
+msgstr "Khuzestan"
+
+msgid "Kohgiluyeh and Boyer-Ahmad"
+msgstr "Kohgiluyeh agus Boyer-Ahmad"
+
+msgid "Kurdistan"
+msgstr "An Chúrdístan"
+
+msgid "Lorestan"
+msgstr "Lorestan"
+
+msgid "Markazi"
+msgstr "Markazi"
+
+msgid "Mazandaran"
+msgstr "Measing"
+
+msgid "Qazvin"
+msgstr "Cazvin"
+
+msgid "Qom"
+msgstr "Qom"
+
+msgid "Semnan"
+msgstr "Semnan"
+
+msgid "Sistan and Baluchestan"
+msgstr "Sistan agus Baluchestan"
+
+msgid "Tehran"
+msgstr "Tehran"
+
+msgid "Yazd"
+msgstr "Yazd"
+
+msgid "Zanjan"
+msgstr "Zanjan"
 
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
@@ -4319,1390 +4697,1465 @@ msgid "Enter a valid zip code."
 msgstr "Iontráil zip-cód bailí."
 
 msgid "Enter a valid Tax code."
-msgstr ""
+msgstr "Cuir isteach cód Cánach bailí."
 
 msgid "Enter a valid VAT number."
 msgstr "Iontráil uimhir CBL bailí."
 
 msgid "Check digit does not match."
-msgstr ""
+msgstr "Ní mheaitseálann an dhigit seiceála."
 
 msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
 msgstr "Iontráil cód poist i bhformáid XXXXXXX nó XXX-XXXX."
 
 msgid "Hokkaido"
-msgstr ""
+msgstr "Hokkaido"
 
 msgid "Aomori"
-msgstr ""
+msgstr "Aomori"
 
 msgid "Iwate"
-msgstr ""
+msgstr "Iwate"
 
 msgid "Miyagi"
-msgstr ""
+msgstr "Miyagi"
 
 msgid "Akita"
-msgstr ""
+msgstr "Akita"
 
 msgid "Yamagata"
-msgstr ""
+msgstr "Yamagata"
 
 msgid "Fukushima"
-msgstr ""
+msgstr "Fukushima"
 
 msgid "Ibaraki"
-msgstr ""
+msgstr "Ibaraki"
 
 msgid "Tochigi"
-msgstr ""
+msgstr "Tochigi"
 
 msgid "Gunma"
-msgstr ""
+msgstr "Gunma"
 
 msgid "Saitama"
-msgstr ""
+msgstr "Saitama"
 
 msgid "Chiba"
-msgstr ""
+msgstr "Chiba"
 
 msgid "Tokyo"
 msgstr "Tóiceo"
 
 msgid "Kanagawa"
-msgstr ""
+msgstr "Kanagawa"
 
 msgid "Niigata"
-msgstr ""
+msgstr "Niigata"
 
 msgid "Toyama"
-msgstr ""
+msgstr "Toyama"
 
 msgid "Ishikawa"
-msgstr ""
+msgstr "Ishikawa"
 
 msgid "Fukui"
-msgstr ""
+msgstr "Fukui"
 
 msgid "Yamanashi"
-msgstr ""
+msgstr "Yamanashi"
 
 msgid "Nagano"
-msgstr ""
+msgstr "Nagano"
 
 msgid "Gifu"
-msgstr ""
+msgstr "Gifu"
 
 msgid "Shizuoka"
-msgstr ""
+msgstr "Shizuoka"
 
 msgid "Aichi"
-msgstr ""
+msgstr "Aichi"
 
 msgid "Mie"
-msgstr ""
+msgstr "Mie"
 
 msgid "Shiga"
-msgstr ""
+msgstr "Shipping"
 
 msgid "Kyoto"
-msgstr ""
+msgstr "Kyoto"
 
 msgid "Osaka"
-msgstr ""
+msgstr "Osaka"
 
 msgid "Hyogo"
-msgstr ""
+msgstr "Hyogo"
 
 msgid "Nara"
-msgstr ""
+msgstr "Nara"
 
 msgid "Wakayama"
-msgstr ""
+msgstr "Wakayama"
 
 msgid "Tottori"
-msgstr ""
+msgstr "Tottori"
 
 msgid "Shimane"
-msgstr ""
+msgstr "Shimane"
 
 msgid "Okayama"
-msgstr ""
+msgstr "Okayama"
 
 msgid "Hiroshima"
-msgstr ""
+msgstr "Hiroshima"
 
 msgid "Yamaguchi"
-msgstr ""
+msgstr "Yamaguchi"
 
 msgid "Tokushima"
-msgstr ""
+msgstr "Tokushima"
 
 msgid "Kagawa"
-msgstr ""
+msgstr "Kagawa"
 
 msgid "Ehime"
-msgstr ""
+msgstr "Ehime"
 
 msgid "Kochi"
-msgstr ""
+msgstr "Kochi"
 
 msgid "Fukuoka"
-msgstr ""
+msgstr "Fukuoka"
 
 msgid "Saga"
-msgstr ""
+msgstr "Saga"
 
 msgid "Nagasaki"
-msgstr ""
+msgstr "Nagasaki"
 
 msgid "Kumamoto"
-msgstr ""
+msgstr "Kumamoto"
 
 msgid "Oita"
-msgstr ""
+msgstr "Oita"
 
 msgid "Miyazaki"
-msgstr ""
+msgstr "Miyazaki"
 
 msgid "Kagoshima"
-msgstr ""
+msgstr "Kagoshima"
 
 msgid "Okinawa"
-msgstr ""
+msgstr "Okinawa"
 
 msgid "Enter a valid Kuwaiti Civil ID number"
 msgstr "Iontráil uimhir ID Sibhialta Kuwati bailí"
 
 msgid "Kuwait City"
-msgstr ""
+msgstr "Cathair Cuáit"
 
 msgid "Abdullah Al-Salem"
-msgstr ""
+msgstr "Abdullah Al-Salem"
 
 msgid "Adailiya"
-msgstr ""
+msgstr "Adailia"
 
 msgid "Bneid Al Qar"
-msgstr ""
+msgstr "Bneid Al Qar"
 
 msgid "Daiya"
-msgstr ""
+msgstr "Daiya"
 
 msgid "Dasma"
-msgstr ""
+msgstr "Dasma"
 
 msgid "Dasman"
-msgstr ""
+msgstr "Dasman"
 
 msgid "Doha"
-msgstr ""
+msgstr "Doha"
 
 msgid "Faiha"
-msgstr ""
+msgstr "Faiha"
 
 msgid "Jaber Al Ahmad"
-msgstr ""
+msgstr "Jaber Al Ahmad"
 
 msgid "Jibla"
-msgstr ""
+msgstr "Jibla"
 
 msgid "Kaifan"
-msgstr ""
+msgstr "Cairfan"
 
 msgid "Khaldiya"
-msgstr ""
+msgstr "Khaldia"
 
 msgid "Kuwait Free Trade Zone"
-msgstr ""
+msgstr "Crios Saorthrádála Cuáit"
 
 msgid "Mansouriya"
-msgstr ""
+msgstr "Mansouriya"
 
 msgid "Mirqab"
-msgstr ""
+msgstr "Mirqab"
 
 msgid "Mubarekiya Camps"
-msgstr ""
+msgstr "Campaí Mubarekiya"
 
 msgid "Nahdha"
-msgstr ""
+msgstr "Nahdha"
 
 msgid "North West Al-Sulaibikhat"
-msgstr ""
+msgstr "Iarthar Thuaidh Al-Sulaibikhat"
 
 msgid "Nuzha"
-msgstr ""
+msgstr "Nuzha"
 
 msgid "Qadsiya"
-msgstr ""
+msgstr "Field"
 
 msgid "Qairawan"
-msgstr ""
+msgstr "Qairawan"
 
 msgid "Qortuba"
-msgstr ""
+msgstr "Cortuba"
 
 msgid "Rawda"
-msgstr ""
+msgstr "Round"
 
 msgid "Salhiya"
-msgstr ""
+msgstr "Salhiya"
 
 msgid "Shamiya"
-msgstr ""
+msgstr "Shamiya"
 
 msgid "Sharq"
-msgstr ""
+msgstr "Shark"
 
 msgid "Shuwaikh Administrative"
-msgstr ""
+msgstr "Riarachán Shuwaikh"
 
 msgid "Shuwaikh Industrial"
-msgstr ""
+msgstr "Shuwaikh Tionscail"
 
 msgid "Shuwaikh Residential"
-msgstr ""
+msgstr "Shuwaikh Cónaithe"
 
 msgid "Sulaibikhat"
-msgstr ""
+msgstr "Sulaibikhat"
 
 msgid "Surra"
-msgstr ""
+msgstr "Surra"
 
 msgid "Yarmouk"
-msgstr ""
+msgstr "Yarmouk"
 
 msgid "Farwaniya"
-msgstr ""
+msgstr "Farwania"
 
 msgid "Abbasiya"
-msgstr ""
+msgstr "Abbasia"
 
 msgid "Abdullah Al Mubarak Al Sabah"
-msgstr ""
+msgstr "Abdullah Al Mubarak Al Sabah"
 
 msgid "Abraq Khaitan"
-msgstr ""
+msgstr "Abraq Khaitan"
 
 msgid "Al-Dajeej"
-msgstr ""
+msgstr "Al-Dajej"
 
 msgid "Al-Shadadiya"
-msgstr ""
+msgstr "Al-Shadadiya"
 
 msgid "Andalous"
-msgstr ""
+msgstr "Andalach"
 
 msgid "Ardiya"
-msgstr ""
+msgstr "Ardiya"
 
 msgid "Ardiya Small Industrial"
-msgstr ""
+msgstr "Ardiya Tionscail Beag"
 
 msgid "Ardiya Storage Zone"
-msgstr ""
+msgstr "Crios Stórála Ardiya"
 
 msgid "Firdous"
-msgstr ""
+msgstr "Firdous"
 
 msgid "Ishbiliya"
-msgstr ""
+msgstr "Ishbiliya"
 
 msgid "Jeleeb Al-Shuyoukh"
-msgstr ""
+msgstr "Jeleeb Al-Shuyoukh"
 
 msgid "Khaitan"
-msgstr ""
+msgstr "Khaitan"
 
 msgid "Omariya"
-msgstr ""
+msgstr "Omaria"
 
 msgid "Rabia"
-msgstr ""
+msgstr "Rabia"
 
 msgid "Rai"
-msgstr ""
+msgstr "Rai"
 
 msgid "Rehab"
-msgstr ""
+msgstr "Athshlánú"
 
 msgid "Rigai"
-msgstr ""
+msgstr "Rigai"
 
 msgid "Sabah Al Nasser"
-msgstr ""
+msgstr "Sabah Al Nasser"
 
 msgid "South Khaitan - Exhibits"
-msgstr ""
+msgstr "South Khaitan - Taispeántais"
 
 msgid "Mubarak Al Kabir"
-msgstr ""
+msgstr "Mubarak Al Kabir"
 
 msgid "Abu Al Hasaniya"
-msgstr ""
+msgstr "Abu Al Hasaniya"
 
 msgid "Abu Fatira"
-msgstr ""
+msgstr "Abu Fatira"
 
 msgid "Adan"
-msgstr ""
+msgstr "Adan"
 
 msgid "Al-Masayel"
-msgstr ""
+msgstr "Al-Masayel"
 
 msgid "Coast Strip B"
-msgstr ""
+msgstr "Stráice Cósta B"
 
 msgid "Fnaitees"
-msgstr ""
+msgstr "Fainitees"
 
 msgid "Messila"
-msgstr ""
+msgstr "Messila"
 
 msgid "Mubarak Al Kabeer"
-msgstr ""
+msgstr "Mubarak Al Kabir"
 
 msgid "Qurain"
-msgstr ""
+msgstr "Qurain"
 
 msgid "Qusor"
-msgstr ""
+msgstr "Kusor"
 
 msgid "Sabah Al Salem"
-msgstr ""
+msgstr "Sabah Al Salem"
 
 msgid "Sabhan Industrial Area"
-msgstr ""
+msgstr "Limistéar Tionscail Sabhan"
 
 msgid "South Wista"
-msgstr ""
+msgstr "Wista Theas"
 
 msgid "West Abu Fatira Small Industrial"
-msgstr ""
+msgstr "Tionscail Beag West Abu Fatira"
 
 msgid "Hawally"
-msgstr ""
+msgstr "Hawally"
 
 msgid "Al-Siddeeq"
-msgstr ""
+msgstr "Al-Siddiq"
 
 msgid "Anjafa"
-msgstr ""
+msgstr "Anjafa"
 
 msgid "Bayan"
-msgstr ""
+msgstr "Bathair"
 
 msgid "Hateen"
-msgstr ""
+msgstr "Hate"
 
 msgid "Jabriya"
-msgstr ""
+msgstr "Jabriya"
 
 msgid "Maidan Hawally"
-msgstr ""
+msgstr "Maidan Hawally"
 
 msgid "Mishref"
-msgstr ""
+msgstr "Mishref"
 
 msgid "Mubarak Al-Abdullah"
-msgstr ""
+msgstr "Mubarak Al-Abdullah"
 
 msgid "Rumaithiya"
-msgstr ""
+msgstr "Rumaithiya"
 
 msgid "Al-Salam"
-msgstr ""
+msgstr "Al-Salam"
 
 msgid "Salmiya"
-msgstr ""
+msgstr "Salmia"
 
 msgid "Salwa"
-msgstr ""
+msgstr "Salwa"
 
 msgid "Shaab"
-msgstr ""
+msgstr "Shaab"
 
 msgid "Shuhada"
-msgstr ""
+msgstr "Shohada"
 
 msgid "Zahra"
-msgstr ""
+msgstr "Zahra"
 
 msgid "Ahmadi"
-msgstr ""
+msgstr "Ahmadi"
 
 msgid "Abu Halifa"
-msgstr ""
+msgstr "Abu Halifa"
 
 msgid "Al Khiran"
-msgstr ""
+msgstr "Al Khiran"
 
 msgid "Al Wafrah"
-msgstr ""
+msgstr "Al Wafrah"
 
 msgid "Al-Nuwaiseeb"
-msgstr ""
+msgstr "Al-Nuwaiseeb"
 
 msgid "Al-Riqqa"
-msgstr ""
+msgstr "Al-Riqqa"
 
 msgid "Ali Sabah Al Salem"
-msgstr ""
+msgstr "Ali Sabah Al Salem"
 
 msgid "Assabahiyah"
-msgstr ""
+msgstr "Assabahiyah"
 
 msgid "Bnaider"
-msgstr ""
+msgstr "Bnaider"
 
 msgid "Dahar"
-msgstr ""
+msgstr "Dahar"
 
 msgid "Eqaila"
-msgstr ""
+msgstr "Eqaila"
 
 msgid "Fahad Al Ahmad"
-msgstr ""
+msgstr "Fahad Al Ahmad"
 
 msgid "Fahaheel"
-msgstr ""
+msgstr "Fahaheel"
 
 msgid "Fintas"
-msgstr ""
+msgstr "Fintas"
 
 msgid "Hadiya"
-msgstr ""
+msgstr "Hadiya"
 
 msgid "Jaber Al Ali"
-msgstr ""
+msgstr "Jaber Al Ali"
 
 msgid "Mahboula"
-msgstr ""
+msgstr "Mahboula"
 
 msgid "Mangaf"
-msgstr ""
+msgstr "Mangaf"
 
 msgid "Sabah Al Ahmad"
-msgstr ""
+msgstr "Sabah Al Ahmad"
 
 msgid "Al Dubaiya"
-msgstr ""
+msgstr "Al Dubaiya"
 
 msgid "Mina Abdullah"
-msgstr ""
+msgstr "Mina Abdullah"
 
 msgid "Shuaiba Block 1"
-msgstr ""
+msgstr "Shuaiba Bloc 1"
 
 msgid "West Industrial Shuaiba"
-msgstr ""
+msgstr "Shuaiba Tionscail Thiar"
 
 msgid "Zour"
-msgstr ""
+msgstr "Sour"
 
 msgid "Jahra"
-msgstr ""
+msgstr "Jahra"
 
 msgid "Al Sulaibiya Industrial 1"
-msgstr ""
+msgstr "Al Sulaibiya Industrial 1"
 
 msgid "Al Sulaibiya Industrial 2"
-msgstr ""
+msgstr "Al Sulaibiya Industrial 2"
 
 msgid "Amgarah Industrial Area"
-msgstr ""
+msgstr "Limistéar Tionscail Amgarah"
 
 msgid "Naeem"
-msgstr ""
+msgstr "Naeem"
 
 msgid "Naseem"
-msgstr ""
+msgstr "Naseem"
 
 msgid "Oyoun"
-msgstr ""
+msgstr "Oyoun"
 
 msgid "Qasr"
-msgstr ""
+msgstr "Qasr"
 
 msgid "Saad Al Abdullah"
-msgstr ""
+msgstr "Saad Al Abdullah"
 
 msgid "Sulaibiya"
-msgstr ""
+msgstr "Sulaibia"
 
 msgid "Taima'"
-msgstr ""
+msgstr "Taima'"
 
 msgid "Waha"
-msgstr ""
+msgstr "Waha"
 
 msgid "Farwaniyah"
-msgstr ""
+msgstr "Farwaniyah"
 
 msgid "Capital"
-msgstr ""
+msgstr "Caipitil"
 
 msgid "Hawalli"
+msgstr "Hawalli"
+
+msgid "Enter a postal code in format NNNNN"
+msgstr ""
+
+msgid "Kandy"
+msgstr ""
+
+msgid "Matale"
+msgstr ""
+
+msgid "Nuwara Eliya"
+msgstr ""
+
+msgid "Anuradhapura"
+msgstr ""
+
+msgid "Polonnaruwa"
+msgstr ""
+
+msgid "Jaffna"
+msgstr ""
+
+msgid "Kilinochchi"
+msgstr ""
+
+msgid "Mannar"
+msgstr ""
+
+msgid "Vavuniya"
+msgstr ""
+
+msgid "Mullativu"
+msgstr ""
+
+msgid "Alambil"
+msgstr ""
+
+msgid "Ampara"
+msgstr ""
+
+msgid "Batticaloa"
+msgstr ""
+
+msgid "Trincomalee"
+msgstr ""
+
+msgid "Kurunagala"
+msgstr ""
+
+msgid "Puttalam"
+msgstr ""
+
+msgid "Galle"
+msgstr ""
+
+msgid "Hambanthota"
+msgstr ""
+
+msgid "Mathara"
+msgstr ""
+
+msgid "Badulla"
+msgstr ""
+
+msgid "Monaragala"
+msgstr ""
+
+msgid "Kegalle"
+msgstr ""
+
+msgid "Rathnapura"
+msgstr ""
+
+msgid "Colombo"
+msgstr ""
+
+msgid "Gampaha"
+msgstr ""
+
+msgid "Kaluthara"
+msgstr ""
+
+msgid "North Central"
+msgstr ""
+
+msgid "North Western"
+msgstr ""
+
+msgid "Sabaragamuwa"
+msgstr ""
+
+msgid "Southern"
+msgstr ""
+
+msgid "Uva"
 msgstr ""
 
 msgid "ID Code consists of exactly 11 decimal digits."
-msgstr ""
+msgstr "Is éard atá i gCód Aitheantais díreach 11 dhigit deachúil."
 
 msgid "Wrong ID Code checksum."
-msgstr ""
+msgstr "Seicsum Cód Aitheantais mícheart."
 
 msgid "ID Code contains invalid date."
-msgstr ""
+msgstr "Tá dáta neamhbhailí i gCód ID."
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr ""
+msgstr "Cuir isteach cód poist san fhormáid XXXXX nó LT-XXXXX."
 
 msgid "Alytus"
-msgstr ""
+msgstr "Alytus"
 
 msgid "Kaunas"
-msgstr ""
+msgstr "Kaunas"
 
 msgid "Klaipėda"
-msgstr ""
-
-msgid "Mariampolė"
-msgstr ""
-
-msgid "Panevėžys"
-msgstr ""
-
-msgid "Šiauliai"
-msgstr ""
-
-msgid "Tauragė"
-msgstr ""
-
-msgid "Telšiai"
-msgstr ""
-
-msgid "Utena"
-msgstr ""
-
-msgid "Vilnius"
-msgstr ""
-
-msgid "Akmenė district"
-msgstr ""
-
-msgid "Alytus city"
-msgstr ""
-
-msgid "Alytus district"
-msgstr ""
-
-msgid "Anykščiai district"
-msgstr ""
-
-msgid "Birštonas"
-msgstr ""
-
-msgid "Biržai district"
-msgstr ""
-
-msgid "Druskininkai"
-msgstr ""
-
-msgid "Elektrėnai"
-msgstr ""
-
-msgid "Ignalina district"
-msgstr ""
-
-msgid "Jonava district"
-msgstr ""
-
-msgid "Joniškis district"
-msgstr ""
-
-msgid "Jurbarkas district"
-msgstr ""
-
-msgid "Kaišiadorys district"
-msgstr ""
-
-msgid "Kalvarija"
-msgstr ""
-
-msgid "Kaunas city"
-msgstr ""
-
-msgid "Kaunas district"
-msgstr ""
-
-msgid "Kazlų Rūda"
-msgstr ""
-
-msgid "Kėdainiai district"
-msgstr ""
-
-msgid "Kelmė district"
-msgstr ""
-
-msgid "Klaipėda city"
-msgstr ""
-
-msgid "Klaipėda district"
-msgstr ""
-
-msgid "Kretinga district"
-msgstr ""
-
-msgid "Kupiškis district"
-msgstr ""
-
-msgid "Lazdijai district"
-msgstr ""
+msgstr "Klaipėda"
 
 msgid "Marijampolė"
-msgstr ""
+msgstr "Mariampolle"
+
+msgid "Panevėžys"
+msgstr "Panevėžys"
+
+msgid "Šiauliai"
+msgstr "Siulai"
+
+msgid "Tauragė"
+msgstr "Taurage"
+
+msgid "Telšiai"
+msgstr "Telšiai"
+
+msgid "Utena"
+msgstr "Utena"
+
+msgid "Vilnius"
+msgstr "Vilnius"
+
+msgid "Akmenė district"
+msgstr "Dúiche Akmenė"
+
+msgid "Alytus city"
+msgstr "Cathair Alytus"
+
+msgid "Alytus district"
+msgstr "Dúiche Alytus"
+
+msgid "Anykščiai district"
+msgstr "Dúiche Anykščiai"
+
+msgid "Birštonas"
+msgstr "Birštonas"
+
+msgid "Biržai district"
+msgstr "Dúiche Biržai"
+
+msgid "Druskininkai"
+msgstr "Druskininkai"
+
+msgid "Elektrėnai"
+msgstr "Elektrėnai"
+
+msgid "Ignalina district"
+msgstr "Dúiche Ignalina"
+
+msgid "Jonava district"
+msgstr "Dúiche Jonava"
+
+msgid "Joniškis district"
+msgstr "Dúiche Joniškis"
+
+msgid "Jurbarkas district"
+msgstr "Dúiche Jurbarkas"
+
+msgid "Kaišiadorys district"
+msgstr "Dúiche Kaišiadorys"
+
+msgid "Kalvarija"
+msgstr "Kalvarian"
+
+msgid "Kaunas city"
+msgstr "Cathair Kaunas"
+
+msgid "Kaunas district"
+msgstr "Dúiche Kaunas"
+
+msgid "Kazlų Rūda"
+msgstr "Kazlų Rūda"
+
+msgid "Kėdainiai district"
+msgstr "Ceantar Kėdainiai"
+
+msgid "Kelmė district"
+msgstr "Dúiche Kelmės"
+
+msgid "Klaipėda city"
+msgstr "Cathair Klaipėda"
+
+msgid "Klaipėda district"
+msgstr "Dúiche Klaipėda"
+
+msgid "Kretinga district"
+msgstr "Dúiche Kretinga"
+
+msgid "Kupiškis district"
+msgstr "Dúiche Kupiškis"
+
+msgid "Lazdijai district"
+msgstr "Dúiche Lazdijai"
 
 msgid "Mažeikiai district"
-msgstr ""
+msgstr "Dúiche Mažeikiai"
 
 msgid "Molėtai district"
-msgstr ""
+msgstr "Dúiche Molėtai"
 
 msgid "Neringa"
-msgstr ""
+msgstr "Neringa"
 
 msgid "Pagėgiai"
-msgstr ""
+msgstr "Pagegiai"
 
 msgid "Pakruojis district"
-msgstr ""
+msgstr "Dúiche Pakruojis"
 
 msgid "Palanga city"
-msgstr ""
+msgstr "Cathair Palanga"
 
 msgid "Panevėžys city"
-msgstr ""
+msgstr "Cathair Panevėžys"
 
 msgid "Panevėžys district"
-msgstr ""
+msgstr "Dúiche Panevėžys"
 
 msgid "Pasvalys district"
-msgstr ""
+msgstr "Dúiche Pasvalys"
 
 msgid "Plungė district"
-msgstr ""
+msgstr "Dúiche Plunge"
 
 msgid "Prienai district"
-msgstr ""
+msgstr "Dúiche Prienai"
 
 msgid "Radviliškis district"
-msgstr ""
+msgstr "Dúiche Radviliškis"
 
 msgid "Raseiniai district"
-msgstr ""
+msgstr "Dúiche Raseiniai"
 
 msgid "Rietavas"
-msgstr ""
+msgstr "Rietavas"
 
 msgid "Rokiškis district"
-msgstr ""
+msgstr "Dúiche Rokiškis"
 
 msgid "Skuodas district"
-msgstr ""
+msgstr "Dúiche Skuodas"
 
 msgid "Šakiai district"
-msgstr ""
+msgstr "Dúiche Šakiai"
 
 msgid "Šalčininkai district"
-msgstr ""
+msgstr "Dúiche Šalčininkų"
 
 msgid "Šiauliai city"
-msgstr ""
+msgstr "Cathair Šiaulius"
 
 msgid "Šiauliai district"
-msgstr ""
+msgstr "Dúiche Šiaulius"
 
 msgid "Šilalė district"
-msgstr ""
+msgstr "Dúiche Šilalė"
 
 msgid "Šilutė district"
-msgstr ""
+msgstr "Dúiche Šilutė"
 
 msgid "Širvintos district"
-msgstr ""
+msgstr "Dúiche Širvintos"
 
 msgid "Švenčionys district"
-msgstr ""
+msgstr "Dúiche Švenčionys"
 
 msgid "Tauragė district"
-msgstr ""
+msgstr "Dúiche Tauragė"
 
 msgid "Telšiai district"
-msgstr ""
+msgstr "Dúiche Telšiai"
 
 msgid "Trakai district"
-msgstr ""
+msgstr "Ceantar Trakai"
 
 msgid "Ukmergė district"
-msgstr ""
+msgstr "Dúiche Ukmergé"
 
 msgid "Utena district"
-msgstr ""
+msgstr "Dúiche Utena"
 
 msgid "Varėna district"
-msgstr ""
+msgstr "Dúiche Varėna"
 
 msgid "Vilkaviškis district"
-msgstr ""
+msgstr "Dúiche Vilkaviškis"
 
 msgid "Vilnius city"
-msgstr ""
+msgstr "Cathair Vilnius"
 
 msgid "Vilnius district"
-msgstr ""
+msgstr "Dúiche Vilnius"
 
 msgid "Visaginas"
-msgstr ""
+msgstr "Visaginas"
 
 msgid "Zarasai district"
-msgstr ""
+msgstr "Dúiche Zarasai"
 
 msgid "Enter a postal code in the format XXXX or LV-XXXX."
-msgstr ""
+msgstr "Cuir isteach cód poist san fhormáid XXXX nó LV-XXXX."
 
 msgid "Enter a Latvian personal code in format XXXXXX-XXXXX."
-msgstr ""
+msgstr "Cuir isteach cód pearsanta Laitvia i bhformáid XXXXXX-XXXXX."
 
 msgid "Enter a valid Latvian personal code."
-msgstr ""
+msgstr "Cuir isteach cód pearsanta bailí na Laitvia."
 
 msgid "Daugavpils"
-msgstr ""
+msgstr "Daugavpils"
 
 msgid "Jelgava"
-msgstr ""
-
-msgid "Jēkabpils"
-msgstr ""
+msgstr "Jelgava"
 
 msgid "Jūrmala"
-msgstr ""
+msgstr "Jūrmala"
 
 msgid "Liepāja"
-msgstr ""
+msgstr "Liepāja"
 
 msgid "Rēzekne"
-msgstr ""
+msgstr "Resecne"
 
 msgid "Riga"
-msgstr ""
-
-msgid "Valmiera"
-msgstr ""
+msgstr "Riga"
 
 msgid "Ventspils"
-msgstr ""
-
-msgid "Aglona municipality"
-msgstr ""
+msgstr "Ventspils"
 
 msgid "Aizkraukle municipality"
-msgstr ""
-
-msgid "Aizpute municipality"
-msgstr ""
-
-msgid "Aknīste municipality"
-msgstr ""
-
-msgid "Aloja municipality"
-msgstr ""
-
-msgid "Alsunga municipality"
-msgstr ""
+msgstr "Bardas Aizkraukle"
 
 msgid "Alūksne municipality"
-msgstr ""
-
-msgid "Amata municipality"
-msgstr ""
-
-msgid "Ape municipality"
-msgstr ""
-
-msgid "Auce municipality"
-msgstr ""
+msgstr "Bardas Alūksne"
 
 msgid "Ādaži municipality"
-msgstr ""
-
-msgid "Babīte municipality"
-msgstr ""
-
-msgid "Baldone municipality"
-msgstr ""
-
-msgid "Baltinava municipality"
-msgstr ""
+msgstr "Bardas Ādaži"
 
 msgid "Balvi municipality"
-msgstr ""
+msgstr "Bardas Balvi"
 
 msgid "Bauska municipality"
-msgstr ""
-
-msgid "Beverīna municipality"
-msgstr ""
-
-msgid "Brocēni municipality"
-msgstr ""
-
-msgid "Burtnieki municipality"
-msgstr ""
-
-msgid "Carnikava municipality"
-msgstr ""
-
-msgid "Cesvaine municipality"
-msgstr ""
+msgstr "Bardas Bauska"
 
 msgid "Cēsis municipality"
-msgstr ""
-
-msgid "Cibla municipality"
-msgstr ""
-
-msgid "Dagda municipality"
-msgstr ""
-
-msgid "Daugavpils municipality"
-msgstr ""
+msgstr "Bardas Cēsis"
 
 msgid "Dobele municipality"
-msgstr ""
-
-msgid "Dundaga municipality"
-msgstr ""
-
-msgid "Durbe municipality"
-msgstr ""
-
-msgid "Engure municipality"
-msgstr ""
-
-msgid "Ērgļi municipality"
-msgstr ""
-
-msgid "Garkalne municipality"
-msgstr ""
-
-msgid "Grobiņa municipality"
-msgstr ""
+msgstr "Bardas Dobele"
 
 msgid "Gulbene municipality"
-msgstr ""
-
-msgid "Iecava municipality"
-msgstr ""
-
-msgid "Ikšķile municipality"
-msgstr ""
-
-msgid "Ilūkste municipality"
-msgstr ""
-
-msgid "Inčukalns municipality"
-msgstr ""
-
-msgid "Jaunjelgava municipality"
-msgstr ""
-
-msgid "Jaunpiebalga municipality"
-msgstr ""
-
-msgid "Jaunpils municipality"
-msgstr ""
+msgstr "Bardas Gulbene"
 
 msgid "Jelgava municipality"
-msgstr ""
+msgstr "Bardas Jelgava"
 
 msgid "Jēkabpils municipality"
-msgstr ""
-
-msgid "Kandava municipality"
-msgstr ""
-
-msgid "Kārsava municipality"
-msgstr ""
-
-msgid "Kocēni municipality"
-msgstr ""
-
-msgid "Koknese municipality"
-msgstr ""
+msgstr "Bardas Jēkabpils"
 
 msgid "Krāslava municipality"
-msgstr ""
-
-msgid "Krimulda municipality"
-msgstr ""
-
-msgid "Krustpils municipality"
-msgstr ""
+msgstr "Bardas Krāslava"
 
 msgid "Kuldīga municipality"
-msgstr ""
-
-msgid "Ķegums municipality"
-msgstr ""
+msgstr "Bardas Kuldīga"
 
 msgid "Ķekava municipality"
-msgstr ""
-
-msgid "Lielvārde municipality"
-msgstr ""
+msgstr "Bardas Ķekava"
 
 msgid "Limbaži municipality"
-msgstr ""
-
-msgid "Līgatne municipality"
-msgstr ""
+msgstr "Bardas Limbaži"
 
 msgid "Līvāni municipality"
-msgstr ""
-
-msgid "Lubāna municipality"
-msgstr ""
+msgstr "Bardas Līvāni"
 
 msgid "Ludza municipality"
-msgstr ""
+msgstr "Bardas Ludza"
 
 msgid "Madona municipality"
-msgstr ""
-
-msgid "Mazsalaca municipality"
-msgstr ""
-
-msgid "Mālpils municipality"
-msgstr ""
+msgstr "Bardas Madona"
 
 msgid "Mārupe municipality"
-msgstr ""
-
-msgid "Mērsrags municipality"
-msgstr ""
-
-msgid "Naukšēni municipality"
-msgstr ""
-
-msgid "Nereta municipality"
-msgstr ""
-
-msgid "Nīca municipality"
-msgstr ""
+msgstr "Bardas Mārupe"
 
 msgid "Ogre municipality"
-msgstr ""
+msgstr "Bardas Ogre"
 
 msgid "Olaine municipality"
-msgstr ""
-
-msgid "Ozolnieki municipality"
-msgstr ""
-
-msgid "Pārgauja municipality"
-msgstr ""
-
-msgid "Pāvilosta municipality"
-msgstr ""
-
-msgid "Pļaviņas municipality"
-msgstr ""
+msgstr "Bardas Olaine"
 
 msgid "Preiļi municipality"
-msgstr ""
-
-msgid "Priekule municipality"
-msgstr ""
-
-msgid "Priekuļi municipality"
-msgstr ""
-
-msgid "Rauna municipality"
-msgstr ""
+msgstr "Bardas Preiļi"
 
 msgid "Rēzekne municipality"
-msgstr ""
-
-msgid "Riebiņi municipality"
-msgstr ""
-
-msgid "Roja municipality"
-msgstr ""
+msgstr "Bardas Rēzekne"
 
 msgid "Ropaži municipality"
-msgstr ""
-
-msgid "Rucava municipality"
-msgstr ""
-
-msgid "Rugāji municipality"
-msgstr ""
-
-msgid "Rundāle municipality"
-msgstr ""
-
-msgid "Rūjiena municipality"
-msgstr ""
-
-msgid "Sala municipality"
-msgstr ""
-
-msgid "Salacgrīva municipality"
-msgstr ""
+msgstr "Bardas Ropaži"
 
 msgid "Salaspils municipality"
-msgstr ""
+msgstr "Bardas Salaspils"
 
 msgid "Saldus municipality"
-msgstr ""
+msgstr "Bardas Saldus"
 
 msgid "Saulkrasti municipality"
-msgstr ""
-
-msgid "Sēja municipality"
-msgstr ""
+msgstr "Bardas Saulkrasti"
 
 msgid "Sigulda municipality"
-msgstr ""
-
-msgid "Skrīveri municipality"
-msgstr ""
-
-msgid "Skrunda municipality"
-msgstr ""
+msgstr "Bardas Sigulda"
 
 msgid "Smiltene municipality"
-msgstr ""
-
-msgid "Stopiņi municipality"
-msgstr ""
-
-msgid "Strenči municipality"
-msgstr ""
+msgstr "Bardas Smiltene"
 
 msgid "Talsi municipality"
-msgstr ""
-
-msgid "Tērvete municipality"
-msgstr ""
+msgstr "Bardas Talsi"
 
 msgid "Tukums municipality"
-msgstr ""
-
-msgid "Vaiņode municipality"
-msgstr ""
+msgstr "Bardas Tukums"
 
 msgid "Valka municipality"
-msgstr ""
+msgstr "Bardas Valka"
 
 msgid "Varakļāni municipality"
-msgstr ""
-
-msgid "Vārkava municipality"
-msgstr ""
-
-msgid "Vecpiebalga municipality"
-msgstr ""
-
-msgid "Vecumnieki municipality"
-msgstr ""
+msgstr "Bardas Varakļāni"
 
 msgid "Ventspils municipality"
+msgstr "Bardas Ventspils"
+
+msgid "Augšdaugava municipality"
 msgstr ""
 
-msgid "Viesīte municipality"
+msgid "Dienvidkurzeme municipality"
 msgstr ""
 
-msgid "Viļaka municipality"
-msgstr ""
-
-msgid "Viļāni municipality"
-msgstr ""
-
-msgid "Zilupe municipality"
+msgid "Valmiera municipality"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXX."
 msgstr "Cuir isteach cód poist san fhormáid XXXXX."
 
 msgid "Postal code"
-msgstr ""
+msgstr "Cód poist"
 
 msgid "Select Province"
+msgstr "Roghnaigh Cúige"
+
+msgid "Enter a valid Moroccan CIN number."
+msgstr ""
+
+msgid "CIN Number"
 msgstr ""
 
 msgid "Al Hoceima"
-msgstr ""
+msgstr "Al Hoceima"
 
 msgid "Larache"
-msgstr ""
+msgstr "Larache"
 
 msgid "M’Diq - Fnideq"
-msgstr ""
+msgstr "M'Diq - Fnideq"
 
 msgid "Tetouan"
-msgstr ""
+msgstr "Tetouan"
 
 msgid "Chefchaouene"
-msgstr ""
+msgstr "Chefchaouene"
 
 msgid "Tanger - Assilah"
-msgstr ""
+msgstr "Tanger - Assilah"
 
 msgid "Fahs - Anjra"
-msgstr ""
+msgstr "Falls - Anjra"
 
 msgid "Ouezzane"
-msgstr ""
+msgstr "Ouezzane"
 
 msgid "Driouch"
-msgstr ""
+msgstr "Driouch"
 
 msgid "Nador"
-msgstr ""
+msgstr "Nador"
 
 msgid "Berkan"
-msgstr ""
+msgstr "Bearing"
 
 msgid "Taourirt"
-msgstr ""
+msgstr "Taourirt"
 
 msgid "Jerada"
-msgstr ""
+msgstr "Jerada"
 
 msgid "Guercif"
-msgstr ""
+msgstr "Guercif"
 
 msgid "Feguig"
-msgstr ""
+msgstr "Feguig"
 
 msgid "Oujda - Angad"
-msgstr ""
+msgstr "Oujda - Angad"
 
 msgid "El Hajeb"
-msgstr ""
+msgstr "El Hajeb"
 
 msgid "Ifrane"
-msgstr ""
+msgstr "Ifrane"
 
 msgid "Boulemane"
-msgstr ""
+msgstr "Boulemane"
 
 msgid "Taza"
-msgstr ""
+msgstr "Taza"
 
 msgid "Taounate"
-msgstr ""
+msgstr "Taounate"
 
 msgid "Sefrou"
-msgstr ""
+msgstr "Sefrou"
 
 msgid "Fès"
-msgstr ""
+msgstr "Fes"
 
 msgid "Meknès"
-msgstr ""
+msgstr "Meknes"
 
 msgid "Moulay Yacoub"
-msgstr ""
+msgstr "Moulay Yacoub"
 
 msgid "Khémisset"
-msgstr ""
+msgstr "Chémisset"
 
 msgid "Rabat"
-msgstr ""
+msgstr "Rabat"
 
 msgid "Skhirate - Temara"
-msgstr ""
+msgstr "Skhirate - Téama"
 
 msgid "Kénitra"
-msgstr ""
+msgstr "Kenitra"
 
 msgid "Salé"
-msgstr ""
+msgstr "Salé"
 
 msgid "Sidi Slimane"
-msgstr ""
+msgstr "Sidi Slimane"
 
 msgid "Sidi Kacem"
-msgstr ""
+msgstr "Sidi Kacem"
 
 msgid "Casablanca"
-msgstr ""
+msgstr "Casablanca"
 
 msgid "Mohamedia"
-msgstr ""
+msgstr "Mohamedia"
 
 msgid "Nouaceur"
-msgstr ""
+msgstr "Nouaceur"
 
 msgid "Mediouna"
-msgstr ""
+msgstr "Mediouna"
 
 msgid "Benslimane"
-msgstr ""
+msgstr "Bensliman"
 
 msgid "Berrachid"
-msgstr ""
+msgstr "Berrachid"
 
 msgid "El Jadida"
-msgstr ""
+msgstr "El Jadida"
 
 msgid "Sidi Bennour"
-msgstr ""
+msgstr "Sidi Bennour"
 
 msgid "Settat"
-msgstr ""
+msgstr "Setted"
 
 msgid "Azilal"
-msgstr ""
+msgstr "Azilal"
 
 msgid "Fquih Ben Saleh"
-msgstr ""
+msgstr "Fquih Ben Saleh"
 
 msgid "Beni Mellal"
-msgstr ""
+msgstr "Beni Mellal"
 
 msgid "Khouribga"
-msgstr ""
+msgstr "Khouribga"
 
 msgid "Khénifra"
-msgstr ""
+msgstr "Khenifra"
 
 msgid "Safi"
-msgstr ""
+msgstr "Safi"
 
 msgid "Al Haouz"
-msgstr ""
+msgstr "Al Haouz"
 
 msgid "Rhamna"
-msgstr ""
+msgstr "Rhamna"
 
 msgid "Essaouira"
-msgstr ""
+msgstr "Essaouira"
 
 msgid "Youssoufia"
-msgstr ""
+msgstr "Youssoufia"
 
 msgid "Marrakech"
-msgstr ""
+msgstr "Marrakech"
 
 msgid "Chichaoua"
-msgstr ""
+msgstr "Chichaoua"
 
 msgid "El Kelaa Des Sraghna"
-msgstr ""
+msgstr "El Kelaa Des Sraghna"
 
 msgid "Agadir - Idda Outanane"
-msgstr ""
+msgstr "Agadir - Idda Outanane"
 
 msgid "Inezgane - Ait Melloul"
-msgstr ""
+msgstr "Inezgane - Ait Melloul"
 
 msgid "Chtouka - Ait Baha"
-msgstr ""
+msgstr "Chtouka - Ait Baha"
 
 msgid "Tiznit"
-msgstr ""
+msgstr "Tiznit"
 
 msgid "Tata"
-msgstr ""
+msgstr "Tata"
 
 msgid "Taroudant"
-msgstr ""
+msgstr "Taroudant"
 
 msgid "Errachidia"
-msgstr ""
+msgstr "Errachidia"
 
 msgid "Tinghir"
-msgstr ""
+msgstr "Tinghir"
 
 msgid "Zagoura"
-msgstr ""
+msgstr "Zagoura"
 
 msgid "Midelt"
-msgstr ""
+msgstr "Midelt"
 
 msgid "Ouarzazate"
-msgstr ""
+msgstr "Ouarzazate"
 
 msgid "Es -Semara"
-msgstr ""
+msgstr "Es-Semara"
 
 msgid "Laayoune"
-msgstr ""
+msgstr "Laayoune"
 
 msgid "Boujdour"
-msgstr ""
+msgstr "Boujdour"
 
 msgid "Terfaya"
-msgstr ""
+msgstr "Terfaya"
 
 msgid "Aousserd"
-msgstr ""
+msgstr "Aousserd"
 
 msgid "Oued Eddahab"
-msgstr ""
+msgstr "Oued Eddahab"
 
 msgid "Assa - Zag"
-msgstr ""
+msgstr "Assa - Zag"
 
 msgid "Sidi Ifni"
-msgstr ""
+msgstr "Sidi Ifni"
 
 msgid "Tantan"
-msgstr ""
+msgstr "Tantan"
 
 msgid "Guelmim"
-msgstr ""
+msgstr "Guelmim"
 
 msgid "Tanger-Tétouan-Al Hoceïma"
-msgstr ""
+msgstr "Tanger-Tétouan-Al Hoceima"
 
 msgid "L’Oriental"
-msgstr ""
+msgstr "L'Oirthear"
 
 msgid "Fès-Meknès"
-msgstr ""
+msgstr "Fès-Meknes"
 
 msgid "Rabat-Salé-Kénitra"
-msgstr ""
+msgstr "Rabat-Salé-Kenitra"
 
 msgid "Béni Mellal-Khénifra"
-msgstr ""
+msgstr "Béni Mellal-Khenifra"
 
 msgid "Casablanca-Settat"
-msgstr ""
+msgstr "Casablanca-Settat"
 
 msgid "Marrakech-Safi"
-msgstr ""
+msgstr "Marrácech-Safi"
 
 msgid "Drâa-Tafilalet"
-msgstr ""
+msgstr "Dráa-Tafilalet"
 
 msgid "Souss-Massa"
-msgstr ""
+msgstr "Souss-Mass"
 
 msgid "Guelmim-Oued Noun"
-msgstr ""
+msgstr "Ainmfhocal Guelmim-Oued"
 
 msgid "Laâyoune-Sakia El Hamra"
-msgstr ""
+msgstr "Layoune-Sakia El Hamra"
 
 msgid "Dakhla-Oued Ed Dahab"
-msgstr ""
+msgstr "Dakhla-Oued Ed Dahab"
+
+msgid "Întreprindere Individuală"
+msgstr "Inspreagthóir Aonair"
+
+msgid "Societate pe acţiuni"
+msgstr "Comhlachtaí Gníomhaíochtaí"
+
+msgid "Societate în nume colectiv"
+msgstr "Cuideachtaí san ainm bailiúcháin"
+
+msgid "Societatea în comandită"
+msgstr "Cumann faoi cheannas"
+
+msgid "Cooperativa de producţie"
+msgstr "Comhar Táirgthe"
+
+msgid "Cooperativa de întreprinzători"
+msgstr "Comhoibritheoir na dTionscairí"
+
+msgid "Societate cu răspundere limitată"
+msgstr "Cumann le freastóirí teoranta"
+
+msgid "Gospodăria ţărănească"
+msgstr "Tiarna tíre neamhghnách"
+
+msgid "Diplomatic Corps"
+msgstr "Cór Taidhleoire"
+
+msgid "Service Staff"
+msgstr "Foireann Seirbhíse"
+
+msgid "Consular Staff"
+msgstr "Foireann Consalachta"
+
+msgid "Administrative body"
+msgstr "Comhlacht riaracháin"
+
+msgid "Ministry of Internal Affairs"
+msgstr "Aireacht Gnóthaí Inmheánacha"
+
+msgid "Carabinieri Subdivision"
+msgstr "Fo-rannán Carabinieri"
+
+msgid "Military Forces"
+msgstr "Forsaí Míleata"
+
+msgid "Border Control"
+msgstr "Rialú Teorann"
+
+msgid "Parliament"
+msgstr "An Pharlaimint"
+
+msgid "Government"
+msgstr "Rialtas"
+
+msgid "Chancellery"
+msgstr "An Seansailéir"
+
+msgid "Anenii Noi"
+msgstr "Anenii New"
+
+msgid "Tighina"
+msgstr "Tighina"
+
+msgid "Bălți"
+msgstr "Bălţi"
+
+msgid "Briceni"
+msgstr "Briceni"
+
+msgid "Basarabeasca"
+msgstr "Basarabeasca"
+
+msgid "Chișinău"
+msgstr "Chișinău"
+
+msgid "Camenca"
+msgstr "Camenca"
+
+msgid "Ceadîr-Lunga"
+msgstr "Ceadir-Lunga"
+
+msgid "Cahul"
+msgstr "Cahul"
+
+msgid "Călărași"
+msgstr "Călărași"
+
+msgid "Cimișlia"
+msgstr "Cimișlia"
+
+msgid "Căinari"
+msgstr "Căinari"
+
+msgid "Comrat"
+msgstr "Comrat"
+
+msgid "Criuleni"
+msgstr "Criulens"
+
+msgid "Căușeni"
+msgstr "Căușeni"
+
+msgid "Cantemir"
+msgstr "Cantemir"
+
+msgid "Dubăsari"
+msgstr "Dubasari"
+
+msgid "Dondușeni"
+msgstr "Dondușeni"
+
+msgid "Drochia"
+msgstr "Drochia"
+
+msgid "Edineț"
+msgstr "Edineța"
+
+msgid "Fălești"
+msgstr "Fălești"
+
+msgid "Florești"
+msgstr "Florești"
+
+msgid "Gagauzia"
+msgstr "Gagauzia"
+
+msgid "Glodeni"
+msgstr "Glodeni"
+
+msgid "Grigoriopol"
+msgstr "Grigoriopol"
+
+msgid "Hîncești"
+msgstr "Teachtaigh"
+
+msgid "Ialoveni"
+msgstr "Ialoveni"
+
+msgid "Leova"
+msgstr "Leova"
+
+msgid "Nisporeni"
+msgstr "Nisporene"
+
+msgid "Ocnița"
+msgstr "Ocnition"
+
+msgid "Orhei"
+msgstr "Orhei"
+
+msgid "Rîbnița"
+msgstr "Ribnița"
+
+msgid "Rîșcani"
+msgstr "Rishcani"
+
+msgid "Rezina"
+msgstr "Resin"
+
+msgid "Șoldănești"
+msgstr "Scoldănești"
+
+msgid "Sîngerei"
+msgstr "Síngerei"
+
+msgid "Slobozia"
+msgstr "Slobozia"
+
+msgid "Soroca"
+msgstr "Soroca"
+
+msgid "Strășeni"
+msgstr "Strășeni"
+
+msgid "Ștefan Vodă"
+msgstr "Stéfan Vodă"
+
+msgid "Taraclia"
+msgstr "Taraclia"
+
+msgid "Telenești"
+msgstr "Telenešti"
+
+msgid "Ungheni"
+msgstr "Ungheni"
+
+msgid "Vulcănești"
+msgstr "Vulcănești"
+
+msgid "Moldavian identity number"
+msgstr "Uimhir aitheantais na Moldavíve"
+
+msgid "Moldavian license plate number"
+msgstr "Uimhir phláta ceadúnais an Mholdóiv"
+
+msgid "Moldavian company types"
+msgstr "Cineálacha cuideachtaí an Mholdóiv"
+
+msgid "Enter a valid IDNO number."
+msgstr "Cuir isteach uimhir bailí IDNO."
+
+msgid "Enter a valid license plate."
+msgstr "Cuir isteach pláta ceadúnais bailí."
 
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
@@ -5723,256 +6176,256 @@ msgid "The UMCN is not valid."
 msgstr "Níl an UMCN bailí."
 
 msgid "Aerodrom"
-msgstr ""
+msgstr "Aerodrom"
 
 msgid "Aračinovo"
-msgstr ""
+msgstr "Aračinovo"
 
 msgid "Berovo"
-msgstr ""
+msgstr "Berovo"
 
 msgid "Bitola"
-msgstr ""
+msgstr "Bitola"
 
 msgid "Bogdanci"
-msgstr ""
+msgstr "Bogdanci"
 
 msgid "Bogovinje"
-msgstr ""
+msgstr "Bogovinje"
 
 msgid "Bosilovo"
-msgstr ""
+msgstr "Bosilovo"
 
 msgid "Brvenica"
-msgstr ""
+msgstr "Brvenica"
 
 msgid "Butel"
-msgstr ""
+msgstr "Butel"
 
 msgid "Valandovo"
-msgstr ""
+msgstr "Valandovo"
 
 msgid "Vasilevo"
-msgstr ""
+msgstr "Vasilevo"
 
 msgid "Vevčani"
-msgstr ""
+msgstr "Vevčani"
 
 msgid "Veles"
-msgstr ""
+msgstr "Veles"
 
 msgid "Vinica"
-msgstr ""
+msgstr "Vinica"
 
 msgid "Vraneštica"
-msgstr ""
+msgstr "Vraneštica"
 
 msgid "Vrapčište"
-msgstr ""
+msgstr "Wrapching"
 
 msgid "Gazi Baba"
-msgstr ""
+msgstr "Gazi Baba"
 
 msgid "Gevgelija"
-msgstr ""
+msgstr "Gevgelija"
 
 msgid "Gostivar"
-msgstr ""
+msgstr "Gostivar"
 
 msgid "Gradsko"
-msgstr ""
+msgstr "Gradsko"
 
 msgid "Debar"
-msgstr ""
+msgstr "Debar"
 
 msgid "Debarca"
-msgstr ""
+msgstr "Debarca"
 
 msgid "Delčevo"
-msgstr ""
+msgstr "Delchevo"
 
 msgid "Demir Kapija"
-msgstr ""
+msgstr "Demir Kapija"
 
 msgid "Demir Hisar"
-msgstr ""
+msgstr "Demir Hisar"
 
 msgid "Dolneni"
-msgstr ""
+msgstr "Dolneni"
 
 msgid "Drugovo"
-msgstr ""
+msgstr "Drugo"
 
 msgid "Gjorče Petrov"
-msgstr ""
+msgstr "Gjorče Petrov"
 
 msgid "Želino"
-msgstr ""
+msgstr "Želino"
 
 msgid "Zajas"
-msgstr ""
+msgstr "Zajas"
 
 msgid "Zelenikovo"
-msgstr ""
+msgstr "Zeleníkovo"
 
 msgid "Zrnovci"
-msgstr ""
+msgstr "Zrnovci"
 
 msgid "Ilinden"
-msgstr ""
+msgstr "Ilinden"
 
 msgid "Jegunovce"
-msgstr ""
+msgstr "Jegunovce"
 
 msgid "Kavadarci"
-msgstr ""
+msgstr "Kavadarci"
 
 msgid "Karbinci"
-msgstr ""
+msgstr "Karbinci"
 
 msgid "Karpoš"
-msgstr ""
+msgstr "Carposh"
 
 msgid "Kisela Voda"
-msgstr ""
+msgstr "Kisela Voda"
 
 msgid "Kičevo"
-msgstr ""
+msgstr "Kičevo"
 
 msgid "Konče"
-msgstr ""
+msgstr "Conches"
 
 msgid "Koćani"
-msgstr ""
+msgstr "Kocani"
 
 msgid "Kratovo"
-msgstr ""
+msgstr "Kratovo"
 
 msgid "Kriva Palanka"
-msgstr ""
+msgstr "Kriva Palanka"
 
 msgid "Krivogaštani"
-msgstr ""
+msgstr "Crivogasthan"
 
 msgid "Kruševo"
-msgstr ""
+msgstr "Krushevo"
 
 msgid "Kumanovo"
-msgstr ""
+msgstr "Kumanóvo"
 
 msgid "Lipkovo"
-msgstr ""
+msgstr "Lipkovo"
 
 msgid "Lozovo"
-msgstr ""
+msgstr "Lozovo"
 
 msgid "Mavrovo i Rostuša"
-msgstr ""
+msgstr "Mavrovo agus Rostuša"
 
 msgid "Makedonska Kamenica"
-msgstr ""
+msgstr "Macedonia Kamenica"
 
 msgid "Makedonski Brod"
-msgstr ""
+msgstr "Macadóinis Brod"
 
 msgid "Mogila"
-msgstr ""
+msgstr "Mogila"
 
 msgid "Negotino"
-msgstr ""
+msgstr "Negotino"
 
 msgid "Novaci"
-msgstr ""
+msgstr "Novaci"
 
 msgid "Novo Selo"
-msgstr ""
+msgstr "Novo Selo"
 
 msgid "Oslomej"
-msgstr ""
+msgstr "Oslomej"
 
 msgid "Ohrid"
-msgstr ""
+msgstr "Ohrid"
 
 msgid "Petrovec"
-msgstr ""
+msgstr "Petrovec"
 
 msgid "Pehčevo"
-msgstr ""
+msgstr "Pehchevo"
 
 msgid "Plasnica"
-msgstr ""
+msgstr "Plastic"
 
 msgid "Prilep"
-msgstr ""
+msgstr "Prilep"
 
 msgid "Probištip"
-msgstr ""
+msgstr "Probistipe"
 
 msgid "Radoviš"
-msgstr ""
+msgstr "Radoviš"
 
 msgid "Rankovce"
-msgstr ""
+msgstr "Rankovce"
 
 msgid "Resen"
-msgstr ""
+msgstr "Resen"
 
 msgid "Rosoman"
-msgstr ""
+msgstr "Rosoman"
 
 msgid "Saraj"
-msgstr ""
+msgstr "Saraj"
 
 msgid "Sveti Nikole"
-msgstr ""
+msgstr "Saint Nicholas"
 
 msgid "Sopište"
-msgstr ""
+msgstr "Sophia"
 
 msgid "Star Dojran"
-msgstr ""
+msgstr "Star Dojran"
 
 msgid "Staro Nagoričane"
-msgstr ""
+msgstr "Staro Nagoričane"
 
 msgid "Struga"
-msgstr ""
+msgstr "Struga"
 
 msgid "Strumica"
-msgstr ""
+msgstr "Strumica"
 
 msgid "Studeničani"
-msgstr ""
+msgstr "Studentians"
 
 msgid "Tearce"
-msgstr ""
+msgstr "Tearce"
 
 msgid "Tetovo"
-msgstr ""
+msgstr "Tetovo"
 
 msgid "Centar"
-msgstr ""
+msgstr "Ionad"
 
 msgid "Centar-Župa"
-msgstr ""
+msgstr "Centar-Zupa"
 
 msgid "Čair"
-msgstr ""
+msgstr "Chair"
 
 msgid "Čaška"
-msgstr ""
+msgstr "Cashka"
 
 msgid "Češinovo-Obleševo"
-msgstr ""
+msgstr "Češinovo-Obleševo"
 
 msgid "Čučer-Sandevo"
-msgstr ""
+msgstr "Cucher-Sandevo"
 
 msgid "Štip"
-msgstr ""
+msgstr "Stip"
 
 msgid "Šuto Orizari"
-msgstr ""
+msgstr "Shot Orizarí"
 
 msgid "Macedonian identity card number"
 msgstr "Cárta uimhir aitheantais Macadóinis"
@@ -5984,7 +6437,7 @@ msgid "Unique master citizen number (13 digits)"
 msgstr "Líon saoránach uathúil máistir (13 dhigit)"
 
 msgid "Enter a valid postal code in format AAA 0000."
-msgstr ""
+msgstr "Cuir isteach cód poist bailí i bhformáid AAA 0000."
 
 msgid "Enter a valid zip code in the format XXXXX."
 msgstr "Cuir isteach cód zip bailí sa XXXXX bhformáid."
@@ -5996,10 +6449,10 @@ msgid "Invalid checksum for RFC."
 msgstr "Sheiceála neamhbhailí do RFC."
 
 msgid "Enter a valid CLABE."
-msgstr ""
+msgstr "Cuir isteach CLABE bailí."
 
 msgid "Invalid checksum for CLABE."
-msgstr ""
+msgstr "Seicsum neamhbhailí do CLABE."
 
 msgid "Enter a valid CURP."
 msgstr "Iontráil CURP bailí."
@@ -6008,13 +6461,13 @@ msgid "Invalid checksum for CURP."
 msgstr "Neamhbhailí sheiceála do CURP."
 
 msgid "Enter a valid Social Security Number."
-msgstr ""
+msgstr "Cuir isteach Uimhir Slándála Sóisialta bailí."
 
 msgid "Invalid checksum for Social Security Number."
-msgstr ""
+msgstr "Seiceam neamhbhailí don Uimhir Leasa Shóisialaigh."
 
-msgid "Mexico state (three uppercase letters)"
-msgstr "Meicsiceo stáit (trí litreacha cás uachtair)"
+msgid "Mexico state (three or four uppercase letters)"
+msgstr "Stát Meicsiceo (trí nó ceithre litreacha uachtaracha)"
 
 msgid "Mexico zip code"
 msgstr "Cód zip Meicsiceo"
@@ -6023,418 +6476,703 @@ msgid "Mexican RFC"
 msgstr "Mheicsiceo RFC"
 
 msgid "Mexican CLABE"
-msgstr ""
+msgstr "CLABE Mheicsiceo"
 
 msgid "Mexican CURP"
 msgstr "Mheicsiceo CURP"
 
 msgid "Mexican Social Security Number"
-msgstr ""
+msgstr "Uimhir Slándála Shóisialta"
 
 msgid "Aguascalientes"
-msgstr ""
+msgstr "Aguascalientes"
 
 msgid "Baja California"
-msgstr ""
+msgstr "Baja California"
 
 msgid "Baja California Sur"
 msgstr "Baja California an Ridire"
 
 msgid "Campeche"
-msgstr ""
+msgstr "Campeche"
+
+msgid "Ciudad de México"
+msgstr "Cathair Mheicsiceo"
 
 msgid "Chihuahua"
-msgstr ""
+msgstr "Chihuahua"
 
 msgid "Chiapas"
-msgstr ""
+msgstr "Chiapas"
 
 msgid "Coahuila"
-msgstr ""
+msgstr "Coahuila"
 
 msgid "Colima"
-msgstr ""
-
-msgid "Distrito Federal"
-msgstr "Distrito Feidearálach"
+msgstr "Colima"
 
 msgid "Durango"
-msgstr ""
+msgstr "Durango"
 
 msgid "Guerrero"
-msgstr ""
+msgstr "Guerrero"
 
 msgid "Guanajuato"
-msgstr ""
+msgstr "Guanajuato"
 
 msgid "Hidalgo"
-msgstr ""
+msgstr "Hidalgo"
 
 msgid "Jalisco"
-msgstr ""
+msgstr "Jalisco"
 
 msgid "Estado de México"
-msgstr ""
+msgstr "Stáit Mheicsiceo"
 
 msgid "Michoacán"
-msgstr ""
+msgstr "Michoacán"
 
 msgid "Morelos"
-msgstr ""
+msgstr "Morelos"
 
 msgid "Nayarit"
-msgstr ""
+msgstr "Nayarit"
 
 msgid "Nuevo León"
-msgstr ""
+msgstr "Nuevo León"
 
 msgid "Oaxaca"
-msgstr ""
+msgstr "Oaxaca"
 
 msgid "Puebla"
-msgstr ""
+msgstr "Puebla"
 
 msgid "Querétaro"
-msgstr ""
+msgstr "Querétaro"
 
 msgid "Quintana Roo"
 msgstr "Quintana Rubha"
 
 msgid "Sinaloa"
-msgstr ""
+msgstr "Sinaloa"
 
 msgid "San Luis Potosí"
-msgstr ""
+msgstr "San Luis Potosí"
 
 msgid "Sonora"
-msgstr ""
+msgstr "Sonora"
 
 msgid "Tabasco"
-msgstr ""
+msgstr "Tabasco"
 
 msgid "Tamaulipas"
-msgstr ""
+msgstr "Tamaulipas"
 
 msgid "Tlaxcala"
-msgstr ""
+msgstr "Tlaxcala"
 
 msgid "Veracruz"
-msgstr ""
+msgstr "Veracruz"
 
 msgid "Yucatán"
-msgstr ""
+msgstr "Yucatán"
 
 msgid "Zacatecas"
-msgstr ""
+msgstr "Zacatecas"
+
+msgid "Invalid MyKad number."
+msgstr "Uimhir MyKad neamhbhailí."
 
 msgid "Dutch zipcode"
-msgstr ""
+msgstr "Cód poist na hÍsiltíre"
 
 msgid "Dutch province"
-msgstr ""
+msgstr "Cúige Ollainnis"
 
 msgid "Dutch social security number (BSN)"
-msgstr ""
+msgstr "Uimhir slándála sóisialta na hÍsiltíre (BSN"
+
+msgid "Dutch license plate"
+msgstr "Pláta ceadúnais Ísiltí"
 
 msgid "Drenthe"
-msgstr ""
+msgstr "Drenthe"
 
 msgid "Flevoland"
-msgstr ""
+msgstr "Flevoland"
 
 msgid "Fryslân"
-msgstr ""
+msgstr "An Íoslainn"
 
 msgid "Gelderland"
-msgstr ""
+msgstr "Gelderland"
 
 msgid "Groningen"
-msgstr ""
+msgstr "Groningen"
 
 msgid "Noord-Brabant"
-msgstr ""
+msgstr "Brabant Thuaidh"
 
 msgid "Noord-Holland"
-msgstr ""
+msgstr "An Ísiltír Thuaidh"
 
 msgid "Overijssel"
-msgstr ""
+msgstr "Overijssel"
 
 msgid "Utrecht"
-msgstr ""
+msgstr "Utrecht"
 
 msgid "Zeeland"
-msgstr ""
+msgstr "An Shéalainn"
 
 msgid "Zuid-Holland"
-msgstr ""
+msgstr "An Ísiltír Theas"
 
 msgid "Enter a valid BSN."
-msgstr ""
+msgstr "Cuir isteach BSN bailí."
+
+msgid "Enter a valid license plate"
+msgstr "Cuir isteach pláta ceadúnais bailí"
 
 msgid "Enter a valid Norwegian social security number."
 msgstr "Cuir isteach uimhir leasa na hIorua sóisialta bailí."
 
 msgid "Enter a valid Norwegian bank account number."
-msgstr ""
+msgstr "Cuir isteach uimhir bhailí cuntas bainc na hIorua."
 
 msgid "Invalid control digit. Enter a valid Norwegian bank account number."
 msgstr ""
+"Digit rialaithe neamhbhailí. Cuir isteach uimhir bhailí cuntas bainc na "
+"hIorua."
 
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr ""
+"Fad neamhbhailí. Tá uimhreacha cuntas bainc na hIorua 11 dhigit ar fad."
+
+msgid "Enter a postal code in format XXXXX"
+msgstr "Cuir isteach cód poist i bhformáid XXXXX"
+
+msgid "Bhaktapur"
+msgstr "Bhaktapur"
+
+msgid "Dhading"
+msgstr "Dhading"
+
+msgid "Kathmandu"
+msgstr "Kathmandu"
+
+msgid "Kavrepalanchok"
+msgstr "Kavrepalanchok"
+
+msgid "Lalitpur"
+msgstr "Lalitpur"
+
+msgid "Nuwakot"
+msgstr "Nuwakot"
+
+msgid "Rasuwa"
+msgstr "Rasuwa"
+
+msgid "Sindhupalchok"
+msgstr "Sindhupalchok"
+
+msgid "Banke"
+msgstr "Bainc"
+
+msgid "Bardiya"
+msgstr "Bardia"
+
+msgid "Dailekh"
+msgstr "Dailekh"
+
+msgid "Jajarkot"
+msgstr "Jajarkot"
+
+msgid "Surkhet"
+msgstr "Surkhet"
+
+msgid "Baglung"
+msgstr "Baglung"
+
+msgid "Mustang"
+msgstr "Mustang"
+
+msgid "Myagdi"
+msgstr "Myagdi"
+
+msgid "Parbat"
+msgstr "Parbat"
+
+msgid "Gorkha"
+msgstr "Gorkha"
+
+msgid "Kaski"
+msgstr "Kaski"
+
+msgid "Lamjung"
+msgstr "Lamjung"
+
+msgid "Manang"
+msgstr "Manang"
+
+msgid "Syangja"
+msgstr "Syangja"
+
+msgid "Tanahu"
+msgstr "Tanahu"
+
+msgid "Dhanusa"
+msgstr "Dhanusa"
+
+msgid "Dholkha"
+msgstr "Dholkha"
+
+msgid "Mahottari"
+msgstr "Mahottari"
+
+msgid "Ramechhap"
+msgstr "Ramechap"
+
+msgid "Sarlahi"
+msgstr "Sarlahi"
+
+msgid "Sindhuli"
+msgstr "Sindhuli"
+
+msgid "Dolpa"
+msgstr "Dolpa"
+
+msgid "Humla"
+msgstr "Humla"
+
+msgid "Jumla"
+msgstr "Jumla"
+
+msgid "Kalikot"
+msgstr "Calicot"
+
+msgid "Mugu"
+msgstr "Mugú"
+
+msgid "Bhojpur"
+msgstr "Bhojpur"
+
+msgid "Dhankuta"
+msgstr "Dhankuta"
+
+msgid "Morang"
+msgstr "Morang"
+
+msgid "Sankhuwasabha"
+msgstr "Sankhuwasabha"
+
+msgid "Sunsari"
+msgstr "Sunsari"
+
+msgid "Terhathum"
+msgstr "Terhathum"
+
+msgid "Arghakhanchi"
+msgstr "Arghakhanchi"
+
+msgid "Gulmi"
+msgstr "Gulmi"
+
+msgid "Kapilvastu"
+msgstr "Capilvasti"
+
+msgid "Nawalparasi"
+msgstr "Nowalparasi"
+
+msgid "Palpa"
+msgstr "Palpa"
+
+msgid "Rupandehi"
+msgstr "Rupandéhi"
+
+msgid "Baitadi"
+msgstr "Baitadi"
+
+msgid "Dadeldhura"
+msgstr "Dadeldhura"
+
+msgid "Darchula"
+msgstr "Darchula"
+
+msgid "Kanchanpur"
+msgstr "Kanchanpur"
+
+msgid "Jhapa"
+msgstr "Jhapa"
+
+msgid "Panchthar"
+msgstr "Panchthar"
+
+msgid "Taplejung"
+msgstr "Taplejung"
+
+msgid "Bara"
+msgstr "Bara"
+
+msgid "Chitwan"
+msgstr "Chitwan"
+
+msgid "Makwanpur"
+msgstr "Makwanpur"
+
+msgid "Parsa"
+msgstr "Parsa"
+
+msgid "Rautahat"
+msgstr "Routahat"
+
+msgid "Dang Deukhuri"
+msgstr "Dang Deukhuri"
+
+msgid "Pyuthan"
+msgstr "Pyuthan"
+
+msgid "Rolpa"
+msgstr "Rolpa"
+
+msgid "Rukum"
+msgstr "Rucum"
+
+msgid "Salyan"
+msgstr "Salyan"
+
+msgid "Khotang"
+msgstr "Khotang"
+
+msgid "Okhaldhunga"
+msgstr "Ochaldhunga"
+
+msgid "Saptari"
+msgstr "Saptari"
+
+msgid "Siraha"
+msgstr "Sirah"
+
+msgid "Solukhumbu"
+msgstr "Solukhumbu"
+
+msgid "Udayapur"
+msgstr "Udayapur"
+
+msgid "Achham"
+msgstr "Acham"
+
+msgid "Bajhang"
+msgstr "Bejhang"
+
+msgid "Bajura"
+msgstr "Bajura"
+
+msgid "Doti"
+msgstr "Doti"
+
+msgid "Kailali"
+msgstr "Kailali"
+
+msgid "Bagmati"
+msgstr "Bagmati"
+
+msgid "Gandaki"
+msgstr "Gandaki"
+
+msgid "Karnali"
+msgstr "Karnali"
+
+msgid "Lumbini"
+msgstr "Lumbini"
+
+msgid "Koshi"
+msgstr "Koshi"
+
+msgid "Madhesh"
+msgstr ""
+
+msgid "Sudurpaschim"
+msgstr "Sudurpaschim"
+
+msgid "Bheri"
+msgstr "Bheri"
+
+msgid "Dhawalagiri"
+msgstr "Dhawalagiri"
+
+msgid "Janakpur"
+msgstr "Janakpur"
+
+msgid "Mahakali"
+msgstr "Mahakali"
+
+msgid "Mechi"
+msgstr "Mechi"
+
+msgid "Narayani"
+msgstr "Narayani"
+
+msgid "Rapti"
+msgstr "Rapti"
+
+msgid "Sagarmatha"
+msgstr "Sagarmatha"
+
+msgid "Seti"
+msgstr "Settings"
 
 msgid "Invalid post code."
-msgstr ""
+msgstr "Cód poist neamhbhailí."
 
 msgid "Invalid bank account number."
-msgstr ""
+msgstr "Uimhir chuntais bhainc neamhbhailí."
 
 msgid "Far North District"
-msgstr ""
+msgstr "Ceantar Far Thuaidh"
 
 msgid "Whangarei District"
-msgstr ""
+msgstr "Dúiche Whangarei"
 
 msgid "Kaipara District"
-msgstr ""
+msgstr "Dúiche Kaipara"
 
 msgid "Auckland"
-msgstr ""
+msgstr "Auckland"
 
 msgid "Thames-Coromandel District"
-msgstr ""
+msgstr "Dúiche Thames-Coromandel"
 
 msgid "Hauraki District"
-msgstr ""
+msgstr "Dúiche Hauraki"
 
 msgid "Waikato District"
-msgstr ""
+msgstr "Dúiche Waikato"
 
 msgid "Matamata-Piako District"
-msgstr ""
+msgstr "Dúiche Matamata-Piako"
 
 msgid "Hamilton"
-msgstr ""
+msgstr "Hamilton"
 
 msgid "Waipa District"
-msgstr ""
+msgstr "Dúiche Waipa"
 
 msgid "South Waikato District"
-msgstr ""
+msgstr "Dúiche Waikato Theas"
 
 msgid "Otorohanga District"
-msgstr ""
+msgstr "Dúiche Otorohanga"
 
 msgid "Waitomo District"
-msgstr ""
+msgstr "Dúiche Waitomo"
 
 msgid "Taupo District"
-msgstr ""
+msgstr "Dúiche Taupo"
 
 msgid "Western Bay of Plenty District"
-msgstr ""
+msgstr "Ceantar Bá Iarthar na Plenty"
 
 msgid "Tauranga"
-msgstr ""
+msgstr "Tauranga"
 
 msgid "Opotiki District"
-msgstr ""
+msgstr "Dúiche Opotiki"
 
 msgid "Whakatane District"
-msgstr ""
+msgstr "Dúiche Whakatane"
 
 msgid "Rotorua District"
-msgstr ""
+msgstr "Dúiche Rotorua"
 
 msgid "Kawerau District"
-msgstr ""
+msgstr "Dúiche Kawerau"
 
 msgid "Gisborne District"
-msgstr ""
+msgstr "Dúiche Gisborne"
 
 msgid "Wairoa District"
-msgstr ""
+msgstr "Dúiche Wairoa"
 
 msgid "Hastings District"
-msgstr ""
+msgstr "Dúiche Hastings"
 
 msgid "Napier"
-msgstr ""
+msgstr "Napier"
 
 msgid "Central Hawke's Bay District"
-msgstr ""
+msgstr "Ceantar Bhá Lárnach Hawke"
 
 msgid "New Plymouth District"
-msgstr ""
+msgstr "Dúiche Nua Plymouth"
 
 msgid "Stratford District"
-msgstr ""
+msgstr "Dúiche Stratford"
 
 msgid "South Taranaki District"
-msgstr ""
+msgstr "Dúiche Taranaki Theas"
 
 msgid "Ruapehu District"
-msgstr ""
+msgstr "Dúiche Ruapehu"
 
 msgid "Rangitikei District"
-msgstr ""
+msgstr "Dúiche Rangitikei"
 
 msgid "Wanganui District"
-msgstr ""
+msgstr "Dúiche Wanganui"
 
 msgid "Manawatu District"
-msgstr ""
+msgstr "Dúiche Manawatu"
 
 msgid "Palmerston North"
-msgstr ""
+msgstr "Palmerston Thuaidh"
 
 msgid "Tararua District"
-msgstr ""
+msgstr "Dúiche Tararua"
 
 msgid "Horowhenua District"
-msgstr ""
+msgstr "Dúiche Horowenua"
 
 msgid "Masterton District"
-msgstr ""
+msgstr "Dúiche Masterton"
 
 msgid "Kapiti Coast District"
-msgstr ""
+msgstr "Ceantar Cósta Capiti"
 
 msgid "Carterton District"
-msgstr ""
+msgstr "Dúiche Carterton"
 
 msgid "South Wairarapa District"
-msgstr ""
+msgstr "Dúiche Wairarapa Theas"
 
 msgid "Upper Hutt"
-msgstr ""
+msgstr "Hutt Uachtarach"
 
 msgid "Porirua"
-msgstr ""
+msgstr "Porirua"
 
 msgid "Hutt"
-msgstr ""
+msgstr "Hutt"
 
 msgid "Wellington"
-msgstr ""
+msgstr "Wellington"
 
 msgid "Tasman District"
-msgstr ""
+msgstr "Dúiche Tasman"
 
 msgid "Nelson"
-msgstr ""
+msgstr "Nelson"
 
 msgid "Marlborough District"
-msgstr ""
+msgstr "Dúiche Marlborough"
 
 msgid "Buller District"
-msgstr ""
+msgstr "Dúiche Buller"
 
 msgid "Grey District"
-msgstr ""
+msgstr "Dúiche Liath"
 
 msgid "Westland District"
-msgstr ""
+msgstr "Dúiche Westland"
 
 msgid "Kaikoura District"
-msgstr ""
+msgstr "Dúiche Kaikoura"
 
 msgid "Hurunui District"
-msgstr ""
+msgstr "Dúiche Hurunui"
 
 msgid "Selwyn District"
-msgstr ""
+msgstr "Dúiche Selwyn"
 
 msgid "Waimakariri District"
-msgstr ""
+msgstr "Dúiche Waimakariri"
 
 msgid "Christchurch"
-msgstr ""
+msgstr "Christchurch"
 
 msgid "Ashburton District"
-msgstr ""
+msgstr "Dúiche Ashburton"
 
 msgid "Mackenzie District"
-msgstr ""
+msgstr "Dúiche Mackenzie"
 
 msgid "Timaru District"
-msgstr ""
+msgstr "Dúiche Timaru"
 
 msgid "Waimate District"
-msgstr ""
+msgstr "Dúiche Waimate"
 
 msgid "Waitaki District"
-msgstr ""
+msgstr "Dúiche Waitaki"
 
 msgid "Queenstown-Lakes District"
-msgstr ""
+msgstr "Dúiche Queenstown-Lakes"
 
 msgid "Central Otago District"
-msgstr ""
+msgstr "Ceantar Lár Otago"
 
 msgid "Dunedin"
-msgstr ""
+msgstr "Dunedin"
 
 msgid "Clutha District"
-msgstr ""
+msgstr "Dúiche Clutha"
 
 msgid "Southland District"
-msgstr ""
+msgstr "Dúiche Southland"
 
 msgid "Gore District"
-msgstr ""
+msgstr "Dúiche Gore"
 
 msgid "Invercargill"
-msgstr ""
+msgstr "Inbhir Cargill"
 
 msgid "Taranaki"
-msgstr ""
+msgstr "Taranaki"
 
 msgid "Hawke's Bay"
-msgstr ""
+msgstr "Bá Hawke"
 
 msgid "Marlborough"
-msgstr ""
+msgstr "Marlborough"
 
 msgid "Canterbury"
-msgstr ""
+msgstr "Canterbury"
 
 msgid "South Canterbury"
-msgstr ""
+msgstr "Canterbury Theas"
 
 msgid "Westland"
-msgstr ""
+msgstr "Iarthland"
 
 msgid "Otago"
-msgstr ""
+msgstr "Otago"
 
 msgid "Southland"
-msgstr ""
+msgstr "Deiscirt"
 
 msgid "Chatham Islands"
-msgstr ""
+msgstr "Oileáin Chatham"
 
 msgid "Northland"
-msgstr ""
+msgstr "An Tuaisceart"
 
 msgid "Waikato"
-msgstr ""
+msgstr "Waikato"
 
 msgid "Bay of Plenty"
-msgstr ""
+msgstr "Bá an Blán"
 
 msgid "Gisborne"
-msgstr ""
+msgstr "Gisborne"
 
 msgid "Manawatu-Wanganui"
-msgstr ""
+msgstr "Manawatu-Wanganui"
 
 msgid "Tasman"
-msgstr ""
+msgstr "Tasman"
 
 msgid "West Coast"
-msgstr ""
+msgstr "Cósta Thiar"
 
 msgid "This field requires 8 digits."
 msgstr "Éilíonn an réimse 8 digití."
@@ -6443,37 +7181,37 @@ msgid "This field requires 11 digits."
 msgstr "Éilíonn an réimse seo 11 digití."
 
 msgid "Enter a 5 digit postcode."
-msgstr ""
+msgstr "Cuir isteach cód post 5 dhigit."
 
 msgid "Pakistani State"
-msgstr ""
+msgstr "Stát na Pacastáine"
 
 msgid "Pakistani Postcode"
-msgstr ""
+msgstr "Cód Poist Pacastáin"
 
 msgid "Azad Jammu & Kashmir"
-msgstr ""
+msgstr "Azad Jammu & Kashmir"
 
 msgid "Balochistan"
-msgstr ""
+msgstr "Balochistan"
 
 msgid "Federally Administered Tribal Areas"
-msgstr ""
+msgstr "Limistéir Treibhe atá á Riaradh go"
 
 msgid "Gilgit-Baltistan"
-msgstr ""
+msgstr "Gilgit-Baltístan"
 
 msgid "Islamabad"
-msgstr ""
+msgstr "Islamabad"
 
 msgid "Khyber Pakhtunkhwa"
-msgstr ""
+msgstr "Khyber Pakhtunkhwa"
 
 msgid "Punjab"
-msgstr ""
+msgstr "Punjab"
 
 msgid "Sindh"
-msgstr ""
+msgstr "Sindh"
 
 msgid "National Identification Number consists of 11 digits."
 msgstr "Náisiúnta Uimhir Aitheantais comhdhéanta de 11 digití."
@@ -6482,7 +7220,7 @@ msgid "Wrong checksum for the National Identification Number."
 msgstr "Sheiceála mícheart ar an Uimhir Aitheantais Náisiúnta."
 
 msgid "The National Identification Number contains an invalid birth date."
-msgstr ""
+msgstr "Tá dáta breithe neamhbhailí san Uimhir Aitheantais Náisiúnta."
 
 msgid "National ID Card Number consists of 3 letters and 6 digits."
 msgstr ""
@@ -6515,31 +7253,31 @@ msgid "Lower Silesian"
 msgstr "Silesia Íochtarach"
 
 msgid "Kuyavian-Pomeranian"
-msgstr ""
+msgstr "Kuyavian-Pomeranian"
 
 msgid "Lublin"
-msgstr ""
+msgstr "Lublin"
 
 msgid "Lubusz"
-msgstr ""
+msgstr "Lubusz"
 
 msgid "Lodz"
-msgstr ""
+msgstr "Lodz"
 
 msgid "Lesser Poland"
 msgstr "An Pholainn lú"
 
 msgid "Masovian"
-msgstr ""
+msgstr "Masovian"
 
 msgid "Opole"
-msgstr ""
+msgstr "Opolach"
 
 msgid "Subcarpathian"
-msgstr ""
+msgstr "Subcarpathian"
 
 msgid "Podlasie"
-msgstr ""
+msgstr "Podlasie"
 
 msgid "Pomeranian"
 msgstr "Pomerania"
@@ -6548,10 +7286,10 @@ msgid "Silesian"
 msgstr "Silesia Íochtarach"
 
 msgid "Swietokrzyskie"
-msgstr ""
+msgstr "Switokrzyskie"
 
 msgid "Warmian-Masurian"
-msgstr ""
+msgstr "Warmian-Masurian"
 
 msgid "Greater Poland"
 msgstr "An Pholainn Mór"
@@ -6560,85 +7298,91 @@ msgid "West Pomeranian"
 msgstr "Pomerania Thiar"
 
 msgid "The specified value is not a valid Citizen Card number."
-msgstr ""
+msgstr "Ní uimhir bhailí Cárta Saoránach é an luach sonraithe."
 
 msgid ""
 "Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X "
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
+"Tá an formáid XXXXXXXXXXXYYX nó XXXXXXXXXX-XYYX ag uimhreacha Cárta "
+"Saoránach (áit a bhfuil X ina dhigit agus is carachtar alfauméiriúil é Y)."
 
 msgid "The specified number is not a valid Social Security number."
-msgstr ""
+msgstr "Ní uimhir bhailí Slándála Sóisialta é an uimhir shonraithe."
 
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either "
 "1 or 2 and Y is any other digit)."
 msgstr ""
+"Caithfidh uimhreacha Slándála Sóisialta a bheith san fhormáid XYYYYYYYYYY "
+"(áit a bhfuil X 1 nó 2 agus is é Y aon dhigit eile)."
 
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9 "
 "and Y is any other digit)."
 msgstr ""
+"Caithfidh cóid zip a bheith san fhormáid XYYY-YYY (áit a bhfuil X ina dhigit "
+"idir 1 agus 9 agus is é Y aon dhigit eile)."
 
 msgid "Aveiro"
-msgstr ""
+msgstr "Aveiro"
 
 msgid "Beja"
-msgstr ""
+msgstr "Beja"
 
 msgid "Braga"
-msgstr ""
+msgstr "Braga"
 
 msgid "Bragança"
-msgstr ""
+msgstr "Bragança"
 
 msgid "Castelo Branco"
-msgstr ""
+msgstr "Caisleán Báiste"
 
 msgid "Coimbra"
-msgstr ""
+msgstr "Coimbra"
 
 msgid "Évora"
-msgstr ""
+msgstr "Evora"
 
 msgid "Faro"
-msgstr ""
+msgstr "Faro"
 
 msgid "Guarda"
-msgstr ""
+msgstr "Watch"
 
 msgid "Leiria"
-msgstr ""
+msgstr "Leiria"
 
 msgid "Lisboa"
-msgstr ""
+msgstr "Liospóin"
 
 msgid "Portalegre"
-msgstr ""
+msgstr "Portalegre"
 
 msgid "Porto"
-msgstr ""
+msgstr "Pórto"
 
 msgid "Santarém"
-msgstr ""
+msgstr "Santarém"
 
 msgid "Setúbal"
-msgstr ""
+msgstr "Setúbal"
 
 msgid "Viana do Castelo"
-msgstr ""
+msgstr "Viana do Castelo"
 
 msgid "Vila Real"
-msgstr ""
+msgstr "Vila Real"
 
 msgid "Viseu"
-msgstr ""
+msgstr "Viseu"
 
 msgid "Região Autónoma da Madeira"
-msgstr ""
+msgstr "Réigiún Autónoma de Mhaidéara"
 
 msgid "Região Autónoma dos Açores"
-msgstr ""
+msgstr "Réigiún Uathoibríoch na hAacores"
 
 msgid "Enter a valid CIF."
 msgstr "Iontráil CIF bailí."
@@ -6683,253 +7427,253 @@ msgid "North-Caucasian Federal County"
 msgstr "Contae Feidearálach North-Caucasian"
 
 msgid "Moskva"
-msgstr ""
+msgstr "Moscó"
 
 msgid "Saint-Peterburg"
-msgstr ""
+msgstr "Saint-Petersburg"
 
 msgid "Moskovskaya oblast'"
-msgstr ""
+msgstr "Moskovskaya oblast"
 
 msgid "Adygeya, Respublika"
-msgstr ""
+msgstr "Adygeya, Republic"
 
 msgid "Bashkortostan, Respublika"
-msgstr ""
+msgstr "Bashkortostan, Republika"
 
 msgid "Buryatia, Respublika"
-msgstr ""
+msgstr "Buryatia, Republic"
 
 msgid "Altay, Respublika"
-msgstr ""
+msgstr "Altay, Republic"
 
 msgid "Dagestan, Respublika"
-msgstr ""
+msgstr "Dagestan, Republic"
 
 msgid "Ingushskaya Respublika"
-msgstr ""
+msgstr "Republic of Ingushskaya"
 
 msgid "Kabardino-Balkarskaya Respublika"
-msgstr ""
+msgstr "Poblacht Kabardino-Balkarskaya"
 
 msgid "Kalmykia, Respublika"
-msgstr ""
+msgstr "Kalmykia, Republic"
 
 msgid "Karachaevo-Cherkesskaya Respublika"
-msgstr ""
+msgstr "Republika Karachaevo-Cherkesskaya"
 
 msgid "Karelia, Respublika"
-msgstr ""
+msgstr "Karelia, Republic"
 
 msgid "Komi, Respublika"
-msgstr ""
+msgstr "Komi, Republic"
 
 msgid "Mariy Ehl, Respublika"
-msgstr ""
+msgstr "Mariy Ehl, An Phoblacht"
 
 msgid "Mordovia, Respublika"
-msgstr ""
+msgstr "Mordovia, Republic"
 
 msgid "Sakha, Respublika (Yakutiya)"
-msgstr ""
+msgstr "Sakha, Respublika (Yakutiya)"
 
 msgid "Severnaya Osetia, Respublika (Alania)"
-msgstr ""
+msgstr "Severnaya Oceatia, An Rhuabhlacht (An Astráil)"
 
 msgid "Tatarstan, Respublika"
-msgstr ""
+msgstr "Tatarstan, Republic"
 
 msgid "Tyva, Respublika (Tuva)"
-msgstr ""
+msgstr "Tyva, Republika (Tuva)"
 
 msgid "Udmurtskaya Respublika"
-msgstr ""
+msgstr "Udmurtskaya Respublika"
 
 msgid "Khakassiya, Respublika"
-msgstr ""
+msgstr "Khakassiya, Republic"
 
 msgid "Chechenskaya Respublika"
-msgstr ""
+msgstr "Republican Chechenskaya"
 
 msgid "Chuvashskaya Respublika"
-msgstr ""
+msgstr "Chuvashskaya Respublika"
 
 msgid "Altayskiy Kray"
-msgstr ""
+msgstr "Altayskiy Kray"
 
 msgid "Zabaykalskiy Kray"
-msgstr ""
+msgstr "Zabaykalskiy Kray"
 
 msgid "Kamchatskiy Kray"
-msgstr ""
+msgstr "Camchatskiy Kray"
 
 msgid "Krasnodarskiy Kray"
-msgstr ""
+msgstr "Krasnodarskiy Kray"
 
 msgid "Krasnoyarskiy Kray"
-msgstr ""
+msgstr "Krasnoyarskiy Kray"
 
 msgid "Permskiy Kray"
-msgstr ""
+msgstr "Permskiy Kray"
 
 msgid "Primorskiy Kray"
-msgstr ""
+msgstr "Primorskiy Kray"
 
 msgid "Stavropol'siyy Kray"
-msgstr ""
+msgstr "Stavropol'siyy Kray"
 
 msgid "Khabarovskiy Kray"
-msgstr ""
+msgstr "Khabarovskiy Kray"
 
 msgid "Amurskaya oblast'"
-msgstr ""
+msgstr "Oblastach Amurskaya"
 
 msgid "Arkhangel'skaya oblast'"
-msgstr ""
+msgstr "Arkhangel'skaya Oblast'"
 
 msgid "Astrakhanskaya oblast'"
-msgstr ""
+msgstr "Réigiún Astrakhanskaya"
 
 msgid "Belgorodskaya oblast'"
-msgstr ""
+msgstr "Réigiún Belgorodskaya"
 
 msgid "Bryanskaya oblast'"
-msgstr ""
+msgstr "Bryanskaya oblast"
 
 msgid "Vladimirskaya oblast'"
-msgstr ""
+msgstr "Vladimirskaya oblast"
 
 msgid "Volgogradskaya oblast'"
-msgstr ""
+msgstr "Volgogradskaya oblast"
 
 msgid "Vologodskaya oblast'"
-msgstr ""
+msgstr "Réigiún Vologodskaya"
 
 msgid "Voronezhskaya oblast'"
-msgstr ""
+msgstr "Voronezhskaya oblast"
 
 msgid "Ivanovskaya oblast'"
-msgstr ""
+msgstr "Ivanovskaya oblast"
 
 msgid "Irkutskaya oblast'"
-msgstr ""
+msgstr "Réigiún Irkutskaya"
 
 msgid "Kaliningradskaya oblast'"
-msgstr ""
+msgstr "Oblastach Kaliningradskaya"
 
 msgid "Kaluzhskaya oblast'"
-msgstr ""
+msgstr "Kaluzhskaya oblast"
 
 msgid "Kemerovskaya oblast'"
-msgstr ""
+msgstr "Réigiún Kemerovskaya"
 
 msgid "Kirovskaya oblast'"
-msgstr ""
+msgstr "Réigiún Kirovskaya"
 
 msgid "Kostromskaya oblast'"
-msgstr ""
+msgstr "Kostromskaya oblast"
 
 msgid "Kurganskaya oblast'"
-msgstr ""
+msgstr "Réigiún Kurganskaya"
 
 msgid "Kurskaya oblast'"
-msgstr ""
+msgstr "Kurskaya Oblast'"
 
 msgid "Leningradskaya oblast'"
-msgstr ""
+msgstr "Réigiún Leningradskaya"
 
 msgid "Lipeckaya oblast'"
-msgstr ""
+msgstr "Réigiún Lipeckaya"
 
 msgid "Magadanskaya oblast'"
-msgstr ""
+msgstr "Réigiún Magadanskaya"
 
 msgid "Murmanskaya oblast'"
-msgstr ""
+msgstr "Murmanskaya oblast"
 
 msgid "Nizhegorodskaja oblast'"
-msgstr ""
+msgstr "Réigiún Nizhegorodskaya"
 
 msgid "Novgorodskaya oblast'"
-msgstr ""
+msgstr "Novgorodskaya oblast"
 
 msgid "Novosibirskaya oblast'"
-msgstr ""
+msgstr "Novosibirskaya oblast"
 
 msgid "Omskaya oblast'"
-msgstr ""
+msgstr "Réigiún Omskaya"
 
 msgid "Orenburgskaya oblast'"
-msgstr ""
+msgstr "Orenburgskaya oblast"
 
 msgid "Orlovskaya oblast'"
-msgstr ""
+msgstr "Orlovskaya oblast"
 
 msgid "Penzenskaya oblast'"
-msgstr ""
+msgstr "Penzenskaya oblast"
 
 msgid "Pskovskaya oblast'"
-msgstr ""
+msgstr "Oblastach Pskovskaya"
 
 msgid "Rostovskaya oblast'"
-msgstr ""
+msgstr "Réigiún Rostovskaya"
 
 msgid "Rjazanskaya oblast'"
-msgstr ""
+msgstr "Réigiún Rjazanskaya"
 
 msgid "Samarskaya oblast'"
-msgstr ""
+msgstr "Réigiún Samarskaya"
 
 msgid "Saratovskaya oblast'"
-msgstr ""
+msgstr "Saratovskaya oblast"
 
 msgid "Sakhalinskaya oblast'"
-msgstr ""
+msgstr "Réigiún Sakhalinskaya"
 
 msgid "Sverdlovskaya oblast'"
-msgstr ""
+msgstr "Réigiún Sverdlovskaya"
 
 msgid "Smolenskaya oblast'"
-msgstr ""
+msgstr "Réigiún Smolenskaya"
 
 msgid "Tambovskaya oblast'"
-msgstr ""
+msgstr "Tambovskaya oblast"
 
 msgid "Tverskaya oblast'"
-msgstr ""
+msgstr "Réigiún Tverskaya"
 
 msgid "Tomskaya oblast'"
-msgstr ""
+msgstr "Tomskaya oblast"
 
 msgid "Tul'skaya oblast'"
-msgstr ""
+msgstr "Tul'skaya oblast"
 
 msgid "Tyumenskaya oblast'"
-msgstr ""
+msgstr "Réigiún Tyumenskaya"
 
 msgid "Ul'ianovskaya oblast'"
-msgstr ""
+msgstr "Ul'ianovskaya Oblast'"
 
 msgid "Chelyabinskaya oblast'"
-msgstr ""
+msgstr "Chelyabinskaya Oblast'"
 
 msgid "Yaroslavskaya oblast'"
-msgstr ""
+msgstr "Yaroslavskaya oblast"
 
 msgid "Evreyskaya avtonomnaja oblast'"
-msgstr ""
+msgstr "Réigiún Avtonomnaigh Evreyskaya"
 
 msgid "Neneckiy autonomnyy okrug"
-msgstr ""
+msgstr "Limistéar uathrialach Neneckiy"
 
 msgid "Khanty-Mansiyskiy avtonomnyy okrug - Yugra"
-msgstr ""
+msgstr "Dúiche Avtonomnyy Khanty-Mansiyskiy - Yugra"
 
 msgid "Chukotskiy avtonomnyy okrug"
-msgstr ""
+msgstr "Chukotskiy Avtonomnyy District"
 
 msgid "Yamalo-Neneckiy avtonomnyy okrug"
-msgstr ""
+msgstr "Yamalo-Neneckiy District Autonomnyy"
 
 msgid "Enter a valid Swedish organisation number."
 msgstr "Cuir isteach uimhir eagraíochta bailí Sualainnis."
@@ -6947,70 +7691,70 @@ msgid "Stockholm"
 msgstr "Stócólm"
 
 msgid "Västerbotten"
-msgstr ""
+msgstr "Vesterbotten"
 
 msgid "Norrbotten"
-msgstr ""
+msgstr "Norrbotten"
 
 msgid "Uppsala"
-msgstr ""
+msgstr "Uppsala"
 
 msgid "Södermanland"
-msgstr ""
+msgstr "Soudermanland"
 
 msgid "Östergötland"
-msgstr ""
+msgstr "An Ostair"
 
 msgid "Jönköping"
-msgstr ""
+msgstr "Jönköping"
 
 msgid "Kronoberg"
-msgstr ""
+msgstr "Cronoberg"
 
 msgid "Kalmar"
-msgstr ""
+msgstr "Kalmar"
 
 msgid "Gotland"
-msgstr ""
+msgstr "Gotland"
 
 msgid "Blekinge"
-msgstr ""
+msgstr "Bleking"
 
 msgid "Skåne"
-msgstr ""
+msgstr "Scanne"
 
 msgid "Halland"
-msgstr ""
+msgstr "Halland"
 
 msgid "Västra Götaland"
-msgstr ""
+msgstr "West Götaland"
 
 msgid "Värmland"
-msgstr ""
+msgstr "Warmland"
 
 msgid "Örebro"
-msgstr ""
+msgstr "Orebro"
 
 msgid "Västmanland"
-msgstr ""
+msgstr "West Manland"
 
 msgid "Dalarna"
-msgstr ""
+msgstr "Dalarna"
 
 msgid "Gävleborg"
-msgstr ""
+msgstr "Gävleborg"
 
 msgid "Västernorrland"
-msgstr ""
+msgstr "Westnorrland"
 
 msgid "Jämtland"
-msgstr ""
+msgstr "Jämtland"
 
 msgid "Enter a 6-digit postal code."
-msgstr ""
+msgstr "Cuir isteach cód poist 6 dhigit."
 
 msgid "Invalid NRIC/FIN."
-msgstr ""
+msgstr "NRIC/FIN neamhbhailí."
 
 msgid "The first 7 digits of the EMSO must represent a valid past date."
 msgstr ""
@@ -7024,19 +7768,19 @@ msgid "Enter a valid tax number in form SIXXXXXXXX"
 msgstr "Iontráil uimhir cánach bailí i bhfoirm SIXXXXXXXX"
 
 msgid "Banska Bystrica"
-msgstr ""
+msgstr "Banská Bystrica"
 
 msgid "Banska Stiavnica"
-msgstr ""
+msgstr "Banska Stiavnica"
 
 msgid "Bardejov"
-msgstr ""
+msgstr "Bardejov"
 
 msgid "Banovce nad Bebravou"
-msgstr ""
+msgstr "Bánovce nad Bebravou"
 
 msgid "Brezno"
-msgstr ""
+msgstr "Brezno"
 
 msgid "Bratislava I"
 msgstr "An Bhratasláiv I"
@@ -7054,211 +7798,211 @@ msgid "Bratislava V"
 msgstr "An Bhratasláiv V"
 
 msgid "Bytca"
-msgstr ""
+msgstr "Bytca"
 
 msgid "Cadca"
-msgstr ""
+msgstr "Cádca"
 
 msgid "Detva"
-msgstr ""
+msgstr "Detva"
 
 msgid "Dolny Kubin"
-msgstr ""
+msgstr "Dolny Kubin"
 
 msgid "Dunajska Streda"
-msgstr ""
+msgstr "Dunajska Street"
 
 msgid "Galanta"
-msgstr ""
+msgstr "Galanta"
 
 msgid "Gelnica"
-msgstr ""
+msgstr "Gelnica"
 
 msgid "Hlohovec"
-msgstr ""
+msgstr "Hlohovec"
 
 msgid "Humenne"
-msgstr ""
+msgstr "Humenne"
 
 msgid "Ilava"
-msgstr ""
+msgstr "Ilavia"
 
 msgid "Kezmarok"
-msgstr ""
+msgstr "Kezmarok"
 
 msgid "Komarno"
-msgstr ""
+msgstr "Komarno"
 
 msgid "Kosice I"
-msgstr ""
+msgstr "Kosice I"
 
 msgid "Kosice II"
-msgstr ""
+msgstr "Kosice II"
 
 msgid "Kosice III"
-msgstr ""
+msgstr "Kosice III"
 
 msgid "Kosice IV"
-msgstr ""
+msgstr "Kosice IV"
 
 msgid "Kosice - okolie"
-msgstr ""
+msgstr "Kosice - Timpeallacht"
 
 msgid "Krupina"
-msgstr ""
+msgstr "Krupina"
 
 msgid "Kysucke Nove Mesto"
 msgstr "Kysucke Nove mesto"
 
 msgid "Levice"
-msgstr ""
+msgstr "Levice"
 
 msgid "Levoca"
-msgstr ""
+msgstr "Levoca"
 
 msgid "Liptovsky Mikulas"
-msgstr ""
+msgstr "Liptovsky Mikuláis"
 
 msgid "Lucenec"
-msgstr ""
+msgstr "Lucenec"
 
 msgid "Malacky"
-msgstr ""
+msgstr "Malacky"
 
 msgid "Martin"
-msgstr ""
+msgstr "Mártín"
 
 msgid "Medzilaborce"
-msgstr ""
+msgstr "Medzilaborce"
 
 msgid "Michalovce"
-msgstr ""
+msgstr "Michalovce"
 
 msgid "Myjava"
-msgstr ""
+msgstr "Myjava"
 
 msgid "Namestovo"
-msgstr ""
+msgstr "Namestovo"
 
 msgid "Nitra"
-msgstr ""
+msgstr "Nitra"
 
 msgid "Nove Mesto nad Vahom"
 msgstr "Nove mesto nad Vahom"
 
 msgid "Nove Zamky"
-msgstr ""
+msgstr "Nove Zamky"
 
 msgid "Partizanske"
-msgstr ""
+msgstr "Partizansk"
 
 msgid "Pezinok"
-msgstr ""
+msgstr "Peasons"
 
 msgid "Piestany"
-msgstr ""
+msgstr "Piestany"
 
 msgid "Poltar"
-msgstr ""
+msgstr "Poltar"
 
 msgid "Poprad"
-msgstr ""
+msgstr "Poprad"
 
 msgid "Povazska Bystrica"
-msgstr ""
+msgstr "Povazska Bystrica"
 
 msgid "Presov"
-msgstr ""
+msgstr "Prešov"
 
 msgid "Prievidza"
-msgstr ""
+msgstr "Prievidza"
 
 msgid "Puchov"
-msgstr ""
+msgstr "Puchov"
 
 msgid "Revuca"
-msgstr ""
+msgstr "Revuca"
 
 msgid "Rimavska Sobota"
-msgstr ""
+msgstr "Rimavska Sobota"
 
 msgid "Roznava"
-msgstr ""
+msgstr "Roznava"
 
 msgid "Ruzomberok"
-msgstr ""
+msgstr "Ruzomberok"
 
 msgid "Sabinov"
-msgstr ""
+msgstr "Sabinov"
 
 msgid "Senec"
-msgstr ""
+msgstr "Senec"
 
 msgid "Senica"
-msgstr ""
+msgstr "Sénica"
 
 msgid "Skalica"
-msgstr ""
+msgstr "Scalica"
 
 msgid "Snina"
-msgstr ""
+msgstr "Snin"
 
 msgid "Sobrance"
-msgstr ""
+msgstr "Sobrance"
 
 msgid "Spisska Nova Ves"
-msgstr ""
+msgstr "Spišská Nova Ves"
 
 msgid "Stara Lubovna"
-msgstr ""
+msgstr "Stara Lubovna"
 
 msgid "Stropkov"
-msgstr ""
+msgstr "Stropkov"
 
 msgid "Svidnik"
-msgstr ""
+msgstr "Svidnik"
 
 msgid "Sala"
-msgstr ""
+msgstr "Sala"
 
 msgid "Topolcany"
-msgstr ""
+msgstr "Topolcánach"
 
 msgid "Trebisov"
-msgstr ""
+msgstr "Trebisov"
 
 msgid "Trencin"
-msgstr ""
+msgstr "Trencin"
 
 msgid "Trnava"
-msgstr ""
+msgstr "Trnava"
 
 msgid "Turcianske Teplice"
-msgstr ""
+msgstr "Turcianske Teplice"
 
 msgid "Tvrdosin"
-msgstr ""
+msgstr "Tvrdosin"
 
 msgid "Velky Krtis"
-msgstr ""
+msgstr "Velky Krtis"
 
 msgid "Vranov nad Toplou"
-msgstr ""
+msgstr "Vranov nad Toplou"
 
 msgid "Zlate Moravce"
-msgstr ""
+msgstr "Zlate Moravce"
 
 msgid "Zvolen"
-msgstr ""
+msgstr "Zvolen"
 
 msgid "Zarnovica"
-msgstr ""
+msgstr "Zarnovica"
 
 msgid "Ziar nad Hronom"
-msgstr ""
+msgstr "Ziar nad Hronom"
 
 msgid "Zilina"
-msgstr ""
+msgstr "Zilina"
 
 msgid "Banska Bystrica region"
 msgstr "Banska Bystrica réigiún"
@@ -7285,73 +8029,73 @@ msgid "Zilina region"
 msgstr "Zilina réigiún"
 
 msgid "Ariana"
-msgstr ""
+msgstr "Ariana"
 
 msgid "Ben Arous"
-msgstr ""
+msgstr "Ben Arous"
 
 msgid "Bizert"
-msgstr ""
+msgstr "Bearts"
 
 msgid "Gabes"
-msgstr ""
+msgstr "Gabes"
 
 msgid "Gafsa"
-msgstr ""
+msgstr "Gafsa"
 
 msgid "Jendouba"
-msgstr ""
+msgstr "Jendouba"
 
 msgid "Kairouan"
-msgstr ""
+msgstr "Kairouan"
 
 msgid "Kasserine"
-msgstr ""
+msgstr "Casserine"
 
 msgid "Kebili"
-msgstr ""
+msgstr "Kebili"
 
 msgid "Kef"
-msgstr ""
+msgstr "Cave"
 
 msgid "Mahdia"
-msgstr ""
+msgstr "Mahdia"
 
 msgid "Manouba"
-msgstr ""
+msgstr "Manouba"
 
 msgid "Medenine"
-msgstr ""
+msgstr "Medenine"
 
 msgid "Monastir"
-msgstr ""
+msgstr "Monastir"
 
 msgid "Nabeul"
-msgstr ""
+msgstr "Nabeul"
 
 msgid "Sfax"
-msgstr ""
+msgstr "Sfax"
 
 msgid "Sidi Bouzid"
-msgstr ""
+msgstr "Sidi Bouzid"
 
 msgid "Siliana"
-msgstr ""
+msgstr "Siliana"
 
 msgid "Sousse"
-msgstr ""
+msgstr "Sousse"
 
 msgid "Tataouine"
-msgstr ""
+msgstr "Tataouine"
 
 msgid "Tozeur"
-msgstr ""
+msgstr "Powder"
 
 msgid "Tunis"
-msgstr ""
+msgstr "An Túinéis"
 
 msgid "Zaghouan"
-msgstr ""
+msgstr "Zaghouan"
 
 msgid "Enter a valid Turkish Identification number."
 msgstr "Iontráil uimhir aitheantais bailí Tuircis."
@@ -7360,97 +8104,97 @@ msgid "Turkish Identification number must be 11 digits."
 msgstr "Ní mór a aithint Tuircis uimhir 11 digití."
 
 msgid "Enter a valid postal code."
-msgstr ""
+msgstr "Cuir isteach cód poist bailí."
 
 msgid "Ukrainian region"
-msgstr ""
+msgstr "Réigiún Úcráinis"
 
 msgid "Ukrainian VAT number"
-msgstr ""
+msgstr "Uimhir CBL Úcráinis"
 
 msgid "Ukrainian postal code"
-msgstr ""
+msgstr "Cód poist Úcráinis"
 
 msgid "Cherkasy Oblast"
-msgstr ""
+msgstr "Oblast Cherkasy"
 
 msgid "Chernihiv Oblast"
-msgstr ""
+msgstr "Chernihiv Oblast"
 
 msgid "Chernivtsi Oblast"
-msgstr ""
+msgstr "Chernivtsi Oblast"
 
 msgid "Dnipropetrovsk Oblast"
-msgstr ""
+msgstr "Oblast Dnipropetrovsk"
 
 msgid "Donetsk Oblast"
-msgstr ""
+msgstr "Donetsk Oblast"
 
 msgid "Ivano-Frankivsk Oblast"
-msgstr ""
+msgstr "Oblast Ivano-Frankivsk"
 
 msgid "Kharkiv Oblast"
-msgstr ""
+msgstr "Kharkiv Oblast"
 
 msgid "Kherson Oblast"
-msgstr ""
+msgstr "Kherson Oblast"
 
 msgid "Khmelnytskyi Oblast"
-msgstr ""
+msgstr "Khmelnytskyi Oblast"
 
 msgid "Kirovohrad Oblast"
-msgstr ""
+msgstr "Kirovohrad Oblast"
 
-msgid "Kiev Oblast"
+msgid "Kyiv Oblast"
 msgstr ""
 
 msgid "Luhansk Oblast"
-msgstr ""
+msgstr "Oblast Luhansk"
 
 msgid "Lviv Oblast"
-msgstr ""
+msgstr "Oblast Lviv"
 
 msgid "Mykolaiv Oblast"
-msgstr ""
+msgstr "Oblast Mycolaiv"
 
 msgid "Odessa Oblast"
-msgstr ""
+msgstr "Oblast Odessa"
 
 msgid "Poltava Oblast"
-msgstr ""
+msgstr "Poltava Oblast"
 
 msgid "Rivne Oblast"
-msgstr ""
+msgstr "Oblast Rivne"
 
 msgid "Sumy Oblast"
-msgstr ""
+msgstr "Oblast Sumy"
 
 msgid "Ternopil Oblast"
-msgstr ""
+msgstr "Ternopil Oblast"
 
 msgid "Vinnytsia Oblast"
-msgstr ""
+msgstr "Vinnytsia Oblast"
 
 msgid "Volyn Oblast"
-msgstr ""
+msgstr "Volyn Oblast"
 
 msgid "Zakarpattia Oblast"
-msgstr ""
+msgstr "Oblast Zakarpattia"
 
 msgid "Zaporizhia Oblast"
-msgstr ""
+msgstr "Oblast Zaporizhia"
 
 msgid "Zhytomyr Oblast"
-msgstr ""
+msgstr "Oblast Zhytomyr"
 
 msgid "Autonomous Republic of Crimea"
-msgstr ""
+msgstr "Poblacht Uathrialach na Crimea"
 
-msgid "Kiev"
+msgid "Kyiv"
 msgstr ""
 
 msgid "Sevastopol"
-msgstr ""
+msgstr "Sevastopol"
 
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr "Iontráil zip-cód i bhformáid XXXXX nó XXXXX-XXXX."
@@ -7468,209 +8212,209 @@ msgid "U.S. postal code (two uppercase letters)"
 msgstr "US cód poist (dhá litreacha móra)"
 
 msgid "U.S. ZIP code"
-msgstr ""
+msgstr "Cód Poist na SA"
 
 msgid "Social security number"
-msgstr ""
+msgstr "Uimhir slándála sóisi"
 
 msgid "Alabama"
-msgstr ""
+msgstr "Alabama"
 
 msgid "Arizona"
-msgstr ""
+msgstr "Arizona"
 
 msgid "Arkansas"
-msgstr ""
+msgstr "Arkansas"
 
 msgid "California"
-msgstr ""
+msgstr "California"
 
 msgid "Colorado"
-msgstr ""
+msgstr "Colorado"
 
 msgid "Connecticut"
-msgstr ""
+msgstr "Connecticut"
 
 msgid "Delaware"
-msgstr ""
+msgstr "Delaware"
 
 msgid "District of Columbia"
-msgstr ""
+msgstr "Ceantar Columbia"
 
 msgid "Florida"
-msgstr ""
+msgstr "Florida"
 
 msgctxt "US state"
 msgid "Georgia"
-msgstr ""
+msgstr "Seoirsia"
 
 msgid "Idaho"
-msgstr ""
+msgstr "Idaho"
 
 msgid "Illinois"
-msgstr ""
+msgstr "Illinois"
 
 msgid "Indiana"
-msgstr ""
+msgstr "Indiana"
 
 msgid "Iowa"
-msgstr ""
+msgstr "Iowa"
 
 msgid "Kansas"
-msgstr ""
+msgstr "Kansas"
 
 msgid "Kentucky"
-msgstr ""
+msgstr "Kentucky"
 
 msgid "Louisiana"
-msgstr ""
+msgstr "Louisiana"
 
 msgid "Maine"
-msgstr ""
+msgstr "Maine"
 
 msgid "Maryland"
-msgstr ""
+msgstr "Maryland"
 
 msgid "Massachusetts"
-msgstr ""
+msgstr "Massachusetts"
 
 msgid "Michigan"
-msgstr ""
+msgstr "Michigan"
 
 msgid "Minnesota"
-msgstr ""
+msgstr "Minnesota"
 
 msgid "Mississippi"
-msgstr ""
+msgstr "Mississippi"
 
 msgid "Missouri"
-msgstr ""
+msgstr "Missouri"
 
 msgid "Montana"
-msgstr ""
+msgstr "Montana"
 
 msgid "Nebraska"
-msgstr ""
+msgstr "Nebraska"
 
 msgid "Nevada"
-msgstr ""
+msgstr "Nevada"
 
 msgid "New Hampshire"
-msgstr ""
+msgstr "New Hampshire"
 
 msgid "New Jersey"
-msgstr ""
+msgstr "New Jersey"
 
 msgid "New Mexico"
-msgstr ""
+msgstr "Nua-Mheicsiceo"
 
 msgid "New York"
-msgstr ""
+msgstr "Nua-Eabhrac"
 
 msgid "North Carolina"
-msgstr ""
+msgstr "Carolina Thuaidh"
 
 msgid "North Dakota"
-msgstr ""
+msgstr "Dakota Thuaidh"
 
 msgid "Ohio"
-msgstr ""
+msgstr "Ohio"
 
 msgid "Oklahoma"
-msgstr ""
+msgstr "Oklahoma"
 
 msgid "Oregon"
-msgstr ""
+msgstr "Oregon"
 
 msgid "Pennsylvania"
-msgstr ""
+msgstr "Pennsylvania"
 
 msgid "Rhode Island"
-msgstr ""
+msgstr "Oileán Rhode"
 
 msgid "South Carolina"
-msgstr ""
+msgstr "Carolina Theas"
 
 msgid "South Dakota"
-msgstr ""
+msgstr "Dakota Theas"
 
 msgid "Tennessee"
-msgstr ""
+msgstr "Tennessee"
 
 msgid "Texas"
-msgstr ""
+msgstr "Texas"
 
 msgid "Utah"
-msgstr ""
+msgstr "Utah"
 
 msgid "Vermont"
-msgstr ""
+msgstr "Vermont"
 
 msgid "Virginia"
-msgstr ""
+msgstr "An Iúir"
 
 msgid "Washington"
-msgstr ""
+msgstr "Washington"
 
 msgid "West Virginia"
-msgstr ""
+msgstr "Iarthar Virginia"
 
 msgid "Wisconsin"
-msgstr ""
+msgstr "Wisconsin"
 
 msgid "Wyoming"
-msgstr ""
+msgstr "Wyoming"
 
 msgid "Alaska"
-msgstr ""
+msgstr "Alasca"
 
 msgid "Hawaii"
-msgstr ""
+msgstr "Haváí"
 
 msgid "American Samoa"
-msgstr ""
+msgstr "Samó Mheiriceá"
 
 msgid "Guam"
-msgstr ""
+msgstr "Guam"
 
 msgid "Northern Mariana Islands"
-msgstr ""
+msgstr "Oileáin Mariana Thuaisceart"
 
 msgid "Puerto Rico"
-msgstr ""
+msgstr "Pórtó Ríce"
 
 msgid "Virgin Islands"
-msgstr ""
+msgstr "Oileáin Mhaighdean"
 
 msgid "Armed Forces Americas"
-msgstr ""
+msgstr "Fórsaí Armtha Mheiriceá"
 
 msgid "Armed Forces Europe"
-msgstr ""
+msgstr "Fórsaí Armtha na h"
 
 msgid "Armed Forces Pacific"
-msgstr ""
+msgstr "Fórsaí Armtha an Aig"
 
 msgid "Federated States of Micronesia"
-msgstr ""
+msgstr "Stáit Chónaidhme na Micrinéise"
 
 msgid "Marshall Islands"
-msgstr ""
+msgstr "Oileáin Marshall"
 
 msgid "Palau"
-msgstr ""
+msgstr "Palau"
 
 msgid "Commonwealth of the Northern Mariana Islands"
-msgstr ""
+msgstr "Comhlathas na hOileáin Mariana Thuaisceart"
 
 msgid "Panama Canal Zone"
-msgstr ""
+msgstr "Crios Canáil Panama"
 
 msgid "Philippine Islands"
-msgstr ""
+msgstr "Oileáin Filipíneacha"
 
 msgid "Trust Territory of the Pacific Islands"
-msgstr ""
+msgstr "Críoch Iontaobhais Oileáin an Chiúin"
 
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
 msgstr ""
@@ -7680,109 +8424,109 @@ msgid "Enter a valid CI number."
 msgstr "Cuir isteach uimhir IC bailí."
 
 msgid "Región Capital"
-msgstr ""
+msgstr "Réigiún Capital"
 
 msgid "Región Central"
-msgstr ""
+msgstr "Réigiún Láir"
 
 msgid "Región de los Llanos"
-msgstr ""
+msgstr "Réigiún Los Llanos"
 
 msgid "Región Centro Occidental"
-msgstr ""
+msgstr "Réigiún Lár an Iarthair"
 
 msgid "Región Zuliana"
-msgstr ""
+msgstr "Réigiún Zuliana"
 
 msgid "Región de los Andes"
-msgstr ""
+msgstr "Réigiún na hAndes"
 
 msgid "Región Nor-Oriental"
-msgstr ""
+msgstr "Réigiún Thuaidh Oirthear"
 
 msgid "Región Insular"
-msgstr ""
+msgstr "Réigiún Insular"
 
 msgid "Región Guayana"
-msgstr ""
+msgstr "Réigiún Guayana"
 
 msgid "Región Sur Occidental"
-msgstr ""
+msgstr "Réigiún an Iarthar"
 
 msgid "Amazonas"
-msgstr ""
+msgstr "Amazonas"
 
 msgid "Anzoátegui"
-msgstr ""
+msgstr "Anzoategui"
 
 msgid "Apure"
-msgstr ""
+msgstr "Apure"
 
 msgid "Aragua"
-msgstr ""
+msgstr "Aragua"
 
 msgid "Barinas"
-msgstr ""
+msgstr "Barinas"
 
 msgid "Bolívar"
-msgstr ""
+msgstr "Bolívar"
 
 msgid "Carabobo"
-msgstr ""
+msgstr "Carabobo"
 
 msgid "Cojedes"
-msgstr ""
+msgstr "Cojeds"
 
 msgid "Delta Amacuro"
-msgstr ""
+msgstr "Delta Amacuro"
 
 msgid "Dependencias Federales"
-msgstr ""
+msgstr "Cónaitheachtaí Cónaidhme"
 
 msgid "Distrito Capital"
-msgstr ""
+msgstr "District Capital"
 
 msgid "Falcón"
-msgstr ""
+msgstr "Falcon"
 
 msgid "Guárico"
-msgstr ""
+msgstr "Guárico"
 
 msgid "Lara"
-msgstr ""
+msgstr "Lara"
 
 msgid "Mérida"
-msgstr ""
+msgstr "Merida"
 
 msgid "Miranda"
-msgstr ""
+msgstr "Miranda"
 
 msgid "Monagas"
-msgstr ""
+msgstr "Monagas"
 
 msgid "Nueva Esparta"
-msgstr ""
+msgstr "Nueva Esparta"
 
 msgid "Portuguesa"
-msgstr ""
+msgstr "Portuguese"
 
 msgid "Sucre"
-msgstr ""
+msgstr "Sucre"
 
 msgid "Táchira"
-msgstr ""
+msgstr "Tachira"
 
 msgid "Trujillo"
-msgstr ""
+msgstr "Trujillo"
 
 msgid "Vargas"
-msgstr ""
+msgstr "Vargas"
 
 msgid "Yaracuy"
-msgstr ""
+msgstr "Yaracuy"
 
 msgid "Zulia"
-msgstr ""
+msgstr "Zulia"
 
 msgid "Enter a valid South African ID number"
 msgstr "Iontráil uimhir ID hAfraice Theas bailí"
@@ -7791,28 +8535,28 @@ msgid "Enter a valid South African postal code"
 msgstr "Iontráil cód poist na hAfraice Theas bailí"
 
 msgid "Eastern Cape"
-msgstr ""
+msgstr "Oirthear Cape"
 
 msgid "Free State"
 msgstr "Saorstát"
 
 msgid "Gauteng"
-msgstr ""
+msgstr "Gauteng"
 
 msgid "KwaZulu-Natal"
-msgstr ""
+msgstr "KwaZulu-Natal"
 
 msgid "Limpopo"
-msgstr ""
+msgstr "Limpopo"
 
 msgid "Mpumalanga"
-msgstr ""
+msgstr "Mpumalanga"
 
 msgid "Northern Cape"
-msgstr ""
+msgstr "Tuaisceart Cape"
 
 msgid "North West"
 msgstr "Iarthuaisceart"
 
 msgid "Western Cape"
-msgstr ""
+msgstr "Iarthar Cape"
