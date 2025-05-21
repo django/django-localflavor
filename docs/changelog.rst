@@ -1,6 +1,26 @@
 Changelog
 =========
 
+5.1   (unreleased)
+------------------
+
+New flavors:
+
+- None
+
+New fields for existing flavors:
+
+- None
+
+Modifications to existing flavors:
+
+- None
+
+Other changes:
+
+- None
+
+
 5.0   (2025-05-21)
 ------------------
 
