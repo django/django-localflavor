@@ -11,6 +11,8 @@ New flavors:
 
 - Added local flavor for Taiwan
   (`gh-530 <https://github.com/django/django-localflavor/pull/530>`_).
+- Added local flavor for United Arab Emirates
+  (`gh-542 <https://github.com/django/django-localflavor/pull/542>`_).
 
 New fields for existing flavors:
 
