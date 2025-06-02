@@ -6,7 +6,8 @@ Changelog
 
 New flavors:
 
-- None
+- United Arab Emirates LocalFlavor
+  (`gh-527 <https://github.com/django/django-localflavor/pull/527>`_).
 
 New fields for existing flavors:
 
