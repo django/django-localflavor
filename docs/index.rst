@@ -24,6 +24,7 @@ validate Finnish social security numbers.
    :columns: 4
 
    * :doc:`localflavor/ar`
+   * :doc:`localflavor/ae`
    * :doc:`localflavor/at`
    * :doc:`localflavor/au`
    * :doc:`localflavor/be`

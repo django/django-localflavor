@@ -143,3 +143,4 @@ Authors
 * Tudor Amariei
 * Dishan Sachin
 * Kacper Urbański
+* Sami El Achi
