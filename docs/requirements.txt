@@ -1,3 +1,2 @@
-Sphinx
 Django
 Jinja2
