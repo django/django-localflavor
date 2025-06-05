@@ -1,2 +1,3 @@
 Django
 Jinja2
+python-stdnum>=1.6
