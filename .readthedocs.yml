@@ -16,4 +16,6 @@ python:
   install:
     - requirements: docs/requirements.txt
 
-formats: all
+# pdf and possibly epub have issues so we're not using all.
+formats:
+    - htmlzip
