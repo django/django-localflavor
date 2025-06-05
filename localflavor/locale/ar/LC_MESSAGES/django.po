@@ -2164,7 +2164,7 @@ msgstr ""
 msgid "Aarhus V"
 msgstr ""
 
-msgid "Brabrand"
+msgid "Brabbrand"
 msgstr ""
 
 msgid "Risskov Ø"
@@ -5443,7 +5443,7 @@ msgstr ""
 msgid "Larache"
 msgstr ""
 
-msgid "M’Diq - Fnideq"
+msgid "M'Diq - Fnideq"
 msgstr ""
 
 msgid "Tetouan"
@@ -5665,7 +5665,7 @@ msgstr ""
 msgid "Tanger-Tétouan-Al Hoceïma"
 msgstr ""
 
-msgid "L’Oriental"
+msgid "L'Oriental"
 msgstr ""
 
 msgid "Fès-Meknès"
@@ -7799,3 +7799,54 @@ msgstr "شمال شرق"
 
 msgid "Western Cape"
 msgstr "غير كيب"
+
+msgid "Abu Dhabi"
+msgstr "أبوظبي"
+
+msgid "Ajman"
+msgstr "عجمان"
+
+msgid "Dubai"
+msgstr "دبي"
+
+msgid "Fujairah"
+msgstr "الفجيرة"
+
+msgid "Ras Al Khaimah"
+msgstr "رأس الخيمة"
+
+msgid "Sharjah"
+msgstr "الشارقة"
+
+msgid "Umm Al Quwain"
+msgstr "أم القيوين"
+
+msgid "Enter a valid UAE Emirates ID number in format 784-YYYY-NNNNNNN-N."
+msgstr ".784-YYYY-NNNNNNN-N أدخل رقم هوية الإمارات صحيح بالصيغة"
+
+msgid "Enter a valid UAE postal code. Use 00000 if postal code is required."
+msgstr ".أدخل رمز بريدي إماراتي صحيح. استخدم 00000 إذا كان الرمز البريدي مطلوباً"
+
+msgid "Enter a valid P.O. Box number."
+msgstr ".أدخل رقم صندوق بريد صحيح"
+
+msgid "Enter a valid UAE Tax Registration Number (15 digits)."
+msgstr ".أدخل رقم التسجيل الضريبي الإماراتي صحيح (15 رقم)"
+
+msgid "UAE Emirates ID number"
+msgstr "رقم هوية الإمارات"
+
+msgid "UAE Emirate"
+msgstr "الإمارة"
+
+msgid "UAE postal code"
+msgstr "الرمز البريدي الإماراتي"
+
+msgid "UAE P.O. Box number"
+msgstr "رقم صندوق البريد الإماراتي"
+
+msgid "UAE Tax Registration Number"
+msgstr "رقم التسجيل الضريبي الإماراتي"
+
+msgid "Enter a valid UAE Emirates ID number."
+msgstr ".أدخل رقم هوية صحيح"
