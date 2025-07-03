@@ -192,7 +192,7 @@ class PLREGONField(RegexField):
     }
 
     def __init__(self, **kwargs):
-        super().__init__(r'^\d{9,14}$', **kwargs)
+        super().__init__(r'^(\d{9}|\d{14})$', **kwargs)
 
     def clean(self, value):
         value = super().clean(value)
@@ -204,6 +204,8 @@ class PLREGONField(RegexField):
 
     def has_valid_checksum(self, number):
         """Calculates a checksum with the provided algorithm."""
+        # the 14 digits number must firstly pass 9 digits too
+        CHECKSUM_POS_9_DIGIT = 8 
         weights = (
             (8, 9, 2, 3, 4, 5, 6, 7, -1),
             (2, 4, 8, 5, 0, 9, 7, 3, 6, 1, 2, 4, 8, -1),
@@ -217,7 +219,7 @@ class PLREGONField(RegexField):
 
             mod_result = checksum % 11
 
-            if mod_result == 10 and number[-1] != '0':
+            if mod_result == 10 and number[CHECKSUM_POS_9_DIGIT] != '0':
                 return False
 
             if mod_result % 10:

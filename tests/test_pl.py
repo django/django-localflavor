@@ -1,13 +1,20 @@
 from django.test import SimpleTestCase
 
-from localflavor.pl.forms import (PLCountySelect, PLNationalIDCardNumberField, PLNIPField, PLPESELField,
-                                  PLPostalCodeField, PLProvinceSelect, PLREGONField)
+from localflavor.pl.forms import (
+    PLCountySelect,
+    PLNationalIDCardNumberField,
+    PLNIPField,
+    PLPESELField,
+    PLPostalCodeField,
+    PLProvinceSelect,
+    PLREGONField,
+)
 
 
 class PLLocalFlavorTests(SimpleTestCase):
     def test_PLProvinceSelect(self):
         f = PLProvinceSelect()
-        out = '''<select name="voivodeships">
+        out = """<select name="voivodeships">
 <option value="lower_silesia">Lower Silesian</option>
 <option value="kuyavia-pomerania">Kuyavian-Pomeranian</option>
 <option value="lublin">Lublin</option>
@@ -24,12 +31,12 @@ class PLLocalFlavorTests(SimpleTestCase):
 <option value="warmia-masuria">Warmian-Masurian</option>
 <option value="greater_poland">Greater Poland</option>
 <option value="west_pomerania">West Pomeranian</option>
-</select>'''
-        self.assertHTMLEqual(f.render('voivodeships', 'pomerania'), out)
+</select>"""
+        self.assertHTMLEqual(f.render("voivodeships", "pomerania"), out)
 
     def test_PLCountrySelect(self):
         f = PLCountySelect()
-        out = '''<select name="administrativeunit">
+        out = """<select name="administrativeunit">
 <option value="wroclaw">Wroc\u0142aw</option>
 <option value="jeleniagora">Jelenia G\xf3ra</option>
 <option value="legnica">Legnica</option>
@@ -406,84 +413,94 @@ class PLLocalFlavorTests(SimpleTestCase):
 <option value="szczecinecki">szczecinecki</option>
 <option value="swidwinski">\u015bwidwi\u0144ski</option>
 <option value="walecki">wa\u0142ecki</option>
-</select>'''
-        self.assertHTMLEqual(f.render('administrativeunit', 'katowice'), out)
+</select>"""
+        self.assertHTMLEqual(f.render("administrativeunit", "katowice"), out)
 
     def test_PLPostalCodeField(self):
-        error_format = ['Enter a postal code in the format XX-XXX.']
+        error_format = ["Enter a postal code in the format XX-XXX."]
         valid = {
-            '41-403': '41-403',
+            "41-403": "41-403",
         }
         invalid = {
-            '43--434': error_format,
+            "43--434": error_format,
         }
         self.assertFieldOutput(PLPostalCodeField, valid, invalid)
 
     def test_PLNIPField(self):
-        error_format = ['Enter a tax number field (NIP) in the format XXX-XXX-XX-XX, XXX-XX-XX-XXX or XXXXXXXXXX.']
-        error_checksum = ['Wrong checksum for the Tax Number (NIP).']
+        error_format = [
+            "Enter a tax number field (NIP) in the format XXX-XXX-XX-XX, XXX-XX-XX-XXX or XXXXXXXXXX."
+        ]
+        error_checksum = ["Wrong checksum for the Tax Number (NIP)."]
         valid = {
-            '646-241-41-24': '6462414124',
-            '646-24-14-124': '6462414124',
-            '6462414124': '6462414124',
+            "646-241-41-24": "6462414124",
+            "646-24-14-124": "6462414124",
+            "6462414124": "6462414124",
         }
         invalid = {
-            '43-343-234-323': error_format,
-            '64-62-414-124': error_format,
-            '646-241-41-23': error_checksum,
+            "43-343-234-323": error_format,
+            "64-62-414-124": error_format,
+            "646-241-41-23": error_checksum,
         }
         self.assertFieldOutput(PLNIPField, valid, invalid)
 
     def test_PLPESELField(self):
-        error_checksum = ['Wrong checksum for the National Identification Number.']
-        error_format = ['National Identification Number consists of 11 digits.']
-        error_birthdate = ['The National Identification Number contains an invalid birth date.']
+        error_checksum = ["Wrong checksum for the National Identification Number."]
+        error_format = ["National Identification Number consists of 11 digits."]
+        error_birthdate = [
+            "The National Identification Number contains an invalid birth date."
+        ]
         valid = {
-            '80071610614': '80071610614',
+            "80071610614": "80071610614",
         }
         invalid = {
-            '80071610610': error_checksum,
-            '80': error_format,
-            '800716106AA': error_format,
-            '98765432121': error_birthdate,
+            "80071610610": error_checksum,
+            "80": error_format,
+            "800716106AA": error_format,
+            "98765432121": error_birthdate,
         }
         self.assertFieldOutput(PLPESELField, valid, invalid)
 
     def test_PLNationalIDCardNumberField(self):
-        error_checksum = ['Wrong checksum for the National ID Card Number.']
-        error_format = ['National ID Card Number consists of 3 letters and 6 digits.']
+        error_checksum = ["Wrong checksum for the National ID Card Number."]
+        error_format = ["National ID Card Number consists of 3 letters and 6 digits."]
         valid = {
-            'ABC123458': 'ABC123458',
-            'abc123458': 'ABC123458',
+            "ABC123458": "ABC123458",
+            "abc123458": "ABC123458",
         }
         invalid = {
-            'ABC123457': error_checksum,
-            'abc123457': error_checksum,
-            'a12Aaaaaa': error_format,
-            'AA1234443': error_format,
+            "ABC123457": error_checksum,
+            "abc123457": error_checksum,
+            "a12Aaaaaa": error_format,
+            "AA1234443": error_format,
         }
         self.assertFieldOutput(PLNationalIDCardNumberField, valid, invalid)
 
     def test_PLREGONField(self):
-        error_checksum = ['Wrong checksum for the National Business Register Number (REGON).']
-        error_format = ['National Business Register Number (REGON) consists of 9 or 14 digits.']
-        valid = {
-            '12345678512347': '12345678512347',
-            '590096454': '590096454',
+        VALID_LENGTHS = (9, 14)
 
+        error_checksum = [
+            "Wrong checksum for the National Business Register Number (REGON)."
+        ]
+        error_format = [
+            "National Business Register Number (REGON) consists of 9 or 14 digits."
+        ]
+        valid = {
+            "12345678512347": "12345678512347",
+            "590096454": "590096454",
             # A special case where the checksum == 10 and the control
             # digit == '0'
-            '391023200': '391023200',
+            "391023200": "391023200",
+            "00102110000342": "00102110000342",
         }
         invalid = {
-            '123456784': error_checksum,
-            '12345678412342': error_checksum,
-            '590096453': error_checksum,
-
+            "123456784": error_checksum,
+            "12345678412342": error_checksum,
+            "590096453": error_checksum,
             # A special case where the checksum == 10,
             # but the control digit != '0'
-            '111111111': error_checksum,
-
-            '590096': error_format,
+            "111111111": error_checksum,
+            "590096": error_format,
+            # 8, 10, 11, 12, 13, 15 digits
+            **{"1" * i: error_format for i in range(8, 16) if i not in VALID_LENGTHS},
         }
         self.assertFieldOutput(PLREGONField, valid, invalid)
