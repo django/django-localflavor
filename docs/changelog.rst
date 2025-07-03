@@ -6,7 +6,8 @@ Changelog
 
 New flavors:
 
-- None
+- Added local flavor for Taiwan
+  (`gh-530 <https://github.com/django/django-localflavor/pull/530>`_).
 
 New fields for existing flavors:
 
