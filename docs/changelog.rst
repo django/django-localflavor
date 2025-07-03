@@ -101,6 +101,8 @@ Modifications to existing flavors:
   (`gh-506 <https://github.com/django/django-localflavor/pull/506/files>`_).
 - Allow formatted IBANs longer than 26 chars to be saved in `IBANField`
   (`gh-522 <https://github.com/django/django-localflavor/pull/522>`_).
+- Fix REGON validation for PL
+  (`gh-529 <https://github.com/django/django-localflavor/pull/529>`_).
 
 Other changes:
 
