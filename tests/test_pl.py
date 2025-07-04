@@ -491,6 +491,9 @@ class PLLocalFlavorTests(SimpleTestCase):
             # digit == '0'
             '391023200': '391023200',
             '00102110000342': '00102110000342',
+            # A special case where the 14 digits checksum == 10 
+            # but then 9 digits checksum is not required to be 0
+            '00202110146340': '00202110146340', 
         }
         invalid = {
             '123456784': error_checksum,
