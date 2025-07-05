@@ -138,3 +138,4 @@ Authors
 * Abhineet Tamrakar
 * Tudor Amariei
 * Dishan Sachin
+* Kacper Urbański
