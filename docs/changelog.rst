@@ -14,7 +14,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Fix REGON validation for PL
+  (`gh-529 <https://github.com/django/django-localflavor/pull/529>`_).
 
 Other changes:
 
