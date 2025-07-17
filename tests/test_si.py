@@ -68,6 +68,7 @@ class SILocalFlavorTests(SimpleTestCase):
         self.assertFieldOutput(SIPostalCodeField, valid, invalid)
 
     def test_SIPostalCodeSelect(self):
+        self.maxDiff = None
         f = SIPostalCodeSelect()
         out = '''<select name="Kranj">
 <option value="8341">Adle\u0161i\u010di</option>
@@ -108,6 +109,7 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="8276">Bu\u010dka</option>
 <option value="9261">Cankova</option>
 <option value="3000">Celje</option>
+<option value="3001">Celje - po\u0161tni predali</option>
 <option value="4207">Cerklje na Gorenjskem</option>
 <option value="8263">Cerklje ob Krki</option>
 <option value="1380">Cerknica</option>
@@ -212,7 +214,8 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="5211">Kojsko</option>
 <option value="6223">Komen</option>
 <option value="1218">Komenda</option>
-<option value="6000">Koper</option>
+<option value="6000">Koper - Capodistria</option>
+<option value="6001">Koper - Capodistria - po\u0161tni predali</option>
 <option value="8282">Koprivnica</option>
 <option value="5296">Kostanjevica na Krasu</option>
 <option value="8311">Kostanjevica na Krki</option>
@@ -224,6 +227,7 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="1338">Ko\u010devska Reka</option>
 <option value="6256">Ko\u0161ana</option>
 <option value="4000" selected="selected">Kranj</option>
+<option value="4001">Kranj - po\u0161tni predali</option>
 <option value="4280">Kranjska Gora</option>
 <option value="1281">Kresnice</option>
 <option value="4294">Kri\u017ee</option>
@@ -248,6 +252,13 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="1270">Litija</option>
 <option value="3202">Ljube\u010dna</option>
 <option value="1000">Ljubljana</option>
+<option value="1261">Ljubljana - Dobrunje</option>
+<option value="1260">Ljubljana - Polje</option>
+<option value="1002">Ljubljana - po\u0161tni center</option>
+<option value="1001">Ljubljana - po\u0161tni predali</option>
+<option value="1231">Ljubljana - \u010crnu\u010de</option>
+<option value="1210">Ljubljana - \u0160entvid</option>
+<option value="1211">Ljubljana - \u0160martno</option>
 <option value="3333">Ljubno ob Savinji</option>
 <option value="9240">Ljutomer</option>
 <option value="5231">Log pod Mangartom</option>
@@ -268,6 +279,7 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="2229">Male\u010dnik</option>
 <option value="6273">Marezige</option>
 <option value="2000">Maribor</option>
+<option value="2001">Maribor - po\u0161tni predali</option>
 <option value="2206">Marjeta na Dravskem polju</option>
 <option value="2281">Markovci</option>
 <option value="9221">Martjanci</option>
@@ -292,14 +304,17 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="1221">Motnik</option>
 <option value="3330">Mozirje</option>
 <option value="9000">Murska Sobota</option>
+<option value="9001">Murska Sobota - po\u0161tni predali</option>
 <option value="2366">Muta</option>
 <option value="4202">Naklo</option>
 <option value="3331">Nazarje</option>
 <option value="1357">Notranje Gorice</option>
 <option value="3203">Nova Cerkev</option>
 <option value="5000">Nova Gorica</option>
+<option value="5001">Nova Gorica - po\u0161tni predali</option>
 <option value="1385">Nova vas</option>
 <option value="8000">Novo mesto</option>
+<option value="8001">Novo mesto - po\u0161tni predali</option>
 <option value="6243">Obrov</option>
 <option value="9233">Odranci</option>
 <option value="2317">Oplotnica</option>
@@ -367,6 +382,7 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="1381">Rakek</option>
 <option value="4283">Rate\u010de - Planica</option>
 <option value="2390">Ravne na Koro\u0161kem</option>
+<option value="9246">Razkri\u017eje</option>
 <option value="2327">Ra\u010de</option>
 <option value="5292">Ren\u010de</option>
 <option value="3332">Re\u010dica ob Savinji</option>
@@ -389,7 +405,7 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="8290">Sevnica</option>
 <option value="6333">Se\u010dovlje - Sicciole</option>
 <option value="6210">Se\u017eana</option>
-<option value="2214">Sladki vrh</option>
+<option value="2214">Sladki Vrh</option>
 <option value="5283">Slap ob Idrijci</option>
 <option value="2380">Slovenj Gradec</option>
 <option value="2310">Slovenska Bistrica</option>
@@ -445,8 +461,8 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="9224">Turni\u0161\u010de</option>
 <option value="8323">Ur\u0161na sela</option>
 <option value="1252">Va\u010de</option>
-<option value="3320">Velenje - dostava</option>
-<option value="3322">Velenje - po\u0161tni predali</option>
+<option value="3320">Velenje</option>
+<option value="3322">Velenje</option>
 <option value="8212">Velika Loka</option>
 <option value="2274">Velika Nedelja</option>
 <option value="9225">Velika Polana</option>
@@ -455,7 +471,7 @@ class SILocalFlavorTests(SimpleTestCase):
 <option value="9241">Ver\u017eej</option>
 <option value="1312">Videm - Dobrepolje</option>
 <option value="2284">Videm pri Ptuju</option>
-<option value="8344">Vinica pri \u010crnomlju</option>
+<option value="8344">Vinica</option>
 <option value="5271">Vipava</option>
 <option value="4212">Visoko</option>
 <option value="3205">Vitanje</option>

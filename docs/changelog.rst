@@ -16,6 +16,8 @@ Modifications to existing flavors:
 
 - Fix REGON validation for PL
   (`gh-529 <https://github.com/django/django-localflavor/pull/529>`_).
+- Update SI postal codes
+  (`gh-531 <https://github.com/django/django-localflavor/pull/531>`_).
 
 Other changes:
 
