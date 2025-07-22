@@ -75,6 +75,7 @@ Authors
 * Jan Pieter Waagmeester
 * Jarmo van Lenthe
 * Jérémie Ferry
+* Jernej Porenta
 * Jocelyn Delalande
 * Johannes Hoppe
 * Johnny Lee Othon
