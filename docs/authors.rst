@@ -98,6 +98,7 @@ Authors
 * Martin Ogden
 * Marti Raudsepp
 * Matias Dinota
+* Matt Wang
 * Michał Sałaban
 * Mike Lissner
 * Mohammed Al-Abdulhadi
