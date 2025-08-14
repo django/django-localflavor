@@ -3826,22 +3826,22 @@ msgstr ""
 
 #, python-format
 msgid "%s is not a valid character for IBAN."
-msgstr ""
+msgstr "%s не є допустимим символом для IBAN."
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
-msgstr ""
+msgstr "IBAN-коди %(country_code)s повинні містити %(number)s символів."
 
 #, python-format
 msgid "%s is not a valid country code for IBAN."
-msgstr ""
+msgstr "%s не є дійсним кодом країни для IBAN."
 
 #, python-format
 msgid "%s IBANs are not allowed in this field."
-msgstr ""
+msgstr "%s IBAN не допускаються в цьому полі."
 
 msgid "Not a valid IBAN."
-msgstr ""
+msgstr "Недійсний IBAN."
 
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
@@ -3852,7 +3852,7 @@ msgstr ""
 
 #, python-format
 msgid "%s is not a valid country code."
-msgstr ""
+msgstr "%s не є дійсним кодом країни."
 
 msgid "Not a valid EAN code."
 msgstr ""

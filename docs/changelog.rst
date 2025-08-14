@@ -22,7 +22,7 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Added Ukrainian 🇺🇦 localization for IBAN functionality
 
 
 5.0   (2025-05-21)
