@@ -27,6 +27,8 @@ Modifications to existing flavors:
   (`gh-529 <https://github.com/django/django-localflavor/pull/529>`_).
 - Update SI postal codes
   (`gh-531 <https://github.com/django/django-localflavor/pull/531>`_).
+- Update BR CNPJ validator to accept new alphanumeric format
+  (`gh-533 <https://github.com/django/django-localflavor/pull/533>`_).
 - Added Falkland Islands (Malvinas), Honduras, Oman, Somalia and Yemen to IBAN_COUNTRY_CODE_LENGTH dict based on
   version 101 of the IBAN registry document from December 2025. The minium version of python-stdnum is now 2.2.
   (`gh-538 <https://github.com/django/django-localflavor/pull/538>`_),
