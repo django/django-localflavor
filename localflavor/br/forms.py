@@ -88,15 +88,7 @@ class BRCNPJField(CharField):
     A form field that validates input as `Brazilian CNPJ`_.
 
     Input can either be of the format XX.XXX.XXX/XXXX-XX or be a group of 14
-    digits.
-
-    If you want to use the long format only, you can specify:
-        brcnpj_field = BRCNPJField(min_length=16)
-
-    If you want to use the short format, you can specify:
-        brcnpj_field = BRCNPJField(max_length=14)
-
-    Otherwise both formats will be valid.
+    digits or upper case letters.
 
     .. _Brazilian CNPJ: http://en.wikipedia.org/wiki/National_identification_number#Brazil
     .. versionchanged:: 1.4
@@ -106,12 +98,11 @@ class BRCNPJField(CharField):
     """
 
     default_error_messages = {
-        'invalid': _("Invalid CNPJ number."),
-        'max_digits': _("This field requires at least 14 digits"),
+        "invalid": _("Invalid CNPJ number."),
     }
 
-    def __init__(self, min_length=14, max_length=18, **kwargs):
-        super().__init__(max_length=max_length, min_length=min_length, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.validators.append(BRCNPJValidator())
 
 

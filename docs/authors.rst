@@ -115,6 +115,7 @@ Authors
 * Rael Max
 * Ramiro Morales
 * Raphael Michel
+* Renne Rocha
 * Rolf Erik Lekang
 * Russell Keith-Magee
 * Santosh Bhattarai
