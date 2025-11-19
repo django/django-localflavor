@@ -3,7 +3,7 @@ from django.test import SimpleTestCase, TestCase
 from localflavor.br import models
 from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
                                   BRZipCodeField)
-from localflavor.br.utils import get_states_of_brazil
+from localflavor.br.utils import get_state_name_from_state_abbreviation
 from tests.test_br.forms import BRPersonProfileForm
 
 
@@ -284,33 +284,24 @@ class BRLocalFlavorModelTests(SimpleTestCase):
         self.assertEqual(instance.validators, new_instance.validators)
 
 
-class GetStatesOfBrazil(SimpleTestCase):
+class GetStateNameFromAbbreviationTests(SimpleTestCase):
 
-    ALL_EXPECTED_STATES = dict
-
-    def test_get_valid_state(self):
-        federative_unit = "pb"
-        state_of_brazil = get_states_of_brazil(federative_unit=federative_unit)
-        expected_value = "Paraíba"
-
-        self.assertEqual(state_of_brazil, expected_value)
-
-    def test_get_return_all_states_dict(self):
-        states_of_brazil_capital_letter = get_states_of_brazil(capital_letter=True)
-        states_of_brazil_without_capital_letter = get_states_of_brazil()
-        
+    def test_valid_state_abbreviation(self):
         self.assertEqual(
-            type(states_of_brazil_capital_letter),
-            self.ALL_EXPECTED_STATES
+            get_state_name_from_state_abbreviation("pb"),
+            "Paraíba"
         )
         self.assertEqual(
-            type(states_of_brazil_without_capital_letter),
-            self.ALL_EXPECTED_STATES
+            get_state_name_from_state_abbreviation("RJ"),
+            "Rio de Janeiro"
         )
 
-    def test_federative_unit_invalid(self):
-        invalid_inputs = [1, 1.0, "None", [None]]
-        
-        for invalid_input in invalid_inputs:
-            result = get_states_of_brazil(invalid_input)
-            self.assertIsInstance(result, self.ALL_EXPECTED_STATES)
+    def test_invalid_state_abbreviation(self):
+        self.assertIsNone(get_state_name_from_state_abbreviation("XX"))
+        self.assertIsNone(get_state_name_from_state_abbreviation("None"))
+
+    def test_non_string_input(self):
+        self.assertIsNone(get_state_name_from_state_abbreviation(123))
+        self.assertIsNone(get_state_name_from_state_abbreviation(1.5))
+        self.assertIsNone(get_state_name_from_state_abbreviation(None))
+        self.assertIsNone(get_state_name_from_state_abbreviation([None]))
