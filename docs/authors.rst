@@ -101,6 +101,7 @@ Authors
 * Matt Wang
 * Michał Sałaban
 * Mike Lissner
+* Mikel Larreategi
 * Mohammed Al-Abdulhadi
 * Morgane Alonso
 * Naglis Jonaitis
