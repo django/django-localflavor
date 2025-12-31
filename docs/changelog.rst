@@ -23,6 +23,7 @@ Modifications to existing flavors:
 Other changes:
 
 - Fix basque language translation of some terms
+  (`gh-537 <https://github.com/django/django-localflavor/pull/537>`_).
 
 
 5.0   (2025-05-21)
