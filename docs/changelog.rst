@@ -22,7 +22,7 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Fix basque language translation of some terms
 
 
 5.0   (2025-05-21)
