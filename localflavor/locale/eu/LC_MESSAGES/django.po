@@ -151,7 +151,7 @@ msgstr "zip kodea XXXX formatoan idatzi."
 
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
 msgstr ""
-"Australiako Gizarte Segurantza kode zuzena sartu XXXX XXXXXX formatuan."
+"Austriako Gizarte Segurantza kode zuzena sartu XXXX XXXXXX formatuan."
 
 msgid "Enter a 4 digit postcode."
 msgstr "Sartu 4 digituko posta kodea"
