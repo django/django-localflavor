@@ -3165,7 +3165,7 @@ msgid "Guadalajara"
 msgstr "Guadalajara"
 
 msgid "Guipuzkoa"
-msgstr "Gupuzkoa"
+msgstr "Gipuzkoa"
 
 msgid "Huelva"
 msgstr "Huelva"
