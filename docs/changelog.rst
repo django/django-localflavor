@@ -6,6 +6,9 @@ Changelog
 
 New flavors:
 
+- Added Falkland Islands (Malvinas), Honduras, Oman, Somalia and Yemen to IBAN_COUNTRY_CODE_LENGTH dict based on
+  version 101 of the IBAN registry document from December 2025.
+
 - Added local flavor for Taiwan
   (`gh-530 <https://github.com/django/django-localflavor/pull/530>`_).
 
