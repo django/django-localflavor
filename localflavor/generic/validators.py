@@ -15,8 +15,8 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 #
 # https://www.swift.com/standards/data-standards/iban
 #
-# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 94 of the IBAN Registry document which was published
-# in April 2023.
+# The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 101 of the IBAN Registry document which was published
+# in December 2025.
 #
 # Other Resources:
 #
@@ -49,6 +49,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'EG': 29,  # Egypt
                             'ES': 24,  # Spain
                             'FI': 18,  # Finland
+                            'FK': 18,  # Falkland Islands (Malvinas)
                             'FO': 18,  # Faroe Islands
                             'FR': 27,  # France + French Guiana (GF), Guadeloupe (GP), Martinique (MQ), Réunion (RE),
                                        #          French Polynesia (PF), French Southern Territories (TF), Mayotte (YT),
@@ -61,6 +62,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'GL': 18,  # Greenland
                             'GR': 27,  # Greece
                             'GT': 28,  # Guatemala
+                            'HN': 28,  # Honduras
                             'HR': 21,  # Croatia
                             'HU': 28,  # Hungary
                             'IE': 22,  # Ireland
@@ -81,7 +83,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'MC': 27,  # Monaco
                             'MD': 24,  # Moldova
                             'ME': 22,  # Montenegro
-                            'MK': 19,  # Macedonia
+                            'MK': 19,  # North Macedonia
                             'MN': 20,  # Mongolia
                             'MR': 27,  # Mauritania
                             'MT': 31,  # Malta
@@ -89,6 +91,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'NI': 28,  # Nicaragua
                             'NL': 18,  # Netherlands
                             'NO': 15,  # Norway
+                            'OM': 23,  # Oman
                             'PK': 24,  # Pakistan
                             'PL': 28,  # Poland
                             'PS': 29,  # Palestine
@@ -104,6 +107,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'SI': 19,  # Slovenia
                             'SK': 24,  # Slovakia
                             'SM': 27,  # San Marino
+                            'SO': 23,  # Somalia
                             'ST': 25,  # Sao Tome and Principe
                             'SV': 28,  # El Salvador
                             'TL': 23,  # Timor-Leste
@@ -112,7 +116,8 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'UA': 29,  # Ukraine
                             'VA': 22,  # Vatican City State
                             'VG': 24,  # British Virgin Islands
-                            'XK': 20}  # Kosovo (user-assigned country code)
+                            'XK': 20,  # Kosovo (user-assigned country code)
+                            'YE': 30}  # Yemen
 
 
 # Nordea has catalogued IBANs for some additional countries but they are not part of the office IBAN network yet.
