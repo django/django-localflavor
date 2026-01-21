@@ -39,6 +39,7 @@ Authors
 * Daniel Ampuero
 * Daniela Ponader
 * Danielle Madeley
+* David Chatelain
 * David Smith
 * Daniel Roschka
 * Didier 'OdyX' Raboud
