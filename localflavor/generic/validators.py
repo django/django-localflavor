@@ -16,7 +16,7 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 # https://www.swift.com/standards/data-standards/iban
 #
 # The IBAN_COUNTRY_CODE_LENGTH dictionary has been updated version 101 of the IBAN Registry document which was published
-# in December 2025.
+# in December 2025, plus the "Partial IBAN countries (Experimental)" from https://www.iban.com/structure.
 #
 # Other Resources:
 #
@@ -117,7 +117,31 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'VA': 22,  # Vatican City State
                             'VG': 24,  # British Virgin Islands
                             'XK': 20,  # Kosovo (user-assigned country code)
-                            'YE': 30}  # Yemen
+                            'YE': 30,  # Yemen
+
+                            # Partial IBAN countries (Experimental), see https://www.iban.com/structure
+                            'AO': 25,  # Angola
+                            'BF': 28,  # Burkina Faso
+                            'BJ': 28,  # Benin
+                            'CF': 27,  # Central African Republic
+                            'CG': 27,  # Congo
+                            'CI': 28,  # Ivory Coast
+                            'CM': 27,  # Cameroon
+                            'CV': 25,  # Cape Verde
+                            'DZ': 26,  # Algeria
+                            'GA': 27,  # Gabon
+                            'GQ': 27,  # Equatorial Guinea
+                            'GW': 25,  # Guinea-Bissau
+                            'IR': 26,  # Iran
+                            'KM': 27,  # Comoros
+                            'MA': 28,  # Morocco
+                            'MG': 27,  # Madagascar
+                            'ML': 28,  # Mali
+                            'MZ': 25,  # Mozambique
+                            'NE': 28,  # Niger
+                            'SN': 28,  # Senegal
+                            'TD': 27,  # Chad
+                            'TG': 28}  # Togo
 
 
 # Nordea has catalogued IBANs for some additional countries but they are not part of the office IBAN network yet.
