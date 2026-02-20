@@ -32,6 +32,7 @@ class BRLocalFlavorTests(SimpleTestCase):
 
     def test_BRCNPJField(self):
         valid_inputs = {
+            '64132916/0001-88': '64132916/0001-88',
             '64.132.916/0001-88': '64.132.916/0001-88',
             '12.ABC.345/01DE-35': '12.ABC.345/01DE-35',
             'AB.CCC.DEF/GHIJ-08': 'AB.CCC.DEF/GHIJ-08',
@@ -43,6 +44,11 @@ class BRLocalFlavorTests(SimpleTestCase):
             '03634711000106': '03634711000106',
         }
         invalid_inputs = {
+            '../-12345678901234': [BRCNPJField.default_error_messages['invalid'], ],
+            '12-345-678/9012-10': [BRCNPJField.default_error_messages['invalid'], ],
+            '12.345.678/9012-10': [BRCNPJField.default_error_messages['invalid'], ],
+            '12345678/9012-10': [BRCNPJField.default_error_messages['invalid'], ],
+            '64.132.916/0001-XX': [BRCNPJField.default_error_messages['invalid'], ],
             '64.132.916/0001-80': [BRCNPJField.default_error_messages['invalid'], ],
             '64,132,916/0001-80': [BRCNPJField.default_error_messages['invalid'], ],
             '641329160001AA': [BRCNPJField.default_error_messages['invalid'], ],
