@@ -101,8 +101,8 @@ class BRCNPJField(CharField):
         "invalid": _("Invalid CNPJ number."),
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, min_length=14, max_length=18, **kwargs):
+        super().__init__(max_length=max_length, min_length=min_length, **kwargs)
         self.validators.append(BRCNPJValidator())
 
 
