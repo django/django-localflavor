@@ -5,6 +5,7 @@ Authors
 * Abdellah El Youssfi Alaoui
 * Adam Rurański
 * Adam Taylor
+* Adam Yuhasz
 * Adnane Belmadiaf
 * Adonys Alea Boffill
 * Adrian Holovaty
