@@ -3,6 +3,7 @@ from django.test import SimpleTestCase, TestCase
 from localflavor.br import models
 from localflavor.br.forms import (BRCNPJField, BRCPFField, BRProcessoField, BRStateChoiceField, BRStateSelect,
                                   BRZipCodeField)
+from localflavor.br.utils import get_state_name_from_state_abbreviation
 from tests.test_br.forms import BRPersonProfileForm
 
 
@@ -285,3 +286,26 @@ class BRLocalFlavorModelTests(SimpleTestCase):
         self.assertEqual(instance.max_length, new_instance.max_length)
         self.assertEqual(instance.description, new_instance.description)
         self.assertEqual(instance.validators, new_instance.validators)
+
+
+class GetStateNameFromAbbreviationTests(SimpleTestCase):
+
+    def test_valid_state_abbreviation(self):
+        self.assertEqual(
+            get_state_name_from_state_abbreviation("pb"),
+            "Paraíba"
+        )
+        self.assertEqual(
+            get_state_name_from_state_abbreviation("RJ"),
+            "Rio de Janeiro"
+        )
+
+    def test_invalid_state_abbreviation(self):
+        self.assertIsNone(get_state_name_from_state_abbreviation("XX"))
+        self.assertIsNone(get_state_name_from_state_abbreviation("None"))
+
+    def test_non_string_input(self):
+        self.assertIsNone(get_state_name_from_state_abbreviation(123))
+        self.assertIsNone(get_state_name_from_state_abbreviation(1.5))
+        self.assertIsNone(get_state_name_from_state_abbreviation(None))
+        self.assertIsNone(get_state_name_from_state_abbreviation([None]))
