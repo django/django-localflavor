@@ -1,7 +1,10 @@
 from django.db.models import CharField
 from django.utils.translation import gettext_lazy as _
 
+from .forms import USAdoptionTaxpayerIdentificationNumberField as USATINFormField
+from .forms import USIndividualTaxpayerIdentificationNumberField as USITINFormField
 from .forms import USSocialSecurityNumberField as USSocialSecurityNumberFieldFormField
+from .forms import USTaxpayerIdentificationNumberField as USTINFormField
 from .forms import USZipCodeField as USZipCodeFormField
 from .us_states import STATE_CHOICES, USPS_CHOICES
 
@@ -95,5 +98,69 @@ class USSocialSecurityNumberField(CharField):
 
     def formfield(self, **kwargs):
         defaults = {'form_class': USSocialSecurityNumberFieldFormField}
+        defaults.update(kwargs)
+        return super().formfield(**defaults)
+
+
+class USIndividualTaxpayerIdentificationNumberField(CharField):
+    """
+    A model field that stores an ITIN in the format ``XXX-XX-XXXX``.
+
+    Forms represent it as a ``forms.USIndividualTaxpayerIdentificationNumberField`` field.
+
+    .. versionadded:: 5.1
+    """
+
+    description = _("Individual Taxpayer Identification Number")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 11
+        super().__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': USITINFormField}
+        defaults.update(kwargs)
+        return super().formfield(**defaults)
+
+
+class USAdoptionTaxpayerIdentificationNumberField(CharField):
+    """
+    A model field that stores an ATIN in the format ``XXX-XX-XXXX``.
+
+    Forms represent it as a ``forms.USAdoptionTaxpayerIdentificationNumberField`` field.
+
+    .. versionadded:: 5.1
+    """
+
+    description = _("Adoption Taxpayer Identification Number")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 11
+        super().__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': USATINFormField}
+        defaults.update(kwargs)
+        return super().formfield(**defaults)
+
+
+class USTaxpayerIdentificationNumberField(CharField):
+    """
+    A model field that stores any valid U.S. taxpayer identification number
+    (SSN, ITIN, or ATIN) in the format ``XXX-XX-XXXX``.
+
+    Forms represent it as a ``forms.USTaxpayerIdentificationNumberField`` field.
+
+    .. versionadded:: 5.1
+    """
+
+    description = _("Taxpayer Identification Number")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 11
+        super().__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': USTINFormField}
         defaults.update(kwargs)
         return super().formfield(**defaults)

@@ -14,7 +14,11 @@ New flavors:
 
 New fields for existing flavors:
 
-- None
+- US: Added ``USIndividualTaxpayerIdentificationNumberField``,
+  ``USAdoptionTaxpayerIdentificationNumberField``, and
+  ``USTaxpayerIdentificationNumberField`` form and model fields for validating
+  ITINs, ATINs, and any valid U.S. taxpayer identification number (SSN, ITIN,
+  or ATIN).
 
 Modifications to existing flavors:
 

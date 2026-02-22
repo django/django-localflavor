@@ -297,3 +297,59 @@ class USLocalFlavorTests(TestCase):
             '999987652': error_invalid,
         }
         self.assertFieldOutput(forms.USSocialSecurityNumberField, valid, invalid)
+
+    def test_USIndividualTaxpayerIdentificationNumberField(self):
+        error_invalid = ['Enter a valid U.S. Individual Taxpayer Identification Number in XXX-XX-XXXX format.']
+        valid = {
+            '900-70-5678': '900-70-5678',   # group 70 (lower bound of 70–88 range)
+            '900-88-1234': '900-88-1234',   # group 88 (upper bound of 70–88 range)
+            '912701234': '912-70-1234',      # no separators
+            '950-90-9999': '950-90-9999',   # group 90 (lower bound of 90–92 range)
+            '950-92-9999': '950-92-9999',   # group 92 (upper bound of 90–92 range)
+            '950-94-9999': '950-94-9999',   # group 94 (lower bound of 94–99 range)
+            '950-99-1234': '950-99-1234',   # group 99 (upper bound of 94–99 range)
+        }
+        invalid = {
+            '123-70-1234': error_invalid,   # area doesn't start with 9
+            '900-00-1234': error_invalid,   # group 00
+            '900-70-0000': error_invalid,   # serial 0000
+            '900-50-1234': error_invalid,   # group 50 (not an ITIN range)
+            '900-69-1234': error_invalid,   # group 69 (below 70–88 range)
+            '900-89-1234': error_invalid,   # group 89 (gap between 70–88 and 90–92)
+            '900-93-1234': error_invalid,   # group 93 (ATIN, not ITIN)
+        }
+        self.assertFieldOutput(forms.USIndividualTaxpayerIdentificationNumberField, valid, invalid)
+
+    def test_USAdoptionTaxpayerIdentificationNumberField(self):
+        error_invalid = ['Enter a valid U.S. Adoption Taxpayer Identification Number in XXX-XX-XXXX format.']
+        valid = {
+            '900-93-1234': '900-93-1234',   # group 93 (only valid ATIN group)
+            '912-93-5678': '912-93-5678',   # group 93, different area
+            '999931234': '999-93-1234',     # no separators
+        }
+        invalid = {
+            '123-93-1234': error_invalid,   # area doesn't start with 9
+            '900-93-0000': error_invalid,   # serial 0000
+            '900-70-1234': error_invalid,   # group 70 (ITIN range, not ATIN)
+            '900-92-5678': error_invalid,   # group 92 (ITIN range, not ATIN)
+            '900-30-1234': error_invalid,   # group 30 (neither ITIN nor ATIN)
+            '900-94-5678': error_invalid,   # group 94 (ITIN range, not ATIN)
+        }
+        self.assertFieldOutput(forms.USAdoptionTaxpayerIdentificationNumberField, valid, invalid)
+
+    def test_USTaxpayerIdentificationNumberField(self):
+        error_invalid = ['Enter a valid U.S. taxpayer identification number in XXX-XX-XXXX format.']
+        valid = {
+            '123-45-6789': '123-45-6789',   # valid SSN
+            '900-70-5678': '900-70-5678',   # valid ITIN
+            '900-93-1234': '900-93-1234',   # valid ATIN
+        }
+        invalid = {
+            '000-45-6789': error_invalid,   # area all zeros
+            '666-45-6789': error_invalid,   # area 666 (invalid SSN block)
+            '078-05-1120': error_invalid,   # blocked SSN
+            '900-89-1234': error_invalid,   # 9xx with invalid group (not ITIN or ATIN)
+            '123-45-0000': error_invalid,   # serial all zeros
+            '123-00-6789': error_invalid,   # group all zeros
+        }
+        self.assertFieldOutput(forms.USTaxpayerIdentificationNumberField, valid, invalid)
