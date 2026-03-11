@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 
 from .ae_emirates import EMIRATE_CHOICES, EMIRATES_NORMALIZED
 from .validators import (
-    UAEEmiratesIDValidator, UAEPostalCodeValidator, UAEPOBoxValidator,
+    PO_BOX_PREFIX_RE, UAEEmiratesIDValidator, UAEPostalCodeValidator, UAEPOBoxValidator,
     UAETaxRegistrationNumberValidator,
 )
 
@@ -148,7 +148,7 @@ class UAEPOBoxField(CharField):
         clean_value = str(value).strip().upper()
 
         # Remove "P.O. BOX", "PO BOX", or "POB" prefix if present
-        clean_value = re.sub(r'^(?:P\.?\s*O\.?\s*B(?:OX)?\.?\s*)', '', clean_value)
+        clean_value = re.sub(PO_BOX_PREFIX_RE, '', clean_value)
 
         # Return just the number part
         if re.match(r'^\d{1,10}$', clean_value):

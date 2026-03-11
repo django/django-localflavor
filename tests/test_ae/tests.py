@@ -339,3 +339,17 @@ class UAEValidatorTests(TestCase):
 
         with self.assertRaises(ValidationError):
             validator('12345')
+
+    def test_tax_registration_number_validator_custom_params(self):
+        custom_message = 'Custom tax registration number error'
+        custom_code = 'custom_tax_registration_number'
+        validator = UAETaxRegistrationNumberValidator(message=custom_message, code=custom_code)
+
+        self.assertEqual(validator.message, custom_message)
+        self.assertEqual(validator.code, custom_code)
+
+        with self.assertRaises(ValidationError) as cm:
+            validator('12345')
+
+        self.assertEqual(str(cm.exception.message), custom_message)
+        self.assertEqual(cm.exception.code, custom_code)

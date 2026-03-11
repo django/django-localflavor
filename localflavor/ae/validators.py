@@ -6,6 +6,8 @@ from django.core.exceptions import ValidationError
 from django.utils.deconstruct import deconstructible
 from django.utils.translation import gettext_lazy as _
 
+PO_BOX_PREFIX_RE = r'^P\.?\s*O\.?\s*B(?:OX)?\.?\s*'
+
 
 @deconstructible
 class UAEEmiratesIDValidator:
@@ -114,7 +116,7 @@ class UAEPOBoxValidator:
         clean_value = str(value).strip().upper()
 
         # Remove "P.O. BOX", "PO BOX", or "POB" prefix if present
-        clean_value = re.sub(r'^(?:P\.?\s*O\.?\s*B(?:OX)?\.?\s*)', '', clean_value)
+        clean_value = re.sub(PO_BOX_PREFIX_RE, '', clean_value)
 
         # Check if remaining value is numeric and reasonable length
         if not re.match(r'^\d{1,10}$', clean_value):
