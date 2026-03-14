@@ -88,23 +88,24 @@ class BRCNPJField(CharField):
     A form field that validates input as `Brazilian CNPJ`_.
 
     Input can either be of the format XX.XXX.XXX/XXXX-XX or be a group of 14
-    digits.
+    digits or upper case letters. This field is already compliant with the `July 2026`_
+    change that allows the use of alphanumeric characters in the CNPJ.
 
-    If you want to use the long format only, you can specify:
+    If you want to use the long format only (XXXXXXX/XXXX-XX or XX.XXX.XXX/XXXX-XX), you can specify:
         brcnpj_field = BRCNPJField(min_length=16)
 
-    If you want to use the short format, you can specify:
+    If you want to use the short format only (XXXXXXXXXXXXXX), you can specify:
         brcnpj_field = BRCNPJField(max_length=14)
 
-    Otherwise both formats will be valid.
+    Otherwise all formats will be valid.
 
     .. _Brazilian CNPJ: http://en.wikipedia.org/wiki/National_identification_number#Brazil
+    .. _July 2026: https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/programas-e-atividades/cnpj-alfanumerico
     .. versionchanged:: 1.4
     .. versionchanged:: 2.2
         Use BRCNPJValidator to centralize validation logic and share with equivalent model field.
         More details at: https://github.com/django/django-localflavor/issues/334
     """
-
     default_error_messages = {
         'invalid': _("Invalid CNPJ number."),
         'max_digits': _("This field requires at least 14 digits"),

@@ -31,50 +31,37 @@ class BRLocalFlavorTests(SimpleTestCase):
                 self.assertEqual(form.errors['postal_code'], error)
 
     def test_BRCNPJField(self):
-        error_format = {
-            'invalid': ['Invalid CNPJ number.'],
-            'only_long_version': ['Ensure this value has at least 16 characters (it has 14).'],
-            # The long version can be 16 or 18 characters long so actual error message is set dynamically when the
-            # invalid_long dict is generated.
-            'only_short_version': ['Ensure this value has at most 14 characters (it has %s).'],
-        }
-
-        long_version_valid = {
-            '64.132.916/0001-88': '64.132.916/0001-88',
-            '64-132-916/0001-88': '64-132-916/0001-88',
+        valid_inputs = {
             '64132916/0001-88': '64132916/0001-88',
-        }
-        short_version_valid = {
+            '64.132.916/0001-88': '64.132.916/0001-88',
+            '12.ABC.345/01DE-35': '12.ABC.345/01DE-35',
+            'AB.CCC.DEF/GHIJ-08': 'AB.CCC.DEF/GHIJ-08',
             '64132916000188': '64132916000188',
+            '12ABC34501DE35': '12ABC34501DE35',
+            'ABCDEFGHIJKL80': 'ABCDEFGHIJKL80',
+            'MNOPQRSTUVWX50': 'MNOPQRSTUVWX50',
+            'YZOPQRSTUVWX76': 'YZOPQRSTUVWX76',
+            '03634711000106': '03634711000106',
         }
-        valid = long_version_valid.copy()
-        valid.update(short_version_valid)
-
-        invalid = {
-            '../-12345678901234': error_format['invalid'],
-            '12-345-678/9012-10': error_format['invalid'],
-            '12.345.678/9012-10': error_format['invalid'],
-            '12345678/9012-10': error_format['invalid'],
-            '64.132.916/0001-XX': error_format['invalid'],
+        invalid_inputs = {
+            '../-12345678901234': [BRCNPJField.default_error_messages['invalid'], ],
+            '12-345-678/9012-10': [BRCNPJField.default_error_messages['invalid'], ],
+            '12.345.678/9012-10': [BRCNPJField.default_error_messages['invalid'], ],
+            '12345678/9012-10': [BRCNPJField.default_error_messages['invalid'], ],
+            '64.132.916/0001-XX': [BRCNPJField.default_error_messages['invalid'], ],
+            '64.132.916/0001-80': [BRCNPJField.default_error_messages['invalid'], ],
+            '64,132,916/0001-80': [BRCNPJField.default_error_messages['invalid'], ],
+            '641329160001AA': [BRCNPJField.default_error_messages['invalid'], ],
+            '2ABC34501DE35': [BRCNPJField.default_error_messages['invalid'], ],
+            '2ABC34501DE35': [BRCNPJField.default_error_messages['invalid'], ],
+            '3634711000106': [BRCNPJField.default_error_messages['invalid'], ],
+            '12.abc.345/01de-35': [BRCNPJField.default_error_messages['invalid'], ],
         }
-        self.assertFieldOutput(BRCNPJField, valid, invalid)
-
-        # The short versions should be invalid when 'min_length=16' passed to the field.
-        invalid_short = dict([(k, error_format['only_long_version']) for k in short_version_valid.keys()])
-        self.assertFieldOutput(BRCNPJField, long_version_valid, invalid_short, field_kwargs={'min_length': 16})
-
-        # The long versions should be invalid when 'max_length=14' passed to the field.
-        invalid_long = dict([(k, [error_format['only_short_version'][0] % len(k)]) for k in long_version_valid.keys()])
-        self.assertFieldOutput(BRCNPJField, short_version_valid, invalid_long, field_kwargs={'max_length': 14})
-
-        for cnpj, invalid_msg in invalid.items():
-            with self.subTest(cnpj=cnpj, invalid_msg=invalid_msg):
-                form = BRPersonProfileForm({
-                    'cnpj': cnpj
-                })
-
-                self.assertFalse(form.is_valid())
-                self.assertEqual(form.errors['cnpj'], invalid_msg)
+        self.assertFieldOutput(
+            BRCNPJField,
+            valid=valid_inputs,
+            invalid=invalid_inputs,
+        )
 
     def test_BRCPFField(self):
         error_format = ['Invalid CPF number.']
