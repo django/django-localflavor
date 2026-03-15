@@ -144,3 +144,4 @@ Authors
 * Dishan Sachin
 * Kacper Urbański
 * Sami El Achi
+* Omar Saleh
