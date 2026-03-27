@@ -69,6 +69,9 @@ New flavors:
 
 New fields for existing flavors:
 
+- Added `get_state_name_from_state_abbreviation` and `STATE_CHOICES_DICT` to ``localflavor.br.utils``.
+  The new utility returns the full Brazilian state name from a UF abbreviation, or ``None`` for invalid inputs
+  (`gh-510 <https://github.com/django/django-localflavor/pull/510>`_).
 - Added CIN Number field in Morocco flavor
   (`gh-705 <https://github.com/django/django-localflavor/pull/507>`_).
 
