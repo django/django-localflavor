@@ -22,8 +22,7 @@ from .countries.iso_3166 import ISO_3166_1_ALPHA2_COUNTRY_CODES
 #
 # https://en.wikipedia.org/wiki/International_Bank_Account_Number#IBAN_formats_by_country
 # http://www.ecbs.org/iban/france-bank-account-number.html
-# https://www.nordea.com/V%C3%A5ra+tj%C3%A4nster/Internationella+produkter+och+tj%C3%A4nster/Cash+Management/IBAN+countries/908472.html
-
+# https://www.nordea.com/en/our-services/cash-management/iban-and-bban
 
 IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'AE': 23,  # United Arab Emirates
@@ -120,25 +119,36 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
                             'YE': 30}  # Yemen
 
 
-# Nordea has catalogued IBANs for some additional countries but they are not part of the office IBAN network yet.
+# Nordea has catalogued IBANs for some additional countries but they are not part of the official IBAN network yet.
 #
-# Reference:
-# https://www.nordea.com/V%C3%A5ra+tj%C3%A4nster/Internationella+produkter+och+tj%C3%A4nster/Cash+Management/IBAN+countries/908472.html
+# Last updated from nordea-country-and-currency-list.pdf April 2026.
+#
+# References:
+# https://www.nordea.com/en/our-services/cash-management/iban-and-bban
+# https://www.nordea.com/en/doc/nordea-country-and-currency-list.pdf
 
 NORDEA_COUNTRY_CODE_LENGTH = {'AO': 25,  # Angola
+                              'BF': 28,  # Burkina Faso
                               'BJ': 28,  # Benin
-                              'BF': 27,  # Burkina Faso
-                              'CI': 28,  # Ivory Coast
+                              'CF': 27,  # Central African Republic
                               'CG': 27,  # Congo
+                              'CI': 28,  # Ivory Coast
                               'CM': 27,  # Cameroon
-                              'CV': 25,  # Cape Verde
+                              'CV': 25,  # Cabo Verde
                               'DZ': 24,  # Algeria
                               'GA': 27,  # Gabon
+                              'GQ': 27,  # Equatorial Guinea
+                              'GW': 25,  # Guinea-Bissau
                               'IR': 26,  # Iran
+                              'KM': 27,  # Comoros
+                              'MA': 28,  # Morocco
                               'MG': 27,  # Madagascar
                               'ML': 28,  # Mali
                               'MZ': 25,  # Mozambique
-                              'SN': 28}  # Senegal
+                              'NE': 28,  # Niger
+                              'SN': 28,  # Senegal
+                              'TD': 27,  # Chad
+                              'TG': 28}  # Togo
 
 
 @deconstructible
