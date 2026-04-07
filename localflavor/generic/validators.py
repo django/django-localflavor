@@ -121,7 +121,7 @@ IBAN_COUNTRY_CODE_LENGTH = {'AD': 24,  # Andorra
 
 # Nordea has catalogued IBANs for some additional countries but they are not part of the official IBAN network yet.
 #
-# Last updated from nordea-country-and-currency-list.pdf April 2026.
+# Last updated from nordea-country-and-currency-list.pdf v2.2 (version is at the bottom of the pdf).
 #
 # References:
 # https://www.nordea.com/en/our-services/cash-management/iban-and-bban

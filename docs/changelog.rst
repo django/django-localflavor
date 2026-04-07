@@ -29,6 +29,9 @@ Modifications to existing flavors:
   (`gh-529 <https://github.com/django/django-localflavor/pull/529>`_).
 - Update SI postal codes
   (`gh-531 <https://github.com/django/django-localflavor/pull/531>`_).
+- Updated NORDEA_COUNTRY_CODE_LENGTH with data from nordea-country-and-currency-list.pdf v2.2
+  (`gh-546 <https://github.com/django/django-localflavor/pull/546>`_).
+
 
 Other changes:
 
