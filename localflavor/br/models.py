@@ -11,7 +11,7 @@ class BRStateField(CharField):
     A model field for states of Brazil.
 
     Forms represent it as a :class:`~localflavor.br.forms.BRStateSelect` field.
-    
+
     """
 
     description = _("State of Brazil (two uppercase letters)")
@@ -47,7 +47,7 @@ class BRCPFField(CharField):
         kwargs['max_length'] = 14
         super().__init__(*args, **kwargs)
         self.validators.append(validators.BRCPFValidator())
-    
+
     def formfield(self, **kwargs):
         defaults = {'form_class': forms.BRCPFField}
         defaults.update(kwargs)
@@ -62,6 +62,8 @@ class BRCNPJField(CharField):
     Forms represent it as a :class:`~localflavor.br.forms.BRCNPJField` field.
 
     .. versionadded:: 2.2
+    .. versionchanged:: 5.1
+        Updated to allow the use of alphanumeric characters.
     """
 
     description = _("CNPJ Document")
@@ -75,6 +77,13 @@ class BRCNPJField(CharField):
         defaults = {'form_class': forms.BRCNPJField}
         defaults.update(kwargs)
         return super().formfield(**defaults)
+
+    def to_python(self, value):
+        value = super().to_python(value)
+        if value is not None:
+            return value.upper()
+        return value
+
 
 class BRPostalCodeField(CharField):
     """

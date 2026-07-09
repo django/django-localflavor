@@ -105,6 +105,8 @@ class BRCNPJField(CharField):
     .. versionchanged:: 2.2
         Use BRCNPJValidator to centralize validation logic and share with equivalent model field.
         More details at: https://github.com/django/django-localflavor/issues/334
+    .. versionchanged:: 5.1
+        Updated to allow the use of alphanumeric characters.
     """
     default_error_messages = {
         'invalid': _("Invalid CNPJ number."),
@@ -114,6 +116,12 @@ class BRCNPJField(CharField):
     def __init__(self, min_length=14, max_length=18, **kwargs):
         super().__init__(max_length=max_length, min_length=min_length, **kwargs)
         self.validators.append(BRCNPJValidator())
+
+    def to_python(self, value):
+        value = super().to_python(value)
+        if value is not None:
+            return value.upper()
+        return value
 
 
 def mod_97_base10(value):

@@ -32,6 +32,8 @@ class BRCNPJValidator(RegexValidator):
     Validator for brazilian CNPJ.
 
     .. versionadded:: 2.2
+    .. versionchanged:: 5.1
+        Updated to allow the use of alphanumeric characters.
     """
 
     CNPJ_RE = re.compile(r'^([A-Z0-9]{2}).?([A-Z0-9]{3}).?([A-Z0-9]{3})\/?([A-Z0-9]{4})-?(\d{2})$')
@@ -45,10 +47,10 @@ class BRCNPJValidator(RegexValidator):
         )
 
     def _get_check_digit(self, cnpj):
-        '''
+        """
         Based on official documentation at:
         https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/documentos-tecnicos/cnpj
-        '''
+        """
         def _get_digit(value):
             values = [ord(c) - 48 for c in value][::-1]
             remainder = (
