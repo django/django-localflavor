@@ -4,19 +4,20 @@
 #
 # Translators:
 # Chang-Gun Kim <kiravspace@gmail.com>, 2015
+# Chang-Gun Kim <kiravspace@gmail.com>, 2015
 # DONGHO JEONG <nearermg@gmail.com>, 2020
 # Jaehong Kim <mixe@korea.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
-# Jay Oh <theanswer.jay@gmail.com>, 2016,2020
+# Jay Oh <theanswer.jay@gmail.com>, 2016,2020,2026
 # LEE Hwanyong <hwan@ajou.ac.kr>, 2023
 # Seoyoung Chung <chungseo@usc.edu>, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-07 15:31+0200\n"
+"POT-Creation-Date: 2026-07-09 19:13+0200\n"
 "PO-Revision-Date: 2013-05-29 13:57+0000\n"
-"Last-Translator: LEE Hwanyong <hwan@ajou.ac.kr>, 2023\n"
+"Last-Translator: Jay Oh <theanswer.jay@gmail.com>, 2016,2020,2026\n"
 "Language-Team: Korean (http://app.transifex.com/django/django-localflavor/"
 "language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -25,77 +26,130 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+msgid "Abu Dhabi"
+msgstr "아부다비"
+
+msgid "Ajman"
+msgstr "아즈만"
+
+msgid "Dubai"
+msgstr "두바이"
+
+msgid "Fujairah"
+msgstr "푸자이라"
+
+msgid "Ras Al Khaimah"
+msgstr "라스알카이마"
+
+msgid "Sharjah"
+msgstr "샤르자"
+
+msgid "Umm Al Quwain"
+msgstr "움알쿠와인"
+
+msgid "Enter a valid UAE Emirates ID number in format 784-YYYY-NNNNNNN-N."
+msgstr ""
+"유효한 UAE 에미리트 신분증 번호를 784-YYYY-NNNNNNN-N 형식으로 입력하세요."
+
+msgid "Enter a valid UAE postal code. Use 00000 if postal code is required."
+msgstr ""
+"유효한 UAE 우편번호를 입력하세요. 우편번호가 필수인 경우 00000을 사용하세요."
+
+msgid "Enter a valid P.O. Box number."
+msgstr "유효한 사서함 번호를 입력하세요."
+
+msgid "Enter a valid UAE Tax Registration Number (15 digits)."
+msgstr "유효한 UAE 세금 등록 번호(15자리)를 입력하세요."
+
+msgid "UAE Emirates ID number"
+msgstr "UAE 에미리트 신분증 번호"
+
+msgid "UAE Emirate"
+msgstr "UAE 에미리트"
+
+msgid "UAE postal code"
+msgstr "UAE 우편번호"
+
+msgid "UAE P.O. Box number"
+msgstr "UAE 사서함 번호"
+
+msgid "UAE Tax Registration Number"
+msgstr "UAE 세금 등록 번호"
+
+msgid "Enter a valid UAE Emirates ID number."
+msgstr "유효한 UAE 에미리트 신분증 번호를 입력하세요."
+
 msgid "Buenos Aires"
-msgstr "Buenos Aires"
+msgstr "부에노스아이레스"
 
 msgid "Catamarca"
-msgstr "Catamarca"
+msgstr "카타마르카"
 
 msgid "Chaco"
-msgstr "Chaco"
+msgstr "차코"
 
 msgid "Chubut"
-msgstr "Chubut"
+msgstr "추부트"
 
 msgid "Ciudad Autónoma de Buenos Aires"
-msgstr "Ciudad Autónoma de Buenos Aires"
+msgstr "부에노스아이레스 자치시"
 
 msgid "Córdoba"
-msgstr "Córdoba"
+msgstr "코르도바"
 
 msgid "Corrientes"
-msgstr "Corrientes"
+msgstr "코리엔테스"
 
 msgid "Entre Ríos"
-msgstr "Entre Ríos"
+msgstr "엔트레리오스"
 
 msgid "Formosa"
-msgstr "Formosa"
+msgstr "포르모사"
 
 msgid "Jujuy"
-msgstr "Jujuy"
+msgstr "후후이"
 
 msgid "La Pampa"
-msgstr "La Pampa"
+msgstr "팜파"
 
 msgid "La Rioja"
-msgstr "La Rioja"
+msgstr "리오하"
 
 msgid "Mendoza"
-msgstr "Mendoza"
+msgstr "멘도사"
 
 msgid "Misiones"
-msgstr "Misiones"
+msgstr "시오네스"
 
 msgid "Neuquén"
-msgstr "Neuquén"
+msgstr "네우켄"
 
 msgid "Río Negro"
-msgstr "Río Negro"
+msgstr "리오네그로"
 
 msgid "Salta"
-msgstr "Salta"
+msgstr "살타"
 
 msgid "San Juan"
-msgstr "San Juan"
+msgstr "산후안"
 
 msgid "San Luis"
-msgstr "San Luis"
+msgstr "산루이스"
 
 msgid "Santa Cruz"
-msgstr "산타 크루즈"
+msgstr "산타크루스"
 
 msgid "Santa Fe"
-msgstr "Santa Fe"
+msgstr "산타페"
 
 msgid "Santiago del Estero"
-msgstr "Santiago del Estero"
+msgstr "산티아고델에스테로"
 
 msgid "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
-msgstr "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
+msgstr "티에라델푸에고, 남극 및 남대서양 제도"
 
 msgid "Tucumán"
-msgstr "Tucumán"
+msgstr "투쿠만"
 
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
 msgstr "우편번호를 입력하세요.(NNNN 또는 ANNNNAAA)"
@@ -127,31 +181,31 @@ msgid "Invalid CBU."
 msgstr "CBU가 유효하지 않습니다."
 
 msgid "Burgenland"
-msgstr "Burgenland"
+msgstr "부르겐란트"
 
 msgid "Carinthia"
-msgstr "Carinthia"
+msgstr "케른텐"
 
 msgid "Lower Austria"
-msgstr "Lower Austria"
+msgstr "니더외스터라이히"
 
 msgid "Upper Austria"
-msgstr "Upper Austria"
+msgstr "오버외스터라이히"
 
 msgid "Salzburg"
-msgstr "Salzburg"
+msgstr "잘츠부르크"
 
 msgid "Styria"
-msgstr "Styria"
+msgstr "슈티리아"
 
 msgid "Tyrol"
-msgstr "Tyrol"
+msgstr "티롤"
 
 msgid "Vorarlberg"
-msgstr "Vorarlberg"
+msgstr "포어아를베르크"
 
 msgid "Vienna"
-msgstr "Vienna"
+msgstr "빈"
 
 msgid "Enter a zip code in the format XXXX."
 msgstr "우편번호를 입력하세요. (XXXX 형식)"
@@ -169,13 +223,13 @@ msgid "Australian Postcode"
 msgstr "호주 우편 번호"
 
 msgid "Australian Business Number"
-msgstr "Australian Business Number"
+msgstr "호주 사업자 번호"
 
 msgid "Australian Company Number"
-msgstr "Australian Company Number"
+msgstr "호주 법인 번호"
 
 msgid "Australian Tax File Number"
-msgstr "Australian Tax File Number"
+msgstr "호주 세금 파일 번호"
 
 msgid "Enter a valid ABN."
 msgstr "올바른 ABN을 입력하세요."
@@ -187,55 +241,55 @@ msgid "Enter a valid TFN."
 msgstr "올바른 TFN을 입력하세요."
 
 msgid "Antwerp"
-msgstr "Antwerp"
+msgstr "안트베르펜"
 
 msgid "Brussels"
-msgstr "Brussels"
+msgstr "브뤼셀"
 
 msgid "East Flanders"
-msgstr "East Flanders"
+msgstr "오스트플란데런"
 
 msgid "Flemish Brabant"
-msgstr "Flemish Brabant"
+msgstr "플람스브라반트"
 
 msgid "Hainaut"
-msgstr "Hainaut"
+msgstr "에노"
 
 msgid "Liege"
-msgstr "Liege"
+msgstr "리에주"
 
 msgid "Limburg"
-msgstr "Limburg"
+msgstr "림뷔르흐"
 
 msgid "Luxembourg"
-msgstr "Luxembourg"
+msgstr "뤽상부르"
 
 msgid "Namur"
-msgstr "Namur"
+msgstr "나뮈르"
 
 msgid "Walloon Brabant"
-msgstr "Walloon Brabant"
+msgstr "왈롱브라반트"
 
 msgid "West Flanders"
-msgstr "West Flanders"
+msgstr "베스트플란데런"
 
 msgid "Brussels Capital Region"
-msgstr "Brussels Capital Region"
+msgstr "브뤼셀 수도 지역"
 
 msgid "Flemish Region"
-msgstr "Flemish Region"
+msgstr "플란데런 지역"
 
 msgid "Wallonia"
-msgstr "Wallonia"
+msgstr "왈로니"
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "우편번호를 1XXX-9XXX 형식으로 입력하세요."
 
 msgid "The EGN is not valid"
-msgstr "EGN이 올바르지 않습니다."
+msgstr "EGN이 올바르지 않습니다"
 
 msgid "EIK/BULSTAT is not valid"
-msgstr "EIK/BULSTAT 이 올바르지 않습니다."
+msgstr "EIK/BULSTAT이 올바르지 않습니다"
 
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
@@ -252,7 +306,7 @@ msgid "Invalid CNPJ number."
 msgstr "올바른 CNPJ 번호를 입력하세요."
 
 msgid "This field requires at least 14 digits"
-msgstr "이 항목은 최소한 14개의 숫자를 입력해야 합니다."
+msgstr "이 필드는 최소한 14개의 숫자를 입력해야 합니다"
 
 msgid "Invalid Process number."
 msgstr "프로세스 번호가 올바르지 않습니다."
@@ -270,88 +324,88 @@ msgid "Postal Code"
 msgstr "우편 번호"
 
 msgid "Enter a postal code in the format 00000-000."
-msgstr "우편번호를 00000-000 형식으로 입력하세요"
+msgstr "우편번호를 00000-000 형식으로 입력하세요."
 
 msgid "Brest Region"
-msgstr ""
+msgstr "브레스트 주"
 
 msgid "Vitebsk Region"
-msgstr ""
+msgstr "비쳅스크 주"
 
 msgid "Gomel Region"
-msgstr ""
+msgstr "호멜 주"
 
 msgid "Grodno Region"
-msgstr ""
+msgstr "흐로드나 주"
 
 msgid "Minsk Region"
-msgstr ""
+msgstr "민스크 주"
 
 msgid "Mogilev Region"
-msgstr ""
+msgstr "마힐료프 주"
 
 msgid "City of Minsk"
-msgstr ""
+msgstr "민스크 시"
 
 msgid "Passport number format is: XX1234567"
-msgstr ""
+msgstr "여권 번호 형식: XX1234567"
 
 msgid "ID format is: 1234567X123XX1"
-msgstr ""
+msgstr "신분증 형식: 1234567X123XX1"
 
 msgid "Postal code format is: 123456"
-msgstr ""
+msgstr "우편번호 형식: 123456"
 
 msgid "Belarusian Regions (one integer value in the range 1-7)."
-msgstr ""
+msgstr "벨라루스 행정 구역(1~7 범위의 정수 값)."
 
-msgid "Belarusian passport number (2 letters followed by 7 digits"
-msgstr ""
+msgid "Belarusian passport number (2 letters followed by 7 digits)."
+msgstr "벨라루스 여권 번호(영문자 2자 + 숫자 7자)."
 
 msgid "Belarusian passport ID number (14 letters and digits)."
-msgstr ""
+msgstr "벨라루스 여권 ID 번호(영문자 및 숫자 14자)."
 
 msgid "Belarusian Postal code (6 digits)."
-msgstr ""
+msgstr "벨라루스 우편번호(6자리)."
 
 msgid "Alberta"
-msgstr "Alberta"
+msgstr "앨버타"
 
 msgid "British Columbia"
-msgstr "British Columbia"
+msgstr "브리티시컬럼비아"
 
 msgid "Manitoba"
-msgstr "Manitoba"
+msgstr "매니토바"
 
 msgid "New Brunswick"
-msgstr "New Brunswick"
+msgstr "뉴브런즈윅"
 
 msgid "Newfoundland and Labrador"
-msgstr "Newfoundland and Labrador"
+msgstr "뉴펀들랜드래브라도"
 
 msgid "Northwest Territories"
-msgstr "Northwest Territories"
+msgstr "노스웨스트 준주"
 
 msgid "Nova Scotia"
-msgstr "Nova Scotia"
+msgstr "노바스코샤"
 
 msgid "Nunavut"
-msgstr "Nunavut"
+msgstr "누나부트"
 
 msgid "Ontario"
-msgstr "Ontario"
+msgstr "온타리오"
 
 msgid "Prince Edward Island"
-msgstr "Prince Edward Island"
+msgstr "프린스에드워드아일랜드"
 
 msgid "Quebec"
-msgstr "Quebec"
+msgstr "퀘벡"
 
 msgid "Saskatchewan"
-msgstr "Saskatchewan"
+msgstr "서스캐처원"
 
 msgid "Yukon"
-msgstr "Yukon"
+msgstr "유콘"
 
 msgid "Enter a postal code in the format XXX XXX."
 msgstr "우편번호를 입력하세요.(XXX XXX 형식)"
@@ -363,125 +417,125 @@ msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr "올바른 캐나다 사회보장번호(XXX-XXX-XXX 형식)를 입력하세요."
 
 msgid "Canadian Province (two uppercase letters)"
-msgstr ""
+msgstr "캐나다 주(대문자 2자)"
 
 msgid "Canadian Postal Code"
-msgstr ""
+msgstr "캐나다 우편번호"
 
 msgid "Canadian Social Insurance Number"
-msgstr ""
+msgstr "캐나다 사회보장번호"
 
 msgid "Aargau"
-msgstr "Aargau"
+msgstr "아르가우"
 
 msgid "Appenzell Innerrhoden"
-msgstr "Appenzell Innerrhoden"
+msgstr "아펜첼이너로덴"
 
 msgid "Appenzell Ausserrhoden"
-msgstr "Appenzell Ausserrhoden"
+msgstr "아펜첼아우서로덴"
 
 msgid "Basel-Stadt"
-msgstr "Basel-Stadt"
+msgstr "바젤슈타트"
 
 msgid "Basel-Land"
-msgstr "Basel-Land"
+msgstr "바젤란트"
 
 msgid "Berne"
-msgstr "Berne"
+msgstr "베른"
 
 msgid "Fribourg"
-msgstr "Fribourg"
+msgstr "프리부르"
 
 msgid "Geneva"
-msgstr "Geneva"
+msgstr "제네바"
 
 msgid "Glarus"
-msgstr "Glarus"
+msgstr "글라루스"
 
 msgid "Graubuenden"
-msgstr "Graubuenden"
+msgstr "그라뷘덴"
 
 msgid "Jura"
-msgstr "Jura"
+msgstr "쥐라"
 
 msgid "Lucerne"
-msgstr "Lucerne"
+msgstr "루체른"
 
 msgid "Neuchatel"
-msgstr "Neuchatel"
+msgstr "뇌샤텔"
 
 msgid "Nidwalden"
-msgstr "Nidwalden"
+msgstr "니트발덴"
 
 msgid "Obwalden"
-msgstr "Obwalden"
+msgstr "오브발덴"
 
 msgid "Schaffhausen"
-msgstr "Schaffhausen"
+msgstr "샤프하우젠"
 
 msgid "Schwyz"
-msgstr "Schwyz"
+msgstr "슈비츠"
 
 msgid "Solothurn"
-msgstr "Solothurn"
+msgstr "졸로투른"
 
 msgid "St. Gallen"
-msgstr "St. Gallen"
+msgstr "장크트갈렌"
 
 msgid "Thurgau"
-msgstr "Thurgau"
+msgstr "투르가우"
 
 msgid "Ticino"
-msgstr "Ticino"
+msgstr "티치노"
 
 msgid "Uri"
-msgstr "Uri"
+msgstr "우리"
 
 msgid "Valais"
-msgstr "Valais"
+msgstr "발레"
 
 msgid "Vaud"
-msgstr "Vaud"
+msgstr "보"
 
 msgid "Zug"
-msgstr "Zug"
+msgstr "추크"
 
 msgid "Zurich"
-msgstr "Zurich"
+msgstr "취리히"
 
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr ""
-"정확한 스위스 주민번호 혹은 여권 카드 번호를 X1234567<0 또는 1234567890 형식"
-"으로 입력하세요."
+"유효한 스위스 신분증 또는 여권 카드 번호를 X1234567<0 또는 1234567890 형식으"
+"로 입력하세요."
 
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
-msgstr "유효한 스위스 사회보장 번호를 756.XXXX.XXXX.XX 형식으로 입력하세요. "
+msgstr "유효한 스위스 사회보장 번호를 756.XXXX.XXXX.XX 형식으로 입력하세요."
 
 msgid "Enter a valid Chilean RUT."
 msgstr "올바른 칠레 RUT를 입력하세요."
 
 msgid "Enter a valid Chilean RUT. The format is XX.XXX.XXX-X."
-msgstr "올바른 칠레 RUT 번호 XX.XXX.XXX-X 형식으로 입력하세요."
+msgstr "올바른 칠레 RUT를 XX.XXX.XXX-X 형식으로 입력하세요."
 
 msgid "The Chilean RUT is not valid."
 msgstr "칠레 RUT 값이 올바르지 않습니다."
 
 msgid "Enter a post code in the format XXXXXX."
-msgstr "우편 번호를 XXXXXX  형식으로 입력하세요."
+msgstr "우편 번호를 XXXXXX 형식으로 입력하세요."
 
 msgid "ID Card Number consists of 15 or 18 digits."
-msgstr "ID 카드 번호는 15나 18 자리로 구성됩니다."
+msgstr "ID 카드 번호는 15자리 또는 18자리로 구성됩니다."
 
 msgid "Invalid ID Card Number: Wrong checksum"
-msgstr "올바르지 않은 ID 카드 번호 : 잘못된 체크썸"
+msgstr "올바르지 않은 ID 카드 번호: 잘못된 체크섬"
 
 msgid "Invalid ID Card Number: Wrong birthdate"
-msgstr "올바르지 않은 ID 카드 번호 : 잘못된 생년일"
+msgstr "올바르지 않은 ID 카드 번호: 잘못된 생년월일"
 
 msgid "Invalid ID Card Number: Wrong location code"
-msgstr "올바르지 않은 ID 카드 번호 : 잘못된 지역 코드"
+msgstr "올바르지 않은 ID 카드 번호: 잘못된 지역 코드"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
 msgstr "유효한 NIT 번호를 XXXXXXXXXXX-Y 또는 XXXXXXXXXXXY 형식으로 입력하세요."
@@ -490,192 +544,192 @@ msgid "Invalid NIT."
 msgstr "NIT가 유효하지 않습니다."
 
 msgid "Occidental"
-msgstr "Occidental"
+msgstr "오시덴탈"
 
 msgid "Central"
-msgstr "Central"
+msgstr "센트랄"
 
 msgid "Oriental"
-msgstr "Oriental"
+msgstr "오리엔탈"
 
 msgid "Pinar del Río"
-msgstr "Pinar del Río"
+msgstr "피나르델리오"
 
 msgid "Artemisa"
-msgstr "Artemisa"
+msgstr "아르테미사"
 
 msgid "Mayabeque"
-msgstr "Mayabeque"
+msgstr "마야베케"
 
 msgid "La Habana"
-msgstr "La Habana"
+msgstr "아바나"
 
 msgid "Matanzas"
-msgstr "Matanzas"
+msgstr "마탄사스"
 
 msgid "Cienfuegos"
-msgstr "Cienfuegos"
+msgstr "시엔푸에고스"
 
 msgid "Villa Clara"
-msgstr "Villa Clara"
+msgstr "비야클라라"
 
 msgid "Sancti Spíritus"
-msgstr "Sancti Spíritus"
+msgstr "상크티스피리투스"
 
 msgid "Ciego de Ávila"
-msgstr "Ciego de Ávila"
+msgstr "시에고데아빌라"
 
 msgid "Camagüey"
-msgstr "Camagüey"
+msgstr "카마궤이"
 
 msgid "Las Tunas"
-msgstr "Las Tunas"
+msgstr "라스투나스"
 
 msgid "Holguín"
-msgstr "Holguín"
+msgstr "올긴"
 
 msgid "Granma"
-msgstr "Granma"
+msgstr "그란마"
 
 msgid "Santiago de Cuba"
-msgstr "Santiago de Cuba"
+msgstr "산티아고데쿠바"
 
 msgid "Guantánamo"
-msgstr "Guantánamo"
+msgstr "관타나모"
 
 msgid "Isla de la Juventud"
-msgstr "Isla de la Juventud"
+msgstr "이슬라데라후벤투드"
 
 msgid "Enter a Cuban region."
-msgstr "쿠바 내의 지역명을 입력하세요."
+msgstr "쿠바 지역을 입력하세요."
 
 msgid "Enter a Cuban province."
-msgstr "쿠바 주 명을 입력하세요."
+msgstr "쿠바 주를 입력하세요."
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr "유효한 우편번호를 XXXXX  형식으로 입력하세요."
+msgstr "유효한 우편번호를 XXXXX 형식으로 입력하세요."
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
 msgstr "유효한 신분증 번호를 XXXXXXXXXXX 형식으로 입력하세요."
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr "구바 지역 (대문자 3글자)"
+msgstr "쿠바 지역(대문자 3자)"
 
 msgid "Cuban provinces (three uppercase letters)"
-msgstr "쿠바 주 (대문자 3글자)"
+msgstr "쿠바 주(대문자 3자)"
 
 msgid "Cuban postal code"
 msgstr "쿠바 우편번호"
 
 msgid "Cuban identity card number"
-msgstr "쿠바 주민카드 번호"
+msgstr "쿠바 신분증 번호"
 
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
-msgstr "유효한 형식 (yymmdd)으로 신분증 번호의 6자리를 입력하세요."
+msgstr "신분증 번호의 처음 6자리를 유효한 날짜 형식(yymmdd)으로 입력하세요."
 
 msgid "Prague"
-msgstr "Prague"
+msgstr "프라하"
 
 msgid "Central Bohemian Region"
-msgstr "Central Bohemian Region"
+msgstr "중앙보헤미아 주"
 
 msgid "South Bohemian Region"
-msgstr "South Bohemian Region"
+msgstr "남보헤미아 주"
 
 msgid "Pilsen Region"
-msgstr "Pilsen Region"
+msgstr "플젠 주"
 
 msgid "Carlsbad Region"
-msgstr "Carlsbad Region"
+msgstr "카를로비바리 주"
 
 msgid "Usti Region"
-msgstr "Usti Region"
+msgstr "우스티나트라벰 주"
 
 msgid "Liberec Region"
-msgstr "Liberec Region"
+msgstr "리베레츠 주"
 
 msgid "Hradec Region"
-msgstr "Hradec Region"
+msgstr "흐라데츠크랄로베 주"
 
 msgid "Pardubice Region"
-msgstr "Pardubice Region"
+msgstr "파르두비체 주"
 
 msgid "Vysocina Region"
-msgstr "Vysocina Region"
+msgstr "비소치나 주"
 
 msgid "South Moravian Region"
-msgstr "South Moravian Region"
+msgstr "남모라바 주"
 
 msgid "Olomouc Region"
-msgstr "Olomouc Region"
+msgstr "올로모우츠 주"
 
 msgid "Zlin Region"
-msgstr "Zlin Region"
+msgstr "즐린 주"
 
 msgid "Moravian-Silesian Region"
-msgstr "Moravian-Silesian Region"
+msgstr "모라바실레시아 주"
 
 msgid "Enter a postal code in the format XXXXX or XXX XX."
 msgstr "우편번호를 입력하세요. (XXXXX 또는 XXX XX 형식)"
 
 msgid "Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX."
-msgstr "생년월일을 입력하세요. (XXXXXX/XXXX 또는 XXXXXXXXXX 형식)"
+msgstr "출생 번호를 입력하세요. (XXXXXX/XXXX 또는 XXXXXXXXXX 형식)"
 
 msgid "Enter a valid birth number."
-msgstr "올바른 생년월일을 입력하세요."
+msgstr "올바른 출생 번호를 입력하세요."
 
 msgid "Enter a valid IC number."
 msgstr "올바른 IC 번호를 입력하세요."
 
 msgid "Baden-Wuerttemberg"
-msgstr "바덴-뷔르템베르크 주"
+msgstr "바덴뷔르템베르크"
 
 msgid "Bavaria"
-msgstr "Bavaria"
+msgstr "바이에른"
 
 msgid "Berlin"
-msgstr "Berlin"
+msgstr "베를린"
 
 msgid "Brandenburg"
-msgstr "Brandenburg"
+msgstr "브란덴부르크"
 
 msgid "Bremen"
-msgstr "Bremen"
+msgstr "브레멘"
 
 msgid "Hamburg"
-msgstr "Hamburg"
+msgstr "함부르크"
 
 msgid "Hessen"
-msgstr "Hessen"
+msgstr "헤센"
 
 msgid "Mecklenburg-Western Pomerania"
-msgstr "Mecklenburg-Western Pomerania"
+msgstr "메클렌부르크포어포메른"
 
 msgid "Lower Saxony"
-msgstr "Lower Saxony"
+msgstr "니더작센"
 
 msgid "North Rhine-Westphalia"
-msgstr "North Rhine-Westphalia"
+msgstr "노르트라인베스트팔렌"
 
 msgid "Rhineland-Palatinate"
-msgstr "Rhineland-Palatinate"
+msgstr "라인란트팔츠"
 
 msgid "Saarland"
-msgstr "Saarland"
+msgstr "를란트"
 
 msgid "Saxony"
-msgstr "Saxony"
+msgstr "작센"
 
 msgid "Saxony-Anhalt"
-msgstr "Saxony-Anhalt"
+msgstr "작센안할트"
 
 msgid "Schleswig-Holstein"
-msgstr "Schleswig-Holstein"
+msgstr "슐레스비히홀슈타인"
 
 msgid "Thuringia"
-msgstr "Thuringia"
+msgstr "튀링겐"
 
 msgid "Enter a zip code in the format XXXXX."
 msgstr "우편번호를 입력하세요. (XXXXX 형식)"
@@ -683,448 +737,449 @@ msgstr "우편번호를 입력하세요. (XXXXX 형식)"
 msgid ""
 "Enter a valid German identity card number in XXXXXXXXXXX-XXXXXXX-XXXXXXX-X "
 "format."
-msgstr "올바른 독일 주민번호(XXXXXXXXXXX-XXXXXXX-XXXXXXX-X 형식)를 입력하세요."
+msgstr ""
+"올바른 독일 신분증 번호를 XXXXXXXXXXX-XXXXXXX-XXXXXXX-X 형식으로 입력하세요."
 
 msgid "Albertslund"
-msgstr "Albertslund"
+msgstr "알베르츨룬"
 
 msgid "Allerød"
-msgstr "Allerød"
+msgstr "알뢰드"
 
 msgid "Ballerup"
-msgstr "Ballerup"
+msgstr "발레루프"
 
 msgid "Bornholm"
-msgstr "Bornholm"
+msgstr "보른홀름"
 
 msgid "Brøndby"
-msgstr "Brøndby"
+msgstr "브뢴뷔"
 
 msgid "Dragør"
-msgstr "Dragør"
+msgstr "드라괴르"
 
 msgid "Egedal"
-msgstr "Egedal"
+msgstr "에그달"
 
 msgid "Fredensborg"
-msgstr "Fredensborg"
+msgstr "프레덴스보리"
 
 msgid "Frederiksberg"
-msgstr "Frederiksberg"
+msgstr "프레데릭스베리"
 
 msgid "Frederikssund"
-msgstr "Frederikssund"
+msgstr "프레데릭순"
 
 msgid "Furesø"
-msgstr "Furesø"
+msgstr "푸레쇠"
 
 msgid "Gentofte"
-msgstr "Gentofte"
+msgstr "젠토프테"
 
 msgid "Gladsaxe"
-msgstr "Gladsaxe"
+msgstr "글락삭세"
 
 msgid "Glostrup"
-msgstr "Glostrup"
+msgstr "글로스트루프"
 
 msgid "Gribskov"
-msgstr "Gribskov"
+msgstr "그리브스코우"
 
 msgid "Halsnæs"
-msgstr "Halsnæs"
+msgstr "할스네스"
 
 msgid "Helsingør"
-msgstr "Helsingør"
+msgstr "헬싱괴르"
 
 msgid "Herlev"
-msgstr "Herlev"
+msgstr "헤를레우"
 
 msgid "Hillerød"
-msgstr "Hillerød"
+msgstr "힐레뢰드"
 
 msgid "Hvidovre"
-msgstr "Hvidovre"
+msgstr "비도브레"
 
 msgid "Høje-Taastrup"
-msgstr "Høje-Taastrup"
+msgstr "호예타스트루프"
 
 msgid "Hørsholm"
-msgstr "Hørsholm"
+msgstr "헤르스홀름"
 
 msgid "Ishøj"
-msgstr "Ishøj"
+msgstr "이스호이"
 
 msgid "København"
-msgstr "København"
+msgstr "코펜하겐"
 
 msgid "Lyngby-Taarbæk"
-msgstr "Lyngby-Taarbæk"
+msgstr "린뷔타르베크"
 
 msgid "Rudersdal"
-msgstr "Rudersdal"
+msgstr "루데르스달"
 
 msgid "Rødovre"
-msgstr "Rødovre"
+msgstr "뢰도브레"
 
 msgid "Tårnby"
-msgstr "Tårnby"
+msgstr "톤뷔"
 
 msgid "Vallensbæk"
-msgstr "Vallensbæk"
+msgstr "발렌스베크"
 
 msgid "Favrskov"
-msgstr "Favrskov"
+msgstr "파브르스코우"
 
 msgid "Hedensted"
-msgstr "Hedensted"
+msgstr "헤덴스테드"
 
 msgid "Herning"
-msgstr "Herning"
+msgstr "헤르닝"
 
 msgid "Holstebro"
-msgstr "Holstebro"
+msgstr "홀스테브로"
 
 msgid "Horsens"
-msgstr "Horsens"
+msgstr "호르센스"
 
 msgid "Ikast-Brande"
-msgstr "Ikast-Brande"
+msgstr "이카스트브란데"
 
 msgid "Lemvig"
-msgstr "Lemvig"
+msgstr "렘뷔"
 
 msgid "Norddjurs"
-msgstr "Norddjurs"
+msgstr "노르듀르스"
 
 msgid "Odder"
-msgstr "Odder"
+msgstr "오더"
 
 msgid "Randers"
-msgstr "Randers"
+msgstr "란데르스"
 
 msgid "Ringkøbing-Skjern"
-msgstr "Ringkøbing-Skjern"
+msgstr "링쾨빙스케른"
 
 msgid "Samsø"
-msgstr "Samsø"
+msgstr "삼쇠"
 
 msgid "Silkeborg"
-msgstr "Silkeborg"
+msgstr "실케보리"
 
 msgid "Skanderborg"
-msgstr "Skanderborg"
+msgstr "스칸데르보리"
 
 msgid "Skive"
-msgstr "Skive"
+msgstr "스케베"
 
 msgid "Struer"
-msgstr "Struer"
+msgstr "스트루에르"
 
 msgid "Syddjurs"
-msgstr "Syddjurs"
+msgstr "쉬드듀르스"
 
 msgid "Viborg"
-msgstr "Viborg"
+msgstr "비보리"
 
 msgid "Aarhus"
-msgstr "Aarhus"
+msgstr "오르후스"
 
 msgid "Brønderslev"
-msgstr "Brønderslev"
+msgstr "브뢴데르슬레우"
 
 msgid "Frederikshavn"
-msgstr "Frederikshavn"
+msgstr "프레데릭스하운"
 
 msgid "Hjørring"
-msgstr "Hjørring"
+msgstr "홋링"
 
 msgid "Jammerbugt"
-msgstr "Jammerbugt"
+msgstr "야메르부그트"
 
 msgid "Læsø"
-msgstr "Læsø"
+msgstr "레쇠"
 
 msgid "Mariagerfjord"
-msgstr "Mariagerfjord"
+msgstr "마리아에르피오르"
 
 msgid "Morsø"
-msgstr "Morsø"
+msgstr "모르쇠"
 
 msgid "Rebild"
-msgstr "Rebild"
+msgstr "레빌"
 
 msgid "Thisted"
-msgstr "Thisted"
+msgstr "티스테드"
 
 msgid "Vesthimmerland"
-msgstr "Vesthimmerland"
+msgstr "베스트힘메를란"
 
 msgid "Aalborg"
-msgstr "Aalborg"
+msgstr "올보르"
 
 msgid "Faxe"
-msgstr "Faxe"
+msgstr "팍세"
 
 msgid "Greve"
-msgstr "Greve"
+msgstr "그레베"
 
 msgid "Guldborgsund"
-msgstr "Guldborgsund"
+msgstr "굴드보리순"
 
 msgid "Holbæk"
-msgstr "Holbæk"
+msgstr "홀베크"
 
 msgid "Kalundborg"
-msgstr "Kalundborg"
+msgstr "칼룬보리"
 
 msgid "Køge"
-msgstr "Køge"
+msgstr "코에"
 
 msgid "Lejre"
-msgstr "Lejre"
+msgstr "레이레"
 
 msgid "Lolland"
-msgstr "Lolland"
+msgstr "롤란"
 
 msgid "Næstved"
-msgstr "Næstved"
+msgstr "네스테드"
 
 msgid "Odsherred"
-msgstr "Odsherred"
+msgstr "오스헤레드"
 
 msgid "Ringsted"
-msgstr "Ringsted"
+msgstr "링스테드"
 
 msgid "Roskilde"
-msgstr "Roskilde"
+msgstr "로스킬레"
 
 msgid "Slagelse"
-msgstr "Slagelse"
+msgstr "슬라엘세"
 
 msgid "Solrød"
-msgstr "Solrød"
+msgstr "솔뢰드"
 
 msgid "Sorø"
-msgstr "Sorø"
+msgstr "소뢰"
 
 msgid "Stevns"
-msgstr "Stevns"
+msgstr "스테운스"
 
 msgid "Vordingborg"
-msgstr "Vordingborg"
+msgstr "보딩보리"
 
 msgid "Assens"
-msgstr "Assens"
+msgstr "아센스"
 
 msgid "Billund"
-msgstr "Billund"
+msgstr "빌룬"
 
 msgid "Esbjerg"
-msgstr "Esbjerg"
+msgstr "에스비에르"
 
 msgid "Fanø"
-msgstr "Fanø"
+msgstr "파노"
 
 msgid "Fredericia"
-msgstr "Fredericia"
+msgstr "프레데리시아"
 
 msgid "Faaborg-Midtfyn"
-msgstr "Faaborg-Midtfyn"
+msgstr "포보리미트푠"
 
 msgid "Haderslev"
-msgstr "Haderslev"
+msgstr "하데르슬레우"
 
 msgid "Kerteminde"
-msgstr "Kerteminde"
+msgstr "케르테민데"
 
 msgid "Kolding"
-msgstr "Kolding"
+msgstr "콜링"
 
 msgid "Langeland"
-msgstr "Langeland"
+msgstr "랑엘란"
 
 msgid "Middelfart"
-msgstr "Middelfart"
+msgstr "미델파르트"
 
 msgid "Nordfyn"
-msgstr "Nordfyn"
+msgstr "노르푠"
 
 msgid "Nyborg"
-msgstr "Nyborg"
+msgstr "뉘보리"
 
 msgid "Odense"
-msgstr "Odense"
+msgstr "오덴세"
 
 msgid "Svendborg"
-msgstr "Svendborg"
+msgstr "스벤보리"
 
 msgid "Sønderborg"
-msgstr "Sønderborg"
+msgstr "쇤데르보리"
 
 msgid "Tønder"
 msgstr "Tønder"
 
 msgid "Varde"
-msgstr "Varde"
+msgstr "바데"
 
 msgid "Vejen"
-msgstr "Vejen"
+msgstr "바이엔"
 
 msgid "Vejle"
-msgstr "Vejle"
+msgstr "바일레"
 
 msgid "Ærø"
-msgstr "Ærø"
+msgstr "에뢰"
 
 msgid "Aabenraa"
-msgstr "Aabenraa"
+msgstr "오벤로"
 
 msgid "Region Hovedstaden"
-msgstr "Region Hovedstaden"
+msgstr "호브스테덴 지역"
 
 msgid "Region Midtjylland"
-msgstr "Region Midtjylland"
+msgstr "미트윌란 지역"
 
 msgid "Region Nordjylland"
-msgstr "Region Nordjylland"
+msgstr "노르윌란 지역"
 
 msgid "Region Sjælland"
-msgstr "Region Sjælland"
+msgstr "셸란 지역"
 
 msgid "Region Syddanmark"
-msgstr "Region Syddanmark"
+msgstr "쉬단마크 지역"
 
 msgid "Scanning"
-msgstr "Scanning"
+msgstr "스캐닝"
 
 msgid "Facility"
-msgstr "Facility"
+msgstr "시설"
 
 msgid "Høje Taastrup"
-msgstr "Høje Taastrup"
+msgstr "호예 타스트루프"
 
 msgid "København C"
-msgstr "København C"
+msgstr "코펜하겐 C"
 
 msgid "Sjælland USF P"
-msgstr "Sjælland USF P"
+msgstr "셸란 USF P"
 
 msgid "Sjælland USF B"
-msgstr "Sjælland USF B"
+msgstr "셸란 USF B"
 
 msgid "Udbetaling"
-msgstr "Udbetaling"
+msgstr "우드베틀링"
 
 msgid "eBrevsprækken"
-msgstr "eBrevsprækken"
+msgstr "e브레브스프레켄"
 
 msgid "Kommuneservice"
-msgstr "Kommuneservice"
+msgstr "코뮤네서비스"
 
 msgid "Københavns Pakkecenter"
-msgstr "Københavns Pakkecenter"
+msgstr "코펜하겐스 파케센터"
 
 msgid "Københavns Pakke BRC"
-msgstr "Københavns Pakke BRC"
+msgstr "코펜하겐스 파케 BRC"
 
 msgid "Returprint BRC"
-msgstr "Returprint BRC"
+msgstr "레투르프린트 BRC"
 
 msgid "Internationalt Postcenter"
-msgstr "Internationalt Postcenter"
+msgstr "인터내셔날 포스트센터"
 
 msgid "København K"
-msgstr "København K"
+msgstr "코펜하겐 K"
 
 msgid "København V"
-msgstr "København V"
+msgstr "코펜하겐 V"
 
 msgid "Returpost"
-msgstr "Returpost"
+msgstr "레투르포스트"
 
 msgid "Centraltastning"
-msgstr "Centraltastning"
+msgstr "센트론타스트닝"
 
 msgid "Frederiksberg C"
-msgstr "Frederiksberg C"
+msgstr "프레데릭스베리 C"
 
 msgid "København Ø"
-msgstr "København Ø"
+msgstr "코펜하겐 외"
 
 msgid "Nordhavn"
-msgstr "Nordhavn"
+msgstr "노르드하운"
 
 msgid "København N"
-msgstr "København N"
+msgstr "코펜하겐 N"
 
 msgid "København S"
-msgstr "København S"
+msgstr "코펜하겐 S"
 
 msgid "København NV"
-msgstr "København NV"
+msgstr "코펜하겐 NV"
 
 msgid "København SV"
-msgstr "København SV"
+msgstr "코펜하겐 SV"
 
 msgid "Valby"
-msgstr "Valby"
+msgstr "발뷔"
 
 msgid "Taastrup"
-msgstr "Taastrup"
+msgstr "타스트루프"
 
 msgid "Hedehusene"
-msgstr "Hedehusene"
+msgstr "헤데후세네"
 
 msgid "Brøndby Strand"
-msgstr "Brøndby Strand"
+msgstr "브뢴뷔 스트란"
 
 msgid "Vallensbæk Strand"
-msgstr "Vallensbæk Strand"
+msgstr "발렌스베크 스트란"
 
 msgid "Solrød Strand"
-msgstr "Solrød Strand"
+msgstr "솔뢰드 스트란"
 
 msgid "Karlslunde"
-msgstr "Karlslunde"
+msgstr "카를순데"
 
 msgid "Brønshøj"
-msgstr "Brønshøj"
+msgstr "브뢴스호이"
 
 msgid "Vanløse"
-msgstr "Vanløse"
+msgstr "반뢰세"
 
 msgid "Skovlunde"
-msgstr "Skovlunde"
+msgstr "스코울룬데"
 
 msgid "Måløv"
-msgstr "Måløv"
+msgstr "몰뢰우"
 
 msgid "Smørum"
-msgstr "Smørum"
+msgstr "스뫼룸"
 
 msgid "Kastrup"
-msgstr "Kastrup"
+msgstr "카스트루프"
 
 msgid "Kongens Lyngby"
-msgstr "Kongens Lyngby"
+msgstr "콩겐스 린뷔"
 
 msgid "Virum"
-msgstr "Virum"
+msgstr "비룸"
 
 msgid "Holte"
-msgstr "Holte"
+msgstr "홀테"
 
 msgid "Nærum"
-msgstr "Nærum"
+msgstr "네룸"
 
 msgid "Søborg"
-msgstr "Søborg"
+msgstr "쇠보리"
 
 msgid "Dyssegård"
-msgstr "Dyssegård"
+msgstr "뒤세고르"
 
 msgid "Bagsværd"
-msgstr "Bagsværd"
+msgstr "박스베르"
 
 msgid "Hellerup"
 msgstr "Hellerup"
@@ -1133,1849 +1188,1849 @@ msgid "Charlottenlund"
 msgstr "Charlottenlund"
 
 msgid "Klampenborg"
-msgstr "Klampenborg"
+msgstr "클람펜보리"
 
 msgid "Skodsborg"
-msgstr "Skodsborg"
+msgstr "스코스보리"
 
 msgid "Vedbæk"
-msgstr "Vedbæk"
+msgstr "베드베크"
 
 msgid "Rungsted Kyst"
-msgstr "Rungsted Kyst"
+msgstr "룽스테드퀴스트"
 
 msgid "Kokkedal"
-msgstr "Kokkedal"
+msgstr "코케달"
 
 msgid "Nivå"
-msgstr "Nivå"
+msgstr "니보"
 
 msgid "Humlebæk"
-msgstr "Humlebæk"
+msgstr "훔레베크"
 
 msgid "Espergærde"
-msgstr "Espergærde"
+msgstr "에스페르네르데"
 
 msgid "Snekkersten"
-msgstr "Snekkersten"
+msgstr "스네케르스텐"
 
 msgid "Tikøb"
-msgstr "Tikøb"
+msgstr "티쾨브"
 
 msgid "Hornbæk"
-msgstr "Hornbæk"
+msgstr "호른베크"
 
 msgid "Dronningmølle"
-msgstr "Dronningmølle"
+msgstr "드론닝が始ま"
 
 msgid "Ålsgårde"
-msgstr "Ålsgårde"
+msgstr "올스고르데"
 
 msgid "Hellebæk"
-msgstr "Hellebæk"
+msgstr "헬레베크"
 
 msgid "Helsinge"
-msgstr "Helsinge"
+msgstr "헬싱에"
 
 msgid "Vejby"
-msgstr "Vejby"
+msgstr "바이뷔"
 
 msgid "Tisvildeleje"
-msgstr "Tisvildeleje"
+msgstr "티스빌레레이에"
 
 msgid "Græsted"
-msgstr "Græsted"
+msgstr "그레스테드"
 
 msgid "Gilleleje"
-msgstr "Gilleleje"
+msgstr "길레레이에"
 
 msgid "Frederiksværk"
-msgstr "Frederiksværk"
+msgstr "프레데릭스베르크"
 
 msgid "Ølsted"
-msgstr "Ølsted"
+msgstr "욀스테드"
 
 msgid "Skævinge"
-msgstr "Skævinge"
+msgstr "스캥에"
 
 msgid "Gørløse"
-msgstr "Gørløse"
+msgstr "괴를뢰세"
 
 msgid "Liseleje"
-msgstr "Liseleje"
+msgstr "리세레이에"
 
 msgid "Melby"
-msgstr "Melby"
+msgstr "멜뷔"
 
 msgid "Hundested"
-msgstr "Hundested"
+msgstr "훈데스테드"
 
 msgid "Birkerød"
-msgstr "Birkerød"
+msgstr "비케뢰드"
 
 msgid "Kvistgård"
-msgstr "Kvistgård"
+msgstr "크비스트고르"
 
 msgid "Værløse"
-msgstr "Værløse"
+msgstr "베를뢰세"
 
 msgid "Farum"
-msgstr "Farum"
+msgstr "파룸"
 
 msgid "Lynge"
-msgstr "Lynge"
+msgstr "륀에"
 
 msgid "Slangerup"
-msgstr "Slangerup"
+msgstr "슬랑에루프"
 
 msgid "Jægerspris"
-msgstr "Jægerspris"
+msgstr "예에르스프리스"
 
 msgid "Ølstykke"
-msgstr "Ølstykke"
+msgstr "욀스튀케"
 
 msgid "Stenløse"
-msgstr "Stenløse"
+msgstr "스텐뢰세"
 
 msgid "Veksø Sjælland"
-msgstr "Veksø Sjælland"
+msgstr "벡쇠 셸란"
 
 msgid "Rønne"
-msgstr "Rønne"
+msgstr "뢴네"
 
 msgid "Aakirkeby"
-msgstr "Aakirkeby"
+msgstr "오아키르케뷔"
 
 msgid "Nexø"
-msgstr "Nexø"
+msgstr "넥쇠"
 
 msgid "Svaneke"
-msgstr "Svaneke"
+msgstr "스바네케"
 
 msgid "Østermarie"
-msgstr "Østermarie"
+msgstr "외스테르마리에"
 
 msgid "Gudhjem"
-msgstr "Gudhjem"
+msgstr "구드𝑯jem"
 
 msgid "Allinge"
-msgstr "Allinge"
+msgstr "알링에"
 
 msgid "Klemensker"
-msgstr "Klemensker"
+msgstr "클레멘스케르"
 
 msgid "Hasle"
-msgstr "Hasle"
+msgstr "할슬레"
 
 msgid "Tune"
-msgstr "Tune"
+msgstr "투네"
 
 msgid "Jyllinge"
-msgstr "Jyllinge"
+msgstr "윌링에"
 
 msgid "Skibby"
-msgstr "Skibby"
+msgstr "스키뷔"
 
 msgid "Kirke Såby"
-msgstr "Kirke Såby"
+msgstr "키르케 소뷔"
 
 msgid "Kirke Hyllinge"
-msgstr "Kirke Hyllinge"
+msgstr "키르케 힐링에"
 
 msgid "Viby Sjælland"
-msgstr "Viby Sjælland"
+msgstr "비뷔 셸란"
 
 msgid "Borup"
-msgstr "Borup"
+msgstr "보루프"
 
 msgid "Herlufmagle"
-msgstr "Herlufmagle"
+msgstr "헤를루프마글레"
 
 msgid "Glumsø"
-msgstr "Glumsø"
+msgstr "글룸쇠"
 
 msgid "Fjenneslev"
-msgstr "Fjenneslev"
+msgstr "피엔네슬레우"
 
 msgid "Jystrup Midtsj"
-msgstr "Jystrup Midtsj"
+msgstr "위스트루프 미트셀"
 
 msgid "Munke Bjergby"
-msgstr "Munke Bjergby"
+msgstr "문케 비에르뷔"
 
 msgid "Korsør"
-msgstr "Korsør"
+msgstr "코르쇠르"
 
 msgid "Skælskør"
-msgstr "Skælskør"
+msgstr "스켸尔斯쾨르"
 
 msgid "Vemmelev"
-msgstr "Vemmelev"
+msgstr "베흘레우"
 
 msgid "Boeslunde"
-msgstr "Boeslunde"
+msgstr "보슬룬데"
 
 msgid "Rude"
-msgstr "Rude"
+msgstr "루데"
 
 msgid "Agersø"
-msgstr "Agersø"
+msgstr "아게르쇠"
 
 msgid "Omø"
-msgstr "Omø"
+msgstr "오뫼"
 
 msgid "Fuglebjerg"
-msgstr "Fuglebjerg"
+msgstr "풀레비에르"
 
 msgid "Dalmose"
-msgstr "Dalmose"
+msgstr "달모세"
 
 msgid "Sandved"
-msgstr "Sandved"
+msgstr "산베드"
 
 msgid "Høng"
-msgstr "Høng"
+msgstr "홍"
 
 msgid "Gørlev"
-msgstr "Gørlev"
+msgstr "괴를레우"
 
 msgid "Ruds Vedby"
-msgstr "Ruds Vedby"
+msgstr "루스 베뷔"
 
 msgid "Dianalund"
-msgstr "Dianalund"
+msgstr "디아나룬"
 
 msgid "Stenlille"
-msgstr "Stenlille"
+msgstr "스텐릴레"
 
 msgid "Nyrup"
-msgstr "Nyrup"
+msgstr "뉘루프"
 
 msgid "Orø"
-msgstr "Orø"
+msgstr "오뢰"
 
 msgid "Hvalsø"
-msgstr "Hvalsø"
+msgstr "발쇠"
 
 msgid "Tølløse"
-msgstr "Tølløse"
+msgstr "톨뢰세"
 
 msgid "Ugerløse"
-msgstr "Ugerløse"
+msgstr "우게를뢰세"
 
 msgid "Kirke Eskilstrup"
-msgstr "Kirke Eskilstrup"
+msgstr "키르케 에스킬스트루프"
 
 msgid "Store Merløse"
-msgstr "Store Merløse"
+msgstr "스토레 메를뢰세"
 
 msgid "Vipperød"
-msgstr "Vipperød"
+msgstr "비페뢰드"
 
 msgid "Regstrup"
-msgstr "Regstrup"
+msgstr "레그스트루프"
 
 msgid "Mørkøv"
-msgstr "Mørkøv"
+msgstr "뫼르쾨우"
 
 msgid "Jyderup"
-msgstr "Jyderup"
+msgstr "위데루프"
 
 msgid "Snertinge"
-msgstr "Snertinge"
+msgstr "스네르팅에"
 
 msgid "Svebølle"
-msgstr "Svebølle"
+msgstr "스베뵐레"
 
 msgid "Store Fuglede"
-msgstr "Store Fuglede"
+msgstr "스토레 풀레데"
 
 msgid "Jerslev Sjælland"
-msgstr "Jerslev Sjælland"
+msgstr "예르슬레우 셸란"
 
 msgid "Nykøbing Sj"
-msgstr "Nykøbing Sj"
+msgstr "뉘쾨빙 셸"
 
 msgid "Svinninge"
-msgstr "Svinninge"
+msgstr "스비닝에"
 
 msgid "Gislinge"
-msgstr "Gislinge"
+msgstr "기슬링에"
 
 msgid "Hørve"
-msgstr "Hørve"
+msgstr "회르베"
 
 msgid "Fårevejle"
-msgstr "Fårevejle"
+msgstr "포레바일레"
 
 msgid "Asnæs"
-msgstr "Asnæs"
+msgstr "아스네스"
 
 msgid "Vig"
-msgstr "Vig"
+msgstr "비"
 
 msgid "Grevinge"
-msgstr "Grevinge"
+msgstr "그레빙에"
 
 msgid "Nørre Asmindrup"
-msgstr "Nørre Asmindrup"
+msgstr "뇌레 아스민드루프"
 
 msgid "Højby"
-msgstr "Højby"
+msgstr "호이뷔"
 
 msgid "Rørvig"
-msgstr "Rørvig"
+msgstr "뢰르비"
 
 msgid "Sjællands Odde"
-msgstr "Sjællands Odde"
+msgstr "셸란스 오데"
 
 msgid "Føllenslev"
-msgstr "Føllenslev"
+msgstr "푤렌슬레우"
 
 msgid "Sejerø"
-msgstr "Sejerø"
+msgstr "세이에뢰"
 
 msgid "Eskebjerg"
-msgstr "Eskebjerg"
+msgstr "에스케비에르"
 
 msgid "Gadstrup"
-msgstr "Gadstrup"
+msgstr "가드스트루프"
 
 msgid "Havdrup"
-msgstr "Havdrup"
+msgstr "하브드루프"
 
 msgid "Lille Skensved"
-msgstr "Lille Skensved"
+msgstr "릴레 스켄스베드"
 
 msgid "Bjæverskov"
-msgstr "Bjæverskov"
+msgstr "비에베르스코우"
 
 msgid "Hårlev"
-msgstr ""
+msgstr "호를레우"
 
 msgid "Karise"
-msgstr ""
+msgstr "카리세"
 
 msgid "Faxe Ladeplads"
-msgstr ""
+msgstr "팍세 라데플라스"
 
 msgid "Store Heddinge"
-msgstr ""
+msgstr "스토레 헤딩에"
 
 msgid "Strøby"
-msgstr ""
+msgstr "스트뢰뷔"
 
 msgid "Klippinge"
-msgstr ""
+msgstr "클리핑에"
 
 msgid "Rødvig Stevns"
-msgstr ""
+msgstr "뢰드비 스테운스"
 
 msgid "Herfølge"
-msgstr ""
+msgstr "헤르푤게"
 
 msgid "Tureby"
-msgstr ""
+msgstr "투레뷔"
 
 msgid "Rønnede"
-msgstr ""
+msgstr "뢴네데"
 
 msgid "Holmegaard"
-msgstr ""
+msgstr "홀메고르"
 
 msgid "Haslev"
-msgstr ""
+msgstr "하슬레우"
 
 msgid "Præstø"
-msgstr ""
+msgstr "프레스퇴"
 
 msgid "Tappernøje"
-msgstr ""
+msgstr "타페르뇌에"
 
 msgid "Mern"
-msgstr ""
+msgstr "메른"
 
 msgid "Karrebæksminde"
-msgstr ""
+msgstr "카레베크스민데"
 
 msgid "Lundby"
-msgstr ""
+msgstr "룬뷔"
 
 msgid "Kalvehave"
-msgstr ""
+msgstr "칼베하베"
 
 msgid "Langebæk"
-msgstr ""
+msgstr "朗에베크"
 
 msgid "Stensved"
-msgstr ""
+msgstr "스텐스베드"
 
 msgid "Stege"
-msgstr ""
+msgstr "스테에"
 
 msgid "Borre"
-msgstr ""
+msgstr "보레"
 
 msgid "Askeby"
-msgstr ""
+msgstr "아스크뷔"
 
 msgid "Bogø By"
-msgstr ""
+msgstr "보öğret"
 
 msgid "Nykøbing F"
-msgstr ""
+msgstr "뉘쾨빙 F"
 
 msgid "Nørre Alslev"
-msgstr ""
+msgstr "뇌레 알슬레우"
 
 msgid "Stubbekøbing"
-msgstr ""
+msgstr "스투베퀴빙"
 
 msgid "Guldborg"
-msgstr ""
+msgstr "굴드보리"
 
 msgid "Eskilstrup"
-msgstr ""
+msgstr "에스킬스트루프"
 
 msgid "Horbelev"
-msgstr ""
+msgstr "호르벨레우"
 
 msgid "Idestrup"
-msgstr ""
+msgstr "이데스트루프"
 
 msgid "Væggerløse"
-msgstr ""
+msgstr "베게를뢰세"
 
 msgid "Gedser"
-msgstr ""
+msgstr "게드세르"
 
 msgid "Nysted"
-msgstr ""
+msgstr "뉘스테드"
 
 msgid "Toreby L"
-msgstr ""
+msgstr "토레뷔 L"
 
 msgid "Kettinge"
-msgstr ""
+msgstr "케팅에"
 
 msgid "Øster Ulslev"
-msgstr ""
+msgstr "외스테르 울슬레우"
 
 msgid "Errindlev"
-msgstr ""
+msgstr "에린들레우"
 
 msgid "Nakskov"
-msgstr ""
+msgstr "낙스코우"
 
 msgid "Harpelunde"
-msgstr ""
+msgstr "하르펠룬데"
 
 msgid "Horslunde"
-msgstr ""
+msgstr "호르슬룬데"
 
 msgid "Søllested"
-msgstr ""
+msgstr "숄레스테드"
 
 msgid "Maribo"
-msgstr ""
+msgstr "마리보"
 
 msgid "Bandholm"
-msgstr ""
+msgstr "반홀름"
 
 msgid "Askø og Lilleø"
-msgstr ""
+msgstr "아스쾨 오 릴뢰"
 
 msgid "Torrig L"
-msgstr ""
+msgstr "토리 L"
 
 msgid "Fejø"
-msgstr ""
+msgstr "페이외"
 
 msgid "Femø"
-msgstr ""
+msgstr "페뫼"
 
 msgid "Nørreballe"
-msgstr ""
+msgstr "뇌레발레"
 
 msgid "Stokkemarke"
-msgstr ""
+msgstr "스토케마르케"
 
 msgid "Vesterborg"
-msgstr ""
+msgstr "베스테르보리"
 
 msgid "Holeby"
-msgstr ""
+msgstr "홀레뷔"
 
 msgid "Rødby"
-msgstr ""
+msgstr "뢰뷔"
 
 msgid "Dannemare"
-msgstr ""
+msgstr "단네마레"
 
 msgid "Sakskøbing"
-msgstr ""
+msgstr "삭스쾨빙"
 
 msgid "Midtsjælland USF P"
-msgstr ""
+msgstr "미트셸란 USF P"
 
 msgid "Odense C"
-msgstr ""
+msgstr "오덴세 C"
 
 msgid "Odense V"
-msgstr ""
+msgstr "오덴세 V"
 
 msgid "Odense NV"
-msgstr ""
+msgstr "오덴세 NV"
 
 msgid "Odense SØ"
-msgstr ""
+msgstr "오덴세 SØ"
 
 msgid "Odense M"
-msgstr ""
+msgstr "오덴세 M"
 
 msgid "Odense NØ"
-msgstr ""
+msgstr "오덴세 NØ"
 
 msgid "Odense SV"
-msgstr ""
+msgstr "오덴세 SV"
 
 msgid "Odense S"
-msgstr ""
+msgstr "오덴세 S"
 
 msgid "Odense N"
-msgstr ""
+msgstr "오덴세 N"
 
 msgid "Marslev"
-msgstr ""
+msgstr "마르슬레우"
 
 msgid "Agedrup"
-msgstr ""
+msgstr "아게드루프"
 
 msgid "Munkebo"
-msgstr ""
+msgstr "문케보"
 
 msgid "Rynkeby"
-msgstr ""
+msgstr "륀케뷔"
 
 msgid "Mesinge"
-msgstr ""
+msgstr "메싱에"
 
 msgid "Dalby"
-msgstr ""
+msgstr "달뷔"
 
 msgid "Martofte"
-msgstr ""
+msgstr "마르토프테"
 
 msgid "Bogense"
-msgstr ""
+msgstr "보겐세"
 
 msgid "Otterup"
-msgstr ""
+msgstr "오테루프"
 
 msgid "Morud"
-msgstr ""
+msgstr "모루드"
 
 msgid "Harndrup"
-msgstr ""
+msgstr "하른드루프"
 
 msgid "Brenderup Fyn"
-msgstr ""
+msgstr "브렌데루프푠"
 
 msgid "Asperup"
-msgstr ""
+msgstr "아스페루프"
 
 msgid "Søndersø"
-msgstr ""
+msgstr "쇤데르쇠"
 
 msgid "Veflinge"
-msgstr ""
+msgstr "베흘링에"
 
 msgid "Skamby"
-msgstr ""
+msgstr "스캄뷔"
 
 msgid "Blommenslyst"
-msgstr ""
+msgstr "블로멘슬뤼스트"
 
 msgid "Vissenbjerg"
-msgstr ""
+msgstr "비센비에르"
 
 msgid "Ullerslev"
-msgstr ""
+msgstr "울레르슬레우"
 
 msgid "Langeskov"
-msgstr ""
+msgstr "朗에스코우"
 
 msgid "Aarup"
-msgstr ""
+msgstr "오루프"
 
 msgid "Nørre Aaby"
-msgstr ""
+msgstr "뇌레 오뷔"
 
 msgid "Gelsted"
-msgstr ""
+msgstr "게일스테드"
 
 msgid "Ejby"
-msgstr ""
+msgstr "아이뷔"
 
 msgid "Faaborg"
-msgstr ""
+msgstr "포보리"
 
 msgid "Lyø"
-msgstr ""
+msgstr "뤼외"
 
 msgid "Avernakø"
-msgstr ""
+msgstr "아베르나쾨"
 
 msgid "Bjørnø"
-msgstr ""
+msgstr "비외르뇌"
 
 msgid "Glamsbjerg"
-msgstr ""
+msgstr "글람스비에르"
 
 msgid "Ebberup"
-msgstr ""
+msgstr "에베루프"
 
 msgid "Millinge"
-msgstr ""
+msgstr "밀링에"
 
 msgid "Broby"
-msgstr ""
+msgstr "브로뷔"
 
 msgid "Haarby"
-msgstr ""
+msgstr "호르뷔"
 
 msgid "Tommerup"
-msgstr ""
+msgstr "토메루프"
 
 msgid "Ringe"
-msgstr ""
+msgstr "링에"
 
 msgid "Vester Skerninge"
-msgstr ""
+msgstr "베스테르 스케르닝에"
 
 msgid "Stenstrup"
-msgstr ""
+msgstr "스텐스트루프"
 
 msgid "Kværndrup"
-msgstr ""
+msgstr "크베른드루프"
 
 msgid "Årslev"
-msgstr ""
+msgstr "올슬레우"
 
 msgid "Ørbæk"
-msgstr ""
+msgstr "외르베크"
 
 msgid "Gislev"
-msgstr ""
+msgstr "기슬레우"
 
 msgid "Ryslinge"
-msgstr ""
+msgstr "뤼슬링에"
 
 msgid "Ferritslev Fyn"
-msgstr ""
+msgstr "페리츨레우푠"
 
 msgid "Frørup"
-msgstr ""
+msgstr "프뢰루프"
 
 msgid "Hesselager"
-msgstr ""
+msgstr "헤세라게르"
 
 msgid "Skårup Fyn"
-msgstr ""
+msgstr "스코루프푠"
 
 msgid "Vejstrup"
-msgstr ""
+msgstr "바이스트루프"
 
 msgid "Oure"
-msgstr ""
+msgstr "오우레"
 
 msgid "Gudme"
-msgstr ""
+msgstr "구드메"
 
 msgid "Gudbjerg Sydfyn"
-msgstr ""
+msgstr "구드비에르 쉬푠"
 
 msgid "Rudkøbing"
-msgstr ""
+msgstr "루드쾨빙"
 
 msgid "Humble"
-msgstr ""
+msgstr "훔블레"
 
 msgid "Bagenkop"
-msgstr ""
+msgstr "바겐코프"
 
 msgid "Strynø"
-msgstr ""
+msgstr "스트뤼뇌"
 
 msgid "Tranekær"
-msgstr ""
+msgstr "트라네케르"
 
 msgid "Marstal"
-msgstr ""
+msgstr "마르스탈"
 
 msgid "Birkholm"
-msgstr ""
+msgstr "비르크홀름"
 
 msgid "Ærøskøbing"
-msgstr ""
+msgstr "에뢰스쾨빙"
 
 msgid "Søby Ærø"
-msgstr ""
+msgstr "쇠뷔 에뢰"
 
 msgid "Egtved"
-msgstr ""
+msgstr "에그트베드"
 
 msgid "Almind"
-msgstr ""
+msgstr "알마인"
 
 msgid "Viuf"
-msgstr ""
+msgstr "비우프"
 
 msgid "Jordrup"
-msgstr ""
+msgstr "요르드루프"
 
 msgid "Christiansfeld"
-msgstr ""
+msgstr "크리스티안스펠트"
 
 msgid "Bjert"
-msgstr ""
+msgstr "비에르트"
 
 msgid "Sønder Stenderup"
-msgstr ""
+msgstr "쇤데르 스텐데루프"
 
 msgid "Sjølund"
-msgstr ""
+msgstr "숄룬"
 
 msgid "Hejls"
-msgstr ""
+msgstr "헤일스"
 
 msgid "Barsø"
-msgstr ""
+msgstr "보르쇠"
 
 msgid "Rødekro"
-msgstr ""
+msgstr "뢰데크로"
 
 msgid "Løgumkloster"
-msgstr ""
+msgstr "뢰굼클로스테르"
 
 msgid "Bredebro"
-msgstr ""
+msgstr "브레데브로"
 
 msgid "Højer"
-msgstr ""
+msgstr "호이에르"
 
 msgid "Gråsten"
-msgstr ""
+msgstr "그로스텐"
 
 msgid "Broager"
-msgstr ""
+msgstr "브로아게르"
 
 msgid "Egernsund"
-msgstr ""
+msgstr "에게른순"
 
 msgid "Padborg"
-msgstr ""
+msgstr "파드보리"
 
 msgid "Kruså"
-msgstr ""
+msgstr "크루소"
 
 msgid "Tinglev"
-msgstr ""
+msgstr "팅글레우"
 
 msgid "Bylderup-Bov"
-msgstr ""
+msgstr "뷜레루프-보우"
 
 msgid "Bolderslev"
-msgstr ""
+msgstr "볼데르슬레우"
 
 msgid "Nordborg"
-msgstr ""
+msgstr "노르보리"
 
 msgid "Augustenborg"
-msgstr ""
+msgstr "아우구스텐보리"
 
 msgid "Sydals"
-msgstr ""
+msgstr "쉬달스"
 
 msgid "Vojens"
-msgstr ""
+msgstr "보옌스"
 
 msgid "Gram"
-msgstr ""
+msgstr "그람"
 
 msgid "Toftlund"
-msgstr ""
+msgstr "토프틀룬"
 
 msgid "Agerskov"
-msgstr ""
+msgstr "아게르스코우"
 
 msgid "Branderup J"
-msgstr ""
+msgstr "브란데루프 J"
 
 msgid "Bevtoft"
-msgstr ""
+msgstr "베프토프트"
 
 msgid "Sommersted"
-msgstr ""
+msgstr "소메르스테드"
 
 msgid "Vamdrup"
-msgstr ""
+msgstr "밤드루프"
 
 msgid "Gesten"
-msgstr ""
+msgstr "게스텐"
 
 msgid "Bække"
-msgstr ""
+msgstr "베크"
 
 msgid "Vorbasse"
-msgstr ""
+msgstr "보르바세"
 
 msgid "Rødding"
-msgstr ""
+msgstr "뢰딩"
 
 msgid "Lunderskov"
-msgstr ""
+msgstr "룬데르스코우"
 
 msgid "Brørup"
-msgstr ""
+msgstr "브뢰루프"
 
 msgid "Lintrup"
-msgstr ""
+msgstr "린트루프"
 
 msgid "Holsted"
-msgstr ""
+msgstr "홀스테드"
 
 msgid "Hovborg"
-msgstr ""
+msgstr "호우보리"
 
 msgid "Føvling"
-msgstr ""
+msgstr "푤울링"
 
 msgid "Gørding"
-msgstr ""
+msgstr "괴르딩"
 
 msgid "Esbjerg Ø"
-msgstr ""
+msgstr "에스비에르 Ø"
 
 msgid "Esbjerg V"
-msgstr ""
+msgstr "에스비에르 V"
 
 msgid "Esbjerg N"
-msgstr ""
+msgstr "에스비에르 N"
 
 msgid "Tjæreborg"
-msgstr ""
+msgstr "켸레보리"
 
 msgid "Bramming"
-msgstr ""
+msgstr "브라밍"
 
 msgid "Glejbjerg"
-msgstr ""
+msgstr "글레이비에르"
 
 msgid "Agerbæk"
-msgstr ""
+msgstr "아게르베크"
 
 msgid "Ribe"
-msgstr ""
+msgstr "리베"
 
 msgid "Gredstedbro"
-msgstr ""
+msgstr "그레드스테드브로"
 
 msgid "Skærbæk"
-msgstr ""
+msgstr "스켸르베크"
 
 msgid "Rømø"
-msgstr ""
+msgstr "뢰뫼"
 
 msgid "Årre"
-msgstr ""
+msgstr "오레"
 
 msgid "Ansager"
-msgstr ""
+msgstr "안사게르"
 
 msgid "Nørre Nebel"
-msgstr ""
+msgstr "뇌레 네벨"
 
 msgid "Oksbøl"
-msgstr ""
+msgstr "옥스뵐"
 
 msgid "Janderup Vestj"
-msgstr ""
+msgstr "얀데루프 베스트"
 
 msgid "Billum"
-msgstr ""
+msgstr "빌룸"
 
 msgid "Vejers Strand"
-msgstr ""
+msgstr "바이에르스 스트란"
 
 msgid "Henne"
-msgstr ""
+msgstr "헤네"
 
 msgid "Outrup"
-msgstr ""
+msgstr "오우트루프"
 
 msgid "Blåvand"
-msgstr ""
+msgstr "블로반"
 
 msgid "Tistrup"
-msgstr ""
+msgstr "티스트루프"
 
 msgid "Ølgod"
-msgstr ""
+msgstr "욀고"
 
 msgid "Tarm"
-msgstr ""
+msgstr "타름"
 
 msgid "Hemmet"
-msgstr ""
+msgstr "헤메트"
 
 msgid "Skjern"
-msgstr ""
+msgstr "스케른"
 
 msgid "Videbæk"
-msgstr ""
+msgstr "비데베크"
 
 msgid "Kibæk"
-msgstr ""
+msgstr "키베크"
 
 msgid "Lem St"
-msgstr ""
+msgstr "렘 St"
 
 msgid "Ringkøbing"
-msgstr ""
+msgstr "링쾨빙"
 
 msgid "Hvide Sande"
-msgstr ""
+msgstr "비데 산데"
 
 msgid "Spjald"
-msgstr ""
+msgstr "스피알"
 
 msgid "Ørnhøj"
-msgstr ""
+msgstr "욀른호이"
 
 msgid "Tim"
-msgstr ""
+msgstr "팀"
 
 msgid "Ulfborg"
-msgstr ""
+msgstr "울프보리"
 
 msgid "Taulov Pakkecenter"
-msgstr "Taulov Pakkecenter"
+msgstr "타울로프 파케센터"
 
 msgid "Pakker TLP"
-msgstr ""
+msgstr "파케르 TLP"
 
 msgid "Børkop"
-msgstr ""
+msgstr "뵈르코프"
 
 msgid "Vejle Øst"
-msgstr ""
+msgstr "바일레 오스트"
 
 msgid "Juelsminde"
-msgstr ""
+msgstr "율스민데"
 
 msgid "Stouby"
-msgstr ""
+msgstr "스토뷔"
 
 msgid "Barrit"
-msgstr ""
+msgstr "바리트"
 
 msgid "Tørring"
-msgstr ""
+msgstr "퇴링"
 
 msgid "Uldum"
-msgstr ""
+msgstr "울둠"
 
 msgid "Vonge"
-msgstr ""
+msgstr "봉에"
 
 msgid "Bredsten"
-msgstr ""
+msgstr "브레드스텐"
 
 msgid "Randbøl"
-msgstr ""
+msgstr "란뵐"
 
 msgid "Vandel"
-msgstr ""
+msgstr "반델"
 
 msgid "Grindsted"
-msgstr ""
+msgstr "그린스테드"
 
 msgid "Hejnsvig"
-msgstr ""
+msgstr "헤인스비"
 
 msgid "Sønder Omme"
-msgstr ""
+msgstr "쇤데르 오메"
 
 msgid "Stakroge"
-msgstr ""
+msgstr "스타크로게"
 
 msgid "Sønder Felding"
 msgstr ""
 
 msgid "Jelling"
-msgstr ""
+msgstr "옐링"
 
 msgid "Gadbjerg"
-msgstr ""
+msgstr "가드비에르"
 
 msgid "Give"
-msgstr ""
+msgstr "기베"
 
 msgid "Brande"
-msgstr ""
+msgstr "브란데"
 
 msgid "Ejstrupholm"
-msgstr ""
+msgstr "아이스트루프홀름"
 
 msgid "Hampen"
-msgstr ""
+msgstr "함펜"
 
 msgid "Ikast"
-msgstr ""
+msgstr "이카스트"
 
 msgid "Bording"
-msgstr ""
+msgstr "보르딩"
 
 msgid "Engesvang"
-msgstr ""
+msgstr "엥에스방"
 
 msgid "Sunds"
-msgstr ""
+msgstr "순스"
 
 msgid "Karup J"
-msgstr ""
+msgstr "카루프 J"
 
 msgid "Vildbjerg"
-msgstr ""
+msgstr "빌비에르"
 
 msgid "Aulum"
-msgstr ""
+msgstr "아울룸"
 
 msgid "Haderup"
-msgstr ""
+msgstr "하데루프"
 
 msgid "Sørvad"
-msgstr ""
+msgstr "쇠르바드"
 
 msgid "Hjerm"
 msgstr ""
 
 msgid "Vemb"
-msgstr ""
+msgstr "벰"
 
 msgid "Bøvlingbjerg"
-msgstr ""
+msgstr "뵈울링비에르"
 
 msgid "Bækmarksbro"
-msgstr ""
+msgstr "베크마르크스브로"
 
 msgid "Harboøre"
-msgstr ""
+msgstr "하르뵈레"
 
 msgid "Thyborøn"
-msgstr ""
+msgstr "튀보뢴"
 
 msgid "Hanstholm"
-msgstr ""
+msgstr "한스홀름"
 
 msgid "Frøstrup"
-msgstr ""
+msgstr "프뢰스트루프"
 
 msgid "Vesløs"
-msgstr ""
+msgstr "베슬뢰스"
 
 msgid "Snedsted"
-msgstr ""
+msgstr "스네드스테드"
 
 msgid "Bedsted Thy"
-msgstr ""
+msgstr "베드스테드 튀"
 
 msgid "Hurup Thy"
-msgstr ""
+msgstr "후루프 튀"
 
 msgid "Vestervig"
-msgstr ""
+msgstr "베스테르비"
 
 msgid "Thyholm"
-msgstr ""
+msgstr "튀홀름"
 
 msgid "Vinderup"
-msgstr ""
+msgstr "빈데루프"
 
 msgid "Højslev"
-msgstr ""
+msgstr "호이슬레우"
 
 msgid "Stoholm Jyll"
-msgstr ""
+msgstr "스토홀름 윌"
 
 msgid "Spøttrup"
-msgstr ""
+msgstr "스푀트루프"
 
 msgid "Roslev"
-msgstr ""
+msgstr "로슬레우"
 
 msgid "Fur"
-msgstr ""
+msgstr "푸르"
 
 msgid "Nykøbing M"
-msgstr ""
+msgstr "뉘쾨빙 M"
 
 msgid "Erslev"
-msgstr ""
+msgstr "에르슬레우"
 
 msgid "Karby"
-msgstr ""
+msgstr "카르뷔"
 
 msgid "Redsted M"
-msgstr ""
+msgstr "레드스테드 M"
 
 msgid "Vils"
-msgstr ""
+msgstr "빌스"
 
 msgid "Øster Assels"
-msgstr ""
+msgstr "외스테르 아셀스"
 
 msgid "Sydjylland/Fyn USF P"
-msgstr ""
+msgstr "쉬ylland/푠 USF P"
 
 msgid "Sydjylland/Fyn USF B"
-msgstr ""
+msgstr "쉬ylland/푠 USF B"
 
 msgid "Fakturaservice"
-msgstr ""
+msgstr "파크투라서비스"
 
 msgid "Fakturascanning"
-msgstr ""
+msgstr "파크투라스캐닝"
 
 msgid "Statsservice"
-msgstr ""
+msgstr "스타츠서비스"
 
 msgid "Kommunepost"
-msgstr ""
+msgstr "코뮤네포스트"
 
 msgid "Aarhus C"
-msgstr ""
+msgstr "오르후스 C"
 
 msgid "Aarhus N"
-msgstr ""
+msgstr "오르후스 N"
 
 msgid "Aarhus V"
-msgstr ""
+msgstr "오르후스 V"
 
 msgid "Brabrand"
-msgstr ""
+msgstr "브라브란"
 
 msgid "Risskov Ø"
-msgstr ""
+msgstr "리스코우 Ø"
 
 msgid "Åbyhøj"
-msgstr ""
+msgstr "오뷔호이"
 
 msgid "Risskov"
-msgstr ""
+msgstr "리스코우"
 
 msgid "Egå"
-msgstr ""
+msgstr "에고"
 
 msgid "Viby J"
-msgstr ""
+msgstr "비뷔 J"
 
 msgid "Højbjerg"
-msgstr ""
+msgstr "호이비에르"
 
 msgid "Tranbjerg J"
-msgstr ""
+msgstr "트란비에르 J"
 
 msgid "Mårslet"
-msgstr ""
+msgstr "몰슬레트"
 
 msgid "Beder"
-msgstr ""
+msgstr "베데르"
 
 msgid "Malling"
-msgstr ""
+msgstr "말링"
 
 msgid "Hundslund"
-msgstr ""
+msgstr "훈슬룬"
 
 msgid "Solbjerg"
-msgstr ""
+msgstr "솔비에르"
 
 msgid "Hasselager"
-msgstr ""
+msgstr "하세라게르"
 
 msgid "Hørning"
-msgstr ""
+msgstr "회르닝"
 
 msgid "Hadsten"
-msgstr ""
+msgstr "하드스텐"
 
 msgid "Trige"
-msgstr ""
+msgstr "트리게"
 
 msgid "Tilst"
-msgstr ""
+msgstr "틸스트"
 
 msgid "Hinnerup"
-msgstr ""
+msgstr "히네루프"
 
 msgid "Ebeltoft"
-msgstr ""
+msgstr "에벨토프트"
 
 msgid "Rønde"
-msgstr ""
+msgstr "뢴데"
 
 msgid "Knebel"
-msgstr ""
+msgstr "크네벨"
 
 msgid "Balle"
-msgstr ""
+msgstr "발레"
 
 msgid "Hammel"
-msgstr ""
+msgstr "하멜"
 
 msgid "Harlev J"
-msgstr ""
+msgstr "하를레우 J"
 
 msgid "Galten"
-msgstr ""
+msgstr "갈텐"
 
 msgid "Sabro"
-msgstr ""
+msgstr "사브로"
 
 msgid "Sporup"
-msgstr ""
+msgstr "스포루프"
 
 msgid "Grenaa"
-msgstr ""
+msgstr "그레노"
 
 msgid "Lystrup"
-msgstr ""
+msgstr "뤼스트루프"
 
 msgid "Hjortshøj"
-msgstr ""
+msgstr "홋쇼이"
 
 msgid "Skødstrup"
 msgstr ""
 
 msgid "Hornslet"
-msgstr ""
+msgstr "호른슬레트"
 
 msgid "Mørke"
-msgstr ""
+msgstr "뫼르케"
 
 msgid "Ryomgård"
-msgstr ""
+msgstr "뤼욤고르"
 
 msgid "Kolind"
-msgstr ""
+msgstr "콜린"
 
 msgid "Trustrup"
-msgstr ""
+msgstr "트루스트루프"
 
 msgid "Nimtofte"
-msgstr ""
+msgstr "님토프테"
 
 msgid "Glesborg"
-msgstr ""
+msgstr "글레스보리"
 
 msgid "Ørum Djurs"
-msgstr ""
+msgstr "외룸 듀르스"
 
 msgid "Anholt"
-msgstr ""
+msgstr "안홀트"
 
 msgid "Kjellerup"
-msgstr ""
+msgstr "첼레루프"
 
 msgid "Lemming"
-msgstr ""
+msgstr "레밍"
 
 msgid "Sorring"
-msgstr ""
+msgstr "소링"
 
 msgid "Ans By"
-msgstr ""
+msgstr "안스뷔"
 
 msgid "Them"
-msgstr ""
+msgstr "템"
 
 msgid "Bryrup"
-msgstr ""
+msgstr "브뤼루프"
 
 msgid "Låsby"
-msgstr ""
+msgstr "로스뷔"
 
 msgid "Ry"
-msgstr ""
+msgstr "뤼"
 
 msgid "Daugård"
-msgstr ""
+msgstr "다우고르"
 
 msgid "Løsning"
-msgstr ""
+msgstr "뢰스닝"
 
 msgid "Hovedgård"
-msgstr ""
+msgstr "호베고르"
 
 msgid "Brædstrup"
-msgstr ""
+msgstr "브레드스트루프"
 
 msgid "Gedved"
-msgstr ""
+msgstr "게드베드"
 
 msgid "Østbirk"
-msgstr ""
+msgstr "외스트비르크"
 
 msgid "Flemming"
-msgstr ""
+msgstr "플레밍"
 
 msgid "Rask Mølle"
-msgstr ""
+msgstr "라스크 묄레"
 
 msgid "Klovborg"
-msgstr ""
+msgstr "클로우보리"
 
 msgid "Nørre Snede"
-msgstr ""
+msgstr "뇌레 스네데"
 
 msgid "Stenderup"
-msgstr ""
+msgstr "스텐데루프"
 
 msgid "Hornsyld"
-msgstr ""
+msgstr "호른쉴드"
 
 msgid "Endelave"
-msgstr ""
+msgstr "엔델라베"
 
 msgid "Tunø"
-msgstr ""
+msgstr "투뇌"
 
 msgid "Tjele"
-msgstr ""
+msgstr "첼레"
 
 msgid "Løgstrup"
-msgstr ""
+msgstr "뢰그스트루프"
 
 msgid "Skals"
-msgstr ""
+msgstr "스칼스"
 
 msgid "Rødkærsbro"
-msgstr ""
+msgstr "뢰드케르스브로"
 
 msgid "Bjerringbro"
-msgstr ""
+msgstr "비에링브로"
 
 msgid "Ulstrup"
-msgstr ""
+msgstr "울스트루프"
 
 msgid "Langå"
-msgstr ""
+msgstr "朗오"
 
 msgid "Thorsø"
-msgstr ""
+msgstr "토르쇠"
 
 msgid "Fårvang"
-msgstr ""
+msgstr "포르방"
 
 msgid "Gjern"
-msgstr ""
+msgstr "게른"
 
 msgid "Randers C"
-msgstr ""
+msgstr "란데르스 C"
 
 msgid "Randers NV"
-msgstr ""
+msgstr "란데르스 NV"
 
 msgid "Randers NØ"
-msgstr ""
+msgstr "란데르스 NØ"
 
 msgid "Randers SV"
-msgstr ""
+msgstr "란데르스 SV"
 
 msgid "Ørsted"
-msgstr ""
+msgstr "외르스테드"
 
 msgid "Randers SØ"
-msgstr ""
+msgstr "란데르스 SØ"
 
 msgid "Allingåbro"
-msgstr ""
+msgstr "알링오브로"
 
 msgid "Auning"
-msgstr ""
+msgstr "아우닝"
 
 msgid "Havndal"
-msgstr ""
+msgstr "하운달"
 
 msgid "Spentrup"
-msgstr ""
+msgstr "스펜트루프"
 
 msgid "Gjerlev J"
-msgstr ""
+msgstr "게를레우 J"
 
 msgid "Fårup"
-msgstr ""
+msgstr "포루프"
 
 msgid "Aalborg SV"
-msgstr ""
+msgstr "올보르 SV"
 
 msgid "Aalborg SØ"
-msgstr ""
+msgstr "올보르 SØ"
 
 msgid "Aalborg Øst"
-msgstr ""
+msgstr "올보르 오스트"
 
 msgid "Svenstrup J"
-msgstr ""
+msgstr "스벤스트루프 J"
 
 msgid "Nibe"
-msgstr ""
+msgstr "니베"
 
 msgid "Gistrup"
-msgstr ""
+msgstr "기스트루프"
 
 msgid "Klarup"
-msgstr ""
+msgstr "클라루프"
 
 msgid "Storvorde"
-msgstr ""
+msgstr "스토르보르데"
 
 msgid "Kongerslev"
-msgstr ""
+msgstr "콩에르슬레우"
 
 msgid "Sæby"
-msgstr ""
+msgstr "세뷔"
 
 msgid "Vodskov"
-msgstr ""
+msgstr "보드스코우"
 
 msgid "Hjallerup"
-msgstr ""
+msgstr "얄레루프"
 
 msgid "Dronninglund"
-msgstr ""
+msgstr "드론닝룬"
 
 msgid "Asaa"
-msgstr ""
+msgstr "아소"
 
 msgid "Dybvad"
-msgstr ""
+msgstr "뒤바드"
 
 msgid "Gandrup"
-msgstr ""
+msgstr "간드루프"
 
 msgid "Hals"
-msgstr ""
+msgstr "할스"
 
 msgid "Vestbjerg"
-msgstr ""
+msgstr "베스트비에르"
 
 msgid "Sulsted"
-msgstr ""
+msgstr "술스테드"
 
 msgid "Tylstrup"
-msgstr ""
+msgstr "쉴스트루프"
 
 msgid "Nørresundby"
-msgstr ""
+msgstr "뇌레순뷔"
 
 msgid "Vadum"
-msgstr ""
+msgstr "바둠"
 
 msgid "Aabybro"
-msgstr ""
+msgstr "오뷔브로"
 
 msgid "Brovst"
-msgstr ""
+msgstr "브로우스트"
 
 msgid "Løkken"
-msgstr ""
+msgstr "뢰켄"
 
 msgid "Pandrup"
-msgstr ""
+msgstr "판드루프"
 
 msgid "Blokhus"
-msgstr ""
+msgstr "블로쿠스"
 
 msgid "Saltum"
-msgstr ""
+msgstr "살툼"
 
 msgid "Hobro"
-msgstr ""
+msgstr "호브로"
 
 msgid "Arden"
-msgstr ""
+msgstr "아르덴"
 
 msgid "Skørping"
-msgstr ""
+msgstr "스켸르핑"
 
 msgid "Støvring"
-msgstr ""
+msgstr "스퇴브링"
 
 msgid "Suldrup"
-msgstr ""
+msgstr "술드루프"
 
 msgid "Mariager"
-msgstr ""
+msgstr "마리아에르"
 
 msgid "Hadsund"
-msgstr ""
+msgstr "하순"
 
 msgid "Bælum"
-msgstr ""
+msgstr "벨룸"
 
 msgid "Terndrup"
-msgstr ""
+msgstr "테른드루프"
 
 msgid "Aars"
-msgstr ""
+msgstr "오르스"
 
 msgid "Nørager"
-msgstr ""
+msgstr "뇌라게르"
 
 msgid "Aalestrup"
-msgstr ""
+msgstr "올레스트루프"
 
 msgid "Gedsted"
-msgstr ""
+msgstr "게드스테드"
 
 msgid "Møldrup"
-msgstr ""
+msgstr "とはい루프"
 
 msgid "Farsø"
-msgstr ""
+msgstr "파르쇠"
 
 msgid "Løgstør"
-msgstr ""
+msgstr "뢰그스퇴르"
 
 msgid "Ranum"
-msgstr ""
+msgstr "라눔"
 
 msgid "Fjerritslev"
-msgstr ""
+msgstr "피에리츨레우"
 
 msgid "Jerslev J"
-msgstr ""
+msgstr "예르슬레우 J"
 
 msgid "Østervrå"
-msgstr ""
+msgstr "외스테르브로"
 
 msgid "Vrå"
-msgstr ""
+msgstr "브로"
 
 msgid "Tårs"
-msgstr ""
+msgstr "토르스"
 
 msgid "Hirtshals"
-msgstr ""
+msgstr "히르트스할스"
 
 msgid "Sindal"
-msgstr ""
+msgstr "신달"
 
 msgid "Bindslev"
-msgstr ""
+msgstr "빈슬레우"
 
 msgid "Strandby"
-msgstr ""
+msgstr "스트란뷔"
 
 msgid "Jerup"
-msgstr ""
+msgstr "예루프"
 
 msgid "Ålbæk"
-msgstr ""
+msgstr "올베크"
 
 msgid "Skagen"
-msgstr ""
+msgstr "스카겐"
 
 msgid "Jylland USF P"
-msgstr ""
+msgstr "윌란 USF P"
 
 msgid "Jylland USF B"
-msgstr ""
+msgstr "윌란 USF B"
 
 msgid "Borgerservice"
-msgstr ""
+msgstr "보르에르서비스"
 
 msgid "Santa Claus/Julemanden"
-msgstr ""
+msgstr "산타클로스/율레만넨"
 
 msgid "Nuuk"
-msgstr ""
+msgstr "누크"
 
 msgid "Nuussuaq"
-msgstr ""
+msgstr "누수아크"
 
 msgid "Kangerlussuaq"
-msgstr ""
+msgstr "캉게를루수아크"
 
 msgid "Sisimiut"
-msgstr ""
+msgstr "시시미우트"
 
 msgid "Maniitsoq"
-msgstr ""
+msgstr "마니초크"
 
 msgid "Tasiilaq"
-msgstr ""
+msgstr "타실라크"
 
 msgid "Kulusuk"
-msgstr ""
+msgstr "쿨루수크"
 
 msgid "Alluitsup Paa"
-msgstr ""
+msgstr "알루이춥 파"
 
 msgid "Qaqortoq"
-msgstr ""
+msgstr "콰코르토크"
 
 msgid "Narsaq"
-msgstr ""
+msgstr "나르사크"
 
 msgid "Nanortalik"
-msgstr ""
+msgstr "나노르탈리크"
 
 msgid "Narsarsuaq"
-msgstr ""
+msgstr "나르사르수아크"
 
 msgid "Ikerasassuaq"
-msgstr ""
+msgstr "이케라사수아크"
 
 msgid "Kangilinnguit"
-msgstr ""
+msgstr "캉길린귀트"
 
 msgid "Arsuk"
-msgstr ""
+msgstr "아르수크"
 
 msgid "Paamiut"
-msgstr ""
+msgstr "파미우트"
 
 msgid "Aasiaat"
-msgstr ""
+msgstr "아시아트"
 
 msgid "Qasigiannguit"
-msgstr ""
+msgstr "카시기안귀트"
 
 msgid "Ilulissat"
-msgstr ""
+msgstr "일루리사트"
 
 msgid "Qeqertarsuaq"
-msgstr ""
+msgstr "케케르타르수아크"
 
 msgid "Kangaatsiaq"
-msgstr ""
+msgstr "캉아트시아크"
 
 msgid "Uummannaq"
-msgstr ""
+msgstr "우만나크"
 
 msgid "Upernavik"
-msgstr ""
+msgstr "우페르나비크"
 
 msgid "Qaarsut"
-msgstr ""
+msgstr "카르수트"
 
 msgid "Pituffik"
-msgstr ""
+msgstr "피투피크"
 
 msgid "Qaanaaq"
-msgstr ""
+msgstr "카나아크"
 
 msgid "Station Nord"
-msgstr ""
+msgstr "스테이션 노르"
 
 msgid "Ittoqqortoormiit"
-msgstr ""
+msgstr "이토크코르토르미트"
 
 msgid "Mestersvig"
-msgstr ""
+msgstr "메스테르스비"
 
 msgid "Danmarkshavn"
-msgstr ""
+msgstr "단마르크스하운"
 
 msgid "Constable Pynt"
-msgstr ""
+msgstr "콘스터블 풀ント"
 
 msgid "Slædepatrulje Sirius"
-msgstr ""
+msgstr "슬레데파트롤리에 시리우스"
 
 msgid "Tórshavn"
-msgstr ""
+msgstr "토르스하운"
 
 msgid "Argir"
-msgstr ""
+msgstr "아르기르"
 
 msgid "Kirkjubøur"
-msgstr ""
+msgstr "키르유뵈우르"
 
 msgid "Velbastadur"
-msgstr ""
+msgstr "벨바스타뒤르"
 
 msgid "\"Sydradalur, Streymoy\""
-msgstr ""
+msgstr "\"쉬드라달루르, 스트레이모이\""
 
 msgid "Nordradalur"
-msgstr ""
+msgstr "노르드라달루르"
 
 msgid "Kaldbak"
-msgstr ""
+msgstr "칼드바크"
 
 msgid "Kaldbaksbotnur"
-msgstr ""
+msgstr "칼드바크스보트누르"
 
 msgid "Sund"
-msgstr ""
+msgstr "순"
 
 msgid "Hvitanes"
-msgstr ""
+msgstr "비타네스"
 
 msgid "Hoyvík"
-msgstr ""
+msgstr "호이비크"
 
 msgid "Sandur"
-msgstr ""
+msgstr "산두르"
 
 msgid "Skálavík"
-msgstr ""
+msgstr "스칼라비크"
 
 msgid "Húsavík"
-msgstr ""
+msgstr "후사비크"
 
 msgid "Dalur"
-msgstr ""
+msgstr "달루르"
 
 msgid "Skarvanes"
-msgstr ""
+msgstr "스카르바네스"
 
 msgid "Skopun"
-msgstr ""
+msgstr "스코푼"
 
 msgid "Skúvoy"
-msgstr ""
+msgstr "스쿠보이"
 
 msgid "Nólsoy"
-msgstr ""
+msgstr "놀쇠이"
 
 msgid "Hestur"
-msgstr ""
+msgstr "헤스투르"
 
 msgid "Koltur"
-msgstr ""
+msgstr "콜투르"
 
 msgid "Stóra Dimun"
-msgstr ""
+msgstr "스토라 디문"
 
 msgid "Stykkid"
-msgstr ""
+msgstr "스투키드"
 
 msgid "Leynar"
-msgstr ""
+msgstr "레이나르"
 
 msgid "Skællingur"
-msgstr ""
+msgstr "스켈링구르"
 
 msgid "Kvívík"
-msgstr ""
+msgstr "크비비크"
 
 msgid "Vestmanna"
-msgstr ""
+msgstr "베스트만나"
 
 msgid "Válur"
-msgstr ""
+msgstr "발루르"
 
 msgid "Sandavágur"
-msgstr ""
+msgstr "산다바구르"
 
 msgid "Midvágur"
-msgstr ""
+msgstr "미드바구르"
 
 msgid "Sørvágur"
-msgstr ""
+msgstr "쇠르바구르"
 
 msgid "Vatnsoyrar"
-msgstr ""
+msgstr "바트노소이라르"
 
 msgid "Bøur"
-msgstr ""
+msgstr "뵈우르"
 
 msgid "Gásadalur"
-msgstr ""
+msgstr "가사달루르"
 
 msgid "Mykines"
-msgstr ""
+msgstr "미키네스"
 
 msgid "Oyrarbakki"
-msgstr ""
+msgstr "오이라르바키"
 
 msgid "Kollafjørdur"
-msgstr ""
+msgstr "콜라피외르뒤르"
 
 msgid "Oyrareingir"
-msgstr ""
+msgstr "오이라레잉기르"
 
 msgid "Signabøur"
-msgstr ""
+msgstr "시그나뵈우르"
 
 msgid "Hósvík"
-msgstr ""
+msgstr "호스비크"
 
 msgid "Hvalvík"
-msgstr ""
+msgstr "발비크"
 
 msgid "Streymnes"
-msgstr ""
+msgstr "스트레이므네스"
 
 msgid "Saksun"
-msgstr ""
+msgstr "삭순"
 
 msgid "Nesvík"
-msgstr ""
+msgstr "네스비크"
 
 msgid "Langasandur"
-msgstr ""
+msgstr "朗가산두르"
 
 msgid "Haldarsvík"
-msgstr ""
+msgstr "할다르스비크"
 
 msgid "Tjørnuvík"
 msgstr ""
 
 msgid "Oyri"
-msgstr ""
+msgstr "오이리"
 
 msgid "Nordskáli"
-msgstr ""
+msgstr "노르드스칼리"
 
 msgid "Svináir"
-msgstr ""
+msgstr "스비나이르"
 
 msgid "Ljósá"
-msgstr ""
+msgstr "요사"
 
 msgid "Eidi"
-msgstr ""
+msgstr "아이디"
 
 msgid "Funningur"
-msgstr ""
+msgstr "푸닝구르"
 
 msgid "Gjógv"
 msgstr ""
 
 msgid "Funningsfjørdur"
-msgstr ""
+msgstr "푸닝스피외르뒤르"
 
 msgid "Elduvík"
-msgstr ""
+msgstr "엘두비크"
 
 msgid "Skáli"
-msgstr ""
+msgstr "스칼리"
 
 msgid "Skálafjørdur"
-msgstr ""
+msgstr "스칼라피외르뒤르"
 
 msgid "Strendur"
-msgstr ""
+msgstr "스트렌두르"
 
 msgid "Innan Glyvur"
-msgstr ""
+msgstr "인난 글리부르"
 
 msgid "Kolbanargjógv"
 msgstr ""
@@ -5208,6 +5263,102 @@ msgstr ""
 msgid "Hawalli"
 msgstr ""
 
+msgid "Enter a postal code in format NNNNN"
+msgstr ""
+
+msgid "Kandy"
+msgstr ""
+
+msgid "Matale"
+msgstr ""
+
+msgid "Nuwara Eliya"
+msgstr ""
+
+msgid "Anuradhapura"
+msgstr ""
+
+msgid "Polonnaruwa"
+msgstr ""
+
+msgid "Jaffna"
+msgstr ""
+
+msgid "Kilinochchi"
+msgstr ""
+
+msgid "Mannar"
+msgstr ""
+
+msgid "Vavuniya"
+msgstr ""
+
+msgid "Mullativu"
+msgstr ""
+
+msgid "Alambil"
+msgstr ""
+
+msgid "Ampara"
+msgstr ""
+
+msgid "Batticaloa"
+msgstr ""
+
+msgid "Trincomalee"
+msgstr ""
+
+msgid "Kurunagala"
+msgstr ""
+
+msgid "Puttalam"
+msgstr ""
+
+msgid "Galle"
+msgstr ""
+
+msgid "Hambanthota"
+msgstr ""
+
+msgid "Mathara"
+msgstr ""
+
+msgid "Badulla"
+msgstr ""
+
+msgid "Monaragala"
+msgstr ""
+
+msgid "Kegalle"
+msgstr ""
+
+msgid "Rathnapura"
+msgstr ""
+
+msgid "Colombo"
+msgstr ""
+
+msgid "Gampaha"
+msgstr ""
+
+msgid "Kaluthara"
+msgstr ""
+
+msgid "North Central"
+msgstr ""
+
+msgid "North Western"
+msgstr ""
+
+msgid "Sabaragamuwa"
+msgstr ""
+
+msgid "Southern"
+msgstr ""
+
+msgid "Uva"
+msgstr ""
+
 msgid "ID Code consists of exactly 11 decimal digits."
 msgstr "ID 코드는 정확히 11자리 숫자 입니다."
 
@@ -5442,9 +5593,6 @@ msgstr ""
 msgid "Jelgava"
 msgstr ""
 
-msgid "Jēkabpils"
-msgstr ""
-
 msgid "Jūrmala"
 msgstr ""
 
@@ -5457,52 +5605,16 @@ msgstr ""
 msgid "Riga"
 msgstr ""
 
-msgid "Valmiera"
-msgstr ""
-
 msgid "Ventspils"
-msgstr ""
-
-msgid "Aglona municipality"
 msgstr ""
 
 msgid "Aizkraukle municipality"
 msgstr ""
 
-msgid "Aizpute municipality"
-msgstr ""
-
-msgid "Aknīste municipality"
-msgstr ""
-
-msgid "Aloja municipality"
-msgstr ""
-
-msgid "Alsunga municipality"
-msgstr ""
-
 msgid "Alūksne municipality"
 msgstr ""
 
-msgid "Amata municipality"
-msgstr ""
-
-msgid "Ape municipality"
-msgstr ""
-
-msgid "Auce municipality"
-msgstr ""
-
 msgid "Ādaži municipality"
-msgstr ""
-
-msgid "Babīte municipality"
-msgstr ""
-
-msgid "Baldone municipality"
-msgstr ""
-
-msgid "Baltinava municipality"
 msgstr ""
 
 msgid "Balvi municipality"
@@ -5511,76 +5623,13 @@ msgstr ""
 msgid "Bauska municipality"
 msgstr ""
 
-msgid "Beverīna municipality"
-msgstr ""
-
-msgid "Brocēni municipality"
-msgstr ""
-
-msgid "Burtnieki municipality"
-msgstr ""
-
-msgid "Carnikava municipality"
-msgstr ""
-
-msgid "Cesvaine municipality"
-msgstr ""
-
 msgid "Cēsis municipality"
-msgstr ""
-
-msgid "Cibla municipality"
-msgstr ""
-
-msgid "Dagda municipality"
-msgstr ""
-
-msgid "Daugavpils municipality"
 msgstr ""
 
 msgid "Dobele municipality"
 msgstr ""
 
-msgid "Dundaga municipality"
-msgstr ""
-
-msgid "Durbe municipality"
-msgstr ""
-
-msgid "Engure municipality"
-msgstr ""
-
-msgid "Ērgļi municipality"
-msgstr ""
-
-msgid "Garkalne municipality"
-msgstr ""
-
-msgid "Grobiņa municipality"
-msgstr ""
-
 msgid "Gulbene municipality"
-msgstr ""
-
-msgid "Iecava municipality"
-msgstr ""
-
-msgid "Ikšķile municipality"
-msgstr ""
-
-msgid "Ilūkste municipality"
-msgstr ""
-
-msgid "Inčukalns municipality"
-msgstr ""
-
-msgid "Jaunjelgava municipality"
-msgstr ""
-
-msgid "Jaunpiebalga municipality"
-msgstr ""
-
-msgid "Jaunpils municipality"
 msgstr ""
 
 msgid "Jelgava municipality"
@@ -5589,49 +5638,19 @@ msgstr ""
 msgid "Jēkabpils municipality"
 msgstr ""
 
-msgid "Kandava municipality"
-msgstr ""
-
-msgid "Kārsava municipality"
-msgstr ""
-
-msgid "Kocēni municipality"
-msgstr ""
-
-msgid "Koknese municipality"
-msgstr ""
-
 msgid "Krāslava municipality"
-msgstr ""
-
-msgid "Krimulda municipality"
-msgstr ""
-
-msgid "Krustpils municipality"
 msgstr ""
 
 msgid "Kuldīga municipality"
 msgstr ""
 
-msgid "Ķegums municipality"
-msgstr ""
-
 msgid "Ķekava municipality"
-msgstr ""
-
-msgid "Lielvārde municipality"
 msgstr ""
 
 msgid "Limbaži municipality"
 msgstr ""
 
-msgid "Līgatne municipality"
-msgstr ""
-
 msgid "Līvāni municipality"
-msgstr ""
-
-msgid "Lubāna municipality"
 msgstr ""
 
 msgid "Ludza municipality"
@@ -5640,25 +5659,7 @@ msgstr ""
 msgid "Madona municipality"
 msgstr ""
 
-msgid "Mazsalaca municipality"
-msgstr ""
-
-msgid "Mālpils municipality"
-msgstr ""
-
 msgid "Mārupe municipality"
-msgstr ""
-
-msgid "Mērsrags municipality"
-msgstr ""
-
-msgid "Naukšēni municipality"
-msgstr ""
-
-msgid "Nereta municipality"
-msgstr ""
-
-msgid "Nīca municipality"
 msgstr ""
 
 msgid "Ogre municipality"
@@ -5667,58 +5668,13 @@ msgstr ""
 msgid "Olaine municipality"
 msgstr ""
 
-msgid "Ozolnieki municipality"
-msgstr ""
-
-msgid "Pārgauja municipality"
-msgstr ""
-
-msgid "Pāvilosta municipality"
-msgstr ""
-
-msgid "Pļaviņas municipality"
-msgstr ""
-
 msgid "Preiļi municipality"
-msgstr ""
-
-msgid "Priekule municipality"
-msgstr ""
-
-msgid "Priekuļi municipality"
-msgstr ""
-
-msgid "Rauna municipality"
 msgstr ""
 
 msgid "Rēzekne municipality"
 msgstr ""
 
-msgid "Riebiņi municipality"
-msgstr ""
-
-msgid "Roja municipality"
-msgstr ""
-
 msgid "Ropaži municipality"
-msgstr ""
-
-msgid "Rucava municipality"
-msgstr ""
-
-msgid "Rugāji municipality"
-msgstr ""
-
-msgid "Rundāle municipality"
-msgstr ""
-
-msgid "Rūjiena municipality"
-msgstr ""
-
-msgid "Sala municipality"
-msgstr ""
-
-msgid "Salacgrīva municipality"
 msgstr ""
 
 msgid "Salaspils municipality"
@@ -5730,37 +5686,16 @@ msgstr ""
 msgid "Saulkrasti municipality"
 msgstr ""
 
-msgid "Sēja municipality"
-msgstr ""
-
 msgid "Sigulda municipality"
-msgstr ""
-
-msgid "Skrīveri municipality"
-msgstr ""
-
-msgid "Skrunda municipality"
 msgstr ""
 
 msgid "Smiltene municipality"
 msgstr ""
 
-msgid "Stopiņi municipality"
-msgstr ""
-
-msgid "Strenči municipality"
-msgstr ""
-
 msgid "Talsi municipality"
 msgstr ""
 
-msgid "Tērvete municipality"
-msgstr ""
-
 msgid "Tukums municipality"
-msgstr ""
-
-msgid "Vaiņode municipality"
 msgstr ""
 
 msgid "Valka municipality"
@@ -5769,28 +5704,16 @@ msgstr ""
 msgid "Varakļāni municipality"
 msgstr ""
 
-msgid "Vārkava municipality"
-msgstr ""
-
-msgid "Vecpiebalga municipality"
-msgstr ""
-
-msgid "Vecumnieki municipality"
-msgstr ""
-
 msgid "Ventspils municipality"
 msgstr ""
 
-msgid "Viesīte municipality"
+msgid "Augšdaugava municipality"
 msgstr ""
 
-msgid "Viļaka municipality"
+msgid "Dienvidkurzeme municipality"
 msgstr ""
 
-msgid "Viļāni municipality"
-msgstr ""
-
-msgid "Zilupe municipality"
+msgid "Valmiera municipality"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXX."
@@ -5800,6 +5723,12 @@ msgid "Postal code"
 msgstr "우편번호"
 
 msgid "Select Province"
+msgstr ""
+
+msgid "Enter a valid Moroccan CIN number."
+msgstr ""
+
+msgid "CIN Number"
 msgstr ""
 
 msgid "Al Hoceima"
@@ -6989,10 +6918,10 @@ msgstr ""
 msgid "Lumbini"
 msgstr ""
 
-msgid "Province 1"
+msgid "Koshi"
 msgstr ""
 
-msgid "Province 2"
+msgid "Madhesh"
 msgstr ""
 
 msgid "Sudurpaschim"
@@ -7005,9 +6934,6 @@ msgid "Dhawalagiri"
 msgstr ""
 
 msgid "Janakpur"
-msgstr ""
-
-msgid "Koshi"
 msgstr ""
 
 msgid "Mahakali"
@@ -7218,7 +7144,7 @@ msgid "Central Otago District"
 msgstr ""
 
 msgid "Dunedin"
-msgstr ""
+msgstr "더니든"
 
 msgid "Clutha District"
 msgstr ""
@@ -7230,10 +7156,10 @@ msgid "Gore District"
 msgstr ""
 
 msgid "Invercargill"
-msgstr ""
+msgstr "인버카길"
 
 msgid "Taranaki"
-msgstr ""
+msgstr "타라나키"
 
 msgid "Hawke's Bay"
 msgstr ""
@@ -7482,6 +7408,36 @@ msgid "Região Autónoma da Madeira"
 msgstr ""
 
 msgid "Região Autónoma dos Açores"
+msgstr ""
+
+msgid "Enter a valid Qatari National ID number"
+msgstr ""
+
+msgid "Qatari National ID number"
+msgstr ""
+
+msgid "Qatar municipality"
+msgstr ""
+
+msgid "Al Khor and Al Dakhira"
+msgstr ""
+
+msgid "Al Rayyan"
+msgstr ""
+
+msgid "Al Shamal"
+msgstr ""
+
+msgid "Al Sheehaniya"
+msgstr ""
+
+msgid "Al Wakrah"
+msgstr ""
+
+msgid "Al Daayen"
+msgstr ""
+
+msgid "Umm Slal"
 msgstr ""
 
 msgid "Enter a valid CIF."
@@ -8201,6 +8157,72 @@ msgstr "올바른 터키계 ID 번호를 입력하세요."
 msgid "Turkish Identification number must be 11 digits."
 msgstr "터키계 식별 번호는 11 자리 숫자입니다."
 
+msgid "Changhua County"
+msgstr ""
+
+msgid "Chiayi City"
+msgstr ""
+
+msgid "Chiayi County"
+msgstr ""
+
+msgid "Hsinchu City"
+msgstr ""
+
+msgid "Hsinchu County"
+msgstr ""
+
+msgid "Hualien County"
+msgstr ""
+
+msgid "Kaohsiung City"
+msgstr ""
+
+msgid "Keelung City"
+msgstr ""
+
+msgid "Kinmen County"
+msgstr ""
+
+msgid "Lienchiang County"
+msgstr ""
+
+msgid "Miaoli County"
+msgstr ""
+
+msgid "Nantou County"
+msgstr ""
+
+msgid "New Taipei City"
+msgstr ""
+
+msgid "Penghu County"
+msgstr ""
+
+msgid "Pingtung County"
+msgstr ""
+
+msgid "Taichung City"
+msgstr ""
+
+msgid "Tainan City"
+msgstr ""
+
+msgid "Taipei City"
+msgstr ""
+
+msgid "Taitung County"
+msgstr ""
+
+msgid "Taoyuan City"
+msgstr ""
+
+msgid "Yilan County"
+msgstr ""
+
+msgid "Yunlin County"
+msgstr ""
+
 msgid "Enter a valid postal code."
 msgstr "유효한 우편번호를 입력하세요."
 
@@ -8243,7 +8265,7 @@ msgstr ""
 msgid "Kirovohrad Oblast"
 msgstr ""
 
-msgid "Kiev Oblast"
+msgid "Kyiv Oblast"
 msgstr ""
 
 msgid "Luhansk Oblast"
@@ -8288,7 +8310,7 @@ msgstr ""
 msgid "Autonomous Republic of Crimea"
 msgstr ""
 
-msgid "Kiev"
+msgid "Kyiv"
 msgstr ""
 
 msgid "Sevastopol"
@@ -8299,6 +8321,20 @@ msgstr "우편번호를 입력하세요. (XXXXX 또는 XXXXX-XXXX 형식)"
 
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr "올바른 미국 사회보장번호를 입력하세요. (XXX-XX-XXXX 형식)"
+
+msgid ""
+"Enter a valid U.S. Individual Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+
+msgid ""
+"Enter a valid U.S. Adoption Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+
+msgid ""
+"Enter a valid U.S. taxpayer identification number in XXX-XX-XXXX format."
+msgstr ""
 
 msgid "Enter a U.S. state or territory."
 msgstr "미국 주나 지역을 입력하세요."
@@ -8313,6 +8349,15 @@ msgid "U.S. ZIP code"
 msgstr "미국 우편번호"
 
 msgid "Social security number"
+msgstr ""
+
+msgid "Individual Taxpayer Identification Number"
+msgstr ""
+
+msgid "Adoption Taxpayer Identification Number"
+msgstr ""
+
+msgid "Taxpayer Identification Number"
 msgstr ""
 
 msgid "Alabama"

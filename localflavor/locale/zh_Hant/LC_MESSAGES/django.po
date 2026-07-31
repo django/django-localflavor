@@ -3,19 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# 0a3cb7bfd0810218facdfb511e592a6d_8d19d07 <c136e508049103f37d35b6c3314e9b1d_5225>, 2011
+# 619e61dbdb61c57213f62815aaf60e01, 2011
 # Eric Ho <eric913@gmail.com>, 2013
 # Jannis Leidel <jannis@leidel.info>, 2011
-# ming hsien tzang <tzangms@gmail.com>, 2011
+# 0a3cb7bfd0810218facdfb511e592a6d_8d19d07 <c136e508049103f37d35b6c3314e9b1d_5225>, 2011
 # 619e61dbdb61c57213f62815aaf60e01, 2011
 # tcc <tcchou@tcchou.org>, 2011
+# W. H. Wang <mattwang44@gmail.com>, 2025
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/django/django-"
+"POT-Creation-Date: 2026-07-09 19:13+0200\n"
+"PO-Revision-Date: 2013-05-29 13:57+0000\n"
+"Last-Translator: W. H. Wang <mattwang44@gmail.com>, 2025\n"
+"Language-Team: Chinese (Taiwan) (http://app.transifex.com/django/django-"
 "localflavor/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,86 +26,137 @@ msgstr ""
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "Buenos Aires"
+msgid "Abu Dhabi"
 msgstr ""
+
+msgid "Ajman"
+msgstr ""
+
+msgid "Dubai"
+msgstr ""
+
+msgid "Fujairah"
+msgstr ""
+
+msgid "Ras Al Khaimah"
+msgstr ""
+
+msgid "Sharjah"
+msgstr ""
+
+msgid "Umm Al Quwain"
+msgstr ""
+
+msgid "Enter a valid UAE Emirates ID number in format 784-YYYY-NNNNNNN-N."
+msgstr ""
+
+msgid "Enter a valid UAE postal code. Use 00000 if postal code is required."
+msgstr ""
+
+msgid "Enter a valid P.O. Box number."
+msgstr ""
+
+msgid "Enter a valid UAE Tax Registration Number (15 digits)."
+msgstr ""
+
+msgid "UAE Emirates ID number"
+msgstr ""
+
+msgid "UAE Emirate"
+msgstr ""
+
+msgid "UAE postal code"
+msgstr ""
+
+msgid "UAE P.O. Box number"
+msgstr ""
+
+msgid "UAE Tax Registration Number"
+msgstr ""
+
+msgid "Enter a valid UAE Emirates ID number."
+msgstr ""
+
+msgid "Buenos Aires"
+msgstr "布宜諾斯艾利斯省"
 
 msgid "Catamarca"
-msgstr ""
+msgstr "卡塔馬卡省"
 
 msgid "Chaco"
-msgstr ""
+msgstr "查科省"
 
 msgid "Chubut"
-msgstr ""
+msgstr "丘布特省"
 
 msgid "Ciudad Autónoma de Buenos Aires"
-msgstr ""
+msgstr "布宜諾斯艾利斯自治市"
 
 msgid "Córdoba"
-msgstr ""
+msgstr "哥多華省"
 
 msgid "Corrientes"
-msgstr ""
+msgstr "科連特斯省"
 
 msgid "Entre Ríos"
-msgstr ""
+msgstr "恩特雷里奧斯省"
 
 msgid "Formosa"
-msgstr ""
+msgstr "福爾摩沙省"
 
 msgid "Jujuy"
-msgstr ""
+msgstr "胡胡伊省"
 
 msgid "La Pampa"
-msgstr ""
+msgstr "拉彭巴省"
 
 msgid "La Rioja"
-msgstr "里奧夏"
+msgstr "拉里奧哈省"
 
 msgid "Mendoza"
-msgstr ""
+msgstr "門多薩省"
 
 msgid "Misiones"
-msgstr ""
+msgstr "米西奧內斯省"
 
 msgid "Neuquén"
-msgstr ""
+msgstr "內烏肯省"
 
 msgid "Río Negro"
-msgstr ""
+msgstr "內格羅河省"
 
 msgid "Salta"
-msgstr ""
+msgstr "薩爾塔省"
 
 msgid "San Juan"
-msgstr ""
+msgstr "聖胡安省"
 
 msgid "San Luis"
-msgstr ""
+msgstr "聖路易斯省"
 
 msgid "Santa Cruz"
-msgstr ""
+msgstr "聖克魯斯省"
 
 msgid "Santa Fe"
-msgstr ""
+msgstr "聖塔菲省"
 
 msgid "Santiago del Estero"
-msgstr ""
+msgstr "聖地牙哥-德爾埃斯特羅省"
 
 msgid "Tierra del Fuego, Antártida e Islas del Atlántico Sur"
-msgstr ""
+msgstr "火地省"
 
 msgid "Tucumán"
-msgstr ""
+msgstr "圖庫曼省"
 
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
-msgstr "以 NNNN 或 ANNNNAAA的格式輸入郵遞區號。"
+msgstr "以 NNNN 或 ANNNNAAA 的格式輸入郵遞區號。"
 
 msgid "This field requires only numbers."
 msgstr "此欄位只允許輸入數字"
 
 msgid "This field requires 7 or 8 digits."
-msgstr "此欄位需要 7~8 位數"
+msgstr "此欄位需要 7 或 8 位數"
 
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
 msgstr "以 XX-XXXXXXXX-X 或 XXXXXXXXXXXX 的格式輸入CUIT 。"
@@ -110,17 +164,17 @@ msgstr "以 XX-XXXXXXXX-X 或 XXXXXXXXXXXX 的格式輸入CUIT 。"
 msgid "Invalid CUIT."
 msgstr "無效的 CUIT"
 
-msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
 msgstr ""
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
-msgstr ""
+msgstr "輸入格式為 XXXXXXXXXXXXXXXXXXXXXX 的有效 CBU。"
 
 msgid "CBU must be exactly 22 digits long."
-msgstr ""
+msgstr "CBU 必須為剛好 22 位數。"
 
 msgid "Invalid CBU."
-msgstr ""
+msgstr "無效的 CBU。"
 
 msgid "Burgenland"
 msgstr "布爾根蘭"
@@ -156,31 +210,31 @@ msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
 msgstr "以  XXXX XXXXXX 的格式輸入奧地利社會安全號碼。"
 
 msgid "Enter a 4 digit postcode."
-msgstr ""
+msgstr "輸入 4 位數郵遞區號。"
 
 msgid "Australian State"
 msgstr ""
 
 msgid "Australian Postcode"
-msgstr ""
+msgstr "澳洲郵遞區號"
 
 msgid "Australian Business Number"
-msgstr ""
+msgstr "澳洲商業編號"
 
 msgid "Australian Company Number"
-msgstr ""
+msgstr "澳洲公司編號"
 
 msgid "Australian Tax File Number"
 msgstr ""
 
 msgid "Enter a valid ABN."
-msgstr ""
+msgstr "輸入有效的 ABN。"
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "輸入有效的 ACN。"
 
 msgid "Enter a valid TFN."
-msgstr ""
+msgstr "輸入有效的 TFN。"
 
 msgid "Antwerp"
 msgstr "安特衛普"
@@ -228,13 +282,10 @@ msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
 msgstr "以 1XXX - 9XXX 為範圍、格式輸入郵遞區號。"
 
 msgid "The EGN is not valid"
-msgstr ""
+msgstr "EGN 是無效的"
 
 msgid "EIK/BULSTAT is not valid"
-msgstr ""
-
-msgid "Enter a zip code in the format XXXXX-XXX."
-msgstr "用 XXXXX-XXX 的格式輸入郵遞區號。"
+msgstr "EIK/BULSTAT 是無效的"
 
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
@@ -259,47 +310,101 @@ msgstr ""
 msgid "State of Brazil (two uppercase letters)"
 msgstr ""
 
-msgid "Alberta"
+msgid "CPF Document"
+msgstr "CPF 文件"
+
+msgid "CNPJ Document"
+msgstr "CNPJ 文件"
+
+msgid "Postal Code"
+msgstr "郵遞區號"
+
+msgid "Enter a postal code in the format 00000-000."
+msgstr "輸入格式為 00000-000 的郵遞區號。"
+
+msgid "Brest Region"
+msgstr "布列斯特州"
+
+msgid "Vitebsk Region"
+msgstr "維捷布斯克州"
+
+msgid "Gomel Region"
+msgstr "哥麥利州"
+
+msgid "Grodno Region"
+msgstr "格羅德諾州"
+
+msgid "Minsk Region"
+msgstr "明斯克州"
+
+msgid "Mogilev Region"
+msgstr "莫吉廖夫州"
+
+msgid "City of Minsk"
+msgstr "明斯克市"
+
+msgid "Passport number format is: XX1234567"
+msgstr "護照號碼格式為：XX1234567"
+
+msgid "ID format is: 1234567X123XX1"
 msgstr ""
+
+msgid "Postal code format is: 123456"
+msgstr "郵遞區號格式為：123456"
+
+msgid "Belarusian Regions (one integer value in the range 1-7)."
+msgstr "白俄羅斯地區（一個 1-7 之間的整數值）。"
+
+msgid "Belarusian passport number (2 letters followed by 7 digits)."
+msgstr "白俄羅斯護照號碼（2 個字母之後有 7 位數字）。"
+
+msgid "Belarusian passport ID number (14 letters and digits)."
+msgstr "白俄羅斯護照 ID 號碼（14 個字母與數字）。"
+
+msgid "Belarusian Postal code (6 digits)."
+msgstr "白俄羅斯郵遞區號（6 位數）。"
+
+msgid "Alberta"
+msgstr "亞伯達省"
 
 msgid "British Columbia"
-msgstr ""
+msgstr "英屬哥倫比亞省"
 
 msgid "Manitoba"
-msgstr ""
+msgstr "曼尼托巴省"
 
 msgid "New Brunswick"
-msgstr ""
+msgstr "新布藍茲維省"
 
 msgid "Newfoundland and Labrador"
-msgstr ""
+msgstr "紐芬蘭與拉布拉多省"
 
 msgid "Northwest Territories"
-msgstr ""
+msgstr "西北地區"
 
 msgid "Nova Scotia"
-msgstr ""
+msgstr "新斯科細亞省"
 
 msgid "Nunavut"
-msgstr ""
+msgstr "努納福特地區"
 
 msgid "Ontario"
-msgstr ""
+msgstr "安大略省"
 
 msgid "Prince Edward Island"
-msgstr ""
+msgstr "愛德華王子島"
 
 msgid "Quebec"
-msgstr ""
+msgstr "魁北克省"
 
 msgid "Saskatchewan"
-msgstr ""
+msgstr "薩克其萬省"
 
 msgid "Yukon"
-msgstr ""
+msgstr "育空地區"
 
 msgid "Enter a postal code in the format XXX XXX."
-msgstr "以 XXX XXX 為格式輸入郵遞區號。"
+msgstr "輸入格式為 XXX XXX 的郵遞區號。"
 
 msgid "Enter a Canadian province or territory."
 msgstr "輸入加拿大州名。"
@@ -307,83 +412,92 @@ msgstr "輸入加拿大州名。"
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
 msgstr "以 XXX-XXX-XXX 為格式輸入加拿大社會保險號碼。"
 
-msgid "Aargau"
+msgid "Canadian Province (two uppercase letters)"
 msgstr ""
+
+msgid "Canadian Postal Code"
+msgstr "加拿大郵遞區號"
+
+msgid "Canadian Social Insurance Number"
+msgstr ""
+
+msgid "Aargau"
+msgstr "阿爾高邦"
 
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "內阿彭策爾邦"
 
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "外阿彭策爾邦"
 
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "巴塞爾城市邦"
 
 msgid "Basel-Land"
-msgstr ""
+msgstr "巴塞爾鄉村邦"
 
 msgid "Berne"
-msgstr ""
+msgstr "伯恩邦"
 
 msgid "Fribourg"
-msgstr ""
+msgstr "弗里堡邦"
 
 msgid "Geneva"
-msgstr ""
+msgstr "日內瓦邦"
 
 msgid "Glarus"
-msgstr ""
+msgstr "格拉魯斯邦"
 
 msgid "Graubuenden"
-msgstr ""
+msgstr "格勞賓登邦"
 
 msgid "Jura"
-msgstr ""
+msgstr "侏羅邦"
 
 msgid "Lucerne"
-msgstr ""
+msgstr "琉森邦"
 
 msgid "Neuchatel"
-msgstr ""
+msgstr "諾夏特邦"
 
 msgid "Nidwalden"
-msgstr ""
+msgstr "下瓦爾登邦"
 
 msgid "Obwalden"
-msgstr ""
+msgstr "上瓦爾登邦"
 
 msgid "Schaffhausen"
-msgstr ""
+msgstr "沙夫豪森邦"
 
 msgid "Schwyz"
-msgstr ""
+msgstr "施維茨邦"
 
 msgid "Solothurn"
-msgstr ""
+msgstr "索洛圖恩邦"
 
 msgid "St. Gallen"
-msgstr ""
+msgstr "聖加侖邦"
 
 msgid "Thurgau"
-msgstr ""
+msgstr "圖爾高邦"
 
 msgid "Ticino"
-msgstr ""
+msgstr "提契諾邦"
 
 msgid "Uri"
-msgstr ""
+msgstr "烏里邦"
 
 msgid "Valais"
-msgstr ""
+msgstr "瓦萊邦"
 
 msgid "Vaud"
-msgstr ""
+msgstr "沃邦"
 
 msgid "Zug"
-msgstr ""
+msgstr "楚格邦"
 
 msgid "Zurich"
-msgstr ""
+msgstr "蘇黎世邦"
 
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
@@ -397,7 +511,7 @@ msgid "Enter a valid Chilean RUT."
 msgstr "請輸入智利 RUT。"
 
 msgid "Enter a valid Chilean RUT. The format is XX.XXX.XXX-X."
-msgstr "以 XX.XXX.XXX-x 為格式輸入智利RUT。"
+msgstr "以 XX.XXX.XXX-X 為格式輸入智利 RUT。"
 
 msgid "The Chilean RUT is not valid."
 msgstr "輸入的智利 RUT 無效。"
@@ -409,19 +523,19 @@ msgid "ID Card Number consists of 15 or 18 digits."
 msgstr ""
 
 msgid "Invalid ID Card Number: Wrong checksum"
-msgstr ""
+msgstr "無效的身分證號碼：錯誤的核對和"
 
 msgid "Invalid ID Card Number: Wrong birthdate"
-msgstr ""
+msgstr "無效的身分證號碼：錯誤的生日日期"
 
 msgid "Invalid ID Card Number: Wrong location code"
-msgstr ""
+msgstr "無效的身分證號碼：錯誤的地區編號"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
-msgstr ""
+msgstr "輸入格式為 XXXXXXXXXXX-Y 或 XXXXXXXXXXXY 的有效 NIT。"
 
 msgid "Invalid NIT."
-msgstr ""
+msgstr "無效的 NIT。"
 
 msgid "Occidental"
 msgstr ""
@@ -487,7 +601,7 @@ msgid "Enter a Cuban province."
 msgstr ""
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr ""
+msgstr "輸入格式為 XXXX 的有效郵遞區號。"
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
 msgstr ""
@@ -499,7 +613,7 @@ msgid "Cuban provinces (three uppercase letters)"
 msgstr ""
 
 msgid "Cuban postal code"
-msgstr ""
+msgstr "古巴郵遞區號"
 
 msgid "Cuban identity card number"
 msgstr ""
@@ -552,7 +666,7 @@ msgid "Moravian-Silesian Region"
 msgstr "摩拉維亞-西里西亞州"
 
 msgid "Enter a postal code in the format XXXXX or XXX XX."
-msgstr "以 XXXXX 或 XXX XX 的格式輸入郵遞區號。"
+msgstr "輸入格式為 XXXXX 或 XXX XX 的郵遞區號。"
 
 msgid "Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX."
 msgstr "以 XXXXXX/XXXX 或 XXXXXXXXXX 輸入出生日期。"
@@ -620,151 +734,151 @@ msgid ""
 msgstr "以 XXXXXXXXXXX-XXXXXXX-XXXXXXX-X 的格式輸入德國身份證字號。"
 
 msgid "Albertslund"
-msgstr ""
+msgstr "阿爾貝特斯隆"
 
 msgid "Allerød"
-msgstr ""
+msgstr "阿勒勒"
 
 msgid "Ballerup"
-msgstr ""
+msgstr "巴勒魯普"
 
 msgid "Bornholm"
-msgstr ""
+msgstr "博恩霍爾姆"
 
 msgid "Brøndby"
-msgstr ""
+msgstr "布倫比"
 
 msgid "Dragør"
-msgstr ""
+msgstr "德拉厄"
 
 msgid "Egedal"
-msgstr ""
+msgstr "艾厄代爾"
 
 msgid "Fredensborg"
-msgstr ""
+msgstr "弗雷登斯堡"
 
 msgid "Frederiksberg"
-msgstr ""
+msgstr "腓特烈斯貝"
 
 msgid "Frederikssund"
-msgstr ""
+msgstr "腓特烈松"
 
 msgid "Furesø"
-msgstr ""
+msgstr "富勒瑟"
 
 msgid "Gentofte"
-msgstr ""
+msgstr "根措夫特"
 
 msgid "Gladsaxe"
-msgstr ""
+msgstr "格萊薩克瑟"
 
 msgid "Glostrup"
-msgstr ""
+msgstr "格洛斯楚普"
 
 msgid "Gribskov"
-msgstr ""
+msgstr "格里布斯考"
 
 msgid "Halsnæs"
-msgstr ""
+msgstr "海爾斯"
 
 msgid "Helsingør"
-msgstr ""
+msgstr "赫爾辛格"
 
 msgid "Herlev"
-msgstr ""
+msgstr "海萊烏"
 
 msgid "Hillerød"
-msgstr ""
+msgstr "希勒勒"
 
 msgid "Hvidovre"
-msgstr ""
+msgstr "維茲奧勒"
 
 msgid "Høje-Taastrup"
-msgstr ""
+msgstr "霍耶-措斯楚普"
 
 msgid "Hørsholm"
-msgstr ""
+msgstr "赫斯霍爾姆"
 
 msgid "Ishøj"
-msgstr ""
+msgstr "伊斯霍伊"
 
 msgid "København"
-msgstr ""
+msgstr "哥本哈根"
 
 msgid "Lyngby-Taarbæk"
-msgstr ""
+msgstr "靈比-措拜克"
 
 msgid "Rudersdal"
-msgstr ""
+msgstr "魯澤斯代"
 
 msgid "Rødovre"
-msgstr ""
+msgstr "勒藻勒"
 
 msgid "Tårnby"
-msgstr ""
+msgstr "措恩比"
 
 msgid "Vallensbæk"
-msgstr ""
+msgstr "瓦倫斯拜克"
 
 msgid "Favrskov"
-msgstr ""
+msgstr "法斯考"
 
 msgid "Hedensted"
-msgstr ""
+msgstr "海曾斯泰茲"
 
 msgid "Herning"
-msgstr ""
+msgstr "海寧"
 
 msgid "Holstebro"
-msgstr ""
+msgstr "霍爾斯特布羅"
 
 msgid "Horsens"
-msgstr ""
+msgstr "霍森斯"
 
 msgid "Ikast-Brande"
-msgstr ""
+msgstr "伊凱斯特-布蘭德"
 
 msgid "Lemvig"
-msgstr ""
+msgstr "萊姆維"
 
 msgid "Norddjurs"
-msgstr ""
+msgstr "北久斯蘭"
 
 msgid "Odder"
-msgstr ""
+msgstr "奧澤"
 
 msgid "Randers"
-msgstr ""
+msgstr "蘭訥斯"
 
 msgid "Ringkøbing-Skjern"
-msgstr ""
+msgstr "靈克賓-斯凱恩"
 
 msgid "Samsø"
-msgstr ""
+msgstr "薩姆瑟"
 
 msgid "Silkeborg"
-msgstr ""
+msgstr "錫爾克堡"
 
 msgid "Skanderborg"
-msgstr ""
+msgstr "斯坎訥堡"
 
 msgid "Skive"
-msgstr ""
+msgstr "斯基沃"
 
 msgid "Struer"
-msgstr ""
+msgstr "斯楚厄"
 
 msgid "Syddjurs"
-msgstr ""
+msgstr "南久斯蘭"
 
 msgid "Viborg"
-msgstr ""
+msgstr "維堡"
 
 msgid "Aarhus"
-msgstr ""
+msgstr "奧胡斯"
 
 msgid "Brønderslev"
-msgstr ""
+msgstr "布倫訥斯萊烏"
 
 msgid "Frederikshavn"
 msgstr ""
@@ -929,6 +1043,9 @@ msgid "Region Syddanmark"
 msgstr ""
 
 msgid "Scanning"
+msgstr ""
+
+msgid "Facility"
 msgstr ""
 
 msgid "Høje Taastrup"
@@ -1249,6 +1366,12 @@ msgstr ""
 msgid "Rude"
 msgstr ""
 
+msgid "Agersø"
+msgstr ""
+
+msgid "Omø"
+msgstr ""
+
 msgid "Fuglebjerg"
 msgstr ""
 
@@ -1274,6 +1397,9 @@ msgid "Stenlille"
 msgstr ""
 
 msgid "Nyrup"
+msgstr ""
+
+msgid "Orø"
 msgstr ""
 
 msgid "Hvalsø"
@@ -1504,10 +1630,16 @@ msgstr ""
 msgid "Bandholm"
 msgstr ""
 
+msgid "Askø og Lilleø"
+msgstr ""
+
 msgid "Torrig L"
 msgstr ""
 
 msgid "Fejø"
+msgstr ""
+
+msgid "Femø"
 msgstr ""
 
 msgid "Nørreballe"
@@ -1636,6 +1768,15 @@ msgstr ""
 msgid "Faaborg"
 msgstr ""
 
+msgid "Lyø"
+msgstr ""
+
+msgid "Avernakø"
+msgstr ""
+
+msgid "Bjørnø"
+msgstr ""
+
 msgid "Glamsbjerg"
 msgstr ""
 
@@ -1711,10 +1852,16 @@ msgstr ""
 msgid "Bagenkop"
 msgstr ""
 
+msgid "Strynø"
+msgstr ""
+
 msgid "Tranekær"
 msgstr ""
 
 msgid "Marstal"
+msgstr ""
+
+msgid "Birkholm"
 msgstr ""
 
 msgid "Ærøskøbing"
@@ -1748,6 +1895,9 @@ msgid "Sjølund"
 msgstr ""
 
 msgid "Hejls"
+msgstr ""
+
+msgid "Barsø"
 msgstr ""
 
 msgid "Rødekro"
@@ -2342,6 +2492,12 @@ msgid "Stenderup"
 msgstr ""
 
 msgid "Hornsyld"
+msgstr ""
+
+msgid "Endelave"
+msgstr ""
+
+msgid "Tunø"
 msgstr ""
 
 msgid "Tjele"
@@ -3044,7 +3200,7 @@ msgid "Sumba"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
+msgstr "輸入格式為 XXXX 的郵遞區號。"
 
 msgid "Ecuadorian province"
 msgstr ""
@@ -3104,6 +3260,90 @@ msgid "Enter an 8-digit Estonian business registry code."
 msgstr ""
 
 msgid "Enter a valid Estonian business registry code."
+msgstr ""
+
+msgid "Dakahlia"
+msgstr ""
+
+msgid "Red Sea"
+msgstr ""
+
+msgid "Beheira"
+msgstr ""
+
+msgid "Faiyum"
+msgstr ""
+
+msgid "Gharbia"
+msgstr ""
+
+msgid "Alexandria"
+msgstr ""
+
+msgid "Ismailia"
+msgstr ""
+
+msgid "Giza"
+msgstr ""
+
+msgid "Monufia"
+msgstr ""
+
+msgid "Minya"
+msgstr ""
+
+msgid "Cairo"
+msgstr ""
+
+msgid "Qalyubia"
+msgstr ""
+
+msgid "Luxor"
+msgstr ""
+
+msgid "New Valley"
+msgstr ""
+
+msgid "Suez"
+msgstr ""
+
+msgid "Al Sharqia"
+msgstr ""
+
+msgid "Aswan"
+msgstr ""
+
+msgid "Asyut"
+msgstr ""
+
+msgid "Beni Suef"
+msgstr ""
+
+msgid "Port Said"
+msgstr ""
+
+msgid "Damietta"
+msgstr ""
+
+msgid "South Sinai"
+msgstr ""
+
+msgid "Kafr el-Sheikh"
+msgstr ""
+
+msgid "Matrouh"
+msgstr ""
+
+msgid "Qena"
+msgstr ""
+
+msgid "North Sinai"
+msgstr ""
+
+msgid "Sohag"
+msgstr ""
+
+msgid "Enter a valid Egyptian National ID number"
 msgstr ""
 
 msgid "Araba"
@@ -3317,20 +3557,26 @@ msgid "Please enter a valid NIF or NIE."
 msgstr "輸入正確的 NIF 或 NIE。"
 
 msgid "Invalid checksum for NIF."
-msgstr "無效的 NIF 校驗和。"
+msgstr "無效的 NIF 核對和。"
 
 msgid "Invalid checksum for NIE."
-msgstr "無效的 NIE 校驗和。"
+msgstr "無效的 NIE 核對和。"
 
 msgid "Invalid checksum for CIF."
-msgstr "無效的 CIF 校驗和。"
+msgstr "無效的 CIF 核對和。"
 
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
 msgstr "請輸入一個有效的銀行值帳號，格式為 XXXX-XXXX-XX-XXXXXXXXXX。"
 
 msgid "Invalid checksum for bank account number."
-msgstr "無效的銀行帳號校驗和。"
+msgstr "無效的銀行帳號核對和。"
+
+msgid "Spain postal code (five numbers)"
+msgstr "西班牙郵遞區號（5 位數）"
+
+msgid "Identification National Document"
+msgstr ""
 
 msgid "Enter a valid Finnish social security number."
 msgstr "請輸入一個有效的芬蘭社會保險號碼。"
@@ -3353,10 +3599,16 @@ msgstr ""
 msgid "Enter a valid French SIRET number."
 msgstr ""
 
+msgid "Enter a valid French RNA number."
+msgstr ""
+
 msgid "SIREN Number"
 msgstr ""
 
 msgid "SIRET Number"
+msgstr ""
+
+msgid "RNA Number"
 msgstr ""
 
 msgid "Enter a valid postcode."
@@ -3435,7 +3687,7 @@ msgid "Essex"
 msgstr "雅息士郡"
 
 msgid "Gloucestershire"
-msgstr "告羅士打郡"
+msgstr "格洛斯特郡"
 
 msgid "Greater Manchester"
 msgstr "大曼徹斯特郡"
@@ -3549,13 +3801,13 @@ msgid "Somerset"
 msgstr "森麻實郡"
 
 msgid "South Gloucestershire"
-msgstr ""
+msgstr "南格洛斯特"
 
 msgid "South Yorkshire"
 msgstr "南約克郡"
 
 msgid "Southampton"
-msgstr ""
+msgstr "南安普敦"
 
 msgid "Southend-on-Sea"
 msgstr ""
@@ -3576,7 +3828,7 @@ msgid "Surrey"
 msgstr "舒梨郡"
 
 msgid "Swindon"
-msgstr ""
+msgstr "斯溫頓"
 
 msgid "Telford and Wrekin"
 msgstr ""
@@ -3591,7 +3843,7 @@ msgid "Tyne and Wear"
 msgstr "泰恩-威爾郡"
 
 msgid "Warrington"
-msgstr ""
+msgstr "沃靈頓"
 
 msgid "Warwickshire"
 msgstr "瓦立克郡"
@@ -3813,19 +4065,19 @@ msgid "Business Identifier Code"
 msgstr ""
 
 #, python-format
-msgid "%s is not a valid character for IBAN."
-msgstr ""
+msgid "%(character)s is not a valid character for IBAN."
+msgstr "%(character)s不是 IBAN 的有效字元。"
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
 msgstr ""
 
 #, python-format
-msgid "%s is not a valid country code for IBAN."
+msgid "%(country_code)s is not a valid country code for IBAN."
 msgstr ""
 
 #, python-format
-msgid "%s IBANs are not allowed in this field."
+msgid "%(country_code)s IBANs are not allowed in this field."
 msgstr ""
 
 msgid "Not a valid IBAN."
@@ -3834,21 +4086,80 @@ msgstr ""
 msgid "BIC codes have either 8 or 11 characters."
 msgstr ""
 
-#, python-format
-msgid "%s is not a valid institution code."
+msgid "BIC codes only contain alphabet letters and digits."
 msgstr ""
 
 #, python-format
-msgid "%s is not a valid country code."
+msgid "%(institution_code)s is not a valid institution code."
+msgstr ""
+
+#, python-format
+msgid "%(country_code)s is not a valid country code."
+msgstr ""
+
+#, python-format
+msgid "%(location_code)s is not a valid location code."
 msgstr ""
 
 msgid "Not a valid EAN code."
 msgstr ""
 
-msgid "Enter a valid 5-digit greek postal code."
+#, python-format
+msgid "%(vatin)s is not a valid VAT identification number."
 msgstr ""
 
+msgid "Ahafo"
+msgstr ""
+
+msgid "Ashanti"
+msgstr ""
+
+msgid "Bono East"
+msgstr ""
+
+msgid "Brong Ahafo"
+msgstr ""
+
+msgid "Eastern"
+msgstr ""
+
+msgid "Greater Accra"
+msgstr ""
+
+msgid "North East"
+msgstr ""
+
+msgid "Northern"
+msgstr ""
+
+msgid "Oti"
+msgstr ""
+
+msgid "Savannah"
+msgstr ""
+
+msgid "Upper East"
+msgstr ""
+
+msgid "Upper West"
+msgstr ""
+
+msgid "Western"
+msgstr ""
+
+msgid "Western North"
+msgstr ""
+
+msgid "Volta"
+msgstr ""
+
+msgid "Enter a valid 5-digit greek postal code."
+msgstr "輸入有效的 5 位數希臘郵遞區號。"
+
 msgid "Enter a valid greek tax number (9 digits)."
+msgstr ""
+
+msgid "Enter a valid greek social security number (AMKA - 11 digits)."
 msgstr ""
 
 msgid "Enter a valid 13 digit JMBG"
@@ -3861,16 +4172,16 @@ msgid "Enter a valid 11 digit OIB"
 msgstr ""
 
 msgid "Enter a valid vehicle license plate number"
-msgstr "輸入正確的居住許可號碼。"
+msgstr ""
 
 msgid "Enter a valid location code"
 msgstr ""
 
 msgid "Number part cannot be zero"
-msgstr ""
+msgstr "數字部分不可為零"
 
 msgid "Enter a valid 5 digit postal code"
-msgstr ""
+msgstr "輸入有效的 5 位數郵遞區號。"
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
 msgstr ""
@@ -3999,10 +4310,10 @@ msgid "Zala"
 msgstr ""
 
 msgid "Enter a valid post code"
-msgstr "輸入正確的郵遞區號。"
+msgstr "輸入正確的郵遞區號"
 
 msgid "Enter a valid NIK/KTP number"
-msgstr "輸入正確的 NIK/KTP 號碼。"
+msgstr "輸入正確的 NIK/KTP 號碼"
 
 msgid "Aceh"
 msgstr "亞齊特別行政區"
@@ -4048,6 +4359,9 @@ msgstr "中加里曼丹省"
 
 msgid "Kalimantan Timur"
 msgstr "東加里曼丹省"
+
+msgid "Kalimantan Utara"
+msgstr ""
 
 msgid "Kepulauan Bangka-Belitung"
 msgstr "邦加-勿里洞省"
@@ -4202,6 +4516,9 @@ msgstr "詩都阿佐"
 msgid "Garut"
 msgstr "牙律"
 
+msgid "Enter a valid Eircode."
+msgstr ""
+
 msgid "Carlow"
 msgstr "卡婁郡"
 
@@ -4281,7 +4598,7 @@ msgid "Wicklow"
 msgstr "威克洛郡"
 
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
-msgstr ""
+msgstr "輸入格式為 XXXXXXXXXX（或 XXXXX）且只有數字的郵遞區號。"
 
 msgid "Enter a valid ID number."
 msgstr "請輸入正確的 ID 號碼。"
@@ -4296,7 +4613,109 @@ msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
 msgstr ""
 
+msgid "Please enter a valid Indian PAN card number."
+msgstr ""
+
 msgid "Indian state (two uppercase letters)"
+msgstr ""
+
+msgid "PAN Card number field"
+msgstr ""
+
+msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
+msgstr "輸入格式為 XXXXXXXXXX 且只有數字的郵遞區號。"
+
+msgid "Alborz"
+msgstr ""
+
+msgid "Ardabil"
+msgstr ""
+
+msgid "Azerbaijan East"
+msgstr ""
+
+msgid "Azerbaijan Wast"
+msgstr ""
+
+msgid "Bushehr"
+msgstr ""
+
+msgid "Chahar Mahaal and Bakhtiari"
+msgstr ""
+
+msgid "Fars"
+msgstr ""
+
+msgid "Gilan"
+msgstr ""
+
+msgid "Golestan"
+msgstr ""
+
+msgid "Hamadan"
+msgstr ""
+
+msgid "Hormozgan"
+msgstr ""
+
+msgid "Ilam"
+msgstr ""
+
+msgid "Isfahan"
+msgstr ""
+
+msgid "Kerman"
+msgstr ""
+
+msgid "Kermanshah"
+msgstr ""
+
+msgid "Khorasan North"
+msgstr ""
+
+msgid "Khorasan Razavi"
+msgstr ""
+
+msgid "Khorasan South"
+msgstr ""
+
+msgid "Khuzestan"
+msgstr ""
+
+msgid "Kohgiluyeh and Boyer-Ahmad"
+msgstr ""
+
+msgid "Kurdistan"
+msgstr ""
+
+msgid "Lorestan"
+msgstr ""
+
+msgid "Markazi"
+msgstr ""
+
+msgid "Mazandaran"
+msgstr ""
+
+msgid "Qazvin"
+msgstr ""
+
+msgid "Qom"
+msgstr ""
+
+msgid "Semnan"
+msgstr ""
+
+msgid "Sistan and Baluchestan"
+msgstr ""
+
+msgid "Tehran"
+msgstr ""
+
+msgid "Yazd"
+msgstr ""
+
+msgid "Zanjan"
 msgstr ""
 
 msgid ""
@@ -4837,6 +5256,102 @@ msgstr ""
 msgid "Hawalli"
 msgstr ""
 
+msgid "Enter a postal code in format NNNNN"
+msgstr "輸入格式為 NNNNN 的郵遞區號"
+
+msgid "Kandy"
+msgstr "康提區"
+
+msgid "Matale"
+msgstr "馬特萊區"
+
+msgid "Nuwara Eliya"
+msgstr "努沃勒埃利耶區"
+
+msgid "Anuradhapura"
+msgstr "阿努拉德普勒區"
+
+msgid "Polonnaruwa"
+msgstr "波隆納魯瓦區"
+
+msgid "Jaffna"
+msgstr "賈夫納區"
+
+msgid "Kilinochchi"
+msgstr "基利諾奇區"
+
+msgid "Mannar"
+msgstr "馬納爾區"
+
+msgid "Vavuniya"
+msgstr "瓦武尼亞區"
+
+msgid "Mullativu"
+msgstr "穆萊蒂武區"
+
+msgid "Alambil"
+msgstr ""
+
+msgid "Ampara"
+msgstr "安帕賴區"
+
+msgid "Batticaloa"
+msgstr "拜蒂克洛區"
+
+msgid "Trincomalee"
+msgstr "亭可馬里區"
+
+msgid "Kurunagala"
+msgstr "庫魯內格勒區"
+
+msgid "Puttalam"
+msgstr "普塔勒姆區"
+
+msgid "Galle"
+msgstr "加勒區"
+
+msgid "Hambanthota"
+msgstr "漢班托特區"
+
+msgid "Mathara"
+msgstr "馬塔拉區"
+
+msgid "Badulla"
+msgstr "巴杜勒區"
+
+msgid "Monaragala"
+msgstr "莫訥勒格勒區"
+
+msgid "Kegalle"
+msgstr "凱格勒區"
+
+msgid "Rathnapura"
+msgstr "拉特納普勒區"
+
+msgid "Colombo"
+msgstr "可倫坡區"
+
+msgid "Gampaha"
+msgstr "加姆珀哈區"
+
+msgid "Kaluthara"
+msgstr "卡盧特勒區"
+
+msgid "North Central"
+msgstr "北中省"
+
+msgid "North Western"
+msgstr "西北省"
+
+msgid "Sabaragamuwa"
+msgstr "薩伯勒格穆沃省"
+
+msgid "Southern"
+msgstr "南部省"
+
+msgid "Uva"
+msgstr "烏沃省"
+
 msgid "ID Code consists of exactly 11 decimal digits."
 msgstr ""
 
@@ -4847,7 +5362,7 @@ msgid "ID Code contains invalid date."
 msgstr ""
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr ""
+msgstr "輸入格式為 XXXXX 或 LT-XXXXX 的郵遞區號。"
 
 msgid "Alytus"
 msgstr ""
@@ -4858,7 +5373,7 @@ msgstr ""
 msgid "Klaipėda"
 msgstr ""
 
-msgid "Mariampolė"
+msgid "Marijampolė"
 msgstr ""
 
 msgid "Panevėžys"
@@ -4949,9 +5464,6 @@ msgid "Kupiškis district"
 msgstr ""
 
 msgid "Lazdijai district"
-msgstr ""
-
-msgid "Marijampolė"
 msgstr ""
 
 msgid "Mažeikiai district"
@@ -5060,7 +5572,7 @@ msgid "Zarasai district"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXX or LV-XXXX."
-msgstr ""
+msgstr "輸入格式為 XXXX 或 LV-XXXX 的郵遞區號。"
 
 msgid "Enter a Latvian personal code in format XXXXXX-XXXXX."
 msgstr ""
@@ -5069,370 +5581,148 @@ msgid "Enter a valid Latvian personal code."
 msgstr ""
 
 msgid "Daugavpils"
-msgstr ""
+msgstr "陶格夫匹爾斯"
 
 msgid "Jelgava"
-msgstr ""
-
-msgid "Jēkabpils"
-msgstr ""
+msgstr "葉爾加瓦"
 
 msgid "Jūrmala"
-msgstr ""
+msgstr "尤爾馬拉"
 
 msgid "Liepāja"
-msgstr ""
+msgstr "利耶帕亞"
 
 msgid "Rēzekne"
-msgstr ""
+msgstr "雷澤克內"
 
 msgid "Riga"
-msgstr ""
-
-msgid "Valmiera"
-msgstr ""
+msgstr "里加"
 
 msgid "Ventspils"
-msgstr ""
-
-msgid "Aglona municipality"
-msgstr ""
+msgstr "文次匹爾斯"
 
 msgid "Aizkraukle municipality"
-msgstr ""
-
-msgid "Aizpute municipality"
-msgstr ""
-
-msgid "Aknīste municipality"
-msgstr ""
-
-msgid "Aloja municipality"
-msgstr ""
-
-msgid "Alsunga municipality"
-msgstr ""
+msgstr "艾茲克勞克萊市鎮"
 
 msgid "Alūksne municipality"
-msgstr ""
-
-msgid "Amata municipality"
-msgstr ""
-
-msgid "Ape municipality"
-msgstr ""
-
-msgid "Auce municipality"
-msgstr ""
+msgstr "阿盧克斯內市鎮"
 
 msgid "Ādaži municipality"
-msgstr ""
-
-msgid "Babīte municipality"
-msgstr ""
-
-msgid "Baldone municipality"
-msgstr ""
-
-msgid "Baltinava municipality"
-msgstr ""
+msgstr "阿達日市鎮"
 
 msgid "Balvi municipality"
-msgstr ""
+msgstr "巴爾維市鎮"
 
 msgid "Bauska municipality"
-msgstr ""
-
-msgid "Beverīna municipality"
-msgstr ""
-
-msgid "Brocēni municipality"
-msgstr ""
-
-msgid "Burtnieki municipality"
-msgstr ""
-
-msgid "Carnikava municipality"
-msgstr ""
-
-msgid "Cesvaine municipality"
-msgstr ""
+msgstr "包斯卡市鎮"
 
 msgid "Cēsis municipality"
-msgstr ""
-
-msgid "Cibla municipality"
-msgstr ""
-
-msgid "Dagda municipality"
-msgstr ""
-
-msgid "Daugavpils municipality"
-msgstr ""
+msgstr "采西斯市鎮"
 
 msgid "Dobele municipality"
-msgstr ""
-
-msgid "Dundaga municipality"
-msgstr ""
-
-msgid "Durbe municipality"
-msgstr ""
-
-msgid "Engure municipality"
-msgstr ""
-
-msgid "Ērgļi municipality"
-msgstr ""
-
-msgid "Garkalne municipality"
-msgstr ""
-
-msgid "Grobiņa municipality"
-msgstr ""
+msgstr "多貝萊市鎮"
 
 msgid "Gulbene municipality"
-msgstr ""
-
-msgid "Iecava municipality"
-msgstr ""
-
-msgid "Ikšķile municipality"
-msgstr ""
-
-msgid "Ilūkste municipality"
-msgstr ""
-
-msgid "Inčukalns municipality"
-msgstr ""
-
-msgid "Jaunjelgava municipality"
-msgstr ""
-
-msgid "Jaunpiebalga municipality"
-msgstr ""
-
-msgid "Jaunpils municipality"
-msgstr ""
+msgstr "古爾貝內市鎮"
 
 msgid "Jelgava municipality"
-msgstr ""
+msgstr "葉爾加瓦市鎮"
 
 msgid "Jēkabpils municipality"
-msgstr ""
-
-msgid "Kandava municipality"
-msgstr ""
-
-msgid "Kārsava municipality"
-msgstr ""
-
-msgid "Kocēni municipality"
-msgstr ""
-
-msgid "Koknese municipality"
-msgstr ""
+msgstr "葉卡布皮爾斯市鎮"
 
 msgid "Krāslava municipality"
-msgstr ""
-
-msgid "Krimulda municipality"
-msgstr ""
-
-msgid "Krustpils municipality"
-msgstr ""
+msgstr "克拉斯拉瓦市鎮"
 
 msgid "Kuldīga municipality"
-msgstr ""
-
-msgid "Ķegums municipality"
-msgstr ""
+msgstr "庫爾迪加市鎮"
 
 msgid "Ķekava municipality"
-msgstr ""
-
-msgid "Lielvārde municipality"
-msgstr ""
+msgstr "基耶卡瓦市鎮"
 
 msgid "Limbaži municipality"
-msgstr ""
-
-msgid "Līgatne municipality"
-msgstr ""
+msgstr "林巴日市鎮"
 
 msgid "Līvāni municipality"
-msgstr ""
-
-msgid "Lubāna municipality"
-msgstr ""
+msgstr "利瓦尼市鎮"
 
 msgid "Ludza municipality"
-msgstr ""
+msgstr "盧扎市鎮"
 
 msgid "Madona municipality"
-msgstr ""
-
-msgid "Mazsalaca municipality"
-msgstr ""
-
-msgid "Mālpils municipality"
-msgstr ""
+msgstr "馬多納市鎮"
 
 msgid "Mārupe municipality"
-msgstr ""
-
-msgid "Mērsrags municipality"
-msgstr ""
-
-msgid "Naukšēni municipality"
-msgstr ""
-
-msgid "Nereta municipality"
-msgstr ""
-
-msgid "Nīca municipality"
-msgstr ""
+msgstr "馬魯佩市鎮"
 
 msgid "Ogre municipality"
-msgstr ""
+msgstr "奧格雷市鎮"
 
 msgid "Olaine municipality"
-msgstr ""
-
-msgid "Ozolnieki municipality"
-msgstr ""
-
-msgid "Pārgauja municipality"
-msgstr ""
-
-msgid "Pāvilosta municipality"
-msgstr ""
-
-msgid "Pļaviņas municipality"
-msgstr ""
+msgstr "奧萊內市鎮"
 
 msgid "Preiļi municipality"
-msgstr ""
-
-msgid "Priekule municipality"
-msgstr ""
-
-msgid "Priekuļi municipality"
-msgstr ""
-
-msgid "Rauna municipality"
-msgstr ""
+msgstr "普雷利市鎮"
 
 msgid "Rēzekne municipality"
-msgstr ""
-
-msgid "Riebiņi municipality"
-msgstr ""
-
-msgid "Roja municipality"
-msgstr ""
+msgstr "雷澤克內市鎮"
 
 msgid "Ropaži municipality"
-msgstr ""
-
-msgid "Rucava municipality"
-msgstr ""
-
-msgid "Rugāji municipality"
-msgstr ""
-
-msgid "Rundāle municipality"
-msgstr ""
-
-msgid "Rūjiena municipality"
-msgstr ""
-
-msgid "Sala municipality"
-msgstr ""
-
-msgid "Salacgrīva municipality"
-msgstr ""
+msgstr "羅帕日市鎮"
 
 msgid "Salaspils municipality"
-msgstr ""
+msgstr "薩拉斯皮爾斯市鎮"
 
 msgid "Saldus municipality"
-msgstr ""
+msgstr "薩爾杜斯市鎮"
 
 msgid "Saulkrasti municipality"
-msgstr ""
-
-msgid "Sēja municipality"
-msgstr ""
+msgstr "紹爾克拉斯蒂市鎮"
 
 msgid "Sigulda municipality"
-msgstr ""
-
-msgid "Skrīveri municipality"
-msgstr ""
-
-msgid "Skrunda municipality"
-msgstr ""
+msgstr "錫古爾達市鎮"
 
 msgid "Smiltene municipality"
-msgstr ""
-
-msgid "Stopiņi municipality"
-msgstr ""
-
-msgid "Strenči municipality"
-msgstr ""
+msgstr "斯米爾泰內市鎮"
 
 msgid "Talsi municipality"
-msgstr ""
-
-msgid "Tērvete municipality"
-msgstr ""
+msgstr "塔爾西市鎮"
 
 msgid "Tukums municipality"
-msgstr ""
-
-msgid "Vaiņode municipality"
-msgstr ""
+msgstr "圖庫姆斯市鎮"
 
 msgid "Valka municipality"
-msgstr ""
+msgstr "瓦爾卡市鎮"
 
 msgid "Varakļāni municipality"
-msgstr ""
-
-msgid "Vārkava municipality"
-msgstr ""
-
-msgid "Vecpiebalga municipality"
-msgstr ""
-
-msgid "Vecumnieki municipality"
-msgstr ""
+msgstr "瓦拉克利亞尼市鎮"
 
 msgid "Ventspils municipality"
-msgstr ""
+msgstr "文次匹爾斯市鎮"
 
-msgid "Viesīte municipality"
-msgstr ""
+msgid "Augšdaugava municipality"
+msgstr "上道加瓦市鎮"
 
-msgid "Viļaka municipality"
-msgstr ""
+msgid "Dienvidkurzeme municipality"
+msgstr "南庫爾澤梅市鎮"
 
-msgid "Viļāni municipality"
-msgstr ""
-
-msgid "Zilupe municipality"
-msgstr ""
+msgid "Valmiera municipality"
+msgstr "瓦爾米耶拉市鎮"
 
 msgid "Enter a postal code in the format XXXXX."
-msgstr "用 XX-XXX 的格式輸入郵遞區號。"
+msgstr "輸入格式為 XXXXX 的郵遞區號。"
 
 msgid "Postal code"
-msgstr ""
+msgstr "郵遞區號"
 
 msgid "Select Province"
-msgstr ""
+msgstr "選擇省份"
+
+msgid "Enter a valid Moroccan CIN number."
+msgstr "輸入一個有效的摩洛哥 CIN 號碼。"
+
+msgid "CIN Number"
+msgstr "CIN 號碼"
 
 msgid "Al Hoceima"
 msgstr ""
@@ -5695,6 +5985,210 @@ msgstr ""
 msgid "Dakhla-Oued Ed Dahab"
 msgstr ""
 
+msgid "Întreprindere Individuală"
+msgstr ""
+
+msgid "Societate pe acţiuni"
+msgstr ""
+
+msgid "Societate în nume colectiv"
+msgstr ""
+
+msgid "Societatea în comandită"
+msgstr ""
+
+msgid "Cooperativa de producţie"
+msgstr ""
+
+msgid "Cooperativa de întreprinzători"
+msgstr ""
+
+msgid "Societate cu răspundere limitată"
+msgstr ""
+
+msgid "Gospodăria ţărănească"
+msgstr ""
+
+msgid "Diplomatic Corps"
+msgstr ""
+
+msgid "Service Staff"
+msgstr ""
+
+msgid "Consular Staff"
+msgstr ""
+
+msgid "Administrative body"
+msgstr ""
+
+msgid "Ministry of Internal Affairs"
+msgstr ""
+
+msgid "Carabinieri Subdivision"
+msgstr ""
+
+msgid "Military Forces"
+msgstr ""
+
+msgid "Border Control"
+msgstr ""
+
+msgid "Parliament"
+msgstr ""
+
+msgid "Government"
+msgstr ""
+
+msgid "Chancellery"
+msgstr ""
+
+msgid "Anenii Noi"
+msgstr ""
+
+msgid "Tighina"
+msgstr ""
+
+msgid "Bălți"
+msgstr ""
+
+msgid "Briceni"
+msgstr ""
+
+msgid "Basarabeasca"
+msgstr ""
+
+msgid "Chișinău"
+msgstr ""
+
+msgid "Camenca"
+msgstr ""
+
+msgid "Ceadîr-Lunga"
+msgstr ""
+
+msgid "Cahul"
+msgstr ""
+
+msgid "Călărași"
+msgstr ""
+
+msgid "Cimișlia"
+msgstr ""
+
+msgid "Căinari"
+msgstr ""
+
+msgid "Comrat"
+msgstr ""
+
+msgid "Criuleni"
+msgstr ""
+
+msgid "Căușeni"
+msgstr ""
+
+msgid "Cantemir"
+msgstr ""
+
+msgid "Dubăsari"
+msgstr ""
+
+msgid "Dondușeni"
+msgstr ""
+
+msgid "Drochia"
+msgstr ""
+
+msgid "Edineț"
+msgstr ""
+
+msgid "Fălești"
+msgstr ""
+
+msgid "Florești"
+msgstr ""
+
+msgid "Gagauzia"
+msgstr ""
+
+msgid "Glodeni"
+msgstr ""
+
+msgid "Grigoriopol"
+msgstr ""
+
+msgid "Hîncești"
+msgstr ""
+
+msgid "Ialoveni"
+msgstr ""
+
+msgid "Leova"
+msgstr ""
+
+msgid "Nisporeni"
+msgstr ""
+
+msgid "Ocnița"
+msgstr ""
+
+msgid "Orhei"
+msgstr ""
+
+msgid "Rîbnița"
+msgstr ""
+
+msgid "Rîșcani"
+msgstr ""
+
+msgid "Rezina"
+msgstr ""
+
+msgid "Șoldănești"
+msgstr ""
+
+msgid "Sîngerei"
+msgstr ""
+
+msgid "Slobozia"
+msgstr ""
+
+msgid "Soroca"
+msgstr ""
+
+msgid "Strășeni"
+msgstr ""
+
+msgid "Ștefan Vodă"
+msgstr ""
+
+msgid "Taraclia"
+msgstr ""
+
+msgid "Telenești"
+msgstr ""
+
+msgid "Ungheni"
+msgstr ""
+
+msgid "Vulcănești"
+msgstr ""
+
+msgid "Moldavian identity number"
+msgstr ""
+
+msgid "Moldavian license plate number"
+msgstr ""
+
+msgid "Moldavian company types"
+msgstr ""
+
+msgid "Enter a valid IDNO number."
+msgstr "輸入有效的 IDNO 號碼。"
+
+msgid "Enter a valid license plate."
+msgstr ""
+
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
@@ -5707,319 +6201,319 @@ msgid "The first 7 digits of the UMCN must represent a valid past date."
 msgstr ""
 
 msgid "The UMCN is not valid."
-msgstr ""
+msgstr "無效的 UMCN。"
 
 msgid "Aerodrom"
-msgstr ""
+msgstr "艾羅德龍"
 
 msgid "Aračinovo"
-msgstr ""
+msgstr "阿拉契諾沃"
 
 msgid "Berovo"
-msgstr ""
+msgstr "貝羅沃"
 
 msgid "Bitola"
-msgstr ""
+msgstr "比托拉"
 
 msgid "Bogdanci"
-msgstr ""
+msgstr "波格丹齊"
 
 msgid "Bogovinje"
-msgstr ""
+msgstr "博戈維涅"
 
 msgid "Bosilovo"
-msgstr ""
+msgstr "博西洛沃"
 
 msgid "Brvenica"
-msgstr ""
+msgstr "布爾韋尼察"
 
 msgid "Butel"
-msgstr ""
+msgstr "布泰爾"
 
 msgid "Valandovo"
-msgstr ""
+msgstr "瓦蘭多沃"
 
 msgid "Vasilevo"
-msgstr ""
+msgstr "瓦西萊沃"
 
 msgid "Vevčani"
-msgstr ""
+msgstr "韋夫查尼"
 
 msgid "Veles"
-msgstr ""
+msgstr "韋萊斯"
 
 msgid "Vinica"
-msgstr ""
+msgstr "維尼察"
 
 msgid "Vraneštica"
-msgstr ""
+msgstr "弗拉內什蒂察"
 
 msgid "Vrapčište"
-msgstr ""
+msgstr "弗拉普契什泰"
 
 msgid "Gazi Baba"
-msgstr ""
+msgstr "加齊巴巴"
 
 msgid "Gevgelija"
-msgstr ""
+msgstr "蓋夫蓋利亞"
 
 msgid "Gostivar"
-msgstr ""
+msgstr "戈斯蒂瓦爾"
 
 msgid "Gradsko"
-msgstr ""
+msgstr "格拉德斯科"
 
 msgid "Debar"
-msgstr ""
+msgstr "德巴爾"
 
 msgid "Debarca"
-msgstr ""
+msgstr "德巴爾察"
 
 msgid "Delčevo"
-msgstr ""
+msgstr "代爾切沃"
 
 msgid "Demir Kapija"
-msgstr ""
+msgstr "代米爾卡皮亞"
 
 msgid "Demir Hisar"
-msgstr ""
+msgstr "代米爾希薩爾"
 
 msgid "Dolneni"
-msgstr ""
+msgstr "多爾內尼"
 
 msgid "Drugovo"
-msgstr ""
+msgstr "德魯戈沃"
 
 msgid "Gjorče Petrov"
-msgstr ""
+msgstr "喬爾切彼得羅夫"
 
 msgid "Želino"
-msgstr ""
+msgstr "熱利諾"
 
 msgid "Zajas"
-msgstr ""
+msgstr "扎亞斯"
 
 msgid "Zelenikovo"
-msgstr ""
+msgstr "澤萊尼科沃"
 
 msgid "Zrnovci"
-msgstr ""
+msgstr "茲爾諾夫齊"
 
 msgid "Ilinden"
-msgstr ""
+msgstr "伊林登"
 
 msgid "Jegunovce"
-msgstr ""
+msgstr "耶古諾夫采"
 
 msgid "Kavadarci"
-msgstr ""
+msgstr "卡瓦達爾齊"
 
 msgid "Karbinci"
-msgstr ""
+msgstr "卡爾賓齊"
 
 msgid "Karpoš"
-msgstr ""
+msgstr "卡爾波什"
 
 msgid "Kisela Voda"
-msgstr ""
+msgstr "基塞拉沃達"
 
 msgid "Kičevo"
-msgstr ""
+msgstr "基切沃"
 
 msgid "Konče"
-msgstr ""
+msgstr "孔切"
 
 msgid "Koćani"
-msgstr ""
+msgstr "科查尼"
 
 msgid "Kratovo"
-msgstr ""
+msgstr "克拉托沃"
 
 msgid "Kriva Palanka"
-msgstr ""
+msgstr "克里瓦帕蘭卡"
 
 msgid "Krivogaštani"
-msgstr ""
+msgstr "克里沃加什塔尼"
 
 msgid "Kruševo"
-msgstr ""
+msgstr "克魯舍沃"
 
 msgid "Kumanovo"
-msgstr ""
+msgstr "庫馬諾沃"
 
 msgid "Lipkovo"
-msgstr ""
+msgstr "利普科沃"
 
 msgid "Lozovo"
-msgstr ""
+msgstr "洛佐沃"
 
 msgid "Mavrovo i Rostuša"
-msgstr ""
+msgstr "馬夫羅沃和羅斯圖沙"
 
 msgid "Makedonska Kamenica"
-msgstr ""
+msgstr "馬其頓卡梅尼察"
 
 msgid "Makedonski Brod"
-msgstr ""
+msgstr "馬其頓布羅德"
 
 msgid "Mogila"
-msgstr ""
+msgstr "莫吉拉"
 
 msgid "Negotino"
-msgstr ""
+msgstr "內戈蒂諾"
 
 msgid "Novaci"
-msgstr ""
+msgstr "諾瓦齊"
 
 msgid "Novo Selo"
-msgstr ""
+msgstr "諾沃塞洛"
 
 msgid "Oslomej"
-msgstr ""
+msgstr "奧斯洛梅伊"
 
 msgid "Ohrid"
-msgstr ""
+msgstr "奧赫里德"
 
 msgid "Petrovec"
-msgstr ""
+msgstr "彼得羅韋茨"
 
 msgid "Pehčevo"
-msgstr ""
+msgstr "佩赫切沃"
 
 msgid "Plasnica"
-msgstr ""
+msgstr "普拉斯尼察"
 
 msgid "Prilep"
-msgstr ""
+msgstr "普里萊普"
 
 msgid "Probištip"
-msgstr ""
+msgstr "普羅比什蒂普"
 
 msgid "Radoviš"
-msgstr ""
+msgstr "拉多維什"
 
 msgid "Rankovce"
-msgstr ""
+msgstr "蘭科夫采"
 
 msgid "Resen"
-msgstr ""
+msgstr "雷森"
 
 msgid "Rosoman"
-msgstr ""
+msgstr "羅索曼"
 
 msgid "Saraj"
-msgstr ""
+msgstr "薩拉伊"
 
 msgid "Sveti Nikole"
-msgstr ""
+msgstr "聖尼古萊"
 
 msgid "Sopište"
-msgstr ""
+msgstr "索皮什泰"
 
 msgid "Star Dojran"
-msgstr ""
+msgstr "舊多伊蘭"
 
 msgid "Staro Nagoričane"
-msgstr ""
+msgstr "舊納戈里查內"
 
 msgid "Struga"
-msgstr ""
+msgstr "斯特魯加"
 
 msgid "Strumica"
-msgstr ""
+msgstr "斯特魯米察"
 
 msgid "Studeničani"
-msgstr ""
+msgstr "斯圖代尼查尼"
 
 msgid "Tearce"
-msgstr ""
+msgstr "泰阿爾采"
 
 msgid "Tetovo"
-msgstr ""
+msgstr "泰托沃"
 
 msgid "Centar"
-msgstr ""
+msgstr "岑塔爾"
 
 msgid "Centar-Župa"
-msgstr ""
+msgstr "中茹帕"
 
 msgid "Čair"
-msgstr ""
+msgstr "查伊爾"
 
 msgid "Čaška"
-msgstr ""
+msgstr "查什卡"
 
 msgid "Češinovo-Obleševo"
-msgstr ""
+msgstr "切希諾沃-奧布萊舍沃"
 
 msgid "Čučer-Sandevo"
-msgstr ""
+msgstr "丘切爾桑代沃"
 
 msgid "Štip"
-msgstr ""
+msgstr "什蒂普"
 
 msgid "Šuto Orizari"
-msgstr ""
+msgstr "舒托奧里扎里"
 
 msgid "Macedonian identity card number"
-msgstr ""
+msgstr "馬其頓身份證號碼"
 
 msgid "A Macedonian municipality (2 character code)"
-msgstr ""
+msgstr "馬其頓市鎮（兩字元代號）"
 
 msgid "Unique master citizen number (13 digits)"
 msgstr ""
 
 msgid "Enter a valid postal code in format AAA 0000."
-msgstr ""
+msgstr "輸入格式為 AAA 0000 的有效郵遞區號。"
 
 msgid "Enter a valid zip code in the format XXXXX."
-msgstr ""
+msgstr "輸入格式為 XXXXX 的有效郵遞區號。"
 
 msgid "Enter a valid RFC."
-msgstr ""
+msgstr "輸入有效的 RFC。"
 
 msgid "Invalid checksum for RFC."
-msgstr ""
+msgstr "無效的 RFC 核對和。"
 
 msgid "Enter a valid CLABE."
-msgstr ""
+msgstr "輸入有效的 CLABE。"
 
 msgid "Invalid checksum for CLABE."
-msgstr ""
+msgstr "無效的 CLABE 核對和。"
 
 msgid "Enter a valid CURP."
-msgstr ""
+msgstr "輸入有效的 CURP。"
 
 msgid "Invalid checksum for CURP."
-msgstr ""
+msgstr "無效的 CURP 核對和。"
 
 msgid "Enter a valid Social Security Number."
-msgstr ""
+msgstr "輸入有效的社會安全號碼。"
 
 msgid "Invalid checksum for Social Security Number."
-msgstr ""
+msgstr "無效的社會安全號碼核對和。"
 
-msgid "Mexico state (three uppercase letters)"
-msgstr ""
+msgid "Mexico state (three or four uppercase letters)"
+msgstr "墨西哥州（三個或四個大寫字母）"
 
 msgid "Mexico zip code"
-msgstr ""
+msgstr "墨西哥郵遞區號"
 
 msgid "Mexican RFC"
-msgstr ""
+msgstr "墨西哥 RFC"
 
 msgid "Mexican CLABE"
-msgstr ""
+msgstr "墨西哥 CLABE"
 
 msgid "Mexican CURP"
-msgstr ""
+msgstr "墨西哥 CURP"
 
 msgid "Mexican Social Security Number"
-msgstr ""
+msgstr "墨西哥社會安全號碼"
 
 msgid "Aguascalientes"
-msgstr "阿瓜斯卡連特斯"
+msgstr "阿瓜斯卡連特斯州"
 
 msgid "Baja California"
 msgstr "下加利福尼亞州"
@@ -6030,152 +6524,434 @@ msgstr "南下加利福尼亞州"
 msgid "Campeche"
 msgstr "坎佩切州"
 
+msgid "Ciudad de México"
+msgstr "墨西哥城"
+
 msgid "Chihuahua"
-msgstr "奇瓦瓦"
+msgstr "契瓦瓦州"
 
 msgid "Chiapas"
 msgstr "恰帕斯州"
 
 msgid "Coahuila"
-msgstr "科阿韋拉州"
+msgstr "科亞維拉州"
 
 msgid "Colima"
-msgstr "科利馬"
-
-msgid "Distrito Federal"
-msgstr "聯邦區"
+msgstr "科利馬州"
 
 msgid "Durango"
-msgstr "杜蘭戈"
+msgstr "杜蘭哥州"
 
 msgid "Guerrero"
 msgstr "格雷羅州"
 
 msgid "Guanajuato"
-msgstr "瓜納華托"
+msgstr "瓜納華托州"
 
 msgid "Hidalgo"
-msgstr "伊達爾戈"
+msgstr "伊達哥州"
 
 msgid "Jalisco"
-msgstr "哈利斯科"
+msgstr "哈利斯科州"
 
 msgid "Estado de México"
-msgstr ""
+msgstr "墨西哥州"
 
 msgid "Michoacán"
-msgstr "米却肯"
+msgstr "米卻肯州"
 
 msgid "Morelos"
-msgstr "莫雷洛斯"
+msgstr "莫雷洛斯州"
 
 msgid "Nayarit"
-msgstr "納亞里特"
+msgstr "納亞里特州"
 
 msgid "Nuevo León"
-msgstr "新萊昂"
+msgstr "新雷昂州"
 
 msgid "Oaxaca"
 msgstr "瓦哈卡州"
 
 msgid "Puebla"
-msgstr "普埃布拉"
+msgstr "普埃布拉州"
 
 msgid "Querétaro"
-msgstr "克雷塔羅"
+msgstr "克雷塔羅州"
 
 msgid "Quintana Roo"
-msgstr "金塔納羅奧"
+msgstr "金塔納羅奧州"
 
 msgid "Sinaloa"
 msgstr "錫那羅亞州"
 
 msgid "San Luis Potosí"
-msgstr "聖路易斯波托西"
+msgstr "聖路易斯波托西州"
 
 msgid "Sonora"
-msgstr "索諾拉"
+msgstr "索諾拉州"
 
 msgid "Tabasco"
-msgstr "塔巴斯科"
+msgstr "塔巴斯科州"
 
 msgid "Tamaulipas"
-msgstr "塔毛利帕斯"
+msgstr "塔毛利帕斯州"
 
 msgid "Tlaxcala"
-msgstr "特拉斯卡拉"
+msgstr "特拉斯卡拉州"
 
 msgid "Veracruz"
-msgstr "韋拉克魯斯"
+msgstr "維拉克魯茲州"
 
 msgid "Yucatán"
-msgstr "尤卡坦"
+msgstr "猶加敦州"
 
 msgid "Zacatecas"
-msgstr "薩卡特卡斯"
+msgstr "薩卡特卡斯州"
+
+msgid "Invalid MyKad number."
+msgstr "無效的 MyKad 號碼。"
 
 msgid "Dutch zipcode"
-msgstr ""
+msgstr "荷蘭郵遞區號"
 
 msgid "Dutch province"
-msgstr ""
+msgstr "荷蘭省份"
 
 msgid "Dutch social security number (BSN)"
-msgstr ""
+msgstr "荷蘭社會安全號碼 (BSN)"
+
+msgid "Dutch license plate"
+msgstr "荷蘭車牌"
 
 msgid "Drenthe"
 msgstr "德倫特省"
 
 msgid "Flevoland"
-msgstr "弗萊福蘭"
+msgstr "夫利佛蘭省"
 
 msgid "Fryslân"
-msgstr ""
+msgstr "菲士蘭省"
 
 msgid "Gelderland"
-msgstr "吉德蘭省"
+msgstr "海爾德蘭省"
 
 msgid "Groningen"
-msgstr "格羅寧根"
+msgstr "格羅寧根省"
 
 msgid "Noord-Brabant"
-msgstr "北布拉班特"
+msgstr "北布拉邦省"
 
 msgid "Noord-Holland"
-msgstr "北荷蘭"
+msgstr "北荷蘭省"
 
 msgid "Overijssel"
-msgstr "上艾瑟爾"
+msgstr "上愛塞省"
 
 msgid "Utrecht"
-msgstr "烏特勒支"
+msgstr "烏特勒支省"
 
 msgid "Zeeland"
-msgstr "西蘭省"
+msgstr "澤蘭省"
 
 msgid "Zuid-Holland"
 msgstr "南荷蘭"
 
 msgid "Enter a valid BSN."
-msgstr ""
+msgstr "輸入有效的 BSN。"
+
+msgid "Enter a valid license plate"
+msgstr "輸入有效的車牌"
 
 msgid "Enter a valid Norwegian social security number."
 msgstr "請輸入一個有效的挪威社會保險號碼。"
 
 msgid "Enter a valid Norwegian bank account number."
-msgstr ""
+msgstr "輸入有效的挪威銀行帳號。"
 
 msgid "Invalid control digit. Enter a valid Norwegian bank account number."
 msgstr ""
 
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
+msgstr "無效長度。挪威銀行帳號的長度為 11 位數。"
+
+msgid "Enter a postal code in format XXXXX"
+msgstr "輸入格式為 XXXXX 的郵遞區號"
+
+msgid "Bhaktapur"
+msgstr "巴克塔普爾"
+
+msgid "Dhading"
+msgstr "達丁"
+
+msgid "Kathmandu"
+msgstr "加德滿都"
+
+msgid "Kavrepalanchok"
+msgstr "巴格馬蒂"
+
+msgid "Lalitpur"
+msgstr "拉利特普爾"
+
+msgid "Nuwakot"
+msgstr "努瓦闊特"
+
+msgid "Rasuwa"
+msgstr "拉蘇瓦"
+
+msgid "Sindhupalchok"
+msgstr "辛杜帕爾喬克"
+
+msgid "Banke"
+msgstr "班凱"
+
+msgid "Bardiya"
+msgstr "巴爾迪阿"
+
+msgid "Dailekh"
+msgstr "代萊克"
+
+msgid "Jajarkot"
+msgstr "扎澤爾闊特"
+
+msgid "Surkhet"
+msgstr "蘇爾凱特"
+
+msgid "Baglung"
+msgstr "巴格隆"
+
+msgid "Mustang"
+msgstr "木斯塘"
+
+msgid "Myagdi"
+msgstr "莫雅格迪"
+
+msgid "Parbat"
+msgstr "帕爾巴特"
+
+msgid "Gorkha"
+msgstr "廓爾喀"
+
+msgid "Kaski"
+msgstr "卡斯基"
+
+msgid "Lamjung"
+msgstr "拉姆瓊"
+
+msgid "Manang"
+msgstr "馬南"
+
+msgid "Syangja"
+msgstr "錫安賈"
+
+msgid "Tanahu"
 msgstr ""
+
+msgid "Dhanusa"
+msgstr ""
+
+msgid "Dholkha"
+msgstr ""
+
+msgid "Mahottari"
+msgstr ""
+
+msgid "Ramechhap"
+msgstr ""
+
+msgid "Sarlahi"
+msgstr ""
+
+msgid "Sindhuli"
+msgstr "辛杜里"
+
+msgid "Dolpa"
+msgstr "Dolpa"
+
+msgid "Humla"
+msgstr ""
+
+msgid "Jumla"
+msgstr ""
+
+msgid "Kalikot"
+msgstr ""
+
+msgid "Mugu"
+msgstr ""
+
+msgid "Bhojpur"
+msgstr ""
+
+msgid "Dhankuta"
+msgstr ""
+
+msgid "Morang"
+msgstr ""
+
+msgid "Sankhuwasabha"
+msgstr ""
+
+msgid "Sunsari"
+msgstr ""
+
+msgid "Terhathum"
+msgstr ""
+
+msgid "Arghakhanchi"
+msgstr ""
+
+msgid "Gulmi"
+msgstr ""
+
+msgid "Kapilvastu"
+msgstr ""
+
+msgid "Nawalparasi"
+msgstr ""
+
+msgid "Palpa"
+msgstr "帕爾帕"
+
+msgid "Rupandehi"
+msgstr "魯潘德希"
+
+msgid "Baitadi"
+msgstr "拜塔迪"
+
+msgid "Dadeldhura"
+msgstr "達德爾杜拉"
+
+msgid "Darchula"
+msgstr "達爾朱拉"
+
+msgid "Kanchanpur"
+msgstr "康贊普爾"
+
+msgid "Jhapa"
+msgstr "賈帕"
+
+msgid "Panchthar"
+msgstr "潘奇塔爾"
+
+msgid "Taplejung"
+msgstr "塔普勒瓊"
+
+msgid "Bara"
+msgstr "巴拉"
+
+msgid "Chitwan"
+msgstr "奇特旺"
+
+msgid "Makwanpur"
+msgstr "馬克萬普爾"
+
+msgid "Parsa"
+msgstr "帕爾薩"
+
+msgid "Rautahat"
+msgstr "勞塔哈特"
+
+msgid "Dang Deukhuri"
+msgstr ""
+
+msgid "Pyuthan"
+msgstr "皮烏坦"
+
+msgid "Rolpa"
+msgstr "羅爾帕"
+
+msgid "Rukum"
+msgstr "魯庫姆"
+
+msgid "Salyan"
+msgstr "沙利揚"
+
+msgid "Khotang"
+msgstr "科塘"
+
+msgid "Okhaldhunga"
+msgstr "奧卡爾東加"
+
+msgid "Saptari"
+msgstr "薩普塔里"
+
+msgid "Siraha"
+msgstr "錫拉哈"
+
+msgid "Solukhumbu"
+msgstr "索盧坤布"
+
+msgid "Udayapur"
+msgstr "烏達亞普爾"
+
+msgid "Achham"
+msgstr "阿查姆"
+
+msgid "Bajhang"
+msgstr "巴章"
+
+msgid "Bajura"
+msgstr "巴朱拉"
+
+msgid "Doti"
+msgstr "多蒂"
+
+msgid "Kailali"
+msgstr "凱拉利"
+
+msgid "Bagmati"
+msgstr "巴格馬蒂"
+
+msgid "Gandaki"
+msgstr "甘達基"
+
+msgid "Karnali"
+msgstr "格爾納利"
+
+msgid "Lumbini"
+msgstr "藍毗尼"
+
+msgid "Koshi"
+msgstr "戈希"
+
+msgid "Madhesh"
+msgstr "馬德西"
+
+msgid "Sudurpaschim"
+msgstr "遠西"
+
+msgid "Bheri"
+msgstr "佩里"
+
+msgid "Dhawalagiri"
+msgstr "道拉吉里"
+
+msgid "Janakpur"
+msgstr "賈納克普爾"
+
+msgid "Mahakali"
+msgstr "馬哈卡利"
+
+msgid "Mechi"
+msgstr "梅吉"
+
+msgid "Narayani"
+msgstr "納拉亞尼"
+
+msgid "Rapti"
+msgstr "拉布蒂"
+
+msgid "Sagarmatha"
+msgstr "薩加瑪塔"
+
+msgid "Seti"
+msgstr "塞蒂"
 
 msgid "Invalid post code."
-msgstr ""
+msgstr "無效郵遞區號。"
 
 msgid "Invalid bank account number."
-msgstr ""
+msgstr "無效的銀行帳號。"
 
 msgid "Far North District"
 msgstr ""
@@ -6304,7 +7080,7 @@ msgid "Hutt"
 msgstr ""
 
 msgid "Wellington"
-msgstr ""
+msgstr "威靈頓"
 
 msgid "Tasman District"
 msgstr ""
@@ -6373,55 +7149,55 @@ msgid "Gore District"
 msgstr ""
 
 msgid "Invercargill"
-msgstr ""
+msgstr "因弗卡吉爾"
 
 msgid "Taranaki"
-msgstr ""
+msgstr "塔蘭納基"
 
 msgid "Hawke's Bay"
-msgstr ""
+msgstr "霍克灣"
 
 msgid "Marlborough"
-msgstr ""
+msgstr "馬爾堡"
 
 msgid "Canterbury"
-msgstr ""
+msgstr "坎特伯雷"
 
 msgid "South Canterbury"
-msgstr ""
+msgstr "南坎特伯雷"
 
 msgid "Westland"
-msgstr ""
+msgstr "Westland"
 
 msgid "Otago"
-msgstr ""
+msgstr "奧塔哥"
 
 msgid "Southland"
-msgstr ""
+msgstr "南地大區"
 
 msgid "Chatham Islands"
-msgstr ""
+msgstr "查塔姆群島"
 
 msgid "Northland"
-msgstr ""
+msgstr "北地"
 
 msgid "Waikato"
-msgstr ""
+msgstr "懷卡托"
 
 msgid "Bay of Plenty"
-msgstr ""
+msgstr "豐盛灣"
 
 msgid "Gisborne"
-msgstr ""
+msgstr "吉斯伯恩"
 
 msgid "Manawatu-Wanganui"
-msgstr ""
+msgstr "馬納瓦圖-旺阿努伊 "
 
 msgid "Tasman"
-msgstr ""
+msgstr "塔斯曼"
 
 msgid "West Coast"
-msgstr ""
+msgstr "西岸大區"
 
 msgid "This field requires 8 digits."
 msgstr "這個欄位是必須是 8 位數字。"
@@ -6430,43 +7206,43 @@ msgid "This field requires 11 digits."
 msgstr "這個欄位是必須是 11 位數字。"
 
 msgid "Enter a 5 digit postcode."
-msgstr ""
+msgstr "輸入 5 位數的郵政編碼。"
 
 msgid "Pakistani State"
 msgstr ""
 
 msgid "Pakistani Postcode"
-msgstr ""
+msgstr "巴基斯坦郵政編碼"
 
 msgid "Azad Jammu & Kashmir"
-msgstr ""
+msgstr "自由查謨和喀什米爾"
 
 msgid "Balochistan"
-msgstr ""
+msgstr "俾路支省"
 
 msgid "Federally Administered Tribal Areas"
-msgstr ""
+msgstr "聯邦直轄部落地區"
 
 msgid "Gilgit-Baltistan"
-msgstr ""
+msgstr "吉爾吉特-巴爾蒂斯坦"
 
 msgid "Islamabad"
-msgstr ""
+msgstr "伊斯蘭瑪巴德"
 
 msgid "Khyber Pakhtunkhwa"
-msgstr ""
+msgstr "開伯爾-普什圖省"
 
 msgid "Punjab"
-msgstr ""
+msgstr "旁遮普省"
 
 msgid "Sindh"
-msgstr ""
+msgstr "信德省"
 
 msgid "National Identification Number consists of 11 digits."
 msgstr "國家身份證號碼由 11 位數字值組成。"
 
 msgid "Wrong checksum for the National Identification Number."
-msgstr "國家身份證號碼校驗和錯誤。"
+msgstr "國家身份證號碼核對和錯誤。"
 
 msgid "The National Identification Number contains an invalid birth date."
 msgstr ""
@@ -6481,146 +7257,182 @@ msgid ""
 "Enter a tax number field (NIP) in the format XXX-XXX-XX-XX, XXX-XX-XX-XXX or "
 "XXXXXXXXXX."
 msgstr ""
+"輸入稅號欄位 (NIP)，格式為 XXX-XXX-XX-XX,、XXX-XX-XX-XXX 或 XXXXXXXXXX。"
 
 msgid "Wrong checksum for the Tax Number (NIP)."
-msgstr "税號（NIP）校驗和錯誤。"
+msgstr "錯誤的稅號（NIP）核對和。"
 
 msgid "National Business Register Number (REGON) consists of 9 or 14 digits."
 msgstr "國家身分證號碼必須由 9 或 14 位數組成。"
 
 msgid "Wrong checksum for the National Business Register Number (REGON)."
-msgstr "國家商標註冊號碼（REGON）由 7 位或 9 位数字組成。"
+msgstr "錯誤的國家商業註冊號碼（REGON）核對和。"
 
 msgid "Enter a postal code in the format XX-XXX."
-msgstr "用 XX-XXX 的格式輸入郵遞區號。"
+msgstr "輸入格式為 XX-XXX 的郵遞區號。"
 
 msgid "Lower Silesian"
 msgstr "下西里西亞省"
 
 msgid "Kuyavian-Pomeranian"
-msgstr "庫亞維-濱海省"
+msgstr "庫亞維濱海省"
 
 msgid "Lublin"
-msgstr "盧布林"
+msgstr "盧布林省"
 
 msgid "Lubusz"
 msgstr "盧布斯卡省"
 
 msgid "Lodz"
-msgstr "洛次"
+msgstr "羅茲省"
 
 msgid "Lesser Poland"
 msgstr "小波蘭省"
 
 msgid "Masovian"
-msgstr "瑪佐維亞"
+msgstr "馬索維亞省"
 
 msgid "Opole"
-msgstr "奧波萊"
+msgstr "奧波列省"
 
 msgid "Subcarpathian"
-msgstr "外喀爾巴阡州"
+msgstr "喀爾巴阡山省"
 
 msgid "Podlasie"
-msgstr "波德拉謝"
+msgstr "波德拉謝省"
 
 msgid "Pomeranian"
-msgstr "波美拉尼亞"
+msgstr "波美拉尼亞省"
 
 msgid "Silesian"
-msgstr "西利西亞"
+msgstr "西利西亞省"
 
 msgid "Swietokrzyskie"
 msgstr "聖十字省"
 
 msgid "Warmian-Masurian"
-msgstr "瓦爾米亞-馬祖里"
+msgstr "瓦爾米亞-馬祖里省"
 
 msgid "Greater Poland"
-msgstr "大波蘭"
+msgstr "大波蘭省"
 
 msgid "West Pomeranian"
 msgstr "西波美拉尼亞省"
 
 msgid "The specified value is not a valid Citizen Card number."
-msgstr ""
+msgstr "給定的值不是有效的市民卡號碼。"
 
 msgid ""
 "Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X "
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
+"公民卡號碼的格式為 XXXXXXXXXYYX 或 XXXXXXXX-XYYX（其中 X 為數字、Y 為字母數字"
+"字元）。"
 
 msgid "The specified number is not a valid Social Security number."
-msgstr ""
+msgstr "給定的號碼不是有效的社會安全號碼。"
 
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either "
 "1 or 2 and Y is any other digit)."
 msgstr ""
+"社會安全號碼的格式必須是 XYYYYYYYY（其中 X 是 1 或 2、Y 是任何其他數字）。"
 
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9 "
 "and Y is any other digit)."
 msgstr ""
+"郵遞區號的格式必須是 XYYYY-YYY（其中 X 是介於 1 和 9 之間的數字、Y 是任何其他"
+"數字）。"
 
 msgid "Aveiro"
-msgstr ""
+msgstr "阿威羅"
 
 msgid "Beja"
-msgstr ""
+msgstr "貝雅"
 
 msgid "Braga"
-msgstr ""
+msgstr "布拉加"
 
 msgid "Bragança"
-msgstr ""
+msgstr "布拉干薩"
 
 msgid "Castelo Branco"
-msgstr ""
+msgstr "布朗庫堡"
 
 msgid "Coimbra"
-msgstr ""
+msgstr "科英布拉"
 
 msgid "Évora"
-msgstr ""
+msgstr "埃武拉"
 
 msgid "Faro"
-msgstr ""
+msgstr "法魯"
 
 msgid "Guarda"
-msgstr ""
+msgstr "瓜達"
 
 msgid "Leiria"
-msgstr ""
+msgstr "萊里亞"
 
 msgid "Lisboa"
-msgstr ""
+msgstr "里斯本"
 
 msgid "Portalegre"
-msgstr ""
+msgstr "波塔萊格雷"
 
 msgid "Porto"
-msgstr ""
+msgstr "波爾圖"
 
 msgid "Santarém"
-msgstr ""
+msgstr "聖塔倫"
 
 msgid "Setúbal"
-msgstr ""
+msgstr "塞圖巴爾"
 
 msgid "Viana do Castelo"
-msgstr ""
+msgstr "維亞納堡"
 
 msgid "Vila Real"
-msgstr ""
+msgstr "雷阿爾城"
 
 msgid "Viseu"
-msgstr ""
+msgstr "維塞烏"
 
 msgid "Região Autónoma da Madeira"
-msgstr ""
+msgstr "馬德拉自治區"
 
 msgid "Região Autónoma dos Açores"
+msgstr "亞速自治區"
+
+msgid "Enter a valid Qatari National ID number"
+msgstr ""
+
+msgid "Qatari National ID number"
+msgstr ""
+
+msgid "Qatar municipality"
+msgstr ""
+
+msgid "Al Khor and Al Dakhira"
+msgstr ""
+
+msgid "Al Rayyan"
+msgstr ""
+
+msgid "Al Shamal"
+msgstr ""
+
+msgid "Al Sheehaniya"
+msgstr ""
+
+msgid "Al Wakrah"
+msgstr ""
+
+msgid "Al Daayen"
+msgstr ""
+
+msgid "Umm Slal"
 msgstr ""
 
 msgid "Enter a valid CIF."
@@ -6630,289 +7442,289 @@ msgid "Enter a valid CNP."
 msgstr "輸入有效的 CNP。"
 
 msgid "Enter a valid postal code in the format XXXXXX"
-msgstr "用 XXXXXX 的格式輸入郵遞區號。"
+msgstr "輸入格式為 XXXXXX 的有效郵遞區號。"
 
 msgid "Enter a postal code in the format XXXXXX."
-msgstr ""
+msgstr "輸入格式為 XXXXXX 的郵遞區號。"
 
 msgid "Enter a passport number in the format XXXX XXXXXX."
-msgstr ""
+msgstr "輸入格式為 XXXX XXXXXX 的護照號碼。"
 
 msgid "Enter a passport number in the format XX XXXXXXX."
-msgstr ""
+msgstr "輸入格式為 XX XXXXXXX 的護照號碼。"
 
 msgid "Central Federal County"
-msgstr ""
+msgstr "中央聯邦管區"
 
 msgid "South Federal County"
-msgstr ""
+msgstr "南部聯邦管區"
 
 msgid "North-West Federal County"
-msgstr ""
+msgstr "西北部聯邦管區"
 
 msgid "Far-East Federal County"
-msgstr ""
+msgstr "遠東聯邦管區"
 
 msgid "Siberian Federal County"
-msgstr ""
+msgstr "西伯利亞聯邦管區"
 
 msgid "Ural Federal County"
-msgstr ""
+msgstr "烏拉聯邦管區"
 
 msgid "Privolzhsky Federal County"
-msgstr ""
+msgstr "伏爾加聯邦管區"
 
 msgid "North-Caucasian Federal County"
-msgstr ""
+msgstr "北高加索聯邦管區"
 
 msgid "Moskva"
-msgstr ""
+msgstr "莫斯科市"
 
 msgid "Saint-Peterburg"
-msgstr ""
+msgstr "聖彼得堡市"
 
 msgid "Moskovskaya oblast'"
-msgstr ""
+msgstr "莫斯科州"
 
 msgid "Adygeya, Respublika"
-msgstr ""
+msgstr "阿迪格共和國"
 
 msgid "Bashkortostan, Respublika"
-msgstr ""
+msgstr "巴什科爾托斯坦共和國"
 
 msgid "Buryatia, Respublika"
-msgstr ""
+msgstr "布里亞特共和國"
 
 msgid "Altay, Respublika"
-msgstr ""
+msgstr "阿爾泰共和國"
 
 msgid "Dagestan, Respublika"
-msgstr ""
+msgstr "達吉斯坦共和國"
 
 msgid "Ingushskaya Respublika"
-msgstr ""
+msgstr "印古什共和國"
 
 msgid "Kabardino-Balkarskaya Respublika"
-msgstr ""
+msgstr "卡巴爾達-巴爾卡爾共和國"
 
 msgid "Kalmykia, Respublika"
-msgstr ""
+msgstr "卡爾梅克共和國"
 
 msgid "Karachaevo-Cherkesskaya Respublika"
-msgstr ""
+msgstr "卡拉恰伊-切爾克斯共和國"
 
 msgid "Karelia, Respublika"
-msgstr ""
+msgstr "卡累利阿共和國"
 
 msgid "Komi, Respublika"
-msgstr ""
+msgstr "科米共和國"
 
 msgid "Mariy Ehl, Respublika"
-msgstr ""
+msgstr "莫爾多瓦共和國"
 
 msgid "Mordovia, Respublika"
-msgstr ""
+msgstr "莫爾多維亞共和國"
 
 msgid "Sakha, Respublika (Yakutiya)"
-msgstr ""
+msgstr "薩哈共和國（雅庫特）"
 
 msgid "Severnaya Osetia, Respublika (Alania)"
-msgstr ""
+msgstr "北奧塞提亞-阿蘭共和國"
 
 msgid "Tatarstan, Respublika"
-msgstr ""
+msgstr "韃靼斯坦共和國"
 
 msgid "Tyva, Respublika (Tuva)"
-msgstr ""
+msgstr "圖瓦共和國"
 
 msgid "Udmurtskaya Respublika"
-msgstr ""
+msgstr "烏德穆爾特共和國"
 
 msgid "Khakassiya, Respublika"
-msgstr ""
+msgstr "哈卡斯共和國"
 
 msgid "Chechenskaya Respublika"
-msgstr ""
+msgstr "車臣共和國"
 
 msgid "Chuvashskaya Respublika"
-msgstr ""
+msgstr "楚瓦什共和國"
 
 msgid "Altayskiy Kray"
-msgstr ""
+msgstr "阿爾泰邊疆區"
 
 msgid "Zabaykalskiy Kray"
-msgstr ""
+msgstr "外貝加爾邊疆區"
 
 msgid "Kamchatskiy Kray"
-msgstr ""
+msgstr "堪察加邊疆區"
 
 msgid "Krasnodarskiy Kray"
-msgstr ""
+msgstr "克拉斯諾達爾邊疆區"
 
 msgid "Krasnoyarskiy Kray"
-msgstr ""
+msgstr "克拉斯諾亞爾斯克邊疆區"
 
 msgid "Permskiy Kray"
-msgstr ""
+msgstr "彼爾姆邊疆區"
 
 msgid "Primorskiy Kray"
-msgstr ""
+msgstr "濱海邊疆區"
 
 msgid "Stavropol'siyy Kray"
-msgstr ""
+msgstr "斯塔夫羅波爾邊疆區"
 
 msgid "Khabarovskiy Kray"
-msgstr ""
+msgstr "哈巴羅夫斯克邊疆區"
 
 msgid "Amurskaya oblast'"
-msgstr ""
+msgstr "阿穆爾州"
 
 msgid "Arkhangel'skaya oblast'"
-msgstr ""
+msgstr "阿爾漢格爾斯克州"
 
 msgid "Astrakhanskaya oblast'"
-msgstr ""
+msgstr "阿斯特拉罕州"
 
 msgid "Belgorodskaya oblast'"
-msgstr ""
+msgstr "別爾哥羅德州"
 
 msgid "Bryanskaya oblast'"
-msgstr ""
+msgstr "布良斯克州"
 
 msgid "Vladimirskaya oblast'"
-msgstr ""
+msgstr "弗拉基米爾州"
 
 msgid "Volgogradskaya oblast'"
-msgstr ""
+msgstr "伏爾加格勒州"
 
 msgid "Vologodskaya oblast'"
-msgstr ""
+msgstr "沃洛格達州"
 
 msgid "Voronezhskaya oblast'"
-msgstr ""
+msgstr "沃羅涅日州"
 
 msgid "Ivanovskaya oblast'"
-msgstr ""
+msgstr "伊萬諾沃州"
 
 msgid "Irkutskaya oblast'"
-msgstr ""
+msgstr "伊爾庫次克州"
 
 msgid "Kaliningradskaya oblast'"
-msgstr ""
+msgstr "加里寧格勒州"
 
 msgid "Kaluzhskaya oblast'"
-msgstr ""
+msgstr "卡盧加州"
 
 msgid "Kemerovskaya oblast'"
-msgstr ""
+msgstr "科麥羅沃州"
 
 msgid "Kirovskaya oblast'"
-msgstr ""
+msgstr "基洛夫州"
 
 msgid "Kostromskaya oblast'"
-msgstr ""
+msgstr "科斯特羅馬州"
 
 msgid "Kurganskaya oblast'"
-msgstr ""
+msgstr "庫爾干州"
 
 msgid "Kurskaya oblast'"
-msgstr ""
+msgstr "庫斯克州"
 
 msgid "Leningradskaya oblast'"
-msgstr ""
+msgstr "列寧格勒州"
 
 msgid "Lipeckaya oblast'"
-msgstr ""
+msgstr "利佩茨克州"
 
 msgid "Magadanskaya oblast'"
-msgstr ""
+msgstr "馬加丹州"
 
 msgid "Murmanskaya oblast'"
-msgstr ""
+msgstr "莫曼斯克州"
 
 msgid "Nizhegorodskaja oblast'"
-msgstr ""
+msgstr "下諾夫哥羅德州"
 
 msgid "Novgorodskaya oblast'"
-msgstr ""
+msgstr "諾夫哥羅德州"
 
 msgid "Novosibirskaya oblast'"
-msgstr ""
+msgstr "新西伯利亞州"
 
 msgid "Omskaya oblast'"
-msgstr ""
+msgstr "鄂木斯克州"
 
 msgid "Orenburgskaya oblast'"
-msgstr ""
+msgstr "奧倫堡州"
 
 msgid "Orlovskaya oblast'"
-msgstr ""
+msgstr "奧廖爾州"
 
 msgid "Penzenskaya oblast'"
-msgstr ""
+msgstr "朋札州"
 
 msgid "Pskovskaya oblast'"
-msgstr ""
+msgstr "普斯科夫州"
 
 msgid "Rostovskaya oblast'"
-msgstr ""
+msgstr "羅斯托夫州"
 
 msgid "Rjazanskaya oblast'"
-msgstr ""
+msgstr "梁贊州"
 
 msgid "Samarskaya oblast'"
-msgstr ""
+msgstr "薩馬拉州"
 
 msgid "Saratovskaya oblast'"
-msgstr ""
+msgstr "薩拉托夫州"
 
 msgid "Sakhalinskaya oblast'"
-msgstr ""
+msgstr "薩哈林州"
 
 msgid "Sverdlovskaya oblast'"
-msgstr ""
+msgstr "斯維爾德洛夫斯克州"
 
 msgid "Smolenskaya oblast'"
-msgstr ""
+msgstr "斯摩倫斯克州"
 
 msgid "Tambovskaya oblast'"
-msgstr ""
+msgstr "坦波夫州"
 
 msgid "Tverskaya oblast'"
-msgstr ""
+msgstr "特維爾州"
 
 msgid "Tomskaya oblast'"
-msgstr ""
+msgstr "托木斯克州"
 
 msgid "Tul'skaya oblast'"
-msgstr ""
+msgstr "圖拉州"
 
 msgid "Tyumenskaya oblast'"
-msgstr ""
+msgstr "秋明州"
 
 msgid "Ul'ianovskaya oblast'"
-msgstr ""
+msgstr "烏里揚諾夫斯克州"
 
 msgid "Chelyabinskaya oblast'"
-msgstr ""
+msgstr "車里雅賓斯克州"
 
 msgid "Yaroslavskaya oblast'"
-msgstr ""
+msgstr "雅羅斯拉夫爾州"
 
 msgid "Evreyskaya avtonomnaja oblast'"
-msgstr ""
+msgstr "猶太自治州"
 
 msgid "Neneckiy autonomnyy okrug"
-msgstr ""
+msgstr "涅涅茨自治區"
 
 msgid "Khanty-Mansiyskiy avtonomnyy okrug - Yugra"
-msgstr ""
+msgstr "漢特-曼西自治區"
 
 msgid "Chukotskiy avtonomnyy okrug"
-msgstr ""
+msgstr "楚科奇自治區"
 
 msgid "Yamalo-Neneckiy avtonomnyy okrug"
-msgstr ""
+msgstr "亞馬爾-涅涅茨自治區"
 
 msgid "Enter a valid Swedish organisation number."
 msgstr "輸入有效的 SoFi 號碼"
@@ -6924,7 +7736,7 @@ msgid "Co-ordination numbers are not allowed."
 msgstr "請勿輸入配位數。"
 
 msgid "Enter a Swedish postal code in the format XXXXX."
-msgstr "用 XX-XXX 的格式輸入郵遞區號。"
+msgstr "輸入格式為 XXXXX 的瑞典郵遞區號。"
 
 msgid "Stockholm"
 msgstr "斯德哥爾摩省"
@@ -6990,19 +7802,19 @@ msgid "Jämtland"
 msgstr "耶姆特蘭省"
 
 msgid "Enter a 6-digit postal code."
-msgstr ""
+msgstr "輸入 6 位數的郵遞區號。"
 
 msgid "Invalid NRIC/FIN."
-msgstr ""
+msgstr "無效的 NRIC/FIN。"
 
 msgid "The first 7 digits of the EMSO must represent a valid past date."
-msgstr ""
+msgstr "EMSO 的前 7 位數必須為一個有效的過去日期。"
 
 msgid "The EMSO is not valid."
-msgstr ""
+msgstr "EMSO 無效。"
 
 msgid "Enter a valid tax number in form SIXXXXXXXX"
-msgstr ""
+msgstr "在表格 SIXXXXXXXX 中輸入有效的稅號"
 
 msgid "Banska Bystrica"
 msgstr "班斯卡·比斯特理察"
@@ -7266,73 +8078,73 @@ msgid "Zilina region"
 msgstr "日利納州"
 
 msgid "Ariana"
-msgstr ""
+msgstr "艾爾亞內省"
 
 msgid "Ben Arous"
-msgstr ""
+msgstr "本阿魯斯省"
 
 msgid "Bizert"
-msgstr ""
+msgstr "比塞大省"
 
 msgid "Gabes"
-msgstr ""
+msgstr "加貝斯省"
 
 msgid "Gafsa"
-msgstr ""
+msgstr "加夫薩省"
 
 msgid "Jendouba"
-msgstr ""
+msgstr "堅杜拜省"
 
 msgid "Kairouan"
-msgstr ""
+msgstr "凱魯萬省"
 
 msgid "Kasserine"
-msgstr ""
+msgstr "卡塞林省"
 
 msgid "Kebili"
-msgstr ""
+msgstr "吉比利省"
 
 msgid "Kef"
-msgstr ""
+msgstr "卡夫省"
 
 msgid "Mahdia"
-msgstr ""
+msgstr "馬赫迪耶省"
 
 msgid "Manouba"
-msgstr ""
+msgstr "馬努巴省"
 
 msgid "Medenine"
-msgstr ""
+msgstr "梅德寧省"
 
 msgid "Monastir"
-msgstr ""
+msgstr "莫納斯提爾省"
 
 msgid "Nabeul"
-msgstr ""
+msgstr "納布勒省"
 
 msgid "Sfax"
-msgstr ""
+msgstr "斯法克斯省"
 
 msgid "Sidi Bouzid"
-msgstr ""
+msgstr "西迪布濟德省"
 
 msgid "Siliana"
-msgstr ""
+msgstr "錫勒亞奈省"
 
 msgid "Sousse"
-msgstr ""
+msgstr "蘇塞省"
 
 msgid "Tataouine"
-msgstr ""
+msgstr "泰塔溫省"
 
 msgid "Tozeur"
-msgstr ""
+msgstr "托澤爾省"
 
 msgid "Tunis"
-msgstr ""
+msgstr "突尼斯省"
 
 msgid "Zaghouan"
-msgstr ""
+msgstr "宰格萬省"
 
 msgid "Enter a valid Turkish Identification number."
 msgstr "請輸入一個有效的土耳其身份證號碼。"
@@ -7340,98 +8152,164 @@ msgstr "請輸入一個有效的土耳其身份證號碼。"
 msgid "Turkish Identification number must be 11 digits."
 msgstr "國家身份證號碼必須由 11 位數字值組成。"
 
-msgid "Enter a valid postal code."
+msgid "Changhua County"
 msgstr ""
+
+msgid "Chiayi City"
+msgstr ""
+
+msgid "Chiayi County"
+msgstr ""
+
+msgid "Hsinchu City"
+msgstr ""
+
+msgid "Hsinchu County"
+msgstr ""
+
+msgid "Hualien County"
+msgstr ""
+
+msgid "Kaohsiung City"
+msgstr ""
+
+msgid "Keelung City"
+msgstr ""
+
+msgid "Kinmen County"
+msgstr ""
+
+msgid "Lienchiang County"
+msgstr ""
+
+msgid "Miaoli County"
+msgstr ""
+
+msgid "Nantou County"
+msgstr ""
+
+msgid "New Taipei City"
+msgstr ""
+
+msgid "Penghu County"
+msgstr ""
+
+msgid "Pingtung County"
+msgstr ""
+
+msgid "Taichung City"
+msgstr ""
+
+msgid "Tainan City"
+msgstr ""
+
+msgid "Taipei City"
+msgstr ""
+
+msgid "Taitung County"
+msgstr ""
+
+msgid "Taoyuan City"
+msgstr ""
+
+msgid "Yilan County"
+msgstr ""
+
+msgid "Yunlin County"
+msgstr ""
+
+msgid "Enter a valid postal code."
+msgstr "輸入有效的郵遞區號。"
 
 msgid "Ukrainian region"
-msgstr ""
+msgstr "烏克蘭地區"
 
 msgid "Ukrainian VAT number"
-msgstr ""
+msgstr "烏克蘭增值稅號碼"
 
 msgid "Ukrainian postal code"
-msgstr ""
+msgstr "烏克蘭郵遞區號"
 
 msgid "Cherkasy Oblast"
-msgstr ""
+msgstr "切爾卡瑟州"
 
 msgid "Chernihiv Oblast"
-msgstr ""
+msgstr "切爾尼戈夫州"
 
 msgid "Chernivtsi Oblast"
-msgstr ""
+msgstr "車尼夫契州"
 
 msgid "Dnipropetrovsk Oblast"
-msgstr ""
+msgstr "聶伯彼得羅夫斯克州"
 
 msgid "Donetsk Oblast"
-msgstr ""
+msgstr "頓內茨克州"
 
 msgid "Ivano-Frankivsk Oblast"
-msgstr ""
+msgstr "伊凡諾-法蘭科夫斯克州"
 
 msgid "Kharkiv Oblast"
-msgstr ""
+msgstr "哈爾科夫州"
 
 msgid "Kherson Oblast"
-msgstr ""
+msgstr "赫爾松州"
 
 msgid "Khmelnytskyi Oblast"
-msgstr ""
+msgstr "赫梅利尼茨基州"
 
 msgid "Kirovohrad Oblast"
-msgstr ""
+msgstr "基洛夫格勒州"
 
-msgid "Kiev Oblast"
-msgstr ""
+msgid "Kyiv Oblast"
+msgstr "基輔州"
 
 msgid "Luhansk Oblast"
-msgstr ""
+msgstr "盧甘斯克州"
 
 msgid "Lviv Oblast"
-msgstr ""
+msgstr "利維夫州"
 
 msgid "Mykolaiv Oblast"
-msgstr ""
+msgstr "尼古拉耶夫州"
 
 msgid "Odessa Oblast"
-msgstr ""
+msgstr "敖得薩州"
 
 msgid "Poltava Oblast"
-msgstr ""
+msgstr "波爾塔瓦州"
 
 msgid "Rivne Oblast"
-msgstr ""
+msgstr "羅夫諾州"
 
 msgid "Sumy Oblast"
-msgstr ""
+msgstr "蘇梅州"
 
 msgid "Ternopil Oblast"
-msgstr ""
+msgstr "特諾皮爾州"
 
 msgid "Vinnytsia Oblast"
-msgstr ""
+msgstr "文尼察州"
 
 msgid "Volyn Oblast"
-msgstr ""
+msgstr "沃倫州"
 
 msgid "Zakarpattia Oblast"
-msgstr ""
+msgstr "外喀爾巴阡州"
 
 msgid "Zaporizhia Oblast"
-msgstr ""
+msgstr "札波羅熱州"
 
 msgid "Zhytomyr Oblast"
-msgstr ""
+msgstr "日托米爾州"
 
 msgid "Autonomous Republic of Crimea"
-msgstr ""
+msgstr "克里米亞自治共和國"
 
-msgid "Kiev"
-msgstr ""
+msgid "Kyiv"
+msgstr "基輔"
 
 msgid "Sevastopol"
-msgstr ""
+msgstr "塞凡堡"
 
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
 msgstr "以 XXXXX 或 XXXXX-XXXX 的格式輸入一個郵遞區號。"
@@ -7439,219 +8317,242 @@ msgstr "以 XXXXX 或 XXXXX-XXXX 的格式輸入一個郵遞區號。"
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr "以 XXX-XX-XXXX 的格式輸入一有效的美国身份證字號。"
 
+msgid ""
+"Enter a valid U.S. Individual Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+
+msgid ""
+"Enter a valid U.S. Adoption Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+
+msgid ""
+"Enter a valid U.S. taxpayer identification number in XXX-XX-XXXX format."
+msgstr ""
+
 msgid "Enter a U.S. state or territory."
 msgstr "輸入美國州名。"
 
 msgid "U.S. state (two uppercase letters)"
-msgstr "美國州名 (兩個大寫字母)"
+msgstr "美國州名（兩個大寫字母）"
 
 msgid "U.S. postal code (two uppercase letters)"
-msgstr "美國郵遞區號 (兩個大寫字母)"
+msgstr "美國郵遞區號（兩個大寫字母）"
 
 msgid "U.S. ZIP code"
-msgstr ""
+msgstr "美國郵遞區號"
 
 msgid "Social security number"
+msgstr "社會安全號碼"
+
+msgid "Individual Taxpayer Identification Number"
+msgstr ""
+
+msgid "Adoption Taxpayer Identification Number"
+msgstr ""
+
+msgid "Taxpayer Identification Number"
 msgstr ""
 
 msgid "Alabama"
-msgstr ""
+msgstr "阿拉巴馬州"
 
 msgid "Arizona"
-msgstr ""
+msgstr "亞利桑那州"
 
 msgid "Arkansas"
-msgstr ""
+msgstr "阿肯色州"
 
 msgid "California"
-msgstr ""
+msgstr "加利福尼亞州"
 
 msgid "Colorado"
-msgstr ""
+msgstr "科羅拉多州"
 
 msgid "Connecticut"
-msgstr ""
+msgstr "康乃狄克州"
 
 msgid "Delaware"
-msgstr ""
+msgstr "德拉瓦州"
 
 msgid "District of Columbia"
-msgstr ""
+msgstr "哥倫比亞特區"
 
 msgid "Florida"
-msgstr ""
+msgstr "佛羅里達州"
 
 msgctxt "US state"
 msgid "Georgia"
-msgstr ""
+msgstr "喬治亞州"
 
 msgid "Idaho"
-msgstr ""
+msgstr "愛達荷州"
 
 msgid "Illinois"
-msgstr ""
+msgstr "伊利諾州"
 
 msgid "Indiana"
-msgstr ""
+msgstr "印第安納州"
 
 msgid "Iowa"
-msgstr ""
+msgstr "愛荷華州"
 
 msgid "Kansas"
-msgstr ""
+msgstr "堪薩斯州"
 
 msgid "Kentucky"
-msgstr ""
+msgstr "肯塔基州"
 
 msgid "Louisiana"
-msgstr ""
+msgstr "路易斯安那州"
 
 msgid "Maine"
-msgstr ""
+msgstr "緬因州"
 
 msgid "Maryland"
-msgstr ""
+msgstr "馬里蘭州"
 
 msgid "Massachusetts"
-msgstr ""
+msgstr "麻薩諸塞州"
 
 msgid "Michigan"
-msgstr ""
+msgstr "密西根州"
 
 msgid "Minnesota"
-msgstr ""
+msgstr "明尼蘇達州"
 
 msgid "Mississippi"
-msgstr ""
+msgstr "密西西比州"
 
 msgid "Missouri"
-msgstr ""
+msgstr "密蘇里州"
 
 msgid "Montana"
-msgstr ""
+msgstr "蒙大拿州"
 
 msgid "Nebraska"
-msgstr ""
+msgstr "內布拉斯加州"
 
 msgid "Nevada"
-msgstr ""
+msgstr "內華達州"
 
 msgid "New Hampshire"
-msgstr ""
+msgstr "新罕布夏州"
 
 msgid "New Jersey"
-msgstr ""
+msgstr "紐澤西州"
 
 msgid "New Mexico"
-msgstr ""
+msgstr "新墨西哥州"
 
 msgid "New York"
-msgstr ""
+msgstr "紐約州"
 
 msgid "North Carolina"
-msgstr ""
+msgstr "北卡羅萊納州"
 
 msgid "North Dakota"
-msgstr ""
+msgstr "北達科他州"
 
 msgid "Ohio"
-msgstr ""
+msgstr "俄亥俄州"
 
 msgid "Oklahoma"
-msgstr ""
+msgstr "奧克拉荷馬州"
 
 msgid "Oregon"
-msgstr ""
+msgstr "俄勒岡州"
 
 msgid "Pennsylvania"
-msgstr ""
+msgstr "賓夕法尼亞州"
 
 msgid "Rhode Island"
-msgstr ""
+msgstr "羅得島州"
 
 msgid "South Carolina"
-msgstr ""
+msgstr "南卡羅來納州"
 
 msgid "South Dakota"
-msgstr ""
+msgstr "南達科他州"
 
 msgid "Tennessee"
-msgstr ""
+msgstr "田納西州"
 
 msgid "Texas"
-msgstr ""
+msgstr "德克薩斯州"
 
 msgid "Utah"
-msgstr ""
+msgstr "猶他州"
 
 msgid "Vermont"
-msgstr ""
+msgstr "佛蒙特州"
 
 msgid "Virginia"
-msgstr ""
+msgstr "弗吉尼亞州"
 
 msgid "Washington"
-msgstr ""
+msgstr "華盛頓州"
 
 msgid "West Virginia"
-msgstr ""
+msgstr "西維吉尼亞州"
 
 msgid "Wisconsin"
-msgstr ""
+msgstr "威斯康辛州"
 
 msgid "Wyoming"
-msgstr ""
+msgstr "懷俄明州"
 
 msgid "Alaska"
-msgstr ""
+msgstr "阿拉斯加州"
 
 msgid "Hawaii"
-msgstr ""
+msgstr "夏威夷州"
 
 msgid "American Samoa"
-msgstr ""
+msgstr "美屬薩摩亞"
 
 msgid "Guam"
-msgstr ""
+msgstr "關島"
 
 msgid "Northern Mariana Islands"
-msgstr ""
+msgstr "北馬里亞納群島"
 
 msgid "Puerto Rico"
-msgstr ""
+msgstr "波多黎各"
 
 msgid "Virgin Islands"
-msgstr ""
+msgstr "維京群島"
 
 msgid "Armed Forces Americas"
-msgstr ""
+msgstr "美洲武裝部隊"
 
 msgid "Armed Forces Europe"
-msgstr ""
+msgstr "歐洲武裝部隊"
 
 msgid "Armed Forces Pacific"
-msgstr ""
+msgstr "太平洋武裝部隊"
 
 msgid "Federated States of Micronesia"
-msgstr ""
+msgstr "密克羅尼西亞聯邦"
 
 msgid "Marshall Islands"
-msgstr ""
+msgstr "馬紹爾群島"
 
 msgid "Palau"
-msgstr ""
+msgstr "帛琉"
 
 msgid "Commonwealth of the Northern Mariana Islands"
-msgstr ""
+msgstr "北馬里亞納群島邦"
 
 msgid "Panama Canal Zone"
-msgstr ""
+msgstr "巴拿馬運河區"
 
 msgid "Philippine Islands"
-msgstr ""
+msgstr "菲律賓群島"
 
 msgid "Trust Territory of the Pacific Islands"
-msgstr ""
+msgstr "太平洋群島托管地"
 
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
 msgstr "以 XX-XXXXXXXX-X 或 XXXXXXXXXXXX 的格式输入一個有效的 CUIT。"
@@ -7660,109 +8561,109 @@ msgid "Enter a valid CI number."
 msgstr "輸入有效的 CI 號碼。"
 
 msgid "Región Capital"
-msgstr ""
+msgstr "首都地區"
 
 msgid "Región Central"
-msgstr ""
+msgstr "中央地區"
 
 msgid "Región de los Llanos"
-msgstr ""
+msgstr "平原地區"
 
 msgid "Región Centro Occidental"
-msgstr ""
+msgstr "中西部地區"
 
 msgid "Región Zuliana"
-msgstr ""
+msgstr "蘇利亞地區"
 
 msgid "Región de los Andes"
-msgstr ""
+msgstr "安地斯地區"
 
 msgid "Región Nor-Oriental"
-msgstr ""
+msgstr "東部地區"
 
 msgid "Región Insular"
-msgstr ""
+msgstr "島嶼區域"
 
 msgid "Región Guayana"
-msgstr ""
+msgstr "圭亞納地區"
 
 msgid "Región Sur Occidental"
-msgstr ""
+msgstr "西南地區"
 
 msgid "Amazonas"
-msgstr ""
+msgstr "亞馬遜州"
 
 msgid "Anzoátegui"
-msgstr ""
+msgstr "安索阿特吉州"
 
 msgid "Apure"
-msgstr ""
+msgstr "阿普雷州"
 
 msgid "Aragua"
-msgstr ""
+msgstr "阿拉瓜州"
 
 msgid "Barinas"
-msgstr ""
+msgstr "巴里納斯州"
 
 msgid "Bolívar"
-msgstr ""
+msgstr "玻利瓦州"
 
 msgid "Carabobo"
-msgstr ""
+msgstr "卡拉沃沃州"
 
 msgid "Cojedes"
-msgstr ""
+msgstr "科赫德斯州"
 
 msgid "Delta Amacuro"
-msgstr ""
+msgstr "阿馬庫羅三角洲州"
 
 msgid "Dependencias Federales"
-msgstr ""
+msgstr "聯邦屬地"
 
 msgid "Distrito Capital"
-msgstr ""
+msgstr "聯邦區"
 
 msgid "Falcón"
-msgstr ""
+msgstr "法爾孔州"
 
 msgid "Guárico"
-msgstr ""
+msgstr "瓜里科州"
 
 msgid "Lara"
-msgstr ""
+msgstr "拉臘州"
 
 msgid "Mérida"
-msgstr ""
+msgstr "梅里達州"
 
 msgid "Miranda"
-msgstr ""
+msgstr "米蘭達州"
 
 msgid "Monagas"
-msgstr ""
+msgstr "莫納加斯州"
 
 msgid "Nueva Esparta"
-msgstr ""
+msgstr "新埃斯帕塔州"
 
 msgid "Portuguesa"
-msgstr ""
+msgstr "波圖格薩州"
 
 msgid "Sucre"
-msgstr ""
+msgstr "蘇克瑞州"
 
 msgid "Táchira"
-msgstr ""
+msgstr "塔奇拉州"
 
 msgid "Trujillo"
-msgstr ""
+msgstr "特魯希略州"
 
 msgid "Vargas"
-msgstr ""
+msgstr "瓦爾加斯州"
 
 msgid "Yaracuy"
-msgstr ""
+msgstr "亞拉奎州"
 
 msgid "Zulia"
-msgstr ""
+msgstr "蘇利亞州"
 
 msgid "Enter a valid South African ID number"
 msgstr "請輸入一個有效的南非身份證號碼。"

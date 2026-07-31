@@ -6,13 +6,14 @@
 # 534b44a19bf18d20b71ecc4eb77c572f_db336e9 <f8268c65f822ec11a3a2e5d482cd7ead_175>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Meir Kriheli <mkriheli@gmail.com>, 2013,2015,2023
+# Omer Mendler, 2026
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-06 12:54+0200\n"
+"POT-Creation-Date: 2026-07-09 19:13+0200\n"
 "PO-Revision-Date: 2013-05-29 13:57+0000\n"
-"Last-Translator: Meir Kriheli <mkriheli@gmail.com>, 2013,2015,2023\n"
+"Last-Translator: Omer Mendler, 2026\n"
 "Language-Team: Hebrew (http://app.transifex.com/django/django-localflavor/"
 "language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -21,6 +22,57 @@ msgstr ""
 "Language: he\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
 "1 == 0) ? 1: 2;\n"
+
+msgid "Abu Dhabi"
+msgstr "אבו דאבי"
+
+msgid "Ajman"
+msgstr ""
+
+msgid "Dubai"
+msgstr "דובאי"
+
+msgid "Fujairah"
+msgstr ""
+
+msgid "Ras Al Khaimah"
+msgstr ""
+
+msgid "Sharjah"
+msgstr ""
+
+msgid "Umm Al Quwain"
+msgstr ""
+
+msgid "Enter a valid UAE Emirates ID number in format 784-YYYY-NNNNNNN-N."
+msgstr ""
+
+msgid "Enter a valid UAE postal code. Use 00000 if postal code is required."
+msgstr ""
+
+msgid "Enter a valid P.O. Box number."
+msgstr ""
+
+msgid "Enter a valid UAE Tax Registration Number (15 digits)."
+msgstr ""
+
+msgid "UAE Emirates ID number"
+msgstr ""
+
+msgid "UAE Emirate"
+msgstr ""
+
+msgid "UAE postal code"
+msgstr ""
+
+msgid "UAE P.O. Box number"
+msgstr ""
+
+msgid "UAE Tax Registration Number"
+msgstr ""
+
+msgid "Enter a valid UAE Emirates ID number."
+msgstr ""
 
 msgid "Buenos Aires"
 msgstr "בואנוס איירס"
@@ -7353,6 +7405,36 @@ msgstr "מרחב מדיירה"
 msgid "Região Autónoma dos Açores"
 msgstr "מרחב האיים האזוריים"
 
+msgid "Enter a valid Qatari National ID number"
+msgstr ""
+
+msgid "Qatari National ID number"
+msgstr ""
+
+msgid "Qatar municipality"
+msgstr ""
+
+msgid "Al Khor and Al Dakhira"
+msgstr ""
+
+msgid "Al Rayyan"
+msgstr ""
+
+msgid "Al Shamal"
+msgstr ""
+
+msgid "Al Sheehaniya"
+msgstr ""
+
+msgid "Al Wakrah"
+msgstr ""
+
+msgid "Al Daayen"
+msgstr ""
+
+msgid "Umm Slal"
+msgstr ""
+
 msgid "Enter a valid CIF."
 msgstr "יש להזין CIF חוקי."
 
@@ -8070,6 +8152,72 @@ msgstr "יש להזין מספר זיהות טורקי תקף."
 msgid "Turkish Identification number must be 11 digits."
 msgstr "מספר זיהות טורקי חייב להיות 11 מספרים."
 
+msgid "Changhua County"
+msgstr ""
+
+msgid "Chiayi City"
+msgstr ""
+
+msgid "Chiayi County"
+msgstr ""
+
+msgid "Hsinchu City"
+msgstr ""
+
+msgid "Hsinchu County"
+msgstr ""
+
+msgid "Hualien County"
+msgstr ""
+
+msgid "Kaohsiung City"
+msgstr ""
+
+msgid "Keelung City"
+msgstr ""
+
+msgid "Kinmen County"
+msgstr ""
+
+msgid "Lienchiang County"
+msgstr ""
+
+msgid "Miaoli County"
+msgstr ""
+
+msgid "Nantou County"
+msgstr ""
+
+msgid "New Taipei City"
+msgstr ""
+
+msgid "Penghu County"
+msgstr ""
+
+msgid "Pingtung County"
+msgstr ""
+
+msgid "Taichung City"
+msgstr ""
+
+msgid "Tainan City"
+msgstr ""
+
+msgid "Taipei City"
+msgstr ""
+
+msgid "Taitung County"
+msgstr ""
+
+msgid "Taoyuan City"
+msgstr ""
+
+msgid "Yilan County"
+msgstr ""
+
+msgid "Yunlin County"
+msgstr ""
+
 msgid "Enter a valid postal code."
 msgstr ""
 
@@ -8169,6 +8317,20 @@ msgstr "יש להזין מיקוד חוקי בתבנית XXXXX או XXXXX-XXXX."
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr "יש להזין מספר ביטוח לאומי אמריקאי בתבנית XXX-XX-XXXX."
 
+msgid ""
+"Enter a valid U.S. Individual Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+
+msgid ""
+"Enter a valid U.S. Adoption Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+
+msgid ""
+"Enter a valid U.S. taxpayer identification number in XXX-XX-XXXX format."
+msgstr ""
+
 msgid "Enter a U.S. state or territory."
 msgstr "יש להזין מדינה או טריטרויה בארה\"ב"
 
@@ -8182,6 +8344,15 @@ msgid "U.S. ZIP code"
 msgstr ""
 
 msgid "Social security number"
+msgstr ""
+
+msgid "Individual Taxpayer Identification Number"
+msgstr ""
+
+msgid "Adoption Taxpayer Identification Number"
+msgstr ""
+
+msgid "Taxpayer Identification Number"
 msgstr ""
 
 msgid "Alabama"

@@ -6,14 +6,14 @@
 # fasouto <fsoutomoure@gmail.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2011
-# X Bello <xbello@gmail.com>, 2023
+# X Bello <xbello@gmail.com>, 2023,2025-2026
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-07 15:31+0200\n"
+"POT-Creation-Date: 2026-07-09 19:13+0200\n"
 "PO-Revision-Date: 2013-05-29 13:57+0000\n"
-"Last-Translator: X Bello <xbello@gmail.com>, 2023\n"
+"Last-Translator: X Bello <xbello@gmail.com>, 2023,2025-2026\n"
 "Language-Team: Galician (http://app.transifex.com/django/django-localflavor/"
 "language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Abu Dhabi"
+msgstr "Abu Zabi"
+
+msgid "Ajman"
+msgstr "Axman"
+
+msgid "Dubai"
+msgstr "Dubai"
+
+msgid "Fujairah"
+msgstr "Fujairah"
+
+msgid "Ras Al Khaimah"
+msgstr "Ras Al Khaimah"
+
+msgid "Sharjah"
+msgstr "Sharxah"
+
+msgid "Umm Al Quwain"
+msgstr "Umm Al Quwain"
+
+msgid "Enter a valid UAE Emirates ID number in format 784-YYYY-NNNNNNN-N."
+msgstr ""
+"Introduza un número ID dos Emiratos Árabes Unidos válido, co formato  784-"
+"AAAA-NNNNNNN-N."
+
+msgid "Enter a valid UAE postal code. Use 00000 if postal code is required."
+msgstr ""
+"Introduza un código postal válido nos EAU. Empregue 00000 se o código postal "
+"é obrigatorio."
+
+msgid "Enter a valid P.O. Box number."
+msgstr "Introduza un número de Apartado de Correos válido."
+
+msgid "Enter a valid UAE Tax Registration Number (15 digits)."
+msgstr "Introduza un Número de Rexistro Fiscal dos EAU válido (15 díxitos)."
+
+msgid "UAE Emirates ID number"
+msgstr "Número ID dos EAU"
+
+msgid "UAE Emirate"
+msgstr "Emirato dos EAU"
+
+msgid "UAE postal code"
+msgstr "Código postal EAU"
+
+msgid "UAE P.O. Box number"
+msgstr "Apartado de correos dos EAU"
+
+msgid "UAE Tax Registration Number"
+msgstr "Número de Rexistro Fiscal dos EAU"
+
+msgid "Enter a valid UAE Emirates ID number."
+msgstr "Introduza un número ID dos EAU válido."
 
 msgid "Buenos Aires"
 msgstr "Bos Aires"
@@ -302,7 +357,7 @@ msgstr "O formato do código postal é: 123456"
 msgid "Belarusian Regions (one integer value in the range 1-7)."
 msgstr "Rexións belarusas (un número enteiro no rango do 1-7)."
 
-msgid "Belarusian passport number (2 letters followed by 7 digits"
+msgid "Belarusian passport number (2 letters followed by 7 digits)."
 msgstr "Número de pasaporte belaruso (2 letras seguidas de 7 díxitos)."
 
 msgid "Belarusian passport ID number (14 letters and digits)."
@@ -5218,6 +5273,102 @@ msgstr "Capital"
 msgid "Hawalli"
 msgstr "Hawalli"
 
+msgid "Enter a postal code in format NNNNN"
+msgstr "Introduza un código postal co formato NNNNN"
+
+msgid "Kandy"
+msgstr "Kandy"
+
+msgid "Matale"
+msgstr "Matale"
+
+msgid "Nuwara Eliya"
+msgstr "Nuwara Eliya"
+
+msgid "Anuradhapura"
+msgstr "Anuradhapura"
+
+msgid "Polonnaruwa"
+msgstr "Polonnaruwa"
+
+msgid "Jaffna"
+msgstr "Jaffna"
+
+msgid "Kilinochchi"
+msgstr "Kilinochchi"
+
+msgid "Mannar"
+msgstr "Mannar"
+
+msgid "Vavuniya"
+msgstr "Vavuniya"
+
+msgid "Mullativu"
+msgstr "Mullativu"
+
+msgid "Alambil"
+msgstr "Alambil"
+
+msgid "Ampara"
+msgstr "Ampara"
+
+msgid "Batticaloa"
+msgstr "Batticaloa"
+
+msgid "Trincomalee"
+msgstr "Trincomalee"
+
+msgid "Kurunagala"
+msgstr "Kurunagala"
+
+msgid "Puttalam"
+msgstr "Puttalam"
+
+msgid "Galle"
+msgstr "Galle"
+
+msgid "Hambanthota"
+msgstr "Hambanthota"
+
+msgid "Mathara"
+msgstr "Mathara"
+
+msgid "Badulla"
+msgstr "Badulla"
+
+msgid "Monaragala"
+msgstr "Monaragala"
+
+msgid "Kegalle"
+msgstr "Kegalle"
+
+msgid "Rathnapura"
+msgstr "Rathnapura"
+
+msgid "Colombo"
+msgstr "Colombo"
+
+msgid "Gampaha"
+msgstr "Gampaha"
+
+msgid "Kaluthara"
+msgstr "Kaluthara"
+
+msgid "North Central"
+msgstr "Norte Central"
+
+msgid "North Western"
+msgstr "Norte Occidental"
+
+msgid "Sabaragamuwa"
+msgstr "Sabaragamuwa"
+
+msgid "Southern"
+msgstr "Sur"
+
+msgid "Uva"
+msgstr "Uva"
+
 msgid "ID Code consists of exactly 11 decimal digits."
 msgstr "O código ID consiste exactamente en 11 díxitos decimáis."
 
@@ -5452,9 +5603,6 @@ msgstr "Daugavpils"
 msgid "Jelgava"
 msgstr "Jelgava"
 
-msgid "Jēkabpils"
-msgstr "Jēkabpils"
-
 msgid "Jūrmala"
 msgstr "Jūrmala"
 
@@ -5467,53 +5615,17 @@ msgstr "Rēzekne"
 msgid "Riga"
 msgstr "Riga"
 
-msgid "Valmiera"
-msgstr "Valmiera"
-
 msgid "Ventspils"
 msgstr "Ventspils"
-
-msgid "Aglona municipality"
-msgstr "Municipio de Aglona"
 
 msgid "Aizkraukle municipality"
 msgstr "Municipio de Aizkraukle"
 
-msgid "Aizpute municipality"
-msgstr "Municipio de Aizpute"
-
-msgid "Aknīste municipality"
-msgstr "Municipio de Aknīste"
-
-msgid "Aloja municipality"
-msgstr "Municipio de Aloja"
-
-msgid "Alsunga municipality"
-msgstr "Municipio de Alsunga"
-
 msgid "Alūksne municipality"
 msgstr "Municipio de Alūksne"
 
-msgid "Amata municipality"
-msgstr "Municipio de Amata"
-
-msgid "Ape municipality"
-msgstr "Municipio de Ape"
-
-msgid "Auce municipality"
-msgstr "Municipio de Auce"
-
 msgid "Ādaži municipality"
 msgstr "Municipio de Ādaži"
-
-msgid "Babīte municipality"
-msgstr "Municipio de Babīte"
-
-msgid "Baldone municipality"
-msgstr "Municipio de Baldone"
-
-msgid "Baltinava municipality"
-msgstr "Municipio de Baltinava"
 
 msgid "Balvi municipality"
 msgstr "Municipio de Balvi"
@@ -5521,77 +5633,14 @@ msgstr "Municipio de Balvi"
 msgid "Bauska municipality"
 msgstr "Municipio de Bauska"
 
-msgid "Beverīna municipality"
-msgstr "Municipio de Beverīna"
-
-msgid "Brocēni municipality"
-msgstr "Municipio de Brocēni"
-
-msgid "Burtnieki municipality"
-msgstr "Municipio de Burtnieki"
-
-msgid "Carnikava municipality"
-msgstr "Municipio de Carnikava"
-
-msgid "Cesvaine municipality"
-msgstr "Municipio de Cesvaine"
-
 msgid "Cēsis municipality"
 msgstr "Municipio de Cēsis"
-
-msgid "Cibla municipality"
-msgstr "Municipio de Cibla"
-
-msgid "Dagda municipality"
-msgstr "Municipio de Dagda"
-
-msgid "Daugavpils municipality"
-msgstr "Municipio de Daugavpils"
 
 msgid "Dobele municipality"
 msgstr "Municipio de Dobele"
 
-msgid "Dundaga municipality"
-msgstr "Municipio de Dundaga"
-
-msgid "Durbe municipality"
-msgstr "Municipio de Durbe"
-
-msgid "Engure municipality"
-msgstr "Municipio de Engure"
-
-msgid "Ērgļi municipality"
-msgstr "Municipio de Ērgļi"
-
-msgid "Garkalne municipality"
-msgstr "Municipio de Garkalne"
-
-msgid "Grobiņa municipality"
-msgstr "Municipio de Grobiņa"
-
 msgid "Gulbene municipality"
 msgstr "Municipio de Gulbene"
-
-msgid "Iecava municipality"
-msgstr "Municipio de Iecava"
-
-msgid "Ikšķile municipality"
-msgstr "Municipio de Ikšķile"
-
-msgid "Ilūkste municipality"
-msgstr "Municipio de Ilūkste"
-
-msgid "Inčukalns municipality"
-msgstr "Municipio de Inčukalns"
-
-msgid "Jaunjelgava municipality"
-msgstr "Municipio de Jaunjelgava"
-
-msgid "Jaunpiebalga municipality"
-msgstr "Municipio de Jaunpiebalga"
-
-msgid "Jaunpils municipality"
-msgstr "Municipio de Jaunpils"
 
 msgid "Jelgava municipality"
 msgstr "Municipio de Jelgava"
@@ -5599,50 +5648,20 @@ msgstr "Municipio de Jelgava"
 msgid "Jēkabpils municipality"
 msgstr "Municipio de Jēkabpils"
 
-msgid "Kandava municipality"
-msgstr "Municipio de Kandava"
-
-msgid "Kārsava municipality"
-msgstr "Municipio de Kārsava"
-
-msgid "Kocēni municipality"
-msgstr "Municipio de Kocēni"
-
-msgid "Koknese municipality"
-msgstr "Municipio de Koknese"
-
 msgid "Krāslava municipality"
 msgstr "Municipio de Krāslava"
-
-msgid "Krimulda municipality"
-msgstr "Municipio de Krimulda"
-
-msgid "Krustpils municipality"
-msgstr "Municipio de Krustpils"
 
 msgid "Kuldīga municipality"
 msgstr "Municipio de Kuldīga"
 
-msgid "Ķegums municipality"
-msgstr "Municipio de Ķegums"
-
 msgid "Ķekava municipality"
 msgstr "Municipio de Ķekava"
-
-msgid "Lielvārde municipality"
-msgstr "Municipio de Lielvārde"
 
 msgid "Limbaži municipality"
 msgstr "Municipio de Limbaži"
 
-msgid "Līgatne municipality"
-msgstr "Municipio de Līgatne"
-
 msgid "Līvāni municipality"
 msgstr "Municipio de Līvāni"
-
-msgid "Lubāna municipality"
-msgstr "Municipio de Lubāna"
 
 msgid "Ludza municipality"
 msgstr "Municipio de Ludza"
@@ -5650,26 +5669,8 @@ msgstr "Municipio de Ludza"
 msgid "Madona municipality"
 msgstr "Municipio de Madona"
 
-msgid "Mazsalaca municipality"
-msgstr "Municipio de Mazsalaca"
-
-msgid "Mālpils municipality"
-msgstr "Municipio de Mālpils"
-
 msgid "Mārupe municipality"
 msgstr "Municipio de Mārupe"
-
-msgid "Mērsrags municipality"
-msgstr "Municipio de Mērsrags"
-
-msgid "Naukšēni municipality"
-msgstr "Municipio de Naukšēni"
-
-msgid "Nereta municipality"
-msgstr "Municipio de Nereta"
-
-msgid "Nīca municipality"
-msgstr "Municipio de Nīca"
 
 msgid "Ogre municipality"
 msgstr "Municipio de Ogre"
@@ -5677,59 +5678,14 @@ msgstr "Municipio de Ogre"
 msgid "Olaine municipality"
 msgstr "Municipio de Olaine"
 
-msgid "Ozolnieki municipality"
-msgstr "Municipio de Ozolnieki"
-
-msgid "Pārgauja municipality"
-msgstr "Municipio de Pārgauja"
-
-msgid "Pāvilosta municipality"
-msgstr "Municipio de Pāvilosta"
-
-msgid "Pļaviņas municipality"
-msgstr "Municipio de Pļaviņas"
-
 msgid "Preiļi municipality"
 msgstr "Municipio de Preiļi"
-
-msgid "Priekule municipality"
-msgstr "Municipio de Priekule"
-
-msgid "Priekuļi municipality"
-msgstr "Municipio de Priekuļi"
-
-msgid "Rauna municipality"
-msgstr "Municipio de Rauna"
 
 msgid "Rēzekne municipality"
 msgstr "Municipio de Rēzekne"
 
-msgid "Riebiņi municipality"
-msgstr "Municipio de Riebiņi"
-
-msgid "Roja municipality"
-msgstr "Municipio de Roja"
-
 msgid "Ropaži municipality"
 msgstr "Municipio de Ropaži"
-
-msgid "Rucava municipality"
-msgstr "Municipio de Rucava"
-
-msgid "Rugāji municipality"
-msgstr "Municipio de Rugāji"
-
-msgid "Rundāle municipality"
-msgstr "Municipio de Rundāle"
-
-msgid "Rūjiena municipality"
-msgstr "Municipio de Rūjiena"
-
-msgid "Sala municipality"
-msgstr "Municipio de Sala"
-
-msgid "Salacgrīva municipality"
-msgstr "Municipio de Salacgrīva"
 
 msgid "Salaspils municipality"
 msgstr "Municipio de Salaspils"
@@ -5740,38 +5696,17 @@ msgstr "Municipio de Saldus"
 msgid "Saulkrasti municipality"
 msgstr "Municipio de Saulkrasti"
 
-msgid "Sēja municipality"
-msgstr "Municipio de Sēja"
-
 msgid "Sigulda municipality"
 msgstr "Municipio de Sigulda"
-
-msgid "Skrīveri municipality"
-msgstr "Municipio de Skrīveri"
-
-msgid "Skrunda municipality"
-msgstr "Municipio de Skrunda"
 
 msgid "Smiltene municipality"
 msgstr "Municipio de Smiltene"
 
-msgid "Stopiņi municipality"
-msgstr "Municipio de Stopiņi"
-
-msgid "Strenči municipality"
-msgstr "Municipio de Strenči"
-
 msgid "Talsi municipality"
 msgstr "Municipio de Talsi"
 
-msgid "Tērvete municipality"
-msgstr "Municipio de Tērvete"
-
 msgid "Tukums municipality"
 msgstr "Municipio de Tukums"
-
-msgid "Vaiņode municipality"
-msgstr "Municipio de Vaiņode"
 
 msgid "Valka municipality"
 msgstr "Municipio de Valka"
@@ -5779,29 +5714,17 @@ msgstr "Municipio de Valka"
 msgid "Varakļāni municipality"
 msgstr "Municipio de Varakļāni"
 
-msgid "Vārkava municipality"
-msgstr "Municipio de Vārkava"
-
-msgid "Vecpiebalga municipality"
-msgstr "Municipio de Vecpiebalga"
-
-msgid "Vecumnieki municipality"
-msgstr "Municipio de Vecumnieki"
-
 msgid "Ventspils municipality"
 msgstr "Municipio de Ventspils"
 
-msgid "Viesīte municipality"
-msgstr "Municipio de Viesīte"
+msgid "Augšdaugava municipality"
+msgstr "Municipio de Augšdaugava"
 
-msgid "Viļaka municipality"
-msgstr "Municipio de Viļaka"
+msgid "Dienvidkurzeme municipality"
+msgstr "Municipio de Dienvidkurzeme"
 
-msgid "Viļāni municipality"
-msgstr "Municipio de Viļāni"
-
-msgid "Zilupe municipality"
-msgstr "Municipio de Zilupe"
+msgid "Valmiera municipality"
+msgstr "Municipio de Valmiera"
 
 msgid "Enter a postal code in the format XXXXX."
 msgstr "Insira un código postal válido no formato XXXXX."
@@ -5811,6 +5734,12 @@ msgstr "Código postal"
 
 msgid "Select Province"
 msgstr "Seleccione Provincia"
+
+msgid "Enter a valid Moroccan CIN number."
+msgstr "Introduza un número CIN Marroquí válido."
+
+msgid "CIN Number"
+msgstr "Número CIN"
 
 msgid "Al Hoceima"
 msgstr "Al-Hoceima"
@@ -7006,11 +6935,11 @@ msgstr "Karnali"
 msgid "Lumbini"
 msgstr "Lumbini"
 
-msgid "Province 1"
-msgstr "Provincia 1"
+msgid "Koshi"
+msgstr "Koshi"
 
-msgid "Province 2"
-msgstr "Provincia 2"
+msgid "Madhesh"
+msgstr "Madhesh"
 
 msgid "Sudurpaschim"
 msgstr "Sudurpaschim"
@@ -7023,9 +6952,6 @@ msgstr "Dhawalagiri"
 
 msgid "Janakpur"
 msgstr "Janakpur"
-
-msgid "Koshi"
-msgstr "Koshi"
 
 msgid "Mahakali"
 msgstr "Mahakali"
@@ -7511,6 +7437,36 @@ msgstr "Rexión Autónoma de Madeira"
 
 msgid "Região Autónoma dos Açores"
 msgstr "Rexión Autónoma dos Azores"
+
+msgid "Enter a valid Qatari National ID number"
+msgstr "Introduza un número ID Nacional Qatarí válido "
+
+msgid "Qatari National ID number"
+msgstr "Número ID Nacional Qatarí "
+
+msgid "Qatar municipality"
+msgstr "Municipio de Qatar"
+
+msgid "Al Khor and Al Dakhira"
+msgstr "Al Khor e Al Dakhira"
+
+msgid "Al Rayyan"
+msgstr "Al Rayyan"
+
+msgid "Al Shamal"
+msgstr "Al Shamal"
+
+msgid "Al Sheehaniya"
+msgstr "Al Sheehaniia"
+
+msgid "Al Wakrah"
+msgstr "Al Wakrah"
+
+msgid "Al Daayen"
+msgstr "Al Daaien"
+
+msgid "Umm Slal"
+msgstr "Umm Slal"
 
 msgid "Enter a valid CIF."
 msgstr "Introduza un CIF válido."
@@ -8230,6 +8186,72 @@ msgstr "Introduza un número de identificación turco válido."
 msgid "Turkish Identification number must be 11 digits."
 msgstr "O número de identificación turco debe ter 11 díxitos."
 
+msgid "Changhua County"
+msgstr "Condado de Changhua"
+
+msgid "Chiayi City"
+msgstr "Cidade de Chiaii"
+
+msgid "Chiayi County"
+msgstr "Condado de Chiaii"
+
+msgid "Hsinchu City"
+msgstr "Cidade de Hsinchu"
+
+msgid "Hsinchu County"
+msgstr "Condado de Hsinchu"
+
+msgid "Hualien County"
+msgstr "Condado de Hualien"
+
+msgid "Kaohsiung City"
+msgstr "Cidade de Kaohsiung"
+
+msgid "Keelung City"
+msgstr "Cidade de Keelung"
+
+msgid "Kinmen County"
+msgstr "Condado de Kinmen"
+
+msgid "Lienchiang County"
+msgstr "Condado de Lienchiang"
+
+msgid "Miaoli County"
+msgstr "Condado de Miaoli"
+
+msgid "Nantou County"
+msgstr "Condado de Nantou"
+
+msgid "New Taipei City"
+msgstr "Cidade de Nova Taipei"
+
+msgid "Penghu County"
+msgstr "Condado de Penghu"
+
+msgid "Pingtung County"
+msgstr "Condado de Pingtung"
+
+msgid "Taichung City"
+msgstr "Cidade de Taichung"
+
+msgid "Tainan City"
+msgstr "Cidade de Tainan"
+
+msgid "Taipei City"
+msgstr "Cidade de Taipei"
+
+msgid "Taitung County"
+msgstr "Condado de Taitung"
+
+msgid "Taoyuan City"
+msgstr "Cidade de Taoiuan"
+
+msgid "Yilan County"
+msgstr "Condado de Iilan"
+
+msgid "Yunlin County"
+msgstr "Condado de Iunlin"
+
 msgid "Enter a valid postal code."
 msgstr "Insira un código postal válido."
 
@@ -8272,8 +8294,8 @@ msgstr "Oblast de Khmelnytskyi"
 msgid "Kirovohrad Oblast"
 msgstr "Oblast de Kirovogrado"
 
-msgid "Kiev Oblast"
-msgstr "Oblast de Kíiv"
+msgid "Kyiv Oblast"
+msgstr "Kyiv Oblast"
 
 msgid "Luhansk Oblast"
 msgstr "Oblast de Luhansk"
@@ -8317,8 +8339,8 @@ msgstr "Oblast de Zhytomyr"
 msgid "Autonomous Republic of Crimea"
 msgstr "República Autónoma de Crimea"
 
-msgid "Kiev"
-msgstr "Kíiv"
+msgid "Kyiv"
+msgstr "Kyiv"
 
 msgid "Sevastopol"
 msgstr "Sevastopol"
@@ -8329,6 +8351,26 @@ msgstr "Insira un código postal no formato XXXXX ou XXXXX-XXXX."
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr ""
 "Insira un número válido da seguridade social dos Estados Unidos no formato "
+"XXX-XX-XXXX."
+
+msgid ""
+"Enter a valid U.S. Individual Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+"Introduza un Número de Identificación Fiscal Individual dos EE.UU. (ITIN) "
+"válido no formato XXX-XX-XXXX."
+
+msgid ""
+"Enter a valid U.S. Adoption Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+"Introduza un Número de Identificación Fiscal de Adopción dos EE.UU. (ATIN) "
+"válido no formato XXX-XX-XXXX."
+
+msgid ""
+"Enter a valid U.S. taxpayer identification number in XXX-XX-XXXX format."
+msgstr ""
+"Introduza un número de identificación fiscal dos EE.UU. válido co formato "
 "XXX-XX-XXXX."
 
 msgid "Enter a U.S. state or territory."
@@ -8345,6 +8387,15 @@ msgstr "Código Postal dos E.U.A."
 
 msgid "Social security number"
 msgstr "Número da Seguridade Social"
+
+msgid "Individual Taxpayer Identification Number"
+msgstr "Número de Identificación Fiscal Individual"
+
+msgid "Adoption Taxpayer Identification Number"
+msgstr "Número de Identificación Fiscal de Adopción"
+
+msgid "Taxpayer Identification Number"
+msgstr " Número de Identificación Fiscal"
 
 msgid "Alabama"
 msgstr "Alabama"
