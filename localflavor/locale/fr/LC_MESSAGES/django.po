@@ -5,7 +5,7 @@
 # Translators:
 # Adrien Brunet <abrunet@centrale-marseille.fr>, 2017
 # Claude Paroz <claude@2xlibre.net>, 2011-2012
-# Claude Paroz <claude@2xlibre.net>, 2011,2013-2018,2020-2021,2023,2025
+# Claude Paroz <claude@2xlibre.net>, 2011,2013-2018,2020-2021,2023,2025-2026
 # Claude Paroz <claude@2xlibre.net>, 2011,2013
 # Jannis Leidel <jannis@leidel.info>, 2011
 # Jean-Baptiste Mora, 2015
@@ -15,10 +15,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-06 12:54+0200\n"
+"POT-Creation-Date: 2026-07-09 19:13+0200\n"
 "PO-Revision-Date: 2013-05-29 13:57+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>, "
-"2011,2013-2018,2020-2021,2023,2025\n"
+"2011,2013-2018,2020-2021,2023,2025-2026\n"
 "Language-Team: French (http://app.transifex.com/django/django-localflavor/"
 "language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -27,6 +27,62 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
 "1000000 == 0 ? 1 : 2;\n"
+
+msgid "Abu Dhabi"
+msgstr "Abou Dabi"
+
+msgid "Ajman"
+msgstr "Ajman"
+
+msgid "Dubai"
+msgstr "Dubaï"
+
+msgid "Fujairah"
+msgstr "Fujaïrah"
+
+msgid "Ras Al Khaimah"
+msgstr "Ras el Khaïmah"
+
+msgid "Sharjah"
+msgstr "Charjah"
+
+msgid "Umm Al Quwain"
+msgstr "Oumm al Qaïwaïn"
+
+msgid "Enter a valid UAE Emirates ID number in format 784-YYYY-NNNNNNN-N."
+msgstr ""
+"Saisissez un numéro d’identification émirati valide au format 784-YYYY-"
+"NNNNNNN-N."
+
+msgid "Enter a valid UAE postal code. Use 00000 if postal code is required."
+msgstr ""
+"Saisissez un code postal émirati valide. Utilisez 00000 si un code postal "
+"est obligatoire."
+
+msgid "Enter a valid P.O. Box number."
+msgstr "Saisissez un numéro de boîte postale valide."
+
+msgid "Enter a valid UAE Tax Registration Number (15 digits)."
+msgstr ""
+"Saisissez un numéro d'identification fiscale émirati valide (15 chiffres)."
+
+msgid "UAE Emirates ID number"
+msgstr "Numéro d’identification émirati"
+
+msgid "UAE Emirate"
+msgstr "Émirat ÉAU"
+
+msgid "UAE postal code"
+msgstr "Code postal ÉAU"
+
+msgid "UAE P.O. Box number"
+msgstr "Numéro de boîte postale émirati"
+
+msgid "UAE Tax Registration Number"
+msgstr "Numéro d'identification fiscale des ÉAU"
+
+msgid "Enter a valid UAE Emirates ID number."
+msgstr "Saisissez un numéro d'identification émirati valide."
 
 msgid "Buenos Aires"
 msgstr "Buenos Aires"
@@ -7393,6 +7449,36 @@ msgstr "Région autonome de Madère"
 msgid "Região Autónoma dos Açores"
 msgstr "Région autonome des Açores"
 
+msgid "Enter a valid Qatari National ID number"
+msgstr "Saisissez un numéro d'identification national qatari valide"
+
+msgid "Qatari National ID number"
+msgstr "Numéro d’identification national qatari"
+
+msgid "Qatar municipality"
+msgstr "Municipalité du Qatar"
+
+msgid "Al Khor and Al Dakhira"
+msgstr "Al Khor et Al Dakhira"
+
+msgid "Al Rayyan"
+msgstr "Al Rayyan"
+
+msgid "Al Shamal"
+msgstr "Al Shamal"
+
+msgid "Al Sheehaniya"
+msgstr "Al Sheehaniya"
+
+msgid "Al Wakrah"
+msgstr "Al Wakrah"
+
+msgid "Al Daayen"
+msgstr "Al Daayen"
+
+msgid "Umm Slal"
+msgstr "Umm Slal"
+
 msgid "Enter a valid CIF."
 msgstr "Saisissez une CIF valide."
 
@@ -8112,6 +8198,72 @@ msgstr "Saisissez un numéro d'identification turc valide."
 msgid "Turkish Identification number must be 11 digits."
 msgstr "Les numéros d'identification turcs sont formés de 11 chiffres."
 
+msgid "Changhua County"
+msgstr "Comté de Changhua"
+
+msgid "Chiayi City"
+msgstr "Chiayi"
+
+msgid "Chiayi County"
+msgstr "Comté de Chiayi"
+
+msgid "Hsinchu City"
+msgstr "Hsinchu"
+
+msgid "Hsinchu County"
+msgstr "Comté de Hsin-Chu"
+
+msgid "Hualien County"
+msgstr "Comté de Hualien"
+
+msgid "Kaohsiung City"
+msgstr "Kaohsiung"
+
+msgid "Keelung City"
+msgstr "Keelung"
+
+msgid "Kinmen County"
+msgstr "Comté de Kinmen"
+
+msgid "Lienchiang County"
+msgstr "Comté de Lienchiang"
+
+msgid "Miaoli County"
+msgstr "Comté de Miaoli"
+
+msgid "Nantou County"
+msgstr "Comté de Nantou"
+
+msgid "New Taipei City"
+msgstr "Nouveau Taipei"
+
+msgid "Penghu County"
+msgstr "Comté de Penghu"
+
+msgid "Pingtung County"
+msgstr "Comté de Pingtung"
+
+msgid "Taichung City"
+msgstr "Taichung"
+
+msgid "Tainan City"
+msgstr "Tainan"
+
+msgid "Taipei City"
+msgstr "Taipei"
+
+msgid "Taitung County"
+msgstr "Comté de Taitung"
+
+msgid "Taoyuan City"
+msgstr "Taoyuan"
+
+msgid "Yilan County"
+msgstr "Comté de Yilan"
+
+msgid "Yunlin County"
+msgstr "Comté de Yunlin"
+
 msgid "Enter a valid postal code."
 msgstr "Saisissez un code postal valide."
 
@@ -8210,22 +8362,49 @@ msgstr "Saisissez un code postal au format XXXXX ou XXXXX-XXXX."
 
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
 msgstr ""
-"Saisissez un numéro de sécurité sociale américain au format XXX-XX-XXXX."
+"Saisissez un numéro de sécurité sociale états-unien au format XXX-XX-XXXX."
+
+msgid ""
+"Enter a valid U.S. Individual Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+"Saisissez un numéro de contribuable états-unien individuel au format XXX-XX-"
+"XXXX."
+
+msgid ""
+"Enter a valid U.S. Adoption Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+"Saisissez un numéro de contribuable états-unien adopté au format XXX-XX-XXXX."
+
+msgid ""
+"Enter a valid U.S. taxpayer identification number in XXX-XX-XXXX format."
+msgstr ""
+"Saisissez un numéro de contribuable états-unien valide au format XXX-XX-XXXX."
 
 msgid "Enter a U.S. state or territory."
-msgstr "Saisissez un état ou un territoire américain."
+msgstr "Saisissez un état ou un territoire états-unien."
 
 msgid "U.S. state (two uppercase letters)"
-msgstr "État Américain (deux lettres majuscules)"
+msgstr "État des États-Unis (deux lettres majuscules)"
 
 msgid "U.S. postal code (two uppercase letters)"
-msgstr "Code postal des États-Unis (deux lettres majuscules)"
+msgstr "Code postal états-unien (deux lettres majuscules)"
 
 msgid "U.S. ZIP code"
-msgstr "Code postal U.S invalide"
+msgstr "Code postal états-unien"
 
 msgid "Social security number"
 msgstr "Numéro de sécurité social"
+
+msgid "Individual Taxpayer Identification Number"
+msgstr "Numéro d’identification de contribuable individuel"
+
+msgid "Adoption Taxpayer Identification Number"
+msgstr "Numéro d’identification de contribuable adopté"
+
+msgid "Taxpayer Identification Number"
+msgstr "Numéro d’identification de contribuable"
 
 msgid "Alabama"
 msgstr "Alabama"

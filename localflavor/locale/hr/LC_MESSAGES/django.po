@@ -5,21 +5,73 @@
 # Translators:
 # aljosa <aljosa.mohorovic@gmail.com>, 2011
 # Jannis Leidel <jannis@leidel.info>, 2011
+# Milo Ivir <mail@milotype.de>, 2025-2026
 msgid ""
 msgstr ""
 "Project-Id-Version: django-localflavor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-11 12:41+0100\n"
-"PO-Revision-Date: 2017-12-12 02:51+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
-"Language-Team: Croatian (http://www.transifex.com/django/django-localflavor/"
+"POT-Creation-Date: 2026-07-09 19:13+0200\n"
+"PO-Revision-Date: 2013-05-29 13:57+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>, 2025-2026\n"
+"Language-Team: Croatian (http://app.transifex.com/django/django-localflavor/"
 "language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hr\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "Abu Dhabi"
+msgstr ""
+
+msgid "Ajman"
+msgstr ""
+
+msgid "Dubai"
+msgstr ""
+
+msgid "Fujairah"
+msgstr ""
+
+msgid "Ras Al Khaimah"
+msgstr ""
+
+msgid "Sharjah"
+msgstr ""
+
+msgid "Umm Al Quwain"
+msgstr ""
+
+msgid "Enter a valid UAE Emirates ID number in format 784-YYYY-NNNNNNN-N."
+msgstr ""
+
+msgid "Enter a valid UAE postal code. Use 00000 if postal code is required."
+msgstr ""
+
+msgid "Enter a valid P.O. Box number."
+msgstr ""
+
+msgid "Enter a valid UAE Tax Registration Number (15 digits)."
+msgstr ""
+
+msgid "UAE Emirates ID number"
+msgstr ""
+
+msgid "UAE Emirate"
+msgstr ""
+
+msgid "UAE postal code"
+msgstr ""
+
+msgid "UAE P.O. Box number"
+msgstr ""
+
+msgid "UAE Tax Registration Number"
+msgstr ""
+
+msgid "Enter a valid UAE Emirates ID number."
+msgstr ""
 
 msgid "Buenos Aires"
 msgstr ""
@@ -94,37 +146,38 @@ msgid "Tucumán"
 msgstr ""
 
 msgid "Enter a postal code in the format NNNN or ANNNNAAA."
-msgstr "Unesite ispravan poštanski broj formata NNNN ili ANNNNAAA."
+msgstr "Upišite ispravan poštanski broj formata NNNN ili ANNNNAAA."
 
 msgid "This field requires only numbers."
-msgstr "Ovo polje zahtjeva samo brojeve."
+msgstr "Ovo polje zahtijeva samo brojeve."
 
 msgid "This field requires 7 or 8 digits."
-msgstr "Ovo polje zahtjeva 7 ili 8 numeričkih znakova."
+msgstr "Ovo polje zahtijeva 7 ili 8 znamenki."
 
 msgid "Enter a valid CUIT in XX-XXXXXXXX-X or XXXXXXXXXXXX format."
-msgstr "Unesite ispravan CUIT formata XX-XXXXXXXX-X ili XXXXXXXXXXXX."
+msgstr "Upišite CUIT u formatu XX-XXXXXXXX-X ili XXXXXXXXXXXX."
 
 msgid "Invalid CUIT."
 msgstr "Neispravan CUIT."
 
-msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24 or 33."
+msgid "Invalid legal type. Type must be 27, 20, 30, 23, 24, 33 or 34."
 msgstr ""
+"Neispravna pravna vrsta. Vrsta mora biti 27, 20, 30, 23, 24, 33 ili 34."
 
 msgid "Enter a valid CBU in XXXXXXXXXXXXXXXXXXXXXX format."
-msgstr ""
+msgstr "Upišite CBU u formatu XXXXXXXXXXXXXXXXXXXXXXXXX."
 
 msgid "CBU must be exactly 22 digits long."
-msgstr ""
+msgstr "CBU mora imati točno 22 znamenke."
 
 msgid "Invalid CBU."
-msgstr ""
+msgstr "Neispravan CBU."
 
 msgid "Burgenland"
-msgstr ""
+msgstr "Gradišće (Burgenland)"
 
 msgid "Carinthia"
-msgstr ""
+msgstr "Koruška (Carinthia)"
 
 msgid "Lower Austria"
 msgstr "Donja Austrija"
@@ -133,7 +186,7 @@ msgid "Upper Austria"
 msgstr "Gornja Austrija"
 
 msgid "Salzburg"
-msgstr ""
+msgstr "Salzburg"
 
 msgid "Styria"
 msgstr "Štajerska"
@@ -142,44 +195,43 @@ msgid "Tyrol"
 msgstr "Tirol"
 
 msgid "Vorarlberg"
-msgstr "Tirol"
+msgstr "Vorarlberg"
 
 msgid "Vienna"
 msgstr "Beč"
 
 msgid "Enter a zip code in the format XXXX."
-msgstr "Unesite zip kod formata XXXX."
+msgstr "Upišite poštanski broj u formatu XXXX."
 
 msgid "Enter a valid Austrian Social Security Number in XXXX XXXXXX format."
-msgstr ""
-"Unesite ispravan broj socijalnog osiguranja Austrije formata XXXX XXXXXX."
+msgstr "Upišite broj austrijskog socijalnog osiguranja u formatu XXXX XXXXXX."
 
 msgid "Enter a 4 digit postcode."
-msgstr ""
+msgstr "Upišite četveroznamenkasti poštanski broj."
 
 msgid "Australian State"
-msgstr ""
+msgstr "Australska država"
 
 msgid "Australian Postcode"
-msgstr ""
+msgstr "Australski poštanski broj"
 
 msgid "Australian Business Number"
-msgstr ""
+msgstr "Australski broj poduzeća"
 
 msgid "Australian Company Number"
-msgstr ""
+msgstr "Australski broj poduzeća"
 
 msgid "Australian Tax File Number"
-msgstr ""
+msgstr "Australski porezni broj"
 
 msgid "Enter a valid ABN."
-msgstr ""
+msgstr "Upišite ABN."
 
 msgid "Enter a valid ACN."
-msgstr ""
+msgstr "Upišite ACN."
 
 msgid "Enter a valid TFN."
-msgstr ""
+msgstr "Upišite TFN."
 
 msgid "Antwerp"
 msgstr "Antwerpen"
@@ -194,19 +246,19 @@ msgid "Flemish Brabant"
 msgstr "Flamanski Brabant"
 
 msgid "Hainaut"
-msgstr ""
+msgstr "Hainaut"
 
 msgid "Liege"
-msgstr ""
+msgstr "Liege"
 
 msgid "Limburg"
-msgstr ""
+msgstr "Limburg"
 
 msgid "Luxembourg"
 msgstr "Luksemburg"
 
 msgid "Namur"
-msgstr ""
+msgstr "Namur"
 
 msgid "Walloon Brabant"
 msgstr "Valonski Brabant"
@@ -215,7 +267,7 @@ msgid "West Flanders"
 msgstr "Zapadna Flandrija"
 
 msgid "Brussels Capital Region"
-msgstr ""
+msgstr "Regija glavnog grada Bruxellesa"
 
 msgid "Flemish Region"
 msgstr "Flamanska regija"
@@ -224,291 +276,357 @@ msgid "Wallonia"
 msgstr "Valonija"
 
 msgid "Enter a valid postal code in the range and format 1XXX - 9XXX."
-msgstr "Unesite važeći poštanski broj u rasponu i formatu 1xxx - 9XXX."
+msgstr "Upišite poštanski broj u formatu i rasponu od 1XXX – 9XXX."
 
 msgid "The EGN is not valid"
-msgstr ""
+msgstr "EGN nije ispravan"
 
 msgid "EIK/BULSTAT is not valid"
-msgstr ""
-
-msgid "Enter a zip code in the format XXXXX-XXX."
-msgstr "Unesite zip kod formata XXXXX-XXX."
+msgstr "EIK/BULSTAT nisu ispravni"
 
 msgid ""
 "Select a valid brazilian state. That state is not one of the available "
 "states."
 msgstr ""
-"Izaberite ispravnu brazilsku državu. Država nije jedna od dostupnih država."
+"Odaberite jednu brazilsku državu. Ta država nije jedna od dostupnih država."
 
 msgid "Invalid CPF number."
 msgstr "Neispravan CPF broj."
 
 msgid "This field requires at most 11 digits or 14 characters."
-msgstr "Ovo polje zahtjeva najviše 11 numeričkih znakova ili 14 slova."
+msgstr "Ovo polje zahtijeva najviše 11 znamenki ili 14 slova."
 
 msgid "Invalid CNPJ number."
 msgstr "Neispravan CNPJ broj."
 
 msgid "This field requires at least 14 digits"
-msgstr "Ovo polje zahtjeva bar 14 numeričkih znakova"
+msgstr "Ovo polje zahtijeva barem 14 znamenki"
 
 msgid "Invalid Process number."
-msgstr ""
+msgstr "Neispravan broj procesa."
 
 msgid "State of Brazil (two uppercase letters)"
-msgstr ""
+msgstr "Savezna država Brazila (dva velika slova)"
+
+msgid "CPF Document"
+msgstr "CPF dokument"
+
+msgid "CNPJ Document"
+msgstr "CNPJ dokument"
+
+msgid "Postal Code"
+msgstr "Poštanski broj"
+
+msgid "Enter a postal code in the format 00000-000."
+msgstr "Upišite poštanski broj u formatu 00000-000."
+
+msgid "Brest Region"
+msgstr "Brest regija"
+
+msgid "Vitebsk Region"
+msgstr "Vitebsk regija"
+
+msgid "Gomel Region"
+msgstr "Gomel regija"
+
+msgid "Grodno Region"
+msgstr "Grodno regija"
+
+msgid "Minsk Region"
+msgstr "Minsk regija"
+
+msgid "Mogilev Region"
+msgstr "Mogilev regija"
+
+msgid "City of Minsk"
+msgstr "Grad Minsk"
+
+msgid "Passport number format is: XX1234567"
+msgstr "Format broja putovnice je: XX1234567"
+
+msgid "ID format is: 1234567X123XX1"
+msgstr "Format ID-a je: 1234567X123XX1"
+
+msgid "Postal code format is: 123456"
+msgstr "Format poštanskog broja je: 123456"
+
+msgid "Belarusian Regions (one integer value in the range 1-7)."
+msgstr "Bjeloruske regije (jedna cjelobrojna vrijednost u rasponu od 1 do 7)."
+
+msgid "Belarusian passport number (2 letters followed by 7 digits)."
+msgstr "Broj bjeloruske putovnice (2 slova i 7 znamenki)."
+
+msgid "Belarusian passport ID number (14 letters and digits)."
+msgstr "Identifikacijski broj bjeloruske putovnice (14 slova i znamenki)."
+
+msgid "Belarusian Postal code (6 digits)."
+msgstr "Bjeloruski poštanski broj (6 znamenki)."
 
 msgid "Alberta"
-msgstr ""
+msgstr "Alberta"
 
 msgid "British Columbia"
-msgstr ""
+msgstr "British Columbia"
 
 msgid "Manitoba"
-msgstr ""
+msgstr "Manitoba"
 
 msgid "New Brunswick"
-msgstr ""
+msgstr "New Brunswick"
 
 msgid "Newfoundland and Labrador"
-msgstr ""
+msgstr "Newfoundland i Labrador"
 
 msgid "Northwest Territories"
-msgstr ""
+msgstr "Sjeverozapadni teritoriji"
 
 msgid "Nova Scotia"
-msgstr ""
+msgstr "Nova Scotia"
 
 msgid "Nunavut"
-msgstr ""
+msgstr "Nunavut"
 
 msgid "Ontario"
-msgstr ""
+msgstr "Ontario"
 
 msgid "Prince Edward Island"
-msgstr ""
+msgstr "Otok Princa Edwarda"
 
 msgid "Quebec"
-msgstr ""
+msgstr "Quebec"
 
 msgid "Saskatchewan"
-msgstr ""
+msgstr "Saskatchewan"
 
 msgid "Yukon"
-msgstr ""
+msgstr "Yukon"
 
 msgid "Enter a postal code in the format XXX XXX."
-msgstr "Unesite poštanski broj formata XXX XXX."
+msgstr "Upišite poštanski broj u formatu XXX XXX."
 
 msgid "Enter a Canadian province or territory."
-msgstr ""
+msgstr "Upišite kanadsku provinciju ili teritorij."
 
 msgid "Enter a valid Canadian Social Insurance number in XXX-XXX-XXX format."
-msgstr ""
-"Unesite valjani kanadski broj socijalnog osiguranja formata XXX-XXX-XXX."
+msgstr "Upišite broj kanadskog socijalnog osiguranja u formatu XXX-XXX-XXX."
+
+msgid "Canadian Province (two uppercase letters)"
+msgstr "Kanadska provincija (dva velika slova)"
+
+msgid "Canadian Postal Code"
+msgstr "Kanadski poštanski broj"
+
+msgid "Canadian Social Insurance Number"
+msgstr "Broj kanadskog socijalnog osiguranja"
 
 msgid "Aargau"
-msgstr ""
+msgstr "Aargau"
 
 msgid "Appenzell Innerrhoden"
-msgstr ""
+msgstr "Appenzell Innerrhoden"
 
 msgid "Appenzell Ausserrhoden"
-msgstr ""
+msgstr "Appenzell Ausserrhoden"
 
 msgid "Basel-Stadt"
-msgstr ""
+msgstr "Basel-Stadt"
 
 msgid "Basel-Land"
-msgstr ""
+msgstr "Basel-Land"
 
 msgid "Berne"
-msgstr ""
+msgstr "Berne"
 
 msgid "Fribourg"
-msgstr ""
+msgstr "Fribourg"
 
 msgid "Geneva"
-msgstr ""
+msgstr "Ženeva"
 
 msgid "Glarus"
-msgstr ""
+msgstr "Glarus"
 
 msgid "Graubuenden"
-msgstr ""
+msgstr "Graubuenden"
 
 msgid "Jura"
-msgstr ""
+msgstr "Jura"
 
 msgid "Lucerne"
-msgstr ""
+msgstr "Luzern"
 
 msgid "Neuchatel"
-msgstr ""
+msgstr "Neuchatel"
 
 msgid "Nidwalden"
-msgstr ""
+msgstr "Nidwalden"
 
 msgid "Obwalden"
-msgstr ""
+msgstr "Obwalden"
 
 msgid "Schaffhausen"
-msgstr ""
+msgstr "Schaffhausen"
 
 msgid "Schwyz"
-msgstr ""
+msgstr "Schwyz"
 
 msgid "Solothurn"
-msgstr ""
+msgstr "Solothurn"
 
 msgid "St. Gallen"
-msgstr ""
+msgstr "St. Gallen"
 
 msgid "Thurgau"
-msgstr ""
+msgstr "Thurgau"
 
 msgid "Ticino"
-msgstr ""
+msgstr "Ticino"
 
 msgid "Uri"
-msgstr ""
+msgstr "Uri"
 
 msgid "Valais"
-msgstr ""
+msgstr "Valais"
 
 msgid "Vaud"
-msgstr ""
+msgstr "Vaud"
 
 msgid "Zug"
-msgstr ""
+msgstr "Zug"
 
 msgid "Zurich"
-msgstr ""
+msgstr "Zurich"
 
 msgid ""
 "Enter a valid Swiss identity or passport card number in X1234567<0 or "
 "1234567890 format."
 msgstr ""
+"Upišite broj švicarske osobne iskaznice ili putovnice u formatu X1234567<0 "
+"ili 1234567890."
 
 msgid "Enter a valid Swiss Social Security number in 756.XXXX.XXXX.XX format."
 msgstr ""
+"Upišite broj švicarskog socijalnog osiguranja u formatu 756.XXXX.XXXX.XX."
 
 msgid "Enter a valid Chilean RUT."
-msgstr "Unesite ispravan čileanski RUT"
+msgstr "Upišite čileanski RUT."
 
 msgid "Enter a valid Chilean RUT. The format is XX.XXX.XXX-X."
-msgstr "Unesite ispravan čileanski RUT formata XX.XXX.XXX-X."
+msgstr "Upišite čileanski RUT. Format je XX.XXX.XXX-X."
 
 msgid "The Chilean RUT is not valid."
 msgstr "Čileanski RUT nije ispravan."
 
 msgid "Enter a post code in the format XXXXXX."
-msgstr ""
+msgstr "Upišite poštanski broj u formatu XXXXXX."
 
 msgid "ID Card Number consists of 15 or 18 digits."
 msgstr ""
+"Identifikacijski broj osobne iskaznice se sastoji od 15 ili 18 znamenki."
 
 msgid "Invalid ID Card Number: Wrong checksum"
 msgstr ""
+"Neispravan identifikacijski broj osobne iskaznice: Pogrešan kontrolni broj"
 
 msgid "Invalid ID Card Number: Wrong birthdate"
 msgstr ""
+"Neispravan identifikacijski broj osobne iskaznice: Pogrešan datum rođenja"
 
 msgid "Invalid ID Card Number: Wrong location code"
 msgstr ""
+"Neispravan identifikacijski broj osobne iskaznice: Pogrešan kod lokacije"
 
 msgid "Enter a valid NIT in XXXXXXXXXXX-Y or XXXXXXXXXXXY format."
-msgstr ""
+msgstr "Upišite NIT u formatu XXXXXXXXXXX-Y ili XXXXXXXXXXXY."
 
 msgid "Invalid NIT."
-msgstr ""
+msgstr "Neispravan NIT."
 
 msgid "Occidental"
-msgstr ""
+msgstr "Zapadni"
 
 msgid "Central"
-msgstr ""
+msgstr "Središnji"
 
 msgid "Oriental"
-msgstr ""
+msgstr "Istočni"
 
 msgid "Pinar del Río"
-msgstr ""
+msgstr "Pinar del Río"
 
 msgid "Artemisa"
-msgstr ""
+msgstr "Artemisa"
 
 msgid "Mayabeque"
-msgstr ""
+msgstr "Mayabeque"
 
 msgid "La Habana"
-msgstr ""
+msgstr "Havana"
 
 msgid "Matanzas"
-msgstr ""
+msgstr "Matanzas"
 
 msgid "Cienfuegos"
-msgstr ""
+msgstr "Cienfuegos"
 
 msgid "Villa Clara"
-msgstr ""
+msgstr "Villa Clara"
 
 msgid "Sancti Spíritus"
-msgstr ""
+msgstr "Sancti Spíritus"
 
 msgid "Ciego de Ávila"
-msgstr ""
+msgstr "Ciego de Ávila"
 
 msgid "Camagüey"
-msgstr ""
+msgstr "Camagüey"
 
 msgid "Las Tunas"
-msgstr ""
+msgstr "Las Tunas"
 
 msgid "Holguín"
-msgstr ""
+msgstr "Holguín"
 
 msgid "Granma"
-msgstr ""
+msgstr "Granma"
 
 msgid "Santiago de Cuba"
-msgstr ""
+msgstr "Santiago de Cuba"
 
 msgid "Guantánamo"
-msgstr ""
+msgstr "Guantánamo"
 
 msgid "Isla de la Juventud"
-msgstr ""
+msgstr "Isla de la Juventud"
 
 msgid "Enter a Cuban region."
-msgstr ""
+msgstr "Upišite kubansku regiju."
 
 msgid "Enter a Cuban province."
-msgstr ""
+msgstr "Upišite kubansku pokrajinu."
 
 msgid "Enter a valid postal code in the format XXXXX."
-msgstr ""
+msgstr "Upišite poštanski broj u formatu XXXXX."
 
 msgid "Enter a valid identity card number in the format XXXXXXXXXXX."
-msgstr ""
+msgstr "Upišite broj osobne iskaznice u formatu XXXXXXXXXXX."
 
 msgid "Cuban regions (three uppercase letters)"
-msgstr ""
+msgstr "Kubanske regije (tri velika slova)"
 
 msgid "Cuban provinces (three uppercase letters)"
-msgstr ""
+msgstr "Kubanske provincije (tri velika slova)"
 
 msgid "Cuban postal code"
-msgstr ""
+msgstr "Kubanski poštanski broj"
 
 msgid "Cuban identity card number"
-msgstr ""
+msgstr "Broj kubanske osobne iskaznice"
 
 msgid ""
 "Enter a valid date (yymmdd) for the first 6 digits of the Identity Card "
 "Number."
-msgstr ""
+msgstr "Upišite datum (yymmdd) za prvih 6 znamenki broja osobne iskaznice."
 
 msgid "Prague"
 msgstr "Prag"
@@ -553,74 +671,74 @@ msgid "Moravian-Silesian Region"
 msgstr "Moravsko-šleski kraj"
 
 msgid "Enter a postal code in the format XXXXX or XXX XX."
-msgstr "Unesi ispravan poštanski broj formata XXXXX ili XXX XX."
+msgstr "Upišite poštanski broj u formatu XXXXX ili XXX XX."
 
 msgid "Enter a birth number in the format XXXXXX/XXXX or XXXXXXXXXX."
-msgstr "Unesite datum rođenja formata XXXXXX/XXXX ili XXXXXXXXXX."
+msgstr "Upišite datum rođenja u formatu XXXXXX/XXXX ili XXXXXXXXXX."
 
 msgid "Enter a valid birth number."
-msgstr "Unesite ispravan datum rodenja."
+msgstr "Upišite datum rodenja."
 
 msgid "Enter a valid IC number."
-msgstr "Unesite ispravan IC broj."
+msgstr "Upišite IC broj."
 
 msgid "Baden-Wuerttemberg"
-msgstr ""
+msgstr "Baden-Wuerttemberg"
 
 msgid "Bavaria"
-msgstr ""
+msgstr "Bavarska"
 
 msgid "Berlin"
-msgstr ""
+msgstr "Berlin"
 
 msgid "Brandenburg"
-msgstr ""
+msgstr "Brandenburg"
 
 msgid "Bremen"
-msgstr ""
+msgstr "Bremen"
 
 msgid "Hamburg"
-msgstr ""
+msgstr "Hamburg"
 
 msgid "Hessen"
-msgstr ""
+msgstr "Hessen"
 
 msgid "Mecklenburg-Western Pomerania"
-msgstr ""
+msgstr "Mecklenburg-Zapadno Pomorje"
 
 msgid "Lower Saxony"
 msgstr "Donja Saska"
 
 msgid "North Rhine-Westphalia"
-msgstr "Sjeverno Porajnje-Zapadna Falačka"
+msgstr "Sjeverna Rajna-Vestfalija"
 
 msgid "Rhineland-Palatinate"
-msgstr ""
+msgstr "Porajnje-Falačka"
 
 msgid "Saarland"
-msgstr ""
+msgstr "Saarska"
 
 msgid "Saxony"
 msgstr "Saska"
 
 msgid "Saxony-Anhalt"
-msgstr ""
+msgstr "Saska-Anhalt"
 
 msgid "Schleswig-Holstein"
-msgstr ""
+msgstr "Schleswig-Holstein"
 
 msgid "Thuringia"
-msgstr ""
+msgstr "Tiringija"
 
 msgid "Enter a zip code in the format XXXXX."
-msgstr "Unesite zip kod formata XXXXX."
+msgstr "Upišite poštanski broj u formatu XXXXX."
 
 msgid ""
 "Enter a valid German identity card number in XXXXXXXXXXX-XXXXXXX-XXXXXXX-X "
 "format."
 msgstr ""
-"Unesite broj njemačke identifikacijske kartice formata XXXXXXXXXXX-XXXXXXX-"
-"XXXXXXX-X."
+"Upišite broj njemačke osobne iskaznice u formatu XXXXXXXXXXX-XXXXXXX-XXXXXXX-"
+"X."
 
 msgid "Albertslund"
 msgstr ""
@@ -932,6 +1050,9 @@ msgid "Region Syddanmark"
 msgstr ""
 
 msgid "Scanning"
+msgstr ""
+
+msgid "Facility"
 msgstr ""
 
 msgid "Høje Taastrup"
@@ -1252,6 +1373,12 @@ msgstr ""
 msgid "Rude"
 msgstr ""
 
+msgid "Agersø"
+msgstr ""
+
+msgid "Omø"
+msgstr ""
+
 msgid "Fuglebjerg"
 msgstr ""
 
@@ -1277,6 +1404,9 @@ msgid "Stenlille"
 msgstr ""
 
 msgid "Nyrup"
+msgstr ""
+
+msgid "Orø"
 msgstr ""
 
 msgid "Hvalsø"
@@ -1507,10 +1637,16 @@ msgstr ""
 msgid "Bandholm"
 msgstr ""
 
+msgid "Askø og Lilleø"
+msgstr ""
+
 msgid "Torrig L"
 msgstr ""
 
 msgid "Fejø"
+msgstr ""
+
+msgid "Femø"
 msgstr ""
 
 msgid "Nørreballe"
@@ -1639,6 +1775,15 @@ msgstr ""
 msgid "Faaborg"
 msgstr ""
 
+msgid "Lyø"
+msgstr ""
+
+msgid "Avernakø"
+msgstr ""
+
+msgid "Bjørnø"
+msgstr ""
+
 msgid "Glamsbjerg"
 msgstr ""
 
@@ -1714,10 +1859,16 @@ msgstr ""
 msgid "Bagenkop"
 msgstr ""
 
+msgid "Strynø"
+msgstr ""
+
 msgid "Tranekær"
 msgstr ""
 
 msgid "Marstal"
+msgstr ""
+
+msgid "Birkholm"
 msgstr ""
 
 msgid "Ærøskøbing"
@@ -1751,6 +1902,9 @@ msgid "Sjølund"
 msgstr ""
 
 msgid "Hejls"
+msgstr ""
+
+msgid "Barsø"
 msgstr ""
 
 msgid "Rødekro"
@@ -2345,6 +2499,12 @@ msgid "Stenderup"
 msgstr ""
 
 msgid "Hornsyld"
+msgstr ""
+
+msgid "Endelave"
+msgstr ""
+
+msgid "Tunø"
 msgstr ""
 
 msgid "Tjele"
@@ -3047,226 +3207,310 @@ msgid "Sumba"
 msgstr ""
 
 msgid "Enter a postal code in the format XXXX."
-msgstr ""
+msgstr "Upišite poštanski broj u formatu XXXX."
 
 msgid "Ecuadorian province"
-msgstr ""
+msgstr "Ekvadorska pokrajina"
 
 msgid "Harju County"
-msgstr ""
+msgstr "Harju okrug"
 
 msgid "Hiiu County"
-msgstr ""
+msgstr "Hiiu okrug"
 
 msgid "Ida-Viru County"
-msgstr ""
+msgstr "Ida-Viru okrug"
 
 msgid "Jõgeva County"
-msgstr ""
+msgstr "Jõgeva okrug"
 
 msgid "Järva County"
-msgstr ""
+msgstr "Järva okrug"
 
 msgid "Lääne County"
-msgstr ""
+msgstr "Lääne okrug"
 
 msgid "Lääne-Viru County"
-msgstr ""
+msgstr "Lääne-Viru okrug"
 
 msgid "Põlva County"
-msgstr ""
+msgstr "Põlva okrug"
 
 msgid "Pärnu County"
-msgstr ""
+msgstr "Pärnu okrug"
 
 msgid "Rapla County"
-msgstr ""
+msgstr "Rapla okrug"
 
 msgid "Saare County"
-msgstr ""
+msgstr "Saare okrug"
 
 msgid "Tartu County"
-msgstr ""
+msgstr "Tartu okrug"
 
 msgid "Valga County"
-msgstr ""
+msgstr "Valga okrug"
 
 msgid "Viljandi County"
-msgstr ""
+msgstr "Viljandi okrug"
 
 msgid "Võru County"
-msgstr ""
+msgstr "Võru okrug"
 
 msgid "Enter an 11-digit Estonian personal identification code."
-msgstr ""
+msgstr "Upišite 11-znamenkasti estonski osobni identifikacijski kod."
 
 msgid "Enter a valid Estonian personal identification code."
-msgstr ""
+msgstr "Upišite estonski osobni identifikacijski kod."
 
 msgid "Enter an 8-digit Estonian business registry code."
-msgstr ""
+msgstr "Upišite 8-znamenkasti estonski registarski kod poduzeća."
 
 msgid "Enter a valid Estonian business registry code."
-msgstr ""
+msgstr "Upišite estonski registarski kod poduzeća."
+
+msgid "Dakahlia"
+msgstr "Dakahlia"
+
+msgid "Red Sea"
+msgstr "Crveno more"
+
+msgid "Beheira"
+msgstr "Beheira"
+
+msgid "Faiyum"
+msgstr "Faiyum"
+
+msgid "Gharbia"
+msgstr "Gharbia"
+
+msgid "Alexandria"
+msgstr "Aleksandrija"
+
+msgid "Ismailia"
+msgstr "Ismailia"
+
+msgid "Giza"
+msgstr "Giza"
+
+msgid "Monufia"
+msgstr "Monufia"
+
+msgid "Minya"
+msgstr "Minya"
+
+msgid "Cairo"
+msgstr "Kairo"
+
+msgid "Qalyubia"
+msgstr "Qalyubia"
+
+msgid "Luxor"
+msgstr "Luxor"
+
+msgid "New Valley"
+msgstr "New Valley"
+
+msgid "Suez"
+msgstr "Suez"
+
+msgid "Al Sharqia"
+msgstr "Al Sharqia"
+
+msgid "Aswan"
+msgstr "Asuan"
+
+msgid "Asyut"
+msgstr "Asyut"
+
+msgid "Beni Suef"
+msgstr "Beni Suef"
+
+msgid "Port Said"
+msgstr "Port Said"
+
+msgid "Damietta"
+msgstr "Damietta"
+
+msgid "South Sinai"
+msgstr "Južni Sinaj"
+
+msgid "Kafr el-Sheikh"
+msgstr "Kafr el-Sheikh"
+
+msgid "Matrouh"
+msgstr "Matrouh"
+
+msgid "Qena"
+msgstr "Qena"
+
+msgid "North Sinai"
+msgstr "Sjeverni Sinaj"
+
+msgid "Sohag"
+msgstr "Sohag"
+
+msgid "Enter a valid Egyptian National ID number"
+msgstr "Upišite egipatski nacionalni identifikacijski broj"
 
 msgid "Araba"
-msgstr ""
+msgstr "Araba"
 
 msgid "Albacete"
-msgstr ""
+msgstr "Albacete"
 
 msgid "Alacant"
-msgstr ""
+msgstr "Alacant"
 
 msgid "Almeria"
-msgstr ""
+msgstr "Almeria"
 
 msgid "Avila"
-msgstr ""
+msgstr "Avila"
 
 msgid "Badajoz"
-msgstr ""
+msgstr "Badajoz"
 
 msgid "Illes Balears"
-msgstr ""
+msgstr "Baleari"
 
 msgid "Barcelona"
-msgstr ""
+msgstr "Barcelona"
 
 msgid "Burgos"
-msgstr ""
+msgstr "Burgos"
 
 msgid "Caceres"
-msgstr ""
+msgstr "Caceres"
 
 msgid "Cadiz"
-msgstr ""
+msgstr "Cadiz"
 
 msgid "Castello"
-msgstr ""
+msgstr "Castello"
 
 msgid "Ciudad Real"
-msgstr ""
+msgstr "Ciudad Real"
 
 msgid "Cordoba"
-msgstr ""
+msgstr "Cordoba"
 
 msgid "A Coruna"
-msgstr ""
+msgstr "A Coruna"
 
 msgid "Cuenca"
-msgstr ""
+msgstr "Cuenca"
 
 msgid "Girona"
-msgstr ""
+msgstr "Girona"
 
 msgid "Granada"
-msgstr ""
+msgstr "Granada"
 
 msgid "Guadalajara"
-msgstr ""
+msgstr "Guadalajara"
 
 msgid "Guipuzkoa"
-msgstr ""
+msgstr "Guipuzkoa"
 
 msgid "Huelva"
-msgstr ""
+msgstr "Huelva"
 
 msgid "Huesca"
-msgstr ""
+msgstr "Huesca"
 
 msgid "Jaen"
-msgstr ""
+msgstr "Jaen"
 
 msgid "Leon"
-msgstr ""
+msgstr "Leon"
 
 msgid "Lleida"
-msgstr ""
+msgstr "Lleida"
 
 msgid "Lugo"
-msgstr ""
+msgstr "Lugo"
 
 msgid "Madrid"
-msgstr ""
+msgstr "Madrid"
 
 msgid "Malaga"
-msgstr ""
+msgstr "Malaga"
 
 msgid "Murcia"
-msgstr ""
+msgstr "Murcia"
 
 msgid "Navarre"
-msgstr ""
+msgstr "Navarre"
 
 msgid "Ourense"
-msgstr ""
+msgstr "Ourense"
 
 msgid "Asturias"
-msgstr ""
+msgstr "Asturias"
 
 msgid "Palencia"
-msgstr ""
+msgstr "Palencia"
 
 msgid "Las Palmas"
-msgstr ""
+msgstr "Las Palmas"
 
 msgid "Pontevedra"
-msgstr ""
+msgstr "Pontevedra"
 
 msgid "Salamanca"
-msgstr ""
+msgstr "Salamanca"
 
 msgid "Santa Cruz de Tenerife"
-msgstr ""
+msgstr "Santa Cruz de Tenerife"
 
 msgid "Cantabria"
-msgstr ""
+msgstr "Cantabria"
 
 msgid "Segovia"
-msgstr ""
+msgstr "Segovia"
 
 msgid "Seville"
-msgstr ""
+msgstr "Sevilla"
 
 msgid "Soria"
-msgstr ""
+msgstr "Soria"
 
 msgid "Tarragona"
-msgstr ""
+msgstr "Tarragona"
 
 msgid "Teruel"
-msgstr ""
+msgstr "Teruel"
 
 msgid "Toledo"
-msgstr ""
+msgstr "Toledo"
 
 msgid "Valencia"
-msgstr ""
+msgstr "Valencia"
 
 msgid "Valladolid"
-msgstr ""
+msgstr "Valladolid"
 
 msgid "Bizkaia"
-msgstr ""
+msgstr "Bizkaia"
 
 msgid "Zamora"
-msgstr ""
+msgstr "Zamora"
 
 msgid "Zaragoza"
-msgstr ""
+msgstr "Zaragoza"
 
 msgid "Ceuta"
-msgstr ""
+msgstr "Ceuta"
 
 msgid "Melilla"
-msgstr ""
+msgstr "Melilla"
 
 msgid "Andalusia"
-msgstr ""
+msgstr "Andaluzija"
 
 msgid "Aragon"
-msgstr ""
+msgstr "Aragon"
 
 msgid "Principality of Asturias"
 msgstr "Kneževina Asturija"
@@ -3290,81 +3534,92 @@ msgid "Catalonia"
 msgstr "Katalonija"
 
 msgid "Extremadura"
-msgstr ""
+msgstr "Extremadura"
 
 msgid "Galicia"
-msgstr ""
+msgstr "Galicija"
 
 msgid "Region of Murcia"
 msgstr "Regija Murcia"
 
 msgid "Foral Community of Navarre"
-msgstr ""
+msgstr "Foralna zajednica Navarre"
 
 msgid "Valencian Community"
-msgstr ""
+msgstr "Valencijska zajednica"
 
 msgid "Autonomous city of Ceuta"
-msgstr ""
+msgstr "Autonomni grad Ceuta"
 
 msgid "Autonomous city of Mellila"
-msgstr ""
+msgstr "Autonomni grad Mellila"
 
 msgid "Enter a valid postal code in the range and format 01XXX - 52XXX."
-msgstr "Unesite ispravan poštanski broj u rasponu i formatu od 01XXX - 52XXX."
+msgstr "Upišite ispravan poštanski broj u formatu i rasponu od 01XXX – 52XXX."
 
 msgid "Please enter a valid NIF, NIE, or CIF."
-msgstr "Unesite ispravan NIF, NIE ili CIF."
+msgstr "Upišite ispravan NIF, NIE ili CIF."
 
 msgid "Please enter a valid NIF or NIE."
-msgstr "Molim unesite ispravan NIF ili NIE."
+msgstr "Upišite NIF ili NIE."
 
 msgid "Invalid checksum for NIF."
-msgstr "Neispravan checksum za NIF"
+msgstr "Neispravan kontrolni broj za NIF."
 
 msgid "Invalid checksum for NIE."
-msgstr "Neispravan checksum za NIF"
+msgstr "Neispravan kontrolni broj za NIE."
 
 msgid "Invalid checksum for CIF."
-msgstr "Neispravan checksum za CIF."
+msgstr "Neispravan kontrolni broj za CIF."
 
 msgid ""
 "Please enter a valid bank account number in format XXXX-XXXX-XX-XXXXXXXXXX."
-msgstr ""
-"Molim unesite ispravan broj bankovnog računa formata XXXX-XXXX-XX-XXXXXXXXXX."
+msgstr "Upišite broj bankovnog računa u formatu XXXX-XXXX-XX-XXXXXXXXXX."
 
 msgid "Invalid checksum for bank account number."
-msgstr "Neispravan checksum za broj bankovnog računa."
+msgstr "Neispravan kontrolni broj za broj bankovnog računa."
+
+msgid "Spain postal code (five numbers)"
+msgstr "Španjolski poštanski broj (pet znamenki)"
+
+msgid "Identification National Document"
+msgstr "Identifikacijski nacionalni dokument"
 
 msgid "Enter a valid Finnish social security number."
-msgstr "Unesite ispravan broj finskog socijalnog osiguranja."
+msgstr "Upišite broj finskog socijalnog osiguranja."
 
 msgid "Zip code"
-msgstr ""
+msgstr "Poštanski broj"
 
 msgid "Select Department"
-msgstr ""
+msgstr "Odaberite ministarstvo"
 
 msgid "Select Region"
-msgstr ""
+msgstr "Odaberite regiju"
 
 msgid "Enter a valid French National Identification number."
-msgstr ""
+msgstr "Upišite francuski nacionalni identifikacijski broj."
 
 msgid "Enter a valid French SIREN number."
-msgstr ""
+msgstr "Upišite francuski SIREN broj."
 
 msgid "Enter a valid French SIRET number."
-msgstr ""
+msgstr "Upišite francuski SIRET broj."
+
+msgid "Enter a valid French RNA number."
+msgstr "Upišite francuski RNA broj."
 
 msgid "SIREN Number"
-msgstr ""
+msgstr "SIREN broj"
 
 msgid "SIRET Number"
-msgstr ""
+msgstr "SIRET broj"
+
+msgid "RNA Number"
+msgstr "RNA broj"
 
 msgid "Enter a valid postcode."
-msgstr "Unesite ispravan poštanski broj."
+msgstr "Upišite poštanski broj."
 
 msgid "Bath and North East Somerset"
 msgstr ""
@@ -3793,10 +4048,10 @@ msgid "Na h-Eileanan Siar"
 msgstr ""
 
 msgid "Orkney Islands"
-msgstr ""
+msgstr "Orkneyski otoci"
 
 msgid "Shetland Islands"
-msgstr ""
+msgstr "Shetlandski otoci"
 
 msgid "England"
 msgstr "Engleska"
@@ -3805,145 +4060,204 @@ msgid "Northern Ireland"
 msgstr "Sjeverna irska"
 
 msgid "Wales"
-msgstr "Škotska"
+msgstr "Wales"
 
 msgid "Scotland"
 msgstr "Škotska"
 
 msgid "An International Bank Account Number"
-msgstr ""
+msgstr "Međunarodni broj bankovnog računa"
 
 msgid "Business Identifier Code"
-msgstr ""
+msgstr "Identifikacijski kod poduzeća"
 
 #, python-format
-msgid "%s is not a valid character for IBAN."
-msgstr ""
+msgid "%(character)s is not a valid character for IBAN."
+msgstr "%(character)s nije ispravan znak za IBAN."
 
 #, python-format
 msgid "%(country_code)s IBANs must contain %(number)s characters."
-msgstr ""
+msgstr "%(country_code)s IBAN-ovi moraju sadržavati %(number)s znakova."
 
 #, python-format
-msgid "%s is not a valid country code for IBAN."
-msgstr ""
+msgid "%(country_code)s is not a valid country code for IBAN."
+msgstr "%(country_code)s nije ispravan kod države za IBAN."
 
 #, python-format
-msgid "%s IBANs are not allowed in this field."
-msgstr ""
+msgid "%(country_code)s IBANs are not allowed in this field."
+msgstr "%(country_code)s IBAN-ovi nisu dopušteni u ovom polju."
 
 msgid "Not a valid IBAN."
-msgstr ""
+msgstr "Nije ispravan IBAN."
 
 msgid "BIC codes have either 8 or 11 characters."
-msgstr ""
+msgstr "BIC kodovi imaju 8 ili 11 znakova."
+
+msgid "BIC codes only contain alphabet letters and digits."
+msgstr "BIC kodovi sadrže samo slova i znamenke."
 
 #, python-format
-msgid "%s is not a valid institution code."
-msgstr ""
+msgid "%(institution_code)s is not a valid institution code."
+msgstr "%(institution_code)s nije ispravan kod ustanove."
 
 #, python-format
-msgid "%s is not a valid country code."
-msgstr ""
+msgid "%(country_code)s is not a valid country code."
+msgstr "%(country_code)s nije ispravan kod zemlje."
+
+#, python-format
+msgid "%(location_code)s is not a valid location code."
+msgstr "%(location_code)s nije ispravan kod lokacije."
 
 msgid "Not a valid EAN code."
+msgstr "Nije ispravan EAN kod."
+
+#, python-format
+msgid "%(vatin)s is not a valid VAT identification number."
+msgstr "%(vatin)s nije ispravan porezni identifikacijski broj (PDV)."
+
+msgid "Ahafo"
+msgstr ""
+
+msgid "Ashanti"
+msgstr ""
+
+msgid "Bono East"
+msgstr ""
+
+msgid "Brong Ahafo"
+msgstr ""
+
+msgid "Eastern"
+msgstr ""
+
+msgid "Greater Accra"
+msgstr ""
+
+msgid "North East"
+msgstr ""
+
+msgid "Northern"
+msgstr ""
+
+msgid "Oti"
+msgstr ""
+
+msgid "Savannah"
+msgstr ""
+
+msgid "Upper East"
+msgstr ""
+
+msgid "Upper West"
+msgstr ""
+
+msgid "Western"
+msgstr ""
+
+msgid "Western North"
+msgstr ""
+
+msgid "Volta"
 msgstr ""
 
 msgid "Enter a valid 5-digit greek postal code."
-msgstr ""
+msgstr "Upišite peteroznamenkasti grčki poštanski broj."
 
 msgid "Enter a valid greek tax number (9 digits)."
-msgstr ""
+msgstr "Upišite grčki porezni broj (9 znamenki)."
+
+msgid "Enter a valid greek social security number (AMKA - 11 digits)."
+msgstr "Upišite broj grčkog socijalnog osiguranja (AMKA – 11 znamenki)."
 
 msgid "Enter a valid 13 digit JMBG"
-msgstr ""
+msgstr "Upišite 13-znamenkasti JMBG"
 
 msgid "Error in date segment"
-msgstr ""
+msgstr "Greška u segmentu datuma"
 
 msgid "Enter a valid 11 digit OIB"
-msgstr ""
+msgstr "Upišite 11-znamenkasti OIB"
 
 msgid "Enter a valid vehicle license plate number"
-msgstr "Unesite ispravanu registraciju za vozilo"
+msgstr "Upišite broj registarske pločice vozila"
 
 msgid "Enter a valid location code"
-msgstr ""
+msgstr "Upišite kod lokacije"
 
 msgid "Number part cannot be zero"
-msgstr ""
+msgstr "Brojni dio ne može biti nula"
 
 msgid "Enter a valid 5 digit postal code"
-msgstr ""
+msgstr "Upišite peteroznamenkasti poštanski broj"
 
 msgid "Enter a valid 19 digit JMBAG starting with 601983"
-msgstr ""
+msgstr "Upišite 19-znamenkasti JMBAG koji počinje sa 601983"
 
 msgid "Card issue number cannot be zero"
-msgstr ""
+msgstr "Broj izdavanja kartice ne može biti nula"
 
 msgid "Grad Zagreb"
-msgstr ""
+msgstr "Grad Zagreb"
 
 msgid "Bjelovarsko-bilogorska županija"
-msgstr ""
+msgstr "Bjelovarsko-bilogorska županija"
 
 msgid "Brodsko-posavska županija"
-msgstr ""
+msgstr "Brodsko-posavska županija"
 
 msgid "Dubrovačko-neretvanska županija"
-msgstr ""
+msgstr "Dubrovačko-neretvanska županija"
 
 msgid "Istarska županija"
-msgstr ""
+msgstr "Istarska županija"
 
 msgid "Karlovačka županija"
-msgstr ""
+msgstr "Karlovačka županija"
 
 msgid "Koprivničko-križevačka županija"
-msgstr ""
+msgstr "Koprivničko-križevačka županija"
 
 msgid "Krapinsko-zagorska županija"
-msgstr ""
+msgstr "Krapinsko-zagorska županija"
 
 msgid "Ličko-senjska županija"
-msgstr ""
+msgstr "Ličko-senjska županija"
 
 msgid "Međimurska županija"
-msgstr ""
+msgstr "Međimurska županija"
 
 msgid "Osječko-baranjska županija"
-msgstr ""
+msgstr "Osječko-baranjska županija"
 
 msgid "Požeško-slavonska županija"
-msgstr ""
+msgstr "Požeško-slavonska županija"
 
 msgid "Primorsko-goranska županija"
-msgstr ""
+msgstr "Primorsko-goranska županija"
 
 msgid "Sisačko-moslavačka županija"
-msgstr ""
+msgstr "Sisačko-moslavačka županija"
 
 msgid "Splitsko-dalmatinska županija"
-msgstr ""
+msgstr "Splitsko-dalmatinska županija"
 
 msgid "Šibensko-kninska županija"
-msgstr ""
+msgstr "Šibensko-kninska županija"
 
 msgid "Varaždinska županija"
-msgstr ""
+msgstr "Varaždinska županija"
 
 msgid "Virovitičko-podravska županija"
-msgstr ""
+msgstr "Virovitičko-podravska županija"
 
 msgid "Vukovarsko-srijemska županija"
-msgstr ""
+msgstr "Vukovarsko-srijemska županija"
 
 msgid "Zadarska županija"
-msgstr ""
+msgstr "Zadarska županija"
 
 msgid "Zagrebačka županija"
-msgstr ""
+msgstr "Zagrebačka županija"
 
 msgid "Bács-Kiskun"
 msgstr ""
@@ -4003,10 +4317,10 @@ msgid "Zala"
 msgstr ""
 
 msgid "Enter a valid post code"
-msgstr "Unesite ispravan poštanski broj"
+msgstr "Upišite poštanski broj"
 
 msgid "Enter a valid NIK/KTP number"
-msgstr "Unesite ispravan NIK/KTP broj."
+msgstr "Upišite NIK/KTP broj"
 
 msgid "Aceh"
 msgstr ""
@@ -4024,7 +4338,7 @@ msgid "Yogyakarta"
 msgstr ""
 
 msgid "Jakarta"
-msgstr "Džakarta"
+msgstr ""
 
 msgid "Gorontalo"
 msgstr ""
@@ -4051,6 +4365,9 @@ msgid "Kalimantan Tengah"
 msgstr ""
 
 msgid "Kalimantan Timur"
+msgstr ""
+
+msgid "Kalimantan Utara"
 msgstr ""
 
 msgid "Kepulauan Bangka-Belitung"
@@ -4192,7 +4509,7 @@ msgid "Banyumas"
 msgstr ""
 
 msgid "Federal Government"
-msgstr "Federalna vlada"
+msgstr ""
 
 msgid "Bojonegoro"
 msgstr ""
@@ -4205,6 +4522,9 @@ msgstr ""
 
 msgid "Garut"
 msgstr ""
+
+msgid "Enter a valid Eircode."
+msgstr "Upišite Eircode."
 
 msgid "Carlow"
 msgstr ""
@@ -4282,48 +4602,150 @@ msgid "Wexford"
 msgstr ""
 
 msgid "Wicklow"
-msgstr "Wexford"
+msgstr ""
 
 msgid "Enter a postal code in the format XXXXXXX (or XXXXX) - digits only"
-msgstr ""
+msgstr "Upišite poštanski broj u formatu XXXXXXX (ili XXXXX) – samo znamenke"
 
 msgid "Enter a valid ID number."
-msgstr "Unesite valjani ID broj."
+msgstr "Upišite identifikacijski broj."
 
 msgid "Enter a zip code in the format XXXXXX or XXX XXX."
-msgstr ""
+msgstr "Upišite poštanski broj u formatu XXXXXX ili XXX XXX."
 
 msgid "Enter an Indian state or territory."
-msgstr ""
+msgstr "Upišite indijsku saveznu državu ili teritorij."
 
 msgid ""
 "Enter a valid Aadhaar number in XXXX XXXX XXXX or XXXX-XXXX-XXXX format."
-msgstr ""
+msgstr "Upišite Aadhaar broj u formatu XXXX XXXX XXXX ili XXXX-XXXX-XXXX."
+
+msgid "Please enter a valid Indian PAN card number."
+msgstr "Upišite broj indijske PAN kartice."
 
 msgid "Indian state (two uppercase letters)"
-msgstr ""
+msgstr "Indijska savezna država (dva velika slova)"
+
+msgid "PAN Card number field"
+msgstr "Polje za broj PAN kartice"
+
+msgid "Enter a postal code in the format XXXXXXXXXX - digits only"
+msgstr "Upišite poštanski broj u formatu XXXXXXXXXX – samo znamenke"
+
+msgid "Alborz"
+msgstr "Alborz"
+
+msgid "Ardabil"
+msgstr "Ardabil"
+
+msgid "Azerbaijan East"
+msgstr "Istočni Azarbajdžan"
+
+msgid "Azerbaijan Wast"
+msgstr "Zapadni Azarbajdžan"
+
+msgid "Bushehr"
+msgstr "Bushehr"
+
+msgid "Chahar Mahaal and Bakhtiari"
+msgstr "Chahar Mahaal i Bakhtiari"
+
+msgid "Fars"
+msgstr "Fars"
+
+msgid "Gilan"
+msgstr "Gilan"
+
+msgid "Golestan"
+msgstr "Golestan"
+
+msgid "Hamadan"
+msgstr "Hamadan"
+
+msgid "Hormozgan"
+msgstr "Hormozgan"
+
+msgid "Ilam"
+msgstr "Ilam"
+
+msgid "Isfahan"
+msgstr "Isfahan"
+
+msgid "Kerman"
+msgstr "Kerman"
+
+msgid "Kermanshah"
+msgstr "Kermanshah"
+
+msgid "Khorasan North"
+msgstr "Sjeverni Horasan"
+
+msgid "Khorasan Razavi"
+msgstr "Razavi Horasan"
+
+msgid "Khorasan South"
+msgstr "Južni Horasan"
+
+msgid "Khuzestan"
+msgstr "Khuzestan"
+
+msgid "Kohgiluyeh and Boyer-Ahmad"
+msgstr "Kohgiluyeh i Boyer-Ahmad"
+
+msgid "Kurdistan"
+msgstr "Kurdistan"
+
+msgid "Lorestan"
+msgstr "Lorestan"
+
+msgid "Markazi"
+msgstr "Markazi"
+
+msgid "Mazandaran"
+msgstr "Mazandaran"
+
+msgid "Qazvin"
+msgstr "Qazvin"
+
+msgid "Qom"
+msgstr "Qom"
+
+msgid "Semnan"
+msgstr "Semnan"
+
+msgid "Sistan and Baluchestan"
+msgstr "Sistan i Baluchestan"
+
+msgid "Tehran"
+msgstr "Teheran"
+
+msgid "Yazd"
+msgstr "Yazd"
+
+msgid "Zanjan"
+msgstr "Zanjan"
 
 msgid ""
 "Enter a valid Icelandic identification number. The format is XXXXXX-XXXX."
-msgstr "Unesite ispravan islandski identifikacijski broj formata XXXXXX-XXXX."
+msgstr "Upišite islandski identifikacijski broj u formatu XXXXXX-XXXX."
 
 msgid "The Icelandic identification number is not valid."
 msgstr "Islandski identifikacijski broj nije ispravan."
 
 msgid "Enter a valid zip code."
-msgstr "Unesite ispravan zip kod."
+msgstr "Upišite poštanski broj."
 
 msgid "Enter a valid Tax code."
-msgstr ""
+msgstr "Upišite porezni kod."
 
 msgid "Enter a valid VAT number."
-msgstr "Unesite ispravan VAT broj."
+msgstr "Upišite PDV broj."
 
 msgid "Check digit does not match."
-msgstr ""
+msgstr "Kontrolna znamenka se ne podudara."
 
 msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
-msgstr "Unesite poštanski broj formata XXXXXXX or XXX-XXXX."
+msgstr "Upišite poštanski broj u formatu XXXXXXX ili XXX-XXXX."
 
 msgid "Hokkaido"
 msgstr ""
@@ -4362,7 +4784,7 @@ msgid "Chiba"
 msgstr ""
 
 msgid "Tokyo"
-msgstr "Tokio"
+msgstr ""
 
 msgid "Kanagawa"
 msgstr ""
@@ -4467,7 +4889,7 @@ msgid "Okinawa"
 msgstr ""
 
 msgid "Enter a valid Kuwaiti Civil ID number"
-msgstr "Unesi ispravan kuvajtski Civil ID broj."
+msgstr "Upišite broj kuvajtske civilne iskaznice"
 
 msgid "Kuwait City"
 msgstr ""
@@ -4836,607 +5258,478 @@ msgid "Farwaniyah"
 msgstr ""
 
 msgid "Capital"
-msgstr ""
+msgstr "Glavni grad"
 
 msgid "Hawalli"
 msgstr ""
 
-msgid "ID Code consists of exactly 11 decimal digits."
+msgid "Enter a postal code in format NNNNN"
+msgstr "Upišite poštanski broj u formatu NNNNN"
+
+msgid "Kandy"
 msgstr ""
+
+msgid "Matale"
+msgstr ""
+
+msgid "Nuwara Eliya"
+msgstr ""
+
+msgid "Anuradhapura"
+msgstr ""
+
+msgid "Polonnaruwa"
+msgstr ""
+
+msgid "Jaffna"
+msgstr ""
+
+msgid "Kilinochchi"
+msgstr ""
+
+msgid "Mannar"
+msgstr ""
+
+msgid "Vavuniya"
+msgstr ""
+
+msgid "Mullativu"
+msgstr ""
+
+msgid "Alambil"
+msgstr ""
+
+msgid "Ampara"
+msgstr ""
+
+msgid "Batticaloa"
+msgstr ""
+
+msgid "Trincomalee"
+msgstr ""
+
+msgid "Kurunagala"
+msgstr ""
+
+msgid "Puttalam"
+msgstr ""
+
+msgid "Galle"
+msgstr ""
+
+msgid "Hambanthota"
+msgstr ""
+
+msgid "Mathara"
+msgstr ""
+
+msgid "Badulla"
+msgstr ""
+
+msgid "Monaragala"
+msgstr ""
+
+msgid "Kegalle"
+msgstr ""
+
+msgid "Rathnapura"
+msgstr ""
+
+msgid "Colombo"
+msgstr ""
+
+msgid "Gampaha"
+msgstr ""
+
+msgid "Kaluthara"
+msgstr ""
+
+msgid "North Central"
+msgstr ""
+
+msgid "North Western"
+msgstr ""
+
+msgid "Sabaragamuwa"
+msgstr ""
+
+msgid "Southern"
+msgstr ""
+
+msgid "Uva"
+msgstr ""
+
+msgid "ID Code consists of exactly 11 decimal digits."
+msgstr "Identifikacijski kod se sastoji od točno 11 decimalnih znamenki."
 
 msgid "Wrong ID Code checksum."
-msgstr ""
+msgstr "Pogrešan kontrolni broj identifikacijskog koda."
 
 msgid "ID Code contains invalid date."
-msgstr ""
+msgstr "Identifikacijski kod sadrži neispravan datum."
 
 msgid "Enter a postal code in the format XXXXX or LT-XXXXX."
-msgstr ""
+msgstr "Upišite poštanski broj u formatu XXXXX ili LT-XXXXX."
 
 msgid "Alytus"
-msgstr ""
+msgstr "Alytus"
 
 msgid "Kaunas"
-msgstr ""
+msgstr "Kaunas"
 
 msgid "Klaipėda"
-msgstr ""
-
-msgid "Mariampolė"
-msgstr ""
-
-msgid "Panevėžys"
-msgstr ""
-
-msgid "Šiauliai"
-msgstr ""
-
-msgid "Tauragė"
-msgstr ""
-
-msgid "Telšiai"
-msgstr ""
-
-msgid "Utena"
-msgstr ""
-
-msgid "Vilnius"
-msgstr ""
-
-msgid "Akmenė district"
-msgstr ""
-
-msgid "Alytus city"
-msgstr ""
-
-msgid "Alytus district"
-msgstr ""
-
-msgid "Anykščiai district"
-msgstr ""
-
-msgid "Birštonas"
-msgstr ""
-
-msgid "Biržai district"
-msgstr ""
-
-msgid "Druskininkai"
-msgstr ""
-
-msgid "Elektrėnai"
-msgstr ""
-
-msgid "Ignalina district"
-msgstr ""
-
-msgid "Jonava district"
-msgstr ""
-
-msgid "Joniškis district"
-msgstr ""
-
-msgid "Jurbarkas district"
-msgstr ""
-
-msgid "Kaišiadorys district"
-msgstr ""
-
-msgid "Kalvarija"
-msgstr ""
-
-msgid "Kaunas city"
-msgstr ""
-
-msgid "Kaunas district"
-msgstr ""
-
-msgid "Kazlų Rūda"
-msgstr ""
-
-msgid "Kėdainiai district"
-msgstr ""
-
-msgid "Kelmė district"
-msgstr ""
-
-msgid "Klaipėda city"
-msgstr ""
-
-msgid "Klaipėda district"
-msgstr ""
-
-msgid "Kretinga district"
-msgstr ""
-
-msgid "Kupiškis district"
-msgstr ""
-
-msgid "Lazdijai district"
-msgstr ""
+msgstr "Klaipėda"
 
 msgid "Marijampolė"
-msgstr ""
+msgstr "Marijampolė"
+
+msgid "Panevėžys"
+msgstr "Panevėžys"
+
+msgid "Šiauliai"
+msgstr "Šiauliai"
+
+msgid "Tauragė"
+msgstr "Tauragė"
+
+msgid "Telšiai"
+msgstr "Telšiai"
+
+msgid "Utena"
+msgstr "Utena"
+
+msgid "Vilnius"
+msgstr "Vilnius"
+
+msgid "Akmenė district"
+msgstr "Akmenė okrug"
+
+msgid "Alytus city"
+msgstr "Alytus grad"
+
+msgid "Alytus district"
+msgstr "Alytus okrug"
+
+msgid "Anykščiai district"
+msgstr "Anykščiai okrug"
+
+msgid "Birštonas"
+msgstr "Birštonas"
+
+msgid "Biržai district"
+msgstr "Biržai okrug"
+
+msgid "Druskininkai"
+msgstr "Druskininkai"
+
+msgid "Elektrėnai"
+msgstr "Elektrėnai"
+
+msgid "Ignalina district"
+msgstr "Ignalina okrug"
+
+msgid "Jonava district"
+msgstr "Jonava okrug"
+
+msgid "Joniškis district"
+msgstr "Joniškis okrug"
+
+msgid "Jurbarkas district"
+msgstr "Jurbarkas okrug"
+
+msgid "Kaišiadorys district"
+msgstr "Kaišiadorys okrug"
+
+msgid "Kalvarija"
+msgstr "Kalvarija"
+
+msgid "Kaunas city"
+msgstr "Kaunas grad"
+
+msgid "Kaunas district"
+msgstr "Kaunas okrug"
+
+msgid "Kazlų Rūda"
+msgstr "Kazlų Rūda"
+
+msgid "Kėdainiai district"
+msgstr "Kėdainiai okrug"
+
+msgid "Kelmė district"
+msgstr "Kelmė okrug"
+
+msgid "Klaipėda city"
+msgstr "Klaipėda grad"
+
+msgid "Klaipėda district"
+msgstr "Klaipėda okrug"
+
+msgid "Kretinga district"
+msgstr "Kretinga okrug"
+
+msgid "Kupiškis district"
+msgstr "Kupiškis okrug"
+
+msgid "Lazdijai district"
+msgstr "Lazdijai okrug"
 
 msgid "Mažeikiai district"
-msgstr ""
+msgstr "Mažeikiai okrug"
 
 msgid "Molėtai district"
-msgstr ""
+msgstr "Molėtai okrug"
 
 msgid "Neringa"
-msgstr ""
+msgstr "Neringa"
 
 msgid "Pagėgiai"
-msgstr ""
+msgstr "Pagėgiai"
 
 msgid "Pakruojis district"
-msgstr ""
+msgstr "Pakruojis okrug"
 
 msgid "Palanga city"
-msgstr ""
+msgstr "Palanga grad"
 
 msgid "Panevėžys city"
-msgstr ""
+msgstr "Panevėžys grad"
 
 msgid "Panevėžys district"
-msgstr ""
+msgstr "Panevėžys okrug"
 
 msgid "Pasvalys district"
-msgstr ""
+msgstr "Pasvalys okrug"
 
 msgid "Plungė district"
-msgstr ""
+msgstr "Plungė okrug"
 
 msgid "Prienai district"
-msgstr ""
+msgstr "Prienai okrug"
 
 msgid "Radviliškis district"
-msgstr ""
+msgstr "Radviliškis okrug"
 
 msgid "Raseiniai district"
-msgstr ""
+msgstr "Raseiniai okrug"
 
 msgid "Rietavas"
-msgstr ""
+msgstr "Rietavas"
 
 msgid "Rokiškis district"
-msgstr ""
+msgstr "Rokiškis okrug"
 
 msgid "Skuodas district"
-msgstr ""
+msgstr "Skuodas okrug"
 
 msgid "Šakiai district"
-msgstr ""
+msgstr "Šakiai okrug"
 
 msgid "Šalčininkai district"
-msgstr ""
+msgstr "Šalčininkai okrug"
 
 msgid "Šiauliai city"
-msgstr ""
+msgstr "Šiauliai grad"
 
 msgid "Šiauliai district"
-msgstr ""
+msgstr "Šiauliai okrug"
 
 msgid "Šilalė district"
-msgstr ""
+msgstr "Šilalė okrug"
 
 msgid "Šilutė district"
-msgstr ""
+msgstr "Šilutė okrug"
 
 msgid "Širvintos district"
-msgstr ""
+msgstr "Širvintos okrug"
 
 msgid "Švenčionys district"
-msgstr ""
+msgstr "Švenčionys okrug"
 
 msgid "Tauragė district"
-msgstr ""
+msgstr "Tauragė okrug"
 
 msgid "Telšiai district"
-msgstr ""
+msgstr "Telšiai okrug"
 
 msgid "Trakai district"
-msgstr ""
+msgstr "Trakai okrug"
 
 msgid "Ukmergė district"
-msgstr ""
+msgstr "Ukmergė okrug"
 
 msgid "Utena district"
-msgstr ""
+msgstr "Utena okrug"
 
 msgid "Varėna district"
-msgstr ""
+msgstr "Varėna okrug"
 
 msgid "Vilkaviškis district"
-msgstr ""
+msgstr "Vilkaviškis okrug"
 
 msgid "Vilnius city"
-msgstr ""
+msgstr "Vilnius grad"
 
 msgid "Vilnius district"
-msgstr ""
+msgstr "Vilnius okrug"
 
 msgid "Visaginas"
-msgstr ""
+msgstr "Visaginas"
 
 msgid "Zarasai district"
-msgstr ""
+msgstr "Zarasai okrug"
 
 msgid "Enter a postal code in the format XXXX or LV-XXXX."
-msgstr ""
+msgstr "Upišite poštanski broj u formatu XXXX ili LV-XXXX."
 
 msgid "Enter a Latvian personal code in format XXXXXX-XXXXX."
-msgstr ""
+msgstr "Upišite latvijski osobni kod u formatu XXXXXX-XXXXX."
 
 msgid "Enter a valid Latvian personal code."
-msgstr ""
+msgstr "Upišite latvijski osobni kod."
 
 msgid "Daugavpils"
-msgstr ""
+msgstr "Daugavpils"
 
 msgid "Jelgava"
-msgstr ""
-
-msgid "Jēkabpils"
-msgstr ""
+msgstr "Jelgava"
 
 msgid "Jūrmala"
-msgstr ""
+msgstr "Jūrmala"
 
 msgid "Liepāja"
-msgstr ""
+msgstr "Liepāja"
 
 msgid "Rēzekne"
-msgstr ""
+msgstr "Rēzekne"
 
 msgid "Riga"
-msgstr ""
-
-msgid "Valmiera"
-msgstr ""
+msgstr "Riga"
 
 msgid "Ventspils"
-msgstr ""
-
-msgid "Aglona municipality"
-msgstr ""
+msgstr "Ventspils"
 
 msgid "Aizkraukle municipality"
-msgstr ""
-
-msgid "Aizpute municipality"
-msgstr ""
-
-msgid "Aknīste municipality"
-msgstr ""
-
-msgid "Aloja municipality"
-msgstr ""
-
-msgid "Alsunga municipality"
-msgstr ""
+msgstr "Aizkraukle općina"
 
 msgid "Alūksne municipality"
-msgstr ""
-
-msgid "Amata municipality"
-msgstr ""
-
-msgid "Ape municipality"
-msgstr ""
-
-msgid "Auce municipality"
-msgstr ""
+msgstr "Alūksne općina"
 
 msgid "Ādaži municipality"
-msgstr ""
-
-msgid "Babīte municipality"
-msgstr ""
-
-msgid "Baldone municipality"
-msgstr ""
-
-msgid "Baltinava municipality"
-msgstr ""
+msgstr "Ādaži općina"
 
 msgid "Balvi municipality"
-msgstr ""
+msgstr "Balvi općina"
 
 msgid "Bauska municipality"
-msgstr ""
-
-msgid "Beverīna municipality"
-msgstr ""
-
-msgid "Brocēni municipality"
-msgstr ""
-
-msgid "Burtnieki municipality"
-msgstr ""
-
-msgid "Carnikava municipality"
-msgstr ""
-
-msgid "Cesvaine municipality"
-msgstr ""
+msgstr "Bauska općina"
 
 msgid "Cēsis municipality"
-msgstr ""
-
-msgid "Cibla municipality"
-msgstr ""
-
-msgid "Dagda municipality"
-msgstr ""
-
-msgid "Daugavpils municipality"
-msgstr ""
+msgstr "Cēsis općina"
 
 msgid "Dobele municipality"
-msgstr ""
-
-msgid "Dundaga municipality"
-msgstr ""
-
-msgid "Durbe municipality"
-msgstr ""
-
-msgid "Engure municipality"
-msgstr ""
-
-msgid "Ērgļi municipality"
-msgstr ""
-
-msgid "Garkalne municipality"
-msgstr ""
-
-msgid "Grobiņa municipality"
-msgstr ""
+msgstr "Dobele općina"
 
 msgid "Gulbene municipality"
-msgstr ""
-
-msgid "Iecava municipality"
-msgstr ""
-
-msgid "Ikšķile municipality"
-msgstr ""
-
-msgid "Ilūkste municipality"
-msgstr ""
-
-msgid "Inčukalns municipality"
-msgstr ""
-
-msgid "Jaunjelgava municipality"
-msgstr ""
-
-msgid "Jaunpiebalga municipality"
-msgstr ""
-
-msgid "Jaunpils municipality"
-msgstr ""
+msgstr "Gulbene općina"
 
 msgid "Jelgava municipality"
-msgstr ""
+msgstr "Jelgava općina"
 
 msgid "Jēkabpils municipality"
-msgstr ""
-
-msgid "Kandava municipality"
-msgstr ""
-
-msgid "Kārsava municipality"
-msgstr ""
-
-msgid "Kocēni municipality"
-msgstr ""
-
-msgid "Koknese municipality"
-msgstr ""
+msgstr "Jēkabpils općina"
 
 msgid "Krāslava municipality"
-msgstr ""
-
-msgid "Krimulda municipality"
-msgstr ""
-
-msgid "Krustpils municipality"
-msgstr ""
+msgstr "Krāslava općina"
 
 msgid "Kuldīga municipality"
-msgstr ""
-
-msgid "Ķegums municipality"
-msgstr ""
+msgstr "Kuldīga općina"
 
 msgid "Ķekava municipality"
-msgstr ""
-
-msgid "Lielvārde municipality"
-msgstr ""
+msgstr "Ķekava općina"
 
 msgid "Limbaži municipality"
-msgstr ""
-
-msgid "Līgatne municipality"
-msgstr ""
+msgstr "Limbaži općina"
 
 msgid "Līvāni municipality"
-msgstr ""
-
-msgid "Lubāna municipality"
-msgstr ""
+msgstr "Līvāni općina"
 
 msgid "Ludza municipality"
-msgstr ""
+msgstr "Ludza općina"
 
 msgid "Madona municipality"
-msgstr ""
-
-msgid "Mazsalaca municipality"
-msgstr ""
-
-msgid "Mālpils municipality"
-msgstr ""
+msgstr "Madona općina"
 
 msgid "Mārupe municipality"
-msgstr ""
-
-msgid "Mērsrags municipality"
-msgstr ""
-
-msgid "Naukšēni municipality"
-msgstr ""
-
-msgid "Nereta municipality"
-msgstr ""
-
-msgid "Nīca municipality"
-msgstr ""
+msgstr "Mārupe općina"
 
 msgid "Ogre municipality"
-msgstr ""
+msgstr "Ogre općina"
 
 msgid "Olaine municipality"
-msgstr ""
-
-msgid "Ozolnieki municipality"
-msgstr ""
-
-msgid "Pārgauja municipality"
-msgstr ""
-
-msgid "Pāvilosta municipality"
-msgstr ""
-
-msgid "Pļaviņas municipality"
-msgstr ""
+msgstr "Olaine općina"
 
 msgid "Preiļi municipality"
-msgstr ""
-
-msgid "Priekule municipality"
-msgstr ""
-
-msgid "Priekuļi municipality"
-msgstr ""
-
-msgid "Rauna municipality"
-msgstr ""
+msgstr "Preiļi općina"
 
 msgid "Rēzekne municipality"
-msgstr ""
-
-msgid "Riebiņi municipality"
-msgstr ""
-
-msgid "Roja municipality"
-msgstr ""
+msgstr "Rēzekne općina"
 
 msgid "Ropaži municipality"
-msgstr ""
-
-msgid "Rucava municipality"
-msgstr ""
-
-msgid "Rugāji municipality"
-msgstr ""
-
-msgid "Rundāle municipality"
-msgstr ""
-
-msgid "Rūjiena municipality"
-msgstr ""
-
-msgid "Sala municipality"
-msgstr ""
-
-msgid "Salacgrīva municipality"
-msgstr ""
+msgstr "Ropaži općina"
 
 msgid "Salaspils municipality"
-msgstr ""
+msgstr "Salaspils općina"
 
 msgid "Saldus municipality"
-msgstr ""
+msgstr "Saldus općina"
 
 msgid "Saulkrasti municipality"
-msgstr ""
-
-msgid "Sēja municipality"
-msgstr ""
+msgstr "Saulkrasti općina"
 
 msgid "Sigulda municipality"
-msgstr ""
-
-msgid "Skrīveri municipality"
-msgstr ""
-
-msgid "Skrunda municipality"
-msgstr ""
+msgstr "Sigulda općina"
 
 msgid "Smiltene municipality"
-msgstr ""
-
-msgid "Stopiņi municipality"
-msgstr ""
-
-msgid "Strenči municipality"
-msgstr ""
+msgstr "Smiltene općina"
 
 msgid "Talsi municipality"
-msgstr ""
-
-msgid "Tērvete municipality"
-msgstr ""
+msgstr "Talsi općina"
 
 msgid "Tukums municipality"
-msgstr ""
-
-msgid "Vaiņode municipality"
-msgstr ""
+msgstr "Tukums općina"
 
 msgid "Valka municipality"
-msgstr ""
+msgstr "Valka općina"
 
 msgid "Varakļāni municipality"
-msgstr ""
-
-msgid "Vārkava municipality"
-msgstr ""
-
-msgid "Vecpiebalga municipality"
-msgstr ""
-
-msgid "Vecumnieki municipality"
-msgstr ""
+msgstr "Varakļāni općina"
 
 msgid "Ventspils municipality"
-msgstr ""
+msgstr "Ventspils općina"
 
-msgid "Viesīte municipality"
-msgstr ""
+msgid "Augšdaugava municipality"
+msgstr "Augšdaugava općina"
 
-msgid "Viļaka municipality"
-msgstr ""
+msgid "Dienvidkurzeme municipality"
+msgstr "Dienvidkurzeme općina"
 
-msgid "Viļāni municipality"
-msgstr ""
-
-msgid "Zilupe municipality"
-msgstr ""
+msgid "Valmiera municipality"
+msgstr "Valmiera općina"
 
 msgid "Enter a postal code in the format XXXXX."
-msgstr "Unesite poštanski broj u formatu XXXXX."
+msgstr "Upišite poštanski broj u formatu XXXXX."
 
 msgid "Postal code"
-msgstr ""
+msgstr "Poštanski broj"
 
 msgid "Select Province"
-msgstr ""
+msgstr "Odaberite provinciju"
+
+msgid "Enter a valid Moroccan CIN number."
+msgstr "Upišite marokanski CIN broj."
+
+msgid "CIN Number"
+msgstr "CIN broj"
 
 msgid "Al Hoceima"
 msgstr ""
@@ -5699,487 +5992,978 @@ msgstr ""
 msgid "Dakhla-Oued Ed Dahab"
 msgstr ""
 
+msgid "Întreprindere Individuală"
+msgstr ""
+
+msgid "Societate pe acţiuni"
+msgstr ""
+
+msgid "Societate în nume colectiv"
+msgstr ""
+
+msgid "Societatea în comandită"
+msgstr ""
+
+msgid "Cooperativa de producţie"
+msgstr ""
+
+msgid "Cooperativa de întreprinzători"
+msgstr ""
+
+msgid "Societate cu răspundere limitată"
+msgstr ""
+
+msgid "Gospodăria ţărănească"
+msgstr ""
+
+msgid "Diplomatic Corps"
+msgstr "Diplomatski zbor"
+
+msgid "Service Staff"
+msgstr "Osoblje u službi"
+
+msgid "Consular Staff"
+msgstr "Konzularno osoblje"
+
+msgid "Administrative body"
+msgstr "Upravni organ"
+
+msgid "Ministry of Internal Affairs"
+msgstr "Ministarstvo unutarnjih poslova"
+
+msgid "Carabinieri Subdivision"
+msgstr "Pododjel karabinjera"
+
+msgid "Military Forces"
+msgstr "Vojne snage"
+
+msgid "Border Control"
+msgstr "Granična kontrola"
+
+msgid "Parliament"
+msgstr "Parlament"
+
+msgid "Government"
+msgstr "Vlada"
+
+msgid "Chancellery"
+msgstr "Ured kancelara"
+
+msgid "Anenii Noi"
+msgstr ""
+
+msgid "Tighina"
+msgstr ""
+
+msgid "Bălți"
+msgstr ""
+
+msgid "Briceni"
+msgstr ""
+
+msgid "Basarabeasca"
+msgstr ""
+
+msgid "Chișinău"
+msgstr ""
+
+msgid "Camenca"
+msgstr ""
+
+msgid "Ceadîr-Lunga"
+msgstr ""
+
+msgid "Cahul"
+msgstr ""
+
+msgid "Călărași"
+msgstr ""
+
+msgid "Cimișlia"
+msgstr ""
+
+msgid "Căinari"
+msgstr ""
+
+msgid "Comrat"
+msgstr ""
+
+msgid "Criuleni"
+msgstr ""
+
+msgid "Căușeni"
+msgstr ""
+
+msgid "Cantemir"
+msgstr ""
+
+msgid "Dubăsari"
+msgstr ""
+
+msgid "Dondușeni"
+msgstr ""
+
+msgid "Drochia"
+msgstr ""
+
+msgid "Edineț"
+msgstr ""
+
+msgid "Fălești"
+msgstr ""
+
+msgid "Florești"
+msgstr ""
+
+msgid "Gagauzia"
+msgstr ""
+
+msgid "Glodeni"
+msgstr ""
+
+msgid "Grigoriopol"
+msgstr ""
+
+msgid "Hîncești"
+msgstr ""
+
+msgid "Ialoveni"
+msgstr ""
+
+msgid "Leova"
+msgstr ""
+
+msgid "Nisporeni"
+msgstr ""
+
+msgid "Ocnița"
+msgstr ""
+
+msgid "Orhei"
+msgstr ""
+
+msgid "Rîbnița"
+msgstr ""
+
+msgid "Rîșcani"
+msgstr ""
+
+msgid "Rezina"
+msgstr ""
+
+msgid "Șoldănești"
+msgstr ""
+
+msgid "Sîngerei"
+msgstr ""
+
+msgid "Slobozia"
+msgstr ""
+
+msgid "Soroca"
+msgstr ""
+
+msgid "Strășeni"
+msgstr ""
+
+msgid "Ștefan Vodă"
+msgstr ""
+
+msgid "Taraclia"
+msgstr ""
+
+msgid "Telenești"
+msgstr ""
+
+msgid "Ungheni"
+msgstr ""
+
+msgid "Vulcănești"
+msgstr ""
+
+msgid "Moldavian identity number"
+msgstr "Moldavski identifikacijski broj"
+
+msgid "Moldavian license plate number"
+msgstr "Broj moldavske registarske pločice"
+
+msgid "Moldavian company types"
+msgstr "Vrste moldavskih poduzeća"
+
+msgid "Enter a valid IDNO number."
+msgstr "Upišite IDNO broj."
+
+msgid "Enter a valid license plate."
+msgstr "Upišite broj registarske pločice vozila."
+
 msgid ""
 "Identity card numbers must contain either 4 to 7 digits or an uppercase "
 "letter and 7 digits."
 msgstr ""
+"Brojevi osobnih iskaznica moraju sadržavati 4 do 7 znamenki ili veliko slovo "
+"i 7 znamenki."
 
 msgid "This field should contain exactly 13 digits."
-msgstr ""
+msgstr "Ovo polje mora sadržavati točno 13 znamenki."
 
 msgid "The first 7 digits of the UMCN must represent a valid past date."
-msgstr ""
+msgstr "Prvih 7 znamenki UMCN-a moraju predstavljati ispravni prošli datum."
 
 msgid "The UMCN is not valid."
-msgstr ""
+msgstr "UMCN nije ispravan."
 
 msgid "Aerodrom"
-msgstr ""
+msgstr "Aerodrom"
 
 msgid "Aračinovo"
-msgstr ""
+msgstr "Aračinovo"
 
 msgid "Berovo"
-msgstr ""
+msgstr "Berovo"
 
 msgid "Bitola"
-msgstr ""
+msgstr "Bitola"
 
 msgid "Bogdanci"
-msgstr ""
+msgstr "Bogdanci"
 
 msgid "Bogovinje"
-msgstr ""
+msgstr "Bogovinje"
 
 msgid "Bosilovo"
-msgstr ""
+msgstr "Bosilovo"
 
 msgid "Brvenica"
-msgstr ""
+msgstr "Brvenica"
 
 msgid "Butel"
-msgstr ""
+msgstr "Butel"
 
 msgid "Valandovo"
-msgstr ""
+msgstr "Valandovo"
 
 msgid "Vasilevo"
-msgstr ""
+msgstr "Vasilevo"
 
 msgid "Vevčani"
-msgstr ""
+msgstr "Vevčani"
 
 msgid "Veles"
-msgstr ""
+msgstr "Veles"
 
 msgid "Vinica"
-msgstr ""
+msgstr "Vinica"
 
 msgid "Vraneštica"
-msgstr ""
+msgstr "Vraneštica"
 
 msgid "Vrapčište"
-msgstr ""
+msgstr "Vrapčište"
 
 msgid "Gazi Baba"
-msgstr ""
+msgstr "Gazi Baba"
 
 msgid "Gevgelija"
-msgstr ""
+msgstr "Gevgelija"
 
 msgid "Gostivar"
-msgstr ""
+msgstr "Gostivar"
 
 msgid "Gradsko"
-msgstr ""
+msgstr "Gradsko"
 
 msgid "Debar"
-msgstr ""
+msgstr "Debar"
 
 msgid "Debarca"
-msgstr ""
+msgstr "Debarca"
 
 msgid "Delčevo"
-msgstr ""
+msgstr "Delčevo"
 
 msgid "Demir Kapija"
-msgstr ""
+msgstr "Demir Kapija"
 
 msgid "Demir Hisar"
-msgstr ""
+msgstr "Demir Hisar"
 
 msgid "Dolneni"
-msgstr ""
+msgstr "Dolneni"
 
 msgid "Drugovo"
-msgstr ""
+msgstr "Drugovo"
 
 msgid "Gjorče Petrov"
-msgstr ""
+msgstr "Gjorče Petrov"
 
 msgid "Želino"
-msgstr ""
+msgstr "Želino"
 
 msgid "Zajas"
-msgstr ""
+msgstr "Zajas"
 
 msgid "Zelenikovo"
-msgstr ""
+msgstr "Zelenikovo"
 
 msgid "Zrnovci"
-msgstr ""
+msgstr "Zrnovci"
 
 msgid "Ilinden"
-msgstr ""
+msgstr "Ilinden"
 
 msgid "Jegunovce"
-msgstr ""
+msgstr "Jegunovce"
 
 msgid "Kavadarci"
-msgstr ""
+msgstr "Kavadarci"
 
 msgid "Karbinci"
-msgstr ""
+msgstr "Karbinci"
 
 msgid "Karpoš"
-msgstr ""
+msgstr "Karpoš"
 
 msgid "Kisela Voda"
-msgstr ""
+msgstr "Kisela Voda"
 
 msgid "Kičevo"
-msgstr ""
+msgstr "Kičevo"
 
 msgid "Konče"
-msgstr ""
+msgstr "Konče"
 
 msgid "Koćani"
-msgstr ""
+msgstr "Koćani"
 
 msgid "Kratovo"
-msgstr ""
+msgstr "Kratovo"
 
 msgid "Kriva Palanka"
-msgstr ""
+msgstr "Kriva Palanka"
 
 msgid "Krivogaštani"
-msgstr ""
+msgstr "Krivogaštani"
 
 msgid "Kruševo"
-msgstr ""
+msgstr "Kruševo"
 
 msgid "Kumanovo"
-msgstr ""
+msgstr "Kumanovo"
 
 msgid "Lipkovo"
-msgstr ""
+msgstr "Lipkovo"
 
 msgid "Lozovo"
-msgstr ""
+msgstr "Lozovo"
 
 msgid "Mavrovo i Rostuša"
-msgstr ""
+msgstr "Mavrovo i Rostuša"
 
 msgid "Makedonska Kamenica"
-msgstr ""
+msgstr "Makedonska Kamenica"
 
 msgid "Makedonski Brod"
-msgstr ""
+msgstr "Makedonski Brod"
 
 msgid "Mogila"
-msgstr ""
+msgstr "Mogila"
 
 msgid "Negotino"
-msgstr ""
+msgstr "Negotino"
 
 msgid "Novaci"
-msgstr ""
+msgstr "Novaci"
 
 msgid "Novo Selo"
-msgstr ""
+msgstr "Novo Selo"
 
 msgid "Oslomej"
-msgstr ""
+msgstr "Oslomej"
 
 msgid "Ohrid"
-msgstr ""
+msgstr "Ohrid"
 
 msgid "Petrovec"
-msgstr ""
+msgstr "Petrovec"
 
 msgid "Pehčevo"
-msgstr ""
+msgstr "Pehčevo"
 
 msgid "Plasnica"
-msgstr ""
+msgstr "Plasnica"
 
 msgid "Prilep"
-msgstr ""
+msgstr "Prilep"
 
 msgid "Probištip"
-msgstr ""
+msgstr "Probištip"
 
 msgid "Radoviš"
-msgstr ""
+msgstr "Radoviš"
 
 msgid "Rankovce"
-msgstr ""
+msgstr "Rankovce"
 
 msgid "Resen"
-msgstr ""
+msgstr "Resen"
 
 msgid "Rosoman"
-msgstr ""
+msgstr "Rosoman"
 
 msgid "Saraj"
-msgstr ""
+msgstr "Saraj"
 
 msgid "Sveti Nikole"
-msgstr ""
+msgstr "Sveti Nikole"
 
 msgid "Sopište"
-msgstr ""
+msgstr "Sopište"
 
 msgid "Star Dojran"
-msgstr ""
+msgstr "Star Dojran"
 
 msgid "Staro Nagoričane"
-msgstr ""
+msgstr "Staro Nagoričane"
 
 msgid "Struga"
-msgstr ""
+msgstr "Struga"
 
 msgid "Strumica"
-msgstr ""
+msgstr "Strumica"
 
 msgid "Studeničani"
-msgstr ""
+msgstr "Studeničani"
 
 msgid "Tearce"
-msgstr ""
+msgstr "Tearce"
 
 msgid "Tetovo"
-msgstr ""
+msgstr "Tetovo"
 
 msgid "Centar"
-msgstr ""
+msgstr "Centar"
 
 msgid "Centar-Župa"
-msgstr ""
+msgstr "Centar-Župa"
 
 msgid "Čair"
-msgstr ""
+msgstr "Čair"
 
 msgid "Čaška"
-msgstr ""
+msgstr "Čaška"
 
 msgid "Češinovo-Obleševo"
-msgstr ""
+msgstr "Češinovo-Obleševo"
 
 msgid "Čučer-Sandevo"
-msgstr ""
+msgstr "Čučer-Sandevo"
 
 msgid "Štip"
-msgstr ""
+msgstr "Štip"
 
 msgid "Šuto Orizari"
-msgstr ""
+msgstr "Šuto Orizari"
 
 msgid "Macedonian identity card number"
-msgstr ""
+msgstr "Broj makedonske osobne iskaznice"
 
 msgid "A Macedonian municipality (2 character code)"
-msgstr ""
+msgstr "Makedonska općina (kod od 2 znaka)"
 
 msgid "Unique master citizen number (13 digits)"
-msgstr ""
+msgstr "Jedinstveni matični broj građana (13 znamenki)"
 
 msgid "Enter a valid postal code in format AAA 0000."
-msgstr ""
+msgstr "Upišite poštanski broj u formatu AAA 0000."
 
 msgid "Enter a valid zip code in the format XXXXX."
-msgstr ""
+msgstr "Upišite poštanski broj u formatu XXXXX."
 
 msgid "Enter a valid RFC."
-msgstr ""
+msgstr "Upišite RFC."
 
 msgid "Invalid checksum for RFC."
-msgstr ""
+msgstr "Neispravan kontrolni broj za RFC."
 
 msgid "Enter a valid CLABE."
-msgstr ""
+msgstr "Upišite CLABE."
 
 msgid "Invalid checksum for CLABE."
-msgstr ""
+msgstr "Neispravan kontrolni broj za CLABE."
 
 msgid "Enter a valid CURP."
-msgstr ""
+msgstr "Upišite CURP."
 
 msgid "Invalid checksum for CURP."
-msgstr ""
+msgstr "Neispravan kontrolni broj za CURP."
 
 msgid "Enter a valid Social Security Number."
-msgstr ""
+msgstr "Upišite broj socijalnog osiguranja."
 
 msgid "Invalid checksum for Social Security Number."
-msgstr ""
+msgstr "Neispravan kontrolni broj za broj socijalnog osiguranja."
 
-msgid "Mexico state (three uppercase letters)"
-msgstr ""
+msgid "Mexico state (three or four uppercase letters)"
+msgstr "Savezna država Meksika (tri ili četiri velika slova)"
 
 msgid "Mexico zip code"
-msgstr ""
+msgstr "Meksički poštanski broj"
 
 msgid "Mexican RFC"
-msgstr ""
+msgstr "Meksički RFC"
 
 msgid "Mexican CLABE"
-msgstr ""
+msgstr "Meksički CLABE"
 
 msgid "Mexican CURP"
-msgstr ""
+msgstr "Meksički CURP"
 
 msgid "Mexican Social Security Number"
-msgstr ""
+msgstr "Broj meksičkog socijalnog osiguranja"
 
 msgid "Aguascalientes"
-msgstr ""
+msgstr "Aguascalientes"
 
 msgid "Baja California"
-msgstr ""
+msgstr "Baja California"
 
 msgid "Baja California Sur"
-msgstr ""
+msgstr "Baja California Sur"
 
 msgid "Campeche"
-msgstr ""
+msgstr "Campeche"
+
+msgid "Ciudad de México"
+msgstr "Ciudad de México"
 
 msgid "Chihuahua"
-msgstr ""
+msgstr "Chihuahua"
 
 msgid "Chiapas"
-msgstr ""
+msgstr "Chiapas"
 
 msgid "Coahuila"
-msgstr ""
+msgstr "Coahuila"
 
 msgid "Colima"
-msgstr ""
-
-msgid "Distrito Federal"
-msgstr ""
+msgstr "Colima"
 
 msgid "Durango"
-msgstr ""
+msgstr "Durango"
 
 msgid "Guerrero"
-msgstr ""
+msgstr "Guerrero"
 
 msgid "Guanajuato"
-msgstr ""
+msgstr "Guanajuato"
 
 msgid "Hidalgo"
-msgstr ""
+msgstr "Hidalgo"
 
 msgid "Jalisco"
-msgstr ""
+msgstr "Jalisco"
 
 msgid "Estado de México"
 msgstr "Država Meksiko"
 
 msgid "Michoacán"
-msgstr ""
+msgstr "Michoacán"
 
 msgid "Morelos"
-msgstr ""
+msgstr "Morelos"
 
 msgid "Nayarit"
-msgstr ""
+msgstr "Nayarit"
 
 msgid "Nuevo León"
-msgstr ""
+msgstr "Nuevo León"
 
 msgid "Oaxaca"
-msgstr ""
+msgstr "Oaxaca"
 
 msgid "Puebla"
-msgstr ""
+msgstr "Puebla"
 
 msgid "Querétaro"
-msgstr ""
+msgstr "Querétaro"
 
 msgid "Quintana Roo"
-msgstr ""
+msgstr "Quintana Roo"
 
 msgid "Sinaloa"
-msgstr ""
+msgstr "Sinaloa"
 
 msgid "San Luis Potosí"
-msgstr ""
+msgstr "San Luis Potosí"
 
 msgid "Sonora"
-msgstr ""
+msgstr "Sonora"
 
 msgid "Tabasco"
-msgstr ""
+msgstr "Tabasco"
 
 msgid "Tamaulipas"
-msgstr ""
+msgstr "Tamaulipas"
 
 msgid "Tlaxcala"
-msgstr ""
+msgstr "Tlaxcala"
 
 msgid "Veracruz"
-msgstr ""
+msgstr "Veracruz"
 
 msgid "Yucatán"
-msgstr ""
+msgstr "Yucatán"
 
 msgid "Zacatecas"
-msgstr ""
+msgstr "Zacatecas"
+
+msgid "Invalid MyKad number."
+msgstr "Neispravan MyKad broj."
 
 msgid "Dutch zipcode"
-msgstr ""
+msgstr "Nizozemski poštanski broj"
 
 msgid "Dutch province"
-msgstr ""
+msgstr "Nizozemska pokrajina"
 
 msgid "Dutch social security number (BSN)"
-msgstr ""
+msgstr "Broj nizozemskog socijalnog osiguranja (BSN)"
+
+msgid "Dutch license plate"
+msgstr "Nizozemska registarska pločica"
 
 msgid "Drenthe"
-msgstr ""
+msgstr "Drenthe"
 
 msgid "Flevoland"
-msgstr ""
+msgstr "Flevoland"
 
 msgid "Fryslân"
-msgstr ""
+msgstr "Fryslân"
 
 msgid "Gelderland"
-msgstr ""
+msgstr "Gelderland"
 
 msgid "Groningen"
-msgstr ""
+msgstr "Groningen"
 
 msgid "Noord-Brabant"
-msgstr ""
+msgstr "Sjeverni Brabant"
 
 msgid "Noord-Holland"
-msgstr ""
+msgstr "Sjeverna Holandija"
 
 msgid "Overijssel"
-msgstr ""
+msgstr "Overijssel"
 
 msgid "Utrecht"
-msgstr ""
+msgstr "Utrecht"
 
 msgid "Zeeland"
-msgstr ""
+msgstr "Zeeland"
 
 msgid "Zuid-Holland"
-msgstr ""
+msgstr "Južna Holandija"
 
 msgid "Enter a valid BSN."
-msgstr ""
+msgstr "Upišite BSN."
+
+msgid "Enter a valid license plate"
+msgstr "Upišite broj registarske pločice"
 
 msgid "Enter a valid Norwegian social security number."
-msgstr "Unesite ispravan broj norveškog socijalnog osiguranja."
+msgstr "Upišite broj norveškog socijalnog osiguranja."
 
 msgid "Enter a valid Norwegian bank account number."
-msgstr ""
+msgstr "Upišite broj norveškog bankovnog računa."
 
 msgid "Invalid control digit. Enter a valid Norwegian bank account number."
 msgstr ""
+"Neispravna kontrolna znamenka. Upišite ispravan broj norveškog bankovnog "
+"računa."
 
 msgid "Invalid length. Norwegian bank account numbers are 11 digits long."
 msgstr ""
+"Neispravna duljina. Brojevi norveških bankovnih računa imaju 11 znamenki."
+
+msgid "Enter a postal code in format XXXXX"
+msgstr "Upišite poštanski broj u formatu XXXXX"
+
+msgid "Bhaktapur"
+msgstr ""
+
+msgid "Dhading"
+msgstr ""
+
+msgid "Kathmandu"
+msgstr ""
+
+msgid "Kavrepalanchok"
+msgstr ""
+
+msgid "Lalitpur"
+msgstr ""
+
+msgid "Nuwakot"
+msgstr ""
+
+msgid "Rasuwa"
+msgstr ""
+
+msgid "Sindhupalchok"
+msgstr ""
+
+msgid "Banke"
+msgstr ""
+
+msgid "Bardiya"
+msgstr ""
+
+msgid "Dailekh"
+msgstr ""
+
+msgid "Jajarkot"
+msgstr ""
+
+msgid "Surkhet"
+msgstr ""
+
+msgid "Baglung"
+msgstr ""
+
+msgid "Mustang"
+msgstr ""
+
+msgid "Myagdi"
+msgstr ""
+
+msgid "Parbat"
+msgstr ""
+
+msgid "Gorkha"
+msgstr ""
+
+msgid "Kaski"
+msgstr ""
+
+msgid "Lamjung"
+msgstr ""
+
+msgid "Manang"
+msgstr ""
+
+msgid "Syangja"
+msgstr ""
+
+msgid "Tanahu"
+msgstr ""
+
+msgid "Dhanusa"
+msgstr ""
+
+msgid "Dholkha"
+msgstr ""
+
+msgid "Mahottari"
+msgstr ""
+
+msgid "Ramechhap"
+msgstr ""
+
+msgid "Sarlahi"
+msgstr ""
+
+msgid "Sindhuli"
+msgstr ""
+
+msgid "Dolpa"
+msgstr ""
+
+msgid "Humla"
+msgstr ""
+
+msgid "Jumla"
+msgstr ""
+
+msgid "Kalikot"
+msgstr ""
+
+msgid "Mugu"
+msgstr ""
+
+msgid "Bhojpur"
+msgstr ""
+
+msgid "Dhankuta"
+msgstr ""
+
+msgid "Morang"
+msgstr ""
+
+msgid "Sankhuwasabha"
+msgstr ""
+
+msgid "Sunsari"
+msgstr ""
+
+msgid "Terhathum"
+msgstr ""
+
+msgid "Arghakhanchi"
+msgstr ""
+
+msgid "Gulmi"
+msgstr ""
+
+msgid "Kapilvastu"
+msgstr ""
+
+msgid "Nawalparasi"
+msgstr ""
+
+msgid "Palpa"
+msgstr ""
+
+msgid "Rupandehi"
+msgstr ""
+
+msgid "Baitadi"
+msgstr ""
+
+msgid "Dadeldhura"
+msgstr ""
+
+msgid "Darchula"
+msgstr ""
+
+msgid "Kanchanpur"
+msgstr ""
+
+msgid "Jhapa"
+msgstr ""
+
+msgid "Panchthar"
+msgstr ""
+
+msgid "Taplejung"
+msgstr ""
+
+msgid "Bara"
+msgstr ""
+
+msgid "Chitwan"
+msgstr ""
+
+msgid "Makwanpur"
+msgstr ""
+
+msgid "Parsa"
+msgstr ""
+
+msgid "Rautahat"
+msgstr ""
+
+msgid "Dang Deukhuri"
+msgstr ""
+
+msgid "Pyuthan"
+msgstr ""
+
+msgid "Rolpa"
+msgstr ""
+
+msgid "Rukum"
+msgstr ""
+
+msgid "Salyan"
+msgstr ""
+
+msgid "Khotang"
+msgstr ""
+
+msgid "Okhaldhunga"
+msgstr ""
+
+msgid "Saptari"
+msgstr ""
+
+msgid "Siraha"
+msgstr ""
+
+msgid "Solukhumbu"
+msgstr ""
+
+msgid "Udayapur"
+msgstr ""
+
+msgid "Achham"
+msgstr ""
+
+msgid "Bajhang"
+msgstr ""
+
+msgid "Bajura"
+msgstr ""
+
+msgid "Doti"
+msgstr ""
+
+msgid "Kailali"
+msgstr ""
+
+msgid "Bagmati"
+msgstr ""
+
+msgid "Gandaki"
+msgstr ""
+
+msgid "Karnali"
+msgstr ""
+
+msgid "Lumbini"
+msgstr ""
+
+msgid "Koshi"
+msgstr ""
+
+msgid "Madhesh"
+msgstr ""
+
+msgid "Sudurpaschim"
+msgstr ""
+
+msgid "Bheri"
+msgstr ""
+
+msgid "Dhawalagiri"
+msgstr ""
+
+msgid "Janakpur"
+msgstr ""
+
+msgid "Mahakali"
+msgstr ""
+
+msgid "Mechi"
+msgstr ""
+
+msgid "Narayani"
+msgstr ""
+
+msgid "Rapti"
+msgstr ""
+
+msgid "Sagarmatha"
+msgstr ""
+
+msgid "Seti"
+msgstr ""
 
 msgid "Invalid post code."
-msgstr ""
+msgstr "Neispravan poštanski broj."
 
 msgid "Invalid bank account number."
-msgstr ""
+msgstr "Neispravan broj bankovnog računa."
 
 msgid "Far North District"
 msgstr ""
@@ -6428,19 +7212,19 @@ msgid "West Coast"
 msgstr ""
 
 msgid "This field requires 8 digits."
-msgstr "Ovo polje zahtjeva 8 numeričkih znakova."
+msgstr "Ovo polje zahtijeva 8 znamenki."
 
 msgid "This field requires 11 digits."
-msgstr "Ovo polje zahtjeva 11 numeričkih znakova."
+msgstr "Ovo polje zahtijeva 11 znamenki."
 
 msgid "Enter a 5 digit postcode."
-msgstr ""
+msgstr "Upišite peteroznamenkasti poštanski broj."
 
 msgid "Pakistani State"
-msgstr ""
+msgstr "Pakistanska država"
 
 msgid "Pakistani Postcode"
-msgstr ""
+msgstr "Pakistanski poštanski broj"
 
 msgid "Azad Jammu & Kashmir"
 msgstr ""
@@ -6467,41 +7251,42 @@ msgid "Sindh"
 msgstr ""
 
 msgid "National Identification Number consists of 11 digits."
-msgstr "Nacionalni identifikacijski broj sadrži 11 numeričkih znakova."
+msgstr "Nacionalni identifikacijski broj sadrži 11 znamenki."
 
 msgid "Wrong checksum for the National Identification Number."
-msgstr "Neispravan checksum za Nacionalni identifikacijski broj."
+msgstr "Pogrešan kontrolni broj za nacionalni identifikacijski broj."
 
 msgid "The National Identification Number contains an invalid birth date."
-msgstr ""
+msgstr "Nacionalni identifikacijski broj sadrži neispravan datum rođenja."
 
 msgid "National ID Card Number consists of 3 letters and 6 digits."
-msgstr ""
+msgstr "Broj nacionalne osobne iskaznice se sastoji od 3 slova i 6 znamenki."
 
 msgid "Wrong checksum for the National ID Card Number."
-msgstr ""
+msgstr "Pogrešan kontrolni broj za broj nacionalne osobne iskaznice."
 
 msgid ""
 "Enter a tax number field (NIP) in the format XXX-XXX-XX-XX, XXX-XX-XX-XXX or "
 "XXXXXXXXXX."
 msgstr ""
+"Upišite polje za porezni broj (NIP) u formatu XXX-XXX-XX-XX, XXX-XX-XX-XXX "
+"ili XXXXXXXXXX."
 
 msgid "Wrong checksum for the Tax Number (NIP)."
-msgstr "Neispravan checksum za porezni broj (NIP)."
+msgstr "Pogrešan kontrolni broj za porezni broj (NIP)."
 
 msgid "National Business Register Number (REGON) consists of 9 or 14 digits."
 msgstr ""
-"National Business Register Number (REGON) sastoji se od 9 ili 14 numeričkih "
-"znakova."
+"Broj nacionalnog registra poduzeća (REGON) se sastoji od 9 ili 14 znamenki."
 
 msgid "Wrong checksum for the National Business Register Number (REGON)."
-msgstr "Neispravan checked za National Business Register Number (REGON)."
+msgstr "Pogrešan kontrolni broj za broj nacionalnog registra poduzeća (REGON)."
 
 msgid "Enter a postal code in the format XX-XXX."
-msgstr "Unesi poštanski broj formata XX-XXX."
+msgstr "Upišite poštanski broj u formatu XX-XXX."
 
 msgid "Lower Silesian"
-msgstr "Donja Šleska"
+msgstr ""
 
 msgid "Kuyavian-Pomeranian"
 msgstr ""
@@ -6516,7 +7301,7 @@ msgid "Lodz"
 msgstr ""
 
 msgid "Lesser Poland"
-msgstr "Mala Poljska"
+msgstr ""
 
 msgid "Masovian"
 msgstr ""
@@ -6534,7 +7319,7 @@ msgid "Pomeranian"
 msgstr ""
 
 msgid "Silesian"
-msgstr "Šleska"
+msgstr ""
 
 msgid "Swietokrzyskie"
 msgstr ""
@@ -6549,25 +7334,31 @@ msgid "West Pomeranian"
 msgstr ""
 
 msgid "The specified value is not a valid Citizen Card number."
-msgstr ""
+msgstr "Navedena vrijednost nije ispravan broj građanske iskaznice."
 
 msgid ""
 "Citizen Card numbers have the format XXXXXXXXXYYX or XXXXXXXX-XYYX (where X "
 "is a digit and Y is an alphanumeric character)."
 msgstr ""
+"Brojevi građanskih iskaznica imaju format XXXXXXXXXYYX ili XXXXXXXX-XYYX "
+"(gdje je X znamenka, a Y alfanumerički znak)."
 
 msgid "The specified number is not a valid Social Security number."
-msgstr ""
+msgstr "Navedeni broj nije ispravan broj socijalnog osiguranja."
 
 msgid ""
 "Social Security numbers must be in the format XYYYYYYYYYY (where X is either "
 "1 or 2 and Y is any other digit)."
 msgstr ""
+"Brojevi socijalnog osiguranja moraju biti u formatu XYYYYYYYYYY (gdje je X 1 "
+"ili 2, a Y bilo koja druga znamenka)."
 
 msgid ""
 "Zip codes must be in the format XYYY-YYY (where X is a digit between 1 and 9 "
 "and Y is any other digit)."
 msgstr ""
+"Poštanski brojevi moraju biti u formatu XYYY-YYY (gdje je X znamenka između "
+"1 i 9, a Y bilo koja druga znamenka)."
 
 msgid "Aveiro"
 msgstr ""
@@ -6629,308 +7420,338 @@ msgstr ""
 msgid "Região Autónoma dos Açores"
 msgstr ""
 
+msgid "Enter a valid Qatari National ID number"
+msgstr ""
+
+msgid "Qatari National ID number"
+msgstr ""
+
+msgid "Qatar municipality"
+msgstr ""
+
+msgid "Al Khor and Al Dakhira"
+msgstr ""
+
+msgid "Al Rayyan"
+msgstr ""
+
+msgid "Al Shamal"
+msgstr ""
+
+msgid "Al Sheehaniya"
+msgstr ""
+
+msgid "Al Wakrah"
+msgstr ""
+
+msgid "Al Daayen"
+msgstr ""
+
+msgid "Umm Slal"
+msgstr ""
+
 msgid "Enter a valid CIF."
-msgstr "Unesite ispravan CIF."
+msgstr "Upišite CIF."
 
 msgid "Enter a valid CNP."
-msgstr "Unesite ispravan CNP."
+msgstr "Upišite CNP."
 
 msgid "Enter a valid postal code in the format XXXXXX"
-msgstr "Unesite ispravan poštanski broj formata XXXXXX"
+msgstr "Upišite poštanski broj u formatu XXXXXX"
 
 msgid "Enter a postal code in the format XXXXXX."
-msgstr ""
+msgstr "Upišite poštanski broj u formatu XXXXXX."
 
 msgid "Enter a passport number in the format XXXX XXXXXX."
-msgstr ""
+msgstr "Upišite broj putovnice u formatu XXXX XXXXXX."
 
 msgid "Enter a passport number in the format XX XXXXXXX."
-msgstr ""
+msgstr "Upišite broj putovnice u formatu XX XXXXXXX."
 
 msgid "Central Federal County"
-msgstr ""
+msgstr "Središnji savezni okrug"
 
 msgid "South Federal County"
-msgstr ""
+msgstr "Južni savezni okrug"
 
 msgid "North-West Federal County"
-msgstr ""
+msgstr "Sjeverozapadni savezni okrug"
 
 msgid "Far-East Federal County"
-msgstr ""
+msgstr "Dalekoistočni savezni okrug"
 
 msgid "Siberian Federal County"
-msgstr ""
+msgstr "Sibirski savezni okrug"
 
 msgid "Ural Federal County"
-msgstr ""
+msgstr "Uralski savezni okrug"
 
 msgid "Privolzhsky Federal County"
-msgstr ""
+msgstr "Privolzhsky savezni okrug"
 
 msgid "North-Caucasian Federal County"
-msgstr ""
+msgstr "Sjevernokavkaski savezni okrug"
 
 msgid "Moskva"
-msgstr ""
+msgstr "Moskva"
 
 msgid "Saint-Peterburg"
-msgstr ""
+msgstr "Sankt Peterburg"
 
 msgid "Moskovskaya oblast'"
-msgstr ""
+msgstr "Moskovska oblast"
 
 msgid "Adygeya, Respublika"
-msgstr ""
+msgstr "Adigeja, Republika"
 
 msgid "Bashkortostan, Respublika"
-msgstr ""
+msgstr "Baškirija, Republika"
 
 msgid "Buryatia, Respublika"
-msgstr ""
+msgstr "Burjatija, Republika"
 
 msgid "Altay, Respublika"
-msgstr ""
+msgstr "Altaj, Republika"
 
 msgid "Dagestan, Respublika"
-msgstr ""
+msgstr "Dagestan, Republika"
 
 msgid "Ingushskaya Respublika"
-msgstr ""
+msgstr "Ingušetija, Republika"
 
 msgid "Kabardino-Balkarskaya Respublika"
-msgstr ""
+msgstr "Kabardino-Balkarija, Republika"
 
 msgid "Kalmykia, Respublika"
-msgstr ""
+msgstr "Kalmikija, Republika"
 
 msgid "Karachaevo-Cherkesskaya Respublika"
-msgstr ""
+msgstr "Karačajevo-Čerkezija, Republika"
 
 msgid "Karelia, Respublika"
-msgstr ""
+msgstr "Karelija, Republika"
 
 msgid "Komi, Respublika"
-msgstr ""
+msgstr "Komi, Republika"
 
 msgid "Mariy Ehl, Respublika"
-msgstr ""
+msgstr "Marij El, Republika"
 
 msgid "Mordovia, Respublika"
-msgstr ""
+msgstr "Mordovija, Republika"
 
 msgid "Sakha, Respublika (Yakutiya)"
-msgstr ""
+msgstr ", Republika"
 
 msgid "Severnaya Osetia, Respublika (Alania)"
-msgstr ""
+msgstr "Sjeverna Osetija, Republika (Alanija)"
 
 msgid "Tatarstan, Respublika"
-msgstr ""
+msgstr "Tatarstan, Republika"
 
 msgid "Tyva, Respublika (Tuva)"
-msgstr ""
+msgstr "Tuva, Republika (Tuva)"
 
 msgid "Udmurtskaya Respublika"
-msgstr ""
+msgstr "Udmurtija, Republika"
 
 msgid "Khakassiya, Respublika"
-msgstr ""
+msgstr "Hakasija, Republika"
 
 msgid "Chechenskaya Respublika"
-msgstr ""
+msgstr "Čečenija, Republika"
 
 msgid "Chuvashskaya Respublika"
-msgstr ""
+msgstr "Čuvašija, Republika"
 
 msgid "Altayskiy Kray"
-msgstr ""
+msgstr "Altajski kraj"
 
 msgid "Zabaykalskiy Kray"
-msgstr ""
+msgstr "Zabajkalski kraj"
 
 msgid "Kamchatskiy Kray"
-msgstr ""
+msgstr "Kamčatski kraj"
 
 msgid "Krasnodarskiy Kray"
-msgstr ""
+msgstr "Krasnodarski kraj"
 
 msgid "Krasnoyarskiy Kray"
-msgstr ""
+msgstr "Krasnojarski kraj"
 
 msgid "Permskiy Kray"
-msgstr ""
+msgstr "Permski kraj"
 
 msgid "Primorskiy Kray"
-msgstr ""
+msgstr "Primorski kraj"
 
 msgid "Stavropol'siyy Kray"
-msgstr ""
+msgstr "Stavropoljski kraj"
 
 msgid "Khabarovskiy Kray"
-msgstr ""
+msgstr "Habarovski kraj"
 
 msgid "Amurskaya oblast'"
-msgstr ""
+msgstr "Amurska oblast"
 
 msgid "Arkhangel'skaya oblast'"
-msgstr ""
+msgstr "Arhangelska oblast"
 
 msgid "Astrakhanskaya oblast'"
-msgstr ""
+msgstr "Astrahanska oblast"
 
 msgid "Belgorodskaya oblast'"
 msgstr ""
 
 msgid "Bryanskaya oblast'"
-msgstr ""
+msgstr "Brjanska oblast"
 
 msgid "Vladimirskaya oblast'"
-msgstr ""
+msgstr "Vladimirska oblast"
 
 msgid "Volgogradskaya oblast'"
-msgstr ""
+msgstr "Volgogradska oblast"
 
 msgid "Vologodskaya oblast'"
-msgstr ""
+msgstr "Vologodska oblast"
 
 msgid "Voronezhskaya oblast'"
-msgstr ""
+msgstr "Voronješka oblast"
 
 msgid "Ivanovskaya oblast'"
-msgstr ""
+msgstr "Ivanovska oblast"
 
 msgid "Irkutskaya oblast'"
-msgstr ""
+msgstr "Irkutska oblast"
 
 msgid "Kaliningradskaya oblast'"
-msgstr ""
+msgstr "Kalinjingradska oblast"
 
 msgid "Kaluzhskaya oblast'"
-msgstr ""
+msgstr "Kaluška oblast"
 
 msgid "Kemerovskaya oblast'"
-msgstr ""
+msgstr "Kemerovska oblast"
 
 msgid "Kirovskaya oblast'"
-msgstr ""
+msgstr "Kirovska oblast"
 
 msgid "Kostromskaya oblast'"
-msgstr ""
+msgstr "Kostromska oblast"
 
 msgid "Kurganskaya oblast'"
-msgstr ""
+msgstr "Kurganska oblast"
 
 msgid "Kurskaya oblast'"
-msgstr ""
+msgstr "Kurska oblast"
 
 msgid "Leningradskaya oblast'"
-msgstr ""
+msgstr "Lenjingradska oblast"
 
 msgid "Lipeckaya oblast'"
-msgstr ""
+msgstr "Lipecka oblast"
 
 msgid "Magadanskaya oblast'"
-msgstr ""
+msgstr "Magadanska oblast"
 
 msgid "Murmanskaya oblast'"
-msgstr ""
+msgstr "Murmanska oblast"
 
 msgid "Nizhegorodskaja oblast'"
-msgstr ""
+msgstr "Nižnjenovgorodska oblast"
 
 msgid "Novgorodskaya oblast'"
-msgstr ""
+msgstr "Novgorodska oblast"
 
 msgid "Novosibirskaya oblast'"
-msgstr ""
+msgstr "Novosibirska oblast"
 
 msgid "Omskaya oblast'"
-msgstr ""
+msgstr "Omska oblast"
 
 msgid "Orenburgskaya oblast'"
-msgstr ""
+msgstr "Orenburška oblast"
 
 msgid "Orlovskaya oblast'"
-msgstr ""
+msgstr "Orelska oblast"
 
 msgid "Penzenskaya oblast'"
-msgstr ""
+msgstr "Penzenska oblast"
 
 msgid "Pskovskaya oblast'"
-msgstr ""
+msgstr "Pskovska oblast"
 
 msgid "Rostovskaya oblast'"
-msgstr ""
+msgstr "Rostovska oblast"
 
 msgid "Rjazanskaya oblast'"
-msgstr ""
+msgstr "Rjazanjska oblast"
 
 msgid "Samarskaya oblast'"
-msgstr ""
+msgstr "Samarska oblast"
 
 msgid "Saratovskaya oblast'"
-msgstr ""
+msgstr "Saratovska oblast"
 
 msgid "Sakhalinskaya oblast'"
-msgstr ""
+msgstr "Sahalinska oblast"
 
 msgid "Sverdlovskaya oblast'"
-msgstr ""
+msgstr "Sverdlovska oblast"
 
 msgid "Smolenskaya oblast'"
-msgstr ""
+msgstr "Smolenska oblast"
 
 msgid "Tambovskaya oblast'"
-msgstr ""
+msgstr "Tambovska oblast"
 
 msgid "Tverskaya oblast'"
-msgstr ""
+msgstr "Tverska oblast"
 
 msgid "Tomskaya oblast'"
-msgstr ""
+msgstr "Tomska oblast"
 
 msgid "Tul'skaya oblast'"
-msgstr ""
+msgstr "Tulska oblast"
 
 msgid "Tyumenskaya oblast'"
-msgstr ""
+msgstr "Tjumenjska oblast"
 
 msgid "Ul'ianovskaya oblast'"
-msgstr ""
+msgstr "Uljanovska oblast"
 
 msgid "Chelyabinskaya oblast'"
-msgstr ""
+msgstr "Čeljabinska oblast"
 
 msgid "Yaroslavskaya oblast'"
-msgstr ""
+msgstr "Jaroslavljska oblast"
 
 msgid "Evreyskaya avtonomnaja oblast'"
-msgstr ""
+msgstr "Židovska autonomna oblast"
 
 msgid "Neneckiy autonomnyy okrug"
-msgstr ""
+msgstr "Nenečki autonomni okrug"
 
 msgid "Khanty-Mansiyskiy avtonomnyy okrug - Yugra"
-msgstr ""
+msgstr "Hantijsko-mansijski autonomni okrug – Jugra"
 
 msgid "Chukotskiy avtonomnyy okrug"
-msgstr ""
+msgstr "Čukotski autonomni okrug"
 
 msgid "Yamalo-Neneckiy avtonomnyy okrug"
-msgstr ""
+msgstr "Jamalskonenečki autonomni okrug"
 
 msgid "Enter a valid Swedish organisation number."
-msgstr "Unesite valjani broj švedske organizacije."
+msgstr "Upišite broj švedske organizacije."
 
 msgid "Enter a valid Swedish personal identity number."
-msgstr "Unesite ispravan švedski osobni identifikacijski broj."
+msgstr "Upišite švedski osobni identifikacijski broj."
 
 msgid "Co-ordination numbers are not allowed."
 msgstr "Koordinacijski brojevi nisu dozvoljeni."
 
 msgid "Enter a Swedish postal code in the format XXXXX."
-msgstr "Unesite švedski poštanski broj formata XXXXX."
+msgstr "Upišite švedski poštanski broj u formatu XXXXX."
 
 msgid "Stockholm"
 msgstr ""
@@ -6996,19 +7817,19 @@ msgid "Jämtland"
 msgstr ""
 
 msgid "Enter a 6-digit postal code."
-msgstr ""
+msgstr "Upišite šesteroznamenkasti poštanski broj."
 
 msgid "Invalid NRIC/FIN."
-msgstr ""
+msgstr "Neispravan NRIC/FIN."
 
 msgid "The first 7 digits of the EMSO must represent a valid past date."
-msgstr ""
+msgstr "Prvih 7 znamenki EMSO-a moraju predstavljati ispravni prošli datum."
 
 msgid "The EMSO is not valid."
-msgstr ""
+msgstr "EMSO nije ispravan."
 
 msgid "Enter a valid tax number in form SIXXXXXXXX"
-msgstr ""
+msgstr "Upišite porezni broj u formatu SIXXXXXXXXXX"
 
 msgid "Banska Bystrica"
 msgstr ""
@@ -7341,22 +8162,88 @@ msgid "Zaghouan"
 msgstr ""
 
 msgid "Enter a valid Turkish Identification number."
-msgstr "Unesite valjani turski identifikacijski broj."
+msgstr "Upišite turski identifikacijski broj."
 
 msgid "Turkish Identification number must be 11 digits."
 msgstr "Turski Identifikacioni broj mora biti 11 znamenki."
 
-msgid "Enter a valid postal code."
+msgid "Changhua County"
 msgstr ""
+
+msgid "Chiayi City"
+msgstr ""
+
+msgid "Chiayi County"
+msgstr ""
+
+msgid "Hsinchu City"
+msgstr ""
+
+msgid "Hsinchu County"
+msgstr ""
+
+msgid "Hualien County"
+msgstr ""
+
+msgid "Kaohsiung City"
+msgstr ""
+
+msgid "Keelung City"
+msgstr ""
+
+msgid "Kinmen County"
+msgstr ""
+
+msgid "Lienchiang County"
+msgstr ""
+
+msgid "Miaoli County"
+msgstr ""
+
+msgid "Nantou County"
+msgstr ""
+
+msgid "New Taipei City"
+msgstr ""
+
+msgid "Penghu County"
+msgstr ""
+
+msgid "Pingtung County"
+msgstr ""
+
+msgid "Taichung City"
+msgstr ""
+
+msgid "Tainan City"
+msgstr ""
+
+msgid "Taipei City"
+msgstr ""
+
+msgid "Taitung County"
+msgstr ""
+
+msgid "Taoyuan City"
+msgstr ""
+
+msgid "Yilan County"
+msgstr ""
+
+msgid "Yunlin County"
+msgstr ""
+
+msgid "Enter a valid postal code."
+msgstr "Upišite poštanski broj."
 
 msgid "Ukrainian region"
-msgstr ""
+msgstr "Ukrajinska regija"
 
 msgid "Ukrainian VAT number"
-msgstr ""
+msgstr "Ukrajinski PDV broj"
 
 msgid "Ukrainian postal code"
-msgstr ""
+msgstr "Ukrajinski poštanski broj"
 
 msgid "Cherkasy Oblast"
 msgstr ""
@@ -7388,7 +8275,7 @@ msgstr ""
 msgid "Kirovohrad Oblast"
 msgstr ""
 
-msgid "Kiev Oblast"
+msgid "Kyiv Oblast"
 msgstr ""
 
 msgid "Luhansk Oblast"
@@ -7433,32 +8320,54 @@ msgstr ""
 msgid "Autonomous Republic of Crimea"
 msgstr ""
 
-msgid "Kiev"
+msgid "Kyiv"
 msgstr ""
 
 msgid "Sevastopol"
 msgstr ""
 
 msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
-msgstr "Unesite zip kod formata XXXXX or XXXXX-XXXX."
+msgstr "Upišite poštanski broj u formatu XXXXX ili XXXXX-XXXX."
 
 msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
+msgstr "Upišite broj američkog socijalnog osiguranja u formatu XXX-XX-XXXX."
+
+msgid ""
+"Enter a valid U.S. Individual Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
 msgstr ""
-"Unesi ispravan broj socijalnog osiguranja S.A.D.-a formata XXX-XX-XXXX."
+
+msgid ""
+"Enter a valid U.S. Adoption Taxpayer Identification Number in XXX-XX-XXXX "
+"format."
+msgstr ""
+
+msgid ""
+"Enter a valid U.S. taxpayer identification number in XXX-XX-XXXX format."
+msgstr ""
 
 msgid "Enter a U.S. state or territory."
-msgstr "Unesite državu ili teritorij u SAD-u."
+msgstr "Upišite američku državu ili teritorij."
 
 msgid "U.S. state (two uppercase letters)"
-msgstr "Država S.A.D.-a (dva velika slova)"
+msgstr "Američka savezna država (dva velika slova)"
 
 msgid "U.S. postal code (two uppercase letters)"
 msgstr "Američki poštanski broj (dva velika slova)"
 
 msgid "U.S. ZIP code"
-msgstr ""
+msgstr "Američki poštanski broj"
 
 msgid "Social security number"
+msgstr "Broj socijalnog osiguranja"
+
+msgid "Individual Taxpayer Identification Number"
+msgstr ""
+
+msgid "Adoption Taxpayer Identification Number"
+msgstr ""
+
+msgid "Taxpayer Identification Number"
 msgstr ""
 
 msgid "Alabama"
@@ -7661,10 +8570,10 @@ msgid "Trust Territory of the Pacific Islands"
 msgstr ""
 
 msgid "Enter a valid CI number in X.XXX.XXX-X,XXXXXXX-X or XXXXXXXX format."
-msgstr "Unesite valjani CI broj u X.XXX.XXX-X, XXXXXXX-X ili XXXXXXXX formatu."
+msgstr "Upišite CI broj u formatu X.XXX.XXX-X,XXXXXXX-X ili XXXXXXXX."
 
 msgid "Enter a valid CI number."
-msgstr "Unesite ispravan CI broj."
+msgstr "Upišite CI broj."
 
 msgid "Región Capital"
 msgstr ""
@@ -7772,10 +8681,10 @@ msgid "Zulia"
 msgstr ""
 
 msgid "Enter a valid South African ID number"
-msgstr "Unesi ispravan južnoafrički ID broj."
+msgstr "Upišite južnoafrički identifikacijski broj"
 
 msgid "Enter a valid South African postal code"
-msgstr "Unesite ispravan južnoafrički poštanski broj."
+msgstr "Upišite južnoafrički poštanski broj"
 
 msgid "Eastern Cape"
 msgstr ""
