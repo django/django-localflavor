@@ -383,7 +383,7 @@ class VATINValidator:
 
     Currently only supports European VIES VAT identification numbers.
 
-    See See https://en.wikipedia.org/wiki/VAT_identification_number
+    See https://en.wikipedia.org/wiki/VAT_identification_number
     """
     messages = {
         'country_code': _('%(country_code)s is not a valid country code.'),
