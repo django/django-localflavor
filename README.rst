@@ -38,6 +38,8 @@ Package Index: https://pypi.org/project/django-localflavor/
 You're encouraged to use the latest version of this package unless you need
 support for an unsupported version of Django.
 
+**2026-08-01 - 5.1**: Django 4.2, 5.0, 5.1, 5.2 & 6.0
+
 **2025-05-21 - 5.0**: Django 4.2, 5.0, 5.1 & 5.2
 
 This release contains breaking data changes for the LV, NP and NO flavors.
