@@ -18,7 +18,8 @@ Modifications to existing flavors:
 
 Other changes:
 
-- None
+- Add more project links to pyproject.toml
+  (`gh-551 <https://github.com/django/django-localflavor/pull/551>`_).
 
 
 5.1   (2026-08-01)

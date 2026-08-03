@@ -76,6 +76,7 @@ Authors
 * Jannis Leidel
 * Jan Pieter Waagmeester
 * Jarmo van Lenthe
+* Jens Nistler
 * Jérémie Ferry
 * Jernej Porenta
 * Jocelyn Delalande
