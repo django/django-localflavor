@@ -39,7 +39,10 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://django-localflavor.readthedocs.io/en/latest/"
+Documentation = "https://django-localflavor.readthedocs.io/en/latest/"
 Source = "https://github.com/django/django-localflavor"
+Issues = "https://github.com/django/django-localflavor/issues"
+Changelog = "https://django-localflavor.readthedocs.io/en/latest/changelog.html"
 
 [tool.setuptools.dynamic]
 version = { attr = "localflavor.__version__" }
