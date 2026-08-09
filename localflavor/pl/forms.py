@@ -61,10 +61,10 @@ class PLPESELField(RegexField):
     def has_valid_checksum(self, number):
         """Calculates a checksum with the provided algorithm."""
         multiple_table = (1, 3, 7, 9, 1, 3, 7, 9, 1, 3, 1)
-        result = 0
-        for i, digit in enumerate(number):
-            result += int(digit) * multiple_table[i]
+        d = [ord(c) - 48 for c in number]
+        result = sum(d[i] * multiple_table[i] for i in range(len(d)))
         return result % 10 == 0
+
 
     def has_valid_birth_date(self, number):
         """
@@ -170,12 +170,10 @@ class PLNIPField(RegexField):
     def has_valid_checksum(self, number):
         """Calculates a checksum with the provided algorithm."""
         multiple_table = (6, 5, 7, 2, 3, 4, 5, 6, 7)
-        result = 0
-        for i, digit in enumerate(number[:-1]):
-            result += int(digit) * multiple_table[i]
+        d = [ord(c) - 48 for c in number]
+        result = sum(d[i] * multiple_table[i] for i in range(9)) % 11
+        return result == d[9]
 
-        result %= 11
-        return result == int(number[-1])
 
 
 class PLREGONField(RegexField):
