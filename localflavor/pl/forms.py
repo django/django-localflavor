@@ -61,8 +61,9 @@ class PLPESELField(RegexField):
     def has_valid_checksum(self, number):
         """Calculates a checksum with the provided algorithm."""
         multiple_table = (1, 3, 7, 9, 1, 3, 7, 9, 1, 3, 1)
-        d = [ord(c) - 48 for c in number]
-        result = sum(d[i] * multiple_table[i] for i in range(len(d)))
+        result = 0
+        for w, c in zip(multiple_table, number):
+            result += w * (ord(c) - 48)
         return result % 10 == 0
 
 
@@ -170,9 +171,10 @@ class PLNIPField(RegexField):
     def has_valid_checksum(self, number):
         """Calculates a checksum with the provided algorithm."""
         multiple_table = (6, 5, 7, 2, 3, 4, 5, 6, 7)
-        d = [ord(c) - 48 for c in number]
-        result = sum(d[i] * multiple_table[i] for i in range(9)) % 11
-        return result == d[9]
+        result = 0
+        for w, c in zip(multiple_table, number):
+            result += w * (ord(c) - 48)
+        return result % 11 == (ord(number[9]) - 48)
 
 
 
