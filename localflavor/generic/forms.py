@@ -53,7 +53,7 @@ class IBANFormField(forms.CharField):
     An IBAN consists of up to 34 alphanumeric characters.
 
     To limit validation to specific countries, set the 'include_countries' argument with a tuple or list of ISO 3166-1
-    alpha-2 codes. For example, `include_countries=('NL', 'BE, 'LU')`.
+    alpha-2 codes. For example, `include_countries=('NL', 'BE', 'LU')`.
 
     A list of countries that use IBANs as part of SEPA is included for convenience. To use this feature, set
     `include_countries=IBAN_SEPA_COUNTRIES` as an argument to the field.
