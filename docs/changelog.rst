@@ -14,10 +14,13 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- KW: Remove the deprecated ``is_valid_kw_civilid_checksum`` function; use
+  ``localflavor.kw.utils.is_valid_civil_id()`` instead.
+  (`gh-526 <https://github.com/django/django-localflavor/issues/526>`_).
 
 Other changes:
 
+- Correct the ``include_countries`` tuple example in the ``IBANFormField`` documentation.
 - Add more project links to pyproject.toml
   (`gh-551 <https://github.com/django/django-localflavor/pull/551>`_).
 
