@@ -14,7 +14,8 @@ New fields for existing flavors:
 
 Modifications to existing flavors:
 
-- None
+- Accept Odisha and Ladakh in ``INStateField``
+  (`gh-555 <https://github.com/django/django-localflavor/pull/555>`_).
 
 Other changes:
 
