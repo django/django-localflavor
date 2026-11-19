@@ -147,3 +147,4 @@ Authors
 * Kacper Urbański
 * Sami El Achi
 * Omar Saleh
+* Tim Kleinschmidt
