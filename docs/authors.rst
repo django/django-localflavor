@@ -37,6 +37,7 @@ Authors
 * Burhan Khalid
 * Célia Prat
 * Claude Paroz
+* dajiaohuang
 * Daniel Ampuero
 * Daniela Ponader
 * Danielle Madeley
