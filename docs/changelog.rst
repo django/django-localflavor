@@ -22,7 +22,9 @@ Other changes:
   (`gh-551 <https://github.com/django/django-localflavor/pull/551>`_).
 - Add Django 6.0 and 6.1 classifiers to pyproject.toml
   (`gh-553 <https://github.com/django/django-localflavor/pull/553>`_).
-
+- Dropped support for Python <= 3.9.
+- Dropped support for Django <= 5.1.
+- Added support for Python 3.14.
 
 5.1   (2026-08-01)
 ------------------
