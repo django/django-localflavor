@@ -24,7 +24,7 @@ Other changes:
   (`gh-553 <https://github.com/django/django-localflavor/pull/553>`_).
 - Dropped support for Python <= 3.9.
 - Dropped support for Django <= 5.1.
-- Added support for Python 3.14.
+- Added support for Python 3.15.
 
 5.1   (2026-08-01)
 ------------------
