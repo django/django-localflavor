@@ -14,7 +14,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.13'
+          python-version: '3.14'
           architecture: x64
       - name: Install tox
         run: |
@@ -30,7 +30,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.13'
+          python-version: '3.14'
           architecture: x64
       - name: Install tox
         run: |
@@ -44,12 +44,12 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - '3.9'
           - '3.10'
           - '3.11'
           - '3.12'
           - '3.13'
           - '3.14'
+          - '3.15'
     name: Python ${{ matrix.python-version }}
     steps:
       - uses: actions/checkout@v6

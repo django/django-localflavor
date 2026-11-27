@@ -1,2 +1,2 @@
 invoke>=1.2
-coverage>=4.4,<4.5
+coverage~=7.0
