@@ -40,7 +40,7 @@ jobs:
         run: tox -e prospector
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         python-version:
@@ -50,6 +50,7 @@ jobs:
           - '3.12'
           - '3.13'
           - '3.14'
+          - '3.15'
     name: Python ${{ matrix.python-version }}
     steps:
       - uses: actions/checkout@v6
