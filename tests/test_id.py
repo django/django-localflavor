@@ -34,6 +34,10 @@ class IDLocalFlavorTests(SimpleTestCase):
 <option value="NTT">Nusa Tenggara Timur</option>
 <option value="PPA">Papua</option>
 <option value="PPB">Papua Barat</option>
+<option value="PPD">Papua Barat Daya</option>
+<option value="PPG">Papua Pegunungan</option>
+<option value="PPS">Papua Selatan</option>
+<option value="PPT">Papua Tengah</option>
 <option value="RIU">Riau</option>
 <option value="SLB">Sulawesi Barat</option>
 <option value="SLS">Sulawesi Selatan</option>
