@@ -16,6 +16,8 @@ Modifications to existing flavors:
 
 - Accept Odisha and Ladakh in ``INStateField``
   (`gh-555 <https://github.com/django/django-localflavor/pull/555>`_).
+- Add Papua Barat Daya, Papua Pegunungan, Papua Selatan and Papua Tengah to ``IDProvinceSelect``
+  (`gh-557 <https://github.com/django/django-localflavor/pull/557>`_).
 
 Other changes:
 
